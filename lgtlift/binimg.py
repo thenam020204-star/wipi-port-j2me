@@ -28,7 +28,13 @@ class Binary:
                 w2 = struct.unpack_from('<I', self.td, a - self.tb + 4)[0]
                 if (w2 & 0xffff0000) == 0xe92d0000:
                     starts.append(a)
+        self.game_end = 0xf4a00   # start of the Thumb runtime helpers / link tables
         self.func_starts = starts
+        self.code_end = self.game_end
+        for a in range(0xf4000, 0xf4a00, 4):
+            if self.word(a) == 0xe52de004 and (self.word(a + 4) >> 24) == 0xeb:
+                self.code_end = a
+                break
         self.game_end = 0xf4a00   # start of the Thumb runtime helpers / link tables
         self._fidx = {a: i for i, a in enumerate(starts)}
 
@@ -37,7 +43,7 @@ class Binary:
 
     def func_end(self, start):
         i = self._fidx[start]
-        return self.func_starts[i + 1] if i + 1 < len(self.func_starts) else self.game_end
+        return self.func_starts[i + 1] if i + 1 < len(self.func_starts) else self.code_end
 
     def func_of(self, addr):
         i = bisect.bisect_right(self.func_starts, addr) - 1
