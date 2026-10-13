@@ -1125,11 +1125,15 @@ public class LgtRuntime extends Runtime {
     // ------------------------------------------------------------------
     // Network: no service
 
+    /** the current request is answered by the game's own offline server (LgtGame.netAllow) */
+    boolean netFake;
+
     void netConnect() {
         int cb = cpu.arg(0), param = cpu.arg(1);
-        log("MC_netConnect -> fail (offline)");
         if (game != null) game.netAttempt();
-        scheduleCall(cb, new int[]{-1, param}, 1);
+        netFake = game != null && game.netAllow();
+        log(netFake ? "MC_netConnect -> ok (offline server)" : "MC_netConnect -> fail (offline)");
+        scheduleCall(cb, new int[]{netFake ? 0 : -1, param}, 1);
         ret(0);
     }
 
@@ -1137,18 +1141,24 @@ public class LgtRuntime extends Runtime {
 
     void netSocketConnect() { // (fd, addr, port, cb, param)
         int fd = cpu.arg(0), addr = cpu.arg(1), port = cpu.arg(2) & 0xFFFF, cb = cpu.arg(3), param = cpu.arg(4);
-        log("MC_netSocketConnect(" + fd + ", " + ((addr) & 255) + "." + ((addr >> 8) & 255) + "." + ((addr >> 16) & 255) + "." + ((addr >>> 24) & 255) + ", " + (((port & 255) << 8) | (port >> 8)) + ") -> refused (offline)");
         if (game != null) game.netAttempt();
-        scheduleCall(cb, new int[]{fd, -1, param}, 5);
+        log("MC_netSocketConnect(" + fd + ", " + ((addr) & 255) + "." + ((addr >> 8) & 255) + "." + ((addr >>> 16) & 255) + "." + ((addr >>> 24) & 255) + ", " + (((port & 255) << 8) | (port >> 8)) + ") -> " + (netFake ? "ok (offline server)" : "refused (offline)"));
+        scheduleCall(cb, new int[]{fd, netFake ? 0 : -1, param}, 5);
         ret(-19);
     }
 
     void netSocketWrite() { // (fd, buf, len)
-        log("MC_netSocketWrite " + cpu.arg(2) + " (offline)");
-        ret(-1);
+        log("MC_netSocketWrite " + cpu.arg(2) + (netFake ? " (offline server)" : " (offline)"));
+        ret(netFake ? cpu.arg(2) : -1);
     }
 
     void netSocketRead() { // (fd, buf, len)
+        if (netFake) {
+            int n = game.netReply(cpu.arg(1), cpu.arg(2));
+            log("MC_netSocketRead " + cpu.arg(2) + " -> " + n + " (offline server)");
+            ret(n);
+            return;
+        }
         ret(-1);
     }
 
