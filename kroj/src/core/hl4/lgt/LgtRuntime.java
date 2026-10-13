@@ -230,7 +230,8 @@ public class LgtRuntime extends Runtime {
             case 0x68: // HL5 calls 0x68(0) at every exit point (menu 게임종료, failed auth): terminate
                 knlExit();
                 return;
-            case 0x6a: case 0xeb: case 0xee:
+            case 0xeb: grpDestroyImage(); return;
+            case 0x6a: case 0xee:
             case 0x12c: case 0x12d: case 0x12e: case 0x12f:
                 debug("stub wipic " + hex(idx) + "(" + hex(cpu.arg(0)) + ", " + hex(cpu.arg(1)) + ", " + hex(cpu.arg(2)) + ")");
                 ret(0);
@@ -731,6 +732,27 @@ public class LgtRuntime extends Runtime {
         debug("MC_grpCreateImage " + w + "x" + h + (keyed ? " keyed" : "") + " -> " + hex(img));
         if (out != 0) mem.write32(out, img);
         ret(1);
+    }
+
+    /** MC_grpDestroyImage(image) (0xeb; Kroisen calls it after copying an image into its own sprite format). */
+    void grpDestroyImage() {
+        int img = cpu.arg(0);
+        if (img == 0) return;
+        int backing = mem.read32(img), fb = mem.read32(img + 4);
+        if (backing == 0 || fb == 0 || mem.read32(fb) != 1) {
+            log("MC_grpDestroyImage: not an image " + hex(img));
+            return;
+        }
+        int w = mem.read32(backing), h = mem.read32(backing + 4);
+        keyedBackings.remove(new Integer(backing));
+        heap.free(mem.read32(fb + 4)); // view
+        heap.free(fb);
+        heap.free(mem.read32(backing + 16)); // pixels
+        heap.free(backing);
+        mem.write32(img, 0);
+        heap.free(img);
+        imagesLive--;
+        imagePixelsLive -= w * h;
     }
 
     /** MC_grpDrawImage(dst, x, y, w, h, image, sx, sy, ctx) */

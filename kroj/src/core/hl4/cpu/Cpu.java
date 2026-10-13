@@ -130,16 +130,34 @@ public final class Cpu {
         return call(addr, null);
     }
 
+    // argument arrays reused by the fixed-arity helpers: call() copies them into registers before
+    // running any guest code, so a nested call may overwrite them safely
+    private final int[] args1 = new int[1], args2 = new int[2], args3 = new int[3], args4 = new int[4];
+
     public int call(int addr, int a0) {
-        return call(addr, new int[]{a0});
+        args1[0] = a0;
+        return call(addr, args1);
     }
 
     public int call(int addr, int a0, int a1) {
-        return call(addr, new int[]{a0, a1});
+        args2[0] = a0;
+        args2[1] = a1;
+        return call(addr, args2);
     }
 
     public int call(int addr, int a0, int a1, int a2) {
-        return call(addr, new int[]{a0, a1, a2});
+        args3[0] = a0;
+        args3[1] = a1;
+        args3[2] = a2;
+        return call(addr, args3);
+    }
+
+    public int call(int addr, int a0, int a1, int a2, int a3) {
+        args4[0] = a0;
+        args4[1] = a1;
+        args4[2] = a2;
+        args4[3] = a3;
+        return call(addr, args4);
     }
 
     public int lastR1;
@@ -148,8 +166,15 @@ public final class Cpu {
      * Call an ARM/Thumb function (bit0 selects Thumb) and run until it returns.
      * Re-entrant: the complete register state is saved and restored.
      */
+    private final int[][] savePool = new int[16][]; // register save area per call depth (no allocation per call)
+
     public int call(int addr, int[] args) {
-        int[] saved = new int[16];
+        int d = callDepth;
+        int[] saved = d < savePool.length ? savePool[d] : null;
+        if (saved == null) {
+            saved = new int[16];
+            if (d < savePool.length) savePool[d] = saved;
+        }
         System.arraycopy(r, 0, saved, 0, 16);
         boolean sn = n, sz = z, sc2 = c, sv = v, sq = q, st = t;
         int spc = pc, scur = curPc;

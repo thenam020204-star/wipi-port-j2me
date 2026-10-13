@@ -3,7 +3,7 @@ import java.io.File;
 import java.nio.file.Files;
 
 /**
- * HL5 build-time audio conversion: every SMAF clip (*.mmf) of res/c/snd becomes a plain J2ME file
+ * Build-time audio conversion: every SMAF clip (content "MMMD", any extension) of the sound dir becomes a plain J2ME file
  * (.mid for score tracks, .wav for PCM tracks) plus a stub under the original name
  * ("HL4SND\0" + resource path of the converted file) that the MIDlet resolves at play time.
  *
@@ -20,8 +20,10 @@ public class SndConvert5 {
         File[] fs = in.listFiles();
         java.util.Arrays.sort(fs);
         for (File f : fs) {
-            if (!f.getName().endsWith(".mmf")) continue;
+            if (!f.isFile()) continue;
             byte[] d = Files.readAllBytes(f.toPath());
+            // SMAF clips by content ("MMMD"): Kroisen keeps them as sound/NNN.dat
+            if (d.length < 4 || d[0] != 'M' || d[1] != 'M' || d[2] != 'M' || d[3] != 'D') continue;
             before += d.length;
             Smaf.Converted c = Smaf.convert(d);
             if (c == null || c.data == null) {
@@ -29,7 +31,7 @@ public class SndConvert5 {
                 fail++;
                 continue;
             }
-            String base = f.getName().substring(0, f.getName().length() - 4);
+            String base = f.getName().lastIndexOf('.') > 0 ? f.getName().substring(0, f.getName().lastIndexOf('.')) : f.getName();
             String ext = Smaf.MIDI.equals(c.type) ? ".mid" : ".wav";
             if (ext.equals(".mid")) mid++; else wav++;
             Files.write(new File(out, base + ext).toPath(), c.data);

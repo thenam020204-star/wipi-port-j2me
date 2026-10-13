@@ -162,6 +162,7 @@ public abstract class Runtime implements SvcHandler {
 
     static final class Timer {
         int ptr, cb, param;
+        long slotUs = -1; // frame limiter: start of the last callback (us), -1 = none yet
         int[] args; // host scheduled call (ptr is a unique negative id)
         Runnable run; // host scheduled Java task
         long due;
@@ -209,7 +210,22 @@ public abstract class Runtime implements SvcHandler {
     // A guest timer re-armed with a timeout shorter than the frame interval is delayed so that
     // consecutive callbacks start at least frameUs apart (fixed schedule, no catch-up bursts).
     private long frameUs;                           // 0 = no limit
-    private final Hashtable slots = new Hashtable(); // timer ptr -> long[]{last callback start (us)}
+    // guest timers (MC_knlDefTimer records) reuse one Timer object each: no allocation per frame
+    private Timer[] guestTimers = new Timer[4];
+    private int guestTimerCount;
+
+    private Timer guestTimer(int ptr) {
+        for (int i = 0; i < guestTimerCount; i++) if (guestTimers[i].ptr == ptr) return guestTimers[i];
+        if (guestTimerCount == guestTimers.length) {
+            Timer[] n = new Timer[guestTimerCount * 2];
+            System.arraycopy(guestTimers, 0, n, 0, guestTimerCount);
+            guestTimers = n;
+        }
+        Timer t = new Timer();
+        t.ptr = ptr;
+        guestTimers[guestTimerCount++] = t;
+        return t;
+    }
 
     /** Limit guest timer driven frames to fps callbacks per second (0 = unlimited). */
     public void setFrameLimit(int fps) {
@@ -220,18 +236,14 @@ public abstract class Runtime implements SvcHandler {
         int cb = mem.read32(ptr);
         synchronized (lock) {
             removeTimer(ptr);
-            Timer t = new Timer();
-            t.ptr = ptr;
+            Timer t = guestTimer(ptr);
             t.cb = cb;
             t.param = param;
             long now = host.currentTimeMillis();
             long due = now + Math.max(0, timeout);
-            if (frameUs > 0 && timeout * 1000 < frameUs) {
-                long[] sl = (long[]) slots.get(new Integer(ptr));
-                if (sl != null) {
-                    long next = (sl[0] + frameUs + 999) / 1000;
-                    if (next > due) due = next;
-                }
+            if (frameUs > 0 && timeout * 1000 < frameUs && t.slotUs >= 0) {
+                long next = (t.slotUs + frameUs + 999) / 1000;
+                if (next > due) due = next;
             }
             t.due = due;
             t.seq = timerSeq++;
@@ -304,13 +316,10 @@ public abstract class Runtime implements SvcHandler {
         }
         if (due != null) {
             if (frameUs > 0 && due.args == null && due.run == null) {
-                Integer key = new Integer(due.ptr);
-                long[] sl = (long[]) slots.get(key);
-                if (sl == null) slots.put(key, sl = new long[1]);
-                long nowUs = now * 1000, planned = sl[0] + frameUs;
+                long nowUs = now * 1000, planned = (due.slotUs < 0 ? 0 : due.slotUs) + frameUs;
                 // on (or nearly on) schedule: keep the fractional grid so the average rate is exact
                 // despite ms timer granularity; clearly late (slow frame): restart the grid from now
-                sl[0] = nowUs - planned >= 0 && nowUs - planned < frameUs / 2 ? planned : nowUs;
+                due.slotUs = nowUs - planned >= 0 && nowUs - planned < frameUs / 2 ? planned : nowUs;
             }
             if (due.run != null) due.run.run();
             else if (due.args != null) cpu.call(due.cb, due.args);
@@ -357,14 +366,14 @@ public abstract class Runtime implements SvcHandler {
             destroyApp();
             return;
         }
-        if (fnHandleCletEvent != 0) cpu.call(fnHandleCletEvent, new int[]{type, p1, p2});
+        if (fnHandleCletEvent != 0) cpu.call(fnHandleCletEvent, type, p1, p2);
     }
 
     // WIPI-C event types (MV_KEY_PRESS_EVENT etc.)
     public static final int EV_KEY_PRESS = 502, EV_KEY_RELEASE = 503, EV_KEY_REPEAT = 504;
 
     protected void paint() {
-        if (fnPaintClet != 0) cpu.call(fnPaintClet, new int[]{0, 0, screenWidth, screenHeight});
+        if (fnPaintClet != 0) cpu.call(fnPaintClet, 0, 0, screenWidth, screenHeight);
     }
 
     public void pauseApp() {

@@ -392,6 +392,7 @@ public class RunHeadless implements Host {
                 }
                 ((LgtRuntime) rt).traceSvc = traceSvc;
                 ((LgtRuntime) rt).load(h.files.get("binary.mod"));
+                hl4.lgt.KroGame.MEASURECHECK = System.getenv("HL4_MEASURECHECK") != null;
                 ((LgtRuntime) rt).game = new hl4.lgt.KroGame((LgtRuntime) rt, viFile("font.bin"), viFile("dict.txt"));
                 if (System.getenv("HL4_STUBOUT") != null) for (String a : System.getenv("HL4_STUBOUT").split(",")) ((LgtRuntime) rt).stubOut(Integer.parseInt(a, 16));
                 ((LgtRuntime) rt).start();
@@ -479,6 +480,10 @@ public class RunHeadless implements Host {
                         rt.postEvent(Runtime.EV_KEY_RELEASE, (int) u[1], 0);
                         it.remove();
                     }
+                }
+                if (hl4.lgt.KroGame.MEASURECHECK && h.currentTimeMillis() - h.vbase >= 3000) {
+                    hl4.lgt.KroGame.MEASURECHECK = false;
+                    ((hl4.lgt.KroGame) ((LgtRuntime) rt).game).measureCheck();
                 }
                 if (callSpec != null && h.currentTimeMillis() - h.vbase >= callAt[0]) { // HL4_CALL=ms:fn,arg,... (arg: hex, @addr = word at addr, @addr+off)
                     String[] cs = callSpec[0].split(",");

@@ -9,3 +9,4 @@ kroj/build/
 dist/
 __pycache__/
 *.pyc
+kro/vi/catalog.json
