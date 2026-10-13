@@ -83,8 +83,8 @@ public class GameCanvas extends Canvas implements Host, Runnable {
             rt = lgt;
             rt.setFrameLimit(fpsLimit());
             lgt.saveDebug = "1".equals(prop("HL4-SAVEDBG", "0").trim());
-            lgt.aid = prop("HL4-AID", "00027BAA");
-            lgt.pid = prop("HL4-PID", "PD116132");
+            lgt.aid = prop("HL4-AID", "0002CCCB");
+            lgt.pid = prop("HL4-PID", "PD137477");
             byte[] bin = readResource("/binary.mod");
             if (bin == null) throw new RuntimeException("binary.mod missing");
             lgt.load(bin);

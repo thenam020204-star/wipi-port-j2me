@@ -1,5 +1,5 @@
 #!/bin/bash
-# Build the Xenonia J2ME jar (LGT WIPI-C port) from the original archive.
+# Build the Chroisen J2ME jar (LGT WIPI-C port) from the original archive.
 # usage: build.sh <original.zip> <out_dir>      env: OVERLAY (extra files), SUFFIX, HL4_SAVEDBG, FPS
 set -e
 HERE=$(cd "$(dirname "$0")" && pwd)
@@ -35,12 +35,12 @@ cp -r $W/pre/* $W/jar/
 if [ -n "$OVERLAY" ]; then cp -r "$OVERLAY"/. $W/jar/; fi
 cp $W/orig/middle.png $W/jar/icon.png 2>/dev/null || cp $W/orig/small.png $W/jar/icon.png 2>/dev/null || true
 # 4) manifest
-NAME="${GNAME:-Xenonia}${SUFFIX}"
+NAME="${GNAME:-Chroisen}${SUFFIX}"
 cat > $W/MANIFEST.MF <<MF
 Manifest-Version: 1.0
 MIDlet-1: $NAME,/icon.png,hl4.midp.HL4Midlet
 MIDlet-Name: $NAME
-MIDlet-Vendor: Gamevil (port)
+MIDlet-Vendor: Softmaru (port NAMP)
 MIDlet-Version: 1.0.0
 MIDlet-Icon: /icon.png
 MicroEdition-Configuration: CLDC-1.1
@@ -48,13 +48,13 @@ MicroEdition-Profile: MIDP-2.0
 HL4-Platform: LGT
 Nokia-MIDlet-Canvas-Scaling-Orientation-Switch: false
 MIDlet-Touch-Support: false
-HL4-FPS: ${FPS:-25}
+HL4-FPS: ${FPS:-27}
 HL5-LSK: ${LSK:-CLR}
 MF
 [ -n "$HL4_SAVEDBG" ] && echo "HL4-SAVEDBG: 1" >> $W/MANIFEST.MF
 echo "HL4-AID: $(grep -a '^AID:' $W/orig/app_info | cut -d: -f2 | tr -d '\r\n')" >> $W/MANIFEST.MF
 echo "HL4-PID: $(grep -a '^PID:' $W/orig/app_info | cut -d: -f2 | tr -d '\r\n')" >> $W/MANIFEST.MF
-BASE=${GBASE:-XEN_LGT}${SUFFIX}
+BASE=${GBASE:-CHROISEN_LGT}${SUFFIX}
 cd $W/jar && rm -f "$OUT/$BASE.jar" && jar cfm "$OUT/$BASE.jar" $W/MANIFEST.MF .
 SIZE=$(stat -c %s "$OUT/$BASE.jar")
 { cat $W/MANIFEST.MF | grep -v '^Manifest-Version'; echo "MIDlet-Jar-URL: $BASE.jar"; echo "MIDlet-Jar-Size: $SIZE"; } > "$OUT/$BASE.jad"

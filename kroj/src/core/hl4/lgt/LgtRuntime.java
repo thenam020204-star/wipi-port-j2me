@@ -25,17 +25,26 @@ public class LgtRuntime extends Runtime {
     }
 
     protected String resourcePath(String name) {
-        // LGT archives keep resources under res/ (the platform maps them transparently)
         if (name.startsWith("/")) name = name.substring(1);
-        return "res/" + name;
+        return resMode == 2 ? "res/" + name : name;
     }
 
+    // archive layout, found on the first resource that exists: 1 = resources at the jar root
+    // (Kroisen: data/, image/, sound/), 2 = under res/ (HL5); 0 = not known yet
+    private int resMode;
+
     protected byte[] resource(String name) {
-        byte[] d = host.loadResource(resourcePath(name));
-        if (d == null) {
-            String n = name.startsWith("/") ? name.substring(1) : name;
+        String n = name.startsWith("/") ? name.substring(1) : name;
+        byte[] d;
+        if (resMode != 2) {
             d = host.loadResource(n);
+            if (d != null || resMode == 1) {
+                if (d != null) resMode = 1;
+                return d;
+            }
         }
+        d = host.loadResource("res/" + n);
+        if (d != null) resMode = 2;
         return d;
     }
 

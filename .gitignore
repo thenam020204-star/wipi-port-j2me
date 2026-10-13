@@ -1,12 +1,12 @@
 # extracted / generated
+*.pyc
+__pycache__/
+dist/
+kro/img/build/
 kro/jar/
 kro/orig/
 kro/overlay/
 kro/vi/build/
-kro/vi/out/
-kro/img/build/
-kroj/build/
-dist/
-__pycache__/
-*.pyc
 kro/vi/catalog.json
+kro/vi/out/
+kroj/build/
