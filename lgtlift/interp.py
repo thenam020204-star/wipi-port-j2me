@@ -38,6 +38,6 @@ class Interp(Core, OpsMixin, MemMixin, CallsMixin, DriveMixin):
 
     def all_functions(self):
         B = self.B
-        skip = self.W.skip_fns
+        skip = self.W.skip_fns | self.string_getters()
         lim = min(self.text_thunks) if self.text_thunks else B.game_end
         return [a for a in B.func_starts if a < lim and a not in skip]

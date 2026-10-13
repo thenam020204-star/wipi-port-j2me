@@ -22,6 +22,8 @@ class FnCtx:
         self.vers = {}            # block start -> [State]
         self.edgemap = {}         # (block, ver, edge index) -> successor version index
         self.failures = []        # [(addr, reason)]
+        self.callees = set()      # function addresses called (all family implementations for virtual calls)
+        self.insts = set()        # local classes instantiated
         self.labels = {}
         self.stubs = []
 

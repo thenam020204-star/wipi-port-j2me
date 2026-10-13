@@ -8,7 +8,8 @@ OBJ = 'java/lang/Object'
 OBJD = 'Ljava/lang/Object;'
 PRIM_ATYPE = {'Z': 4, 'C': 5, 'F': 6, 'D': 7, 'B': 8, 'S': 9, 'I': 10, 'J': 11}
 ATYPE_DESC = {4: 'Z', 5: 'C', 6: 'F', 7: 'D', 8: 'B', 9: 'S', 10: 'I', 11: 'J'}
-IREM = 0xf4a60
+# Thumb runtime arithmetic helpers (signed, truncating; division by zero -> ArithmeticException == JVM idiv/irem)
+ARITH = {0xf49cc: 'idiv', 0xf4a60: 'irem'}
 THUNK_PENDING = (1, 0x32)
 
 
@@ -281,6 +282,11 @@ class CallsMixin:
         if r is None:
             cands = self.fixed_candidates(widx)
             self.fixed_sites.setdefault((hint, slot), []).append((self.fn.addr, ins.addr))
+            for c in cands:
+                if c[2][0] == 'local':
+                    for cm in self.W.subclasses(c[2][1][0].name):
+                        if slot in cm.vslots:
+                            self.fn.callees.add(cm.vslots[slot])
             self.dg('fixed-slot-unresolved', ins.addr, 'hint=%s slot=%d cands=%s' % (hint, slot, cands))
             uniq = set(c[:2] for c in cands) if cands else set()
             if len(cands) == 1:
@@ -330,7 +336,46 @@ class CallsMixin:
             if impl is None:
                 raise Unsupported('abstract local virtual %s.v%d' % (root_name, slot))
             sig = self.sig_for(impl)
+        for cm in self.W.subclasses(root_name):
+            if slot in cm.vslots:
+                self.fn.callees.add(cm.vslots[slot])
         return self.invoke_sig(st, ins, sig, 'invokevirtual')
+
+    # ------------------------------------------------------------------ string literal pool getter
+    def string_getters(self):
+        """Functions of the form `String lit(int idx)`: load the idx-th entry of the literal table through the
+        StringLiteral runtime thunk (table 0x64, fn 9) and return it.  Evidence: tiny, branch-free, one StringLiteral
+        thunk reference (fn 0x16ac in the sample binary)."""
+        r = getattr(self, '_strfns', None)
+        if r is None:
+            r = self._strfns = set()
+            B = self.B
+            for a in B.func_starts:
+                if a >= B.game_end:
+                    break
+                if B.func_end(a) - a > 0x80:
+                    continue
+                insns, data, order = B.decode_function(a)
+                if any(B.thunks.get(w) == (100, 9) for w in data.values()) and not any(
+                        i.op in ('b', 'bl') for i in insns.values()):
+                    r.add(a)
+        return r
+
+    def call_string_getter(self, st, ins):
+        v = self.reg_val(st, 0)
+        c = self.const_of(v)
+        self.clobber(st)
+        if c is not None and 0 <= c < len(self.M.strings):
+            st.regs[0] = S('lit', c)
+            return st
+        self.want_kind(v, 'I')
+        self.push(v, 'I')
+        self.em.op('invokestatic', 'Rt', 'str', '(I)Ljava/lang/String;')
+        if self.cur_live & 1:
+            self.wr_ref(st, 0, 'java/lang/String')
+        else:
+            self.em.op('pop')
+        return st
 
     # ------------------------------------------------------------------ local (lifted) functions
     def call_fn(self, st, ins, addr):
@@ -339,13 +384,15 @@ class CallsMixin:
             self.clobber(st)
             st.regs[0] = S('classrec', W.classrec_fns[addr])
             return st
-        if addr == IREM:
+        if addr in self.string_getters():
+            return self.call_string_getter(st, ins)
+        if addr in ARITH:
             a, b = self.reg_val(st, 0), self.reg_val(st, 1)
             self.want_kind(a, 'I')
             self.want_kind(b, 'I')
             self.push(a, 'I')
             self.push(b, 'I')
-            self.em.op('irem')
+            self.em.op(ARITH[addr])
             self.clobber(st)
             if self.cur_live & 1:
                 self.wr_int(st, 0)
@@ -408,6 +455,7 @@ class CallsMixin:
 
     def invoke_sig(self, st, ins, sig, op):
         em = self.em
+        self.fn.callees.add(sig.addr)
         if sig.desc is None and self.cur_live & 1:
             if not sig.ret_used:
                 sig.ret_used = True
@@ -627,6 +675,7 @@ class CallsMixin:
         if c.k != 'S' or c.sym[0] != 'classrec':
             raise Unsupported('Instantiate of %s' % (c,))
         self.clobber(st)
+        self.fn.insts.add(c.sym[1])
         st.regs[0] = S('newobj', c.sym[1], ins.addr)
         return st
 

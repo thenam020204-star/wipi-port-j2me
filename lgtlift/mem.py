@@ -182,8 +182,8 @@ class MemMixin:
             t, f = self.text_thunks[w]
             return S('thunk', t, f)
         if B.tb <= w < B.tend:
-            if w == 0xf4a61 or w == 0xf4a60:
-                return S('fn', 0xf4a60)
+            if w & ~1 in (0xf4a60, 0xf49cc):
+                return S('fn', w & ~1)
             if w in B.func_starts or w in self.W.classrec_fns:
                 return S('fn', w)
             return S('addr', 'text', w)

@@ -1,0 +1,8 @@
+MIDlet-1: S60Probe, , Probe
+MIDlet-Name: S60Probe
+MIDlet-Vendor: wipi-port
+MIDlet-Version: 1.0
+MIDlet-Jar-URL: S60Probe.jar
+MIDlet-Jar-Size: 8850
+MicroEdition-Configuration: CLDC-1.0
+MicroEdition-Profile: MIDP-2.0
