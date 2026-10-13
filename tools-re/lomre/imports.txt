@@ -1,0 +1,182 @@
+PUBLIC classes 3
+  {'name': 'f', 'inst': (1, 412), 'stat': (0, 0), 'virt': (38, 6), 'iface': (0, 0), 'nonvirt': (0, 0)}
+  {'name': 'Lm', 'inst': (413, 1), 'stat': (0, 0), 'virt': (44, 2), 'iface': (0, 0), 'nonvirt': (0, 0)}
+  {'name': 'n', 'inst': (414, 2), 'stat': (0, 0), 'virt': (46, 1), 'iface': (0, 0), 'nonvirt': (0, 0)}
+IMPORTED classes 31
+== org/kwis/msp/media/Vibrator {'inst': (0, 0), 'stat': (0, 0), 'virt': (0, 0), 'iface': (0, 0), 'nonvirt': (0, 3)}
+    nonvirt 0 None None
+    nonvirt 1 None None
+    nonvirt 2 on (II)V
+== org/kwis/msp/media/Clip {'inst': (0, 0), 'stat': (0, 0), 'virt': (0, 2), 'iface': (0, 0), 'nonvirt': (3, 3)}
+    virt 0 setVolume (I)Z
+    virt 1 setListener (Lorg/kwis/msp/media/PlayListener;)V
+    nonvirt 3 None None
+    nonvirt 4 None None
+    nonvirt 5 <init> (Ljava/lang/String;Ljava/lang/String;)V
+== org/kwis/msp/media/Player {'inst': (0, 0), 'stat': (0, 0), 'virt': (0, 0), 'iface': (0, 0), 'nonvirt': (6, 4)}
+    nonvirt 6 None None
+    nonvirt 7 None None
+    nonvirt 8 play (Lorg/kwis/msp/media/Clip;Z)Z
+    nonvirt 9 stop (Lorg/kwis/msp/media/Clip;)Z
+== org/kwis/msp/lwc/ShellComponent {'inst': (0, 0), 'stat': (0, 0), 'virt': (2, 3), 'iface': (0, 0), 'nonvirt': (10, 3)}
+    virt 2 hide ()V
+    virt 3 show ()V
+    virt 4 addComponent (Lorg/kwis/msp/lwc/Component;)I
+    nonvirt 10 None None
+    nonvirt 11 None None
+    nonvirt 12 <init> (IIII)V
+== org/kwis/msp/io/FileSystem {'inst': (0, 0), 'stat': (0, 0), 'virt': (0, 0), 'iface': (0, 0), 'nonvirt': (13, 4)}
+    nonvirt 13 None None
+    nonvirt 14 None None
+    nonvirt 15 remove (Ljava/lang/String;)V
+    nonvirt 16 exists (Ljava/lang/String;)Z
+== org/kwis/msp/io/File {'inst': (0, 0), 'stat': (0, 0), 'virt': (5, 5), 'iface': (0, 0), 'nonvirt': (17, 3)}
+    virt 5 read ([B)I
+    virt 6 write ([B)I
+    virt 7 read ([BII)I
+    virt 8 close ()V
+    virt 9 write ([BII)I
+    nonvirt 17 None None
+    nonvirt 18 None None
+    nonvirt 19 <init> (Ljava/lang/String;I)V
+== java/lang/Integer {'inst': (0, 0), 'stat': (0, 0), 'virt': (0, 0), 'iface': (0, 0), 'nonvirt': (20, 4)}
+    nonvirt 20 None None
+    nonvirt 21 None None
+    nonvirt 22 <init> (I)V
+    nonvirt 23 parseInt (Ljava/lang/String;)I
+== org/kwis/msp/lcdui/Font {'inst': (0, 0), 'stat': (0, 0), 'virt': (10, 4), 'iface': (0, 0), 'nonvirt': (24, 3)}
+    virt 10 charsWidth ([CII)I
+    virt 11 getHeight ()I
+    virt 12 substringWidth (Ljava/lang/String;II)I
+    virt 13 stringWidth (Ljava/lang/String;)I
+    nonvirt 24 None None
+    nonvirt 25 None None
+    nonvirt 26 getDefaultFont ()Lorg/kwis/msp/lcdui/Font;
+== java/lang/Math {'inst': (0, 0), 'stat': (0, 0), 'virt': (0, 0), 'iface': (0, 0), 'nonvirt': (27, 3)}
+    nonvirt 27 None None
+    nonvirt 28 None None
+    nonvirt 29 abs (I)I
+== org/kwis/msp/handset/BackLight {'inst': (0, 0), 'stat': (0, 0), 'virt': (0, 0), 'iface': (0, 0), 'nonvirt': (30, 3)}
+    nonvirt 30 None None
+    nonvirt 31 None None
+    nonvirt 32 alwaysOn ()V
+== java/util/Random {'inst': (0, 0), 'stat': (0, 0), 'virt': (0, 0), 'iface': (0, 0), 'nonvirt': (33, 3)}
+    nonvirt 33 None None
+    nonvirt 34 None None
+    nonvirt 35 <init> ()V
+== org/kwis/msp/lcdui/Card {'inst': (0, 0), 'stat': (0, 0), 'virt': (14, 3), 'iface': (0, 0), 'nonvirt': (36, 3)}
+    virt 14 repaint (IIII)V
+    virt 15 getHeight ()I
+    virt 16 getWidth ()I
+    nonvirt 36 None None
+    nonvirt 37 None None
+    nonvirt 38 <init> ()V
+== org/kwis/msp/handset/HandsetProperty {'inst': (0, 0), 'stat': (0, 0), 'virt': (0, 0), 'iface': (0, 0), 'nonvirt': (39, 3)}
+    nonvirt 39 None None
+    nonvirt 40 None None
+    nonvirt 41 getSystemProperty (Ljava/lang/String;)Ljava/lang/String;
+== org/kwis/msf/io/Socket {'inst': (0, 0), 'stat': (0, 0), 'virt': (0, 0), 'iface': (0, 3), 'nonvirt': (42, 2)}
+    iface 0 close ()V
+    iface 1 getInputStream ()Ljava/io/InputStream;
+    iface 2 getOutputStream ()Ljava/io/OutputStream;
+    nonvirt 42 None None
+    nonvirt 43 None None
+== org/kwis/msf/io/URL {'inst': (0, 0), 'stat': (0, 0), 'virt': (0, 0), 'iface': (0, 0), 'nonvirt': (44, 3)}
+    nonvirt 44 None None
+    nonvirt 45 None None
+    nonvirt 46 find (Ljava/lang/String;)Lorg/kwis/msf/io/Socket;
+== org/kwis/msf/io/Network {'inst': (0, 0), 'stat': (0, 0), 'virt': (0, 0), 'iface': (0, 0), 'nonvirt': (47, 4)}
+    nonvirt 47 None None
+    nonvirt 48 None None
+    nonvirt 49 disconnect ()V
+    nonvirt 50 connect ()I
+== java/lang/Thread {'inst': (0, 0), 'stat': (0, 0), 'virt': (0, 0), 'iface': (0, 0), 'nonvirt': (51, 5)}
+    nonvirt 51 None None
+    nonvirt 52 None None
+    nonvirt 53 <init> (Ljava/lang/Runnable;)V
+    nonvirt 54 sleep (J)V
+    nonvirt 55 yield ()V
+== java/util/Vector {'inst': (0, 0), 'stat': (0, 0), 'virt': (0, 0), 'iface': (0, 0), 'nonvirt': (56, 4)}
+    nonvirt 56 None None
+    nonvirt 57 None None
+    nonvirt 58 <init> ()V
+    nonvirt 59 <init> (I)V
+== org/kwis/msp/lcdui/Display {'inst': (0, 0), 'stat': (0, 0), 'virt': (17, 1), 'iface': (0, 0), 'nonvirt': (60, 3)}
+    virt 17 pushCard (Lorg/kwis/msp/lcdui/Card;)V
+    nonvirt 60 None None
+    nonvirt 61 None None
+    nonvirt 62 getDefaultDisplay ()Lorg/kwis/msp/lcdui/Display;
+== org/kwis/msp/lwc/AnnunciatorComponent {'inst': (0, 0), 'stat': (0, 0), 'virt': (18, 1), 'iface': (0, 0), 'nonvirt': (63, 3)}
+    virt 18 show ()V
+    nonvirt 63 None None
+    nonvirt 64 None None
+    nonvirt 65 <init> (Z)V
+== org/kwis/msp/lcdui/Jlet {'inst': (0, 0), 'stat': (0, 0), 'virt': (19, 1), 'iface': (0, 0), 'nonvirt': (66, 3)}
+    virt 19 notifyDestroyed ()V
+    nonvirt 66 None None
+    nonvirt 67 None None
+    nonvirt 68 <init> ()V
+== java/lang/System {'inst': (0, 0), 'stat': (0, 0), 'virt': (0, 0), 'iface': (0, 0), 'nonvirt': (69, 5)}
+    nonvirt 69 None None
+    nonvirt 70 None None
+    nonvirt 71 currentTimeMillis ()J
+    nonvirt 72 arraycopy (Ljava/lang/Object;ILjava/lang/Object;II)V
+    nonvirt 73 gc ()V
+== java/lang/String {'inst': (0, 0), 'stat': (0, 0), 'virt': (0, 0), 'iface': (0, 0), 'nonvirt': (74, 5)}
+    nonvirt 74 None None
+    nonvirt 75 None None
+    nonvirt 76 valueOf (I)Ljava/lang/String;
+    nonvirt 77 <init> ()V
+    nonvirt 78 <init> ([BII)V
+== org/kwis/msp/lwc/TextComponent {'inst': (0, 1), 'stat': (0, 0), 'virt': (20, 1), 'iface': (0, 0), 'nonvirt': (0, 0)}
+    inst 0 iMode I
+    virt 20 getString ()Ljava/lang/String;
+== org/kwis/msp/lwc/TextBoxComponent {'inst': (0, 0), 'stat': (0, 0), 'virt': (21, 2), 'iface': (0, 0), 'nonvirt': (79, 6)}
+    virt 21 focusNotify (Z)V
+    virt 22 setString (Ljava/lang/String;)V
+    nonvirt 79 None None
+    nonvirt 80 None None
+    nonvirt 81 keyNotify (II)Z
+    nonvirt 82 focusNotify (Z)V
+    nonvirt 83 setMaxLength (I)V
+    nonvirt 84 <init> (Ljava/lang/String;I)V
+== org/kwis/msp/lcdui/Graphics {'inst': (0, 0), 'stat': (0, 0), 'virt': (23, 14), 'iface': (0, 0), 'nonvirt': (0, 0)}
+    virt 23 drawLine (IIII)V
+    virt 24 translate (II)V
+    virt 25 drawChar (CIII)V
+    virt 26 drawRoundRect (IIIIII)V
+    virt 27 setColor (III)V
+    virt 28 setClip (IIII)V
+    virt 29 drawRect (IIII)V
+    virt 30 drawChars ([CIIIII)V
+    virt 31 drawString (Ljava/lang/String;III)V
+    virt 32 fillRoundRect (IIIIII)V
+    virt 33 setAlpha (I)V
+    virt 34 fillRect (IIII)V
+    virt 35 setColor (I)V
+    virt 36 drawImage (Lorg/kwis/msp/lcdui/Image;III)V
+== java/lang/Object {'inst': (0, 0), 'stat': (0, 0), 'virt': (0, 0), 'iface': (0, 0), 'nonvirt': (85, 3)}
+    nonvirt 85 None None
+    nonvirt 86 None None
+    nonvirt 87 <init> ()V
+== java/lang/Exception {'inst': (0, 0), 'stat': (0, 0), 'virt': (0, 0), 'iface': (0, 0), 'nonvirt': (88, 2)}
+    nonvirt 88 None None
+    nonvirt 89 None None
+== org/kwis/msp/lcdui/Image {'inst': (0, 0), 'stat': (0, 0), 'virt': (37, 1), 'iface': (0, 0), 'nonvirt': (90, 4)}
+    virt 37 getWidth ()I
+    nonvirt 90 None None
+    nonvirt 91 None None
+    nonvirt 92 createImage (Ljava/lang/String;)Lorg/kwis/msp/lcdui/Image;
+    nonvirt 93 createImage ([BII)Lorg/kwis/msp/lcdui/Image;
+== java/lang/StringBuffer {'inst': (0, 0), 'stat': (0, 0), 'virt': (0, 0), 'iface': (0, 0), 'nonvirt': (94, 4)}
+    nonvirt 94 None None
+    nonvirt 95 None None
+    nonvirt 96 <init> (Ljava/lang/String;)V
+    nonvirt 97 <init> ()V
+== org/kwis/msp/lcdui/JletWrapper {'inst': (0, 0), 'stat': (0, 0), 'virt': (0, 0), 'iface': (0, 0), 'nonvirt': (98, 6)}
+    nonvirt 98 None None
+    nonvirt 99 None None
+    nonvirt 100 destroyApp (Z)V
+    nonvirt 101 resumeApp ()V
+    nonvirt 102 pauseApp ()V
+    nonvirt 103 startApp ([Ljava/lang/String;)V
