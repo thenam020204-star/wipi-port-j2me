@@ -8,6 +8,8 @@ public final class KroGame extends LgtGame {
     KroText text;
     /** harness debug: compare the HLE text measure with the original ARM code before installing it */
     public static boolean MEASURECHECK;
+    /** harness debug: log every drawn Vietnamese word */
+    public static boolean TEXTLOG;
 
     /** font/dict: Vietnamese overlay (/vi/font.bin, /vi/dict.txt), null for the original text. */
     public KroGame(LgtRuntime rt, byte[] font, byte[] dict) throws java.io.IOException {

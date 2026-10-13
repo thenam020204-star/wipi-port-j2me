@@ -269,19 +269,50 @@ def main():
         for sa, size, so, typ in secs:
             if sa <= a < sa + size: return so + a - sa
         raise KeyError(hex(a))
+    ptr_moves = []
     for e in byfile[('B', '')]:
         b = put(e, e['max'])
         if b is None: continue
         a = int(e['id'][2:], 16); o = off(a)
         orig = bytes(d[o:d.index(b'\0', o)])
+        moved, keep = [], False
         for k in e.get('inner', []):
+            tid = '%s+%d' % (e['id'], k)
+            tv = by_id.get(tid)
+            if tv is not None:
+                # a string that ends where another one starts (shared tail): the tail gets its own copy after the
+                # NUL of the translated string and every pointer to it is redirected (literal pools, tables)
+                tb, _ = enc.fit(tv, None)
+                pos = len(b) + 1
+                if pos + len(tb) + 1 > e['max'] + 1:
+                    tb, _ = enc.fit(tv, None); tb = enc.encode_compact(tv)
+                if pos + len(tb) + 1 > e['max'] + 1:
+                    report.append('%s: ĐUÔI %s không đủ chỗ (%d > %d byte) | %s' % (e['id'], tid, pos + len(tb) + 1, e['max'] + 1, tv)); keep = True; break
+                moved.append((a + k, a + pos, tb)); continue
             suf = orig[k:]
-            if b.endswith(suf) and len(b) - len(suf) <= k:
-                b = b[:len(b) - len(suf)] + b' ' * (k - (len(b) - len(suf))) + suf
-            else:
-                report.append('%s: ĐUÔI DÙNG CHUNG ở +%d (%r) không giữ được -> giữ gốc' % (e['id'], k, suf)); b = None; break
-        if b is None: continue
+            ok = False
+            for cand in (b, enc.encode_compact(tr(e))):
+                if cand.endswith(suf) and len(cand) - len(suf) <= k:
+                    b = cand[:len(cand) - len(suf)] + b' ' * (k - (len(cand) - len(suf))) + suf; ok = True; break
+            if not ok:
+                report.append('%s: ĐUÔI DÙNG CHUNG ở +%d (%r) không giữ được -> giữ gốc' % (e['id'], k, suf)); keep = True; break
+        if keep: continue
+        buf = bytearray(b + b'\0')
+        for old_a, new_a, tb in moved:
+            buf += tb + b'\0'
+            ptr_moves.append((old_a, new_a))
+        b = bytes(buf[:-1]) if not moved else bytes(buf[:-1])
         d[o:o + e['max'] + 1] = b + b'\0' * (e['max'] + 1 - len(b))
+    # redirect pointers of moved shared tails (aligned words equal to the old address, in every loaded section)
+    for old_a, new_a in ptr_moves:
+        n = 0
+        for sa, size, so, typ in secs:
+            if typ == 8: continue
+            for q in range(so, so + size - 3, 4):
+                if struct.unpack_from('<I', d, q)[0] == old_a:
+                    struct.pack_into('<I', d, q, new_a); n += 1
+        stats['đuôi chuyển'] += 1
+        if n == 0: report.append('đuôi %x: không thấy con trỏ' % old_a)
     # code patches: patches.txt 'addr old_hex new_hex  # ghi chú'
     pp = os.path.join(W, '..', 're', 'patches.txt')
     if os.path.exists(pp):

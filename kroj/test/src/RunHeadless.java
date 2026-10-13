@@ -393,6 +393,7 @@ public class RunHeadless implements Host {
                 ((LgtRuntime) rt).traceSvc = traceSvc;
                 ((LgtRuntime) rt).load(h.files.get("binary.mod"));
                 hl4.lgt.KroGame.MEASURECHECK = System.getenv("HL4_MEASURECHECK") != null;
+                hl4.lgt.KroGame.TEXTLOG = System.getenv("HL4_TEXTLOG") != null;
                 ((LgtRuntime) rt).game = new hl4.lgt.KroGame((LgtRuntime) rt, viFile("font.bin"), viFile("dict.txt"));
                 if (System.getenv("HL4_STUBOUT") != null) for (String a : System.getenv("HL4_STUBOUT").split(",")) ((LgtRuntime) rt).stubOut(Integer.parseInt(a, 16));
                 ((LgtRuntime) rt).start();

@@ -1,0 +1,314 @@
+id	gốc	dịch	ghi chú
+T:SKILL.dat:0:17	파워슬래시		
+T:SKILL.dat:0:29	마나를 모아 강하게 전방에 내려꽂는다		
+T:SKILL.dat:1:17	파워플라이		
+T:SKILL.dat:1:29	적을 공중으로 띄워 올려 무방비 상태로 만든다		
+T:SKILL.dat:2:17	스윙어라운드		
+T:SKILL.dat:2:31	검을 원형태로 휘둘러, 주변의 적을 공격한다		
+T:SKILL.dat:3:17	파워버팅		
+T:SKILL.dat:3:27	박치기로 돌진하며 적을 공격한다		
+T:SKILL.dat:4:17	드래곤피어		
+T:SKILL.dat:4:29	드래곤의 울음소리로 적들을 혼란시킨다		
+T:SKILL.dat:5:17	홀딩트위스터		
+T:SKILL.dat:5:31	무기를 고속회전시켜, 적을 빨아들여 다단히트 공격		
+T:SKILL.dat:6:17	스매쉬		
+T:SKILL.dat:6:25	(근접 잡기)상대방을 들어올려 반대편 땅에 내리꽂는다 		
+T:SKILL.dat:7:17	로우킥		
+T:SKILL.dat:7:25	적의 하단부를 강하게 걷어차서 쓰러뜨린다		
+T:SKILL.dat:8:17	파워업		
+T:SKILL.dat:8:25	시전시 근력 UP		
+T:SKILL.dat:9:17	근력강화		
+T:SKILL.dat:9:27	기본 근력을 증가 시켜준다		
+T:SKILL.dat:10:17	전설의슬래셔		
+T:SKILL.dat:10:31	전설의 슬래셔는 최고의 전투력을 위해 몸을 단련시켰다		
+T:SKILL.dat:11:17	경갑마스터리A		
+T:SKILL.dat:11:32	경갑 착용시 디펜스가 증가한다		
+T:SKILL.dat:12:17	양손검마스터리		
+T:SKILL.dat:12:33	양손검 사용시 데미지가 증가한다		
+T:SKILL.dat:13:17	디멘스세이버		
+T:SKILL.dat:13:31	마나를 집중해 전진 방향의 앞뒤 직선 공간을 가른다		
+T:SKILL.dat:14:17	플라이슬래시		
+T:SKILL.dat:14:31	전방의 적을 공중에 띄운상태로, 강하게 내려친다		
+T:SKILL.dat:15:17	파이널슬래시		
+T:SKILL.dat:15:31	(버튼 누름 지속형)발전된 형태의 파워슬래시를 사용한다		
+T:SKILL.dat:16:17	더블 히트		
+T:SKILL.dat:16:28	적에게 근접해 교차형태로 두번 베어버린다		
+T:SKILL.dat:17:17	파워웨이브		
+T:SKILL.dat:17:29	대지에 마나를 뿌려 강력한 검기의 파도를 발사한다		
+T:SKILL.dat:18:17	민첩강화		
+T:SKILL.dat:18:27	기본 민첩을 증가시켜준다		
+T:SKILL.dat:19:17	경갑마스터리B		
+T:SKILL.dat:20:17	도끼마스터리		
+T:SKILL.dat:20:31	도끼 착용시 데미지가 증가한다		
+T:SKILL.dat:21:17	회심의공격		
+T:SKILL.dat:21:29	기본 크리티컬률을 증가 시켜준다		
+T:SKILL.dat:22:17	썬더스윙스톰		
+T:SKILL.dat:22:31	회전하며 사방에 전격을 떨어뜨린다		
+T:SKILL.dat:23:17	에어스윙		
+T:SKILL.dat:23:27	마나를 모아 전방으로 검기를 발사한다		
+T:SKILL.dat:24:17	도발		
+T:SKILL.dat:24:23	적을 도발하여 자기주변으로 모은다		
+T:SKILL.dat:25:17	크래이징 댄스		
+T:SKILL.dat:25:32	전방에 수갈래의 검기를 뿌려 공격한다		
+T:SKILL.dat:26:17	프롬스카이		
+T:SKILL.dat:26:29	공중으로 떳다가 상대를 찍어 공격한다		
+T:SKILL.dat:27:17	넘치는체력		
+T:SKILL.dat:27:29	기본 체력을 증가 시켜준다		
+T:SKILL.dat:28:17	경갑마스터리C		
+T:SKILL.dat:29:17	해머마스터리		
+T:SKILL.dat:29:31	해머 사용시 데미지가 증가한다		
+T:SKILL.dat:30:29	기본 크리티컬률이 증가한다		
+T:SKILL.dat:31:17	그라운드크래싱		
+T:SKILL.dat:31:33	마나의 기운를 담아 대지를 내려쳐 적을 공격한다		
+T:SKILL.dat:32:17	크래싱웨이브		
+T:SKILL.dat:32:31	대지를 내려쳐 발생된 충격파를 전방으로 발사한다		
+T:SKILL.dat:33:17	해머홀드		
+T:SKILL.dat:33:27	마나의 해머를 순간적으로 늘여서 적을 끌어 들인다		
+T:SKILL.dat:34:17	사방부수기		
+T:SKILL.dat:34:29	사방을 동시에 공격한다.		
+T:SKILL.dat:35:17	파이널크래싱		
+T:SKILL.dat:35:31	(버튼 누름 지속형)전격의 해머를 전방에 내려꽂는다		
+T:SKILL.dat:37:17	불멸의슬래셔		
+T:SKILL.dat:37:31	시전시 공격력 UP		
+T:SKILL.dat:38:17	수퍼콤보		
+T:SKILL.dat:38:27	대인전 최강의 스킬의 연속시전으로 전방의 적을 초토화		
+T:SKILL.dat:39:17	썬더어라운드		
+T:SKILL.dat:39:31	전격의 도끼를 소환해 몸 주변으로 회전시키며 공격		
+T:SKILL.dat:40:17	허리케인로드		
+T:SKILL.dat:40:31	강력한 허리케인을 발사한다		
+T:SKILL.dat:41:17	해머블래스트		
+T:SKILL.dat:41:31	마나를 모아  생성한 해머를 원거리로 날려 터트린다		
+T:SKILL.dat:42:17	해머어스퀘이크		
+T:SKILL.dat:42:33	대지를 후려쳐 지진이 발생시킨다		
+T:SKILL.dat:43:17	포인트프릭		
+T:SKILL.dat:43:29	급소를 찔러 상대를 기절 시킨다		
+T:SKILL.dat:44:17	쇼트어퍼		
+T:SKILL.dat:45:17	데스러쉬		
+T:SKILL.dat:45:27	(버튼 누름 러쉬 지속형)러쉬 중에 만나는 적을 난자한다.		
+T:SKILL.dat:46:17	어쌔신백스텝		
+T:SKILL.dat:46:31	뒤로 빠르게 이동한다		
+T:SKILL.dat:47:17	스윙스톰		
+T:SKILL.dat:47:27	주변의 적을 빨아들여 회전하며 공격한다		
+T:SKILL.dat:48:17	브로큰넥		
+T:SKILL.dat:48:27	(근접 잡기)잡기 기술로 뒤로 돌아가 목을 친다		
+T:SKILL.dat:49:17	백드롭		
+T:SKILL.dat:49:25	(근접 잡기)적의 뒤쪽으로 돌아가 백드롭을 한다		
+T:SKILL.dat:50:17	숄더어택		
+T:SKILL.dat:50:27	어깨로 적을 가격한다		
+T:SKILL.dat:51:17	번개의빠름		
+T:SKILL.dat:51:29	시전시 민첩 UP		
+T:SKILL.dat:52:17	매의눈		
+T:SKILL.dat:53:17	공격력증가		
+T:SKILL.dat:53:29	기본 공격력을 증가 시켜준다		
+T:SKILL.dat:54:17	광풍의어쌔신		
+T:SKILL.dat:54:31	공격을 피하는 기술이야말로 어쌔신의 필수 능력이다		
+T:SKILL.dat:55:17	가죽마스터리A		
+T:SKILL.dat:55:32	가죽 착용시 디펜스가 증가한다		
+T:SKILL.dat:56:17	단검마스터리		
+T:SKILL.dat:56:31	단검 착용시 데미지가 증가한다		
+T:SKILL.dat:57:17	드로우크로스		
+T:SKILL.dat:57:31	근거리의 적을 끌어와 십자형태로 두번 강한 타격을 한다		
+T:SKILL.dat:58:17	라이트닝쇼크		
+T:SKILL.dat:58:31	전격의 마나를 검에 모아 일격에 내려친다		
+T:SKILL.dat:59:17	윈드블레이드		
+T:SKILL.dat:59:31	전방에 검의 마나를 뿌려 바람의 칼날을 생성한다		
+T:SKILL.dat:60:17	다크슬라이스		
+T:SKILL.dat:60:31	앞으로 전진하며, 암흑의 검기를 날려 다단공격을 한다		
+T:SKILL.dat:61:17	포이즌스로우		
+T:SKILL.dat:61:31	강한 독의 마나구을 전방에 던진후 폭파시켜 중독시킨다		
+T:SKILL.dat:63:17	가죽마스터리B		
+T:SKILL.dat:64:17	글러브마스터리		
+T:SKILL.dat:64:33	글러브 착용시 데미지가 증가한다		
+T:SKILL.dat:65:17	고속회피		
+T:SKILL.dat:65:27	기본 회피율을 증가 시켜준다		
+T:SKILL.dat:66:17	더블 스플렉스		
+T:SKILL.dat:66:32	(근접 잡기)적을 잡아 뒤로 메친후,회전하며 다시 메친다		
+T:SKILL.dat:67:17	크로스암바		
+T:SKILL.dat:67:29	(근접 잡기)적을 잡아, 관절기를 시전해 타격을 준다		
+T:SKILL.dat:68:17	페이스버스터		
+T:SKILL.dat:68:31	(근접 잡기)달려가다가 적을 잡아서 머리를 땅에 꽂는다		
+T:SKILL.dat:69:17	거쉬드스매쉬		
+T:SKILL.dat:69:31	(근접 잡기)전방의 적을 빨아들여서 바닥에 메친다		
+T:SKILL.dat:70:17	수퍼스트레이트		
+T:SKILL.dat:70:33	미끄러지며 주먹을 주욱~ 뻗어 공격한다		
+T:SKILL.dat:71:17	슈팅스타드롭킥		
+T:SKILL.dat:71:33	전방으로 날아올라 회전한후 강력한 드롭킥 공격을 한다		
+T:SKILL.dat:72:17	가죽마스터리C		
+T:SKILL.dat:73:17	클러마스터리		
+T:SKILL.dat:73:31	클러 착용시 데미지가 증가한다		
+T:SKILL.dat:74:17	강인한육체		
+T:SKILL.dat:74:29	기본 방어력을 증가 시켜준다.		
+T:SKILL.dat:75:17	스매쉬어퍼		
+T:SKILL.dat:75:29	상승하여 적에게 어퍼컷을 날린다		
+T:SKILL.dat:76:17	파이어캐논		
+T:SKILL.dat:76:29	강력한 정권 지르기를 통해 마나가 발사된다		
+T:SKILL.dat:77:17	파이널피니쉬		
+T:SKILL.dat:77:31	(버튼 누름 지속형)무기를 고속회전시켜,다단히트 공격		
+T:SKILL.dat:78:17	리버블로우		
+T:SKILL.dat:78:29	적에게 근접해 복부에 강한 펀치를 꽂아넣어 기절시킨다		
+T:SKILL.dat:79:17	백워드컷		
+T:SKILL.dat:79:27	무기를 휘두르며 빠르게 뒤로 회피한다		
+T:SKILL.dat:80:17	파이널데스러쉬		
+T:SKILL.dat:80:33	암흑의 마나를 사용한 금기의 기술. 데스러쉬의 최종기		
+T:SKILL.dat:81:17	익스포이즌		
+T:SKILL.dat:81:29	강력한 독을 넓은지역에 분사한후 폭파시켜 중독시킨다		
+T:SKILL.dat:82:17	파이널그래플링		
+T:SKILL.dat:82:33	(근접 잡기)잡기기술의 결정판이다		
+T:SKILL.dat:83:17	수퍼스윙스톰		
+T:SKILL.dat:83:31	스윙스톰 최종기이다		
+T:SKILL.dat:84:17	드래곤어퍼		
+T:SKILL.dat:84:29	상승하는 용과 형상으로 어퍼컷을 날린다		
+T:SKILL.dat:85:17	드래곤브래스		
+T:SKILL.dat:85:31	드래곤의 브래스를 형상화해 전방의 적에게 마나를 발사		
+T:SKILL.dat:86:17	방패방어		
+T:SKILL.dat:86:27	(버튼 누름 지속형)방패로 전면부를 방어한다		
+T:SKILL.dat:87:17	파이어다운		
+T:SKILL.dat:87:29	불의 마나를 날려 적을 공격한다		
+T:SKILL.dat:88:17	기사의일격		
+T:SKILL.dat:88:29	적에게 강하게 돌진해 일격을 가한다		
+T:SKILL.dat:89:17	스카이세이버		
+T:SKILL.dat:89:31	강력한 올려베기를 시전한다		
+T:SKILL.dat:90:17	쉴드부메랑		
+T:SKILL.dat:90:29	방패에 마나를 담아 전방에 날려 적을 공격한다		
+T:SKILL.dat:91:17	힐링		
+T:SKILL.dat:91:23	HP를 회복한다		
+T:SKILL.dat:92:17	데미지업		
+T:SKILL.dat:93:17	마나차지		
+T:SKILL.dat:93:27	시전시 5초당 MP회복		
+T:SKILL.dat:94:17	디펜스업		
+T:SKILL.dat:94:27	시전시 방어력 UP		
+T:SKILL.dat:95:17	체력단련		
+T:SKILL.dat:96:17	학문정진		
+T:SKILL.dat:96:27	기본 마력을 증가 시켜준다		
+T:SKILL.dat:97:17	철갑의나이트		
+T:SKILL.dat:97:31	그 누구도 나이트의 방어를 뚫을 수는 없다		
+T:SKILL.dat:98:17	중갑마스터리A		
+T:SKILL.dat:98:32	중갑 착용시 디펜스가 증가한다		
+T:SKILL.dat:99:17	랜스마스터리		
+T:SKILL.dat:99:31	랜스 사용시 데미지가 증가한다		
+T:SKILL.dat:100:17	철통방어		
+T:SKILL.dat:100:27	(버튼 누름 지속형)사방을 철통과 같이 방어한다		
+T:SKILL.dat:101:17	쉴드스트록		
+T:SKILL.dat:101:29	방패로 적을 강하게 내리쳐 기절시킨다		
+T:SKILL.dat:102:17	드로우쓰러스트		
+T:SKILL.dat:102:33	전방을 적들을 끌어와 여러 번 베어 공격한다		
+T:SKILL.dat:103:17	마나체인		
+T:SKILL.dat:103:27	마나로 체인을 만들어 몸을 보호한다		
+T:SKILL.dat:104:17	마나체인어택		
+T:SKILL.dat:104:31	마나체인을 발사해 적을 공격한다		
+T:SKILL.dat:105:17	어퍼크래시콤보		
+T:SKILL.dat:105:33	적에게 근접해 검과 방패로 다단공격을 한다		
+T:SKILL.dat:106:17	중갑마스터리B		
+T:SKILL.dat:106:32	중갑 착용시 디펜스상승		
+T:SKILL.dat:107:17	세이버마스터리		
+T:SKILL.dat:107:33	세이버 사용시 데미지상승		
+T:SKILL.dat:108:17	고귀한일격		
+T:SKILL.dat:108:29	강한 일격을 날리며 적을 공중에 띄운다		
+T:SKILL.dat:109:17	스키드쉴드어퍼		
+T:SKILL.dat:109:33	미끄러지듯이 방패공격을 해서 적을 띄운다		
+T:SKILL.dat:110:17	스키드쓰러스트		
+T:SKILL.dat:110:33	미끄러지듯이 전진해 적을 깊게 찌른다		
+T:SKILL.dat:111:17	백스키드어택		
+T:SKILL.dat:111:31	뒤로 미끄러지듯이 회피하며 검을 날린다		
+T:SKILL.dat:112:17	스키드스매쉬		
+T:SKILL.dat:112:31	(근접 잡기)미끄러지듯 적에게 다가가 잡아 날린다		
+T:SKILL.dat:113:17	다우닝어택		
+T:SKILL.dat:113:29	전방의 적을 공격한다		
+T:SKILL.dat:114:17	중갑마스터리C		
+T:SKILL.dat:115:17	한손검마스터리		
+T:SKILL.dat:115:33	한손검 사용시 데미지가 증가한다		
+T:SKILL.dat:116:17	수퍼파이어		
+T:SKILL.dat:116:29	파이어다운의 강화판이다		
+T:SKILL.dat:117:17	수퍼롤링		
+T:SKILL.dat:117:27	회전하며 적을 튕겨낸다		
+T:SKILL.dat:118:17	수퍼웨이브		
+T:SKILL.dat:118:29	원거리의 웨이브 공격을 한다		
+T:SKILL.dat:119:17	수퍼봄버		
+T:SKILL.dat:119:27	캐릭터 주변을 화염으로 폭발시킨다		
+T:SKILL.dat:120:17	수퍼힐링		
+T:SKILL.dat:120:27	힐링의 강화된 기술		
+T:SKILL.dat:121:17	수퍼컨디션		
+T:SKILL.dat:121:29	시전시 5초당 HP회복		
+T:SKILL.dat:122:17	더블하트		
+T:SKILL.dat:122:27	시전시 HP최대치 UP		
+T:SKILL.dat:123:17	샤이닝붐버		
+T:SKILL.dat:123:29	마나를 모아 주변을 폭발시킨다		
+T:SKILL.dat:124:17	민첩단련		
+T:SKILL.dat:124:27	기본 민첩을 증가 시켜준다		
+T:SKILL.dat:125:17	노블트리플어택		
+T:SKILL.dat:125:33	스키드 어퍼,어택,쓰러스트의 3단 연속기술		
+T:SKILL.dat:126:17	노블어퍼컷		
+T:SKILL.dat:126:29	적을 끌어모아, 강하게 회전하며 올려친다		
+T:SKILL.dat:127:17	육체단련		
+T:SKILL.dat:128:17	파워오브마나		
+T:SKILL.dat:128:31	시전시 마법공격력 UP		
+T:SKILL.dat:129:17	울트라레인		
+T:SKILL.dat:129:29	마나의 비가 내려 전 지역의 적을 공격한다		
+T:SKILL.dat:130:17	단단한육체		
+T:SKILL.dat:130:29	기본 방어력을 증가 시켜준다		
+T:SKILL.dat:131:17	파이어볼		
+T:SKILL.dat:131:27	화염의 마나를 구형태로 전방에 발사한다		
+T:SKILL.dat:132:17	썬더볼트		
+T:SKILL.dat:132:27	전방에 강한 전기쇼크로 적들을 공격한다		
+T:SKILL.dat:133:17	프리즌쇼크		
+T:SKILL.dat:133:29	얼음을 땅에서 소환후, 터트려 주변의 적을 띄운다		
+T:SKILL.dat:134:17	블링크		
+T:SKILL.dat:134:25	뒤쪽으로 공간이동을 시전해 적의 공격을 피한다		
+T:SKILL.dat:135:17	다크커즈		
+T:SKILL.dat:135:27	주변 지역에 독의 안개를 분사해 적을 중독시킨다		
+T:SKILL.dat:136:17	마나쇼크		
+T:SKILL.dat:136:27	몸속의 마나를 순간적으로 터트려 적을 혼란시킨다		
+T:SKILL.dat:137:17	거쉬드마나		
+T:SKILL.dat:137:29	주변 모든 적의 체력의 일부를 마나로 흡수한다		
+T:SKILL.dat:138:17	마법의오라		
+T:SKILL.dat:139:17	마력의오라		
+T:SKILL.dat:139:29	시전시 마력 UP		
+T:SKILL.dat:140:17	고대의문서		
+T:SKILL.dat:141:17	마나의책		
+T:SKILL.dat:141:27	기본 마나를 증가 시켜준다		
+T:SKILL.dat:142:17	대마법사의지혜		
+T:SKILL.dat:142:33	끝없는 연구로 마법의 쿨타임을 줄였다		
+T:SKILL.dat:143:17	천마스터리A		
+T:SKILL.dat:143:30	천의류 착용시 디펜스가 증가한다		
+T:SKILL.dat:144:17	파이어월		
+T:SKILL.dat:144:27	케릭터 주변에 불의 벽을 발현한다.		
+T:SKILL.dat:145:17	마법수련		
+T:SKILL.dat:145:27	기본 마법공격력을 증가 시켜준다		
+T:SKILL.dat:146:17	마력회복		
+T:SKILL.dat:146:27	자동으로 마력을 회복한다		
+T:SKILL.dat:147:17	불의기운		
+T:SKILL.dat:148:17	버스트플레어		
+T:SKILL.dat:148:31	화염의 마나를 모아 일시에 터트린다		
+T:SKILL.dat:149:17	플레어웨이브		
+T:SKILL.dat:149:31	전방에 화염의 파도를 발사한다		
+T:SKILL.dat:150:17	헬파이어		
+T:SKILL.dat:150:27	지옥의 화염을 소환해 적에게 떨어뜨린다		
+T:SKILL.dat:151:17	천마스터리B		
+T:SKILL.dat:152:17	프리즌웨이브		
+T:SKILL.dat:152:31	전방에 냉기를 모아 얼린후, 터트려 공격한다		
+T:SKILL.dat:155:17	아이스서먼		
+T:SKILL.dat:155:29	케릭터 주변에 얼음덩이를 소환한후 터트려 공격한다		
+T:SKILL.dat:156:17	얼음의마음		
+T:SKILL.dat:157:17	콜드블레이드		
+T:SKILL.dat:157:31	냉기의 칼날을 소환해 케릭터 주변을 감싸며 공격한다		
+T:SKILL.dat:158:17	아쿠아 캐논		
+T:SKILL.dat:158:30	냉기의 마나를 구 형태로 모아서 전방으로 발사한다		
+T:SKILL.dat:159:17	천마스터리C		
+T:SKILL.dat:160:17	썬더폴		
+T:SKILL.dat:160:25	전방에 전격의 마법진을 소환해 번개를 떨어뜨린다		
+T:SKILL.dat:163:17	플라즈마 캐논		
+T:SKILL.dat:163:32	강한 자기를 발생시켜, 적들을 끌어모은후 폭발시킨다		
+T:SKILL.dat:164:17	썬더익스플로전		
+T:SKILL.dat:164:33	전기의 구를 만들어 전방으로 날려 공격하는 전격마법		
+T:SKILL.dat:165:17	번개의마력		
+T:SKILL.dat:165:29	시전시 MP최대 증가		
+T:SKILL.dat:166:17	라이트닝볼트		
+T:SKILL.dat:166:31	일직선상으로 강한 전기속성의 공격을 한다		
+T:SKILL.dat:167:17	플레어레인		
+T:SKILL.dat:167:29	전 지역에 화염의 비를 뿌려 적을 공격한다		
+T:SKILL.dat:168:17	마법연구		
+T:SKILL.dat:168:27	마나소모량을 줄여준다		
+T:SKILL.dat:169:17	블리자드		
+T:SKILL.dat:169:27	얼음 폭풍을 소환해 전방위를 공격한다		
+T:SKILL.dat:171:17	기가라이트닝		
+T:SKILL.dat:171:31	케릭터 주변에 강력한 전격의 마나를 발현한다		

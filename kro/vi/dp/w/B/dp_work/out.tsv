@@ -1,0 +1,955 @@
+1	Đến hầm ngục
+2	Chọn hầm ngục
+3	Thông báo
+4	Sau khi xem hết ending, bạn thấy
+5	việc cày quái lặp lại thật
+6	nhàm chán phải không?!
+7	Muốn nuôi lại từ đầu nhưng 
+8	lại ngại chịu khổ một lần nữa
+9	nên thấy mệt mỏi sao?!
+10	Ngay bây giờ! Hãy bước vào
+11	hệ thống Tái sinh của Chroisen!
+12	Tìm hiểu về Tái sinh
+13	Tái sinh sau
+14	Chào mừng đến hệ thống Tái sinh!
+15	Sau đây xin giới thiệu kiến thức
+16	cơ bản về hệ thống Tái sinh
+17	của Chroisen.
+18	Tái sinh là gì!
+19	Hệ thống giúp xóa cảm giác nhàm
+20	chán khi cày quái lặp lại sau
+21	ending: nhận thưởng, quay về
+22	cấp ban đầu và nuôi nhân vật
+23	trở nên mạnh hơn nữa.
+24	Đó là hệ thống Tái sinh.
+25	Thay đổi khi |06Tái sinh|:
+26	Vui lòng xem bên dưới
+27	1. Đặt lại cấp.
+28	2. Nghề về nghề ban đầu.
+29	3. Đặt lại nhiệm vụ.
+30	4. Thưởng 50 điểm chỉ số.
+31	5. Thưởng 10 điểm kỹ năng.
+32	6. Giữ nguyên vật phẩm.
+33	7. Quái mạnh hơn.
+34	8. Tăng tỉ lệ rớt vật phẩm.
+35	9. Thêm kỹ năng Tái sinh
+36	Khi |06Tái sinh|,
+37	toàn bộ trang bị đang mặc
+38	sẽ bị tháo ra
+39	Nhiệm vụ cũng được đặt lại
+40	và bắt đầu lại từ đầu.
+41	Ngoài ra game sẽ tự động lưu
+42	khi Tái sinh, mong bạn
+43	không bị bất tiện.
+44	Tái sinh
+45	Khoan! Hãy chuẩn bị tinh thần...
+46	|06Tái sinh| đã
+47	hoàn tất thành công!
+48	Chúng tôi tặng thêm điểm chỉ số
+49	và điểm kỹ năng, hãy kiểm tra
+50	rồi nuôi nhân vật mạnh hơn.
+51	Chúc bạn chơi vui!
+52	(Nhấn Xác nhận để xem tiếp phần
+53	mở đầu và các sự kiện sau.)
+54	Tiếc quá.. vậy thì
+55	khi tải game
+56	hãy quay lại nhé!
+57	Trong lúc đó, chúc bạn
+58	chơi game vui vẻ! ^^
+59	OZ:Chọn
+60	Trước     Sau
+61	Chọn "Không".
+62	Với cùng một game, sự kiện
+63	|02không thể đăng ký lại|.
+64	Vẫn tiếp tục chứ?
+65	1. Không, đăng ký sự kiện.
+66	2. Có, không đăng ký sự kiện
+67	Nhập thông tin đăng ký
+68	OZ:Nhập
+69	CLR:Trước   OZ:Nhập xong
+70	1.Giới tính?
+71	Nam
+72	Nữ
+73	2.Ngày sinh?
+74	%04ld/%02ld/%02ld
+75	Game này là bản đơn lẻ, không phát
+76	sinh chi phí riêng khi chơi.
+77	Hãy yên tâm sử dụng.
+78	Tuy nhiên khi dùng mạng (kết nối)
+79	sẽ phát sinh cước gọi và khi mua
+80	vật phẩm có phí sẽ phát sinh
+81	phí thông tin và cước gọi.
+82	Hãy luôn cập nhật phần mềm điện
+83	thoại lên bản mới nhất để chơi
+84	game mượt mà.
+85	Chuyển nghề được từ cấp 20
+86	Hãy tìm huấn luyện viên ở mỗi làng
+87	Thức tỉnh được từ cấp 50
+88	|15%s Kiên cường|
+89	|06%s Phẫn nộ|
+90	|14%s Sự sống|
+91	|00%s Cuồng bạo|
+92	|15%s Cay|
+93	|06%s vị Cà ri|
+94	|14%s vị Nấm|
+95	|00%s vị Tương đen|
+96	Làng
+97	Phi chiến đấu
+98	Hầm ngục
+99	Tiếp tục
+100	Cửa hàng Cash
+101	Xếp hạng/Quà
+102	Trợ giúp
+103	Lưu game
+104	Cài đặt
+105	Menu chính
+106	Giáp
+107	Vũ khí
+108	Vũ khí phụ
+109	Giày
+110	Đặc biệt
+111	Phụ kiện
+112	Xem trước kỹ năng chuyển nghề
+113	Kỹ năng thức tỉnh
+114	không thể xem trước
+115	Xem trước kỹ năng thức tỉnh
+116	Đầu tư bằng phím OZ
+117	Danh sách danh hiệu
+118	OZ:Đổi danh hiệu CLR:Hủy
+119	|06Nhảy 6 mục|(%03ld)
+120	Chưa học
+121	của
+122	Bộ
+123	-Chưa phù phép-
+124	- Chưa có phù phép -
+125	Giá: %ld won
+126	Giá bán :
+127	Ma lực:+%d
+128	Thể lực:+%ld
+129	Tốc độ:+%d%%
+130	Nhanh nhẹn:+%d
+131	May mắn:+%d
+132	Sức mạnh:+%d
+133	Thưởng:
+134	NPC giao:
+135	NPC trả:
+136	-Nội dung-
+137	Vị trí:
+138	Mục tiêu:
+139	MP tiêu hao:|03%d|
+140	- Sát thương vật lý:|02%d|%%
+141	- Sát thương phép:|02%d|%%
+142	- Sát thương cấp 1:|07%d|%%
+143	- Hồi phục:|03%d|
+144	- Hồi chiêu:|02%d| giây
+145	Cần:%s cấp %d
+146	- Cấp 1 %s
+147	- Thời gian:|02%d| giây
+148	Chỉ Slasher
+149	Chỉ Assassin
+150	Chỉ Knight
+151	Chỉ Magician
+152	Dùng chung
+153	Phẩm cấp: |%02dExtra|
+154	Phẩm cấp: |%02dNormal|
+155	Phẩm cấp: |%02dMagic|
+156	Phẩm cấp: |%02dRare|
+157	Phẩm cấp: |%02dUnique|
+158	Phẩm cấp: |%02dLegend|
+159	Hiệu ứng bộ : |06Không|
+160	Công:%d~%d
+161	Phòng thủ:%d
+162	Thể lực:+%d
+163	Cấp yêu cầu: |03%d|
+164	Cấp yêu cầu: |07%d|
+165	Vật phẩm từ |04Unique| trở lên
+166	có 3 tùy chọn tiền tố
+167	Giá : |06%ld won|
+168	Giá : |06%ld won
+169	Giá mua : |06%ld Gold|
+170	Giá bán : |06%ld Gold|
+171	OZ:Đóng
+172	Túi %d ô
+173	Hãy chọn vật phẩm cần bán
+174	Dung hợp(Trang bị)
+175	Dung hợp(Nguyên liệu)
+176	Trang bị có xác suất thấp
+177	ra vật phẩm cao hơn một bậc
+178	(cần có Đá phép)
+179	Vật phẩm thường gồm thuốc hồi phục,
+180	đá cường hóa, đá phép, Kilt Authority
+181	và các loại túi
+182	Dung hợp
+183	Bắt đầu dung hợp
+184	Dung hợp hoàn tất
+185	Có ánh sáng nhỏ trên trang bị.
+186	Để truyền thêm sức mạnh cho nó,
+187	dùng |06Đá phép hạng C| chứ?
+188	Cảm nhận sức mạnh ma lực lớn,
+189	vật phẩm đòi hỏi sức mạnh lớn hơn
+190	dùng |06Đá phép hạng B| chứ?
+191	Ánh sáng rực rỡ tỏa ra
+192	Để truyền sức mạnh lớn hơn
+193	Trang bị toát ra sức mạnh
+194	Để ban sức mạnh huyền thoại
+195	dùng |06Đá phép hạng A| chứ?
+196	Không
+197	OZ:Chọn CLR:Hủy
+198	Nhập số điện thoại (chỉ nhập số)
+199	OZ:Xong    CLR:Hủy
+200	OZ:Xong CLR:Xóa
+201	Nhập số tiền tặng (chỉ nhập số)
+202	Đơn vị tặng Gold tối thiểu là
+203	10.000 Gold
+204	OZ:Xong   CLR:Hủy
+205	 ức %s vạn
+206	Mua
+207	Mua tạp hóa
+208	Bán
+209	Cường hóa
+210	Phù phép
+211	Trợ giúp ký gửi
+212	Nhiệm vụ
+213	Trọ (200 Gold)
+214	Cửa hàng dị giới
+215	Lên tàu
+216	Dịch chuyển
+217	Bán vật phẩm
+218	Mua vật phẩm
+219	Vật phẩm đang bán
+220	Thoát
+221	Đánh
+222	Đã lưu game
+223	Giá
+224	Còn lại : 
+225	%d giờ %d phút
+226	Tìm kiếm
+227	Đến cảng Mas
+228	Đến cảng Razel
+229	Đến cảng Lopis
+230	Đến cảng Prot
+231	Đá phép
+232	Phí phù phép: %d Gold
+233	Chọn vật phẩm cần phù phép
+234	Phí gỡ phép: %d Gold
+235	Gỡ toàn bộ phép đã phù
+236	Hãy chọn đá phép
+237	Gỡ phép
+238	Cường hóa thành công
+239	Sách bảo hộ bảo vệ vật phẩm
+240	Cường hóa thất bại, vật phẩm bị hủy
+241	[Đã gỡ phép]
+242	[Đã phù phép]
+243	Cường hóa thêm nữa sẽ
+244	quá sức với vật phẩm
+245	nên không thể tiến hành
+246	Phí cường hóa: %ld Gold
+247	Đá cường hóa
+248	Chọn vật phẩm cần cường hóa
+249	Từ +15 không dùng Sách bảo hộ
+250	Cường hóa vật phẩm
+251	|06Dùng Sách bảo hộ|
+252	|06Không dùng Sách bảo hộ|
+253	Dùng
+254	Không dùng
+255	Hãy chọn có dùng Sách bảo hộ
+256	Thiếu đá cường hóa
+257	Không đủ Gold
+258	Hãy kiểm tra nguyên liệu
+259	Hủy vật phẩm
+260	Mua vật phẩm
+261	Vật phẩm đang bán
+262	Phẩm
+263	Cấp
+264	Sắp xếp
+265	Tùy chọn
+266	Normal
+267	Magic
+268	Rare
+269	Unique
+270	Legend
+271	Extra
+272	Giá thấp trước
+273	Giá cao trước
+274	Cường hóa thấp trước
+275	Cường hóa cao trước
+276	Label Town
+277	Eastern City
+278	Lui City
+279	Ortsk
+280	Desert Camp
+281	Sky Valley
+282	Hồi sinh ngay
+283	Bắt đầu lại ở nơi đã lưu
+284	Về |14Tiêu đề|
+285	Bạn đã chết
+286	Hồi sinh bằng Sách hồi phục
+287	Hồi 100%! Gói thuốc
+288	(Mua sẽ hồi sinh ngay)
+289	Giá giảm : |072400 won| => |021500 won|
+290	Dùng Sách hồi phục
+291	để hồi sinh ngay
+292	Mua Sách hồi phục
+293	Giá : |02100 won|
+294	Từ nơi lưu lần cuối
+295	bắt đầu lại game
+296	Kết thúc game và
+297	về màn hình tiêu đề
+298	OZ : Chọn/Chi tiết
+299	Đổi nghề
+300	OZ:Chọn
+301	Để tránh lỗi game,
+302	bạn cần khởi động lại game
+303	Nhấn Xác nhận để
+304	thoát game.
+305	Chọn nghề muốn đổi
+306	Cơ hội giảm giá chớp nhoáng!!
+307	Vật phẩm Cash bạn hằng mong
+308	với giá ưu đãi
+309	%s %dW
+310	Chuyển đến trang mua hàng?
+311	Phí thông tin %ld won tiền thật
+312	(chưa gồm cước gọi) sẽ bị tính.
+313	Mua vật phẩm có thể mất
+314	một lúc, vì vậy
+315	đừng tắt game đột ngột
+316	%s x |14%d cái|
+317	%d won
+318	Evil Cave
+319	Sand Dungeon
+320	Deep Sand Dungeon
+321	Deep Demon Cave
+322	East Forest
+323	Desert Dungeon
+324	West Forest
+325	Deep Desert Dungeon
+326	Blue Mountain
+327	Deep Blue Mountain
+328	Castle Sky
+329	Greed Castle
+330	Greed Babel
+331	Black Lamp Castle
+332	Deep Greed Babel
+333	Demon Castle
+334	Fallen Castle
+335	Abyss of Madness
+336	Dahak Entrance
+337	Dahak Dungeon
+338	Chưa xác định
+339	Xác nhận
+340	Phòng kho báu
+341	|14Lord:| %s
+342	Về sau |06%d| giây
+343	 Hạng hầm ngục hôm nay
+344	 Hạng hầm ngục ngày mai
+345	 Tiền thưởng tích lũy
+346	|06Hạng %d| %d giờ %d phút %d.%d giây
+347	|06Dưới hạng 10000| %02d giờ %02d phút %02d.%d giây
+348	|06Hạng --| -- giờ -- phút --.- giây
+349	Lord
+350	|06Hạng %2d|
+351	Phòng hầm ngục
+352	(Hầm ngục thường)
+353	(Hầm ngục kho báu)
+354	Quá hạn bán
+355	Tiền bán
+356	Sự kiện
+357	Khôi phục
+358	Tăng chỉ số EX
+359	Tăng kỹ năng EX
+360	Nhận nhiệm vụ
+361	Hoàn thành nhiệm vụ
+362	Không thể nhận thêm
+363	nhiệm vụ nữa
+364	Không thể lưu trong hầm ngục
+365	Đang có sự kiện diễn ra
+366	nên không thể lưu game
+367	Vật phẩm đang được mặc
+368	Trang bị không thể mặc
+369	Cấp của bạn thấp hơn
+370	yêu cầu của trang bị
+371	%s
+372	%s
+373	đã được mặc
+374	CLR:Đóng
+375	Khi kết nối mạng
+376	sẽ bị tính cước gọi
+377	Dữ liệu lưu hiện có
+378	sẽ biến mất
+379	Bạn vẫn tiếp tục chứ?
+380	|06%s| x %ld
+381	|06%s|
+382	|06%s|
+383	Bạn muốn mua không?
+384	Áp dụng chỉ số
+385	đã thay đổi chứ?
+386	Bạn đã |07chết|
+387	  Mua |14Sách hồi phục|
+388	  Hồi sinh bằng |14Sách hồi phục|
+389	  Bắt đầu lại từ nơi |03đã lưu|
+390	  Về màn hình tiêu đề
+391	Đây là hầm ngục
+392	Hầm ngục kho báu tự động
+393	lưu game khi vào
+394	   Vào hầm ngục kho báu
+395	   Vào hầm ngục thường
+396	   Xếp hạng hầm ngục
+397	   Trợ giúp hầm ngục
+398	   Hủy
+399	Rời khỏi hầm ngục
+400	Rời hầm ngục sẽ đặt lại hầm ngục
+401	Chế tạo |0%d%s|
+402	Chế tạo |0%d%s|
+403	|06%s| x %d
+404	Bạn muốn bán không?
+405	Điểm chỉ số sẽ được đặt lại
+406	Dùng vật phẩm này chứ?
+407	(Tự động lưu khi đặt lại)
+408	Điểm kỹ năng sẽ được đặt lại
+409	Điểm chỉ số và điểm kỹ năng
+410	sẽ được đặt lại
+411	Phím tắt sẽ được đặt lại
+412	Từ bỏ nhiệm vụ
+413	Kết nối mạng sẽ bị tính cước gọi
+414	Phí vào:%d Gold
+415	(Khi vào hầm ngục kho báu
+416	Không có |14Sách hồi phục|
+417	Mua ngay bây giờ chứ?
+418	Thoát game và
+419	về menu tiêu đề
+420	Bạn muốn hủy túi
+421	đã chọn không?
+422	Quái thường: %d/%d
+423	Quái có tên: %d/%d
+424	Rương may mắn: %d/%d
+425	Boss: 0/1
+426	|06Từ bỏ hầm ngục chứ|
+427	Cảm thấy khí tức nguy hiểm
+428	Hãy chuẩn bị sẵn sàng 
+429	cho trận đánh boss
+430	   Đi vào
+431	   Lưu rồi đi vào
+432	   Không đi vào
+433	1.Lưu dữ liệu
+434	Chức năng Lưu dữ liệu giúp bảo vệ
+435	dữ liệu game đã lưu (vật phẩm/
+436	cấp/cài đặt) khi bạn đổi số điện
+437	thoại, đổi máy hoặc xóa game rồi
+438	tải lại. Nhấn Có để chuyển sang
+439	bước tiếp theo.
+440	(Bản offline: không hỗ trợ)
+441	(Miễn phí thông tin/cước gọi)
+442	Cài đặt/dữ liệu lưu hiện có của
+443	game sẽ được gửi lên máy chủ.
+444	Khi tiến hành, toàn bộ thông tin
+445	trong game sẽ lưu lên máy chủ và
+446	game được đặt lại.
+447	Nhấn Có để tiếp tục.
+448	Cài đặt/dữ liệu lưu của quý khách
+449	Đã lưu an toàn.
+450	Khi tải game mới,
+451	dữ liệu lưu và cài đặt đã lưu
+452	có thể được tải về và
+453	giữ nguyên trạng thái hiện tại.
+454	Cảm ơn bạn đã sử dụng.
+455	Cài đặt/dữ liệu lưu của quý khách
+456	đang có trên máy chủ. Bạn có
+457	muốn tải dữ liệu đó không?
+458	Để hoàn tất cài đặt game,
+459	cần khởi động lại game.
+460	Cài đặt/dữ liệu lưu trước đây
+461	không có trên máy chủ
+462	Về menu tiêu đề
+463	Bắt đầu lại từ nơi
+464	đã lưu trước đó
+465	"|%02d%s|"
+466	"|%02d%s|"
+467	"|06%d vạn Gold|"
+468	cho "|06%s|"
+469	sẽ được tặng
+470	(Khi kết nối mạng
+471	sẽ tính cước gọi)
+472	|%02d%s|
+473	|%02d%s|
+474	với giá |06%s gold|
+475	tại quầy ký gửi,
+476	bạn muốn đăng bán chứ?
+477	(Phí %d gold)
+478	Bạn muốn tìm kiếm
+479	quầy ký gửi chứ?
+480	Với |06%ld gold|
+481	xem các vật phẩm đang bán
+482	hiện tại chứ?
+483	Bản ghi của |06%s|
+484	có dừng bán không?
+485	Bạn muốn xem hộp quà đã nhận?
+486	|06%ld Gold|
+487	Bạn muốn tải xuống không?
+488	Túi không đủ chỗ trống
+489	nên không thể tải xuống
+490	Thiếu ma lực nên
+491	dung hợp bị hủy
+492	|06Đá phép hạng C| bạn chưa
+493	|06Đá phép hạng B| bạn chưa
+494	|06Đá phép hạng A| bạn chưa
+495	mang theo
+496	Mua ngay bây giờ chứ?
+497	Phí thông tin 100 won tiền thật
+498	sẽ bị tính. Bạn muốn kết nối?
+499	Chưa có chứng chỉ.
+500	Chỉ lần đầu tiên,
+501	sau khi kết nối máy chủ sẽ
+502	nhận chứng chỉ. Kết nối chứ?
+503	[Sự kiện tri ân "|06Chroisen|"]
+504	Cảm ơn bạn đã tải |06Chroisen|
+505	Cảm ơn bạn đã tải "|06Chroisen|"
+506	Hãy đăng ký sự kiện tri ân tải
+507	game để nhận quà hấp dẫn!
+508	Bốc thăm tặng 2 vé xem phim,
+509	Starbucks, game miễn phí, v.v.!
+510	(Cước kết nối dưới 5 won)
+511	Quà được gửi qua SMS.
+512	|14Allstar Mobile| gửi SMS,
+513	bạn có đồng ý nhận không?
+514	Xin lỗi.
+515	Xác thực thất bại.
+516	Hãy thử lại lần chạy sau
+517	Đăng ký thất bại.
+518	Hãy đăng ký lại lần chạy sau.
+519	Đang tiến hành xác thực.
+520	Sự kiện tri ân tải |06Chroisen|
+521	đang được đăng ký.
+522	Với game này
+523	bạn đã đăng ký sự kiện rồi.
+524	      Đồng ý dùng thông tin KH
+525	1.Bên nhận:KT Hitel(Cty)
+526	2.Mục đích:quản lý nội dung,
+527	  quản lý KH,gửi SMS quảng cáo
+528	3.Thông tin cung cấp:dòng máy,
+529	  số điện thoại,giới tính,tuổi
+530	4.Thời gian lưu giữ:
+531	  Từ lúc tải game, lưu giữ
+532	  trong 1 năm
+533	Tôi đã được thông báo việc
+534	LG Telecom cung cấp thông tin
+535	cá nhân nêu trên như vậy, đã
+536	hiểu rõ và đồng ý.
+537	    (Bên ủy thác:Allstar Mobile)
+538	Internet không dây đang bị khóa.
+539	Hãy mở khóa rồi sử dụng.
+540	Ở chế độ máy bay, không thể
+541	sử dụng mạng.
+542	Ở vùng chuyển vùng, không thể
+543	Đăng ký thành công! 
+544	Người trúng thưởng sẽ được
+545	liên hệ riêng vào ngày 15 hàng tháng!
+546	Khi dung hợp, để bảo vệ dữ liệu
+547	Khi gỡ phép, để bảo vệ dữ liệu
+548	game sẽ tự động lưu
+549	Khi phù phép, để bảo vệ dữ liệu
+550	Khi cường hóa, để bảo vệ dữ liệu
+551	Không thể mua
+552	Bạn muốn gọi đến Trung tâm
+553	hỗ trợ khách hàng Allstar?
+554	Không còn ô trống để lưu dữ liệu
+555	Bạn muốn lưu dữ liệu lưu và
+556	tệp tùy chọn không?
+557	Tệp lưu đã có trước đây
+558	sẽ bị xóa.
+559	Bạn muốn khôi phục chứ?
+560	Không có dữ liệu để khôi phục
+561	Bạn muốn xóa dữ liệu này?
+562	Để dùng chức năng Tặng quà
+563	Để dùng chức năng Gamezone
+564	Để kết nối Cửa hàng dị giới
+565	bạn muốn kết nối máy chủ?
+566	(Kết nối mạng sẽ tính cước gọi)
+567	Để tặng vật phẩm hạng Extra,
+568	bạn phải trả 10.000 Gold
+569	tiền phí.
+570	Bạn muốn tặng chứ?
+571	Kết nối thất bại. (Bản offline)
+572	Nâng cấp firmware
+573	rồi hãy sử dụng.
+574	Do hạn mức mua hàng tháng,  
+575	hiện không thể sử dụng,
+576	xin hãy
+577	dùng lại vào tháng sau.
+578	Nhân viên LGT xin thông cảm
+579	vì không thể sử dụng.
+580	Liên hệ zou@gavaplus.co.kr
+581	Mua hàng thất bại.
+582	Hãy thử lại sau ít phút
+583	Đăng ký kỷ lục hầm ngục thất bại
+584	Bạn muốn thử lại không?
+585	Nếu chọn "Không",
+586	sẽ rời khỏi hầm ngục.
+587	Dịch vụ mạng đang chuẩn bị.
+588	Phiên bản hiện tại không thể
+589	kết nối mạng.
+590	Lỗi máy chủ tính phí
+591	Hãy thử lại sau ít phút
+592	(Vượt hạn mức thanh toán)
+593	Trong |06Chroisen|, máy này không
+594	hỗ trợ chế độ rung
+595	Đồng ý
+596	Từ chối
+597	Hủy
+598	Thanh toán điện thoại
+599	Thanh toán KOIN
+600	Dùng vật phẩm này sẽ
+601	tự động lưu game
+602	OZ:Dùng CLR:Hủy
+603	Đang mở rương
+604	Nhận vật phẩm
+605	Đã nhận được
+606	Của %s
+607	hãy chọn vũ khí
+608	Chọn vật phẩm thưởng
+609	Cần Mana Chain
+610	Thiếu MP
+611	Hồi chiêu
+612	Lưu
+613	Trang bị phẩm cấp Extra
+614	không thể dung hợp với nhau
+615	Trang bị khác phẩm cấp
+616	Nguyên liệu với trang bị
+617	Trang bị với nguyên liệu
+618	không thể dung hợp
+619	Không thể cường hóa
+620	Để dung hợp,
+621	túi cần có chỗ trống
+622	Không thể phá hủy
+623	Đã tháo ra
+624	Đây không phải vật phẩm
+625	đang được mặc
+626	Không thể vứt bỏ
+627	Khi tặng vật phẩm hạng Extra
+628	cần phí 10.000 Gold
+629	Túi đã được mở rộng
+630	Vật phẩm này
+631	Túi
+632	không thể đăng ký phím tắt
+633	Không thể phá hủy túi đầu tiên
+634	Túi chưa trống
+635	Không thể phù phép
+636	vật phẩm này
+637	Không thể tặng
+638	Vật phẩm đang mặc không thể tặng
+639	Vật phẩm của nhiệm vụ đang làm
+640	Trong hầm ngục kho báu
+641	không thể dung hợp
+642	Không thể dung hợp
+643	nguyên liệu này
+644	Trang bị đang mặc
+645	Túi không còn chỗ trống,
+646	nguyên liệu này
+647	Dung hợp với |%02d%s|
+648	Dung hợp với |%02d%s|
+649	Hãy chọn trang bị
+650	Hãy chọn nguyên liệu
+651	Hãy nhập số tiền
+652	bán vật phẩm
+653	Chỉ vật phẩm trang bị
+654	mới có thể bán
+655	Vật phẩm đang mặc
+656	không thể bán
+657	Đã hủy dung hợp
+658	Không đủ tiền nên
+659	không thể mua thêm
+660	Không đủ tiền
+661	Hiện chưa thể
+662	mua vật phẩm này
+663	Không thể tặng 0 Gold
+664	Số tiền tặng nhiều hơn
+665	số tiền bạn có
+666	Số điện thoại phải từ
+667	10 chữ số trở lên
+668	0 Gold
+669	không thể được gửi
+670	Gold muốn gửi nhiều hơn
+671	số Gold bạn sở hữu
+672	Không thể trả phí
+673	Số điện thoại 11 chữ số
+674	Số điện thoại phải bắt đầu bằng "0"
+675	Số điện thoại phải bắt đầu bằng "01"
+676	Số điện thoại
+677	không hợp lệ
+678	Quà Gold 2 tỉ gold
+679	Giá bán 2 tỉ gold
+680	không được vượt quá
+681	Không thể cường hóa thêm
+682	Không thể phù phép thêm
+683	Đá cường hóa hạ cấp
+684	chỉ cường hóa được đến +10
+685	Đá cường hóa trung cấp
+686	chỉ cường hóa được đến +13
+687	Túi
+688	không đủ chỗ trống
+689	Không có danh sách hội thoại
+690	Không có nhiệm vụ nào
+691	có thể nhận
+692	Đang có sự kiện diễn ra
+693	Bạn chưa thể
+694	đi đến khu vực này
+695	Vật phẩm có thể cường hóa
+696	bạn chưa có
+697	Vật phẩm có thể phù phép
+698	Không thể gỡ phép
+699	Gọi điện thất bại
+700	Dữ liệu lưu
+701	đã bị xóa
+702	Không dùng được trong hầm ngục
+703	Không thể mua.
+704	(Phí vào:|06%ldGold|)
+705	Không đủ phí vào hầm ngục
+706	Đã bị phá hủy
+707	Điểm chỉ số
+708	đã được đặt lại
+709	Điểm kỹ năng
+710	Điểm chỉ số và điểm kỹ năng
+711	Nhiệm vụ "|14%s|"
+712	Nhiệm vụ "|14%s|"
+713	đã |07từ bỏ|
+714	Túi đã bị phá hủy
+715	Không có dữ liệu lưu
+716	Dữ liệu trống
+717	Sau |06Tái sinh| mới dùng
+718	được kỹ năng này
+719	Kỹ năng cấp 0
+720	Kỹ năng bị động
+721	không thể đăng ký phím tắt
+722	Điều kiện kỹ năng tiên quyết
+723	chưa được đáp ứng
+724	Điểm kỹ năng (sp) không đủ
+725	Kỹ năng này không thể
+726	nâng cấp thêm
+727	%s tăng cấp!!
+728	Có nhiệm vụ đang làm nên không
+729	Trong hầm ngục kho báu không
+730	thể dùng menu mạng
+731	Đã gán phím tắt
+732	Bạn chưa mang trang bị đó
+733	Danh hiệu này
+734	bạn chưa đạt được
+735	Không thể từ bỏ nhiệm vụ chính
+736	Sau khi chuyển nghề
+737	Sau khi thức tỉnh
+738	mới dùng được
+739	Không đủ điểm chỉ số
+740	Đã tặng quà xong
+741	%d vạn Gold
+742	đã được tặng
+743	Số của đối phương chưa được
+744	đăng ký trên mạng
+745	Không thể tặng vật phẩm này
+746	Tặng quà
+747	Vật phẩm đã được
+748	tải xuống rồi
+749	Nhận quà
+750	thành công
+751	Đã được bán rồi
+752	Người bán đã
+753	hủy vật phẩm này
+754	Đã mua vật phẩm
+755	Số lượng đăng ký
+756	đã vượt quá giới hạn
+757	Hiện vật phẩm này
+758	không thể ký gửi bán
+759	Đã đăng ký vật phẩm
+760	Hết thời gian bán,
+761	đã chuyển vào hộp quà
+762	Không có bản ghi
+763	Kỷ lục hầm ngục
+764	OZ:Chọn  CLR:Hủy
+765	Hộp quà
+766	OZ:Nhận CLR:Quay lại
+767	 Thưởng hạng %d
+768	đã được lưu
+769	Dữ liệu nhân vật
+770	đã được khôi phục
+771	Mua hàng hoàn tất
+772	Đang kết nối
+773	Đang kết nối máy chủ
+774	Đang gửi dữ liệu
+775	Đang nhận dữ liệu
+776	Thời gian kết nối mạng
+777	Không có vật phẩm để tải
+778	Ô trống
+779	Không có dữ liệu để khôi phục
+780	Cánh cửa
+781	đã mở
+782	Lỗi số nhiệm vụ
+783	Cần %d ô trống
+784	Để hoàn thành nhiệm vụ
+785	Không rõ
+786	-Không rõ-
+787	Mục tiêu nhiệm vụ
+788	Lỗi độ dài
+789	Tên nhiệm vụ
+790	Người dịch chuyển
+791	Thợ rèn
+792	Lò rèn
+793	Điểm kỹ năng+1
+794	Điểm chỉ số+1
+795	Hộp quà đã nhận
+796	Bắt đầu
+797	Thoát game
+798	Chơi mới
+799	Chơi tiếp
+800	Phím điều khiển
+801	Cốt truyện
+802	Thông tin game
+803	Liên hệ
+804	Hạng hầm ngục
+805	Túi đơn
+806	Phí thông tin
+807	Tặng quà
+808	Gamezone
+809	Chọn nhân vật
+810	Tặng vật phẩm
+811	Âm lượng hiệu ứng
+812	Tốc độ game
+813	Rung
+814	Rung màn hình
+815	Tự theo dõi địch
+816	Mẹo game
+817	Hiệu ứng chí mạng
+818	Chế độ ngang
+819	Quản lý dữ liệu game
+820	Đăng ký xếp hạng
+821	Đang chờ
+822	Cửa không mở được
+823	Strong
+824	Wise
+825	Agile
+826	Sturdy
+827	Lucky
+828	Powerful
+829	True
+830	Solid
+831	Slippery
+832	Sharp
+833	Extraordinary
+834	Mysterious
+835	Shining
+836	Splendid
+837	Vampiric
+838	Rare
+839	Pleasant
+840	Gracious
+841	Great
+842	Charming
+843	Fearsome
+844	Natural
+845	Swift
+846	Blessed
+847	Brave
+848	Vượt quá giới hạn tiền sở hữu
+849	|06Danh hiệu| |%02d%s|
+850	Thiếu ô
+851	Chưa thể dùng
+852	Trong hầm ngục không thể dùng
+853	Để dùng vật phẩm,
+854	túi cần có chỗ trống
+855	Có nhiệm vụ đang làm
+856	nên không thể dùng
+857	Túi cần 6 ô trống
+858	Không thể trang bị thêm
+859	túi nào nữa
+860	Vật phẩm này từ 10 cái trở lên
+861	không thể sử dụng
+862	Đã đạt mọi "Danh hiệu danh dự"
+863	nên không thể dùng thêm
+864	Sức mạnh
+865	Ma lực
+866	Nhanh nhẹn
+867	Thể lực
+868	May mắn
+869	Công vật lý
+870	Công phép
+871	Phòng thủ
+872	Né
+873	Chí mạng
+874	Hồi HP
+875	Hồi MP
+876	Hút HP
+877	Hút MP
+878	Tỉ lệ rớt
+879	Thêm Gold
+880	EXP
+881	MP tiêu hao
+882	Tăng sức vũ khí
+883	Tăng sức giáp
+884	HP tối đa
+885	MP tối đa
+886	Tốc độ
+887	Chọn 1 vũ khí Magic
+888	Chọn 1 trang bị Magic
+889	Chọn 1 vũ khí Rare
+890	Chọn 1: vũ khí+trang bị Magic
+891	Upper Slasher
+892	Swing Slasher
+893	Crashing Slasher
+894	Upper Assassin
+895	Grappling Assassin
+896	Fighting Assassin
+897	Upper Knight
+898	Noble Knight
+899	Super Knight
+900	Fire Magician
+901	Ice Magician
+902	Thunder Magician
+903	Grand Slasher
+904	Swing Warrior
+905	Crashing Berserker
+906	Grand Assassin
+907	Final Grappler
+908	Ultra Fighter
+909	Grand Knight
+910	Noble Blader
+911	Super Guardian
+912	Fire Wizard
+913	Ice Wizard
+914	Thunder Wizard
+915	Kiếm hai tay
+916	Rìu
+917	Búa
+918	Dao găm
+919	Găng tay
+920	Vuốt
+921	Kiếm một tay
+922	Saber
+923	Lance
+924	Gậy phép
+925	Mũ nhẹ
+926	Mũ nặng
+927	Mũ vải
+928	Mũ da
+929	Giáp nhẹ
+930	Giáp nặng
+931	Áo vải
+932	Giáp da
+933	Giày nhẹ
+934	Giày nặng
+935	Giày vải
+936	Giày da
+937	Khiên
+938	Sách
+939	Dây chuyền
+940	Nhẫn
+941	Vòng tay
+942	Vật tiêu hao
+943	Nguyên liệu
+944	- Loại: Kỹ năng chủ động
+945	- Loại: Kỹ năng bị động
+946	- Loại: Kỹ năng buff
+947	Sebastian
+948	Dager
+949	Alicia
+950	Innis
+951	Rene
+952	Nadia
+953	Luke
+954	Randalph
+955	Hepburn

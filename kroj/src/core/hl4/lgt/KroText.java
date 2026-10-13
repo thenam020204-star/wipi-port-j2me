@@ -238,6 +238,7 @@ final class KroText {
         int x = mem.read32(sp + 0x24), y = mem.read32(sp + 0x20);
         int fg = mem.read32(sp + 0x10), c2 = mem.read32(sp + 0x08);
         String s = dict[k];
+        if (KroGame.TEXTLOG) rt.log("vi draw " + s + " @" + x + "," + y + " fg=" + LgtRuntime.hex(fg));
         int cw = mem.read8(CELL_W), ch = mem.read8(CELL_H);
         int nb = (cw * ch + 7) >> 3;
         for (int i = 0; i < s.length(); i++) {
