@@ -77,7 +77,7 @@ def fits(text, w, size=12, gap=0):
     return M.measure(text, size=size, mode='tight', gap=gap)['w'] <= w
 
 
-def put(im, box, cands, fill=None, outline='auto', align='center', gap=0, report=None, name=''):
+def put(im, box, cands, fill=None, outline='auto', align='center', gap=0, report=None, name='', valign='center'):
     """clear `box` to transparent and write the first candidate text that fits the width"""
     x, y, w, h = box
     f0, o0 = sample(im, box)
@@ -93,7 +93,7 @@ def put(im, box, cands, fill=None, outline='auto', align='center', gap=0, report
     for yy in range(y, min(y + h, im.height)):
         for xx in range(x, min(x + w, im.width)):
             pxl[xx, yy] = (0, 0, 0, 0)
-    P.draw(im, box, text, size=12, mode='tight', gap=gap, align=align, valign='center',
+    P.draw(im, box, text, size=12, mode='tight', gap=gap, align=align, valign=valign,
            fill=tuple(fill) + (255,), outline=(tuple(outline) + (255,)) if outline else None, clip=True)
     return text
 
@@ -230,9 +230,12 @@ def main(jar, ov):
     im = load(ents[25])  # 24x9: '#:Bỏ'
     put(im, (0, 0, 24, 9), ['#:Bỏ'], report=rep, name='ui25')
     u[25] = save_png(im)
-    im = load(ents[26])  # bag hints 48x52: 4 rows of 13
-    for i, c in enumerate([['#:Phá túi'], ['*:Xếp túi'], ['*:Hiệu ứng bộ', '*:Hiệu ứng', '*:Bộ đồ'], ['#:Đóng #:Mở', '#:Đóng']]):
-        put(im, (0, i * 13, 48, 13), c, align='left', report=rep, name='ui26.%d' % i)
+    im = load(ents[26])  # bag hints 48x52: 4 rows of 13 ('#:가방파괴', '*:가방정리', '*세트효과', '#닫기|#펴기')
+    for i, c in enumerate([['#Phá túi'], ['*Xếp túi'], ['*Hiệu ứng bộ', '*Bộ đồ']]):
+        put(im, (0, i * 13, 48, 13), c, align='left', gap=1, report=rep, name='ui26.%d' % i)
+    # row 3 is two 24 px halves; the game draws only the left (close) or the right (open) half
+    put(im, (0, 39, 24, 13), ['#Ẩn'], align='left', gap=1, report=rep, name='ui26.3a', valign='top')
+    put(im, (24, 39, 24, 13), ['#Mở'], align='left', gap=1, report=rep, name='ui26.3b', valign='top')
     u[26] = save_png(im)
     pack_dat(jar, ov, 'uiinner.dat', u)
     for r in rep: print('CẢNH BÁO ảnh:', r)

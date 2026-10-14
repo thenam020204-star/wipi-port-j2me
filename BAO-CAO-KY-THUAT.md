@@ -133,7 +133,13 @@ Nguyên tắc chung:
 
 **Logo:** `logo.dat[3]` (Softmaru) được thay bằng logo NAMP 240x320, lượng tử về 250 màu. Hàm `0x20d4` vẽ ảnh ở tâm màn hình trừ nửa w/h, nên ảnh 240x320 phủ kín màn.
 
-**Sửa cuối:** nhãn `uiinner[26]` "*:Hiệu ứng" rộng 48 px trong ô 48 px có viền, nên bị cắt 2 px. Đã thêm phương án ngắn "*:Bộ đồ" (chỉ dùng nếu dài quá).
+**Sửa cuối — `uiinner[26]` (gợi ý túi đồ và popup cửa hàng):**
+- Nguyên nhân: hàng 4 của ảnh gốc là **hai nửa 24 px** "#닫기" | "#펴기". Game chỉ vẽ nửa trái hoặc nửa phải tuỳ trạng thái; bằng chứng là ảnh chụp popup cửa hàng cash hiện đúng 24 px trái.
+- Bản trước vẽ "#:Đóng" trải cả 48 px, nên trong game bị cắt thành "#Đón".
+- Ngoài ra, ở khoảng cách chữ 0 px dấu ":" dính vào "#".
+- Sửa:
+  - Hàng 4 vẽ thành hai nửa "#Ẩn" | "#Mở", canh trên để dấu của chữ hoa không bị cắt.
+  - Ba hàng còn lại bỏ ":" (giống gốc hàng 3) và dùng khoảng cách chữ 1 px: "#Phá túi", "*Xếp túi", "*Bộ đồ".
 
 **Kiểm tra:** script tự báo nhãn tràn ô, cộng với ảnh chụp trong game.
 
