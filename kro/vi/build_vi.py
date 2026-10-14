@@ -26,7 +26,7 @@ BASE = (0xFF - LEAD0) * TRAILS     # 5076 codes with lead 0xC9..0xFE
 XLEADS = [0xA2, 0xA3] + list(range(0xA5, 0xB0))
 MAXCODES = BASE + len(XLEADS) * TRAILS
 NAMES = os.path.join(W, 'names.tsv')
-PARA_W = 180                       # prologue (autoscroll) line width, px
+PARA_W = 170                       # prologue (autoscroll) line width, px
 FONT = os.path.join(W, 'font', 'f12.bin')
 ASCII_W, SPACE_W = 6, 3            # game ASCII cell; space of a Vietnamese string (KroText.spaceW)
 DESCRIB_W, DESCRIB_BYTES = 150, 27  # help box: text width, game wraps when bytes*5 >= 155-15
@@ -34,6 +34,8 @@ REPL = {'…': '...', '“': '"', '”': '"', '‘': "'", '’': "'", '–': '-'
         '·': '.', '•': '.', '×': 'x', '★': '*', '☆': '*', '♥': '*', '♡': '*', '→': '>', '←': '<', '~': '~'}
 LEADP = '(["\'['          # attached to the following word
 TRAILP = '.,!?:;)]"\'~'    # attached to the preceding word (drawn with the Vietnamese font, narrow)
+VNP = LEADP + TRAILP       # ASCII punctuation drawn with the Vietnamese font inside a Vietnamese string (KroText.ascii)
+ELL = '`'                  # one byte = '...' (KroText): the dialog wrap (0x24a24) pulls only one trailing byte onto a line
 CTRL = re.compile(r'\|c\d\d|\|\d\d|\||%[-0-9.]*l*[sdcxXu%]|<NAME [^>]*>|<[^>]*>|[\x00-\x1f]')
 
 
@@ -118,8 +120,14 @@ class Encoder:
         if m: return b'<NAME ' + self.encode(m.group(1)) + b'>'
         return t.encode('euc-kr')
 
-    def encode(self, s):
-        """words -> codes, everything else ASCII"""
+    def norm(self, s):
+        """detached mode text: REPL, then every run of 2+ dots -> ELL"""
+        return re.sub(r'\.{2,}', ELL, self.clean(s))
+
+    def encode(self, s, detach=False):
+        """words -> codes, everything else ASCII. detach (script text, quests): a code is letters only, punctuation stays
+        one ASCII byte (KroText draws it with the Vietnamese font) -> no 'word,' 'word!' ... variants in dict.txt"""
+        if detach: return self.encode_detached(s)
         s = self.clean(s)
         out = bytearray(); i = 0
         while i < len(s):
@@ -135,6 +143,21 @@ class Encoder:
                 while j < len(s) and s[j] in TRAILP and not CTRL.match(s, j): j += 1
                 out += self.code(self.fontsafe(s[i:j])); i = j; continue
             out += self.ascii(c); i += 1
+        return bytes(out)
+
+    def encode_detached(self, s):
+        s = self.norm(s)
+        out = bytearray(); i = 0
+        while i < len(s):
+            m = CTRL.match(s, i)
+            if m:
+                g = m.group()
+                out += self.tag(g) if g.startswith('<') else g.encode('latin-1'); i = m.end(); continue
+            if is_word_char(s[i]):
+                j = i + 1
+                while j < len(s) and (is_word_char(s[j]) or (s[j] in "-'" and j + 1 < len(s) and is_word_char(s[j + 1]))): j += 1
+                out += self.code(self.fontsafe(s[i:j])); i = j; continue
+            out += self.ascii(s[i]); i += 1
         return bytes(out)
 
     def encode_compact(self, s):
@@ -155,14 +178,14 @@ class Encoder:
             pos = m.end()
         return bytes(out)
 
-    def fit(self, s, limit):
-        b = self.encode(s)
+    def fit(self, s, limit, detach=False):
+        b = self.encode(s, detach)
         if limit is None or len(b) <= limit: return b, False
         return self.encode_compact(s), True
 
-    def width(self, s):
+    def width(self, s, detach=False):
         """drawn width of a translated (not yet encoded) line, as KroText/the game will draw it"""
-        s = self.clean(s); w = 0; i = 0
+        s = self.norm(s) if detach else self.clean(s); w = 0; i = 0
         viet = any(is_word_char(c) for c in s)
         while i < len(s):
             m = CTRL.match(s, i)
@@ -171,7 +194,8 @@ class Encoder:
                 if g.startswith('|c'): w += ASCII_W  # measure quirk: second digit counted once
                 i = m.end(); continue
             c = s[i]
-            if is_word_char(c) or (c in LEADP + TRAILP and c in self.font and viet): w += self.font.get(c, self.font.get('?', 6))
+            if c == ELL and detach: w += 3 * self.font['.']
+            elif is_word_char(c) or (c in VNP and c in self.font and viet): w += self.font.get(c, self.font.get('?', 6))
             elif c == ' ': w += SPACE_W if viet else ASCII_W
             else: w += ASCII_W if ord(c) < 0x80 else 10
             i += 1
@@ -188,7 +212,7 @@ def check_codes(ko, vi):
     return issues
 
 
-def wrap(enc, text, width, maxbytes):
+def wrap(enc, text, width, maxbytes, detach=False):
     """greedy word wrap of one source line: keeps its leading spaces as indent of every piece"""
     ind = len(text) - len(text.lstrip(' '))
     indent, words = text[:ind], text[ind:].split(' ')
@@ -196,7 +220,7 @@ def wrap(enc, text, width, maxbytes):
     for w in words:
         if w == '': continue
         cand = (cur + ' ' + w) if cur else w
-        if cur and (enc.width(indent + cand) > width or len(enc.encode(indent + cand)) > maxbytes):
+        if cur and (enc.width(indent + cand, detach) > width or len(enc.encode(indent + cand, detach)) > maxbytes):
             lines.append(indent + cur); cur = w
         else: cur = cand
     lines.append(indent + cur)
@@ -233,10 +257,13 @@ def main():
         for p in check_codes(e['ko'], vi): report.append('%s: %s | %s' % (e['id'], p, vi))
         return vi
 
+    def detached(e):
+        return e['id'].startswith(('T:QUEST0.dat:', 'T:QUEST00.dat:'))
+
     def put(e, limit):
         vi = tr(e)
         if vi is None: return None
-        b, compact = enc.fit(vi, limit)
+        b, compact = enc.fit(vi, limit, detached(e))
         if compact: stats['gộp cụm'] += 1
         if limit is not None and len(b) > limit:
             report.append('%s: QUÁ DÀI (%d > %d byte) | %s' % (e['id'], len(b), limit, vi)); stats['quá dài'] += 1; return None
@@ -320,10 +347,10 @@ def main():
             if pc.kind == 'para':
                 if vi is None: out += enc.raw(pc.ctx[1]); continue
                 eol = pc.ctx[2] or '\r\n'
-                lines = wrap(enc, ' '.join(vi.split()), PARA_W, 100)
-                out += b''.join(enc.encode(l) + b'<n>' + eol.encode('ascii') for l in lines)
+                lines = wrap(enc, ' '.join(vi.split()), PARA_W, 100, True)
+                out += b''.join(enc.encode(l, True) + b'<n>' + eol.encode('ascii') for l in lines)
                 continue
-            b = enc.raw(pc.text) if vi is None else enc.encode(vi)
+            b = enc.raw(pc.text) if vi is None else enc.encode(vi, True)
             if pc.kind == 'arg':
                 pre = out[out.rindex(b'<'):]
                 if len(pre) - len(pre.split(b' ')[0]) - 1 + len(b) > SC.TAG_ARG_MAX:
@@ -425,12 +452,12 @@ def main():
     for e in cat:
         if e['id'].startswith('T:') and e.get('max', 254) < 254:
             vi = by_id.get(e['id'], by_ko.get(e['ko']))
-            if vi is not None and len(enc.fit(vi, None)[0]) > e['max'] and len(enc.encode_compact(vi)) > e['max']:
+            if vi is not None and len(enc.fit(vi, None, detached(e))[0]) > e['max'] and len(enc.encode_compact(vi)) > e['max']:
                 errors.append('%s: quá %d byte | %s' % (e['id'], e['max'], vi))
         elif re.match(r'T:QUEST0?0?\.dat:', e['id']):  # quest description: wrapped text, no phrase codes
             vi = by_id.get(e['id'], by_ko.get(e['ko']))
-            if vi is not None and len(enc.encode(vi)) > 254:
-                errors.append('%s: mô tả quest quá 254 byte (%d) | %s' % (e['id'], len(enc.encode(vi)), vi))
+            if vi is not None and len(enc.encode(vi, True)) > 254:
+                errors.append('%s: mô tả quest quá 254 byte (%d) | %s' % (e['id'], len(enc.encode(vi, True)), vi))
     if errors:
         print('\n'.join(errors[:60]))
         raise SystemExit('LỖI: %d chuỗi vượt giới hạn bộ đệm của game' % len(errors))

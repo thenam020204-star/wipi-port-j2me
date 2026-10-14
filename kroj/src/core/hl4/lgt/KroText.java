@@ -38,6 +38,10 @@ final class KroText {
     static final int ASCII_SITE = 0x29aa0, ASCII_DRAW = 0x29aa4, ASCII_DONE = 0x29ab8;
     static final int ASCII_W = 0x15008d6, HANGUL_W = 0x15006c2; // advance widths (6 / 10)
     static final int CELL_W = 0x15006c4, CELL_H = 0x15008e5;    // glyph bitmap of 0x292ec (10 x 12, LSB first)
+    /** ASCII punctuation drawn with the VnFont inside a Vietnamese string (build_vi.py VNP) */
+    private static final String VNP = "([\"'.,!?:;)]~";
+    /** one byte = "..." in any string (build_vi.py ELL; never used by the original texts) */
+    static final int ELL = '`';
 
     private final LgtRuntime rt;
     private final Cpu cpu;
@@ -45,7 +49,9 @@ final class KroText {
     private final VnFont font;
     private final String[] dict;
     private final int[] width;
-    private final int spaceW;
+    private final int spaceW, ellW;
+    /** advance of an ASCII byte inside a Vietnamese string when it is drawn with the VnFont, else -1 */
+    private final int[] vnAscii = new int[0x80];
     private int buf; // guest glyph bitmap (cell)
     private final int[] glyphArgs = new int[5];
     private int measureOrig0, measureOrig1;
@@ -58,6 +64,13 @@ final class KroText {
         this.dict = dict;
         int sw = font.advance(' ');
         spaceW = sw > 0 ? sw : 3;
+        ellW = 3 * adv('.');
+        for (int c = 0; c < 0x80; c++) vnAscii[c] = -1;
+        vnAscii[' '] = spaceW;
+        for (int i = 0; i < VNP.length(); i++) {
+            char c = VNP.charAt(i);
+            if (font.pixels(c) != null) vnAscii[c] = adv(c);
+        }
         width = new int[dict.length];
         for (int i = 0; i < dict.length; i++) width[i] = measure(dict[i]);
     }
@@ -121,7 +134,7 @@ final class KroText {
     int measure(int str, int mode) {
         if (str == 0) return 0;
         int a = mem.read8(ASCII_W);
-        int sp = vietnamese(str) ? spaceW : a; // ASCII space between Vietnamese words: font space
+        boolean viet = vietnamese(str); // space and punctuation of a Vietnamese string: VnFont advances
         int vis = 0, raw = 0;
         if (mem.read8(str) != 0) {
             int i = 1;
@@ -141,7 +154,9 @@ final class KroText {
                     vis += k >= 0 ? width[k] : mem.read8(HANGUL_W);
                     raw += 2 * a;
                 } else {
-                    vis += prev == ' ' ? sp : a;
+                    if (prev == ELL) vis += ellW;
+                    else if (viet && prev < 0x80 && vnAscii[prev] >= 0) vis += vnAscii[prev];
+                    else vis += a;
                     raw += a;
                 }
                 int next = mem.read8(str + i);
@@ -212,14 +227,20 @@ final class KroText {
     }
 
     /**
-     * BL at 0x29aa0 (ASCII character r2 of the draw loop): a space of a Vietnamese string advances by the
-     * font's space width instead of the 6 px ASCII cell; anything else runs the two replaced loads and
-     * returns to the original glyph call.
+     * BL at 0x29aa0 (ASCII character r2 of the draw loop, r2 < 0x80): ELL is drawn as "..." with the VnFont; a
+     * space or punctuation mark of a Vietnamese string is drawn with the VnFont and advances by its width instead
+     * of the 6 px ASCII cell; anything else runs the two replaced loads and returns to the original glyph call.
      */
     void ascii() {
         int sp = cpu.r[13];
-        if (cpu.r[2] == ' ' && vietnamese(mem.read32(sp + 0x28))) {
-            mem.write32(sp + 0x24, mem.read32(sp + 0x24) + spaceW);
+        int c = cpu.r[2];
+        if (c == ELL || (vnAscii[c] >= 0 && vietnamese(mem.read32(sp + 0x28)))) {
+            int x = mem.read32(sp + 0x24), y = mem.read32(sp + 0x20);
+            int fg = mem.read32(sp + 0x10), c2 = mem.read32(sp + 0x08);
+            if (c == ' ') x += spaceW;
+            else if (c == ELL) for (int i = 0; i < 3; i++) x = glyph('.', x, y, fg, c2);
+            else x = glyph((char) c, x, y, fg, c2);
+            mem.write32(sp + 0x24, x);
             cpu.r[14] = ASCII_DONE | 1;
             return;
         }
@@ -247,36 +268,37 @@ final class KroText {
         int fg = mem.read32(sp + 0x10), c2 = mem.read32(sp + 0x08);
         String s = dict[k];
         if (KroGame.TEXTLOG) rt.log("vi draw " + s + " @" + x + "," + y + " fg=" + LgtRuntime.hex(fg));
-        int cw = mem.read8(CELL_W), ch = mem.read8(CELL_H);
-        int nb = (cw * ch + 7) >> 3;
         for (int i = 0; i < s.length(); i++) {
             char c = s.charAt(i);
-            if (c == ' ') {
-                x += spaceW;
-                continue;
-            }
-            int[] px = font.pixels(c);
-            if (px == null) {
-                c = '?';
-                px = font.pixels(c);
-            }
-            if (px != null) {
-                mem.fill(buf, 0, nb);
-                for (int j = 0; j < px.length; j++) {
-                    int gx = px[j] & 0xFF, gy = px[j] >> 8;
-                    if (gx >= cw || gy >= ch) continue;
-                    int bit = gy * cw + gx;
-                    mem.write8(buf + (bit >> 3), mem.read8(buf + (bit >> 3)) | (1 << (bit & 7)));
-                }
-                glyphArgs[0] = x;
-                glyphArgs[1] = y;
-                glyphArgs[2] = buf;
-                glyphArgs[3] = fg;
-                glyphArgs[4] = c2;
-                cpu.call(GLYPH | 1, glyphArgs);
-            }
-            x += adv(c);
+            if (c == ' ') x += spaceW;
+            else x = glyph(c, x, y, fg, c2);
         }
         mem.write32(sp + 0x24, x);
+    }
+
+    /** one VnFont letter (missing -> '?') drawn at x with the game's glyph routine; returns the next x */
+    private int glyph(char c, int x, int y, int fg, int c2) {
+        int[] px = font.pixels(c);
+        if (px == null) {
+            c = '?';
+            px = font.pixels(c);
+        }
+        if (px != null) {
+            int cw = mem.read8(CELL_W), ch = mem.read8(CELL_H);
+            mem.fill(buf, 0, (cw * ch + 7) >> 3);
+            for (int j = 0; j < px.length; j++) {
+                int gx = px[j] & 0xFF, gy = px[j] >> 8;
+                if (gx >= cw || gy >= ch) continue;
+                int bit = gy * cw + gx;
+                mem.write8(buf + (bit >> 3), mem.read8(buf + (bit >> 3)) | (1 << (bit & 7)));
+            }
+            glyphArgs[0] = x;
+            glyphArgs[1] = y;
+            glyphArgs[2] = buf;
+            glyphArgs[3] = fg;
+            glyphArgs[4] = c2;
+            cpu.call(GLYPH | 1, glyphArgs);
+        }
+        return x + adv(c);
     }
 }
