@@ -76,7 +76,9 @@ HL4_AOT=1 CP=kroj/build/ta kro/vi/vrun.sh ten 160000 4000 "$K" kro/test 26 14   
    - FreeJ2ME/MicroEmulator: anh đã yêu cầu dừng phần tự động hoá cửa sổ giả lập, nên chưa chạy.
 2. **Bộ nhớ:** cần máy có heap Java lớn (ước tính ≥ 16 MB, xem BAO-CAO §Bộ nhớ). Máy S40 heap 2–4 MB sẽ không chạy được.
 3. Âm thanh trên máy thật chưa nghe thử (chuyển đổi tự động, giống các bản port HL4/HL5).
-4. Từ điển mã từ còn 1079 chỗ (5219/6298). Nếu cần thêm: gộp ~800 mã chỉ khác chữ hoa đầu từ.
+4. Từ điển mã từ còn 1080 chỗ (5218/6298). Nếu cần thêm: gộp ~800 mã chỉ khác chữ hoa đầu từ.
 5. Bản dịch v2 chưa được người đọc soát trong game từ đầu đến cuối (headless chỉ chụp được các đoạn đầu): nếu thấy câu tràn/xưng hô lệch, sửa bằng `dp fix` như trên.
+
+6. Thẩm mỹ: khoảng trắng sau chữ số ASCII trong câu tiếng Việt hơi hẹp ("3 loại", "12 tuổi"), vì game tự vẽ chữ số trong ô 6 px. Có từ v1, vẫn đọc được. Muốn sửa thì vẽ chữ số bằng VnFont (thêm vào `VNP` ở cả `build_vi.py` và `KroText`), rồi phải soát lại toàn bộ ngắt dòng.
 
 Chi tiết kỹ thuật, lỗi đã sửa và cách test: `BAO-CAO-KY-THUAT.md`.

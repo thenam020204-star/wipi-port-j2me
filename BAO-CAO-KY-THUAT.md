@@ -85,7 +85,7 @@ Nguyên tắc chung:
 - 6666 mục đã dịch (gồm 9 chuỗi bổ sung bên dưới).
 - 843 chưa dịch, toàn bộ là phạm vi v2: DIAL 278, QUEST0 213, QUEST00 352, E 10. Đã kiểm chéo theo câu Hàn.
 - Từ điển: 3956/5076 mã.
-- **Sau v2 (§12):** 13865 mục đã dịch, 0 chưa dịch; từ điển 5219/6298 mã.
+- **Sau v2 (§12):** 13865 mục đã dịch, 0 chưa dịch; từ điển 5218/6298 mã.
 - 1 cảnh báo có chủ đích: `TitleN 0` dùng `[Chưa có danh hiệu]` thay `<…>`, vì `<>` là cú pháp thẻ.
 
 **Kiểm tra:** `build_vi` báo mã điều khiển lệch, ô tràn, ký tự ngoài font. Cùng với đó là ảnh chụp trong game.
@@ -274,7 +274,7 @@ Xưng hô theo `kro/vi/dp/w/*/dp_work/vai.md` (ví dụ Rene – Sebastian: ta �
 **Mở rộng không gian mã từ:**
 - v1: lead `0xC9–0xFE` × trail `0xA1–0xFE` = 5076 mã.
 - v2: thêm lead `0xA2, 0xA3, 0xA5–0xAF` (bỏ `0xA1` = hàng dấu cách/dấu câu và `0xA4` = jamo mà game tự vẽ) → tối đa **6298** mã. Cùng một bảng trong `build_vi.py XLEADS` và `KroText`.
-- Đang dùng **5219 / 6298**.
+- Đang dùng **5218 / 6298**.
 
 **Dấu câu tách khỏi mã từ:**
 - Trước: "từ!" "từ..." là mã riêng → từ điển phình. Giờ mã từ chỉ chứa chữ cái; `([\"'.,!?:;)]~` là byte ASCII riêng và KroText vẽ chúng bằng glyph VnFont khi nằm trong chuỗi tiếng Việt (để cùng nét với chữ).
@@ -298,6 +298,37 @@ Xưng hô theo `kro/vi/dp/w/*/dp_work/vai.md` (ví dụ Rene – Sebastian: ta �
 - `Describ0` mục 0 (`//0 /set align`, màn thông tin nhà phát hành) và mục 11 (`//11 /box`, hộp "thông tin kiểm duyệt"): tiêu đề có kèm lệnh nên `extract.py` (regex `^//N$`) bỏ sót từ v1. Sửa: các dòng chữ Hàn trong mục có lệnh được dịch **từng dòng** (ID mới `L:file:dòng`, `tr/L_extra.tsv`), giữ nguyên dòng lệnh `/mo` và số liệu.
 - **Lỗi v1 phát hiện kèm (đã sửa):** khi đóng gói Describ, `build_vi.py` chỉ coi `//N` trơn là tiêu đề. Mục 10 đã dịch bật cờ bỏ dòng gốc, dòng `//11 /box` không tắt cờ → **cả nội dung mục 11 bị xoá** trong bản vi1 (đã kiểm `CHROISEN_LGT_vi1.jar`: sau `//11 /box` không còn dòng nào). Sửa: mọi `//N` (có hoặc không có lệnh) đều kết thúc mục trước. Kiểm: danh sách dòng tiêu đề của mọi `Describ*.dat` trùng bản gốc; mục 11 đủ 16 dòng như gốc.
 - Các cặp Hangul lẻ còn lại trong `IT##` là byte nhị phân trùng mã (không có cụm ≥ 2 âm tiết).
+
+**Khung tên quest (soát hình trong game):**
+- Cửa sổ Quest vẽ tên quest **căn giữa** (tâm ~x147) trong ô viền x=96..202, không cắt chữ. Tên dài tràn đè lên nhãn "NV chính" (vd. "Thực tế là tu luyện" 108 px bắt đầu ở x=93).
+- Đo trên ảnh chụp (bản Hàn `qko` và bản Việt `vis`): chữ phải ≤ 99 px để bắt đầu ≥ x=98. `build_vi` báo lỗi khi tên `T:QUEST0/00:*:31` rộng hơn `QUEST_TITLE_W = 99`.
+- Rút gọn 72 tên bằng `dp fix` (vd. "Đời là tu luyện", "Hội đàm cấp cao", lớp nghề viết tắt "G. Assassin 1", "C. Berserker 1"; hầm ngục "Deep Desert D.").
+- Bảng dịch tra theo **chữ Hàn** dùng chung mọi file. Bốn tên trùng chữ Hàn với tên đồ/hầm ngục (황제의 마법서, 딥샌드던전, 딥데저트던전, 딥블루마운틴) đặt riêng theo ID trong `tr/QUEST_title_id.tsv`. Nhờ vậy tên đồ và bảng 492/B vẫn giữ tên đầy đủ.
+
+**Ngắt dòng Describ (lỗi có từ v1, đã sửa):**
+- Triệu chứng ở Trợ giúp → Thông tin game:
+  - "đến |06công phép" hiện thành "06công" (mất `|`, mất màu);
+  - mất dòng trống trước "Kỹ năng debuff" và dòng sau thụt một khoảng.
+- RE trình vẽ trang `0x2a3f4` (vòng `0x2a79c–0x2a8f0`, HIGH):
+  - mỗi byte thêm vào dòng thì gọi `text_measure` (`0x2a8a6`);
+  - khi đo ≥ `W − 15` thì ngắt dòng, bỏ một CRLF, rồi **kéo byte ASCII kế tiếp lên dòng đã đầy**;
+  - byte đó có thể là `|` của mã màu ở đầu dòng sau, hoặc CR của dòng trống.
+- Lượt đếm dòng `0x29e3c` ngắt khi `số byte × 5 ≥ W − 15`.
+- W là tham số stack 0 của `0x29e3c` ở từng nơi gọi:
+
+| File | W (nơi gọi) |
+|---|---|
+| Describ0 | 160 (`0x382aa`, `0x393f2`); 154 (`0x37e56`) |
+| Describ1 | 140 (`0x3695a`) |
+| Describ3 | 150 (`0x3405a`) |
+| Describ4 | 160 (`0x39048`) |
+| Describ5 | 160 (`0x41f6`, `0x38578`) |
+
+  Đo lúc chạy, trang thông tin có `[0x150e568+0x18] = 160`.
+- Bản v1 ngắt sẵn ở 150 px cho mọi file. Vì vậy dòng 145–150 px bị ngắt lần nữa lúc vẽ.
+- Sửa: `build_vi` ngắt theo từng file, mỗi dòng ≤ `W − 16` px và ≤ `(W − 16) / 5` byte (`DESCRIB_BOX`; Describ2 không thấy nơi gọi hằng số nên dùng 150). Dòng nào vượt (kể cả dòng `L:`) thì dừng build.
+- Ô kiểm duyệt (`//11 /box`): cột nhãn rộng ~62 px, nên rút nhãn thành "Ngày SX", "Phân loại", "Đăng ký".
+- Kiểm bằng ảnh `vis4/vis5`: mã màu đúng, dòng trống còn, ô kiểm duyệt không đè.
 
 **Thay đổi class:** chỉ `hl4/lgt/KroText.class` (`release/jardiff_vi1_vi2.txt`): thêm `XLEAD0/1`, `BASE`, `ELL`, `VNP`, `vnAscii[]`, `ellW`, hàm `glyph()`. Mảng chỉ cấp trong constructor; `draw/glyph/measure` **không cấp phát** (đã quét `javap -c`). `selfCheck0` (StringBuffer) chỉ chạy lúc khởi động như v1.
 
