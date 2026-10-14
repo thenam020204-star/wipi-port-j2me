@@ -49,7 +49,7 @@ public final class BitmapFont {
     private static final BitmapFont[] fonts = new BitmapFont[SIZES.length * 3];
     private static BitmapFont current;
 
-    private static final int CACHE = 4;
+    private static final int CACHE = 6;
 
     // ------------------------------------------------------------ du lieu font
     private final int height;

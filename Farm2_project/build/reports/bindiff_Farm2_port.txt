@@ -75,12 +75,20 @@ CLASS GameCanvas.class
     instructions 368 -> 382
   method DrawInven(Lorg/kwis/msp/lcdui/Graphics;I)V:
     instructions 1506 -> 1520
+  method DrawMenu(Lorg/kwis/msp/lcdui/Graphics;)V:
+    instructions 277 -> 4
+  method DrawMenuItem(Lorg/kwis/msp/lcdui/Graphics;)V:
+    instructions 327 -> 4
   method DrawMiniTime(Lorg/kwis/msp/lcdui/Graphics;II)V:
-    instructions 108 -> 110
+    instructions 108 -> 6
   method DrawPoint(Lorg/kwis/msp/lcdui/Graphics;)V:
     instructions 4148 -> 4194
   method DrawPointBox(Lorg/kwis/msp/lcdui/Graphics;)V:
     instructions 201 -> 203
+  method DrawPopup(Lorg/kwis/msp/lcdui/Graphics;)V:
+    instructions 109 -> 4
+  method DrawTalk(Lorg/kwis/msp/lcdui/Graphics;)V:
+    instructions 514 -> 4
   method DrawTitle(Lorg/kwis/msp/lcdui/Graphics;)V:
     instructions 833 -> 837
   method GameKey()V:
@@ -90,7 +98,7 @@ CLASS GameCanvas.class
   method InvenKey(I)V:
     instructions 352 -> 354
   method LoadExplanDat()V:
-    instructions 762 -> 778
+    instructions 762 -> 3
   method LoadGame(I)V:
     instructions 1188 -> 1196
   method LoadKey()V:
@@ -128,7 +136,7 @@ CLASS GameCanvas.class
     - INVOKESTATIC com/skt/m/Device.invokeWapBrowser (Ljava/lang/String;)V
     + INVOKESTATIC wipi/skt/Device.invokeWapBrowser (Ljava/lang/String;)V
   method paint(Lorg/kwis/msp/lcdui/Graphics;)V:
-    instructions 3473 -> 3613
+    instructions 3473 -> 4
 
 RESOURCE CHANGED Image/Ch/ChOpen.dat 25326 -> 25326
 RESOURCE CHANGED Image/Ch/ChStandard.dat 10616 -> 10616
@@ -288,6 +296,8 @@ CLASS NPC.class
     instructions 5302 -> 5318
   method DrawNPC(Lorg/kwis/msp/lcdui/Graphics;I)V:
     instructions 3874 -> 3876
+  method DrawTalk(Lorg/kwis/msp/lcdui/Graphics;)V:
+    instructions 752 -> 4
   method LoadAnimation(I)V:
     instructions 102 -> 100
   method LoadData(Ljava/lang/String;I)[B:
@@ -295,6 +305,8 @@ CLASS NPC.class
     + INVOKESTATIC wipi/host/Res.open (Ljava/lang/Class;Ljava/lang/String;)Ljava/io/InputStream;
   method LoadTalk(IILjava/lang/String;)V:
     instructions 389 -> 385
+  method MakeNameBuf(ILjava/lang/String;)V:
+    instructions 107 -> 5
   method NPCSetup(I)V:
     instructions 328 -> 326
   method TScript()V:
@@ -702,6 +714,12 @@ ADDED Image/UI/UP/MapName.png (934 B)
 ADDED Image/UI/UP/MapName.txt (200 B)
 ADDED Image/UI/Wea.png (692 B)
 ADDED Image/UI/Wea.txt (202 B)
+ADDED UiHud.class (1185 B)
+ADDED UiKit.class (9043 B)
+ADDED UiPaint.class (8669 B)
+ADDED UiRank.class (1843 B)
+ADDED UiTalk.class (8971 B)
+ADDED UiTitle.class (11303 B)
 ADDED enc/map.bin (10590 B)
 ADDED font/f12.bin (2788 B)
 ADDED org/kwis/msf/io/Network.class (312 B)
@@ -831,8 +849,8 @@ ADDED text/talk_3_19.txt (240 B)
 ADDED text/talk_3_20.txt (3614 B)
 ADDED text/talk_3_21.txt (2671 B)
 ADDED text/talk_T0.txt (39099 B)
-ADDED text/ui.txt (7199 B)
-ADDED wipi/host/BitmapFont.class (10821 B)
+ADDED text/ui.txt (7608 B)
+ADDED wipi/host/BitmapFont.class (10826 B)
 ADDED wipi/host/Enc.class (2512 B)
 ADDED wipi/host/FakeGxg$1.class (1187 B)
 ADDED wipi/host/FakeGxg$2.class (1075 B)
@@ -852,9 +870,9 @@ ADDED wipi/host/Str$File.class (608 B)
 ADDED wipi/host/Str.class (7028 B)
 ADDED wipi/host/Sys.class (681 B)
 ADDED wipi/host/Touch.class (366 B)
-ADDED wipi/host/Txt.class (2891 B)
+ADDED wipi/host/Txt.class (3483 B)
 ADDED wipi/skt/AudioClip.class (281 B)
 ADDED wipi/skt/AudioSystem.class (610 B)
 ADDED wipi/skt/Clip.class (863 B)
 ADDED wipi/skt/Device.class (343 B)
-SUMMARY classes: 4 identical code, 16 changed [CharacterDat.class, Effect.class, GameCanvas.class, ImageData.class, MapDat.class, NPC.class, NetWork.class, Pet.class, SoundPlayer.class, TheFarm2.class, gxg/GXGNet.class, gxg/Header.class, gxg/InitConfirm.class, gxg/MyPricingQueryConfirm.class, gxg/PricingBuyConfirm.class, gxg/PricingQueryConfirm.class]; resources: 162 identical, 166 changed; entries added 425, removed 0
+SUMMARY classes: 4 identical code, 16 changed [CharacterDat.class, Effect.class, GameCanvas.class, ImageData.class, MapDat.class, NPC.class, NetWork.class, Pet.class, SoundPlayer.class, TheFarm2.class, gxg/GXGNet.class, gxg/Header.class, gxg/InitConfirm.class, gxg/MyPricingQueryConfirm.class, gxg/PricingBuyConfirm.class, gxg/PricingQueryConfirm.class]; resources: 162 identical, 166 changed; entries added 431, removed 0

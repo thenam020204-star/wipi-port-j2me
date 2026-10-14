@@ -44,6 +44,13 @@ import org.objectweb.asm.commons.SimpleRemapper;
  *     their own com.skt.m classes, which would shadow the port's audio layer)
  *  5. extra hooks from a hook list file (UI layer), see Hooks.txt format:
  *     owner.name.desc -> newOwner.newName.newDesc (static, receiver first)
+ *  6. with -Dbody=<list>: drawing methods whose BODY is replaced by a call to
+ *     the new UI layer (default-package Ui* classes, which read the same
+ *     package-private game fields). Line: "Class.name(desc) -> UiClass.name";
+ *     the new body is: aload this, load every argument, invokestatic
+ *     UiClass.name(LClass;args)ret, return. Descriptor, access flags and
+ *     callers of the game method are unchanged. Only methods whose logic was
+ *     copied into the Ui method are listed (see tools/ui_body.txt).
  *
  * usage: Remap <inDir> <outDir> <report.txt> [hooks.txt]
  */
@@ -98,6 +105,15 @@ public class Remap {
         if (a.length > 3) {
             loadHooks(new File(a[3]));
         }
+        if (System.getProperty("body") != null) {
+            for (String line : Files.readAllLines(new File(System.getProperty("body")).toPath())) {
+                line = line.trim();
+                if (line.length() > 0 && !line.startsWith("#")) {
+                    String[] p = line.split("\\s*->\\s*");
+                    bodies.put(p[0], p[1]);
+                }
+            }
+        }
         File in = new File(a[0]), out = new File(a[1]);
         PrintStream rep = new PrintStream(new FileOutputStream(a[2]), true, "UTF-8");
         List<File> files = new ArrayList<File>();
@@ -108,6 +124,9 @@ public class Remap {
             ClassNode cn = new ClassNode();
             new ClassReader(b).accept(cn, 0);
             int changed = 0;
+            for (MethodNode m : cn.methods) {
+                changed += body(cn, m, rep);
+            }
             for (MethodNode m : cn.methods) {
                 changed += stringCtors(cn, m, rep);
             }
@@ -164,6 +183,13 @@ public class Remap {
             rep.println("rule " + r.owner + "." + r.name + (r.where != null ? " @" + r.where : "") + ": " + r.count);
             System.out.println("remap " + r.owner + "." + r.name + " -> " + r.nOwner + "." + r.nName + ": " + r.count);
         }
+        for (String k : bodies.keySet()) {
+            if (!bodyDone.contains(k)) {
+                throw new RuntimeException("body replacement target not found: " + k);
+            }
+        }
+        rep.println("rule body -> Ui: " + bodyDone.size());
+        System.out.println("remap method bodies -> Ui layer: " + bodyDone.size());
         rep.println("rule new String(byte[]..) -> Enc.str: " + (strCount - txtSites) + ", -> Enc.txt: " + txtSites);
         System.out.println("remap new String(byte[]..) -> wipi/host/Enc.str: " + (strCount - txtSites)
                 + ", -> wipi/host/Enc.txt (text sites): " + txtSites);
@@ -177,6 +203,41 @@ public class Remap {
     }
 
     static int strCount;
+    static java.util.Map<String, String> bodies = new java.util.LinkedHashMap<String, String>();
+    static java.util.Set<String> bodyDone = new java.util.HashSet<String>();
+
+    static int body(ClassNode cn, MethodNode m, PrintStream rep) {
+        String key = cn.name + "." + m.name + m.desc;
+        String to = bodies.get(key);
+        if (to == null) {
+            return 0;
+        }
+        if ((m.access & (Opcodes.ACC_STATIC | Opcodes.ACC_ABSTRACT | Opcodes.ACC_NATIVE)) != 0) {
+            throw new RuntimeException("body replacement needs an instance method with code: " + key);
+        }
+        int dot = to.lastIndexOf('.');
+        String owner = to.substring(0, dot), name = to.substring(dot + 1);
+        org.objectweb.asm.Type mt = org.objectweb.asm.Type.getMethodType(m.desc);
+        String desc = "(L" + cn.name + ";" + m.desc.substring(1);
+        org.objectweb.asm.tree.InsnList l = new org.objectweb.asm.tree.InsnList();
+        l.add(new org.objectweb.asm.tree.VarInsnNode(Opcodes.ALOAD, 0));
+        int slot = 1;
+        for (org.objectweb.asm.Type t : mt.getArgumentTypes()) {
+            l.add(new org.objectweb.asm.tree.VarInsnNode(t.getOpcode(Opcodes.ILOAD), slot));
+            slot += t.getSize();
+        }
+        l.add(new MethodInsnNode(Opcodes.INVOKESTATIC, owner, name, desc, false));
+        l.add(new org.objectweb.asm.tree.InsnNode(mt.getReturnType().getOpcode(Opcodes.IRETURN)));
+        int old = m.instructions.size();
+        m.instructions.clear();
+        m.instructions.add(l);
+        m.tryCatchBlocks.clear();
+        m.localVariables = null;
+        m.maxLocals = slot;
+        bodyDone.add(key);
+        rep.println(key + ": body (" + old + " insns) -> " + owner + "." + name + desc);
+        return 1;
+    }
 
     /** Rewrites byte[] String constructors; NEW/DUP matched LIFO (javac emits NEW;DUP adjacent). */
     static int stringCtors(ClassNode cn, MethodNode m, PrintStream rep) {

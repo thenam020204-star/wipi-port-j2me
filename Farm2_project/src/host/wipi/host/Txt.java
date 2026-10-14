@@ -77,6 +77,39 @@ public final class Txt {
         return w;
     }
 
+    /** Draws one character with its top-left at (x, y); returns its advance. No allocation for font glyphs. */
+    public static int drawChar(Graphics g, char c, int x, int y, int rgb) {
+        g.setColor(rgb);
+        if (bf != null && bf.hasChar(c)) {
+            return bf.drawChar(g, c, x, y);
+        }
+        if (sys == null) {
+            init();
+        }
+        if (c != ' ') {
+            g.setFont(sys);
+            g.drawChar(c, x, y, Graphics.TOP | Graphics.LEFT);
+        }
+        return charWidth(c);
+    }
+
+    /** Width of s[off, off+len) without allocating. */
+    public static int width(String s, int off, int len) {
+        int w = 0;
+        for (int i = off, e = off + len; i < e; i++) {
+            w += charWidth(s.charAt(i));
+        }
+        return w;
+    }
+
+    /** Draws s[off, off+len) at (x, y) without allocating; returns the end x. */
+    public static int draw(Graphics g, String s, int off, int len, int x, int y, int rgb) {
+        for (int i = off, e = off + len; i < e; i++) {
+            x += drawChar(g, s.charAt(i), x, y, rgb);
+        }
+        return x;
+    }
+
     /** Draws s with its top-left at (x, y). */
     public static void draw(Graphics g, String s, int x, int y, int rgb) {
         g.setColor(rgb);

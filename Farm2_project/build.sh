@@ -32,11 +32,15 @@ java -cp "$W/tools" Unpack "$W/jar" "$W/unpack.txt"
 
 echo "== 2. compile shim + host (+ ui) against CLDC 1.1 / MIDP 2.0, with the game classes on the classpath"
 SRC=$(find "$P/src" -name '*.java')
-java -jar "$L/ecj-4.6.1.jar" -source 1.3 -target 1.2 -nowarn -bootclasspath "$API" \
+java -jar "$L/ecj-4.6.1.jar" -encoding UTF-8 -source 1.3 -target 1.2 -nowarn -bootclasspath "$API" \
      -cp "$W/game_in" -d "$W/cls" $SRC
 
-echo "== 3. remap platform call sites in the game classes"
-java -Dui="$W/res/text/ui.txt" -cp "$W/tools:$ASM" Remap "$W/game_in" "$W/game" "$W/remap.txt" ${HOOKS:+"$HOOKS"}
+# the new UI layer (src/ui, default package: reads the game's package-private fields) goes through
+# the same remap as the game classes (its display literals -> Str.lit / ui.txt)
+mv "$W/cls"/Ui*.class "$W/game_in/"
+
+echo "== 3. remap platform call sites in the game classes (+ drawing bodies -> new UI layer)"
+java -Dui="$W/res/text/ui.txt" -Dbody="$P/tools/ui_body.txt" -cp "$W/tools:$ASM" Remap "$W/game_in" "$W/game" "$W/remap.txt" ${HOOKS:+"$HOOKS"}
 
 echo "== 3b. text encoding table (CP949 codes used by the game data)"
 mkdir -p "$W/res/enc"
