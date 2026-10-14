@@ -43,6 +43,11 @@ def elf_sections(d):
     return out
 
 
+# Strings whose preceding byte is table data (not NUL), so the scan below skips them. Each was checked:
+# exactly one literal-pool reference to the address (bằng chứng: kro/re/map.tsv "missed strings").
+EXTRA_B = [0x57240, 0x572db, 0x580e2, 0x58274, 0x58314, 0x58c40, 0x5dca4, 0x5deaf, 0x5e1a4]
+
+
 def bin_strings(d):
     """[(addr, slot, bytes, nrefs, inner_refs)]: Hangul strings of binary.mod"""
     secs = elf_sections(d)
@@ -69,6 +74,15 @@ def bin_strings(d):
             end = max(end, min(addr + nxt, a + len(s) + 1)) if addr + nxt < end else end
             inner = [k for k in range(1, len(s)) if words.get(a + k)]
             res.append((a, end - a, s, words.get(a, 0), inner))
+        for a in EXTRA_B:
+            if not (addr <= a < addr + size): continue
+            k = a - addr
+            s = blob[k:blob.index(b'\0', k)]
+            nxt = k + len(s)
+            while nxt < len(blob) and blob[nxt] == 0: nxt += 1
+            end = min(addr + nxt, (a + len(s) + 1 + 3) & ~3)  # never past the 4-byte mark (zero bytes may be data)
+            res.append((a, end - a, s, words.get(a, 0), []))
+    res.sort()
     return res
 
 

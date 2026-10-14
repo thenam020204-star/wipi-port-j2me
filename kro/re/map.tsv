@@ -58,3 +58,14 @@ addr	kind	name	conf	evidence
 0x1506600	global	transparent_key16	H	=0xF81F; điểm ảnh giải mã trong suốt 0xFFF7 (0x15108e4)
 0x150e565	global	display_16bpp	H	=1
 0x14003d4	import	MC_netSocketRead	M	bảng import LGT
+0x638c	code	map_cell_decor_loop (đọc 2 mảng thuộc tính ô bản đồ, attr&3 -> số ngẫu nhiên [0x150d2a4])	M	profile diff + instrument 0x63a4/0x63ae: đọc chỉ số 416..418 của khối heap 416 byte (vượt biên, lỗi gốc của game)
+0x4d9fc	code	safe_mod(a,b) (b==0 -> 0, else __modsi3 0x558a0)	H	disasm 0x4d9fc..0x4da0e
+0x57240	str	"필드" (loại vùng; bảng chuỗi sau dữ liệu)	H	1 literal ref 0xb100; byte trước = 0x0f (bộ trích xuất cũ bỏ sót)
+0x572db	str	"투구" (nhóm trang bị)	H	1 literal ref 0xefdc
+0x580e2	str	"종류" ô đầu mảng nhãn char[5] (종류/등급/레벨/정렬/옵션, màn tìm ký gửi)	H	1 literal ref 0x177dc; các ô cách nhau 5 byte; ảnh chụp màn ký gửi
+0x58274	str	"포션 패키지"	H	1 literal ref 0x1bac4
+0x58314	str	"[포션 패키지]"	H	1 literal ref 0x1c754
+0x58c40	str	"입구"	H	1 literal ref 0x1fba8
+0x5dca4	str	"맵퀘스트 제목 길이 오류" (thông báo lỗi debug)	H	1 literal ref 0x48f98
+0x5deaf	str	"도움말"	H	1 literal ref 0x4b438
+0x5e1a4	str	"배경음크기" (Cài đặt, mục 1)	H	1 literal ref 0x4d4dc; ảnh chụp màn Cài đặt
