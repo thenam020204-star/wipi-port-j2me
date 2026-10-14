@@ -40,6 +40,7 @@ public class RunHeadless implements Host {
         fw = w;
         fh = h;
         frameSeq++;
+        if (HEAPLOG && frameSeq % 500 == 0) System.err.println("[heap] t=" + (currentTimeMillis() - vbase) + " used=" + rt.heap.used + " peak=" + rt.heap.peak);
         if (FPS) {
             long now = currentTimeMillis() - vbase;
             fpsFrames++;
@@ -51,6 +52,7 @@ public class RunHeadless implements Host {
         }
     }
     static final boolean FPS = System.getenv("HL4_FPS") != null;
+    static final boolean HEAPLOG = System.getenv("HL4_HEAPLOG") != null;
     long fpsT, fpsIc, fpsReal; int fpsFrames;
 
     public void log(String s) {
@@ -364,6 +366,7 @@ public class RunHeadless implements Host {
         h.vbase = h.vtime;
         final int[] prof = System.getenv("HL4_PROFILE") != null ? new int[0x100000] : null;
         final long profStart = Long.parseLong(System.getenv().getOrDefault("HL4_PROFILE", "0").isEmpty() ? "0" : System.getenv().getOrDefault("HL4_PROFILE", "0"));
+        final long profEnd = System.getenv("HL4_PROFILE_END") != null ? Long.parseLong(System.getenv("HL4_PROFILE_END")) : Long.MAX_VALUE;
         final long profT = Long.parseLong(System.getenv().getOrDefault("HL4_PROFILE_T", "0"));
         if (System.getenv("HL4_WATCH") != null) { // HL4_WATCH=af60,aecc : log registers when these thumb addresses execute
             final java.util.HashSet<Integer> ws = new java.util.HashSet<Integer>();
@@ -375,7 +378,7 @@ public class RunHeadless implements Host {
             rt.cpu.trace = true;
         }
         if (prof != null) {
-            rt.cpu.traceSink = (cpu, addr, op, thumb) -> { int i = addr >> 1; if (i >= 0 && i < prof.length && cpu.icount > profStart && (profT == 0 || h.currentTimeMillis() - h.vbase > profT)) prof[i]++; };
+            rt.cpu.traceSink = (cpu, addr, op, thumb) -> { int i = addr >> 1; if (i >= 0 && i < prof.length && cpu.icount > profStart && cpu.icount < profEnd && (profT == 0 || h.currentTimeMillis() - h.vbase > profT)) prof[i]++; };
             rt.cpu.trace = true;
         }
         long t0 = System.nanoTime();

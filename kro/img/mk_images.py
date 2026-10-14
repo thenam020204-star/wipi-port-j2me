@@ -231,7 +231,7 @@ def main(jar, ov):
     put(im, (0, 0, 24, 9), ['#:Bỏ'], report=rep, name='ui25')
     u[25] = save_png(im)
     im = load(ents[26])  # bag hints 48x52: 4 rows of 13
-    for i, c in enumerate([['#:Phá túi'], ['*:Xếp túi'], ['*:Hiệu ứng bộ', '*:Hiệu ứng'], ['#:Đóng #:Mở', '#:Đóng']]):
+    for i, c in enumerate([['#:Phá túi'], ['*:Xếp túi'], ['*:Hiệu ứng bộ', '*:Hiệu ứng', '*:Bộ đồ'], ['#:Đóng #:Mở', '#:Đóng']]):
         put(im, (0, i * 13, 48, 13), c, align='left', report=rep, name='ui26.%d' % i)
     u[26] = save_png(im)
     pack_dat(jar, ov, 'uiinner.dat', u)

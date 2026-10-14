@@ -693,7 +693,7 @@ public abstract class Runtime implements SvcHandler {
         return name;
     }
 
-    private final Hashtable resourceCache = new Hashtable();
+    private final Hashtable resourceIds = new Hashtable(); // name -> Integer guest handle (knlGetResourceId)
 
     protected byte[] resource(String name) {
         byte[] d = host.loadResource(resourcePath(name));
@@ -710,9 +710,18 @@ public abstract class Runtime implements SvcHandler {
             ret(-12);
             return;
         }
-        byte[] nb = ascii(name);
-        int h = alloc(nb.length + 1);
-        mem.writeCString(h, nb);
+        // The id is an opaque handle (the game never frees it): one guest copy of the name per resource,
+        // so repeated lookups (map changes) do not grow the guest heap.
+        Integer cached = (Integer) resourceIds.get(name);
+        int h;
+        if (cached != null) {
+            h = cached.intValue();
+        } else {
+            byte[] nb = ascii(name);
+            h = alloc(nb.length + 1);
+            mem.writeCString(h, nb);
+            resourceIds.put(name, new Integer(h));
+        }
         if (psize != 0) mem.write32(psize, data.length);
         ret(h);
     }
