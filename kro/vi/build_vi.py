@@ -290,7 +290,7 @@ def main():
             _, _, ri, p = e['id'].split(':'); ri, p = int(ri), int(p)
             r = recs[ri]
             L = r[p]
-            assert r[p + L] == 0 and X.dec(bytes(r[p + 1:p + L])) == e['ko'], e['id']
+            assert r[p + L] == 0 and bytes(r[p + 1:p + L]).decode('cp949') == e['ko'], e['id']
             recs[ri] = r[:p] + bytes([len(b) + 1]) + b + b'\0' + r[p + L + 1:]
             changed = True
         if changed:
@@ -312,10 +312,17 @@ def main():
             for src in vi.split('\n'):
                 lines += wrap(enc, src, DESCRIB_W, DESCRIB_BYTES, True) if src.strip() else ['']
             tmap[int(e['id'].split(':')[2])] = [enc.encode(l, True) for l in lines]
-        if not tmap: continue
+        lmap = {}
+        for e in byfile.get(('L', name), []):
+            vi = tr(e)
+            if vi is not None: lmap[int(e['id'].split(':')[2])] = enc.encode(vi, True)
+        if not tmap and not lmap: continue
         res, cur, skip = [], None, False
-        for line in orig.split(b'\r\n'):
-            m = re.match(rb'^//(\d+)\s*$', line)
+        for k, line in enumerate(orig.split(b'\r\n')):
+            if k in lmap: line = lmap[k]
+            # any '//N' header ends the previous section, also one with a command ("//11 /box"): v1 matched
+            # only bare headers and dropped the whole rating box after the translated section 10
+            m = re.match(rb'^//(\d+)(?:\s|$)', line)
             if m:
                 cur = int(m.group(1)); skip = cur in tmap
                 res.append(line)

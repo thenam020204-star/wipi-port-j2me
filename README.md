@@ -8,15 +8,16 @@ Nền tảng WIPI-C được giả lập bằng HLE. Logic game không bị vi�
 
 | File | Nội dung |
 |---|---|
-| `release/CHROISEN_LGT_vi1.zip` | `CHROISEN_LGT_vi1.jar` + `.jad` (MIDP 2.0 / CLDC 1.1, 240x320, `HL4-FPS: 27`) |
+| `release/CHROISEN_LGT_vi2.zip` | `CHROISEN_LGT_vi2.jar` + `.jad` (MIDP 2.0 / CLDC 1.1, 240x320, `HL4-FPS: 27`) — **Việt hoá toàn bộ** |
+| `release/CHROISEN_LGT_vi1.zip` | bản trước (chỉ menu/UI/đồ), giữ để so sánh |
 
-Nội dung bản vi1:
+Nội dung bản vi2:
 - **Việt hoá v1:** menu, UI, thông báo, đồ (IT01–32), kỹ năng, danh hiệu, mẹo, trợ giúp (Describ), tên quái/NPC (49x), MD0.
-- **Ảnh có chữ:** `title.dat`, `uiinner.dat`.
+- **Việt hoá v2:** toàn bộ kịch bản sự kiện (`EV00–21`, 3493 câu), kịch bản quest (`QUEST1`, 2162), thoại NPC + bảng cảnh báo hầm ngục (`DIAL`, 401), tên + mô tả quest (`QUEST0/00`, 559). Không còn câu tiếng Hàn trong dữ liệu chữ.
+- **Ảnh có chữ:** `title.dat`, `uiinner.dat`. Phụ đề "크로 이센" và nhãn độ tuổi trên ảnh tiêu đề được giữ nguyên có chủ đích.
 - **Logo:** logo NAMP thay logo Softmaru.
 - **Cash shop miễn phí offline:** mua xong game tự lưu.
 - **Tính năng cần máy chủ** (xếp hạng, hộp quà, ký gửi, sự kiện): báo lỗi như mất mạng.
-- **Còn tiếng Hàn (để giai đoạn v2):** thoại cốt truyện (`DIAL`), quest (`QUEST0/00`), kịch bản sự kiện (`EV##`, `QUEST1`). Phụ đề "크로 이센" và nhãn độ tuổi trên ảnh tiêu đề được giữ nguyên có chủ đích.
 
 Phím:
 - OK/FIRE = phím OZ (xác nhận).
@@ -26,9 +27,9 @@ Phím:
 ## Build
 
 ```bash
-VI=1 ./make_kro.sh _vi1     # bản Việt hoá -> dist/CHROISEN_LGT_vi1.jar/.jad (+ quét J2ME)
+VI=1 ./make_kro.sh _vi2     # bản Việt hoá -> dist/CHROISEN_LGT_vi2.jar/.jad (+ quét J2ME)
 ./make_kro.sh _ko           # bản gốc tiếng Hàn (để so sánh)
-NOAOT=1 VI=1 ./make_kro.sh _vi1_noaot   # không AOT (chậm ~9 lần, jar nhỏ hơn ~1 MB)
+NOAOT=1 VI=1 ./make_kro.sh _vi2_noaot   # không AOT (chậm ~9 lần, jar nhỏ hơn ~1 MB)
 ```
 
 Cần JDK (javac, jar) và Python 3 + Pillow; `capstone` chỉ cần cho `tdis.py`.
@@ -41,6 +42,10 @@ Các bước của `make_kro.sh`:
 5. `tools/j2me_scan.py`: quét tương thích J2ME, gặp vi phạm thì dừng.
 
 So sánh jar trước/sau: `python3 tools/jardiff.py A.jar B.jar`.
+
+Sinh lại AOT (khi đổi `kro/re/patches.txt` hoặc profile): `python3 kro/vi/build_vi.py --out kro/vi/build/overlay && bash kroj/tools/regen_aot.sh`, rồi chạy lại kiểm tra bit-exact (BAO-CAO §13).
+
+Sửa bản dịch: mỗi nhóm có thư mục `kro/vi/dp/w/<EV|Q1|DIAL|QUEST>` (công cụ `dp`: `../../dp fix < file`, `../../dp check`), sau đó `bash dp/tr.sh <nhóm>` (chạy trong `kro/vi`) để gộp vào `tr/<nhóm>.tsv`. `build_vi.py` báo "Mã từ điển: N / 6298".
 
 ## Thư mục
 
@@ -66,14 +71,12 @@ HL4_AOT=1 CP=kroj/build/ta kro/vi/vrun.sh ten 160000 4000 "$K" kro/test 26 14   
 
 ## Việc tồn đọng / phiên sau
 
-1. **v2 — thoại/quest/sự kiện:** khoảng 850 mục còn tiếng Hàn (`DIAL`, `QUEST0/00`, `E`).
-   - Từ điển mã từ còn 1120/5076 chỗ trống (đang dùng 3956) → phải mở rộng lead byte hoặc nhập từ.
-   - Không dùng "gộp cụm" cho thoại: chế độ đó ghép cả cụm thành một mã, làm hỏng chỗ xuống dòng của game.
-   - `EV##`/`QUEST1` cần RE offset u32 trong kịch bản (xem `formats.md` §5).
-2. **Chưa kiểm được ở đây:**
+1. **Chưa kiểm được ở đây:**
    - J2ME Loader, KEmulator, máy thật (nhờ anh thử).
    - FreeJ2ME/MicroEmulator: anh đã yêu cầu dừng phần tự động hoá cửa sổ giả lập, nên chưa chạy.
-3. **Bộ nhớ:** cần máy có heap Java lớn (ước tính ≥ 16 MB, xem BAO-CAO §Bộ nhớ). Máy S40 heap 2–4 MB sẽ không chạy được.
-4. Âm thanh trên máy thật chưa nghe thử (chuyển đổi tự động, giống các bản port HL4/HL5).
+2. **Bộ nhớ:** cần máy có heap Java lớn (ước tính ≥ 16 MB, xem BAO-CAO §Bộ nhớ). Máy S40 heap 2–4 MB sẽ không chạy được.
+3. Âm thanh trên máy thật chưa nghe thử (chuyển đổi tự động, giống các bản port HL4/HL5).
+4. Từ điển mã từ còn 1079 chỗ (5219/6298). Nếu cần thêm: gộp ~800 mã chỉ khác chữ hoa đầu từ.
+5. Bản dịch v2 chưa được người đọc soát trong game từ đầu đến cuối (headless chỉ chụp được các đoạn đầu): nếu thấy câu tràn/xưng hô lệch, sửa bằng `dp fix` như trên.
 
 Chi tiết kỹ thuật, lỗi đã sửa và cách test: `BAO-CAO-KY-THUAT.md`.

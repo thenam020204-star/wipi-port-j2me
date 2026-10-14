@@ -1,0 +1,99 @@
+# jardiff dist/CHROISEN_LGT_vi1.jar -> dist/CHROISEN_LGT_vi2.jar
+kích thước: 3228635 -> 3205013 byte; mục: 521 -> 521
+
+## Tài nguyên: +0 -0 ~69
+ ~ META-INF/MANIFEST.MF 459 -> 459 (d3fe5cc8d6 -> a1b5ddd18e)
+ ~ binary.mod 535864 -> 535864 (4db68e2cbf -> ab58ae6fba)
+ ~ data/491.dat 7442 -> 7657 (43f08e0673 -> fa277f030c)
+ ~ data/492.dat 3181 -> 3203 (aabeff2005 -> 7119d7ecdd)
+ ~ data/DIAL.dat 30394 -> 25898 (244e770474 -> 7f04d0afd2)
+ ~ data/Describ0.dat 4825 -> 5173 (df29415789 -> 86e91900b9)
+ ~ data/Describ2.dat 2311 -> 2336 (b6c81d858d -> 3e0a93fe86)
+ ~ data/Describ3.dat 353 -> 360 (123926de33 -> 2911395a56)
+ ~ data/Describ4.dat 3125 -> 3165 (6dfcd97d1c -> bb45c6631b)
+ ~ data/Describ5.dat 1636 -> 1693 (c62237ba29 -> cbe134ecd5)
+ ~ data/EV00.dat 41100 -> 35275 (5b2f3e20b5 -> a2ebccce5d)
+ ~ data/EV01.dat 17677 -> 15196 (8171d8fa88 -> e0799dcc34)
+ ~ data/EV02.dat 18246 -> 16249 (bac448c173 -> 23de38cf9a)
+ ~ data/EV03.dat 14765 -> 12468 (e26c3f9af8 -> 5fb62b806c)
+ ~ data/EV04.dat 16894 -> 14573 (20b17f6572 -> 7d0317eeac)
+ ~ data/EV05.dat 21315 -> 18671 (86d938a912 -> 3664af517f)
+ ~ data/EV06.dat 21074 -> 18067 (01e252dcc9 -> 6e72ac2c58)
+ ~ data/EV07.dat 11635 -> 10102 (928a0d53af -> b6c759f525)
+ ~ data/EV08.dat 18795 -> 15983 (969f910b95 -> 0fb2679215)
+ ~ data/EV09.dat 14894 -> 12924 (bb30c9066b -> 7fcfc91453)
+ ~ data/EV10.dat 14863 -> 12941 (44915763e2 -> c3b202d784)
+ ~ data/EV11.dat 26100 -> 22083 (facec63e27 -> a3c0c57195)
+ ~ data/EV12.dat 1931 -> 1715 (b324ed55a6 -> 00b0b27abf)
+ ~ data/EV14.dat 10027 -> 7904 (aef1f24fd4 -> fb8943fb21)
+ ~ data/EV15.dat 1577 -> 1402 (3f4d5f1d60 -> 4f401da513)
+ ~ data/EV18.dat 1601 -> 1271 (0f75388b65 -> 9eaabb94d6)
+ ~ data/EV19.dat 780 -> 732 (3a2c214759 -> 5b40c66c85)
+ ~ data/EV20.dat 763 -> 561 (f9ff6c357e -> e70982d9e1)
+ ~ data/EV21.dat 364 -> 280 (35e7034c3b -> 69321bae27)
+ ~ data/GameTip.dat 3334 -> 3424 (35e7011280 -> 72d6aa3c60)
+ ~ data/IT01.dat 3805 -> 3805 (462aeebb7a -> 08c44047f2)
+ ~ data/IT02.dat 3625 -> 3625 (30adf5a234 -> 61d02901d4)
+ ~ data/IT03.dat 3634 -> 3634 (a34ac140c0 -> 4739f48e12)
+ ~ data/IT04.dat 3751 -> 3751 (c30c5a2696 -> d4c53430d8)
+ ~ data/IT05.dat 3751 -> 3751 (0830170b4e -> 237b8bba61)
+ ~ data/IT06.dat 3628 -> 3628 (42077d5431 -> e0d3545840)
+ ~ data/IT07.dat 3586 -> 3586 (4e0fce5353 -> 3a38ee43e0)
+ ~ data/IT08.dat 3616 -> 3616 (1e98cad254 -> d5141fccda)
+ ~ data/IT09.dat 3607 -> 3607 (94fcbdfed8 -> ea9a28d589)
+ ~ data/IT10.dat 3751 -> 3751 (04fa6a921c -> 4d4bbafe4b)
+ ~ data/IT11.dat 3500 -> 3496 (8cc336cff8 -> 2cdff850ab)
+ ~ data/IT12.dat 3547 -> 3547 (dee6471b45 -> 79e797dfd2)
+ ~ data/IT13.dat 3514 -> 3514 (a43f77adfa -> 37c840c7c4)
+ ~ data/IT14.dat 3598 -> 3598 (aadd9c69f0 -> d1f6d2b012)
+ ~ data/IT15.dat 3529 -> 3529 (6a94618d71 -> 7494e345b4)
+ ~ data/IT16.dat 3511 -> 3511 (c604878540 -> fc03a0c7c8)
+ ~ data/IT17.dat 3520 -> 3520 (4dd818b260 -> 10fdf1ec97)
+ ~ data/IT18.dat 3559 -> 3559 (93dec0ff7c -> b26e8b5958)
+ ~ data/IT19.dat 3514 -> 3514 (bad6e12c5d -> eacd7e1229)
+ ~ data/IT20.dat 3469 -> 3469 (61f9939d44 -> 4afccde382)
+ ~ data/IT21.dat 3649 -> 3649 (4c61ab7007 -> 287aaa0c55)
+ ~ data/IT22.dat 3562 -> 3562 (b35c274f14 -> e72b073acc)
+ ~ data/IT23.dat 3538 -> 3538 (cc5e69afad -> fd5a9760c4)
+ ~ data/IT24.dat 3856 -> 3856 (4390d80245 -> 7ef200e667)
+ ~ data/IT25.dat 4066 -> 4066 (b59d2d83d7 -> efe702a049)
+ ~ data/IT26.dat 3556 -> 3556 (c476bb1e3c -> e00b2e1753)
+ ~ data/IT27.dat 3556 -> 3556 (f12879da73 -> 30117e8e16)
+ ~ data/IT28.dat 3559 -> 3559 (616336cc8f -> 70821b5ee0)
+ ~ data/IT29.dat 4097 -> 4213 (e63a462bf4 -> 9d8c22650d)
+ ~ data/IT30.dat 14407 -> 14438 (77b3eb9fd9 -> 902d23cb1b)
+ ~ data/IT31.dat 177 -> 180 (9ec541363e -> 050c14c029)
+ ~ data/IT32.dat 2375 -> 2413 (8f2b1ed51d -> 5722039959)
+ ~ data/MD0.dat 17593 -> 17595 (9797f884d3 -> 173f2563a4)
+ ~ data/QUEST0.dat 9361 -> 7817 (3e3ba77ccc -> 660528c761)
+ ~ data/QUEST00.dat 22854 -> 17951 (1853eb2864 -> 0259647a2f)
+ ~ data/QUEST1.dat 136027 -> 104483 (3189de11a3 -> 7a8e655e22)
+ ~ data/SKILL.dat 9253 -> 9337 (c60ed8b7af -> 759c2b88f3)
+ ~ data/TitleN.dat 2508 -> 2510 (8af6a0f81b -> 3d245cf9f0)
+ ~ vi/dict.txt 26350 -> 33268 (56b78a9b51 -> 731b5ba3cf)
+
+## Class: +0 -0 ~1
+ ~ hl4/lgt/KroText.class
+    + field BASEI (0 byte)
+    + field ELLI (0 byte)
+    + field VNPLjava/lang/String; (0 byte)
+    + field XLEAD0I (0 byte)
+    + field XLEAD1I (0 byte)
+    + field ellWI (0 byte)
+    + field vnAscii[I (0 byte)
+    ~ method <init>(Lhl4/lgt/LgtRuntime;Lhl4/core/VnFont;[Ljava/lang/String;)V bytecode 105 -> 212 byte
+    ~ method adv(C)I bytecode 44 -> 44 byte
+    ~ method ascii()V bytecode 124 -> 239 byte
+    ~ method code(II)I bytecode 53 -> 114 byte
+    ~ method draw()V bytecode 521 -> 281 byte
+    ~ method expect(II)V bytecode 40 -> 40 byte
+    + method glyph(CIIII)I (244 byte)
+    ~ method install()V bytecode 221 -> 221 byte
+    ~ method measure()V bytecode 34 -> 34 byte
+    ~ method measure(II)I bytecode 345 -> 379 byte
+    ~ method measure(Ljava/lang/String;)I bytecode 32 -> 32 byte
+    ~ method selfCheck(II)I bytecode 105 -> 105 byte
+    ~ method selfCheck0(II)I bytecode 519 -> 519 byte
+    ~ method vietnamese(I)Z bytecode 65 -> 60 byte
+
+## B: class version > 48 / StackMapTable: 0

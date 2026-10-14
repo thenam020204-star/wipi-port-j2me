@@ -1,4 +1,4 @@
-# Báo cáo kỹ thuật — Chroisen (크로이센) LGT → J2ME, Việt hoá v1
+# Báo cáo kỹ thuật — Chroisen (크로이센) LGT → J2ME, Việt hoá v1 + v2
 
 Mỗi mục gồm: nguyên nhân hoặc bối cảnh → cách làm → cách kiểm tra. Bằng chứng RE nằm trong `kro/re/formats.md` và `kro/re/map.tsv`; mỗi địa chỉ có độ tin cậy H/M/L.
 Nguyên tắc chung:
@@ -85,6 +85,7 @@ Nguyên tắc chung:
 - 6666 mục đã dịch (gồm 9 chuỗi bổ sung bên dưới).
 - 843 chưa dịch, toàn bộ là phạm vi v2: DIAL 278, QUEST0 213, QUEST00 352, E 10. Đã kiểm chéo theo câu Hàn.
 - Từ điển: 3956/5076 mã.
+- **Sau v2 (§12):** 13865 mục đã dịch, 0 chưa dịch; từ điển 5219/6298 mã.
 - 1 cảnh báo có chủ đích: `TitleN 0` dùng `[Chưa có danh hiệu]` thay `<…>`, vì `<>` là cú pháp thẻ.
 
 **Kiểm tra:** `build_vi` báo mã điều khiển lệch, ô tràn, ký tự ngoài font. Cùng với đó là ảnh chụp trong game.
@@ -244,3 +245,60 @@ Nếu lỗi lưu game trên máy thật thì build với `HL4_SAVEDBG=1`, rồi 
 | Class lớn (`LgtAot` ~1 MB) | rủi ro với KVM giới hạn kích thước class; có bản `NOAOT` dự phòng |
 | Heap ≥ 16 MB | không chạy trên máy heap nhỏ |
 | `Image.createImage(byte[])` + `getRGB` khi giải PNG | MIDP 2.0 chuẩn |
+
+## 12. Việt hoá v2 — thoại, quest, kịch bản sự kiện
+
+**Phạm vi (dịch tay bằng `dp`, không dịch máy, không subagent):**
+
+| Nhóm | Nguồn | Số đơn vị dịch |
+|---|---|---|
+| Kịch bản sự kiện | `EV00–EV21.dat` | 3493 |
+| Kịch bản quest | `QUEST1.dat` | 2162 |
+| Thoại NPC + bảng cảnh báo hầm ngục | trường kịch bản của `DIAL.dat` | 401 |
+| Tên + mô tả quest | `QUEST0.dat`, `QUEST00.dat` | 559 |
+
+Xưng hô theo `kro/vi/dp/w/*/dp_work/vai.md` (ví dụ Rene – Sebastian: ta – con; Sebastian – Innis: tôi – tiểu thư; phản diện: ta – ngươi). Tên riêng theo `kro/vi/names.tsv`, thuật ngữ theo `thuat-ngu.tsv` và tên đồ/quái đã có ở v1 (vd. "Tấm thép", "Đuôi Scorpion", "Hồng ngọc thô").
+
+**Định dạng kịch bản (`kro/vi/script.py`):**
+- `EV##.dat`: 10 × (u32 off, u32 len), offset tính từ byte 80; `QUEST1.dat`: u32 n + n × (u32 len, u32 off), offset tính từ byte 4 + 8n.
+- Văn bản có thẻ `<NAME x> <n> <t> <EMO a b c> <DELAY n> <BALLOON ..> <TYPING ..> <SCENE ..> <SELECT ..>`. Đơn vị dịch = đoạn chữ giữa các thẻ ngắt; thẻ nằm giữa câu giữ trong đơn vị.
+- Tham số thẻ được chép vào bộ đệm 40 byte trên stack **không kiểm biên** (`sp+0x4bc`) → `build_vi` chặn mọi tham số mã hoá > 39 byte.
+- Tham số `<NAME>` không dịch theo câu mà lấy từ `names.tsv`, vì hàm tìm chân dung (`0x232b0`) `strcmp` nó với bảng tên 9 byte ở `0x1400050`. `build_vi` kiểm hai bên cùng mã.
+- Đoạn mở đầu `EV00[0]` (chữ tự cuộn) được ngắt lại theo bề rộng 170 px (`PARA_W`).
+
+**Vá mã DIAL (`kro/re/patches.txt`, `0x28b04`):**
+- Bản gốc lấy độ dài kịch bản của bản ghi DIAL từ một byte u8 → kịch bản > 254 byte bị cắt.
+- Bản vá tính độ dài = `reclen − L1 − 6` (u16) từ chính bảng offset. Mã thay thế cùng độ dài, phần dư lấp `nop` (`c046`).
+- Vùng `0x28a00–0x28bff` không nằm trong vùng AOT nào (đã kiểm: `LgtAot.java` không có địa chỉ này), nên mã vá luôn chạy bằng trình thông dịch. Sinh lại AOT từ binary đã vá cho ra `LgtAot.java` **giống hệt** bản v1.
+
+**Mở rộng không gian mã từ:**
+- v1: lead `0xC9–0xFE` × trail `0xA1–0xFE` = 5076 mã.
+- v2: thêm lead `0xA2, 0xA3, 0xA5–0xAF` (bỏ `0xA1` = hàng dấu cách/dấu câu và `0xA4` = jamo mà game tự vẽ) → tối đa **6298** mã. Cùng một bảng trong `build_vi.py XLEADS` và `KroText`.
+- Đang dùng **5219 / 6298**.
+
+**Dấu câu tách khỏi mã từ:**
+- Trước: "từ!" "từ..." là mã riêng → từ điển phình. Giờ mã từ chỉ chứa chữ cái; `([\"'.,!?:;)]~` là byte ASCII riêng và KroText vẽ chúng bằng glyph VnFont khi nằm trong chuỗi tiếng Việt (để cùng nét với chữ).
+- Áp dụng cho kịch bản, đoạn mở đầu, mọi mục `T:` (bảng u16) và `D:` (Describ). Chuỗi trong binary (`B:`) vẫn gắn liền vì ô chật và có chuỗi dùng chung đuôi.
+- Kết quả: từ điển 5123 → 4700 trước khi dịch phần còn lại.
+
+**Dấu ba chấm `` ` ``:**
+- Hàm ngắt dòng hộp thoại (`0x24a24`) chỉ kéo **một** byte đuôi lên dòng trên, nên "..." có thể bị tách sang đầu dòng sau.
+- `build_vi` đổi mọi chuỗi ≥ 2 dấu chấm thành một byte `` ` `` (không xuất hiện trong văn bản gốc); KroText vẽ nó thành 3 dấu chấm và đo bằng 3 × bề rộng dấu chấm.
+- Font không có `…` và dấu nháy đơn: bản dịch dùng `...` và `"`.
+
+**Lỗi nguồn giữ nguyên / sửa trong bản dịch:**
+- `QUEST1` 2050–2052: lời Jason nằm dưới thẻ tên Sebastian → dịch theo đúng chữ, không đổi thẻ.
+- `QUEST1` 1731 ghi Upper Slasher ở chỗ đáng là Upper Assassin; 1882 ghi 보글링 ở chỗ đáng là Druid → bản dịch theo nghĩa đúng.
+- `QUEST0` "미지막인사" (lỗi gõ của 마지막) → "Lời chào cuối".
+
+**Soát chữ Hàn còn sót** (quét mọi file `data/` của overlay tìm cụm ≥ 2 âm tiết Hangul KS X 1001):
+- `IT11` mục 1 và 21: tên "얋은두건" / "고급얋은두건" dùng âm tiết **얋 (0x9DF9) nằm ngoài EUC-KR** (chỉ có trong CP949/UHC; chắc là lỗi gõ của 얇은). Bộ trích xuất chỉ nhận chuỗi EUC-KR hợp lệ nên bỏ sót từ v1. Sửa: `extract.py` nhận chuỗi CP949 trong bảng u16 (`valid949`), `build_vi.py` so chuỗi gốc bằng CP949; dịch "Thin Hood" / "Cao cấp Thin Hood" (`tr/IT_extra.tsv`). Catalog chỉ thêm đúng 2 mục, không mục nào đổi.
+- `DIAL` (69 cụm): trường nhãn đầu mỗi bản ghi (vd. "삶이란", "선호무기"). Loader `0x289fc` bỏ qua trường này, không hiển thị → giữ nguyên.
+- `EV04` (1 câu): bản gốc có dấu `<` lạc: `<도저히 못 참겠군!!<n>`. RE vòng thoại `0x245f0` (HIGH): ở trạng thái chữ, `<` (`0x248d2`) chuyển sang đọc thẻ; trong thẻ chỉ `>` `/` và dấu cách được xử lý (`0x24644–0x2465a`), `<` thứ hai là ký tự thường. Vậy cả đoạn thành thẻ lạ tên "도저히" với tham số "못 참겠군!!<n" (13 byte < 40), không khớp 69 tên thẻ (`0x248c2`) nên bị bỏ qua. **Game gốc không bao giờ hiện câu này** → giữ nguyên byte để giữ đúng hành vi.
+- `Describ0` mục 0 (`//0 /set align`, màn thông tin nhà phát hành) và mục 11 (`//11 /box`, hộp "thông tin kiểm duyệt"): tiêu đề có kèm lệnh nên `extract.py` (regex `^//N$`) bỏ sót từ v1. Sửa: các dòng chữ Hàn trong mục có lệnh được dịch **từng dòng** (ID mới `L:file:dòng`, `tr/L_extra.tsv`), giữ nguyên dòng lệnh `/mo` và số liệu.
+- **Lỗi v1 phát hiện kèm (đã sửa):** khi đóng gói Describ, `build_vi.py` chỉ coi `//N` trơn là tiêu đề. Mục 10 đã dịch bật cờ bỏ dòng gốc, dòng `//11 /box` không tắt cờ → **cả nội dung mục 11 bị xoá** trong bản vi1 (đã kiểm `CHROISEN_LGT_vi1.jar`: sau `//11 /box` không còn dòng nào). Sửa: mọi `//N` (có hoặc không có lệnh) đều kết thúc mục trước. Kiểm: danh sách dòng tiêu đề của mọi `Describ*.dat` trùng bản gốc; mục 11 đủ 16 dòng như gốc.
+- Các cặp Hangul lẻ còn lại trong `IT##` là byte nhị phân trùng mã (không có cụm ≥ 2 âm tiết).
+
+**Thay đổi class:** chỉ `hl4/lgt/KroText.class` (`release/jardiff_vi1_vi2.txt`): thêm `XLEAD0/1`, `BASE`, `ELL`, `VNP`, `vnAscii[]`, `ellW`, hàm `glyph()`. Mảng chỉ cấp trong constructor; `draw/glyph/measure` **không cấp phát** (đã quét `javap -c`). `selfCheck0` (StringBuffer) chỉ chạy lúc khởi động như v1.
+
+**Kiểm tra:** `dp check` OK cho cả 4 nhóm (cảnh báo thuật ngữ còn lại đều là dương tính giả: câu tách dòng, 전직 = "trước đây", 강화 = "tăng cường"); `build_vi` 0 lỗi (ô tràn, tham số thẻ > 39 byte, mô tả quest > 254 byte, `<NAME>` lệch bảng tên); kết quả chạy ở §13.

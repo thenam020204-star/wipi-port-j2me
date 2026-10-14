@@ -37,6 +37,15 @@ def valid(b):
         return False
 
 
+def valid949(b):
+    """CP949 (UHC) also: 2 item names of IT11 use the non-KS X 1001 syllable 얋 (0x9DF9)"""
+    try:
+        b.decode('cp949')
+        return True
+    except UnicodeDecodeError:
+        return False
+
+
 def elf_sections(d):
     shoff, = struct.unpack_from('<I', d, 0x20)
     n, = struct.unpack_from('<H', d, 0x30)
@@ -113,7 +122,7 @@ def prefixed_strings(rec):
             s = rec[p + 1:p + L]
             # no control bytes: a length byte of a preceding field can also look like a prefix
             # ("\x0b스카이밸리" at p-1): skip it, the real prefix follows
-            if min(s) >= 0x20 and has_han(s) and valid(s):
+            if min(s) >= 0x20 and has_han(s) and valid949(s):
                 out.append((p, s)); p += L + 1; continue
         p += 1
     return out
@@ -161,6 +170,13 @@ def catalog():
         if name.startswith('Describ'):
             for n, t in describ_sections(b):
                 if has_han(t): cat.append({'id': 'D:%s:%d' % (name, n), 'ko': dec(t)})
+            # section headers with a command ("//0 /set align": Describ0 info screen) are not '//N' sections:
+            # their Hangul lines are translated one by one (L:file:line, line index in the CRLF split)
+            cur = None
+            for k, line in enumerate(b.split(b'\r\n')):
+                m = re.match(rb'^//(\d+)(\s*)(.*)$', line)
+                if m: cur = m.group(3).strip() != b''; continue
+                if cur and has_han(line): cat.append({'id': 'L:%s:%d' % (name, k), 'ko': dec(line)})
             continue
         if name == 'DIAL.dat':
             for i, r in enumerate(u16_table(b)):
@@ -178,7 +194,7 @@ def catalog():
         if recs is not None:
             for i, r in enumerate(recs):
                 for p, s in prefixed_strings(r):
-                    cat.append({'id': 'T:%s:%d:%d' % (name, i, p), 'ko': dec(s), 'max': t_limit(name, p)})
+                    cat.append({'id': 'T:%s:%d:%d' % (name, i, p), 'ko': s.decode('cp949'), 'max': t_limit(name, p)})
             continue
     return cat
 
