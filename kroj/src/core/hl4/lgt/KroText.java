@@ -6,7 +6,7 @@ import hl4.cpu.Memory;
 
 /**
  * Kroisen Vietnamese text. Vietnamese words are stored in the game data as 2-byte codes
- * (lead 0xC9..0xFE, trail 0xA1..0xFE, index = (lead - 0xC9) * 94 + trail - 0xA1 into dict.txt; an
+ * (lead 0xC9..0xFE, then 0xA2/0xA3/0xA5..0xAF; trail 0xA1..0xFE; index = (lead - 0xC9) * 94 + trail - 0xA1 into dict.txt; an
  * entry may end with a space), so every "byte >= 0xA0 starts a 2-byte character" rule of the game
  * keeps working and a word is one unbreakable unit for the game's own line breaking.
  * <p>
@@ -23,6 +23,10 @@ import hl4.cpu.Memory;
  */
 final class KroText {
     static final int LEAD0 = 0xC9, TRAIL0 = 0xA1, TRAILS = 94;
+    /** codes after the first (0xFF - LEAD0) * TRAILS: leads of KS X 1001 symbol rows the draw loop never draws
+     *  (0xA1 and the jamo row 0xA4 excluded); same table as build_vi.py XLEADS */
+    static final int BASE = (0xFF - LEAD0) * TRAILS;
+    private static final int XLEAD0 = 0xA2, XLEAD1 = 0xAF;
     static final int HLE_MEASURE = 120, HLE_DRAW = 121, HLE_ASCII = 122;
 
     // text module (binary.mod 0002CCCB v01.00.03)
@@ -73,8 +77,12 @@ final class KroText {
 
     /** dict index of a 2-byte code, or -1 when it is not a Vietnamese code */
     int code(int lead, int trail) {
-        if (lead < LEAD0 || trail < TRAIL0 || trail >= TRAIL0 + TRAILS) return -1;
-        int i = (lead - LEAD0) * TRAILS + (trail - TRAIL0);
+        if (trail < TRAIL0 || trail >= TRAIL0 + TRAILS) return -1;
+        int i;
+        if (lead >= LEAD0) i = (lead - LEAD0) * TRAILS + (trail - TRAIL0);
+        else if (lead >= XLEAD0 && lead <= XLEAD1 && lead != 0xA4)
+            i = BASE + (lead - XLEAD0 - (lead > 0xA4 ? 1 : 0)) * TRAILS + (trail - TRAIL0);
+        else return -1;
         return i < dict.length ? i : -1;
     }
 
@@ -197,7 +205,7 @@ final class KroText {
             int b = mem.read8(str + i);
             if (b == 0) return false;
             if (b > 0x9f) {
-                if (b >= LEAD0 && mem.read8(str + i + 1) >= TRAIL0) return true;
+                if (code(b, mem.read8(str + i + 1)) >= 0) return true;
                 i += 2;
             } else i++;
         }

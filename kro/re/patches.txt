@@ -1,0 +1,2 @@
+# Vá mã binary.mod (build_vi.py áp khi VI=1): địa_chỉ  byte_gốc  byte_mới  # ghi chú
+28b04 4e493a790b6815209b180b6068440121fdf740f902ac6b46587d211c4d4b2cf031ff6846417d02980139fdf733f9fdf77bf96a46517d0298474b2cf023ff 4e493a790b689b1801330b60059d2d0cad1a063d02ac281c211c4e4b2cf032ff0298691efdf736f9fdf77ef90298291c494b2cf027ff02e0c046c046c046  # DIAL: script length = reclen - L1 - 6 (u16, was the u8 L2 byte) -> scripts > 254 bytes

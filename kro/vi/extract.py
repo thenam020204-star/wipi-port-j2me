@@ -7,9 +7,13 @@ Nguồn: kro/jar (jar gốc đã bung). Định dạng (xem kro/re/formats.md):
   data/*.dat   bảng u16: n x (u16 len, u16 off), off[0] = 4n; bản ghi = trường nhị phân + chuỗi
                có tiền tố độ dài u8 L (= độ dài + 1, NUL ở vị trí p+L)                      ID  T:<file>:<bản ghi>:<vị trí p>
   data/Describ%d.dat  văn bản: mục '//N' + các dòng CRLF (mã màu |NN...|)                 ID  D:<file>:<N>
-  data/EV%02d.dat, QUEST1.dat  kịch bản sự kiện (bảng u32) - giai đoạn 2                  ID  E:<file>:<offset hex>
+  data/EV%02d.dat, QUEST1.dat, trường kịch bản của DIAL.dat: kịch bản (script.py), mỗi đoạn chữ
+               giữa các mã tách (<n>, <NAME>, <SELECT>, hết dòng ...) là 1 mục              ID  S:<file>:<mục>:<thứ tự>
+Giới hạn byte (bộ đệm của game, kro/re/formats.md): tên quest (QUEST0/00 p=31), tên bản đồ MD0, tên 49x <= 20;
+mô tả quest <= 254; tham số thẻ (BALLOON/TYPING/SCENE) <= 39 kể cả phần số.
 """
 import os, re, struct, json, glob, sys, collections
+import script as SC
 W = os.path.dirname(os.path.abspath(__file__))
 JAR = os.path.join(W, '..', 'jar')
 HAN = re.compile(rb'[\xb0-\xc8][\xa1-\xfe]')
@@ -158,16 +162,41 @@ def catalog():
             for n, t in describ_sections(b):
                 if has_han(t): cat.append({'id': 'D:%s:%d' % (name, n), 'ko': dec(t)})
             continue
+        if name == 'DIAL.dat':
+            for i, r in enumerate(u16_table(b)):
+                script_units(cat, name, i, SC.dial_script(r))
+            continue
+        if re.match(r'EV\d\d\.dat$', name):
+            for i, body in enumerate(SC.ev_read(b)):
+                script_units(cat, name, i, body)
+            continue
+        if name == 'QUEST1.dat':
+            for i, body in enumerate(SC.q1_read(b)):
+                script_units(cat, name, i, body)
+            continue
         recs = u16_table(b)
         if recs is not None:
             for i, r in enumerate(recs):
                 for p, s in prefixed_strings(r):
-                    cat.append({'id': 'T:%s:%d:%d' % (name, i, p), 'ko': dec(s), 'max': 254})
+                    cat.append({'id': 'T:%s:%d:%d' % (name, i, p), 'ko': dec(s), 'max': t_limit(name, p)})
             continue
-        if not (name.startswith('EV') or name.startswith('QUEST')): continue  # MAP/CD/...: binary data
-        for off, s in u32_strings(b):
-            cat.append({'id': 'E:%s:%x' % (name, off), 'ko': dec(s)})
     return cat
+
+
+def t_limit(name, p):
+    """byte limit of an u8-prefixed string (without NUL): fixed 21-byte buffers of the game"""
+    if name in ('QUEST0.dat', 'QUEST00.dat') and p == 31: return 20   # 0x4a078: title -> quest+0x22, error if L > 0x15
+    if name == 'MD0.dat' or re.match(r'49\d\.dat$', name): return 20  # 0x49dc4 / 0x49edc: 21-byte copies
+    return 254
+
+
+def script_units(cat, name, i, body):
+    s = body.decode('euc-kr')
+    k = 0
+    for kind, ko, ctx in SC.units(s, (name, i) in SC.PARA):
+        if kind == 'name': continue
+        e = {'id': 'S:%s:%d:%d' % (name, i, k), 'ko': ko, 'ctx': ctx, 'kind': kind}
+        cat.append(e); k += 1
 
 
 def coverage():

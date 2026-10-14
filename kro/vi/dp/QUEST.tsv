@@ -1,560 +1,593 @@
-id	gốc	dịch	ghi chú
-T:QUEST0.dat:0:31	사냥해보자		
-T:QUEST0.dat:0:43	눈앞의 트롤 3마리를 처치하자.		
-T:QUEST0.dat:1:31	현실은 수련		
-T:QUEST0.dat:1:44	미튼크랩을 잡고 게살 5개를 구해오자.		
-T:QUEST0.dat:2:31	강화의 힘		
-T:QUEST0.dat:2:42	대장장이에게 말을 걸어 강화를 1회 해보자.		
-T:QUEST0.dat:3:31	대장장이의 능력		
-T:QUEST0.dat:3:48	대장장이에게 말을 걸어 마법부여를 1회 해보자.		
-T:QUEST0.dat:4:31	아이템 융합		
-T:QUEST0.dat:4:44	가방칸에서 융합을 1회 해보자. 		
-T:QUEST0.dat:5:31	텔레포터		
-T:QUEST0.dat:5:41	마을 광장의 텔레포터 헵번에게 가서 텔레포트 교육을 받자.		
-T:QUEST0.dat:6:31	영웅 데이거		
-T:QUEST0.dat:6:44	로피스항구로 데이거를 마중하러 가자.		
-T:QUEST0.dat:7:31	운명적인 만남		
-T:QUEST0.dat:7:46	데이거에게 말을 걸어보자.		
-T:QUEST0.dat:8:31	새로운 동문		
-T:QUEST0.dat:8:44	데이거와 함께 레이블타운의 르네선생님에게 돌아가자.		
-T:QUEST0.dat:9:31	영주의저택으로		
-T:QUEST0.dat:9:47	데이거와 함께 영주의 저택 앞으로 가보자.		
-T:QUEST0.dat:10:31	미지막인사		
-T:QUEST0.dat:10:43	데이거와 함께 다시 르네선생님에게 가자.		
-T:QUEST0.dat:11:31	짧은 만남		
-T:QUEST0.dat:11:42	데이거를 배웅하러 로피스항구로 가자.		
-T:QUEST0.dat:12:31	납치		
-T:QUEST0.dat:12:37	누군가 도움을 요청하고 있다. 피스로드로 나가보자.		
-T:QUEST0.dat:13:31	포로 구출1		
-T:QUEST0.dat:13:43	비열한 적들을 물리쳐라.		
-T:QUEST0.dat:14:31	레이블타운으로		
-T:QUEST0.dat:14:47	레이블타운으로 이동하자.		
-T:QUEST0.dat:15:31	영주의 비밀		
-T:QUEST0.dat:15:44	레이블타운의 북서쪽에 있는 비밀입구로 가보자.		
-T:QUEST0.dat:16:31	영주의 지하실		
-T:QUEST0.dat:16:46	의심스러운 지하실을 조사하자.		
-T:QUEST0.dat:17:31	포로 구출2		
-T:QUEST0.dat:17:43	지하 어딘가에 있는 포로를 구출하라.		
-T:QUEST0.dat:18:31	리오타르를 찾자		
-T:QUEST0.dat:18:48	지하실 어딘가에 있을 리오타르를 찾자.		
-T:QUEST0.dat:19:31	탐욕의 리오타르		
-T:QUEST0.dat:19:48	리오타르를 무찔러라.		
-T:QUEST0.dat:20:31	선생님에게 보고		
-T:QUEST0.dat:20:48	르네 선생님에게 지금까지의 일을 이야기하자.		
-T:QUEST0.dat:21:31	회담장소로 가자		
-T:QUEST0.dat:21:48	로피스항구에서 배를 타고 라젤항구로가자.		
-T:QUEST0.dat:22:31	병사들의 무리		
-T:QUEST0.dat:22:46	의심이 가는 적 병사들을 공격하라.		
-T:QUEST0.dat:23:31	이상한 낌새		
-T:QUEST0.dat:23:44	도망간 적 병사를 따라 추적하라.		
-T:QUEST0.dat:24:31	거대한 음모		
-T:QUEST0.dat:24:44	적들을 물리쳐라.		
-T:QUEST0.dat:25:31	추적		
-T:QUEST0.dat:25:37	적을 따라서 라젤트로드3으로 이동하라.		
-T:QUEST0.dat:26:31	수녀님 구출		
-T:QUEST0.dat:26:44	수녀님들을 구해라.		
-T:QUEST0.dat:27:31	수녀님과 대화		
-T:QUEST0.dat:27:46	사감 수녀님에게 말을 걸어라.		
-T:QUEST0.dat:28:31	정상 회담		
-T:QUEST0.dat:28:42	천공신전으로 가자.		
-T:QUEST0.dat:29:31	오해		
-T:QUEST0.dat:29:37	이니스에게 말을 걸어 보자.		
-T:QUEST0.dat:30:31	사건의 현장		
-T:QUEST0.dat:30:44	사건 현장에서 단서를 찾아보자.		
-T:QUEST0.dat:31:31	사망자 정보		
-T:QUEST0.dat:31:44	경비병 르판느에게 가서 사망자 정보를 알아보자.		
-T:QUEST0.dat:32:31	마르폴로		
-T:QUEST0.dat:32:41	로피스항구의 뱃사공 마르폴로에게 가보자.		
-T:QUEST0.dat:33:31	이스턴시티		
-T:QUEST0.dat:33:43	동부의 이스턴 시티로 가보자.		
-T:QUEST0.dat:34:31	통행 수수료		
-T:QUEST0.dat:34:44	마스로드에서 샌드할로우 10마리를 잡고 오자.		
-T:QUEST0.dat:35:31	성주에게		
-T:QUEST0.dat:35:41	성문 경비 제롬에게 가보자.		
-T:QUEST0.dat:36:31	마을의 정보		
-T:QUEST0.dat:36:44	여관에 가서 정보를 얻어 보자.		
-T:QUEST0.dat:37:31	대장장이 닉		
-T:QUEST0.dat:37:44	대장장이 닉에게 가서 정보를 얻어 보자.		
-T:QUEST0.dat:38:31	납품 마감		
-T:QUEST0.dat:38:42	딥샌드 던전에 가서 오리하르콘 10개를 구해 대장장이 닉에게 가져다주다.		
-T:QUEST0.dat:39:31	접근의 방법		
-T:QUEST0.dat:39:44	여관에 가서 관원 세르게이를 만나자.		
-T:QUEST0.dat:40:31	검은도적단		
-T:QUEST0.dat:40:43	이스턴 북쪽 외곽의 검은도적단 20명을 처리해서, 세르게이의 신임을 얻자.		
-T:QUEST0.dat:41:41	이스턴시티 성주에게 가보자.		
-T:QUEST0.dat:42:31	접근 성공		
-T:QUEST0.dat:42:42	이스턴시티 성주, 포크너에게 가보자.		
-T:QUEST0.dat:43:31	공성장비		
-T:QUEST0.dat:43:41	이스턴북쪽외곽 부근으로 가서 검은도적단을 토벌하고 공성장비를 찾아오자.		
-T:QUEST0.dat:44:31	쿨리오 격파		
-T:QUEST0.dat:44:44	검은도적단 동굴에 가서 보스 쿨리오를 처리하자.		
-T:QUEST0.dat:45:31	인내심기르기		
-T:QUEST0.dat:45:45	성라피네 성당의 대수녀에게 가보자.		
-T:QUEST0.dat:46:31	대저택		
-T:QUEST0.dat:46:39	헉슬리대저택에 가서, 경비를 피해 옆문으로 잠입해서 예비수녀를 찾아보자.		
-T:QUEST0.dat:47:31	동행		
-T:QUEST0.dat:47:37	저택을 샅샅히 뒤져 헉슬리의 방을 찾아가자.		
-T:QUEST0.dat:48:31	중요한문서		
-T:QUEST0.dat:48:43	방을 더 자세히 살펴보자.		
-T:QUEST0.dat:49:31	친구		
-T:QUEST0.dat:49:37	위기에 상황에서 벗어날 대책을 생각해보자.		
-T:QUEST0.dat:50:31	확신		
-T:QUEST0.dat:50:37	저택안에 있는 헉슬리의 방으로 이동하자.		
-T:QUEST0.dat:51:31	헉슬리백작		
-T:QUEST0.dat:51:43	헉슬리백작을 처리하자.		
-T:QUEST0.dat:52:31	어둠의숲		
-T:QUEST0.dat:52:41	데저트캠프로 이동하자.		
-T:QUEST0.dat:53:31	흑마법사		
-T:QUEST0.dat:53:41	어둠의 숲 어딘가에 있는 흑마법사던전으로 가보자.		
-T:QUEST0.dat:54:31	깊은곳으로		
-T:QUEST0.dat:54:43	흑마법사의던전 안쪽으로 가보자.		
-T:QUEST0.dat:55:31	대흑마법사		
-T:QUEST0.dat:55:43	대흑마법사 슐탄을 찾아 가보자.		
-T:QUEST0.dat:56:31	슐탄		
-T:QUEST0.dat:56:37	대흑마법사 슐탄을 처리하자.		
-T:QUEST0.dat:57:31	카이루		
-T:QUEST0.dat:57:39	카이루를 쫓아 던전밖으로 나가자.		
-T:QUEST0.dat:58:31	하우레스		
-T:QUEST0.dat:58:41	악마 하우레스를 처리하고 탈출하자.		
-T:QUEST0.dat:59:31	신중함		
-T:QUEST0.dat:59:39	대수녀 테레사에게 가보자.		
-T:QUEST0.dat:60:31	해결		
-T:QUEST0.dat:60:37	루이시티에 있는 이니스를 찾아가자.		
-T:QUEST0.dat:61:31	이니스에게		
-T:QUEST0.dat:61:43	성안으로 들어가 이니스를 만나자.		
-T:QUEST0.dat:62:31	중요한물건		
-T:QUEST0.dat:62:43	지하수련장에 가서 프루스트를 만나자.		
-T:QUEST0.dat:63:31	프루스트		
-T:QUEST0.dat:63:41	프루스트를 처리하자.		
-T:QUEST0.dat:64:31	괴소문		
-T:QUEST0.dat:64:39	존스에게 가서 소문에 대해 직접 물어보자.		
-T:QUEST0.dat:65:31	동향		
-T:QUEST0.dat:65:37	레이블타운의 명물 게살을 구해오자.		
-T:QUEST0.dat:66:31	데이거에게		
-T:QUEST0.dat:66:43	서쪽 사막을 경유해 데이거가 통치하는 남부지역으로 이동하자.		
-T:QUEST0.dat:67:31	목소리		
-T:QUEST0.dat:67:39	여인의 목소리가 들리는 곳으로 가보자.		
-T:QUEST0.dat:68:31	데이거의부하		
-T:QUEST0.dat:68:45	데이거의 부하들을 모두 물리치자.		
-T:QUEST0.dat:69:31	동굴안으로		
-T:QUEST0.dat:69:43	동굴 안으로 들어가서 여인을 구출하자.		
-T:QUEST0.dat:70:31	오거스피릿		
-T:QUEST0.dat:70:43	오거스피릿이 있는 곳을 찾자.		
-T:QUEST0.dat:71:31	구출		
-T:QUEST0.dat:71:37	오크여인 나디아를 구하기 위해 오거스피릿을 처리하자.		
-T:QUEST0.dat:72:31	남부로		
-T:QUEST0.dat:72:39	남부지역으로 이동하자.		
-T:QUEST0.dat:73:31	오크마을		
-T:QUEST0.dat:73:41	오르츠크 마을에 가서 나디아에게 도움을 청하자.		
-T:QUEST0.dat:74:31	족장 샤이먼		
-T:QUEST0.dat:74:44	족장 샤이먼의 집으로 가보자.		
-T:QUEST0.dat:75:31	오크성막		
-T:QUEST0.dat:75:41	오크 성막으로 가서 마도술사를 처리하자.		
-T:QUEST0.dat:76:31	마도술사		
-T:QUEST0.dat:76:41	다크엘프의 하수인 마도술사를 처리하자.		
-T:QUEST0.dat:77:31	샤이먼에게		
-T:QUEST0.dat:78:31	비밀통로		
-T:QUEST0.dat:78:41	데이거의 성으로 가는 비밀입구를 찾아 가보자.		
-T:QUEST0.dat:79:43	데이거의 장소로 가보자.		
-T:QUEST0.dat:80:31	더 이상은..		
-T:QUEST0.dat:80:44	데이거를 쓰러뜨리자.		
-T:QUEST0.dat:81:31	치료약		
-T:QUEST0.dat:81:39	푸른나뭇잎을 3개 구해오자.		
-T:QUEST0.dat:82:31	조언과 평안		
-T:QUEST0.dat:82:44	이스턴 시티 성라피네성당에 가서 대수녀를 만나자.		
-T:QUEST0.dat:83:43	이니스에게 가보자.		
-T:QUEST0.dat:84:31	노스마운틴		
-T:QUEST0.dat:84:43	노스마운틴으로 가보자.		
-T:QUEST0.dat:85:31	암흑동굴		
-T:QUEST0.dat:85:41	동굴에 들어가서 조사해보자.		
-T:QUEST0.dat:86:31	흔적		
-T:QUEST0.dat:86:37	데이거의 흔적을 찾아 가보자.		
-T:QUEST0.dat:88:31	제메스신전		
-T:QUEST0.dat:88:43	켈트로드 쪽의 제메스신전을 찾아 가보자.		
-T:QUEST0.dat:89:31	교주의 장소		
-T:QUEST0.dat:89:44	제메스 신전안의 교주의 장소를 찾아 가보자.		
-T:QUEST0.dat:90:31	심판		
-T:QUEST0.dat:90:37	제메스를 처리하자.		
-T:QUEST0.dat:91:31	고대유적의흔적		
-T:QUEST0.dat:91:47	르네가 찾은 고대 유적의 흔적을 발견한 장소로 가자.		
-T:QUEST0.dat:92:31	고대동굴탐사		
-T:QUEST0.dat:92:45	고대 유적이 있는 동굴안을 탐험해서 유적을 찾아내자.		
-T:QUEST0.dat:93:31	오거스피릿퇴치		
-T:QUEST0.dat:93:47	오거스피릿을 물리치자.		
-T:QUEST0.dat:94:31	오르츠크로		
-T:QUEST0.dat:94:43	오르츠크의 족장 집으로 가자.		
-T:QUEST0.dat:95:31	지하유적		
-T:QUEST0.dat:95:41	족장의집 지하에 있는 지하유적으로가보자.		
-T:QUEST0.dat:96:31	지하유적의질문		
-T:QUEST0.dat:96:47	지하유적의 크리스탈이 질문하는 질문 3가지를 맞추어라.		
-T:QUEST0.dat:97:31	지하유적탐사		
-T:QUEST0.dat:97:45	지하유적을 탐험하자.		
-T:QUEST0.dat:98:31	매직가디언		
-T:QUEST0.dat:98:43	지하유적을 지키는 마도병기를 퇴치하라.		
-T:QUEST0.dat:99:31	대수녀에게		
-T:QUEST0.dat:100:31	데스나이트		
-T:QUEST0.dat:100:43	천공신전에 있는 데스나이트에게 찾아가서 모든 것을 바로 잡자.		
-T:QUEST0.dat:101:31	좀비 리오타르		
-T:QUEST0.dat:101:46	좀비리오타르를 격파하자		
-T:QUEST0.dat:102:31	언데드 쿨리오		
-T:QUEST0.dat:102:46	언데드쿨리오를 격파하자		
-T:QUEST0.dat:103:31	언데드 슐탄		
-T:QUEST0.dat:103:44	언데드슐탄을 격파하자		
-T:QUEST0.dat:104:31	데빌 하우레스		
-T:QUEST0.dat:104:46	데빌하우레스를 격파하자		
-T:QUEST0.dat:105:31	좀비 프루스트		
-T:QUEST0.dat:105:46	좀비프루스트를 격파하자		
-T:QUEST0.dat:106:31	오거 소울		
-T:QUEST0.dat:106:42	오거소울를 격파하자		
-T:QUEST0.dat:107:31	리치 제메스		
-T:QUEST0.dat:107:44	리치제메스를 격파하자		
-T:QUEST0.dat:108:31	진리의 증명		
-T:QUEST0.dat:108:44	데스나이트를 격파하자.		
-T:QUEST0.dat:109:43	오르츠크의 족장 집으로 가보자.		
-T:QUEST0.dat:110:31	유적 안으로		
-T:QUEST0.dat:110:44	유적안으로 들어가보자.		
-T:QUEST0.dat:111:31	고대유적지로		
-T:QUEST0.dat:111:45	유적의 가장 안쪽에 있는 고대유적지로 가보자.		
-T:QUEST0.dat:112:31	내가 해야할 일		
-T:QUEST0.dat:112:47	마도병기와 융합한 르네 선생님을 쓰러트리자.		
-T:QUEST00.dat:0:31	르네의 선물		
-T:QUEST00.dat:0:44	르네 선생님이 여관 침대 근처에 떨어트린 가방을 찾자.		
-T:QUEST00.dat:1:31	여관주인 제이미		
-T:QUEST00.dat:1:48	제이미 아줌마에게 가서 르네가 두고간 가방을 받자.		
-T:QUEST00.dat:2:31	마을의 잡화상		
-T:QUEST00.dat:2:46	상점에 있는 잡화상 로니에게 찾아가자.		
-T:QUEST00.dat:3:31	기억의 잔영		
-T:QUEST00.dat:3:44	플로릴리의 기억속에 남아있는 수정석을 찾아, 피스로드의 샌드할로우를 처치하자.		
-T:QUEST00.dat:4:31	중독된 빅조		
-T:QUEST00.dat:4:44	빅조의 치료약을 만들기 위해, 남쪽숲에서 와이엄의 고기를 구해 텔레포더 마법사 헵번에게 가져다 주자.		
-T:QUEST00.dat:5:31	부족한 재료		
-T:QUEST00.dat:5:44	체스트넛의 가시가 부족하다. 레이블타운 외곽지역의 체스트넛을 처치하고 구해오자.		
-T:QUEST00.dat:6:31	빅조의 치료약		
-T:QUEST00.dat:6:46	완성된 헵번의 특제 치료약을 빅조에게 가져다주자.		
-T:QUEST00.dat:7:31	중급강화석(반복)		
-T:QUEST00.dat:7:49	하급강화석 20개를 루크에게 가져다주고, 중급강화석 5개로 교환받자.		
-T:QUEST00.dat:8:31	상급강화석(반복)		
-T:QUEST00.dat:8:49	중급강화석 20개를 루크에게 가져다주고, 상급강화석 3개로 교환받자.		
-T:QUEST00.dat:9:31	수상한몬스터		
-T:QUEST00.dat:9:45	중앙숲에 나타난 수상한 몬스터의 비밀 나무통을 살펴보자.		
-T:QUEST00.dat:10:31	머미의비밀		
-T:QUEST00.dat:10:43	머미의 비밀을 알았다. 엘레나 아주머니에게 돌아가자.		
-T:QUEST00.dat:11:31	장사아이템		
-T:QUEST00.dat:11:43	마을 보따리상인 루크아저씨에게 새로운 장사 아이템에 대해 알려주자.		
-T:QUEST00.dat:12:31	윌리엄의 재산		
-T:QUEST00.dat:12:46	상점부근에서 윌리엄아저씨의 돈주머니의 행방을 찾아보자.		
-T:QUEST00.dat:13:31	깊은 발자국		
-T:QUEST00.dat:13:44	윌리엄에게 깊은 발자국을 만들 수 있는 용의자에 대해 물어보자.		
-T:QUEST00.dat:14:31	용의자		
-T:QUEST00.dat:14:39	용의자로 정해진 영주성 경비병  찰스에게 가서 조사를 하자.		
-T:QUEST00.dat:15:31	노인의 지혜		
-T:QUEST00.dat:15:44	레이블타운의 터줏대감인 엠마할머니한테 윌리엄을 도울 수 있는 방법을 알아보자.		
-T:QUEST00.dat:16:31	부패한 군대		
-T:QUEST00.dat:16:44	부패한 기사단원들을 처치하고, 그들이 빼돌린 강철판금을 가져와 윌리엄을 도와주자.		
-T:QUEST00.dat:17:31	용병의 길		
-T:QUEST00.dat:17:42	라젤트로드에서 행인을 위협하는 산적주술사를 무찌르고 랜달프에게 보고하자.		
-T:QUEST00.dat:18:31	가족을 위해		
-T:QUEST00.dat:18:44	피스로드의 버블몬 가죽을 구해, 잡화상 로니에게서 골무를 만들어보자.		
-T:QUEST00.dat:19:31	골무목걸이		
-T:QUEST00.dat:19:43	만들어진 골무 목걸이를 존슨에게 가져다주자.		
-T:QUEST00.dat:20:31	잔당 처치		
-T:QUEST00.dat:20:42	리오타르가 당한뒤에도 여전히 소란을 피우는 지하 2구역의 워리어들을 혼내주자.		
-T:QUEST00.dat:21:31	되살아난 기억		
-T:QUEST00.dat:21:46	플로릴리의 편지를 이스턴 시티 성당의 헬레나 수녀에게 전달하자.		
-T:QUEST00.dat:22:31	건국황제의 보물1		
-T:QUEST00.dat:22:49	아베르가 알려준 마스로드1의 상자를 찾아보자.		
-T:QUEST00.dat:23:31	건국황제의 보물2		
-T:QUEST00.dat:23:49	황제의 안배대로 마스로드2의 상자를 찾아보자.		
-T:QUEST00.dat:24:31	건국황제의 보물3		
-T:QUEST00.dat:24:49	마스로드3의 상자를 찾아보자.		
-T:QUEST00.dat:25:31	황제의 안배		
-T:QUEST00.dat:25:44	딥샌드 던전입구에서 황제의 최후 안배인 상자를 찾아보자.		
-T:QUEST00.dat:26:31	황제의 마법서		
-T:QUEST00.dat:26:46	굉장한 가치를 지녔겠지만, 내가 손대서는 안될 물건인것 같다. 아베르에게 돌아가자.		
-T:QUEST00.dat:27:31	사막의 몬스터		
-T:QUEST00.dat:27:46	마스로드에서 스콜피온 꼬리를 모아서 갈릴레이에게 가져다주자.		
-T:QUEST00.dat:28:31	항로의 방해꾼		
-T:QUEST00.dat:28:46	마스로드에서 뱃길에 위협을 주는 디펜스타워를 처치하고, 갈릴레이에게 돌아가자.		
-T:QUEST00.dat:29:31	녹음의 파괴자		
-T:QUEST00.dat:29:46	이스턴 외곽지역에서 이스턴 지역의 생기를 빨아먹는 커즈타워를 파괴하자.		
-T:QUEST00.dat:30:31	그들의 음모		
-T:QUEST00.dat:30:44	범인의 윤곽이 드러났다. 산적간부들이 가진 수상한 주머니를 뺏어오자.		
-T:QUEST00.dat:31:31	악마의 씨앗		
-T:QUEST00.dat:31:44	주머니에서 나온 커즈타워의 씨앗을 이스턴 성당의 테레사 대수녀에게 가져가 정화시키자.		
-T:QUEST00.dat:32:31	사라진 친구		
-T:QUEST00.dat:32:44	브리니의 하나뿐인 친구, 토미가 왜 숨어있는지 토미의 아빠인 폴조에게 물어보자.		
-T:QUEST00.dat:33:31	사막트롤의 장식		
-T:QUEST00.dat:33:48	토미를 위해 마스로드의 사막트롤을 처치하고, 머리에 꽂고있는 장식품을 수집해 폴조에게 가자.		
-T:QUEST00.dat:34:31	토미를 찾아서		
-T:QUEST00.dat:34:46	깊은 악마 동굴앞에 숨어있는 토미를 찾아, 폴조에게 데리고 가자.		
-T:QUEST00.dat:35:31	못된 어른		
-T:QUEST00.dat:35:42	깊은 악마 동굴에서 가고일을 처치하고 가고일의 등심살을 얻어. 이스턴 시티의 성당경비병 척에게 가져가자.		
-T:QUEST00.dat:36:31	폴조의 마음		
-T:QUEST00.dat:36:44	폴조의 연애편지를 주인인 이스턴 시티의 폴조에게 가져다 주자.		
-T:QUEST00.dat:37:31	아버지의 유품		
-T:QUEST00.dat:37:46	이스턴 성당의 코이수녀의 아버지 유품을 찾아 헉슬리대저택7의 화분을 찾아보자.		
-T:QUEST00.dat:38:31	남의 물건		
-T:QUEST00.dat:38:42	헉슬리저택 경비병인 헨리가 코이수녀 아버지의 유품을 집어갔다. 그를 찾아가 물건을 회수하자.		
-T:QUEST00.dat:39:31	주술용수정		
-T:QUEST00.dat:39:43	뻔뻔한 헨리의 조건으로 헉슬리대저택8의 주술사들에게 주술용수정을 뺏어 물건을 교환하자.		
-T:QUEST00.dat:40:31	코이수녀에게		
-T:QUEST00.dat:40:45	이스턴 성당의 코이수녀에게 아버지의 유품을 돌려주자.		
-T:QUEST00.dat:41:31	용병교육		
-T:QUEST00.dat:41:41	여관 아래에 있는 랜달프 아저씨에게 가보자.		
-T:QUEST00.dat:42:31	용병 의뢰		
-T:QUEST00.dat:42:42	성당안에서 용병을 찾고 있는 헬레나 수녀를 찾아가자.		
-T:QUEST00.dat:43:31	사악한 종교		
-T:QUEST00.dat:43:44	고대종교인 드루이드교의 드루이드를 무찌르고, 암흑수정을 가져오자.		
-T:QUEST00.dat:44:31	뒤틀린 암흑수정		
-T:QUEST00.dat:44:48	뭔가 잘못되었다. 테레사 대수녀에게 도움을 청하자!		
-T:QUEST00.dat:45:31	순결함의 상징		
-T:QUEST00.dat:45:46	이스턴 남쪽외곽의 임프들에게 순수한 금의 광석을 되찾아 테레사 대수녀에게 전해주자.		
-T:QUEST00.dat:46:31	신성력의 결정체		
-T:QUEST00.dat:46:48	신성력이 극도로 응축된 신성력의 정화를 헬레나 수녀에게 가져다줘서 뒤틀린 암흑수정을 정화시키자.		
-T:QUEST00.dat:47:31	마계의 통로		
-T:QUEST00.dat:47:44	마계와 이어진 던전, 이블케이브에서 서식하는 블랙버블몬을 척살하고 블랙버블아이를 모아 헵번에게 가져다주자.		
-T:QUEST00.dat:48:31	은밀한 전언		
-T:QUEST00.dat:48:44	코드리공작의 전언를 이스턴시티 여관의 세르게이에게 전달하자		
-T:QUEST00.dat:49:31	밀약의 증거		
-T:QUEST00.dat:49:44	코드리공작의 말을 그대로 신뢰하기는 어렵다. 어둠의 숲4의 흑마법사 던전에 가서 흑마법사에게 밀약의 서약서를 뺏어오자.		
-T:QUEST00.dat:50:31	경계 강화		
-T:QUEST00.dat:50:42	데저트 캠프에 있는 토마스에게 경계를 강화하라고 세르게이의 전언을 전하자.		
-T:QUEST00.dat:51:31	토마스의 부탁		
-T:QUEST00.dat:51:46	산적간부들의 위협으로 던전 감시가 쉽지않다. 산적간부 10명을 해치워 부담을 덜어주자.		
-T:QUEST00.dat:52:31	나이트의 동상		
-T:QUEST00.dat:52:46	프루스트의 동상제작에 필요한 고급판금을, 루이시티 북쪽외곽의 어벤져에게 뺏아서 루이시티 대장간의 미키에게 가져다주자.		
-T:QUEST00.dat:53:31	장인의 고집		
-T:QUEST00.dat:53:44	나이트의 품위를 표현하기엔 재료가 부족하다. 웨스트 포레스트가서 드레이크에게 헬아이언을 8개 구해 루이시티 대장간의 미키에게 돌아가자.		
-T:QUEST00.dat:54:31	카덴의 호출		
-T:QUEST00.dat:54:44	루이시티 성안의 카덴이 급하게 찾고 있다. 그를 찾아가보자.		
-T:QUEST00.dat:55:31	귀부인의 보석		
-T:QUEST00.dat:55:46	고원지대의 도적들이 훔쳐간 홍옥원석을 되찾아, 루이시티 성안의 카덴에게 돌려주자.		
-T:QUEST00.dat:56:31	여자의 욕심		
-T:QUEST00.dat:56:44	루이시티 서쪽의 집시주술사에게서 집시의 눈물을 모아와 루이시티 성안의 로잔느 백작부인에게 가져다주자.		
-T:QUEST00.dat:57:31	드비쉬경의 고민		
-T:QUEST00.dat:57:48	루이시티의 물을 오염시키는 원인을 찾아야한다. 대륙 곳곳을 돌아다니는 보따리상 루크에게 원인을 알아보자.		
-T:QUEST00.dat:58:31	수상한 나무통		
-T:QUEST00.dat:58:46	루이시티 북쪽외곽4에 놓여있는 나무통이 수상하다. 암흑술사가 지키고 있는 나무통을 살펴보자		
-T:QUEST00.dat:59:31	암흑술사 격파		
-T:QUEST00.dat:59:46	암흑술사로 인해 나무통을 자세히 살펴보기가 불가능하다. 암흑술사를 무찌르자.		
-T:QUEST00.dat:60:31	드비쉬경에게		
-T:QUEST00.dat:60:45	루이시티의 드비쉬경에게 그들의 음모를 알리자.		
-T:QUEST00.dat:61:31	고향의 음식		
-T:QUEST00.dat:61:44	오랜 객지 생활로 고향의 음식을 그리워하는 제이슨을 위해, 루이시티 여관의 다나에게 도움을 청하자.		
-T:QUEST00.dat:62:31	마물껍데기		
-T:QUEST00.dat:62:43	오크마을 여관에 가서 여관주인인 이프리카에게 그곳의 특산품인 마물껍데기 구이 양념의 레시피를 부탁하자.		
-T:QUEST00.dat:63:31	음식의 재료		
-T:QUEST00.dat:63:44	레시피를 받기위한 조건으로, 마물의 가죽을 구해와 오르츠크 여관의 이프리카에게 가져다 주자.		
-T:QUEST00.dat:64:31	특별한 레시피		
-T:QUEST00.dat:64:46	루이시티 여관의 다나에게 마물껍데기 구이 양념의 레시피를 가져다주자.		
-T:QUEST00.dat:65:31	인큐버스의 눈		
-T:QUEST00.dat:65:46	던전 생성의 비밀을 풀기위해 남부접경지대에서 인큐버스아이를 구해 텔레포터 마법사 헵번에게 가져다주자.		
-T:QUEST00.dat:66:31	상심한 오크		
-T:QUEST00.dat:66:44	나디아의 부탁으로 오크마을의 민가에 사는 융도르코를 찾아가보자		
-T:QUEST00.dat:67:31	융도르코의 분노		
-T:QUEST00.dat:67:48	오크성막길에 있는 샤먼들이 융도르코의 부인을 실험체로 사용했다! 융도르코를 대신해 샤먼에게 복수하자.		
-T:QUEST00.dat:68:31	잔인한 복수극		
-T:QUEST00.dat:68:46	샤먼에게 융도르코의 부인을 잡아다 바친 마운틴 리자드들을 처치하고 그들의 가죽을 융도르코에게 가져다주고 한을 풀어주자.		
-T:QUEST00.dat:69:31	소년의 꿈		
-T:QUEST00.dat:69:42	대장장이가 꿈인 오크소년을 위해 북부산맥지역의 에틴에게 구리주괴를 구해오자.		
-T:QUEST00.dat:70:31	형재애		
-T:QUEST00.dat:70:39	동생의 꿈을 도와주려는 형의 부탁이다. 딥블루마운틴의 광신도에게서 마광석를 가져다 동생에게 가져다주자.		
-T:QUEST00.dat:71:31	나물범벅		
-T:QUEST00.dat:71:41	노스마운틴에서 바로메츠 가지를 구해와, 오르츠크의 루티나에게 나물재료로 가져다주자.		
-T:QUEST00.dat:72:31	오크경매인		
-T:QUEST00.dat:72:43	오르츠크 상점에 있는 경매인 지르크에게 나물범벅을 가져다 주자.		
-T:QUEST00.dat:73:31	남자의 질투		
-T:QUEST00.dat:73:44	미오르넴이 오크성막길의 마운틴 트롤 녀석들에게 된통 당하고 온것 같다. 서부사막에 가서 손을 봐주자.		
-T:QUEST00.dat:74:31	인간과 오크		
-T:QUEST00.dat:74:44	인간과 오크 대장장이간의 교류를 위한 로카르도의 희망을 루이시티의 대장장이 미키에게 전하자.		
-T:QUEST00.dat:75:31	미키의 답변		
-T:QUEST00.dat:75:44	미키의 마음을 담은 재료를 오크마을 대장장이인 로카르도에게 전달하자.		
-T:QUEST00.dat:76:31	케산의 마음		
-T:QUEST00.dat:76:44	케산이 나디아에게 고백을 하려한다. 그의 마음을 전해주기 위해 루이시티 잡화점에서 [반지]맥스웰링을 사와, 나디아에게 전해주자. 		
-T:QUEST00.dat:77:31	나디아의 마음		
-T:QUEST00.dat:77:46	나디아의 마음이 담긴 편지를 케산에게 전달해주자.		
-T:QUEST00.dat:78:31	브리킷의 분노		
-T:QUEST00.dat:78:46	서부사막3에서 갈수있는 서부사막던전1의 케이브트롤들이 오크전사의 유골을 장난감으로 사용하고 있다. 유골을 회수해서 브리킷에게 가져오자.		
-T:QUEST00.dat:79:31	오크의 명예전사		
-T:QUEST00.dat:79:48	브리킷이 샤이먼에게 이 사건을 보고해서, 샤이먼이 세바스찬을 만나고 싶어한다. 샤이먼에게 가보자.		
-T:QUEST00.dat:80:31	더럽혀진 기사도		
-T:QUEST00.dat:80:48	암흑기사들의 메달이 그들에게 영향을 끼치는것 같다. 암흑기사를 제압하고 그들의 메달을 뺏아 텔레포터 마법사 헵번에게 가져다주자.		
-T:QUEST00.dat:81:31	의심가는 종교		
-T:QUEST00.dat:81:46	제메스교의 교리가 의심스럽다. 제메시스를 상대해서 그들의 교리서인 제메신경을 라젤항구의 크루센에게 가져다주자. 		
-T:QUEST00.dat:82:31	크루센의 전언		
-T:QUEST00.dat:82:46	종교를 위장한 사기단체인 제메스교의 실상을 천공신전의 론다느 경비병에게 알려주자.		
-T:QUEST00.dat:83:31	론다느의 친구		
-T:QUEST00.dat:83:46	제메스 신전에 몸을 기탁한 론다느의 친구가 걱정된다. 항상 화분을 가지고 다녔다는 그를 찾아보자.		
-T:QUEST00.dat:84:31	안타까운 소식		
-T:QUEST00.dat:84:46	론다느의 친구는 제메스교 내부에서 희생당한것 같다. 이 사실을 천공신전의 론다느에게 전해주자.		
-T:QUEST00.dat:85:31	되살아난 사람들		
-T:QUEST00.dat:85:48	환생에 대해서 자세히 알아보야겠다. 이스턴 시티 성당의 오른쪽 하단에 위치한 도서관에서 정보를 찾자.		
-T:QUEST00.dat:86:31	대마법사 루니안		
-T:QUEST00.dat:86:48	성당에서 요양중인 대마법사 루니안에게 가서 책을 빌릴 수 있는지 확인해보자.		
-T:QUEST00.dat:87:31	환생의 정보		
-T:QUEST00.dat:87:44	빌려온 책을 텔레포터 마법사 헵번에게 가져다주고, 해석을 부탁하도록 하자.		
-T:QUEST00.dat:88:31	캐슬스카이 1		
-T:QUEST00.dat:88:45	캐슬스카이의 워락들을 조사하고, 그들의 마나펜던트를 구해오자.		
-T:QUEST00.dat:89:31	캐슬스카이 2		
-T:QUEST00.dat:89:45	캐슬스카이의 스카이솔저들을 처치하고 하트오브솔저를 구해오자.		
-T:QUEST00.dat:90:31	캐슬스카이 3		
-T:QUEST00.dat:90:45	잘못된 충심의 비극. 캐슬나이트의 가신 - 워락들을 처치하고 바스틴루에게 돌아가자.		
-T:QUEST00.dat:91:31	탐욕마성 1		
-T:QUEST00.dat:91:43	탐욕마성의 마물. 맨오워을 무찌르자.		
-T:QUEST00.dat:92:31	탐욕마성 2		
-T:QUEST00.dat:92:43	마계침략의 선봉인 다크다워. 탐욕마성에서 다크타워를 처치하자.		
-T:QUEST00.dat:93:31	그리드바벨 1		
-T:QUEST00.dat:93:45	그리드 바벨에서 흑마법사에게 세뇌되어 인간계를 파탄시키는 그리드어쌔신을 처치하자. 		
-T:QUEST00.dat:94:31	그리드바벨 2		
-T:QUEST00.dat:94:45	마기에 오염된 실프인 그리드 실프를 잠재워 정령계로 돌려보내자.		
-T:QUEST00.dat:95:31	검은 램프성 1		
-T:QUEST00.dat:95:46	인육을 즐기는 바바에게 협조해 인륜을 저버린 램프술사를 처치하자.		
-T:QUEST00.dat:96:31	검은 램프성 2		
-T:QUEST00.dat:96:46	검은램프 바바의 힘의 원천, 램프 수호물을 파괴하자.		
-T:QUEST00.dat:97:31	딥그리드바벨 1		
-T:QUEST00.dat:97:47	마기에 오염되어, 탐욕에 미쳐날뛰는 그리드 솔저를 처치하자.		
-T:QUEST00.dat:98:31	딥그리드바벨 2		
-T:QUEST00.dat:98:47	대항할수 있음에도 불구하고, 쾌락을 몸을 내맡긴 과거 영광의 기사단. 그리드나이트를 처치하자		
-T:QUEST00.dat:99:31	광기의 어비스 1		
-T:QUEST00.dat:99:48	드루이드교에 심취해, 본연의 임무를 져버린 뭉크. 그들을 처치하자.		
-T:QUEST00.dat:100:31	광기의 어비스 2		
-T:QUEST00.dat:100:48	고대종교인 드루이드교의 마지막 후손. 드루이드를 처치해 그들의 음모를 저지하자.		
-T:QUEST00.dat:101:31	어퍼슬래셔 1		
-T:QUEST00.dat:101:45	이스턴 시티의 폴조를 찾아가 인내력에 대해 알아보자.(다른 직업을 선택하려면, 본 퀘스트를 취소한 후, 제라드에게 다시 전직퀘스트를 받으십시오.)		
-T:QUEST00.dat:102:31	어퍼슬래셔 2		
-T:QUEST00.dat:102:45	이스턴시티길의 프로그를 상대하며, 자신과의 싸움에서 이길 수 있다는 것을 증명하자.		
-T:QUEST00.dat:103:31	어퍼슬래셔 3		
-T:QUEST00.dat:103:45	이스턴시티길의 드루이드들을 처치하고, 전직테스트에 통과하자.		
-T:QUEST00.dat:104:31	스윙슬래셔 1		
-T:QUEST00.dat:104:45	이스턴시티의 폴조에게 도끼다루는 법을 배우러가자.(다른 직업을 선택하려면, 본 퀘스트를 취소한 후, 제라드에게 다시 전직퀘스트를 받으십시오.)		
-T:QUEST00.dat:105:31	스윙슬래셔 2		
-T:QUEST00.dat:105:45	이스턴시티길에서 빅푸트의 뼈를 구해, 폴조에게 가져다주자.		
-T:QUEST00.dat:106:31	스윙슬래셔 3		
-T:QUEST00.dat:107:31	크래싱슬래셔 1		
-T:QUEST00.dat:107:47	이스턴시티의 폴조에게 조언을 구하러가자.(다른 직업을 선택하려면, 본 퀘스트를 취소한 후, 제라드에게 다시 전직퀘스트를 받으십시오.)		
-T:QUEST00.dat:108:31	크래싱슬래셔 2		
-T:QUEST00.dat:108:47	이스턴시티길의 데블에게서 루비광석을 구해오자.		
-T:QUEST00.dat:109:31	크래싱슬래셔 3		
-T:QUEST00.dat:109:47	이스턴시티길의 빅푸트들을 처치하고, 전직테스트에 통과하자.		
-T:QUEST00.dat:110:31	어퍼어쌔신 1		
-T:QUEST00.dat:110:45	이스턴시티 성당의 전직 어쌔신이었던 베넬수녀를 찾아가자.(다른 직업을 선택하려면, 본 퀘스트를 취소한 후, 제라드에게 다시 전직퀘스트를 받으십시오.)		
-T:QUEST00.dat:111:31	어퍼어쌔신 2		
-T:QUEST00.dat:111:45	이스턴시티길의 프로그를 상대하여, 베넬수녀의 테스트를 통과하자.		
-T:QUEST00.dat:112:31	어퍼어쌔신 3		
-T:QUEST00.dat:112:45	이스턴시티길의 드루이드들을 처치하고 암흑의 기운을 가져와, 전직테스트에 통과하자.		
-T:QUEST00.dat:113:31	그래플링어쌔신 1		
-T:QUEST00.dat:114:31	그래플링어쌔신 2		
-T:QUEST00.dat:114:49	이스턴 시티길의 데블을 상대하며, 힘을 기르자.		
-T:QUEST00.dat:115:31	그래플링어쌔신 3		
-T:QUEST00.dat:115:49	이스턴 시티길의 만다고라를 처치하고 전직테스트에 통과하자.		
-T:QUEST00.dat:116:31	파이팅어쌔신 1		
-T:QUEST00.dat:117:31	파이팅어쌔신 2		
-T:QUEST00.dat:117:47	이스턴 시티길의 만다고라를 처치하자		
-T:QUEST00.dat:118:31	파이팅어쌔신 3		
-T:QUEST00.dat:118:47	이스턴 시티길의 드루이드를 처치하고 전직테스트에 통과하자.		
-T:QUEST00.dat:119:31	어퍼나이트 1		
-T:QUEST00.dat:119:45	이스턴시티의 다그리파 후작에게 조언을 청하러가자.(다른 직업을 선택하려면, 본 퀘스트를 취소한 후, 제라드에게 다시 전직퀘스트를 받으십시오.)		
-T:QUEST00.dat:120:31	어퍼나이트 2		
-T:QUEST00.dat:121:31	어퍼나이트 3		
-T:QUEST00.dat:122:31	노블나이트 1		
-T:QUEST00.dat:122:45	이스턴시티의 다그리파 후작에게 조언을 청하러 가자.(다른 직업을 선택하려면, 본 퀘스트를 취소한 후, 제라드에게 다시 전직퀘스트를 받으십시오.)		
-T:QUEST00.dat:123:31	노블나이트 2		
-T:QUEST00.dat:123:45	이스턴시티길의 프로그들을 처리하자.		
-T:QUEST00.dat:124:31	노블나이트 3		
-T:QUEST00.dat:125:31	수퍼나이트 1		
-T:QUEST00.dat:126:31	수퍼나이트 2		
-T:QUEST00.dat:126:45	이스턴시티길의 데블들을 처리하자.		
-T:QUEST00.dat:127:31	수퍼나이트 3		
-T:QUEST00.dat:127:45	이스턴 시티길의 빅푸트를 처치하고 전직테스트에 통과하자.		
-T:QUEST00.dat:128:31	파이어매지션 1		
-T:QUEST00.dat:128:47	이스턴시티 성당에서 요양중인 마법사, 루니안을 찾아가자.(다른 직업을 선택하려면, 본 퀘스트를 취소한 후, 제라드에게 다시 전직퀘스트를 받으십시오.)		
-T:QUEST00.dat:129:31	파이어매지션 2		
-T:QUEST00.dat:129:47	이스턴시티길의 빅푸트를 처치하자.		
-T:QUEST00.dat:130:31	파이어매지션 3		
-T:QUEST00.dat:131:31	아이스매지션 1		
-T:QUEST00.dat:132:31	아이스매지션 2		
-T:QUEST00.dat:133:31	아이스매지션 3		
-T:QUEST00.dat:133:47	이스터 시티길의 만다고라를 처치하고, 만다로라 줄기를 가져와 전직테스트에 통과하자.		
-T:QUEST00.dat:134:31	썬더매지션 1		
-T:QUEST00.dat:135:31	썬더매지션 2		
-T:QUEST00.dat:135:45	이스턴 시티길의 만다고라를 처치하고 만다고라 줄기를 가져오자.		
-T:QUEST00.dat:136:31	썬더매지션 3		
-T:QUEST00.dat:137:31	그랜드슬래셔 1		
-T:QUEST00.dat:137:47	루이시티의 드비쉬 남작을 찾아, 조언을 청하자.		
-T:QUEST00.dat:138:31	그랜드슬래셔 2		
-T:QUEST00.dat:138:47	고원지대의 구울들을 처치하자.		
-T:QUEST00.dat:139:31	그랜드슬래셔 3		
-T:QUEST00.dat:139:47	딥데저트던전의 네펜데스를 처치하고 돌아와서, 그랜드 슬래셔로 각성하자.		
-T:QUEST00.dat:140:31	스윙워리어 1		
-T:QUEST00.dat:141:31	스윙워리어 2		
-T:QUEST00.dat:142:31	스윙워리어 3		
-T:QUEST00.dat:142:45	딥데저트던전의 네펜데스를 처치하고 돌아와서, 스윙워리어로 각성하자.		
-T:QUEST00.dat:143:31	크래싱버서커 1		
-T:QUEST00.dat:144:31	크래싱버서커 2		
-T:QUEST00.dat:144:47	서부사막의 데저트데블들을 처치하고, 데블아이를 가져오자.		
-T:QUEST00.dat:145:31	크래싱버서커 3		
-T:QUEST00.dat:145:47	딥데저트던전의 네펜데스를 처치하고 돌아와서, 크래싱버서커로 각성하자.		
-T:QUEST00.dat:146:31	그랜드어쌔신 1		
-T:QUEST00.dat:146:47	루이시티 성안에 있는 로잔느 백작부인을 찾아가자.		
-T:QUEST00.dat:147:31	그랜드어쌔신 2		
-T:QUEST00.dat:147:47	루이시티 서쪽 집시주술사에게서 집시의 옷감을 구해오자.		
-T:QUEST00.dat:148:31	그랜드어쌔신 3		
-T:QUEST00.dat:148:47	딥데저트던전의 네펜데스를 처치하고, 옷감재료를 가져와  돌아와서, 그랜드 어쌔신으로 각성하자.		
-T:QUEST00.dat:149:31	파이널그래플러 1		
-T:QUEST00.dat:150:31	파이널그래플러 2		
-T:QUEST00.dat:151:31	파이널그래플러 3		
-T:QUEST00.dat:151:49	딥데저트던전의 지옥망자들을 처치하고, 영혼결정를 가지고 돌아와서, 파이널그래플러로 각성하자.		
-T:QUEST00.dat:152:31	울트라파이터 1		
-T:QUEST00.dat:153:31	울트라파이터 2		
-T:QUEST00.dat:154:31	울트라파이터 3		
-T:QUEST00.dat:154:47	딥데저트던전의 지옥망자들을 처치하고, 영혼결정를 가지고 돌아와서, 울트라파이터로 각성하자.		
-T:QUEST00.dat:155:31	그랜드나이트 1		
-T:QUEST00.dat:155:47	루이시티에 있는 코드리 공작에게 조언을 청해보자.		
-T:QUEST00.dat:156:31	그랜드나이트 2		
-T:QUEST00.dat:156:47	고원지대의 탈영병들을 처치하자.		
-T:QUEST00.dat:157:31	그랜드나이트 3		
-T:QUEST00.dat:157:47	딥데저트던전의 네펜데스를 처치하고 돌아와서, 그랜드 나이트로 각성하자.		
-T:QUEST00.dat:158:31	노블블레이더 1		
-T:QUEST00.dat:159:31	노블블레이더 2		
-T:QUEST00.dat:160:31	노블블레이더 3		
-T:QUEST00.dat:160:47	딥데저트던전의 네펜데스를 처치하고 돌아와서, 노블 블레이더로 각성하자.		
-T:QUEST00.dat:161:31	수퍼가디언 1		
-T:QUEST00.dat:162:31	수퍼가디언 2		
-T:QUEST00.dat:163:31	수퍼가디언 3		
-T:QUEST00.dat:163:45	딥데저트던전의 네펜데스를 처치하고 돌아와서, 수퍼가디안으로 각성하자.		
-T:QUEST00.dat:164:31	파이어위자드 1		
-T:QUEST00.dat:164:47	루이시티의 제이슨을 찾아가, 각성에 필요한 도움을 받자.		
-T:QUEST00.dat:165:31	파이어위자드 2		
-T:QUEST00.dat:165:47	고원지대의 맨드레이크를 처치하고, 맨드레이크 가지를 가져오자.		
-T:QUEST00.dat:166:31	파이어위자드 3		
-T:QUEST00.dat:166:47	딥데저트던전의 지옥망자들을 처치하고, 영혼결정를 가지고 돌아와서 파이어위자드로 각성하자.		
-T:QUEST00.dat:167:31	아이스위자드 1		
-T:QUEST00.dat:168:31	아이스위자드 2		
-T:QUEST00.dat:168:47	서부사막의 데저트데블에게 데블아이를 구해오자.		
-T:QUEST00.dat:169:31	아이스위자드 3		
-T:QUEST00.dat:169:47	딥데저트던전의 지옥망자들을 처치하고 돌아와서, 아이스 위자드로 각성하자.		
-T:QUEST00.dat:170:31	썬더위자드 1		
-T:QUEST00.dat:171:31	썬더위자드 2		
-T:QUEST00.dat:171:45	루이시티 서쪽의 집시주술자를 처치하자.		
-T:QUEST00.dat:172:31	썬더위자드 3		
-T:QUEST00.dat:172:45	딥데저트던전의 네펜데스를 처치하고, 옷감재료를 가지고 돌아와, 썬더위자드로 각성하자.		
-T:QUEST00.dat:173:31	이블케이브		
-T:QUEST00.dat:173:43	현상포고-구울 10마리를 처치하고 용병대장 랜달프에게 보고해서, 보상을 받자.		
-T:QUEST00.dat:174:31	샌드던전		
-T:QUEST00.dat:174:41	현상포고-실라페를 처치하고 사막의 눈물을 10개 모아 용병대장 랜달프에게 가져다주고, 보상을 받자.		
-T:QUEST00.dat:175:31	딥샌드던전		
-T:QUEST00.dat:175:43	현상포고-스파이더 8마리를 처치하고 용병대장 랜달프에게 보고해서, 보상을 받자.		
-T:QUEST00.dat:176:31	깊은악마의동굴		
-T:QUEST00.dat:176:47	현상포고-엘리트구울 10마리를 처치하고 용병대장 랜달프에게 보고해서, 보상을 받자.		
-T:QUEST00.dat:177:31	이스트포레스트		
-T:QUEST00.dat:177:47	현상포고-바질리스크를 처치하고 바질리스크의 뼈 10개를 용병대장 랜달프에게 가져다주고, 보상을 받자.		
-T:QUEST00.dat:178:31	데저트던전		
-T:QUEST00.dat:178:43	현상포고-고스튤라 15마리를 처치하고 용병대장 랜달프에게 보고해서, 보상을 받자.		
-T:QUEST00.dat:179:31	웨스트포레스트		
-T:QUEST00.dat:179:47	현상포고-드레이크 15마리를 처치하고 용병대장 랜달프에게 보고해서, 보상을 받자.		
-T:QUEST00.dat:180:31	딥데저트던전		
-T:QUEST00.dat:180:45	현상포고-네펜데스 20마리를 처치하고, 오르츠크의 리르케에게 알려주고, 보상을 받자.		
-T:QUEST00.dat:181:31	블루마운틴		
-T:QUEST00.dat:181:43	현상포고-마운틴 트롤 20마리를 처치하고, 오르츠크의 리르케에게 알려주고, 보상을 받자.		
-T:QUEST00.dat:182:31	딥블루마운틴		
-T:QUEST00.dat:182:45	현상포고-광신도 25명을 처치하고, 용병대장 랜달프에게 보고해서, 보상을 받자.		
+id	gốc	dịch	ghi chú	giới hạn
+T:QUEST0.dat:0:31	사냥해보자		tên quest	20
+T:QUEST0.dat:0:43	눈앞의 트롤 3마리를 처치하자.		mô tả quest	
+T:QUEST0.dat:1:31	현실은 수련		tên quest	20
+T:QUEST0.dat:1:44	미튼크랩을 잡고 게살 5개를 구해오자.		mô tả quest	
+T:QUEST0.dat:2:31	강화의 힘		tên quest	20
+T:QUEST0.dat:2:42	대장장이에게 말을 걸어 강화를 1회 해보자.		mô tả quest	
+T:QUEST0.dat:3:31	대장장이의 능력		tên quest	20
+T:QUEST0.dat:3:48	대장장이에게 말을 걸어 마법부여를 1회 해보자.		mô tả quest	
+T:QUEST0.dat:4:31	아이템 융합		tên quest	20
+T:QUEST0.dat:4:44	가방칸에서 융합을 1회 해보자. 		mô tả quest	
+T:QUEST0.dat:5:31	텔레포터		tên quest	20
+T:QUEST0.dat:5:41	마을 광장의 텔레포터 헵번에게 가서 텔레포트 교육을 받자.		mô tả quest	
+T:QUEST0.dat:6:31	영웅 데이거		tên quest	20
+T:QUEST0.dat:6:44	로피스항구로 데이거를 마중하러 가자.		mô tả quest	
+T:QUEST0.dat:7:31	운명적인 만남		tên quest	20
+T:QUEST0.dat:7:46	데이거에게 말을 걸어보자.		mô tả quest	
+T:QUEST0.dat:8:31	새로운 동문		tên quest	20
+T:QUEST0.dat:8:44	데이거와 함께 레이블타운의 르네선생님에게 돌아가자.		mô tả quest	
+T:QUEST0.dat:9:31	영주의저택으로		tên quest	20
+T:QUEST0.dat:9:47	데이거와 함께 영주의 저택 앞으로 가보자.		mô tả quest	
+T:QUEST0.dat:10:31	미지막인사		tên quest	20
+T:QUEST0.dat:10:43	데이거와 함께 다시 르네선생님에게 가자.		mô tả quest	
+T:QUEST0.dat:11:31	짧은 만남		tên quest	20
+T:QUEST0.dat:11:42	데이거를 배웅하러 로피스항구로 가자.		mô tả quest	
+T:QUEST0.dat:12:31	납치		tên quest	20
+T:QUEST0.dat:12:37	누군가 도움을 요청하고 있다. 피스로드로 나가보자.		mô tả quest	
+T:QUEST0.dat:13:31	포로 구출1		tên quest	20
+T:QUEST0.dat:13:43	비열한 적들을 물리쳐라.		mô tả quest	
+T:QUEST0.dat:14:31	레이블타운으로		tên quest	20
+T:QUEST0.dat:14:47	레이블타운으로 이동하자.		mô tả quest	
+T:QUEST0.dat:15:31	영주의 비밀		tên quest	20
+T:QUEST0.dat:15:44	레이블타운의 북서쪽에 있는 비밀입구로 가보자.		mô tả quest	
+T:QUEST0.dat:16:31	영주의 지하실		tên quest	20
+T:QUEST0.dat:16:46	의심스러운 지하실을 조사하자.		mô tả quest	
+T:QUEST0.dat:17:31	포로 구출2		tên quest	20
+T:QUEST0.dat:17:43	지하 어딘가에 있는 포로를 구출하라.		mô tả quest	
+T:QUEST0.dat:18:31	리오타르를 찾자		tên quest	20
+T:QUEST0.dat:18:48	지하실 어딘가에 있을 리오타르를 찾자.		mô tả quest	
+T:QUEST0.dat:19:31	탐욕의 리오타르		tên quest	20
+T:QUEST0.dat:19:48	리오타르를 무찔러라.		mô tả quest	
+T:QUEST0.dat:20:31	선생님에게 보고		tên quest	20
+T:QUEST0.dat:20:48	르네 선생님에게 지금까지의 일을 이야기하자.		mô tả quest	
+T:QUEST0.dat:21:31	회담장소로 가자		tên quest	20
+T:QUEST0.dat:21:48	로피스항구에서 배를 타고 라젤항구로가자.		mô tả quest	
+T:QUEST0.dat:22:31	병사들의 무리		tên quest	20
+T:QUEST0.dat:22:46	의심이 가는 적 병사들을 공격하라.		mô tả quest	
+T:QUEST0.dat:23:31	이상한 낌새		tên quest	20
+T:QUEST0.dat:23:44	도망간 적 병사를 따라 추적하라.		mô tả quest	
+T:QUEST0.dat:24:31	거대한 음모		tên quest	20
+T:QUEST0.dat:24:44	적들을 물리쳐라.		mô tả quest	
+T:QUEST0.dat:25:31	추적		tên quest	20
+T:QUEST0.dat:25:37	적을 따라서 라젤트로드3으로 이동하라.		mô tả quest	
+T:QUEST0.dat:26:31	수녀님 구출		tên quest	20
+T:QUEST0.dat:26:44	수녀님들을 구해라.		mô tả quest	
+T:QUEST0.dat:27:31	수녀님과 대화		tên quest	20
+T:QUEST0.dat:27:46	사감 수녀님에게 말을 걸어라.		mô tả quest	
+T:QUEST0.dat:28:31	정상 회담		tên quest	20
+T:QUEST0.dat:28:42	천공신전으로 가자.		mô tả quest	
+T:QUEST0.dat:29:31	오해		tên quest	20
+T:QUEST0.dat:29:37	이니스에게 말을 걸어 보자.		mô tả quest	
+T:QUEST0.dat:30:31	사건의 현장		tên quest	20
+T:QUEST0.dat:30:44	사건 현장에서 단서를 찾아보자.		mô tả quest	
+T:QUEST0.dat:31:31	사망자 정보		tên quest	20
+T:QUEST0.dat:31:44	경비병 르판느에게 가서 사망자 정보를 알아보자.		mô tả quest	
+T:QUEST0.dat:32:31	마르폴로		tên quest	20
+T:QUEST0.dat:32:41	로피스항구의 뱃사공 마르폴로에게 가보자.		mô tả quest	
+T:QUEST0.dat:33:31	이스턴시티		tên quest	20
+T:QUEST0.dat:33:43	동부의 이스턴 시티로 가보자.		mô tả quest	
+T:QUEST0.dat:34:31	통행 수수료		tên quest	20
+T:QUEST0.dat:34:44	마스로드에서 샌드할로우 10마리를 잡고 오자.		mô tả quest	
+T:QUEST0.dat:35:31	성주에게		tên quest	20
+T:QUEST0.dat:35:41	성문 경비 제롬에게 가보자.		mô tả quest	
+T:QUEST0.dat:36:31	마을의 정보		tên quest	20
+T:QUEST0.dat:36:44	여관에 가서 정보를 얻어 보자.		mô tả quest	
+T:QUEST0.dat:37:31	대장장이 닉		tên quest	20
+T:QUEST0.dat:37:44	대장장이 닉에게 가서 정보를 얻어 보자.		mô tả quest	
+T:QUEST0.dat:38:31	납품 마감		tên quest	20
+T:QUEST0.dat:38:42	딥샌드 던전에 가서 오리하르콘 10개를 구해 대장장이 닉에게 가져다주다.		mô tả quest	
+T:QUEST0.dat:39:31	접근의 방법		tên quest	20
+T:QUEST0.dat:39:44	여관에 가서 관원 세르게이를 만나자.		mô tả quest	
+T:QUEST0.dat:40:31	검은도적단		tên quest	20
+T:QUEST0.dat:40:43	이스턴 북쪽 외곽의 검은도적단 20명을 처리해서, 세르게이의 신임을 얻자.		mô tả quest	
+T:QUEST0.dat:41:31	성주에게		tên quest	20
+T:QUEST0.dat:41:41	이스턴시티 성주에게 가보자.		mô tả quest	
+T:QUEST0.dat:42:31	접근 성공		tên quest	20
+T:QUEST0.dat:42:42	이스턴시티 성주, 포크너에게 가보자.		mô tả quest	
+T:QUEST0.dat:43:31	공성장비		tên quest	20
+T:QUEST0.dat:43:41	이스턴북쪽외곽 부근으로 가서 검은도적단을 토벌하고 공성장비를 찾아오자.		mô tả quest	
+T:QUEST0.dat:44:31	쿨리오 격파		tên quest	20
+T:QUEST0.dat:44:44	검은도적단 동굴에 가서 보스 쿨리오를 처리하자.		mô tả quest	
+T:QUEST0.dat:45:31	인내심기르기		tên quest	20
+T:QUEST0.dat:45:45	성라피네 성당의 대수녀에게 가보자.		mô tả quest	
+T:QUEST0.dat:46:31	대저택		tên quest	20
+T:QUEST0.dat:46:39	헉슬리대저택에 가서, 경비를 피해 옆문으로 잠입해서 예비수녀를 찾아보자.		mô tả quest	
+T:QUEST0.dat:47:31	동행		tên quest	20
+T:QUEST0.dat:47:37	저택을 샅샅히 뒤져 헉슬리의 방을 찾아가자.		mô tả quest	
+T:QUEST0.dat:48:31	중요한문서		tên quest	20
+T:QUEST0.dat:48:43	방을 더 자세히 살펴보자.		mô tả quest	
+T:QUEST0.dat:49:31	친구		tên quest	20
+T:QUEST0.dat:49:37	위기에 상황에서 벗어날 대책을 생각해보자.		mô tả quest	
+T:QUEST0.dat:50:31	확신		tên quest	20
+T:QUEST0.dat:50:37	저택안에 있는 헉슬리의 방으로 이동하자.		mô tả quest	
+T:QUEST0.dat:51:31	헉슬리백작		tên quest	20
+T:QUEST0.dat:51:43	헉슬리백작을 처리하자.		mô tả quest	
+T:QUEST0.dat:52:31	어둠의숲		tên quest	20
+T:QUEST0.dat:52:41	데저트캠프로 이동하자.		mô tả quest	
+T:QUEST0.dat:53:31	흑마법사		tên quest	20
+T:QUEST0.dat:53:41	어둠의 숲 어딘가에 있는 흑마법사던전으로 가보자.		mô tả quest	
+T:QUEST0.dat:54:31	깊은곳으로		tên quest	20
+T:QUEST0.dat:54:43	흑마법사의던전 안쪽으로 가보자.		mô tả quest	
+T:QUEST0.dat:55:31	대흑마법사		tên quest	20
+T:QUEST0.dat:55:43	대흑마법사 슐탄을 찾아 가보자.		mô tả quest	
+T:QUEST0.dat:56:31	슐탄		tên quest	20
+T:QUEST0.dat:56:37	대흑마법사 슐탄을 처리하자.		mô tả quest	
+T:QUEST0.dat:57:31	카이루		tên quest	20
+T:QUEST0.dat:57:39	카이루를 쫓아 던전밖으로 나가자.		mô tả quest	
+T:QUEST0.dat:58:31	하우레스		tên quest	20
+T:QUEST0.dat:58:41	악마 하우레스를 처리하고 탈출하자.		mô tả quest	
+T:QUEST0.dat:59:31	신중함		tên quest	20
+T:QUEST0.dat:59:39	대수녀 테레사에게 가보자.		mô tả quest	
+T:QUEST0.dat:60:31	해결		tên quest	20
+T:QUEST0.dat:60:37	루이시티에 있는 이니스를 찾아가자.		mô tả quest	
+T:QUEST0.dat:61:31	이니스에게		tên quest	20
+T:QUEST0.dat:61:43	성안으로 들어가 이니스를 만나자.		mô tả quest	
+T:QUEST0.dat:62:31	중요한물건		tên quest	20
+T:QUEST0.dat:62:43	지하수련장에 가서 프루스트를 만나자.		mô tả quest	
+T:QUEST0.dat:63:31	프루스트		tên quest	20
+T:QUEST0.dat:63:41	프루스트를 처리하자.		mô tả quest	
+T:QUEST0.dat:64:31	괴소문		tên quest	20
+T:QUEST0.dat:64:39	존스에게 가서 소문에 대해 직접 물어보자.		mô tả quest	
+T:QUEST0.dat:65:31	동향		tên quest	20
+T:QUEST0.dat:65:37	레이블타운의 명물 게살을 구해오자.		mô tả quest	
+T:QUEST0.dat:66:31	데이거에게		tên quest	20
+T:QUEST0.dat:66:43	서쪽 사막을 경유해 데이거가 통치하는 남부지역으로 이동하자.		mô tả quest	
+T:QUEST0.dat:67:31	목소리		tên quest	20
+T:QUEST0.dat:67:39	여인의 목소리가 들리는 곳으로 가보자.		mô tả quest	
+T:QUEST0.dat:68:31	데이거의부하		tên quest	20
+T:QUEST0.dat:68:45	데이거의 부하들을 모두 물리치자.		mô tả quest	
+T:QUEST0.dat:69:31	동굴안으로		tên quest	20
+T:QUEST0.dat:69:43	동굴 안으로 들어가서 여인을 구출하자.		mô tả quest	
+T:QUEST0.dat:70:31	오거스피릿		tên quest	20
+T:QUEST0.dat:70:43	오거스피릿이 있는 곳을 찾자.		mô tả quest	
+T:QUEST0.dat:71:31	구출		tên quest	20
+T:QUEST0.dat:71:37	오크여인 나디아를 구하기 위해 오거스피릿을 처리하자.		mô tả quest	
+T:QUEST0.dat:72:31	남부로		tên quest	20
+T:QUEST0.dat:72:39	남부지역으로 이동하자.		mô tả quest	
+T:QUEST0.dat:73:31	오크마을		tên quest	20
+T:QUEST0.dat:73:41	오르츠크 마을에 가서 나디아에게 도움을 청하자.		mô tả quest	
+T:QUEST0.dat:74:31	족장 샤이먼		tên quest	20
+T:QUEST0.dat:74:44	족장 샤이먼의 집으로 가보자.		mô tả quest	
+T:QUEST0.dat:75:31	오크성막		tên quest	20
+T:QUEST0.dat:75:41	오크 성막으로 가서 마도술사를 처리하자.		mô tả quest	
+T:QUEST0.dat:76:31	마도술사		tên quest	20
+T:QUEST0.dat:76:41	다크엘프의 하수인 마도술사를 처리하자.		mô tả quest	
+T:QUEST0.dat:77:31	샤이먼에게		tên quest	20
+T:QUEST0.dat:77:43	족장 샤이먼의 집으로 가보자.		mô tả quest	
+T:QUEST0.dat:78:31	비밀통로		tên quest	20
+T:QUEST0.dat:78:41	데이거의 성으로 가는 비밀입구를 찾아 가보자.		mô tả quest	
+T:QUEST0.dat:79:31	데이거에게		tên quest	20
+T:QUEST0.dat:79:43	데이거의 장소로 가보자.		mô tả quest	
+T:QUEST0.dat:80:31	더 이상은..		tên quest	20
+T:QUEST0.dat:80:44	데이거를 쓰러뜨리자.		mô tả quest	
+T:QUEST0.dat:81:31	치료약		tên quest	20
+T:QUEST0.dat:81:39	푸른나뭇잎을 3개 구해오자.		mô tả quest	
+T:QUEST0.dat:82:31	조언과 평안		tên quest	20
+T:QUEST0.dat:82:44	이스턴 시티 성라피네성당에 가서 대수녀를 만나자.		mô tả quest	
+T:QUEST0.dat:83:31	이니스에게		tên quest	20
+T:QUEST0.dat:83:43	이니스에게 가보자.		mô tả quest	
+T:QUEST0.dat:84:31	노스마운틴		tên quest	20
+T:QUEST0.dat:84:43	노스마운틴으로 가보자.		mô tả quest	
+T:QUEST0.dat:85:31	암흑동굴		tên quest	20
+T:QUEST0.dat:85:41	동굴에 들어가서 조사해보자.		mô tả quest	
+T:QUEST0.dat:86:31	흔적		tên quest	20
+T:QUEST0.dat:86:37	데이거의 흔적을 찾아 가보자.		mô tả quest	
+T:QUEST0.dat:87:31	이니스에게		tên quest	20
+T:QUEST0.dat:87:43	이니스에게 가보자.		mô tả quest	
+T:QUEST0.dat:88:31	제메스신전		tên quest	20
+T:QUEST0.dat:88:43	켈트로드 쪽의 제메스신전을 찾아 가보자.		mô tả quest	
+T:QUEST0.dat:89:31	교주의 장소		tên quest	20
+T:QUEST0.dat:89:44	제메스 신전안의 교주의 장소를 찾아 가보자.		mô tả quest	
+T:QUEST0.dat:90:31	심판		tên quest	20
+T:QUEST0.dat:90:37	제메스를 처리하자.		mô tả quest	
+T:QUEST0.dat:91:31	고대유적의흔적		tên quest	20
+T:QUEST0.dat:91:47	르네가 찾은 고대 유적의 흔적을 발견한 장소로 가자.		mô tả quest	
+T:QUEST0.dat:92:31	고대동굴탐사		tên quest	20
+T:QUEST0.dat:92:45	고대 유적이 있는 동굴안을 탐험해서 유적을 찾아내자.		mô tả quest	
+T:QUEST0.dat:93:31	오거스피릿퇴치		tên quest	20
+T:QUEST0.dat:93:47	오거스피릿을 물리치자.		mô tả quest	
+T:QUEST0.dat:94:31	오르츠크로		tên quest	20
+T:QUEST0.dat:94:43	오르츠크의 족장 집으로 가자.		mô tả quest	
+T:QUEST0.dat:95:31	지하유적		tên quest	20
+T:QUEST0.dat:95:41	족장의집 지하에 있는 지하유적으로가보자.		mô tả quest	
+T:QUEST0.dat:96:31	지하유적의질문		tên quest	20
+T:QUEST0.dat:96:47	지하유적의 크리스탈이 질문하는 질문 3가지를 맞추어라.		mô tả quest	
+T:QUEST0.dat:97:31	지하유적탐사		tên quest	20
+T:QUEST0.dat:97:45	지하유적을 탐험하자.		mô tả quest	
+T:QUEST0.dat:98:31	매직가디언		tên quest	20
+T:QUEST0.dat:98:43	지하유적을 지키는 마도병기를 퇴치하라.		mô tả quest	
+T:QUEST0.dat:99:31	대수녀에게		tên quest	20
+T:QUEST0.dat:99:43	이스턴 시티 성라피네성당에 가서 대수녀를 만나자.		mô tả quest	
+T:QUEST0.dat:100:31	데스나이트		tên quest	20
+T:QUEST0.dat:100:43	천공신전에 있는 데스나이트에게 찾아가서 모든 것을 바로 잡자.		mô tả quest	
+T:QUEST0.dat:101:31	좀비 리오타르		tên quest	20
+T:QUEST0.dat:101:46	좀비리오타르를 격파하자		mô tả quest	
+T:QUEST0.dat:102:31	언데드 쿨리오		tên quest	20
+T:QUEST0.dat:102:46	언데드쿨리오를 격파하자		mô tả quest	
+T:QUEST0.dat:103:31	언데드 슐탄		tên quest	20
+T:QUEST0.dat:103:44	언데드슐탄을 격파하자		mô tả quest	
+T:QUEST0.dat:104:31	데빌 하우레스		tên quest	20
+T:QUEST0.dat:104:46	데빌하우레스를 격파하자		mô tả quest	
+T:QUEST0.dat:105:31	좀비 프루스트		tên quest	20
+T:QUEST0.dat:105:46	좀비프루스트를 격파하자		mô tả quest	
+T:QUEST0.dat:106:31	오거 소울		tên quest	20
+T:QUEST0.dat:106:42	오거소울를 격파하자		mô tả quest	
+T:QUEST0.dat:107:31	리치 제메스		tên quest	20
+T:QUEST0.dat:107:44	리치제메스를 격파하자		mô tả quest	
+T:QUEST0.dat:108:31	진리의 증명		tên quest	20
+T:QUEST0.dat:108:44	데스나이트를 격파하자.		mô tả quest	
+T:QUEST0.dat:109:31	오르츠크로		tên quest	20
+T:QUEST0.dat:109:43	오르츠크의 족장 집으로 가보자.		mô tả quest	
+T:QUEST0.dat:110:31	유적 안으로		tên quest	20
+T:QUEST0.dat:110:44	유적안으로 들어가보자.		mô tả quest	
+T:QUEST0.dat:111:31	고대유적지로		tên quest	20
+T:QUEST0.dat:111:45	유적의 가장 안쪽에 있는 고대유적지로 가보자.		mô tả quest	
+T:QUEST0.dat:112:31	내가 해야할 일		tên quest	20
+T:QUEST0.dat:112:47	마도병기와 융합한 르네 선생님을 쓰러트리자.		mô tả quest	
+T:QUEST00.dat:0:31	르네의 선물		tên quest	20
+T:QUEST00.dat:0:44	르네 선생님이 여관 침대 근처에 떨어트린 가방을 찾자.		mô tả quest	
+T:QUEST00.dat:1:31	여관주인 제이미		tên quest	20
+T:QUEST00.dat:1:48	제이미 아줌마에게 가서 르네가 두고간 가방을 받자.		mô tả quest	
+T:QUEST00.dat:2:31	마을의 잡화상		tên quest	20
+T:QUEST00.dat:2:46	상점에 있는 잡화상 로니에게 찾아가자.		mô tả quest	
+T:QUEST00.dat:3:31	기억의 잔영		tên quest	20
+T:QUEST00.dat:3:44	플로릴리의 기억속에 남아있는 수정석을 찾아, 피스로드의 샌드할로우를 처치하자.		mô tả quest	
+T:QUEST00.dat:4:31	중독된 빅조		tên quest	20
+T:QUEST00.dat:4:44	빅조의 치료약을 만들기 위해, 남쪽숲에서 와이엄의 고기를 구해 텔레포더 마법사 헵번에게 가져다 주자.		mô tả quest	
+T:QUEST00.dat:5:31	부족한 재료		tên quest	20
+T:QUEST00.dat:5:44	체스트넛의 가시가 부족하다. 레이블타운 외곽지역의 체스트넛을 처치하고 구해오자.		mô tả quest	
+T:QUEST00.dat:6:31	빅조의 치료약		tên quest	20
+T:QUEST00.dat:6:46	완성된 헵번의 특제 치료약을 빅조에게 가져다주자.		mô tả quest	
+T:QUEST00.dat:7:31	중급강화석(반복)		tên quest	20
+T:QUEST00.dat:7:49	하급강화석 20개를 루크에게 가져다주고, 중급강화석 5개로 교환받자.		mô tả quest	
+T:QUEST00.dat:8:31	상급강화석(반복)		tên quest	20
+T:QUEST00.dat:8:49	중급강화석 20개를 루크에게 가져다주고, 상급강화석 3개로 교환받자.		mô tả quest	
+T:QUEST00.dat:9:31	수상한몬스터		tên quest	20
+T:QUEST00.dat:9:45	중앙숲에 나타난 수상한 몬스터의 비밀 나무통을 살펴보자.		mô tả quest	
+T:QUEST00.dat:10:31	머미의비밀		tên quest	20
+T:QUEST00.dat:10:43	머미의 비밀을 알았다. 엘레나 아주머니에게 돌아가자.		mô tả quest	
+T:QUEST00.dat:11:31	장사아이템		tên quest	20
+T:QUEST00.dat:11:43	마을 보따리상인 루크아저씨에게 새로운 장사 아이템에 대해 알려주자.		mô tả quest	
+T:QUEST00.dat:12:31	윌리엄의 재산		tên quest	20
+T:QUEST00.dat:12:46	상점부근에서 윌리엄아저씨의 돈주머니의 행방을 찾아보자.		mô tả quest	
+T:QUEST00.dat:13:31	깊은 발자국		tên quest	20
+T:QUEST00.dat:13:44	윌리엄에게 깊은 발자국을 만들 수 있는 용의자에 대해 물어보자.		mô tả quest	
+T:QUEST00.dat:14:31	용의자		tên quest	20
+T:QUEST00.dat:14:39	용의자로 정해진 영주성 경비병  찰스에게 가서 조사를 하자.		mô tả quest	
+T:QUEST00.dat:15:31	노인의 지혜		tên quest	20
+T:QUEST00.dat:15:44	레이블타운의 터줏대감인 엠마할머니한테 윌리엄을 도울 수 있는 방법을 알아보자.		mô tả quest	
+T:QUEST00.dat:16:31	부패한 군대		tên quest	20
+T:QUEST00.dat:16:44	부패한 기사단원들을 처치하고, 그들이 빼돌린 강철판금을 가져와 윌리엄을 도와주자.		mô tả quest	
+T:QUEST00.dat:17:31	용병의 길		tên quest	20
+T:QUEST00.dat:17:42	라젤트로드에서 행인을 위협하는 산적주술사를 무찌르고 랜달프에게 보고하자.		mô tả quest	
+T:QUEST00.dat:18:31	가족을 위해		tên quest	20
+T:QUEST00.dat:18:44	피스로드의 버블몬 가죽을 구해, 잡화상 로니에게서 골무를 만들어보자.		mô tả quest	
+T:QUEST00.dat:19:31	골무목걸이		tên quest	20
+T:QUEST00.dat:19:43	만들어진 골무 목걸이를 존슨에게 가져다주자.		mô tả quest	
+T:QUEST00.dat:20:31	잔당 처치		tên quest	20
+T:QUEST00.dat:20:42	리오타르가 당한뒤에도 여전히 소란을 피우는 지하 2구역의 워리어들을 혼내주자.		mô tả quest	
+T:QUEST00.dat:21:31	되살아난 기억		tên quest	20
+T:QUEST00.dat:21:46	플로릴리의 편지를 이스턴 시티 성당의 헬레나 수녀에게 전달하자.		mô tả quest	
+T:QUEST00.dat:22:31	건국황제의 보물1		tên quest	20
+T:QUEST00.dat:22:49	아베르가 알려준 마스로드1의 상자를 찾아보자.		mô tả quest	
+T:QUEST00.dat:23:31	건국황제의 보물2		tên quest	20
+T:QUEST00.dat:23:49	황제의 안배대로 마스로드2의 상자를 찾아보자.		mô tả quest	
+T:QUEST00.dat:24:31	건국황제의 보물3		tên quest	20
+T:QUEST00.dat:24:49	마스로드3의 상자를 찾아보자.		mô tả quest	
+T:QUEST00.dat:25:31	황제의 안배		tên quest	20
+T:QUEST00.dat:25:44	딥샌드 던전입구에서 황제의 최후 안배인 상자를 찾아보자.		mô tả quest	
+T:QUEST00.dat:26:31	황제의 마법서		tên quest	20
+T:QUEST00.dat:26:46	굉장한 가치를 지녔겠지만, 내가 손대서는 안될 물건인것 같다. 아베르에게 돌아가자.		mô tả quest	
+T:QUEST00.dat:27:31	사막의 몬스터		tên quest	20
+T:QUEST00.dat:27:46	마스로드에서 스콜피온 꼬리를 모아서 갈릴레이에게 가져다주자.		mô tả quest	
+T:QUEST00.dat:28:31	항로의 방해꾼		tên quest	20
+T:QUEST00.dat:28:46	마스로드에서 뱃길에 위협을 주는 디펜스타워를 처치하고, 갈릴레이에게 돌아가자.		mô tả quest	
+T:QUEST00.dat:29:31	녹음의 파괴자		tên quest	20
+T:QUEST00.dat:29:46	이스턴 외곽지역에서 이스턴 지역의 생기를 빨아먹는 커즈타워를 파괴하자.		mô tả quest	
+T:QUEST00.dat:30:31	그들의 음모		tên quest	20
+T:QUEST00.dat:30:44	범인의 윤곽이 드러났다. 산적간부들이 가진 수상한 주머니를 뺏어오자.		mô tả quest	
+T:QUEST00.dat:31:31	악마의 씨앗		tên quest	20
+T:QUEST00.dat:31:44	주머니에서 나온 커즈타워의 씨앗을 이스턴 성당의 테레사 대수녀에게 가져가 정화시키자.		mô tả quest	
+T:QUEST00.dat:32:31	사라진 친구		tên quest	20
+T:QUEST00.dat:32:44	브리니의 하나뿐인 친구, 토미가 왜 숨어있는지 토미의 아빠인 폴조에게 물어보자.		mô tả quest	
+T:QUEST00.dat:33:31	사막트롤의 장식		tên quest	20
+T:QUEST00.dat:33:48	토미를 위해 마스로드의 사막트롤을 처치하고, 머리에 꽂고있는 장식품을 수집해 폴조에게 가자.		mô tả quest	
+T:QUEST00.dat:34:31	토미를 찾아서		tên quest	20
+T:QUEST00.dat:34:46	깊은 악마 동굴앞에 숨어있는 토미를 찾아, 폴조에게 데리고 가자.		mô tả quest	
+T:QUEST00.dat:35:31	못된 어른		tên quest	20
+T:QUEST00.dat:35:42	깊은 악마 동굴에서 가고일을 처치하고 가고일의 등심살을 얻어. 이스턴 시티의 성당경비병 척에게 가져가자.		mô tả quest	
+T:QUEST00.dat:36:31	폴조의 마음		tên quest	20
+T:QUEST00.dat:36:44	폴조의 연애편지를 주인인 이스턴 시티의 폴조에게 가져다 주자.		mô tả quest	
+T:QUEST00.dat:37:31	아버지의 유품		tên quest	20
+T:QUEST00.dat:37:46	이스턴 성당의 코이수녀의 아버지 유품을 찾아 헉슬리대저택7의 화분을 찾아보자.		mô tả quest	
+T:QUEST00.dat:38:31	남의 물건		tên quest	20
+T:QUEST00.dat:38:42	헉슬리저택 경비병인 헨리가 코이수녀 아버지의 유품을 집어갔다. 그를 찾아가 물건을 회수하자.		mô tả quest	
+T:QUEST00.dat:39:31	주술용수정		tên quest	20
+T:QUEST00.dat:39:43	뻔뻔한 헨리의 조건으로 헉슬리대저택8의 주술사들에게 주술용수정을 뺏어 물건을 교환하자.		mô tả quest	
+T:QUEST00.dat:40:31	코이수녀에게		tên quest	20
+T:QUEST00.dat:40:45	이스턴 성당의 코이수녀에게 아버지의 유품을 돌려주자.		mô tả quest	
+T:QUEST00.dat:41:31	용병교육		tên quest	20
+T:QUEST00.dat:41:41	여관 아래에 있는 랜달프 아저씨에게 가보자.		mô tả quest	
+T:QUEST00.dat:42:31	용병 의뢰		tên quest	20
+T:QUEST00.dat:42:42	성당안에서 용병을 찾고 있는 헬레나 수녀를 찾아가자.		mô tả quest	
+T:QUEST00.dat:43:31	사악한 종교		tên quest	20
+T:QUEST00.dat:43:44	고대종교인 드루이드교의 드루이드를 무찌르고, 암흑수정을 가져오자.		mô tả quest	
+T:QUEST00.dat:44:31	뒤틀린 암흑수정		tên quest	20
+T:QUEST00.dat:44:48	뭔가 잘못되었다. 테레사 대수녀에게 도움을 청하자!		mô tả quest	
+T:QUEST00.dat:45:31	순결함의 상징		tên quest	20
+T:QUEST00.dat:45:46	이스턴 남쪽외곽의 임프들에게 순수한 금의 광석을 되찾아 테레사 대수녀에게 전해주자.		mô tả quest	
+T:QUEST00.dat:46:31	신성력의 결정체		tên quest	20
+T:QUEST00.dat:46:48	신성력이 극도로 응축된 신성력의 정화를 헬레나 수녀에게 가져다줘서 뒤틀린 암흑수정을 정화시키자.		mô tả quest	
+T:QUEST00.dat:47:31	마계의 통로		tên quest	20
+T:QUEST00.dat:47:44	마계와 이어진 던전, 이블케이브에서 서식하는 블랙버블몬을 척살하고 블랙버블아이를 모아 헵번에게 가져다주자.		mô tả quest	
+T:QUEST00.dat:48:31	은밀한 전언		tên quest	20
+T:QUEST00.dat:48:44	코드리공작의 전언를 이스턴시티 여관의 세르게이에게 전달하자		mô tả quest	
+T:QUEST00.dat:49:31	밀약의 증거		tên quest	20
+T:QUEST00.dat:49:44	코드리공작의 말을 그대로 신뢰하기는 어렵다. 어둠의 숲4의 흑마법사 던전에 가서 흑마법사에게 밀약의 서약서를 뺏어오자.		mô tả quest	
+T:QUEST00.dat:50:31	경계 강화		tên quest	20
+T:QUEST00.dat:50:42	데저트 캠프에 있는 토마스에게 경계를 강화하라고 세르게이의 전언을 전하자.		mô tả quest	
+T:QUEST00.dat:51:31	토마스의 부탁		tên quest	20
+T:QUEST00.dat:51:46	산적간부들의 위협으로 던전 감시가 쉽지않다. 산적간부 10명을 해치워 부담을 덜어주자.		mô tả quest	
+T:QUEST00.dat:52:31	나이트의 동상		tên quest	20
+T:QUEST00.dat:52:46	프루스트의 동상제작에 필요한 고급판금을, 루이시티 북쪽외곽의 어벤져에게 뺏아서 루이시티 대장간의 미키에게 가져다주자.		mô tả quest	
+T:QUEST00.dat:53:31	장인의 고집		tên quest	20
+T:QUEST00.dat:53:44	나이트의 품위를 표현하기엔 재료가 부족하다. 웨스트 포레스트가서 드레이크에게 헬아이언을 8개 구해 루이시티 대장간의 미키에게 돌아가자.		mô tả quest	
+T:QUEST00.dat:54:31	카덴의 호출		tên quest	20
+T:QUEST00.dat:54:44	루이시티 성안의 카덴이 급하게 찾고 있다. 그를 찾아가보자.		mô tả quest	
+T:QUEST00.dat:55:31	귀부인의 보석		tên quest	20
+T:QUEST00.dat:55:46	고원지대의 도적들이 훔쳐간 홍옥원석을 되찾아, 루이시티 성안의 카덴에게 돌려주자.		mô tả quest	
+T:QUEST00.dat:56:31	여자의 욕심		tên quest	20
+T:QUEST00.dat:56:44	루이시티 서쪽의 집시주술사에게서 집시의 눈물을 모아와 루이시티 성안의 로잔느 백작부인에게 가져다주자.		mô tả quest	
+T:QUEST00.dat:57:31	드비쉬경의 고민		tên quest	20
+T:QUEST00.dat:57:48	루이시티의 물을 오염시키는 원인을 찾아야한다. 대륙 곳곳을 돌아다니는 보따리상 루크에게 원인을 알아보자.		mô tả quest	
+T:QUEST00.dat:58:31	수상한 나무통		tên quest	20
+T:QUEST00.dat:58:46	루이시티 북쪽외곽4에 놓여있는 나무통이 수상하다. 암흑술사가 지키고 있는 나무통을 살펴보자		mô tả quest	
+T:QUEST00.dat:59:31	암흑술사 격파		tên quest	20
+T:QUEST00.dat:59:46	암흑술사로 인해 나무통을 자세히 살펴보기가 불가능하다. 암흑술사를 무찌르자.		mô tả quest	
+T:QUEST00.dat:60:31	드비쉬경에게		tên quest	20
+T:QUEST00.dat:60:45	루이시티의 드비쉬경에게 그들의 음모를 알리자.		mô tả quest	
+T:QUEST00.dat:61:31	고향의 음식		tên quest	20
+T:QUEST00.dat:61:44	오랜 객지 생활로 고향의 음식을 그리워하는 제이슨을 위해, 루이시티 여관의 다나에게 도움을 청하자.		mô tả quest	
+T:QUEST00.dat:62:31	마물껍데기		tên quest	20
+T:QUEST00.dat:62:43	오크마을 여관에 가서 여관주인인 이프리카에게 그곳의 특산품인 마물껍데기 구이 양념의 레시피를 부탁하자.		mô tả quest	
+T:QUEST00.dat:63:31	음식의 재료		tên quest	20
+T:QUEST00.dat:63:44	레시피를 받기위한 조건으로, 마물의 가죽을 구해와 오르츠크 여관의 이프리카에게 가져다 주자.		mô tả quest	
+T:QUEST00.dat:64:31	특별한 레시피		tên quest	20
+T:QUEST00.dat:64:46	루이시티 여관의 다나에게 마물껍데기 구이 양념의 레시피를 가져다주자.		mô tả quest	
+T:QUEST00.dat:65:31	인큐버스의 눈		tên quest	20
+T:QUEST00.dat:65:46	던전 생성의 비밀을 풀기위해 남부접경지대에서 인큐버스아이를 구해 텔레포터 마법사 헵번에게 가져다주자.		mô tả quest	
+T:QUEST00.dat:66:31	상심한 오크		tên quest	20
+T:QUEST00.dat:66:44	나디아의 부탁으로 오크마을의 민가에 사는 융도르코를 찾아가보자		mô tả quest	
+T:QUEST00.dat:67:31	융도르코의 분노		tên quest	20
+T:QUEST00.dat:67:48	오크성막길에 있는 샤먼들이 융도르코의 부인을 실험체로 사용했다! 융도르코를 대신해 샤먼에게 복수하자.		mô tả quest	
+T:QUEST00.dat:68:31	잔인한 복수극		tên quest	20
+T:QUEST00.dat:68:46	샤먼에게 융도르코의 부인을 잡아다 바친 마운틴 리자드들을 처치하고 그들의 가죽을 융도르코에게 가져다주고 한을 풀어주자.		mô tả quest	
+T:QUEST00.dat:69:31	소년의 꿈		tên quest	20
+T:QUEST00.dat:69:42	대장장이가 꿈인 오크소년을 위해 북부산맥지역의 에틴에게 구리주괴를 구해오자.		mô tả quest	
+T:QUEST00.dat:70:31	형재애		tên quest	20
+T:QUEST00.dat:70:39	동생의 꿈을 도와주려는 형의 부탁이다. 딥블루마운틴의 광신도에게서 마광석를 가져다 동생에게 가져다주자.		mô tả quest	
+T:QUEST00.dat:71:31	나물범벅		tên quest	20
+T:QUEST00.dat:71:41	노스마운틴에서 바로메츠 가지를 구해와, 오르츠크의 루티나에게 나물재료로 가져다주자.		mô tả quest	
+T:QUEST00.dat:72:31	오크경매인		tên quest	20
+T:QUEST00.dat:72:43	오르츠크 상점에 있는 경매인 지르크에게 나물범벅을 가져다 주자.		mô tả quest	
+T:QUEST00.dat:73:31	남자의 질투		tên quest	20
+T:QUEST00.dat:73:44	미오르넴이 오크성막길의 마운틴 트롤 녀석들에게 된통 당하고 온것 같다. 서부사막에 가서 손을 봐주자.		mô tả quest	
+T:QUEST00.dat:74:31	인간과 오크		tên quest	20
+T:QUEST00.dat:74:44	인간과 오크 대장장이간의 교류를 위한 로카르도의 희망을 루이시티의 대장장이 미키에게 전하자.		mô tả quest	
+T:QUEST00.dat:75:31	미키의 답변		tên quest	20
+T:QUEST00.dat:75:44	미키의 마음을 담은 재료를 오크마을 대장장이인 로카르도에게 전달하자.		mô tả quest	
+T:QUEST00.dat:76:31	케산의 마음		tên quest	20
+T:QUEST00.dat:76:44	케산이 나디아에게 고백을 하려한다. 그의 마음을 전해주기 위해 루이시티 잡화점에서 [반지]맥스웰링을 사와, 나디아에게 전해주자. 		mô tả quest	
+T:QUEST00.dat:77:31	나디아의 마음		tên quest	20
+T:QUEST00.dat:77:46	나디아의 마음이 담긴 편지를 케산에게 전달해주자.		mô tả quest	
+T:QUEST00.dat:78:31	브리킷의 분노		tên quest	20
+T:QUEST00.dat:78:46	서부사막3에서 갈수있는 서부사막던전1의 케이브트롤들이 오크전사의 유골을 장난감으로 사용하고 있다. 유골을 회수해서 브리킷에게 가져오자.		mô tả quest	
+T:QUEST00.dat:79:31	오크의 명예전사		tên quest	20
+T:QUEST00.dat:79:48	브리킷이 샤이먼에게 이 사건을 보고해서, 샤이먼이 세바스찬을 만나고 싶어한다. 샤이먼에게 가보자.		mô tả quest	
+T:QUEST00.dat:80:31	더럽혀진 기사도		tên quest	20
+T:QUEST00.dat:80:48	암흑기사들의 메달이 그들에게 영향을 끼치는것 같다. 암흑기사를 제압하고 그들의 메달을 뺏아 텔레포터 마법사 헵번에게 가져다주자.		mô tả quest	
+T:QUEST00.dat:81:31	의심가는 종교		tên quest	20
+T:QUEST00.dat:81:46	제메스교의 교리가 의심스럽다. 제메시스를 상대해서 그들의 교리서인 제메신경을 라젤항구의 크루센에게 가져다주자. 		mô tả quest	
+T:QUEST00.dat:82:31	크루센의 전언		tên quest	20
+T:QUEST00.dat:82:46	종교를 위장한 사기단체인 제메스교의 실상을 천공신전의 론다느 경비병에게 알려주자.		mô tả quest	
+T:QUEST00.dat:83:31	론다느의 친구		tên quest	20
+T:QUEST00.dat:83:46	제메스 신전에 몸을 기탁한 론다느의 친구가 걱정된다. 항상 화분을 가지고 다녔다는 그를 찾아보자.		mô tả quest	
+T:QUEST00.dat:84:31	안타까운 소식		tên quest	20
+T:QUEST00.dat:84:46	론다느의 친구는 제메스교 내부에서 희생당한것 같다. 이 사실을 천공신전의 론다느에게 전해주자.		mô tả quest	
+T:QUEST00.dat:85:31	되살아난 사람들		tên quest	20
+T:QUEST00.dat:85:48	환생에 대해서 자세히 알아보야겠다. 이스턴 시티 성당의 오른쪽 하단에 위치한 도서관에서 정보를 찾자.		mô tả quest	
+T:QUEST00.dat:86:31	대마법사 루니안		tên quest	20
+T:QUEST00.dat:86:48	성당에서 요양중인 대마법사 루니안에게 가서 책을 빌릴 수 있는지 확인해보자.		mô tả quest	
+T:QUEST00.dat:87:31	환생의 정보		tên quest	20
+T:QUEST00.dat:87:44	빌려온 책을 텔레포터 마법사 헵번에게 가져다주고, 해석을 부탁하도록 하자.		mô tả quest	
+T:QUEST00.dat:88:31	캐슬스카이 1		tên quest	20
+T:QUEST00.dat:88:45	캐슬스카이의 워락들을 조사하고, 그들의 마나펜던트를 구해오자.		mô tả quest	
+T:QUEST00.dat:89:31	캐슬스카이 2		tên quest	20
+T:QUEST00.dat:89:45	캐슬스카이의 스카이솔저들을 처치하고 하트오브솔저를 구해오자.		mô tả quest	
+T:QUEST00.dat:90:31	캐슬스카이 3		tên quest	20
+T:QUEST00.dat:90:45	잘못된 충심의 비극. 캐슬나이트의 가신 - 워락들을 처치하고 바스틴루에게 돌아가자.		mô tả quest	
+T:QUEST00.dat:91:31	탐욕마성 1		tên quest	20
+T:QUEST00.dat:91:43	탐욕마성의 마물. 맨오워을 무찌르자.		mô tả quest	
+T:QUEST00.dat:92:31	탐욕마성 2		tên quest	20
+T:QUEST00.dat:92:43	마계침략의 선봉인 다크다워. 탐욕마성에서 다크타워를 처치하자.		mô tả quest	
+T:QUEST00.dat:93:31	그리드바벨 1		tên quest	20
+T:QUEST00.dat:93:45	그리드 바벨에서 흑마법사에게 세뇌되어 인간계를 파탄시키는 그리드어쌔신을 처치하자. 		mô tả quest	
+T:QUEST00.dat:94:31	그리드바벨 2		tên quest	20
+T:QUEST00.dat:94:45	마기에 오염된 실프인 그리드 실프를 잠재워 정령계로 돌려보내자.		mô tả quest	
+T:QUEST00.dat:95:31	검은 램프성 1		tên quest	20
+T:QUEST00.dat:95:46	인육을 즐기는 바바에게 협조해 인륜을 저버린 램프술사를 처치하자.		mô tả quest	
+T:QUEST00.dat:96:31	검은 램프성 2		tên quest	20
+T:QUEST00.dat:96:46	검은램프 바바의 힘의 원천, 램프 수호물을 파괴하자.		mô tả quest	
+T:QUEST00.dat:97:31	딥그리드바벨 1		tên quest	20
+T:QUEST00.dat:97:47	마기에 오염되어, 탐욕에 미쳐날뛰는 그리드 솔저를 처치하자.		mô tả quest	
+T:QUEST00.dat:98:31	딥그리드바벨 2		tên quest	20
+T:QUEST00.dat:98:47	대항할수 있음에도 불구하고, 쾌락을 몸을 내맡긴 과거 영광의 기사단. 그리드나이트를 처치하자		mô tả quest	
+T:QUEST00.dat:99:31	광기의 어비스 1		tên quest	20
+T:QUEST00.dat:99:48	드루이드교에 심취해, 본연의 임무를 져버린 뭉크. 그들을 처치하자.		mô tả quest	
+T:QUEST00.dat:100:31	광기의 어비스 2		tên quest	20
+T:QUEST00.dat:100:48	고대종교인 드루이드교의 마지막 후손. 드루이드를 처치해 그들의 음모를 저지하자.		mô tả quest	
+T:QUEST00.dat:101:31	어퍼슬래셔 1		tên quest	20
+T:QUEST00.dat:101:45	이스턴 시티의 폴조를 찾아가 인내력에 대해 알아보자.(다른 직업을 선택하려면, 본 퀘스트를 취소한 후, 제라드에게 다시 전직퀘스트를 받으십시오.)		mô tả quest	
+T:QUEST00.dat:102:31	어퍼슬래셔 2		tên quest	20
+T:QUEST00.dat:102:45	이스턴시티길의 프로그를 상대하며, 자신과의 싸움에서 이길 수 있다는 것을 증명하자.		mô tả quest	
+T:QUEST00.dat:103:31	어퍼슬래셔 3		tên quest	20
+T:QUEST00.dat:103:45	이스턴시티길의 드루이드들을 처치하고, 전직테스트에 통과하자.		mô tả quest	
+T:QUEST00.dat:104:31	스윙슬래셔 1		tên quest	20
+T:QUEST00.dat:104:45	이스턴시티의 폴조에게 도끼다루는 법을 배우러가자.(다른 직업을 선택하려면, 본 퀘스트를 취소한 후, 제라드에게 다시 전직퀘스트를 받으십시오.)		mô tả quest	
+T:QUEST00.dat:105:31	스윙슬래셔 2		tên quest	20
+T:QUEST00.dat:105:45	이스턴시티길에서 빅푸트의 뼈를 구해, 폴조에게 가져다주자.		mô tả quest	
+T:QUEST00.dat:106:31	스윙슬래셔 3		tên quest	20
+T:QUEST00.dat:106:45	이스턴시티길의 드루이드들을 처치하고, 전직테스트에 통과하자.		mô tả quest	
+T:QUEST00.dat:107:31	크래싱슬래셔 1		tên quest	20
+T:QUEST00.dat:107:47	이스턴시티의 폴조에게 조언을 구하러가자.(다른 직업을 선택하려면, 본 퀘스트를 취소한 후, 제라드에게 다시 전직퀘스트를 받으십시오.)		mô tả quest	
+T:QUEST00.dat:108:31	크래싱슬래셔 2		tên quest	20
+T:QUEST00.dat:108:47	이스턴시티길의 데블에게서 루비광석을 구해오자.		mô tả quest	
+T:QUEST00.dat:109:31	크래싱슬래셔 3		tên quest	20
+T:QUEST00.dat:109:47	이스턴시티길의 빅푸트들을 처치하고, 전직테스트에 통과하자.		mô tả quest	
+T:QUEST00.dat:110:31	어퍼어쌔신 1		tên quest	20
+T:QUEST00.dat:110:45	이스턴시티 성당의 전직 어쌔신이었던 베넬수녀를 찾아가자.(다른 직업을 선택하려면, 본 퀘스트를 취소한 후, 제라드에게 다시 전직퀘스트를 받으십시오.)		mô tả quest	
+T:QUEST00.dat:111:31	어퍼어쌔신 2		tên quest	20
+T:QUEST00.dat:111:45	이스턴시티길의 프로그를 상대하여, 베넬수녀의 테스트를 통과하자.		mô tả quest	
+T:QUEST00.dat:112:31	어퍼어쌔신 3		tên quest	20
+T:QUEST00.dat:112:45	이스턴시티길의 드루이드들을 처치하고 암흑의 기운을 가져와, 전직테스트에 통과하자.		mô tả quest	
+T:QUEST00.dat:113:31	그래플링어쌔신 1		tên quest	20
+T:QUEST00.dat:113:49	이스턴시티 성당의 전직 어쌔신이었던 베넬수녀를 찾아가자.(다른 직업을 선택하려면, 본 퀘스트를 취소한 후, 제라드에게 다시 전직퀘스트를 받으십시오.)		mô tả quest	
+T:QUEST00.dat:114:31	그래플링어쌔신 2		tên quest	20
+T:QUEST00.dat:114:49	이스턴 시티길의 데블을 상대하며, 힘을 기르자.		mô tả quest	
+T:QUEST00.dat:115:31	그래플링어쌔신 3		tên quest	20
+T:QUEST00.dat:115:49	이스턴 시티길의 만다고라를 처치하고 전직테스트에 통과하자.		mô tả quest	
+T:QUEST00.dat:116:31	파이팅어쌔신 1		tên quest	20
+T:QUEST00.dat:116:47	이스턴시티 성당의 전직 어쌔신이었던 베넬수녀를 찾아가자.(다른 직업을 선택하려면, 본 퀘스트를 취소한 후, 제라드에게 다시 전직퀘스트를 받으십시오.)		mô tả quest	
+T:QUEST00.dat:117:31	파이팅어쌔신 2		tên quest	20
+T:QUEST00.dat:117:47	이스턴 시티길의 만다고라를 처치하자		mô tả quest	
+T:QUEST00.dat:118:31	파이팅어쌔신 3		tên quest	20
+T:QUEST00.dat:118:47	이스턴 시티길의 드루이드를 처치하고 전직테스트에 통과하자.		mô tả quest	
+T:QUEST00.dat:119:31	어퍼나이트 1		tên quest	20
+T:QUEST00.dat:119:45	이스턴시티의 다그리파 후작에게 조언을 청하러가자.(다른 직업을 선택하려면, 본 퀘스트를 취소한 후, 제라드에게 다시 전직퀘스트를 받으십시오.)		mô tả quest	
+T:QUEST00.dat:120:31	어퍼나이트 2		tên quest	20
+T:QUEST00.dat:120:45	이스턴시티길의 데블에게서 루비광석을 구해오자.		mô tả quest	
+T:QUEST00.dat:121:31	어퍼나이트 3		tên quest	20
+T:QUEST00.dat:121:45	이스턴 시티길의 만다고라를 처치하고 전직테스트에 통과하자.		mô tả quest	
+T:QUEST00.dat:122:31	노블나이트 1		tên quest	20
+T:QUEST00.dat:122:45	이스턴시티의 다그리파 후작에게 조언을 청하러 가자.(다른 직업을 선택하려면, 본 퀘스트를 취소한 후, 제라드에게 다시 전직퀘스트를 받으십시오.)		mô tả quest	
+T:QUEST00.dat:123:31	노블나이트 2		tên quest	20
+T:QUEST00.dat:123:45	이스턴시티길의 프로그들을 처리하자.		mô tả quest	
+T:QUEST00.dat:124:31	노블나이트 3		tên quest	20
+T:QUEST00.dat:124:45	이스턴 시티길의 드루이드를 처치하고 전직테스트에 통과하자.		mô tả quest	
+T:QUEST00.dat:125:31	수퍼나이트 1		tên quest	20
+T:QUEST00.dat:125:45	이스턴시티의 다그리파 후작에게 조언을 청하러가자.(다른 직업을 선택하려면, 본 퀘스트를 취소한 후, 제라드에게 다시 전직퀘스트를 받으십시오.)		mô tả quest	
+T:QUEST00.dat:126:31	수퍼나이트 2		tên quest	20
+T:QUEST00.dat:126:45	이스턴시티길의 데블들을 처리하자.		mô tả quest	
+T:QUEST00.dat:127:31	수퍼나이트 3		tên quest	20
+T:QUEST00.dat:127:45	이스턴 시티길의 빅푸트를 처치하고 전직테스트에 통과하자.		mô tả quest	
+T:QUEST00.dat:128:31	파이어매지션 1		tên quest	20
+T:QUEST00.dat:128:47	이스턴시티 성당에서 요양중인 마법사, 루니안을 찾아가자.(다른 직업을 선택하려면, 본 퀘스트를 취소한 후, 제라드에게 다시 전직퀘스트를 받으십시오.)		mô tả quest	
+T:QUEST00.dat:129:31	파이어매지션 2		tên quest	20
+T:QUEST00.dat:129:47	이스턴시티길의 빅푸트를 처치하자.		mô tả quest	
+T:QUEST00.dat:130:31	파이어매지션 3		tên quest	20
+T:QUEST00.dat:130:47	이스턴 시티길의 드루이드를 처치하고 전직테스트에 통과하자.		mô tả quest	
+T:QUEST00.dat:131:31	아이스매지션 1		tên quest	20
+T:QUEST00.dat:131:47	이스턴시티 성당에서 요양중인 마법사, 루니안을 찾아가자.(다른 직업을 선택하려면, 본 퀘스트를 취소한 후, 제라드에게 다시 전직퀘스트를 받으십시오.)		mô tả quest	
+T:QUEST00.dat:132:31	아이스매지션 2		tên quest	20
+T:QUEST00.dat:132:47	이스턴시티길의 데블에게서 루비광석을 구해오자.		mô tả quest	
+T:QUEST00.dat:133:31	아이스매지션 3		tên quest	20
+T:QUEST00.dat:133:47	이스터 시티길의 만다고라를 처치하고, 만다로라 줄기를 가져와 전직테스트에 통과하자.		mô tả quest	
+T:QUEST00.dat:134:31	썬더매지션 1		tên quest	20
+T:QUEST00.dat:134:45	이스턴시티 성당에서 요양중인 마법사, 루니안을 찾아가자.(다른 직업을 선택하려면, 본 퀘스트를 취소한 후, 제라드에게 다시 전직퀘스트를 받으십시오.)		mô tả quest	
+T:QUEST00.dat:135:31	썬더매지션 2		tên quest	20
+T:QUEST00.dat:135:45	이스턴 시티길의 만다고라를 처치하고 만다고라 줄기를 가져오자.		mô tả quest	
+T:QUEST00.dat:136:31	썬더매지션 3		tên quest	20
+T:QUEST00.dat:136:45	이스턴 시티길의 드루이드를 처치하고 전직테스트에 통과하자.		mô tả quest	
+T:QUEST00.dat:137:31	그랜드슬래셔 1		tên quest	20
+T:QUEST00.dat:137:47	루이시티의 드비쉬 남작을 찾아, 조언을 청하자.		mô tả quest	
+T:QUEST00.dat:138:31	그랜드슬래셔 2		tên quest	20
+T:QUEST00.dat:138:47	고원지대의 구울들을 처치하자.		mô tả quest	
+T:QUEST00.dat:139:31	그랜드슬래셔 3		tên quest	20
+T:QUEST00.dat:139:47	딥데저트던전의 네펜데스를 처치하고 돌아와서, 그랜드 슬래셔로 각성하자.		mô tả quest	
+T:QUEST00.dat:140:31	스윙워리어 1		tên quest	20
+T:QUEST00.dat:140:45	루이시티의 드비쉬 남작을 찾아, 조언을 청하자.		mô tả quest	
+T:QUEST00.dat:141:31	스윙워리어 2		tên quest	20
+T:QUEST00.dat:141:45	고원지대의 구울들을 처치하자.		mô tả quest	
+T:QUEST00.dat:142:31	스윙워리어 3		tên quest	20
+T:QUEST00.dat:142:45	딥데저트던전의 네펜데스를 처치하고 돌아와서, 스윙워리어로 각성하자.		mô tả quest	
+T:QUEST00.dat:143:31	크래싱버서커 1		tên quest	20
+T:QUEST00.dat:143:47	루이시티의 드비쉬 남작을 찾아, 조언을 청하자.		mô tả quest	
+T:QUEST00.dat:144:31	크래싱버서커 2		tên quest	20
+T:QUEST00.dat:144:47	서부사막의 데저트데블들을 처치하고, 데블아이를 가져오자.		mô tả quest	
+T:QUEST00.dat:145:31	크래싱버서커 3		tên quest	20
+T:QUEST00.dat:145:47	딥데저트던전의 네펜데스를 처치하고 돌아와서, 크래싱버서커로 각성하자.		mô tả quest	
+T:QUEST00.dat:146:31	그랜드어쌔신 1		tên quest	20
+T:QUEST00.dat:146:47	루이시티 성안에 있는 로잔느 백작부인을 찾아가자.		mô tả quest	
+T:QUEST00.dat:147:31	그랜드어쌔신 2		tên quest	20
+T:QUEST00.dat:147:47	루이시티 서쪽 집시주술사에게서 집시의 옷감을 구해오자.		mô tả quest	
+T:QUEST00.dat:148:31	그랜드어쌔신 3		tên quest	20
+T:QUEST00.dat:148:47	딥데저트던전의 네펜데스를 처치하고, 옷감재료를 가져와  돌아와서, 그랜드 어쌔신으로 각성하자.		mô tả quest	
+T:QUEST00.dat:149:31	파이널그래플러 1		tên quest	20
+T:QUEST00.dat:149:49	루이시티 성안에 있는 로잔느 백작부인을 찾아가자.		mô tả quest	
+T:QUEST00.dat:150:31	파이널그래플러 2		tên quest	20
+T:QUEST00.dat:150:49	고원지대의 구울들을 처치하자.		mô tả quest	
+T:QUEST00.dat:151:31	파이널그래플러 3		tên quest	20
+T:QUEST00.dat:151:49	딥데저트던전의 지옥망자들을 처치하고, 영혼결정를 가지고 돌아와서, 파이널그래플러로 각성하자.		mô tả quest	
+T:QUEST00.dat:152:31	울트라파이터 1		tên quest	20
+T:QUEST00.dat:152:47	루이시티 성안에 있는 로잔느 백작부인을 찾아가자.		mô tả quest	
+T:QUEST00.dat:153:31	울트라파이터 2		tên quest	20
+T:QUEST00.dat:153:47	서부사막의 데저트데블들을 처치하고, 데블아이를 가져오자.		mô tả quest	
+T:QUEST00.dat:154:31	울트라파이터 3		tên quest	20
+T:QUEST00.dat:154:47	딥데저트던전의 지옥망자들을 처치하고, 영혼결정를 가지고 돌아와서, 울트라파이터로 각성하자.		mô tả quest	
+T:QUEST00.dat:155:31	그랜드나이트 1		tên quest	20
+T:QUEST00.dat:155:47	루이시티에 있는 코드리 공작에게 조언을 청해보자.		mô tả quest	
+T:QUEST00.dat:156:31	그랜드나이트 2		tên quest	20
+T:QUEST00.dat:156:47	고원지대의 탈영병들을 처치하자.		mô tả quest	
+T:QUEST00.dat:157:31	그랜드나이트 3		tên quest	20
+T:QUEST00.dat:157:47	딥데저트던전의 네펜데스를 처치하고 돌아와서, 그랜드 나이트로 각성하자.		mô tả quest	
+T:QUEST00.dat:158:31	노블블레이더 1		tên quest	20
+T:QUEST00.dat:158:47	루이시티에 있는 코드리 공작에게 조언을 청해보자.		mô tả quest	
+T:QUEST00.dat:159:31	노블블레이더 2		tên quest	20
+T:QUEST00.dat:159:47	고원지대의 구울들을 처치하자.		mô tả quest	
+T:QUEST00.dat:160:31	노블블레이더 3		tên quest	20
+T:QUEST00.dat:160:47	딥데저트던전의 네펜데스를 처치하고 돌아와서, 노블 블레이더로 각성하자.		mô tả quest	
+T:QUEST00.dat:161:31	수퍼가디언 1		tên quest	20
+T:QUEST00.dat:161:45	루이시티에 있는 코드리 공작에게 조언을 청해보자.		mô tả quest	
+T:QUEST00.dat:162:31	수퍼가디언 2		tên quest	20
+T:QUEST00.dat:162:45	고원지대의 탈영병들을 처치하자.		mô tả quest	
+T:QUEST00.dat:163:31	수퍼가디언 3		tên quest	20
+T:QUEST00.dat:163:45	딥데저트던전의 네펜데스를 처치하고 돌아와서, 수퍼가디안으로 각성하자.		mô tả quest	
+T:QUEST00.dat:164:31	파이어위자드 1		tên quest	20
+T:QUEST00.dat:164:47	루이시티의 제이슨을 찾아가, 각성에 필요한 도움을 받자.		mô tả quest	
+T:QUEST00.dat:165:31	파이어위자드 2		tên quest	20
+T:QUEST00.dat:165:47	고원지대의 맨드레이크를 처치하고, 맨드레이크 가지를 가져오자.		mô tả quest	
+T:QUEST00.dat:166:31	파이어위자드 3		tên quest	20
+T:QUEST00.dat:166:47	딥데저트던전의 지옥망자들을 처치하고, 영혼결정를 가지고 돌아와서 파이어위자드로 각성하자.		mô tả quest	
+T:QUEST00.dat:167:31	아이스위자드 1		tên quest	20
+T:QUEST00.dat:167:47	루이시티의 제이슨을 찾아가, 각성에 필요한 도움을 받자.		mô tả quest	
+T:QUEST00.dat:168:31	아이스위자드 2		tên quest	20
+T:QUEST00.dat:168:47	서부사막의 데저트데블에게 데블아이를 구해오자.		mô tả quest	
+T:QUEST00.dat:169:31	아이스위자드 3		tên quest	20
+T:QUEST00.dat:169:47	딥데저트던전의 지옥망자들을 처치하고 돌아와서, 아이스 위자드로 각성하자.		mô tả quest	
+T:QUEST00.dat:170:31	썬더위자드 1		tên quest	20
+T:QUEST00.dat:170:45	루이시티의 제이슨을 찾아가, 각성에 필요한 도움을 받자.		mô tả quest	
+T:QUEST00.dat:171:31	썬더위자드 2		tên quest	20
+T:QUEST00.dat:171:45	루이시티 서쪽의 집시주술자를 처치하자.		mô tả quest	
+T:QUEST00.dat:172:31	썬더위자드 3		tên quest	20
+T:QUEST00.dat:172:45	딥데저트던전의 네펜데스를 처치하고, 옷감재료를 가지고 돌아와, 썬더위자드로 각성하자.		mô tả quest	
+T:QUEST00.dat:173:31	이블케이브		tên quest	20
+T:QUEST00.dat:173:43	현상포고-구울 10마리를 처치하고 용병대장 랜달프에게 보고해서, 보상을 받자.		mô tả quest	
+T:QUEST00.dat:174:31	샌드던전		tên quest	20
+T:QUEST00.dat:174:41	현상포고-실라페를 처치하고 사막의 눈물을 10개 모아 용병대장 랜달프에게 가져다주고, 보상을 받자.		mô tả quest	
+T:QUEST00.dat:175:31	딥샌드던전		tên quest	20
+T:QUEST00.dat:175:43	현상포고-스파이더 8마리를 처치하고 용병대장 랜달프에게 보고해서, 보상을 받자.		mô tả quest	
+T:QUEST00.dat:176:31	깊은악마의동굴		tên quest	20
+T:QUEST00.dat:176:47	현상포고-엘리트구울 10마리를 처치하고 용병대장 랜달프에게 보고해서, 보상을 받자.		mô tả quest	
+T:QUEST00.dat:177:31	이스트포레스트		tên quest	20
+T:QUEST00.dat:177:47	현상포고-바질리스크를 처치하고 바질리스크의 뼈 10개를 용병대장 랜달프에게 가져다주고, 보상을 받자.		mô tả quest	
+T:QUEST00.dat:178:31	데저트던전		tên quest	20
+T:QUEST00.dat:178:43	현상포고-고스튤라 15마리를 처치하고 용병대장 랜달프에게 보고해서, 보상을 받자.		mô tả quest	
+T:QUEST00.dat:179:31	웨스트포레스트		tên quest	20
+T:QUEST00.dat:179:47	현상포고-드레이크 15마리를 처치하고 용병대장 랜달프에게 보고해서, 보상을 받자.		mô tả quest	
+T:QUEST00.dat:180:31	딥데저트던전		tên quest	20
+T:QUEST00.dat:180:45	현상포고-네펜데스 20마리를 처치하고, 오르츠크의 리르케에게 알려주고, 보상을 받자.		mô tả quest	
+T:QUEST00.dat:181:31	블루마운틴		tên quest	20
+T:QUEST00.dat:181:43	현상포고-마운틴 트롤 20마리를 처치하고, 오르츠크의 리르케에게 알려주고, 보상을 받자.		mô tả quest	
+T:QUEST00.dat:182:31	딥블루마운틴		tên quest	20
+T:QUEST00.dat:182:45	현상포고-광신도 25명을 처치하고, 용병대장 랜달프에게 보고해서, 보상을 받자.		mô tả quest	

@@ -17,9 +17,16 @@ import sys, os, re, json, struct, collections, shutil, glob
 W = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, W)
 import extract as X
+import script as SC
 
 LEAD0, TRAIL0, TRAILS = 0xC9, 0xA1, 94
-MAXCODES = (0xFF - LEAD0) * TRAILS
+BASE = (0xFF - LEAD0) * TRAILS     # 5076 codes with lead 0xC9..0xFE
+# more codes: leads the game's draw loop never draws (KS X 1001 symbol rows, skipped by 0x297e8); 0xA1 (full-width
+# space/punctuation row) and 0xA4 (jamo, drawn by the game) are not used. Same table in KroText.XLEADS.
+XLEADS = [0xA2, 0xA3] + list(range(0xA5, 0xB0))
+MAXCODES = BASE + len(XLEADS) * TRAILS
+NAMES = os.path.join(W, 'names.tsv')
+PARA_W = 180                       # prologue (autoscroll) line width, px
 FONT = os.path.join(W, 'font', 'f12.bin')
 ASCII_W, SPACE_W = 6, 3            # game ASCII cell; space of a Vietnamese string (KroText.spaceW)
 DESCRIB_W, DESCRIB_BYTES = 150, 27  # help box: text width, game wraps when bytes*5 >= 155-15
@@ -73,12 +80,30 @@ class Encoder:
     def clean(self, s):
         return ''.join(REPL.get(c, c) for c in s)
 
-    def code(self, w):
-        k = self.index.get(w)
+    def code(self, w, alias=''):
+        key = (w, alias) if alias else w   # alias: same text, separate code (string compares must differ)
+        k = self.index.get(key)
         if k is None:
             if len(self.dict) >= MAXCODES: raise SystemExit('dict.txt đầy (%d mã)' % MAXCODES)
-            k = len(self.dict); self.dict.append(w); self.index[w] = k
-        return bytes([LEAD0 + k // TRAILS, TRAIL0 + k % TRAILS])
+            k = len(self.dict); self.dict.append(w); self.index[key] = k
+        if k < BASE: return bytes([LEAD0 + k // TRAILS, TRAIL0 + k % TRAILS])
+        k -= BASE
+        return bytes([XLEADS[k // TRAILS], TRAIL0 + k % TRAILS])
+
+    def raw(self, t):
+        """untranslated / fixed script text: ASCII and Hangul (KS X 1001 rows 0xB0..0xC8, jamo 0xA4) as in the
+        original; any other symbol would hit a Vietnamese code (lead 0xA2..0xAF) -> REPL / font word / '?'"""
+        out = bytearray()
+        for c in t:
+            if ord(c) < 0x80: out.append(ord(c)); continue
+            try: b = c.encode('euc-kr')
+            except UnicodeEncodeError: b = b''
+            if len(b) == 2 and (0xB0 <= b[0] <= 0xC8 or b[0] == 0xA4): out += b; continue
+            r = REPL.get(c, c)
+            if all(ord(x) < 0x80 for x in r): out += r.encode('ascii')
+            elif c in self.font: out += self.code(c)
+            else: self.missing[c] += 1; out += b'?'
+        return bytes(out)
 
     def fontsafe(self, w):
         for ch in w:
@@ -86,9 +111,7 @@ class Encoder:
         return ''.join(ch if ch == ' ' or ch in self.font else '?' for ch in w)
 
     def ascii(self, c):
-        if ord(c) < 0x80: return bytes([ord(c)])
-        try: return c.encode('euc-kr')
-        except UnicodeEncodeError: self.missing[c] += 1; return b'?'
+        return self.raw(c)
 
     def tag(self, t):
         m = re.match(r'<NAME (.*)>$', t, re.S)
@@ -180,6 +203,18 @@ def wrap(enc, text, width, maxbytes):
     return lines
 
 
+def load_names():
+    """names.tsv: 'Hàn<TAB>Việt[<TAB>riêng]' for <NAME> arguments; 'riêng' = own codes (a misspelt name of the original
+    does not match the portrait table, keep it that way)"""
+    r = {}
+    if os.path.exists(NAMES):
+        for l in open(NAMES, encoding='utf-8'):
+            c = l.rstrip('\n').split('\t')
+            if len(c) >= 2 and c[0] and not c[0].startswith('#'):
+                r[c[0]] = (c[1], c[2] if len(c) > 2 and c[2] else '')
+    return r
+
+
 def main():
     args = sys.argv[1:]
     out = os.path.join(W, 'build', 'overlay')
@@ -221,7 +256,7 @@ def main():
         recs = [bytearray(r) for r in X.u16_table(open(path, 'rb').read())]
         changed = False
         for e in sorted(es, key=lambda e: (-int(e['id'].split(':')[2]), -int(e['id'].split(':')[3]))):
-            b = put(e, 254)
+            b = put(e, e.get('max', 254))
             if b is None: continue
             _, _, ri, p = e['id'].split(':'); ri, p = int(ri), int(p)
             r = recs[ri]
@@ -260,6 +295,59 @@ def main():
             if skip and not line.startswith(b'//'): continue
             res.append(line)
         open(os.path.join(out, 'data', name), 'wb').write(b'\r\n'.join(res))
+
+    # event scripts: EV##.dat, QUEST1.dat, script field of DIAL.dat (script.py units, names.tsv for <NAME>)
+    names = load_names()
+    errors = []
+
+    def name_bytes(ko):
+        v = names.get(ko.strip())
+        if v is None:
+            report.append('NAME chưa có trong names.tsv: %s' % ko); stats['tên chưa dịch'] += 1
+            return enc.raw(ko)
+        vi, alias = v
+        return b' '.join(enc.code(enc.fontsafe(w), alias) for w in vi.split(' ')) if alias else enc.encode(vi)
+
+    def script(name, i, body):
+        s = body.decode('euc-kr')
+        para = (name, i) in SC.PARA
+        out = bytearray(); k = 0
+        for pc in SC.parse(s, para):
+            if pc.kind == 'f': out += enc.raw(pc.text); continue
+            if pc.kind == 'name': out += name_bytes(pc.text); continue
+            e = {'id': 'S:%s:%d:%d' % (name, i, k), 'ko': pc.text}; k += 1
+            vi = tr(e)
+            if pc.kind == 'para':
+                if vi is None: out += enc.raw(pc.ctx[1]); continue
+                eol = pc.ctx[2] or '\r\n'
+                lines = wrap(enc, ' '.join(vi.split()), PARA_W, 100)
+                out += b''.join(enc.encode(l) + b'<n>' + eol.encode('ascii') for l in lines)
+                continue
+            b = enc.raw(pc.text) if vi is None else enc.encode(vi)
+            if pc.kind == 'arg':
+                pre = out[out.rindex(b'<'):]
+                if len(pre) - len(pre.split(b' ')[0]) - 1 + len(b) > SC.TAG_ARG_MAX:
+                    errors.append('%s: tham số thẻ quá dài (%d > %d byte) | %s' % (
+                        e['id'], len(pre) - len(pre.split(b' ')[0]) - 1 + len(b), SC.TAG_ARG_MAX, vi))
+            out += b
+        if len(out) > SC.ENTRY_MAX: errors.append('%s:%d: kịch bản quá 64 KB (%d)' % (name, i, len(out)))
+        return bytes(out)
+
+    for f in sorted(glob.glob(os.path.join(X.JAR, 'data', 'EV*.dat'))):
+        name = os.path.basename(f); orig = open(f, 'rb').read()
+        new = SC.ev_write(orig, [script(name, i, b) for i, b in enumerate(SC.ev_read(orig))])
+        if new != orig: open(os.path.join(out, 'data', name), 'wb').write(new)
+    orig = open(os.path.join(X.JAR, 'data', 'QUEST1.dat'), 'rb').read()
+    new = SC.q1_write(orig, [script('QUEST1.dat', i, b) for i, b in enumerate(SC.q1_read(orig))])
+    if new != orig: open(os.path.join(out, 'data', 'QUEST1.dat'), 'wb').write(new)
+    orig = open(os.path.join(X.JAR, 'data', 'DIAL.dat'), 'rb').read()
+    recs = [SC.dial_rebuild(r, script('DIAL.dat', i, SC.dial_script(r))) for i, r in enumerate(X.u16_table(orig))]
+    hdr = bytearray(); pos = 4 * len(recs)
+    for r in recs:
+        hdr += struct.pack('<HH', len(r), pos); pos += len(r)
+    if pos > 0xFFFF: errors.append('DIAL.dat: quá 64 KB sau khi dịch (%d)' % pos)
+    new = bytes(hdr) + b''.join(recs)
+    if new != orig: open(os.path.join(out, 'data', 'DIAL.dat'), 'wb').write(new)
 
     # binary.mod: in place, slot = bytes to the next string; shared tails stay at their address
     d = bytearray(open(os.path.join(X.JAR, 'binary.mod'), 'rb').read())
@@ -326,6 +414,26 @@ def main():
             stats['vá mã'] += 1
     open(os.path.join(out, 'binary.mod'), 'wb').write(d)
 
+    # portrait lookup (0x232b0): strcmp(<NAME> argument, name table 0x1400050 + 9*i, i = 0..8)
+    for i in range(9):
+        o = off(0x1400050 + 9 * i)
+        tb = bytes(d[o:d.index(b'\0', o)])
+        ko = X.dec(open(os.path.join(X.JAR, 'binary.mod'), 'rb').read()[o:o + 9].split(b'\0')[0])
+        if ko in names and name_bytes(ko) != tb:
+            errors.append('bảng tên 0x%x (%s): mã khác <NAME> (%s / %s)' % (0x1400050 + 9 * i, ko, tb.hex(), name_bytes(ko).hex()))
+    # T fields: hard byte limits (fixed buffers)
+    for e in cat:
+        if e['id'].startswith('T:') and e.get('max', 254) < 254:
+            vi = by_id.get(e['id'], by_ko.get(e['ko']))
+            if vi is not None and len(enc.fit(vi, None)[0]) > e['max'] and len(enc.encode_compact(vi)) > e['max']:
+                errors.append('%s: quá %d byte | %s' % (e['id'], e['max'], vi))
+        elif re.match(r'T:QUEST0?0?\.dat:', e['id']):  # quest description: wrapped text, no phrase codes
+            vi = by_id.get(e['id'], by_ko.get(e['ko']))
+            if vi is not None and len(enc.encode(vi)) > 254:
+                errors.append('%s: mô tả quest quá 254 byte (%d) | %s' % (e['id'], len(enc.encode(vi)), vi))
+    if errors:
+        print('\n'.join(errors[:60]))
+        raise SystemExit('LỖI: %d chuỗi vượt giới hạn bộ đệm của game' % len(errors))
     with open(os.path.join(out, 'vi', 'dict.txt'), 'w', encoding='utf-8', newline='\n') as f:
         f.write('\n'.join(enc.dict) + '\n')
     shutil.copy(FONT, os.path.join(out, 'vi', 'font.bin'))
