@@ -1,0 +1,279 @@
+CLASS Effect.class
+  method LoadImg(II)V:
+    - INVOKEVIRTUAL java/lang/Class.getResourceAsStream (Ljava/lang/String;)Ljava/io/InputStream;
+    + INVOKESTATIC wipi/host/Res.open (Ljava/lang/Class;Ljava/lang/String;)Ljava/io/InputStream;
+    - INVOKEVIRTUAL java/lang/Class.getResourceAsStream (Ljava/lang/String;)Ljava/io/InputStream;
+    + INVOKESTATIC wipi/host/Res.open (Ljava/lang/Class;Ljava/lang/String;)Ljava/io/InputStream;
+    - INVOKEVIRTUAL java/lang/Class.getResourceAsStream (Ljava/lang/String;)Ljava/io/InputStream;
+    + INVOKESTATIC wipi/host/Res.open (Ljava/lang/Class;Ljava/lang/String;)Ljava/io/InputStream;
+
+CLASS GameCanvas.class
+  method LoadExplanDat()V:
+    instructions 762 -> 760
+  method LoadMini(I)V:
+    - INVOKEVIRTUAL java/lang/Class.getResourceAsStream (Ljava/lang/String;)Ljava/io/InputStream;
+    + INVOKESTATIC wipi/host/Res.open (Ljava/lang/Class;Ljava/lang/String;)Ljava/io/InputStream;
+  method keyNotify(II)Z:
+    - INVOKESTATIC com/skt/m/Device.invokeWapBrowser (Ljava/lang/String;)V
+    + INVOKESTATIC wipi/skt/Device.invokeWapBrowser (Ljava/lang/String;)V
+    - INVOKESTATIC com/skt/m/Device.invokeWapBrowser (Ljava/lang/String;)V
+    + INVOKESTATIC wipi/skt/Device.invokeWapBrowser (Ljava/lang/String;)V
+    - INVOKESTATIC com/skt/m/Device.invokeWapBrowser (Ljava/lang/String;)V
+    + INVOKESTATIC wipi/skt/Device.invokeWapBrowser (Ljava/lang/String;)V
+
+CLASS ImageData.class
+  method GetSize(Ljava/lang/String;)[I:
+    - INVOKEVIRTUAL java/lang/Class.getResourceAsStream (Ljava/lang/String;)Ljava/io/InputStream;
+    + INVOKESTATIC wipi/host/Res.open (Ljava/lang/Class;Ljava/lang/String;)Ljava/io/InputStream;
+  method LoadImage(Ljava/lang/String;)[Lorg/kwis/msp/lcdui/Image;:
+    - INVOKEVIRTUAL java/lang/Class.getResourceAsStream (Ljava/lang/String;)Ljava/io/InputStream;
+    + INVOKESTATIC wipi/host/Res.open (Ljava/lang/Class;Ljava/lang/String;)Ljava/io/InputStream;
+  method LoadMap(Ljava/lang/String;I)V:
+    - INVOKEVIRTUAL java/lang/Class.getResourceAsStream (Ljava/lang/String;)Ljava/io/InputStream;
+    + INVOKESTATIC wipi/host/Res.open (Ljava/lang/Class;Ljava/lang/String;)Ljava/io/InputStream;
+  method LoadMini(I)V:
+    - INVOKEVIRTUAL java/lang/Class.getResourceAsStream (Ljava/lang/String;)Ljava/io/InputStream;
+    + INVOKESTATIC wipi/host/Res.open (Ljava/lang/Class;Ljava/lang/String;)Ljava/io/InputStream;
+  method LoadPetShop(I)V:
+    - INVOKEVIRTUAL java/lang/Class.getResourceAsStream (Ljava/lang/String;)Ljava/io/InputStream;
+    + INVOKESTATIC wipi/host/Res.open (Ljava/lang/Class;Ljava/lang/String;)Ljava/io/InputStream;
+  method LoadTileObject(ILjava/lang/String;III[B)V:
+    - INVOKEVIRTUAL java/lang/Class.getResourceAsStream (Ljava/lang/String;)Ljava/io/InputStream;
+    + INVOKESTATIC wipi/host/Res.open (Ljava/lang/Class;Ljava/lang/String;)Ljava/io/InputStream;
+    - INVOKEVIRTUAL java/lang/Class.getResourceAsStream (Ljava/lang/String;)Ljava/io/InputStream;
+    + INVOKESTATIC wipi/host/Res.open (Ljava/lang/Class;Ljava/lang/String;)Ljava/io/InputStream;
+    - INVOKEVIRTUAL java/lang/Class.getResourceAsStream (Ljava/lang/String;)Ljava/io/InputStream;
+    + INVOKESTATIC wipi/host/Res.open (Ljava/lang/Class;Ljava/lang/String;)Ljava/io/InputStream;
+    - INVOKEVIRTUAL java/lang/Class.getResourceAsStream (Ljava/lang/String;)Ljava/io/InputStream;
+    + INVOKESTATIC wipi/host/Res.open (Ljava/lang/Class;Ljava/lang/String;)Ljava/io/InputStream;
+    - INVOKEVIRTUAL java/lang/Class.getResourceAsStream (Ljava/lang/String;)Ljava/io/InputStream;
+    + INVOKESTATIC wipi/host/Res.open (Ljava/lang/Class;Ljava/lang/String;)Ljava/io/InputStream;
+
+CLASS MapDat.class
+  method LoadCropData()V:
+    instructions 189 -> 187
+  method LoadItemName(I)V:
+    instructions 84 -> 82
+  method LoadMap(I)V:
+    instructions 853 -> 847
+  method LoadPopup(III)V:
+    instructions 420 -> 418
+  method LoadQuest(I)V:
+    instructions 238 -> 234
+  method LoadSkill()V:
+    instructions 152 -> 150
+  method SetMap()V:
+    - INVOKEVIRTUAL java/lang/Class.getResourceAsStream (Ljava/lang/String;)Ljava/io/InputStream;
+    + INVOKESTATIC wipi/host/Res.open (Ljava/lang/Class;Ljava/lang/String;)Ljava/io/InputStream;
+
+CLASS NPC.class
+  method LoadAnimation(I)V:
+    instructions 102 -> 100
+  method LoadData(Ljava/lang/String;I)[B:
+    - INVOKEVIRTUAL java/lang/Class.getResourceAsStream (Ljava/lang/String;)Ljava/io/InputStream;
+    + INVOKESTATIC wipi/host/Res.open (Ljava/lang/Class;Ljava/lang/String;)Ljava/io/InputStream;
+  method LoadTalk(IILjava/lang/String;)V:
+    instructions 389 -> 385
+  method NPCSetup(I)V:
+    instructions 328 -> 326
+
+CLASS NetWork.class
+  method GetPhonenum()Ljava/lang/String;:
+    - INVOKESTATIC java/lang/System.getProperty (Ljava/lang/String;)Ljava/lang/String;
+    + INVOKESTATIC wipi/host/Sys.getProperty (Ljava/lang/String;)Ljava/lang/String;
+    - INVOKESTATIC java/lang/System.getProperty (Ljava/lang/String;)Ljava/lang/String;
+    + INVOKESTATIC wipi/host/Sys.getProperty (Ljava/lang/String;)Ljava/lang/String;
+    - INVOKESTATIC java/lang/System.getProperty (Ljava/lang/String;)Ljava/lang/String;
+    + INVOKESTATIC wipi/host/Sys.getProperty (Ljava/lang/String;)Ljava/lang/String;
+    - INVOKESTATIC java/lang/System.getProperty (Ljava/lang/String;)Ljava/lang/String;
+    + INVOKESTATIC wipi/host/Sys.getProperty (Ljava/lang/String;)Ljava/lang/String;
+    - INVOKESTATIC java/lang/System.getProperty (Ljava/lang/String;)Ljava/lang/String;
+    + INVOKESTATIC wipi/host/Sys.getProperty (Ljava/lang/String;)Ljava/lang/String;
+  method ReceiveCash()V:
+    instructions 323 -> 321
+  method ReceiveRank()V:
+    instructions 314 -> 312
+
+CLASS Pet.class
+  method CheckVersion()V:
+    instructions 176 -> 174
+  method LoadPet2(II)V:
+    - INVOKEVIRTUAL java/lang/Class.getResourceAsStream (Ljava/lang/String;)Ljava/io/InputStream;
+    + INVOKESTATIC wipi/host/Res.open (Ljava/lang/Class;Ljava/lang/String;)Ljava/io/InputStream;
+  method LoadSkillExplan()V:
+    instructions 99 -> 97
+
+RESOURCE CHANGED Sound/b0.mmf 13537 -> 15
+RESOURCE CHANGED Sound/b1.mmf 2268 -> 15
+RESOURCE CHANGED Sound/b10.mmf 3334 -> 16
+RESOURCE CHANGED Sound/b11.mmf 1507 -> 16
+RESOURCE CHANGED Sound/b2.mmf 1823 -> 15
+RESOURCE CHANGED Sound/b3.mmf 3416 -> 15
+RESOURCE CHANGED Sound/b4.mmf 4816 -> 15
+RESOURCE CHANGED Sound/b5.mmf 2844 -> 15
+RESOURCE CHANGED Sound/b6.mmf 2668 -> 15
+RESOURCE CHANGED Sound/b7.mmf 827 -> 15
+RESOURCE CHANGED Sound/b8.mmf 3277 -> 15
+RESOURCE CHANGED Sound/b9.mmf 1328 -> 15
+RESOURCE CHANGED Sound/m0.mmf 4132 -> 15
+RESOURCE CHANGED Sound/m1.mmf 1436 -> 15
+RESOURCE CHANGED Sound/m10.mmf 1235 -> 16
+RESOURCE CHANGED Sound/m11.mmf 292 -> 16
+RESOURCE CHANGED Sound/m12.mmf 2197 -> 16
+RESOURCE CHANGED Sound/m13.mmf 1475 -> 16
+RESOURCE CHANGED Sound/m14.mmf 1166 -> 16
+RESOURCE CHANGED Sound/m15.mmf 1154 -> 16
+RESOURCE CHANGED Sound/m16.mmf 1029 -> 16
+RESOURCE CHANGED Sound/m17.mmf 1725 -> 16
+RESOURCE CHANGED Sound/m18.mmf 4071 -> 16
+RESOURCE CHANGED Sound/m2.mmf 384 -> 15
+RESOURCE CHANGED Sound/m3.mmf 1198 -> 15
+RESOURCE CHANGED Sound/m4.mmf 799 -> 15
+RESOURCE CHANGED Sound/m5.mmf 252 -> 15
+RESOURCE CHANGED Sound/m6.mmf 1728 -> 15
+RESOURCE CHANGED Sound/m7.mmf 842 -> 15
+RESOURCE CHANGED Sound/m8.mmf 861 -> 15
+RESOURCE CHANGED Sound/m9.mmf 244 -> 15
+CLASS SoundPlayer.class
+  fields changed
+  method <init>(LGameCanvas;)V:
+    - INVOKESTATIC com/skt/m/AudioSystem.getMaxVolume (Ljava/lang/String;)I
+    + INVOKESTATIC wipi/skt/AudioSystem.getMaxVolume (Ljava/lang/String;)I
+    - INVOKESTATIC com/skt/m/AudioSystem.getAudioClip (Ljava/lang/String;)Lcom/skt/m/AudioClip;
+    + INVOKESTATIC wipi/skt/AudioSystem.getAudioClip (Ljava/lang/String;)Lwipi/skt/AudioClip;
+    - PUTFIELD SoundPlayer.clip : Lcom/skt/m/AudioClip;
+    + PUTFIELD SoundPlayer.clip : Lwipi/skt/AudioClip;
+  method SetVolume()V:
+    - INVOKESTATIC com/skt/m/AudioSystem.setVolume (Ljava/lang/String;I)V
+    + INVOKESTATIC wipi/skt/AudioSystem.setVolume (Ljava/lang/String;I)V
+  method SoundPlay(IZ)V:
+    instructions 331 -> 351 (jsr/ret subroutines inlined by preverify)
+  method Stop()V:
+    - GETFIELD SoundPlayer.clip : Lcom/skt/m/AudioClip;
+    + GETFIELD SoundPlayer.clip : Lwipi/skt/AudioClip;
+    - INVOKEINTERFACE com/skt/m/AudioClip.stop ()V (itf)
+    + INVOKEINTERFACE wipi/skt/AudioClip.stop ()V (itf)
+    - GETFIELD SoundPlayer.clip : Lcom/skt/m/AudioClip;
+    + GETFIELD SoundPlayer.clip : Lwipi/skt/AudioClip;
+    - INVOKEINTERFACE com/skt/m/AudioClip.stop ()V (itf)
+    + INVOKEINTERFACE wipi/skt/AudioClip.stop ()V (itf)
+  method run()V:
+    - GETFIELD SoundPlayer.clip : Lcom/skt/m/AudioClip;
+    + GETFIELD SoundPlayer.clip : Lwipi/skt/AudioClip;
+    - INVOKEINTERFACE com/skt/m/AudioClip.loop ()V (itf)
+    + INVOKEINTERFACE wipi/skt/AudioClip.loop ()V (itf)
+    - GETFIELD SoundPlayer.clip : Lcom/skt/m/AudioClip;
+    + GETFIELD SoundPlayer.clip : Lwipi/skt/AudioClip;
+    - INVOKEINTERFACE com/skt/m/AudioClip.play ()V (itf)
+    + INVOKEINTERFACE wipi/skt/AudioClip.play ()V (itf)
+
+CLASS TheFarm2.class
+  method startApp([Ljava/lang/String;)V:
+    - INVOKESTATIC com/skt/m/Device.setKeyToneEnabled (Z)V
+    + INVOKESTATIC wipi/skt/Device.setKeyToneEnabled (Z)V
+
+CLASS gxg/GXGNet.class
+  method gxgClose(Z)I:
+    instructions 175 -> 304 (jsr/ret subroutines inlined by preverify)
+  method gxgReceive(Lgxg/Confirm;)[B:
+    instructions 213 -> 206
+  method gxgReceiveData()Lgxg/DataPacket;:
+    instructions 285 -> 279
+  method gxgReconnect(Ljava/lang/String;[B)Lgxg/InitConfirm;:
+    - INVOKESTATIC javax/microedition/io/Connector.open (Ljava/lang/String;)Ljavax/microedition/io/Connection;
+    + INVOKESTATIC wipi/host/Net.open (Ljava/lang/String;)Ljavax/microedition/io/Connection;
+
+CLASS gxg/Header.class
+  method parse([B)V:
+    instructions 47 -> 45
+
+CLASS gxg/InitConfirm.class
+  method parse([B)V:
+    instructions 257 -> 247
+
+CLASS gxg/MyPricingQueryConfirm.class
+  method getMessage()Ljava/lang/String;:
+    instructions 8 -> 6
+  method parse([B)V:
+    instructions 385 -> 377
+
+CLASS gxg/PricingBuyConfirm.class
+  method parse([B)V:
+    instructions 67 -> 65
+
+CLASS gxg/PricingQueryConfirm.class
+  method getMessage()Ljava/lang/String;:
+    instructions 8 -> 6
+  method parse([B)V:
+    instructions 272 -> 264
+
+ADDED enc/map.bin (10666 B)
+ADDED font/f12.bin (2788 B)
+ADDED org/kwis/msf/io/Network.class (312 B)
+ADDED org/kwis/msf/io/Socket.class (303 B)
+ADDED org/kwis/msf/io/URL.class (552 B)
+ADDED org/kwis/msp/handset/BackLight.class (432 B)
+ADDED org/kwis/msp/io/File.class (2450 B)
+ADDED org/kwis/msp/io/FileSystem.class (941 B)
+ADDED org/kwis/msp/lcdui/Card.class (1300 B)
+ADDED org/kwis/msp/lcdui/Display.class (2302 B)
+ADDED org/kwis/msp/lcdui/Font.class (2153 B)
+ADDED org/kwis/msp/lcdui/Graphics.class (7694 B)
+ADDED org/kwis/msp/lcdui/Image.class (3983 B)
+ADDED org/kwis/msp/lcdui/Jlet.class (1090 B)
+ADDED org/kwis/msp/lwc/AnnunciatorComponent.class (381 B)
+ADDED org/kwis/msp/media/Vibrator.class (369 B)
+ADDED snd/b0.mid (17233 B)
+ADDED snd/b1.mid (3986 B)
+ADDED snd/b10.mid (5535 B)
+ADDED snd/b11.mid (2451 B)
+ADDED snd/b2.mid (2489 B)
+ADDED snd/b3.mid (5054 B)
+ADDED snd/b4.mid (9577 B)
+ADDED snd/b5.mid (5326 B)
+ADDED snd/b6.mid (4293 B)
+ADDED snd/b7.mid (880 B)
+ADDED snd/b8.mid (1984 B)
+ADDED snd/b9.mid (1867 B)
+ADDED snd/m0.mid (2945 B)
+ADDED snd/m1.wav (5324 B)
+ADDED snd/m10.wav (4420 B)
+ADDED snd/m11.mid (276 B)
+ADDED snd/m12.wav (8244 B)
+ADDED snd/m13.wav (5424 B)
+ADDED snd/m14.wav (4152 B)
+ADDED snd/m15.mid (1101 B)
+ADDED snd/m16.mid (1302 B)
+ADDED snd/m17.mid (2426 B)
+ADDED snd/m18.wav (15744 B)
+ADDED snd/m2.wav (1076 B)
+ADDED snd/m3.wav (4300 B)
+ADDED snd/m4.wav (2612 B)
+ADDED snd/m5.mid (78 B)
+ADDED snd/m6.wav (6492 B)
+ADDED snd/m7.wav (2924 B)
+ADDED snd/m8.wav (3024 B)
+ADDED snd/m9.mid (174 B)
+ADDED wipi/host/BitmapFont.class (10821 B)
+ADDED wipi/host/Enc.class (2199 B)
+ADDED wipi/host/FakeGxg$1.class (1187 B)
+ADDED wipi/host/FakeGxg$2.class (1075 B)
+ADDED wipi/host/FakeGxg.class (4344 B)
+ADDED wipi/host/FarmMidlet.class (762 B)
+ADDED wipi/host/Host.class (12740 B)
+ADDED wipi/host/Keys.class (1181 B)
+ADDED wipi/host/Log.class (994 B)
+ADDED wipi/host/Net.class (736 B)
+ADDED wipi/host/Opt.class (624 B)
+ADDED wipi/host/Overlay.class (1150 B)
+ADDED wipi/host/Res.class (2076 B)
+ADDED wipi/host/Snd.class (4214 B)
+ADDED wipi/host/Store.class (5355 B)
+ADDED wipi/host/Sys.class (681 B)
+ADDED wipi/host/Touch.class (366 B)
+ADDED wipi/host/Txt.class (2891 B)
+ADDED wipi/skt/AudioClip.class (281 B)
+ADDED wipi/skt/AudioSystem.class (610 B)
+ADDED wipi/skt/Clip.class (863 B)
+ADDED wipi/skt/Device.class (343 B)
+SUMMARY classes: 5 identical code, 15 changed [Effect.class, GameCanvas.class, ImageData.class, MapDat.class, NPC.class, NetWork.class, Pet.class, SoundPlayer.class, TheFarm2.class, gxg/GXGNet.class, gxg/Header.class, gxg/InitConfirm.class, gxg/MyPricingQueryConfirm.class, gxg/PricingBuyConfirm.class, gxg/PricingQueryConfirm.class]; resources: 297 identical, 31 changed; entries added 69, removed 0
