@@ -14,17 +14,17 @@ S:EV00.dat:0:11	여러분! 우리가 기다리던 그날이 오고 있습니다!
 S:EV00.dat:0:12	이제 곧 귀족들이 득세하던 시기는 모두 끝이 나게 됩니다!	Thời kỳ quý tộc lộng hành sắp chấm dứt hoàn toàn!	데이거	
 S:EV00.dat:0:13	앞으로의 세상은 귀족과 평민의 구분이 없는!	Thế giới sau này sẽ không còn phân biệt quý tộc và thường dân!	데이거	
 S:EV00.dat:0:14	인간이 인간자체만으로 존중받는! 세상이 열릴 것입니다!	Một thế giới nơi con người được tôn trọng chỉ vì là con người! Thế giới ấy sẽ mở ra!	데이거	
-S:EV00.dat:0:15	우오오!	Uoooh!	balloon	37
+S:EV00.dat:0:15	우오오!	Hoan hô!	balloon	37
 S:EV00.dat:0:16	와~!!	Oa~!!	balloon	37
 S:EV00.dat:0:17	와와와!	Oa oa oa!	모던나이트	
 S:EV00.dat:0:18	공화정 만세!	Cộng hòa muôn năm!	모던나이트	
 S:EV00.dat:0:19	만세!	Muôn năm!	balloon	37
-S:EV00.dat:0:20	우오오!	Uoooh!	balloon	37
+S:EV00.dat:0:20	우오오!	Hoan hô!	balloon	37
 S:EV00.dat:0:21	가자!	Đi thôi!	모던나이트	
 S:EV00.dat:0:22	데이거님을 따르자!	Theo ngài Dager!	모던나이트	
-S:EV00.dat:0:23	와아~!	Oaa~!	balloon	37
+S:EV00.dat:0:23	와아~!	Oa~!	balloon	37
 S:EV00.dat:0:24	데이거 만세!	Dager muôn năm!	balloon	37
-S:EV00.dat:0:25	우어~	Uơ~	balloon	37
+S:EV00.dat:0:25	우어~	Ồ~	balloon	37
 S:EV00.dat:0:26	와와와!	Oa oa oa!	모던나이트	
 S:EV00.dat:0:27	우리의 권리를 위해 싸우자!	Hãy chiến đấu vì quyền lợi của chúng ta!	모던나이트	
 S:EV00.dat:0:28	발레리 경.	Ngài Valerie.	데이거	
@@ -92,7 +92,7 @@ S:EV00.dat:0:89	예!공작님.	Rõ, thưa Công tước.	balloon	37
 S:EV00.dat:0:90	예!공작님.	Rõ, thưa Công tước.	balloon	37
 S:EV00.dat:0:91	얼마 후	Ít lâu sau	typing	39
 S:EV00.dat:0:92	레이블타운 근처 숲	Khu rừng gần Label Town	typing2	39
-S:EV00.dat:0:93	후아아~ 이런 아침부터 먹을걸 구하러 와야 하다니.	Haaa~ Mới sáng sớm đã phải đi kiếm cái ăn.	세바스찬	
+S:EV00.dat:0:93	후아아~ 이런 아침부터 먹을걸 구하러 와야 하다니.	Haizz~ Mới sáng sớm đã phải đi kiếm cái ăn.	세바스찬	
 S:EV00.dat:0:94	나도 부모님이 있었다면 이렇게 힘들게 살지는 않았을 건데.	Giá mà mình còn cha mẹ thì đâu phải sống vất vả thế này.	세바스찬	
 S:EV00.dat:0:95	뭐! 우울해 봤자 이득 될 건 없으니까. 힘내서 사냥을 하러 가자!	Thôi! Buồn bã cũng chẳng được gì. Cố lên, đi săn nào!	세바스찬	
 S:EV00.dat:0:96	오늘은 게살구이나 해먹어 볼까나?	Hôm nay làm món thịt cua nướng nhỉ?	세바스찬	
@@ -236,7 +236,7 @@ S:EV00.dat:2:8	에? 뭐 그런 쓸데없는 일을 하셨어요. 그런 협조 �
 S:EV00.dat:2:9	잔말 말고 다녀와! 상점에 있는 대장장이 필이	Bớt nói đi! Phil, thợ rèn ở cửa hàng	르네	
 S:EV00.dat:2:10	너에게 강화와 마법 부여, 융합에 대하여 알려줄 거다. 배워서 나쁠 건 없으니 어서 다녀와!	sẽ chỉ cho con về Cường hóa, Phù phép và Dung hợp. Học thì có hại gì đâu, đi mau!	르네	
 S:EV00.dat:2:11	끄응.. 알겠어요. 그럼 다녀올게요.	Hừm.. Con biết rồi. Vậy con đi đây.	세바스찬	
-S:EV00.dat:2:12	하아..이거 이거...	Haa..thế này thì...	세바스찬	
+S:EV00.dat:2:12	하아..이거 이거...	Haizz..thế này thì...	세바스찬	
 S:EV00.dat:2:13	학교에 다니지 않고도 검술과 학문을 배우는 건 좋지만...	Không đi học mà vẫn được học kiếm thuật với học vấn thì tốt thật...	세바스찬	
 S:EV00.dat:2:14	이 정도로 귀찮은 분이었다면 그때 구해주지 말걸그랬나?	Nhưng biết ông ấy phiền phức thế này thì hồi đó khỏi cứu cho xong?	세바스찬	
 S:EV00.dat:2:15	... 아냐 그래도 좋은 선생님이니깐 일단 시키는 대로 해보자.	... Không, dù sao cũng là thầy giỏi, cứ làm theo lời thầy đã.	세바스찬	
@@ -544,7 +544,7 @@ S:EV01.dat:0:22	리오타르! 네 녀석에게 특권 포기각서를 받으려�
 S:EV01.dat:0:23	흥! 내가 내 권리를 왜 포기해야 하는 거지?	Hừ! Sao ta phải từ bỏ quyền lợi của mình?	리오타르	
 S:EV01.dat:0:24	데이거! 소문대로 귀족이면서 평민 따위를 위하다니...	Dager! Đúng như lời đồn, là quý tộc mà lại vì lũ thường dân...	리오타르	
 S:EV01.dat:0:25	네녀석... 머리가 어떻게 된 것 아니냐?	Ngươi... đầu óc có vấn đề à?	리오타르	
-S:EV01.dat:0:26	하아.. 이봐 리오타르. 네 녀석이 얼마나 더러운 녀석인지는 이미 조사가 끝났어.	Haa.. Này Liotar. Ngươi bẩn thỉu cỡ nào ta đã điều tra xong cả rồi.	데이거	
+S:EV01.dat:0:26	하아.. 이봐 리오타르. 네 녀석이 얼마나 더러운 녀석인지는 이미 조사가 끝났어.	Hừ.. Này Liotar. Ngươi bẩn thỉu cỡ nào ta đã điều tra xong cả rồi.	데이거	
 S:EV01.dat:0:27	그리고 얼마 전 북방을 다스리는 영주 베란지스 님도 특권포기 각서에 서명했다.	Hơn nữa mới đây ngài Veranjis, lãnh chúa cai quản phương Bắc, cũng đã ký cam kết từ bỏ đặc quyền.	데이거	
 S:EV01.dat:0:28	그분에게 아첨하며 살던 네가 이제 와서 혼자 버틸 수 있을 것 같아?	Ngươi sống nhờ nịnh bợ ông ta, giờ tưởng một mình trụ nổi sao?	데이거	
 S:EV01.dat:0:29	........(그..그런..그분이 그런 각서를 순순히 써줄리가 없지..분명히 무력을 동원 했을거야..)	........(S..sao lại..Ông ấy đời nào chịu ngoan ngoãn ký cam kết như thế..chắc chắn đã dùng vũ lực..)	리오타르	
@@ -3831,7 +3831,7 @@ S:EV18.dat:0:2	여관 아랫쪽엔 용병 대장인 랜달프 아저씨가 있�
 S:EV18.dat:0:3	우리마을의 상점이지. 뛰어난 대장장이인 필 아저씨와 잡화상 로니 아저씨가 있어.	Cửa hàng của làng mình. Có chú Phil thợ rèn giỏi và chú Ronnie bán tạp hoá.	세바스찬	
 S:EV18.dat:0:4	우리마을 최고의 고집을 자랑하는 엠마 할머니네 집이야. 언제나 뜨개질을 하고 계시던데.. 뭐에 쓰려는거지?	Nhà bà Emma, người cố chấp nhất làng. Lúc nào cũng thấy bà đan len.. định dùng làm gì nhỉ?	세바스찬	
 S:EV18.dat:0:5	리오타르 라는 뚱땡이 영주의 저택이야. 정말 기분나쁜 녀석이지.	Dinh thự của lãnh chúa béo ú Liotar. Đúng là tên đáng ghét.	세바스찬	
-S:EV18.dat:0:6	여기는 마을의 중앙 광장이야 텔레포터 헵번씨와 보따리상인 루크씨, 훈련교관 제라드씨가 있어.	Đây là quảng trường giữa làng, có chú Hepburn dịch chuyển, chú Luke bán hàng rong và huấn luyện viên Gerard.	세바스찬	
+S:EV18.dat:0:6	여기는 마을의 중앙 광장이야 텔레포터 헵번씨와 보따리상인 루크씨, 훈련교관 제라드씨가 있어.	Đây là quảng trường giữa làng, có chị Hepburn dịch chuyển, chú Luke bán hàng rong và huấn luyện viên Gerard.	세바스찬	
 S:EV18.dat:0:7	그럼 이제 게살을 구하러 가볼까?	Giờ đi kiếm thịt cua thôi nhỉ?	세바스찬	
 S:EV18.dat:1:0	여기가 이스턴 시티로군	Đây là Eastern City	세바스찬	
 S:EV18.dat:1:1	헉슬리 백작이 지배하고 있는 곳이지만, 영주민들은 그리 살기 나쁘지 않은 모양이야.	Nơi Bá tước Huxley cai quản, nhưng dân trong lãnh địa có vẻ sống cũng không tệ.	세바스찬	
