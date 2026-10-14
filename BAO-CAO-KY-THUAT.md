@@ -221,8 +221,8 @@ Ghi chú: harness desktop cần `-Xmx32m`, vì nó còn nạp sẵn toàn bộ z
 | Kiểm tra | Kết quả |
 |---|---|
 | `j2me_scan.py` (37 class, đối chiếu stub CLDC 1.1 + MIDP 2.0, StackMap, version) | 0 vi phạm |
-| `jardiff.py` bản Hàn → bản Việt | class giống hệt, tài nguyên đổi: binary.mod, 49 file data, 3 file ảnh, + `vi/dict.txt`, `vi/font.bin` |
-| `jardiff.py` jar WIPI gốc → bản Việt | +37 class (không StackMapTable, version ≤ 48), +51 tài nguyên (âm thanh mid/wav, icon, vi), ~99 đổi |
+| `jardiff.py` bản Hàn → bản Việt | class giống hệt, tài nguyên đổi: binary.mod, 49 file data, 3 file ảnh, + `vi/dict.txt`, `vi/font.bin`  (`release/jardiff_ko_vi1.txt`) |
+| `jardiff.py` jar WIPI gốc → bản Việt | +37 class (không StackMapTable, version ≤ 48), +51 tài nguyên (âm thanh mid/wav, icon, vi), ~99 đổi  (`release/jardiff_goc_vi1.txt`) |
 | Mua cash → tự lưu → khởi động lại → túi đồ | xem `release/kiem-chung.txt` |
 | Chơi ngẫu nhiên 700 s (AOT) | xem `release/kiem-chung.txt` |
 | AOT vs thông dịch 300 s | xem `release/kiem-chung.txt` |

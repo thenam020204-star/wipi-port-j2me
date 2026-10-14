@@ -1,0 +1,28 @@
+# Kiểm chứng CHROISEN_LGT_vi1.jar (2026-10-14) — class + tài nguyên lấy từ jar, harness RunHeadless
+jar md5: fd303c81ee6c76de0f6238c7ada0efb9
+
+## AOT vs thông dịch (300 s, cùng kịch bản phím)
+  instructions 21240917760 in 198.216810505s = 107.16002192692027 MIPS
+  instructions 21240917760 in 29.681701188s = 715.6233271625103 MIPS
+  svclog: TRÙNG (4100000+ lần gọi host)
+  khung hình: 6/6 trùng
+
+## Mua cash -> tự lưu -> khởi động lại -> mở túi
+  [132164] MC_netConnect -> ok (offline server)
+  [133745] MC_netSocketWrite 36 (offline server)
+  [133943] MC_netSocketRead 12 -> 12 (offline server)
+  save0.dat đổi: 49 byte; lúc tải lại: netConnect = 0
+
+## Chơi ngẫu nhiên 700 s (AOT)
+  instructions 51142575173 in 59.099150551s = 865.369039930044 MIPS
+  heap used 4643616 peak 4678832 mapped pages 100 (6400KB)
+  yêu cầu mạng bị từ chối như mất mạng: 0
+
+## Exception / hàm WIPI chưa cài
+  fI: 0
+  fA: 0
+  fbuy: 0
+  fload: 0
+  fmonkey: 0
+classes scanned: 37  stubs: 147
+preverify warnings (methods with branch-like bytes lacking StackMap): 0
