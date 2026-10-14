@@ -10,6 +10,7 @@ import org.kwis.msp.lcdui.Graphics;
 final class UiPaint {
     static void paint(GameCanvas gc, Graphics graphics) {
         UiKit.tick++;
+        UiDebug.poll(gc);
         int n;
         if (gc.State >= 5 || gc.State == 2) {
             if (gc.Explan != null) {
@@ -238,7 +239,7 @@ final class UiPaint {
                 }
             }
             if (gc.PInfo > 0) {
-                graphics.drawImage(gc.PBuff, (gc.getWidth() - 134) / 2, (gc.getHeight() - 132) / 2, 4);
+                UiGM.petInfo(gc, graphics);
             }
         }
         if (gc.OPTION) {

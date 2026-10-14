@@ -11,3 +11,12 @@ NPC.MakeNameBuf(ILjava/lang/String;)V -> UiTalk.MakeNameBuf
 GameCanvas.DrawMenu(Lorg/kwis/msp/lcdui/Graphics;)V -> UiTitle.DrawMenu
 GameCanvas.DrawMenuItem(Lorg/kwis/msp/lcdui/Graphics;)V -> UiTitle.DrawMenuItem
 GameCanvas.LoadExplanDat()V -> UiTitle.LoadExplanDat
+GameCanvas.MakeGameMenu(Lorg/kwis/msp/lcdui/Graphics;)V -> UiGM.MakeGameMenu
+GameCanvas.MakeShopMenu(Lorg/kwis/msp/lcdui/Graphics;I)V -> UiGM.MakeShopMenu
+GameCanvas.MakeSkillShop(Lorg/kwis/msp/lcdui/Graphics;)V -> UiGM.MakeSkillShop
+GameCanvas.MakePetShop(Lorg/kwis/msp/lcdui/Graphics;)V -> UiGM.MakePetShop
+GameCanvas.MakeSubBuf()V -> UiGM.MakeSubBuf
+GameCanvas.MakeQuestExplan()V -> UiGM.MakeQuestExplan
+GameCanvas.LoadPetInfo(I)V -> UiGM.LoadPetInfo
+GameCanvas.DrawGameMenu(Lorg/kwis/msp/lcdui/Graphics;)V -> UiGM.DrawGameMenu
+GameCanvas.DrawPoint(Lorg/kwis/msp/lcdui/Graphics;)V -> UiGM.DrawPoint

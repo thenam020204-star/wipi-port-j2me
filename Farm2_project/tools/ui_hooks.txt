@@ -1,0 +1,7 @@
+# Call-site hooks of the new UI layer (Remap hook format, see tools/src/Remap.java).
+# The game menus/shops are drawn live by UiGM; the 176x202 buffers these loaders allocate are
+# never shown, so they get a 1x1 image (each one is ~140 KB of heap on a phone).
+@GameCanvas.LoadGameMenu(I)V static org/kwis/msp/lcdui/Image.createImage(II)Lorg/kwis/msp/lcdui/Image; -> UiGM.buf(II)Lorg/kwis/msp/lcdui/Image;
+@GameCanvas.LoadShopMenu(I)V static org/kwis/msp/lcdui/Image.createImage(II)Lorg/kwis/msp/lcdui/Image; -> UiGM.buf(II)Lorg/kwis/msp/lcdui/Image;
+@GameCanvas.LoadSkillShop(I)V static org/kwis/msp/lcdui/Image.createImage(II)Lorg/kwis/msp/lcdui/Image; -> UiGM.buf(II)Lorg/kwis/msp/lcdui/Image;
+@GameCanvas.LoadPetShop()V static org/kwis/msp/lcdui/Image.createImage(II)Lorg/kwis/msp/lcdui/Image; -> UiGM.buf(II)Lorg/kwis/msp/lcdui/Image;

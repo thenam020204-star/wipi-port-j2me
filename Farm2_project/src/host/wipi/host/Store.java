@@ -41,6 +41,64 @@ public final class Store {
         } catch (Throwable t) {
             Log.e("rms list", t);
         }
+        if (!"0".equals(Host.appProperty("Farm-Save-Seed")) && !seeded()) {
+            seed();
+        }
+    }
+
+    /** One-time marker store (not F/B-prefixed, so never listed as a file). */
+    private static final String SEED = "Sseed";
+
+    private static boolean seeded() {
+        RecordStore rs = null;
+        try {
+            rs = RecordStore.openRecordStore(SEED, false);
+            return true;
+        } catch (Throwable t) {
+            return false;
+        } finally {
+            if (rs != null) {
+                try {
+                    rs.closeRecordStore();
+                } catch (Throwable t) {
+                }
+            }
+        }
+    }
+
+    /**
+     * First run (marker store absent): imports the save files of the
+     * original handset bundled by the build under /save/ (list in
+     * /save/index.txt) that are not in RMS yet; files the game already wrote
+     * (e.g. Option.dat at start-up) are kept. The marker is written last, so
+     * saves deleted later by the player never come back.
+     */
+    private static void seed() {
+        byte[] idx = Res.readAll("save/index.txt");
+        if (idx == null) {
+            return;
+        }
+        int i = 0, n = idx.length;
+        while (i < n) {
+            int s = i;
+            while (i < n && idx[i] != '\n' && idx[i] != '\r') {
+                i++;
+            }
+            if (i > s && idx[s] != '#') {
+                char[] c = new char[i - s];
+                for (int k = 0; k < c.length; k++) {
+                    c[k] = (char) (idx[s + k] & 0xff);
+                }
+                String name = new String(c).trim();
+                byte[] d = present.get(name) == null ? Res.readAll("save/" + name) : null;
+                if (d != null) {
+                    write(name, d, d.length);
+                    Log.i("rms: imported save " + name + " (" + d.length + " bytes)");
+                }
+            }
+            i++;
+        }
+        save(SEED, new byte[] {1});
     }
 
     public static synchronized boolean exists(String name) {

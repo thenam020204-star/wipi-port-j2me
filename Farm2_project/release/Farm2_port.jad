@@ -7,5 +7,6 @@ MicroEdition-Profile: MIDP-2.0
 Farm-Jlet: TheFarm2
 Farm-Screen: auto
 Farm-Scale: auto
+Farm-Save-Seed: 1
 MIDlet-Jar-URL: Farm2_port.jar
-MIDlet-Jar-Size: 1268445
+MIDlet-Jar-Size: 1283313

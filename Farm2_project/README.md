@@ -57,7 +57,7 @@ Toàn bộ text nằm trong thư mục `text/` của jar, UTF-8, mỗi dòng `kh
 
 | File | Nội dung |
 |---|---|
-| `ui.txt` | chuỗi trong code game (menu, thông báo, nút…) — 284 chuỗi |
+| `ui.txt` | chuỗi trong code game + lớp UI mới (menu, thông báo, nút…) |
 | `talk_T0.txt`, `talk_B_PP.txt` | thoại NPC (theo file `Data/Talk/B.dat` phần `PP`) |
 | `npc_name.txt`, `pet_name.txt`, `map_name.txt`, `crop.txt` | tên |
 | `explan.txt` | trang hướng dẫn (`@` = xuống dòng) |
@@ -81,10 +81,37 @@ Cách hoạt động: build thay `new String(byte[])` ở 16 điểm đọc text
 phép so sánh literal như `DownMent.equals("금액확인")` vẫn đúng sau khi sửa). Bộ nhớ:
 `ui.txt` nạp một lần; file dữ liệu cache 2 file một lúc.
 
+## Giao diện mới đa màn hình (lớp `Ui*`)
+
+Mọi khung cũ cố định 176x202/240x320 (menu chính, hộp thoại NPC, hộp chọn, cài đặt,
+hướng dẫn, chọn ô lưu, xác nhận WAP/mua/xếp hạng, menu trong game 5 thẻ, cửa hàng hạt
+giống/mồi/nông sản, học kỹ năng, cửa hàng thú cưng, chọn đồ dự thi/thức ăn) được vẽ lại
+trực tiếp theo kích thước màn hình (`src/ui/*.java`, không tạo ảnh đệm lớn):
+
+- Build thay **thân** các hàm vẽ trong `tools/ui_body.txt` (vd. `GameCanvas.DrawGameMenu` →
+  `UiGM.DrawGameMenu`): descriptor, access flag và mọi nơi gọi giữ nguyên; logic trạng thái
+  /phím trong các hàm này được chép nguyên (CFR, đối chiếu FernFlower + bytecode).
+- `tools/ui_hooks.txt`: các buffer 176x202 cũ chỉ còn 1x1 (tiết kiệm ~140 KB heap).
+- Màn hẹp (chiều ngang logic < ~210, gồm 176x220 và 360x640 vốn chạy logic 207x368):
+  thẻ chỉ hiện icon, tên thẻ hiện ở chân khung; lưới/ô kỹ năng tự co.
+- Không cấp phát mỗi khung hình: số/tiền vẽ từ bộ đệm ký tự, ngắt dòng dùng mảng tĩnh.
+
+## Save gốc trong gói
+
+`FSave0.dat`, `FSave1.dat`, `Option.dat` của máy gốc được đóng vào `save/` trong jar.
+Lần chạy đầu (chưa có store đánh dấu `Sseed`) mỗi file chưa có trong RMS được nhập vào,
+sau đó là file RMS bình thường (xoá save sẽ không tự hiện lại). Tắt bằng
+`Farm-Save-Seed: 0` trong JAD/manifest.
+
 ## Kiểm thử
 
 - `test/emu.py` (FreeJ2ME headless + Xvfb): logo → title → menu → game mới → cut-scene →
   gameplay; ảnh từ PNG sheet, text từ `.txt`; đã thử sửa `.txt` trong jar (zip) và thấy
   thay đổi ngay (thoại, tên NPC, chuỗi UI).
+- Móc kiểm thử `Farm-Debug-Open` (chỉ khi thêm vào manifest, bản phát hành không có):
+  vd. `s0,s4,k0,p,g2` — mỗi lần về màn chơi, game mở lần lượt cửa hàng/menu bằng chính
+  hàm của game (`LoadShopMenu`, `LoadSkillShop`, `LoadPetShop`, `LoadGameMenu`) để chụp
+  mọi cửa hàng mà không phải đi tới NPC. (`s5` = chọn đồ dự thi cần sự kiện hội chợ dựng
+  `c.point` trước, mở trực tiếp sẽ NPE — đó là giới hạn của móc test, không phải lỗi game.)
 - Lỗi `Sequencer ... is null` trong log là do container không có MIDI synth (môi trường),
   không phải lỗi game.

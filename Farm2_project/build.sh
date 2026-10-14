@@ -40,7 +40,7 @@ java -jar "$L/ecj-4.6.1.jar" -encoding UTF-8 -source 1.3 -target 1.2 -nowarn -bo
 mv "$W/cls"/Ui*.class "$W/game_in/"
 
 echo "== 3. remap platform call sites in the game classes (+ drawing bodies -> new UI layer)"
-java -Dui="$W/res/text/ui.txt" -Dbody="$P/tools/ui_body.txt" -cp "$W/tools:$ASM" Remap "$W/game_in" "$W/game" "$W/remap.txt" ${HOOKS:+"$HOOKS"}
+java -Dui="$W/res/text/ui.txt" -Dbody="$P/tools/ui_body.txt" -cp "$W/tools:$ASM" Remap "$W/game_in" "$W/game" "$W/remap.txt" "${HOOKS:-$P/tools/ui_hooks.txt}"
 
 echo "== 3b. text encoding table (CP949 codes used by the game data)"
 mkdir -p "$W/res/enc"
@@ -52,6 +52,13 @@ mkdir -p "$W/encres"; cp -r "$W/res/text" "$W/res/enc" "$W/encres/"
 
 echo "== 3d. text layer check: port's Enc.txt == Enc.str for every game string (unedited .txt)"
 java -cp "$W/cls:$W/encres:$W/tools" TextCheck "$W/textvec.txt"
+
+echo "== 3e. save files of the original handset (imported into RMS on first run; Farm-Save-Seed: 0 disables)"
+mkdir -p "$W/res/save"; : > "$W/res/save/index.txt"
+for f in FSave0.dat FSave1.dat FSave2.dat Option.dat; do
+  if [ -f "$W/orig/$f" ]; then cp "$W/orig/$f" "$W/res/save/"; echo "$f" >> "$W/res/save/index.txt"; fi
+done
+echo "seed saves: $(tr '\n' ' ' < "$W/res/save/index.txt")"
 
 echo "== 4. sounds (SMAF -> MIDI/WAV)"
 java -cp "$W/tools" SndConvert "$W/jar/Sound" "$W/res" > "$W/sound.txt"
@@ -91,6 +98,7 @@ MicroEdition-Profile: MIDP-2.0
 Farm-Jlet: TheFarm2
 Farm-Screen: auto
 Farm-Scale: auto
+Farm-Save-Seed: 1
 MF
 [ -n "$EXTRA_MANIFEST" ] && printf "%s\n" "$EXTRA_MANIFEST" >> "$W/MANIFEST.MF"
 rm -f "$OUT/$NAME.jar"

@@ -73,6 +73,8 @@ CLASS GameCanvas.class
     instructions 60 -> 62
   method DrawEnding2(Lorg/kwis/msp/lcdui/Graphics;)V:
     instructions 368 -> 382
+  method DrawGameMenu(Lorg/kwis/msp/lcdui/Graphics;)V:
+    instructions 177 -> 4
   method DrawInven(Lorg/kwis/msp/lcdui/Graphics;I)V:
     instructions 1506 -> 1520
   method DrawMenu(Lorg/kwis/msp/lcdui/Graphics;)V:
@@ -82,7 +84,7 @@ CLASS GameCanvas.class
   method DrawMiniTime(Lorg/kwis/msp/lcdui/Graphics;II)V:
     instructions 108 -> 6
   method DrawPoint(Lorg/kwis/msp/lcdui/Graphics;)V:
-    instructions 4148 -> 4194
+    instructions 4148 -> 4
   method DrawPointBox(Lorg/kwis/msp/lcdui/Graphics;)V:
     instructions 201 -> 203
   method DrawPopup(Lorg/kwis/msp/lcdui/Graphics;)V:
@@ -101,6 +103,9 @@ CLASS GameCanvas.class
     instructions 762 -> 3
   method LoadGame(I)V:
     instructions 1188 -> 1196
+  method LoadGameMenu(I)V:
+    - INVOKESTATIC org/kwis/msp/lcdui/Image.createImage (II)Lorg/kwis/msp/lcdui/Image;
+    + INVOKESTATIC UiGM.buf (II)Lorg/kwis/msp/lcdui/Image;
   method LoadKey()V:
     instructions 419 -> 421
   method LoadLotto(Z)V:
@@ -108,14 +113,31 @@ CLASS GameCanvas.class
   method LoadMini(I)V:
     - INVOKEVIRTUAL java/lang/Class.getResourceAsStream (Ljava/lang/String;)Ljava/io/InputStream;
     + INVOKESTATIC wipi/host/Res.open (Ljava/lang/Class;Ljava/lang/String;)Ljava/io/InputStream;
+  method LoadPetInfo(I)V:
+    instructions 216 -> 4
+  method LoadPetShop()V:
+    - INVOKESTATIC org/kwis/msp/lcdui/Image.createImage (II)Lorg/kwis/msp/lcdui/Image;
+    + INVOKESTATIC UiGM.buf (II)Lorg/kwis/msp/lcdui/Image;
   method LoadPoint()I:
     instructions 135 -> 137
+  method LoadShopMenu(I)V:
+    - INVOKESTATIC org/kwis/msp/lcdui/Image.createImage (II)Lorg/kwis/msp/lcdui/Image;
+    + INVOKESTATIC UiGM.buf (II)Lorg/kwis/msp/lcdui/Image;
+  method LoadSkillShop(I)V:
+    - INVOKESTATIC org/kwis/msp/lcdui/Image.createImage (II)Lorg/kwis/msp/lcdui/Image;
+    + INVOKESTATIC UiGM.buf (II)Lorg/kwis/msp/lcdui/Image;
   method MakeGameMenu(Lorg/kwis/msp/lcdui/Graphics;)V:
-    instructions 962 -> 966
+    instructions 962 -> 4
+  method MakePetShop(Lorg/kwis/msp/lcdui/Graphics;)V:
+    instructions 232 -> 4
   method MakeQuestExplan()V:
-    instructions 161 -> 163
+    instructions 161 -> 3
+  method MakeShopMenu(Lorg/kwis/msp/lcdui/Graphics;I)V:
+    instructions 475 -> 5
   method MakeSkillShop(Lorg/kwis/msp/lcdui/Graphics;)V:
-    instructions 296 -> 302
+    instructions 296 -> 4
+  method MakeSubBuf()V:
+    instructions 150 -> 3
   method MakeTheFarmSub(Lorg/kwis/msp/lcdui/Graphics;IIII)V:
     instructions 357 -> 377
   method PlayGame(Lorg/kwis/msp/lcdui/Graphics;)V:
@@ -714,9 +736,11 @@ ADDED Image/UI/UP/MapName.png (934 B)
 ADDED Image/UI/UP/MapName.txt (200 B)
 ADDED Image/UI/Wea.png (692 B)
 ADDED Image/UI/Wea.txt (202 B)
+ADDED UiDebug.class (1691 B)
+ADDED UiGM.class (28490 B)
 ADDED UiHud.class (1185 B)
-ADDED UiKit.class (9043 B)
-ADDED UiPaint.class (8669 B)
+ADDED UiKit.class (9726 B)
+ADDED UiPaint.class (8731 B)
 ADDED UiRank.class (1843 B)
 ADDED UiTalk.class (8971 B)
 ADDED UiTitle.class (11303 B)
@@ -736,6 +760,10 @@ ADDED org/kwis/msp/lcdui/Image.class (4188 B)
 ADDED org/kwis/msp/lcdui/Jlet.class (1090 B)
 ADDED org/kwis/msp/lwc/AnnunciatorComponent.class (381 B)
 ADDED org/kwis/msp/media/Vibrator.class (369 B)
+ADDED save/FSave0.dat (39455 B)
+ADDED save/FSave1.dat (39455 B)
+ADDED save/Option.dat (4 B)
+ADDED save/index.txt (33 B)
 ADDED snd/b0.mid (17233 B)
 ADDED snd/b1.mid (3986 B)
 ADDED snd/b10.mid (5535 B)
@@ -849,7 +877,7 @@ ADDED text/talk_3_19.txt (240 B)
 ADDED text/talk_3_20.txt (3614 B)
 ADDED text/talk_3_21.txt (2671 B)
 ADDED text/talk_T0.txt (39099 B)
-ADDED text/ui.txt (7608 B)
+ADDED text/ui.txt (8510 B)
 ADDED wipi/host/BitmapFont.class (10826 B)
 ADDED wipi/host/Enc.class (2512 B)
 ADDED wipi/host/FakeGxg$1.class (1187 B)
@@ -865,7 +893,7 @@ ADDED wipi/host/Overlay.class (1150 B)
 ADDED wipi/host/Res.class (2076 B)
 ADDED wipi/host/Sheet.class (3505 B)
 ADDED wipi/host/Snd.class (4214 B)
-ADDED wipi/host/Store.class (5355 B)
+ADDED wipi/host/Store.class (6581 B)
 ADDED wipi/host/Str$File.class (608 B)
 ADDED wipi/host/Str.class (7028 B)
 ADDED wipi/host/Sys.class (681 B)
@@ -875,4 +903,4 @@ ADDED wipi/skt/AudioClip.class (281 B)
 ADDED wipi/skt/AudioSystem.class (610 B)
 ADDED wipi/skt/Clip.class (863 B)
 ADDED wipi/skt/Device.class (343 B)
-SUMMARY classes: 4 identical code, 16 changed [CharacterDat.class, Effect.class, GameCanvas.class, ImageData.class, MapDat.class, NPC.class, NetWork.class, Pet.class, SoundPlayer.class, TheFarm2.class, gxg/GXGNet.class, gxg/Header.class, gxg/InitConfirm.class, gxg/MyPricingQueryConfirm.class, gxg/PricingBuyConfirm.class, gxg/PricingQueryConfirm.class]; resources: 162 identical, 166 changed; entries added 431, removed 0
+SUMMARY classes: 4 identical code, 16 changed [CharacterDat.class, Effect.class, GameCanvas.class, ImageData.class, MapDat.class, NPC.class, NetWork.class, Pet.class, SoundPlayer.class, TheFarm2.class, gxg/GXGNet.class, gxg/Header.class, gxg/InitConfirm.class, gxg/MyPricingQueryConfirm.class, gxg/PricingBuyConfirm.class, gxg/PricingQueryConfirm.class]; resources: 162 identical, 166 changed; entries added 437, removed 0

@@ -6,9 +6,22 @@ GameCanvas.DrawMenuItem(Lorg/kwis/msp/lcdui/Graphics;)V: body (360 insns) -> UiT
 GameCanvas.paint(Lorg/kwis/msp/lcdui/Graphics;)V: body (3829 insns) -> UiPaint.paint(LGameCanvas;Lorg/kwis/msp/lcdui/Graphics;)V
 GameCanvas.DrawTalk(Lorg/kwis/msp/lcdui/Graphics;)V: body (548 insns) -> UiTalk.DrawTalk(LGameCanvas;Lorg/kwis/msp/lcdui/Graphics;)V
 GameCanvas.DrawMiniTime(Lorg/kwis/msp/lcdui/Graphics;II)V: body (119 insns) -> UiHud.DrawMiniTime(LGameCanvas;Lorg/kwis/msp/lcdui/Graphics;II)V
+GameCanvas.DrawGameMenu(Lorg/kwis/msp/lcdui/Graphics;)V: body (206 insns) -> UiGM.DrawGameMenu(LGameCanvas;Lorg/kwis/msp/lcdui/Graphics;)V
+GameCanvas.LoadPetInfo(I)V: body (244 insns) -> UiGM.LoadPetInfo(LGameCanvas;I)V
+GameCanvas.MakeQuestExplan()V: body (186 insns) -> UiGM.MakeQuestExplan(LGameCanvas;)V
+GameCanvas.DrawPoint(Lorg/kwis/msp/lcdui/Graphics;)V: body (4396 insns) -> UiGM.DrawPoint(LGameCanvas;Lorg/kwis/msp/lcdui/Graphics;)V
+GameCanvas.MakeSubBuf()V: body (172 insns) -> UiGM.MakeSubBuf(LGameCanvas;)V
 GameCanvas.LoadExplanDat()V: body (843 insns) -> UiTitle.LoadExplanDat(LGameCanvas;)V
+GameCanvas.MakeGameMenu(Lorg/kwis/msp/lcdui/Graphics;)V: body (1078 insns) -> UiGM.MakeGameMenu(LGameCanvas;Lorg/kwis/msp/lcdui/Graphics;)V
+GameCanvas.MakePetShop(Lorg/kwis/msp/lcdui/Graphics;)V: body (270 insns) -> UiGM.MakePetShop(LGameCanvas;Lorg/kwis/msp/lcdui/Graphics;)V
+GameCanvas.MakeSkillShop(Lorg/kwis/msp/lcdui/Graphics;)V: body (324 insns) -> UiGM.MakeSkillShop(LGameCanvas;Lorg/kwis/msp/lcdui/Graphics;)V
+GameCanvas.MakeShopMenu(Lorg/kwis/msp/lcdui/Graphics;I)V: body (532 insns) -> UiGM.MakeShopMenu(LGameCanvas;Lorg/kwis/msp/lcdui/Graphics;I)V
 GameCanvas.DrawPopup(Lorg/kwis/msp/lcdui/Graphics;)V: body (121 insns) -> UiTalk.DrawPopup(LGameCanvas;Lorg/kwis/msp/lcdui/Graphics;)V
 GameCanvas.LoadMini(I)V: java/lang/Class.getResourceAsStream -> wipi/host/Res.open(Ljava/lang/Class;Ljava/lang/String;)Ljava/io/InputStream;
+GameCanvas.LoadSkillShop(I)V: org/kwis/msp/lcdui/Image.createImage -> UiGM.buf(II)Lorg/kwis/msp/lcdui/Image;
+GameCanvas.LoadPetShop()V: org/kwis/msp/lcdui/Image.createImage -> UiGM.buf(II)Lorg/kwis/msp/lcdui/Image;
+GameCanvas.LoadShopMenu(I)V: org/kwis/msp/lcdui/Image.createImage -> UiGM.buf(II)Lorg/kwis/msp/lcdui/Image;
+GameCanvas.LoadGameMenu(I)V: org/kwis/msp/lcdui/Image.createImage -> UiGM.buf(II)Lorg/kwis/msp/lcdui/Image;
 GameCanvas: com/skt/m/* -> wipi/skt/*
 ImageData.LoadMini(I)V: java/lang/Class.getResourceAsStream -> wipi/host/Res.open(Ljava/lang/Class;Ljava/lang/String;)Ljava/io/InputStream;
 ImageData.LoadPetShop(I)V: java/lang/Class.getResourceAsStream -> wipi/host/Res.open(Ljava/lang/Class;Ljava/lang/String;)Ljava/io/InputStream;
@@ -91,6 +104,10 @@ gxg/PricingQueryConfirm.getMessage()Ljava/lang/String;: new String([B) -> wipi/h
 rule java/lang/Class.getResourceAsStream: 34
 rule java/lang/System.getProperty: 5
 rule javax/microedition/io/Connector.open: 1
-rule body -> Ui: 9
+rule org/kwis/msp/lcdui/Image.createImage @GameCanvas.LoadGameMenu(I)V: 1
+rule org/kwis/msp/lcdui/Image.createImage @GameCanvas.LoadShopMenu(I)V: 1
+rule org/kwis/msp/lcdui/Image.createImage @GameCanvas.LoadSkillShop(I)V: 1
+rule org/kwis/msp/lcdui/Image.createImage @GameCanvas.LoadPetShop()V: 1
+rule body -> Ui: 18
 rule new String(byte[]..) -> Enc.str: 23, -> Enc.txt: 15
-rule literal -> Str.lit: 361 sites, 283 texts
+rule literal -> Str.lit: 397 sites, 318 texts

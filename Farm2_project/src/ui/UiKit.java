@@ -223,6 +223,43 @@ final class UiKit {
         return w;
     }
 
+    /** Width of a money value written with '.' thousands separators. */
+    static int moneyW(int v) {
+        int k = nb.length, w = 0, d = 0;
+        long u = v < 0 ? -(long) v : v;
+        do {
+            w += Txt.charWidth((char) ('0' + (int) (u % 10)));
+            u /= 10;
+            if (++d % 3 == 0 && u > 0) {
+                w += Txt.charWidth('.');
+            }
+        } while (u > 0);
+        return v < 0 ? w + Txt.charWidth('-') : w;
+    }
+
+    private static final char[] mb = new char[20];
+
+    /** Draws a money value with '.' separators at (x, y) left-aligned; returns its width. */
+    static int money(org.kwis.msp.lcdui.Graphics g, int v, int x, int y, int rgb) {
+        int k = mb.length, d = 0;
+        long u = v < 0 ? -(long) v : v;
+        do {
+            mb[--k] = (char) ('0' + (int) (u % 10));
+            u /= 10;
+            if (++d % 3 == 0 && u > 0) {
+                mb[--k] = '.';
+            }
+        } while (u > 0);
+        if (v < 0) {
+            mb[--k] = '-';
+        }
+        int x0 = x;
+        for (int i = k; i < mb.length; i++) {
+            x += Txt.drawChar(g.g, mb[i], x, y, rgb);
+        }
+        return x - x0;
+    }
+
     /** "+n" / "-n" with a dark outline (floating numbers over the map). */
     static void signed(org.kwis.msp.lcdui.Graphics g, int v, int x, int y, int rgb) {
         for (int d = 0; d < 4; d++) {
