@@ -1,3 +1,29 @@
+CLASS CharacterDat.class
+  method <init>(LGameCanvas;)V:
+    instructions 216 -> 218
+  method ActionOk()V:
+    instructions 559 -> 561
+  method CheckDownAction()B:
+    instructions 336 -> 352
+  method CheckScript()V:
+    instructions 170 -> 172
+  method DrawCh(Lorg/kwis/msp/lcdui/Graphics;LImageData;)V:
+    instructions 5437 -> 5441
+  method EndQuest()V:
+    instructions 79 -> 81
+  method EndWork()V:
+    instructions 3329 -> 3333
+  method MapCheck(I)Z:
+    instructions 173 -> 177
+  method NextQuest()V:
+    instructions 51 -> 53
+  method PlayCh()V:
+    instructions 2232 -> 2244
+  method Scriptcheck(I)I:
+    instructions 616 -> 642
+  method SubTalk(III)V:
+    instructions 1008 -> 1112
+
 RESOURCE CHANGED Data/NPC/0.dat 18737 -> 18737
 RESOURCE CHANGED Data/NPC/1.dat 26875 -> 26875
 RESOURCE CHANGED Data/NPC/2.dat 25266 -> 25266
@@ -37,11 +63,63 @@ CLASS Effect.class
     + INVOKESTATIC wipi/host/Res.open (Ljava/lang/Class;Ljava/lang/String;)Ljava/io/InputStream;
 
 CLASS GameCanvas.class
+  method <init>(LTheFarm2;)V:
+    instructions 616 -> 726
+  method BuySeed(I)V:
+    instructions 83 -> 85
+  method DrawDownAction(Lorg/kwis/msp/lcdui/Graphics;)V:
+    instructions 854 -> 856
+  method DrawEnding0(Lorg/kwis/msp/lcdui/Graphics;)V:
+    instructions 60 -> 62
+  method DrawEnding2(Lorg/kwis/msp/lcdui/Graphics;)V:
+    instructions 368 -> 382
+  method DrawInven(Lorg/kwis/msp/lcdui/Graphics;I)V:
+    instructions 1506 -> 1520
+  method DrawMiniTime(Lorg/kwis/msp/lcdui/Graphics;II)V:
+    instructions 108 -> 110
+  method DrawPoint(Lorg/kwis/msp/lcdui/Graphics;)V:
+    instructions 4148 -> 4194
+  method DrawPointBox(Lorg/kwis/msp/lcdui/Graphics;)V:
+    instructions 201 -> 203
+  method DrawTitle(Lorg/kwis/msp/lcdui/Graphics;)V:
+    instructions 833 -> 837
+  method GameKey()V:
+    instructions 345 -> 347
+  method GameMenuKey()V:
+    instructions 2817 -> 2849
+  method InvenKey(I)V:
+    instructions 352 -> 354
   method LoadExplanDat()V:
-    instructions 762 -> 760
+    instructions 762 -> 778
+  method LoadGame(I)V:
+    instructions 1188 -> 1196
+  method LoadKey()V:
+    instructions 419 -> 421
+  method LoadLotto(Z)V:
+    instructions 904 -> 908
   method LoadMini(I)V:
     - INVOKEVIRTUAL java/lang/Class.getResourceAsStream (Ljava/lang/String;)Ljava/io/InputStream;
     + INVOKESTATIC wipi/host/Res.open (Ljava/lang/Class;Ljava/lang/String;)Ljava/io/InputStream;
+  method LoadPoint()I:
+    instructions 135 -> 137
+  method MakeGameMenu(Lorg/kwis/msp/lcdui/Graphics;)V:
+    instructions 962 -> 966
+  method MakeQuestExplan()V:
+    instructions 161 -> 163
+  method MakeSkillShop(Lorg/kwis/msp/lcdui/Graphics;)V:
+    instructions 296 -> 302
+  method MakeTheFarmSub(Lorg/kwis/msp/lcdui/Graphics;IIII)V:
+    instructions 357 -> 377
+  method PlayGame(Lorg/kwis/msp/lcdui/Graphics;)V:
+    instructions 773 -> 775
+  method PlayMini0(Lorg/kwis/msp/lcdui/Graphics;)V:
+    instructions 443 -> 461
+  method PlayMini1(Lorg/kwis/msp/lcdui/Graphics;)V:
+    instructions 1084 -> 1100
+  method PlayMini2(Lorg/kwis/msp/lcdui/Graphics;)V:
+    instructions 795 -> 813
+  method SaveGame(Z)V:
+    instructions 1117 -> 1123
   method keyNotify(II)Z:
     - INVOKESTATIC com/skt/m/Device.invokeWapBrowser (Ljava/lang/String;)V
     + INVOKESTATIC wipi/skt/Device.invokeWapBrowser (Ljava/lang/String;)V
@@ -49,6 +127,8 @@ CLASS GameCanvas.class
     + INVOKESTATIC wipi/skt/Device.invokeWapBrowser (Ljava/lang/String;)V
     - INVOKESTATIC com/skt/m/Device.invokeWapBrowser (Ljava/lang/String;)V
     + INVOKESTATIC wipi/skt/Device.invokeWapBrowser (Ljava/lang/String;)V
+  method paint(Lorg/kwis/msp/lcdui/Graphics;)V:
+    instructions 3473 -> 3613
 
 RESOURCE CHANGED Image/Ch/ChOpen.dat 25326 -> 25326
 RESOURCE CHANGED Image/Ch/ChStandard.dat 10616 -> 10616
@@ -197,11 +277,17 @@ CLASS MapDat.class
     instructions 238 -> 234
   method LoadSkill()V:
     instructions 152 -> 150
+  method PopUpOk(II)V:
+    instructions 2406 -> 2418
   method SetMap()V:
     - INVOKEVIRTUAL java/lang/Class.getResourceAsStream (Ljava/lang/String;)Ljava/io/InputStream;
     + INVOKESTATIC wipi/host/Res.open (Ljava/lang/Class;Ljava/lang/String;)Ljava/io/InputStream;
 
 CLASS NPC.class
+  method CheckQuest(I)V:
+    instructions 5302 -> 5318
+  method DrawNPC(Lorg/kwis/msp/lcdui/Graphics;I)V:
+    instructions 3874 -> 3876
   method LoadAnimation(I)V:
     instructions 102 -> 100
   method LoadData(Ljava/lang/String;I)[B:
@@ -211,6 +297,8 @@ CLASS NPC.class
     instructions 389 -> 385
   method NPCSetup(I)V:
     instructions 328 -> 326
+  method TScript()V:
+    instructions 1663 -> 1673
 
 CLASS NetWork.class
   method GetPhonenum()Ljava/lang/String;:
@@ -232,6 +320,8 @@ CLASS NetWork.class
 CLASS Pet.class
   method CheckVersion()V:
     instructions 176 -> 174
+  method DrawAllPet(Lorg/kwis/msp/lcdui/Graphics;I)V:
+    instructions 478 -> 480
   method LoadPet2(II)V:
     - INVOKEVIRTUAL java/lang/Class.getResourceAsStream (Ljava/lang/String;)Ljava/io/InputStream;
     + INVOKESTATIC wipi/host/Res.open (Ljava/lang/Class;Ljava/lang/String;)Ljava/io/InputStream;
@@ -624,7 +714,7 @@ ADDED org/kwis/msp/lcdui/Card.class (1300 B)
 ADDED org/kwis/msp/lcdui/Display.class (2302 B)
 ADDED org/kwis/msp/lcdui/Font.class (2153 B)
 ADDED org/kwis/msp/lcdui/Graphics.class (7694 B)
-ADDED org/kwis/msp/lcdui/Image.class (4093 B)
+ADDED org/kwis/msp/lcdui/Image.class (4188 B)
 ADDED org/kwis/msp/lcdui/Jlet.class (1090 B)
 ADDED org/kwis/msp/lwc/AnnunciatorComponent.class (381 B)
 ADDED org/kwis/msp/media/Vibrator.class (369 B)
@@ -659,8 +749,91 @@ ADDED snd/m6.wav (6492 B)
 ADDED snd/m7.wav (2924 B)
 ADDED snd/m8.wav (3024 B)
 ADDED snd/m9.mid (174 B)
+ADDED text/anim.txt (508 B)
+ADDED text/crop.txt (811 B)
+ADDED text/explan.txt (3267 B)
+ADDED text/index.bin (29710 B)
+ADDED text/item.txt (407 B)
+ADDED text/map_name.txt (832 B)
+ADDED text/npc_name.txt (2519 B)
+ADDED text/pet_name.txt (465 B)
+ADDED text/petskill.txt (1491 B)
+ADDED text/popup.txt (2577 B)
+ADDED text/popup1.txt (2610 B)
+ADDED text/qexplan.txt (11364 B)
+ADDED text/quest.txt (1423 B)
+ADDED text/skill.txt (758 B)
+ADDED text/talk_0_00.txt (523 B)
+ADDED text/talk_0_01.txt (468 B)
+ADDED text/talk_0_02.txt (5174 B)
+ADDED text/talk_0_03.txt (9465 B)
+ADDED text/talk_0_04.txt (3292 B)
+ADDED text/talk_0_05.txt (3372 B)
+ADDED text/talk_0_06.txt (6257 B)
+ADDED text/talk_0_07.txt (1396 B)
+ADDED text/talk_0_08.txt (6640 B)
+ADDED text/talk_0_09.txt (1549 B)
+ADDED text/talk_1_00.txt (3789 B)
+ADDED text/talk_1_01.txt (3860 B)
+ADDED text/talk_1_02.txt (1722 B)
+ADDED text/talk_1_03.txt (6868 B)
+ADDED text/talk_1_04.txt (1230 B)
+ADDED text/talk_1_05.txt (550 B)
+ADDED text/talk_1_06.txt (255 B)
+ADDED text/talk_1_07.txt (1079 B)
+ADDED text/talk_1_08.txt (3560 B)
+ADDED text/talk_1_09.txt (666 B)
+ADDED text/talk_1_10.txt (415 B)
+ADDED text/talk_1_11.txt (4452 B)
+ADDED text/talk_1_12.txt (5125 B)
+ADDED text/talk_1_13.txt (5631 B)
+ADDED text/talk_1_14.txt (2760 B)
+ADDED text/talk_2_00.txt (1676 B)
+ADDED text/talk_2_01.txt (740 B)
+ADDED text/talk_2_02.txt (2705 B)
+ADDED text/talk_2_03.txt (4704 B)
+ADDED text/talk_2_04.txt (2046 B)
+ADDED text/talk_2_05.txt (1261 B)
+ADDED text/talk_2_06.txt (1845 B)
+ADDED text/talk_2_07.txt (680 B)
+ADDED text/talk_2_08.txt (4847 B)
+ADDED text/talk_2_09.txt (966 B)
+ADDED text/talk_2_10.txt (3090 B)
+ADDED text/talk_2_11.txt (1003 B)
+ADDED text/talk_2_12.txt (1347 B)
+ADDED text/talk_2_13.txt (1221 B)
+ADDED text/talk_2_14.txt (4462 B)
+ADDED text/talk_2_15.txt (1196 B)
+ADDED text/talk_2_16.txt (1293 B)
+ADDED text/talk_2_17.txt (2904 B)
+ADDED text/talk_2_18.txt (1296 B)
+ADDED text/talk_2_19.txt (4706 B)
+ADDED text/talk_3_00.txt (2341 B)
+ADDED text/talk_3_01.txt (1265 B)
+ADDED text/talk_3_02.txt (3937 B)
+ADDED text/talk_3_03.txt (1406 B)
+ADDED text/talk_3_04.txt (1216 B)
+ADDED text/talk_3_05.txt (1825 B)
+ADDED text/talk_3_06.txt (223 B)
+ADDED text/talk_3_07.txt (2936 B)
+ADDED text/talk_3_08.txt (678 B)
+ADDED text/talk_3_09.txt (590 B)
+ADDED text/talk_3_10.txt (3595 B)
+ADDED text/talk_3_11.txt (618 B)
+ADDED text/talk_3_12.txt (470 B)
+ADDED text/talk_3_13.txt (1636 B)
+ADDED text/talk_3_14.txt (347 B)
+ADDED text/talk_3_15.txt (268 B)
+ADDED text/talk_3_16.txt (282 B)
+ADDED text/talk_3_17.txt (1061 B)
+ADDED text/talk_3_18.txt (849 B)
+ADDED text/talk_3_19.txt (240 B)
+ADDED text/talk_3_20.txt (3614 B)
+ADDED text/talk_3_21.txt (2671 B)
+ADDED text/talk_T0.txt (39099 B)
+ADDED text/ui.txt (7199 B)
 ADDED wipi/host/BitmapFont.class (10821 B)
-ADDED wipi/host/Enc.class (2199 B)
+ADDED wipi/host/Enc.class (2512 B)
 ADDED wipi/host/FakeGxg$1.class (1187 B)
 ADDED wipi/host/FakeGxg$2.class (1075 B)
 ADDED wipi/host/FakeGxg.class (4344 B)
@@ -675,6 +848,8 @@ ADDED wipi/host/Res.class (2076 B)
 ADDED wipi/host/Sheet.class (3505 B)
 ADDED wipi/host/Snd.class (4214 B)
 ADDED wipi/host/Store.class (5355 B)
+ADDED wipi/host/Str$File.class (608 B)
+ADDED wipi/host/Str.class (7028 B)
 ADDED wipi/host/Sys.class (681 B)
 ADDED wipi/host/Touch.class (366 B)
 ADDED wipi/host/Txt.class (2891 B)
@@ -682,4 +857,4 @@ ADDED wipi/skt/AudioClip.class (281 B)
 ADDED wipi/skt/AudioSystem.class (610 B)
 ADDED wipi/skt/Clip.class (863 B)
 ADDED wipi/skt/Device.class (343 B)
-SUMMARY classes: 5 identical code, 15 changed [Effect.class, GameCanvas.class, ImageData.class, MapDat.class, NPC.class, NetWork.class, Pet.class, SoundPlayer.class, TheFarm2.class, gxg/GXGNet.class, gxg/Header.class, gxg/InitConfirm.class, gxg/MyPricingQueryConfirm.class, gxg/PricingBuyConfirm.class, gxg/PricingQueryConfirm.class]; resources: 162 identical, 166 changed; entries added 340, removed 0
+SUMMARY classes: 4 identical code, 16 changed [CharacterDat.class, Effect.class, GameCanvas.class, ImageData.class, MapDat.class, NPC.class, NetWork.class, Pet.class, SoundPlayer.class, TheFarm2.class, gxg/GXGNet.class, gxg/Header.class, gxg/InitConfirm.class, gxg/MyPricingQueryConfirm.class, gxg/PricingBuyConfirm.class, gxg/PricingQueryConfirm.class]; resources: 162 identical, 166 changed; entries added 425, removed 0

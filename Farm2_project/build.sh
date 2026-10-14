@@ -36,11 +36,18 @@ java -jar "$L/ecj-4.6.1.jar" -source 1.3 -target 1.2 -nowarn -bootclasspath "$AP
      -cp "$W/game_in" -d "$W/cls" $SRC
 
 echo "== 3. remap platform call sites in the game classes"
-java -cp "$W/tools:$ASM" Remap "$W/game_in" "$W/game" "$W/remap.txt" ${HOOKS:+"$HOOKS"}
+java -Dui="$W/res/text/ui.txt" -cp "$W/tools:$ASM" Remap "$W/game_in" "$W/game" "$W/remap.txt" ${HOOKS:+"$HOOKS"}
 
 echo "== 3b. text encoding table (CP949 codes used by the game data)"
 mkdir -p "$W/res/enc"
 python3 "$P/tools/encmap.py" "$W/jar" "$W/res/enc/map.bin" ${ENC_EXTRA:+"$ENC_EXTRA"}
+
+echo "== 3c. game text -> plain UTF-8 .txt files (+ hash index) read at run time"
+python3 -I "$P/tools/textx.py" "$W/jar" "$W/res" "$W/textx.txt" "$W/textvec.txt"
+mkdir -p "$W/encres"; cp -r "$W/res/text" "$W/res/enc" "$W/encres/"
+
+echo "== 3d. text layer check: port's Enc.txt == Enc.str for every game string (unedited .txt)"
+java -cp "$W/cls:$W/encres:$W/tools" TextCheck "$W/textvec.txt"
 
 echo "== 4. sounds (SMAF -> MIDI/WAV)"
 java -cp "$W/tools" SndConvert "$W/jar/Sound" "$W/res" > "$W/sound.txt"
@@ -97,3 +104,4 @@ echo "== 8. binary diff vs original"
 java -cp "$W/tools:$ASM" BinDiff "$W/orig.jar" "$OUT/$NAME.jar" "$P/build/reports/bindiff_$NAME.txt"
 cp "$W/remap.txt" "$P/build/reports/remap_$NAME.txt"
 cp "$W/unpack.txt" "$P/build/reports/unpack_$NAME.txt"
+cp "$W/textx.txt" "$P/build/reports/textx_$NAME.txt"

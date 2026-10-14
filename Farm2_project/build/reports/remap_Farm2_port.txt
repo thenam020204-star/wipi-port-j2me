@@ -1,7 +1,7 @@
 Effect.LoadImg(II)V: java/lang/Class.getResourceAsStream -> wipi/host/Res.open(Ljava/lang/Class;Ljava/lang/String;)Ljava/io/InputStream;
 Effect.LoadImg(II)V: java/lang/Class.getResourceAsStream -> wipi/host/Res.open(Ljava/lang/Class;Ljava/lang/String;)Ljava/io/InputStream;
 Effect.LoadImg(II)V: java/lang/Class.getResourceAsStream -> wipi/host/Res.open(Ljava/lang/Class;Ljava/lang/String;)Ljava/io/InputStream;
-GameCanvas.LoadExplanDat()V: new String([B) -> wipi/host/Enc.str
+GameCanvas.LoadExplanDat()V: new String([B) -> wipi/host/Enc.txt
 GameCanvas.LoadMini(I)V: java/lang/Class.getResourceAsStream -> wipi/host/Res.open(Ljava/lang/Class;Ljava/lang/String;)Ljava/io/InputStream;
 GameCanvas.LoadExplanDat()V: java/lang/Class.getResourceAsStream -> wipi/host/Res.open(Ljava/lang/Class;Ljava/lang/String;)Ljava/io/InputStream;
 GameCanvas: com/skt/m/* -> wipi/skt/*
@@ -15,15 +15,15 @@ ImageData.LoadTileObject(ILjava/lang/String;III[B)V: java/lang/Class.getResource
 ImageData.LoadTileObject(ILjava/lang/String;III[B)V: java/lang/Class.getResourceAsStream -> wipi/host/Res.open(Ljava/lang/Class;Ljava/lang/String;)Ljava/io/InputStream;
 ImageData.LoadTileObject(ILjava/lang/String;III[B)V: java/lang/Class.getResourceAsStream -> wipi/host/Res.open(Ljava/lang/Class;Ljava/lang/String;)Ljava/io/InputStream;
 ImageData.LoadMap(Ljava/lang/String;I)V: java/lang/Class.getResourceAsStream -> wipi/host/Res.open(Ljava/lang/Class;Ljava/lang/String;)Ljava/io/InputStream;
-MapDat.LoadMap(I)V: new String([B) -> wipi/host/Enc.str
-MapDat.LoadMap(I)V: new String([B) -> wipi/host/Enc.str
-MapDat.LoadMap(I)V: new String([B) -> wipi/host/Enc.str
-MapDat.LoadCropData()V: new String([B) -> wipi/host/Enc.str
-MapDat.LoadSkill()V: new String([B) -> wipi/host/Enc.str
-MapDat.LoadQuest(I)V: new String([B) -> wipi/host/Enc.str
-MapDat.LoadQuest(I)V: new String([B) -> wipi/host/Enc.str
-MapDat.LoadItemName(I)V: new String([B) -> wipi/host/Enc.str
-MapDat.LoadPopup(III)V: new String([B) -> wipi/host/Enc.str
+MapDat.LoadMap(I)V: new String([B) -> wipi/host/Enc.txt
+MapDat.LoadMap(I)V: new String([B) -> wipi/host/Enc.txt
+MapDat.LoadMap(I)V: new String([B) -> wipi/host/Enc.txt
+MapDat.LoadCropData()V: new String([B) -> wipi/host/Enc.txt
+MapDat.LoadSkill()V: new String([B) -> wipi/host/Enc.txt
+MapDat.LoadQuest(I)V: new String([B) -> wipi/host/Enc.txt
+MapDat.LoadQuest(I)V: new String([B) -> wipi/host/Enc.txt
+MapDat.LoadItemName(I)V: new String([B) -> wipi/host/Enc.txt
+MapDat.LoadPopup(III)V: new String([B) -> wipi/host/Enc.txt
 MapDat.SetMap()V: java/lang/Class.getResourceAsStream -> wipi/host/Res.open(Ljava/lang/Class;Ljava/lang/String;)Ljava/io/InputStream;
 MapDat.LoadMap(I)V: java/lang/Class.getResourceAsStream -> wipi/host/Res.open(Ljava/lang/Class;Ljava/lang/String;)Ljava/io/InputStream;
 MapDat.LoadMap(I)V: java/lang/Class.getResourceAsStream -> wipi/host/Res.open(Ljava/lang/Class;Ljava/lang/String;)Ljava/io/InputStream;
@@ -35,10 +35,10 @@ MapDat.LoadQuest(I)V: java/lang/Class.getResourceAsStream -> wipi/host/Res.open(
 MapDat.LoadItemName(I)V: java/lang/Class.getResourceAsStream -> wipi/host/Res.open(Ljava/lang/Class;Ljava/lang/String;)Ljava/io/InputStream;
 MapDat.LoadPopup(III)V: java/lang/Class.getResourceAsStream -> wipi/host/Res.open(Ljava/lang/Class;Ljava/lang/String;)Ljava/io/InputStream;
 MapDat.LoadPopup(III)V: java/lang/Class.getResourceAsStream -> wipi/host/Res.open(Ljava/lang/Class;Ljava/lang/String;)Ljava/io/InputStream;
-NPC.NPCSetup(I)V: new String([B) -> wipi/host/Enc.str
-NPC.LoadTalk(IILjava/lang/String;)V: new String([B) -> wipi/host/Enc.str
-NPC.LoadTalk(IILjava/lang/String;)V: new String([B) -> wipi/host/Enc.str
-NPC.LoadAnimation(I)V: new String([B) -> wipi/host/Enc.str
+NPC.NPCSetup(I)V: new String([B) -> wipi/host/Enc.txt
+NPC.LoadTalk(IILjava/lang/String;)V: new String([B) -> wipi/host/Enc.txt
+NPC.LoadTalk(IILjava/lang/String;)V: new String([B) -> wipi/host/Enc.txt
+NPC.LoadAnimation(I)V: new String([B) -> wipi/host/Enc.txt
 NPC.LoadData(Ljava/lang/String;I)[B: java/lang/Class.getResourceAsStream -> wipi/host/Res.open(Ljava/lang/Class;Ljava/lang/String;)Ljava/io/InputStream;
 NPC.LoadTalk(IILjava/lang/String;)V: java/lang/Class.getResourceAsStream -> wipi/host/Res.open(Ljava/lang/Class;Ljava/lang/String;)Ljava/io/InputStream;
 NPC.LoadAnimation(I)V: java/lang/Class.getResourceAsStream -> wipi/host/Res.open(Ljava/lang/Class;Ljava/lang/String;)Ljava/io/InputStream;
@@ -49,8 +49,8 @@ NetWork.GetPhonenum()Ljava/lang/String;: java/lang/System.getProperty -> wipi/ho
 NetWork.GetPhonenum()Ljava/lang/String;: java/lang/System.getProperty -> wipi/host/Sys.getProperty(Ljava/lang/String;)Ljava/lang/String;
 NetWork.GetPhonenum()Ljava/lang/String;: java/lang/System.getProperty -> wipi/host/Sys.getProperty(Ljava/lang/String;)Ljava/lang/String;
 NetWork.GetPhonenum()Ljava/lang/String;: java/lang/System.getProperty -> wipi/host/Sys.getProperty(Ljava/lang/String;)Ljava/lang/String;
-Pet.CheckVersion()V: new String([B) -> wipi/host/Enc.str
-Pet.LoadSkillExplan()V: new String([B) -> wipi/host/Enc.str
+Pet.CheckVersion()V: new String([B) -> wipi/host/Enc.txt
+Pet.LoadSkillExplan()V: new String([B) -> wipi/host/Enc.txt
 Pet.CheckVersion()V: java/lang/Class.getResourceAsStream -> wipi/host/Res.open(Ljava/lang/Class;Ljava/lang/String;)Ljava/io/InputStream;
 Pet.LoadPet2(II)V: java/lang/Class.getResourceAsStream -> wipi/host/Res.open(Ljava/lang/Class;Ljava/lang/String;)Ljava/io/InputStream;
 Pet.LoadSkillExplan()V: java/lang/Class.getResourceAsStream -> wipi/host/Res.open(Ljava/lang/Class;Ljava/lang/String;)Ljava/io/InputStream;
@@ -83,4 +83,5 @@ gxg/PricingQueryConfirm.getMessage()Ljava/lang/String;: new String([B) -> wipi/h
 rule java/lang/Class.getResourceAsStream: 34
 rule java/lang/System.getProperty: 5
 rule javax/microedition/io/Connector.open: 1
-rule new String(byte[]..) -> Enc.str: 39
+rule new String(byte[]..) -> Enc.str: 23, -> Enc.txt: 16
+rule literal -> Str.lit: 361 sites, 284 texts

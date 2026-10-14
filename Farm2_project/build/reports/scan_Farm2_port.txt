@@ -1,4 +1,4 @@
-classes 57, methods 727, member refs 27357
+classes 59, methods 740, member refs 27835
 WARN  org/kwis/msp/lcdui/Graphics.drawImage(Lorg/kwis/msp/lcdui/Image;III)V: 1 allocation(s) in a paint path
 WARN  org/kwis/msp/lcdui/Graphics.drawString(Ljava/lang/String;III)V: 1 allocation(s) in a paint path
 WARN  org/kwis/msp/lcdui/Graphics.drawChars([CIIIII)V: 1 allocation(s) in a paint path

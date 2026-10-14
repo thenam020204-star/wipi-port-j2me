@@ -31,6 +31,15 @@ import org.objectweb.asm.commons.SimpleRemapper;
  *     (WIPI decodes bytes as KSC5601/CP949; J2ME phones have no Korean codec).
  *     The NEW/DUP pair is removed and invokespecial <init> becomes invokestatic:
  *     same operand stack before and after.
+ *  3c. at the call sites that read game TEXT (TEXT_SITES) the redirect goes to
+ *     wipi/host/Enc.txt instead, which serves the string from /text/*.txt
+ *     (tools/textx.py); scripts read by the same sites miss the index and
+ *     decode as before.
+ *  3d. with -Dui=<ui.txt>: every displayed string literal (non-ASCII, plus the
+ *     ASCII ones in UI_ASCII, all checked to be display-only) becomes
+ *     ldc "lit"; sipush id; invokestatic wipi/host/Str.lit(String,int) and is
+ *     written to ui.txt as "id=text" (same text -> same id, so literal
+ *     comparisons such as DownMent.equals("...") still hold after editing).
  *  4. class rename com/skt/m/* -> wipi/skt/* (emulators such as FreeJ2ME ship
  *     their own com.skt.m classes, which would shadow the port's audio layer)
  *  5. extra hooks from a hook list file (UI layer), see Hooks.txt format:
@@ -59,6 +68,23 @@ public class Remap {
 
     static List<Rule> rules = new ArrayList<Rule>();
 
+    /** Methods whose new String(byte[]..) read game text (see tools/textx.py for the formats). */
+    static final java.util.Set<String> TEXT_SITES = new java.util.HashSet<String>(java.util.Arrays.asList(
+            "GameCanvas.LoadExplanDat()V", "MapDat.LoadCropData()V", "MapDat.LoadItemName(I)V",
+            "MapDat.LoadMap(I)V", "MapDat.LoadPopup(III)V", "MapDat.LoadQuest(I)V", "MapDat.LoadSkill()V",
+            "NPC.LoadAnimation(I)V", "NPC.LoadTalk(IILjava/lang/String;)V", "NPC.NPCSetup(I)V",
+            "Pet.CheckVersion()V", "Pet.LoadSkillExplan()V"));
+
+    /** ASCII literals that are only ever drawn (contexts reviewed: drawString/TalkSet/append-for-display). */
+    static final java.util.Set<String> UI_ASCII = new java.util.HashSet<String>(java.util.Arrays.asList(
+            "PM / Program", "Bhang mo-gun", "Main Design", "Lee mo-yang", "Sub / Interface Design", "Lee mo-gun",
+            "Scenario", "GowArts", "JanSoRi", "GowArts, Sa Jang-nim", "Q/A", "Com2us Q/A Team", "Special Thanks",
+            "You", "Press Any Key", "OK", "THE END", "Lv.", " Lv.", "???"));
+
+    static java.util.LinkedHashMap<String, Integer> lits = new java.util.LinkedHashMap<String, Integer>();
+    static java.util.Map<Integer, String> litWhere = new java.util.HashMap<Integer, String>();
+    static int litSites, txtSites;
+
     public static void main(String[] a) throws Exception {
         rules.add(new Rule(Opcodes.INVOKEVIRTUAL, "java/lang/Class", "getResourceAsStream",
                 "(Ljava/lang/String;)Ljava/io/InputStream;", "wipi/host/Res", "open",
@@ -84,6 +110,11 @@ public class Remap {
             int changed = 0;
             for (MethodNode m : cn.methods) {
                 changed += stringCtors(cn, m, rep);
+            }
+            if (System.getProperty("ui") != null && !cn.name.startsWith("gxg/")) {
+                for (MethodNode m : cn.methods) {
+                    changed += literals(cn, m);
+                }
             }
             for (MethodNode m : cn.methods) {
                 for (AbstractInsnNode i = m.instructions.getFirst(); i != null; i = i.getNext()) {
@@ -115,7 +146,7 @@ public class Remap {
             if (changed == 0 && !ren) {
                 Files.write(o.toPath(), b); // untouched: byte-identical copy
             } else {
-                ClassWriter cw = new ClassWriter(0); // same stack/locals, no frames for v45
+                ClassWriter cw = new ClassWriter(ClassWriter.COMPUTE_MAXS); // literal hooks need +1 stack; no frames for v45
                 if (ren) {
                     java.util.Map<String, String> map = new java.util.HashMap<String, String>();
                     for (String k : new String[] { "AudioClip", "AudioSystem", "Device" }) {
@@ -133,8 +164,15 @@ public class Remap {
             rep.println("rule " + r.owner + "." + r.name + (r.where != null ? " @" + r.where : "") + ": " + r.count);
             System.out.println("remap " + r.owner + "." + r.name + " -> " + r.nOwner + "." + r.nName + ": " + r.count);
         }
-        rep.println("rule new String(byte[]..) -> Enc.str: " + strCount);
-        System.out.println("remap new String(byte[]..) -> wipi/host/Enc.str: " + strCount);
+        rep.println("rule new String(byte[]..) -> Enc.str: " + (strCount - txtSites) + ", -> Enc.txt: " + txtSites);
+        System.out.println("remap new String(byte[]..) -> wipi/host/Enc.str: " + (strCount - txtSites)
+                + ", -> wipi/host/Enc.txt (text sites): " + txtSites);
+        if (System.getProperty("ui") != null) {
+            writeUi(new File(System.getProperty("ui")));
+            rep.println("rule literal -> Str.lit: " + litSites + " sites, " + lits.size() + " texts");
+            System.out.println("remap literals -> wipi/host/Str.lit: " + litSites + " sites, " + lits.size()
+                    + " texts -> " + System.getProperty("ui"));
+        }
         rep.close();
     }
 
@@ -167,10 +205,14 @@ public class Remap {
                 m.instructions.remove(dup);
                 mi.setOpcode(Opcodes.INVOKESTATIC);
                 mi.owner = "wipi/host/Enc";
-                mi.name = "str";
+                boolean text = TEXT_SITES.contains(cn.name + "." + m.name + m.desc);
+                mi.name = text ? "txt" : "str";
+                if (text) {
+                    txtSites++;
+                }
                 mi.desc = nd;
                 rep.println(cn.name + "." + m.name + m.desc + ": new String" + nd.substring(0, nd.indexOf(')') + 1)
-                        + " -> wipi/host/Enc.str");
+                        + " -> wipi/host/Enc." + mi.name);
                 n++;
                 strCount++;
             }
@@ -179,6 +221,65 @@ public class Remap {
             throw new RuntimeException("unmatched NEW String in " + cn.name + "." + m.name);
         }
         return n;
+    }
+
+    static boolean display(String s) {
+        for (int i = 0; i < s.length(); i++) {
+            if (s.charAt(i) > 0x7f) {
+                return true;
+            }
+        }
+        return UI_ASCII.contains(s);
+    }
+
+    static int literals(ClassNode cn, MethodNode m) {
+        int n = 0;
+        for (AbstractInsnNode i = m.instructions.getFirst(); i != null; i = i.getNext()) {
+            if (!(i instanceof org.objectweb.asm.tree.LdcInsnNode)) {
+                continue;
+            }
+            Object c = ((org.objectweb.asm.tree.LdcInsnNode) i).cst;
+            if (!(c instanceof String) || !display((String) c)) {
+                continue;
+            }
+            Integer id = lits.get(c);
+            if (id == null) {
+                id = lits.size();
+                lits.put((String) c, id);
+                litWhere.put(id, cn.name + "." + m.name);
+            }
+            if (id > 32767) {
+                throw new RuntimeException("too many literals");
+            }
+            org.objectweb.asm.tree.InsnList l = new org.objectweb.asm.tree.InsnList();
+            l.add(new org.objectweb.asm.tree.IntInsnNode(Opcodes.SIPUSH, id));
+            l.add(new MethodInsnNode(Opcodes.INVOKESTATIC, "wipi/host/Str", "lit",
+                    "(Ljava/lang/String;I)Ljava/lang/String;", false));
+            AbstractInsnNode next = i.getNext();
+            m.instructions.insert(i, l);
+            i = next.getPrevious();
+            n++;
+            litSites++;
+        }
+        return n;
+    }
+
+    static void writeUi(File f) throws Exception {
+        StringBuilder sb = new StringBuilder();
+        sb.append("# UI strings of the game code (string literals), one per line: id=text\n");
+        sb.append("# \\n = new line; /C0../C4 colour codes must stay. A deleted line shows the original.\n");
+        String last = null;
+        for (java.util.Map.Entry<String, Integer> e : lits.entrySet()) {
+            String w = litWhere.get(e.getValue());
+            if (!w.equals(last)) {
+                sb.append("# ").append(w).append('\n');
+                last = w;
+            }
+            sb.append(e.getValue()).append('=').append(e.getKey().replace("\\", "\\\\").replace("\n", "\\n")
+                    .replace("\r", "\\r")).append('\n');
+        }
+        f.getParentFile().mkdirs();
+        Files.write(f.toPath(), sb.toString().getBytes("UTF-8"));
     }
 
     static void collect(File d, List<File> out) {

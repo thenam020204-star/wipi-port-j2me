@@ -77,6 +77,26 @@ public final class Enc {
         return new String(out, 0, n);
     }
 
+    /**
+     * new String(byte[]..) at the call sites that read game text: the String
+     * comes from the plain-text files (Str.data), keyed by the FNV-1a hash of
+     * the original bytes; strings that are not text (scripts) are not in the
+     * index and decode as before.
+     */
+    public static String txt(byte[] b) {
+        return txt(b, 0, b.length);
+    }
+
+    public static String txt(byte[] b, int off, int len) {
+        String s = str(b, off, len);
+        int h = 0x811c9dc5;
+        for (int i = off, end = off + len; i < end; i++) {
+            h ^= b[i] & 0xff;
+            h *= 16777619;
+        }
+        return Str.data(s, h);
+    }
+
     /** String.getBytes() replacement (inverse mapping; '?' for unknown chars). */
     public static byte[] bytes(String s) {
         if (codes == null) {
