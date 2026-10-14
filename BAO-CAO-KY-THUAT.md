@@ -333,3 +333,28 @@ Xưng hô theo `kro/vi/dp/w/*/dp_work/vai.md` (ví dụ Rene – Sebastian: ta �
 **Thay đổi class:** chỉ `hl4/lgt/KroText.class` (`release/jardiff_vi1_vi2.txt`): thêm `XLEAD0/1`, `BASE`, `ELL`, `VNP`, `vnAscii[]`, `ellW`, hàm `glyph()`. Mảng chỉ cấp trong constructor; `draw/glyph/measure` **không cấp phát** (đã quét `javap -c`). `selfCheck0` (StringBuffer) chỉ chạy lúc khởi động như v1.
 
 **Kiểm tra:** `dp check` OK cho cả 4 nhóm (cảnh báo thuật ngữ còn lại đều là dương tính giả: câu tách dòng, 전직 = "trước đây", 강화 = "tăng cường"); `build_vi` 0 lỗi (ô tràn, tham số thẻ > 39 byte, mô tả quest > 254 byte, `<NAME>` lệch bảng tên); kết quả chạy ở §13.
+
+## 13. Kiểm chứng bản vi2 (jar cuối `e0f6efc3…`, class + tài nguyên lấy từ jar)
+
+Kết quả đầy đủ trong `release/kiem-chung-vi2.txt`. Bộ chạy: `fbuy`, `fmonkey`, `fA`, `fI`, rồi `fload`.
+
+| Kiểm tra | Kết quả |
+|---|---|
+| AOT vs thông dịch, 300 s, cùng kịch bản phím | 21 417 374 087 lệnh ở cả hai; svclog trùng (4,1 triệu+ lần gọi host); 6/6 khung hình trùng |
+| Mua cash → tự lưu → khởi động lại → mở túi | kết nối máy chủ offline, `save0.dat` đổi 49 byte; lúc tải lại 0 lần `netConnect`; túi đồ hiện đủ |
+| Chơi ngẫu nhiên 700 s (AOT) | 51,4 tỉ lệnh; heap khách đỉnh 4 150 264 byte; 12 yêu cầu mạng bị từ chối như mất mạng |
+| Exception / hàm WIPI chưa cài | 0 ở cả 5 lần chạy |
+| `j2me_scan` + preverify | 37 class, 0 vi phạm, 0 cảnh báo StackMap |
+| `jardiff` vi1 → vi2 | chỉ `KroText.class` đổi; class version > 48 / StackMapTable: 0 |
+
+**Kịch bản phím cash dời so với v1:** thoại mở đầu v2 dài hơn nên đoạn mở đầu kết thúc ở ~118 s thay vì ~105 s. Nếu giữ phím menu như v1 thì phím rơi vào lúc còn thoại, không mua được (lần chạy đầu thất bại vì lý do này, không phải lỗi game). Đã thêm OK mỗi 1,2 s từ 105–118,2 s và dời phím menu +14 s.
+
+**Soát hình** (ảnh chụp headless):
+- chữ tự cuộn mở đầu;
+- thoại EV00 có bong bóng;
+- cửa sổ Quest (tên + mô tả);
+- túi đồ, kỹ năng, menu, cài đặt;
+- Trợ giúp: điều khiển, cốt truyện, 9 trang thông tin game;
+- ô kiểm duyệt.
+
+**Không kiểm được ở đây:** J2ME Loader, KEmulator, máy thật, âm thanh thật, FPS trên máy.
