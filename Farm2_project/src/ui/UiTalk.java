@@ -23,9 +23,9 @@ final class UiTalk {
 
     static void layout(GameCanvas gm) {
         lh = Txt.height() + 3;
-        bottom = gm.h + gm.bh + 32; // bottom of the game area (the margin below is not ours)
+        bottom = gm.h + gm.bh; // bottom of the map (it fills the screen; the margin below is not ours)
         int need = 3 * lh + 2 * Y0 + 14;
-        by = gm.h + gm.bh - 16;
+        by = bottom - 48;
         if (bottom - by < need) {
             by = bottom - need;
         }

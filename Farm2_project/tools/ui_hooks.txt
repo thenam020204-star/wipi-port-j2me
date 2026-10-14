@@ -5,3 +5,6 @@
 @GameCanvas.LoadShopMenu(I)V static org/kwis/msp/lcdui/Image.createImage(II)Lorg/kwis/msp/lcdui/Image; -> UiGM.buf(II)Lorg/kwis/msp/lcdui/Image;
 @GameCanvas.LoadSkillShop(I)V static org/kwis/msp/lcdui/Image.createImage(II)Lorg/kwis/msp/lcdui/Image; -> UiGM.buf(II)Lorg/kwis/msp/lcdui/Image;
 @GameCanvas.LoadPetShop()V static org/kwis/msp/lcdui/Image.createImage(II)Lorg/kwis/msp/lcdui/Image; -> UiGM.buf(II)Lorg/kwis/msp/lcdui/Image;
+# Tutorial marker of the old bars (Effect.DrawFade, fade[0] == 1): its fixed-offset rectangles are
+# redirected to the HUD, which draws the marker around the same element (UiHud.tutRect/tutMark).
+@Effect.DrawFade(Lorg/kwis/msp/lcdui/Graphics;)V virtual org/kwis/msp/lcdui/Graphics.drawRect(IIII)V -> UiHud.tutRect(Lorg/kwis/msp/lcdui/Graphics;IIII)V

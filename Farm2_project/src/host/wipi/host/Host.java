@@ -21,7 +21,7 @@ import org.kwis.msp.lcdui.Jlet;
  * or fit-scaled (nearest neighbour) and centred.
  */
 public final class Host extends Canvas implements Runnable {
-    public static final int MIN_W = 176, MAX_W = 320, MIN_H = 208, MAX_H = 368;
+    public static final int MIN_W = 176, MAX_W = 320, MIN_H = 208, MAX_H = 320;
 
     /** Logical (game) size. */
     public static int lw = 240, lh = 320;

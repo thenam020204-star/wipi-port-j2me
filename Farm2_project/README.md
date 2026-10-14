@@ -92,9 +92,30 @@ trực tiếp theo kích thước màn hình (`src/ui/*.java`, không tạo ản
   `UiGM.DrawGameMenu`): descriptor, access flag và mọi nơi gọi giữ nguyên; logic trạng thái
   /phím trong các hàm này được chép nguyên (CFR, đối chiếu FernFlower + bytecode).
 - `tools/ui_hooks.txt`: các buffer 176x202 cũ chỉ còn 1x1 (tiết kiệm ~140 KB heap).
-- Màn hẹp (chiều ngang logic < ~210, gồm 176x220 và 360x640 vốn chạy logic 207x368):
+- Màn hẹp (chiều ngang logic < ~210, vd. 176x220, 360x640 = logic 180x320 phóng 2x):
   thẻ chỉ hiện icon, tên thẻ hiện ở chân khung; lưới/ô kỹ năng tự co.
 - Không cấp phát mỗi khung hình: số/tiền vẽ từ bộ đệm ký tự, ngắt dòng dùng mảng tĩnh.
+
+## HUD trong game (kiểu Stardew Valley)
+
+Map giờ phủ toàn màn hình (bỏ thanh trên 16 px và thanh dưới 32 px của bản gốc);
+HUD vẽ đè lên map (`src/ui/UiHud.java`):
+
+- **Đồng hồ** góc phải trên: mùa + ngày, dải trời với mặt trời/trăng (ảnh và công thức
+  gốc `State[12..15]`), thời tiết hôm nay (+ ngày mai khi có kỹ năng dự báo), giờ 24h.
+- **Thanh HP / FP** dọc góc phải dưới (nhấp nháy đỏ khi < 20%).
+- **Toolbar**: nội dung y hệt ô hành động gốc (`DrawDownAction`: icon hành động + chữ
+  `DownMent`, tiền khi rảnh, mức bình tưới, tên/độ lớn cây khi soi, hạt đang cầm).
+  Nằm giữa đáy; khi nhân vật đứng sau nó thì tự nhảy lên trên (cạnh đồng hồ, hoặc dưới
+  đồng hồ nếu màn hẹp). Ô trái/phải là slot để sau này mod "cầm vật phẩm".
+- Ẩn toolbar + thanh HP/FP khi đang hội thoại (hộp thoại chiếm đáy màn).
+- Banner trượt (tên khu vực…) và đếm ngược sự kiện chuyển xuống dưới đồng hồ; khung
+  nhấp nháy hướng dẫn của `Effect.DrawFade` được hook (`drawRect` → `UiHud.tutRect`)
+  để chỉ đúng phần tử tương ứng của HUD mới.
+- Vì mọi map là 20x20 ô (320x320), chiều cao logic tối đa giờ là 320 (trước: 368 =
+  320 + 48 px thanh). Màn cao hơn được phóng nguyên lần hoặc co theo tỉ lệ.
+- `GameCanvas.init` chỉ đổi 2 phép tính (`height = getHeight()`, `h = height%16/2`);
+  logic camera (`SetCenter`) giữ nguyên nên `maxy ≤ 20` luôn đúng.
 
 ## Save gốc trong gói
 

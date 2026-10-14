@@ -120,7 +120,7 @@ final class UiPaint {
                 }
                 if (gc.opt[2] != 1 && (gc.Tou < 0 || gc.Tou > 4)) break;
                 String skip = "#: B\u1ecf qua";
-                UiKit.pill(graphics, gc.getWidth() - UiKit.pillW(skip) - 4, gc.h + 3, skip, UiKit.DARK, UiKit.DARK, UiKit.WHITE);
+                UiKit.pill(graphics, 4, gc.h + 4, skip, UiKit.DARK, UiKit.DARK, UiKit.WHITE); // top left: the clock is top right
                 break;
             }
             case 9: {
@@ -131,10 +131,7 @@ final class UiPaint {
                     gc.PlayGame(graphics);
                 }
                 if (gc.State == 9 && gc.n.TBuff != null) {
-                    if (gc.n.Talkimg != null) {
-                        graphics.drawImage(gc.n.Talkimg, gc.getWidth() - 5, gc.h + gc.bh - 16, 40);
-                    }
-                    gc.DrawTalk(graphics);
+                    gc.DrawTalk(graphics); // portrait included
                 } else if (gc.GMBuff != null) {
                     gc.DrawGameMenu(graphics);
                     gc.DrawPoint(graphics);

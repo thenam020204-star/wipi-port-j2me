@@ -223,6 +223,17 @@ final class UiKit {
         return w;
     }
 
+    /** Width of an integer as num() draws it. */
+    static int numW(int v) {
+        int w = v < 0 ? Txt.charWidth('-') : 0;
+        long u = v < 0 ? -(long) v : v;
+        do {
+            w += Txt.charWidth((char) ('0' + (int) (u % 10)));
+            u /= 10;
+        } while (u > 0);
+        return w;
+    }
+
     /** Width of a money value written with '.' thousands separators. */
     static int moneyW(int v) {
         int k = nb.length, w = 0, d = 0;

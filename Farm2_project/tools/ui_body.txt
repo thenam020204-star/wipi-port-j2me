@@ -6,6 +6,15 @@ GameCanvas.paint(Lorg/kwis/msp/lcdui/Graphics;)V -> UiPaint.paint
 GameCanvas.DrawTalk(Lorg/kwis/msp/lcdui/Graphics;)V -> UiTalk.DrawTalk
 GameCanvas.DrawPopup(Lorg/kwis/msp/lcdui/Graphics;)V -> UiTalk.DrawPopup
 GameCanvas.DrawMiniTime(Lorg/kwis/msp/lcdui/Graphics;II)V -> UiHud.DrawMiniTime
+GameCanvas.init()V -> UiHud.init
+GameCanvas.DrawUp(Lorg/kwis/msp/lcdui/Graphics;)V -> UiHud.DrawUp
+GameCanvas.DrawDown(Lorg/kwis/msp/lcdui/Graphics;Z)V -> UiHud.DrawDown
+GameCanvas.DrawHp(Lorg/kwis/msp/lcdui/Graphics;)V -> UiHud.DrawHp
+GameCanvas.DrawTime(Lorg/kwis/msp/lcdui/Graphics;)V -> UiHud.none
+GameCanvas.DrawDay(Lorg/kwis/msp/lcdui/Graphics;)V -> UiHud.none
+GameCanvas.DrawWeather(Lorg/kwis/msp/lcdui/Graphics;)V -> UiHud.none
+GameCanvas.DrawDownAction(Lorg/kwis/msp/lcdui/Graphics;)V -> UiHud.DrawDownAction
+GameCanvas.DrawUpState(Lorg/kwis/msp/lcdui/Graphics;)V -> UiHud.DrawUpState
 NPC.DrawTalk(Lorg/kwis/msp/lcdui/Graphics;)V -> UiTalk.DrawTalk
 NPC.MakeNameBuf(ILjava/lang/String;)V -> UiTalk.MakeNameBuf
 GameCanvas.DrawMenu(Lorg/kwis/msp/lcdui/Graphics;)V -> UiTitle.DrawMenu

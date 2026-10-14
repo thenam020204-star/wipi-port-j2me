@@ -1,8 +1,24 @@
 Effect.LoadImg(II)V: java/lang/Class.getResourceAsStream -> wipi/host/Res.open(Ljava/lang/Class;Ljava/lang/String;)Ljava/io/InputStream;
 Effect.LoadImg(II)V: java/lang/Class.getResourceAsStream -> wipi/host/Res.open(Ljava/lang/Class;Ljava/lang/String;)Ljava/io/InputStream;
 Effect.LoadImg(II)V: java/lang/Class.getResourceAsStream -> wipi/host/Res.open(Ljava/lang/Class;Ljava/lang/String;)Ljava/io/InputStream;
+Effect.DrawFade(Lorg/kwis/msp/lcdui/Graphics;)V: org/kwis/msp/lcdui/Graphics.drawRect -> UiHud.tutRect(Lorg/kwis/msp/lcdui/Graphics;IIII)V
+Effect.DrawFade(Lorg/kwis/msp/lcdui/Graphics;)V: org/kwis/msp/lcdui/Graphics.drawRect -> UiHud.tutRect(Lorg/kwis/msp/lcdui/Graphics;IIII)V
+Effect.DrawFade(Lorg/kwis/msp/lcdui/Graphics;)V: org/kwis/msp/lcdui/Graphics.drawRect -> UiHud.tutRect(Lorg/kwis/msp/lcdui/Graphics;IIII)V
+Effect.DrawFade(Lorg/kwis/msp/lcdui/Graphics;)V: org/kwis/msp/lcdui/Graphics.drawRect -> UiHud.tutRect(Lorg/kwis/msp/lcdui/Graphics;IIII)V
+Effect.DrawFade(Lorg/kwis/msp/lcdui/Graphics;)V: org/kwis/msp/lcdui/Graphics.drawRect -> UiHud.tutRect(Lorg/kwis/msp/lcdui/Graphics;IIII)V
+Effect.DrawFade(Lorg/kwis/msp/lcdui/Graphics;)V: org/kwis/msp/lcdui/Graphics.drawRect -> UiHud.tutRect(Lorg/kwis/msp/lcdui/Graphics;IIII)V
+Effect.DrawFade(Lorg/kwis/msp/lcdui/Graphics;)V: org/kwis/msp/lcdui/Graphics.drawRect -> UiHud.tutRect(Lorg/kwis/msp/lcdui/Graphics;IIII)V
+Effect.DrawFade(Lorg/kwis/msp/lcdui/Graphics;)V: org/kwis/msp/lcdui/Graphics.drawRect -> UiHud.tutRect(Lorg/kwis/msp/lcdui/Graphics;IIII)V
+Effect.DrawFade(Lorg/kwis/msp/lcdui/Graphics;)V: org/kwis/msp/lcdui/Graphics.drawRect -> UiHud.tutRect(Lorg/kwis/msp/lcdui/Graphics;IIII)V
+Effect.DrawFade(Lorg/kwis/msp/lcdui/Graphics;)V: org/kwis/msp/lcdui/Graphics.drawRect -> UiHud.tutRect(Lorg/kwis/msp/lcdui/Graphics;IIII)V
+Effect.DrawFade(Lorg/kwis/msp/lcdui/Graphics;)V: org/kwis/msp/lcdui/Graphics.drawRect -> UiHud.tutRect(Lorg/kwis/msp/lcdui/Graphics;IIII)V
+Effect.DrawFade(Lorg/kwis/msp/lcdui/Graphics;)V: org/kwis/msp/lcdui/Graphics.drawRect -> UiHud.tutRect(Lorg/kwis/msp/lcdui/Graphics;IIII)V
+Effect.DrawFade(Lorg/kwis/msp/lcdui/Graphics;)V: org/kwis/msp/lcdui/Graphics.drawRect -> UiHud.tutRect(Lorg/kwis/msp/lcdui/Graphics;IIII)V
+Effect.DrawFade(Lorg/kwis/msp/lcdui/Graphics;)V: org/kwis/msp/lcdui/Graphics.drawRect -> UiHud.tutRect(Lorg/kwis/msp/lcdui/Graphics;IIII)V
+GameCanvas.init()V: body (133 insns) -> UiHud.init(LGameCanvas;)V
 GameCanvas.DrawMenu(Lorg/kwis/msp/lcdui/Graphics;)V: body (299 insns) -> UiTitle.DrawMenu(LGameCanvas;Lorg/kwis/msp/lcdui/Graphics;)V
 GameCanvas.DrawMenuItem(Lorg/kwis/msp/lcdui/Graphics;)V: body (360 insns) -> UiTitle.DrawMenuItem(LGameCanvas;Lorg/kwis/msp/lcdui/Graphics;)V
+GameCanvas.DrawHp(Lorg/kwis/msp/lcdui/Graphics;)V: body (154 insns) -> UiHud.DrawHp(LGameCanvas;Lorg/kwis/msp/lcdui/Graphics;)V
 GameCanvas.paint(Lorg/kwis/msp/lcdui/Graphics;)V: body (3829 insns) -> UiPaint.paint(LGameCanvas;Lorg/kwis/msp/lcdui/Graphics;)V
 GameCanvas.DrawTalk(Lorg/kwis/msp/lcdui/Graphics;)V: body (548 insns) -> UiTalk.DrawTalk(LGameCanvas;Lorg/kwis/msp/lcdui/Graphics;)V
 GameCanvas.DrawMiniTime(Lorg/kwis/msp/lcdui/Graphics;II)V: body (119 insns) -> UiHud.DrawMiniTime(LGameCanvas;Lorg/kwis/msp/lcdui/Graphics;II)V
@@ -16,7 +32,14 @@ GameCanvas.MakeGameMenu(Lorg/kwis/msp/lcdui/Graphics;)V: body (1078 insns) -> Ui
 GameCanvas.MakePetShop(Lorg/kwis/msp/lcdui/Graphics;)V: body (270 insns) -> UiGM.MakePetShop(LGameCanvas;Lorg/kwis/msp/lcdui/Graphics;)V
 GameCanvas.MakeSkillShop(Lorg/kwis/msp/lcdui/Graphics;)V: body (324 insns) -> UiGM.MakeSkillShop(LGameCanvas;Lorg/kwis/msp/lcdui/Graphics;)V
 GameCanvas.MakeShopMenu(Lorg/kwis/msp/lcdui/Graphics;I)V: body (532 insns) -> UiGM.MakeShopMenu(LGameCanvas;Lorg/kwis/msp/lcdui/Graphics;I)V
+GameCanvas.DrawUpState(Lorg/kwis/msp/lcdui/Graphics;)V: body (548 insns) -> UiHud.DrawUpState(LGameCanvas;Lorg/kwis/msp/lcdui/Graphics;)V
+GameCanvas.DrawTime(Lorg/kwis/msp/lcdui/Graphics;)V: body (423 insns) -> UiHud.none(LGameCanvas;Lorg/kwis/msp/lcdui/Graphics;)V
+GameCanvas.DrawDownAction(Lorg/kwis/msp/lcdui/Graphics;)V: body (918 insns) -> UiHud.DrawDownAction(LGameCanvas;Lorg/kwis/msp/lcdui/Graphics;)V
 GameCanvas.DrawPopup(Lorg/kwis/msp/lcdui/Graphics;)V: body (121 insns) -> UiTalk.DrawPopup(LGameCanvas;Lorg/kwis/msp/lcdui/Graphics;)V
+GameCanvas.DrawWeather(Lorg/kwis/msp/lcdui/Graphics;)V: body (212 insns) -> UiHud.none(LGameCanvas;Lorg/kwis/msp/lcdui/Graphics;)V
+GameCanvas.DrawDay(Lorg/kwis/msp/lcdui/Graphics;)V: body (97 insns) -> UiHud.none(LGameCanvas;Lorg/kwis/msp/lcdui/Graphics;)V
+GameCanvas.DrawUp(Lorg/kwis/msp/lcdui/Graphics;)V: body (36 insns) -> UiHud.DrawUp(LGameCanvas;Lorg/kwis/msp/lcdui/Graphics;)V
+GameCanvas.DrawDown(Lorg/kwis/msp/lcdui/Graphics;Z)V: body (31 insns) -> UiHud.DrawDown(LGameCanvas;Lorg/kwis/msp/lcdui/Graphics;Z)V
 GameCanvas.LoadMini(I)V: java/lang/Class.getResourceAsStream -> wipi/host/Res.open(Ljava/lang/Class;Ljava/lang/String;)Ljava/io/InputStream;
 GameCanvas.LoadSkillShop(I)V: org/kwis/msp/lcdui/Image.createImage -> UiGM.buf(II)Lorg/kwis/msp/lcdui/Image;
 GameCanvas.LoadPetShop()V: org/kwis/msp/lcdui/Image.createImage -> UiGM.buf(II)Lorg/kwis/msp/lcdui/Image;
@@ -108,6 +131,7 @@ rule org/kwis/msp/lcdui/Image.createImage @GameCanvas.LoadGameMenu(I)V: 1
 rule org/kwis/msp/lcdui/Image.createImage @GameCanvas.LoadShopMenu(I)V: 1
 rule org/kwis/msp/lcdui/Image.createImage @GameCanvas.LoadSkillShop(I)V: 1
 rule org/kwis/msp/lcdui/Image.createImage @GameCanvas.LoadPetShop()V: 1
-rule body -> Ui: 18
+rule org/kwis/msp/lcdui/Graphics.drawRect @Effect.DrawFade(Lorg/kwis/msp/lcdui/Graphics;)V: 14
+rule body -> Ui: 27
 rule new String(byte[]..) -> Enc.str: 23, -> Enc.txt: 15
 rule literal -> Str.lit: 397 sites, 318 texts

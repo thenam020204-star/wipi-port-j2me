@@ -54,6 +54,31 @@ RESOURCE CHANGED Data/Pet/7.pet 3275 -> 3275
 RESOURCE CHANGED Data/Pet/8.pet 4128 -> 4128
 RESOURCE CHANGED Data/Pet/9.pet 3580 -> 3580
 CLASS Effect.class
+  method DrawFade(Lorg/kwis/msp/lcdui/Graphics;)V:
+    - INVOKEVIRTUAL org/kwis/msp/lcdui/Graphics.drawRect (IIII)V
+    + INVOKESTATIC UiHud.tutRect (Lorg/kwis/msp/lcdui/Graphics;IIII)V
+    - INVOKEVIRTUAL org/kwis/msp/lcdui/Graphics.drawRect (IIII)V
+    + INVOKESTATIC UiHud.tutRect (Lorg/kwis/msp/lcdui/Graphics;IIII)V
+    - INVOKEVIRTUAL org/kwis/msp/lcdui/Graphics.drawRect (IIII)V
+    + INVOKESTATIC UiHud.tutRect (Lorg/kwis/msp/lcdui/Graphics;IIII)V
+    - INVOKEVIRTUAL org/kwis/msp/lcdui/Graphics.drawRect (IIII)V
+    + INVOKESTATIC UiHud.tutRect (Lorg/kwis/msp/lcdui/Graphics;IIII)V
+    - INVOKEVIRTUAL org/kwis/msp/lcdui/Graphics.drawRect (IIII)V
+    + INVOKESTATIC UiHud.tutRect (Lorg/kwis/msp/lcdui/Graphics;IIII)V
+    - INVOKEVIRTUAL org/kwis/msp/lcdui/Graphics.drawRect (IIII)V
+    + INVOKESTATIC UiHud.tutRect (Lorg/kwis/msp/lcdui/Graphics;IIII)V
+    - INVOKEVIRTUAL org/kwis/msp/lcdui/Graphics.drawRect (IIII)V
+    + INVOKESTATIC UiHud.tutRect (Lorg/kwis/msp/lcdui/Graphics;IIII)V
+    - INVOKEVIRTUAL org/kwis/msp/lcdui/Graphics.drawRect (IIII)V
+    + INVOKESTATIC UiHud.tutRect (Lorg/kwis/msp/lcdui/Graphics;IIII)V
+    - INVOKEVIRTUAL org/kwis/msp/lcdui/Graphics.drawRect (IIII)V
+    + INVOKESTATIC UiHud.tutRect (Lorg/kwis/msp/lcdui/Graphics;IIII)V
+    - INVOKEVIRTUAL org/kwis/msp/lcdui/Graphics.drawRect (IIII)V
+    + INVOKESTATIC UiHud.tutRect (Lorg/kwis/msp/lcdui/Graphics;IIII)V
+    - INVOKEVIRTUAL org/kwis/msp/lcdui/Graphics.drawRect (IIII)V
+    + INVOKESTATIC UiHud.tutRect (Lorg/kwis/msp/lcdui/Graphics;IIII)V
+    - INVOKEVIRTUAL org/kwis/msp/lcdui/Graphics.drawRect (IIII)V
+    + INVOKESTATIC UiHud.tutRect (Lorg/kwis/msp/lcdui/Graphics;IIII)V
   method LoadImg(II)V:
     - INVOKEVIRTUAL java/lang/Class.getResourceAsStream (Ljava/lang/String;)Ljava/io/InputStream;
     + INVOKESTATIC wipi/host/Res.open (Ljava/lang/Class;Ljava/lang/String;)Ljava/io/InputStream;
@@ -67,14 +92,20 @@ CLASS GameCanvas.class
     instructions 616 -> 726
   method BuySeed(I)V:
     instructions 83 -> 85
+  method DrawDay(Lorg/kwis/msp/lcdui/Graphics;)V:
+    instructions 87 -> 4
+  method DrawDown(Lorg/kwis/msp/lcdui/Graphics;Z)V:
+    instructions 26 -> 5
   method DrawDownAction(Lorg/kwis/msp/lcdui/Graphics;)V:
-    instructions 854 -> 856
+    instructions 854 -> 4
   method DrawEnding0(Lorg/kwis/msp/lcdui/Graphics;)V:
     instructions 60 -> 62
   method DrawEnding2(Lorg/kwis/msp/lcdui/Graphics;)V:
     instructions 368 -> 382
   method DrawGameMenu(Lorg/kwis/msp/lcdui/Graphics;)V:
     instructions 177 -> 4
+  method DrawHp(Lorg/kwis/msp/lcdui/Graphics;)V:
+    instructions 147 -> 4
   method DrawInven(Lorg/kwis/msp/lcdui/Graphics;I)V:
     instructions 1506 -> 1520
   method DrawMenu(Lorg/kwis/msp/lcdui/Graphics;)V:
@@ -91,8 +122,16 @@ CLASS GameCanvas.class
     instructions 109 -> 4
   method DrawTalk(Lorg/kwis/msp/lcdui/Graphics;)V:
     instructions 514 -> 4
+  method DrawTime(Lorg/kwis/msp/lcdui/Graphics;)V:
+    instructions 393 -> 4
   method DrawTitle(Lorg/kwis/msp/lcdui/Graphics;)V:
     instructions 833 -> 837
+  method DrawUp(Lorg/kwis/msp/lcdui/Graphics;)V:
+    instructions 30 -> 4
+  method DrawUpState(Lorg/kwis/msp/lcdui/Graphics;)V:
+    instructions 512 -> 4
+  method DrawWeather(Lorg/kwis/msp/lcdui/Graphics;)V:
+    instructions 197 -> 4
   method GameKey()V:
     instructions 345 -> 347
   method GameMenuKey()V:
@@ -150,6 +189,8 @@ CLASS GameCanvas.class
     instructions 795 -> 813
   method SaveGame(Z)V:
     instructions 1117 -> 1123
+  method init()V:
+    instructions 116 -> 3
   method keyNotify(II)Z:
     - INVOKESTATIC com/skt/m/Device.invokeWapBrowser (Ljava/lang/String;)V
     + INVOKESTATIC wipi/skt/Device.invokeWapBrowser (Ljava/lang/String;)V
@@ -738,11 +779,11 @@ ADDED Image/UI/Wea.png (692 B)
 ADDED Image/UI/Wea.txt (202 B)
 ADDED UiDebug.class (1691 B)
 ADDED UiGM.class (28490 B)
-ADDED UiHud.class (1185 B)
-ADDED UiKit.class (9726 B)
-ADDED UiPaint.class (8731 B)
+ADDED UiHud.class (12169 B)
+ADDED UiKit.class (9901 B)
+ADDED UiPaint.class (8582 B)
 ADDED UiRank.class (1843 B)
-ADDED UiTalk.class (8971 B)
+ADDED UiTalk.class (8962 B)
 ADDED UiTitle.class (11303 B)
 ADDED enc/map.bin (10590 B)
 ADDED font/f12.bin (2788 B)
@@ -884,7 +925,7 @@ ADDED wipi/host/FakeGxg$1.class (1187 B)
 ADDED wipi/host/FakeGxg$2.class (1075 B)
 ADDED wipi/host/FakeGxg.class (4344 B)
 ADDED wipi/host/FarmMidlet.class (762 B)
-ADDED wipi/host/Host.class (12788 B)
+ADDED wipi/host/Host.class (12783 B)
 ADDED wipi/host/Keys.class (1181 B)
 ADDED wipi/host/Log.class (994 B)
 ADDED wipi/host/Net.class (736 B)
