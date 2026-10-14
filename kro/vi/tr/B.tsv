@@ -114,7 +114,7 @@ B:57400	전직 스킬 미리보기	Xem trước kỹ năng chuyển nghề
 B:57414	각성 스킬은	Kỹ năng thức tỉnh
 B:57420	미리볼 수 없습니다	không thể xem trước
 B:57434	각성 스킬 미리보기	Xem trước kỹ năng thức tỉnh
-B:5744c	OZ키로 투자	Đầu tư bằng phím OZ
+B:5744c	OZ키로 투자	OZ:đầu tư
 B:57458	칭호 목록	Danh sách danh hiệu
 B:57464	OZ:칭호변경 CLR:취소	OZ:Đổi danh hiệu CLR:Hủy
 B:5747c	|066개씩이동|(%03ld)	|06Nhảy 6 mục|(%03ld)
@@ -131,12 +131,12 @@ B:57558	이동속도:+%d%%	Tốc độ:+%d%%
 B:57568	민첩:+%d	Nhanh nhẹn:+%d
 B:57574	행운:+%d	May mắn:+%d
 B:57580	근력:+%d	Sức mạnh:+%d
-B:5758c	보상:	Thưởng:
-B:575a8	의뢰NPC:	NPC giao:
-B:575b4	완료NPC:	NPC trả:
+B:5758c	보상:	Quà:
+B:575a8	의뢰NPC:	Giao:
+B:575b4	완료NPC:	Trả:
 B:575c0	-내용-	-Nội dung-
 B:575c8	목표위치:	Vị trí:
-B:575d4	목표:	Mục tiêu:
+B:575d4	목표:	Đích:
 B:575dc	소모 MP:|03%d|	MP tiêu hao:|03%d|
 B:575ec	- 물리데미지:|02%d|%%	- Sát thương vật lý:|02%d|%%
 B:57604	- 마법데미지:|02%d|%%	- Sát thương phép:|02%d|%%

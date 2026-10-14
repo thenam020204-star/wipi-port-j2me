@@ -1,0 +1,53 @@
+슬래셔	Slasher	lớp
+어쌔신	Assassin	lớp
+나이트	Knight	lớp
+매지션	Magician	lớp
+어퍼슬래셔	Upper Slasher	lớp
+스윙슬래셔	Swing Slasher	lớp
+크래싱슬래셔	Crashing Slasher	lớp
+어퍼어쌔신	Upper Assassin	lớp
+그래플링어쌔신	Grappling Assassin	lớp
+파이팅어쌔신	Fighting Assassin	lớp
+어퍼나이트	Upper Knight	lớp
+노블나이트	Noble Knight	lớp
+수퍼나이트	Super Knight	lớp
+파이어매지션	Fire Magician	lớp
+아이스매지션	Ice Magician	lớp
+썬더매지션	Thunder Magician	lớp
+크로이센	Chroisen	tên
+레이블타운	Label Town	địa danh
+이스턴시티	Eastern City	địa danh
+루이시티	Lui City	địa danh
+오르츠크	Ortsk	địa danh
+데저트캠프	Desert Camp	địa danh
+스카이밸리	Sky Valley	địa danh
+제라드	Gerard	tên
+근력	Sức mạnh	chỉ số
+마력	Ma lực	chỉ số
+민첩	Nhanh nhẹn	chỉ số
+체력	Thể lực	chỉ số
+행운	May mắn	chỉ số
+물리공격	Công vật lý	chỉ số
+마법공격	Công phép	chỉ số
+방어력	Phòng thủ	chỉ số
+크리티컬	Chí mạng	chỉ số
+회피	Né tránh	chỉ số
+아이템	vật phẩm	~
+스킬	kỹ năng	~
+퀘스트	nhiệm vụ	~
+던전	hầm ngục	~
+레벨	cấp	~
+포인트	điểm	~
+스텟	chỉ số	~
+환생	Tái sinh	hệ thống
+전직	Chuyển nghề	hệ thống
+각성	Thức tỉnh	hệ thống
+강화	Cường hóa	hệ thống
+마법부여	Phù phép	hệ thống
+융합	Dung hợp	hệ thống
+인벤토리	Túi đồ	~
+선물함	Hộp quà	~
+랭킹	Xếp hạng	~
+용병	lính đánh thuê	~
+캐시	Cash	~
+골드	Gold	~

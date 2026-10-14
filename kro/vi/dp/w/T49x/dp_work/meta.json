@@ -1,0 +1,1 @@
+{"fmt": "tsv", "nl": "\n", "tail": true, "bom": false, "hdr": true, "cols": {"src": 1, "dst": 2, "ctx": 3}, "file": "/home/user/wipi-port-j2me/kro/vi/dp/T49x.tsv", "lang": "zh", "codes": "\\|c\\d\\d|\\|\\d\\d|\\||%[-0-9.]*l*[sdcxXu]|<[^>]*>", "enc": "utf-8", "args": {"src": null, "dst": null, "ctx": null, "lim": null, "sheet": null, "enc": "utf-8"}}

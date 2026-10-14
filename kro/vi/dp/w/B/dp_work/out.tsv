@@ -113,7 +113,7 @@
 113	Kỹ năng thức tỉnh
 114	không thể xem trước
 115	Xem trước kỹ năng thức tỉnh
-116	Đầu tư bằng phím OZ
+116	OZ:đầu tư
 117	Danh sách danh hiệu
 118	OZ:Đổi danh hiệu CLR:Hủy
 119	|06Nhảy 6 mục|(%03ld)
@@ -130,12 +130,12 @@
 130	Nhanh nhẹn:+%d
 131	May mắn:+%d
 132	Sức mạnh:+%d
-133	Thưởng:
-134	NPC giao:
-135	NPC trả:
+133	Quà:
+134	Giao:
+135	Trả:
 136	-Nội dung-
 137	Vị trí:
-138	Mục tiêu:
+138	Đích:
 139	MP tiêu hao:|03%d|
 140	- Sát thương vật lý:|02%d|%%
 141	- Sát thương phép:|02%d|%%

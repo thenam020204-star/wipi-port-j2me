@@ -1,0 +1,3329 @@
+1	Kiếm hai tay
+2	Đại kiếm Hắc thiết
+3	Đại kiếm Thép
+4	Two-Hand Sword
+5	Jack Two-Hand
+6	Zweihander
+7	Đại kiếm Ricaso
+8	Đại kiếm Talwar
+9	Two-Hand Tooth
+10	Flamberge
+11	Great Sword
+12	Giant Sword
+13	Two-Hand Guillotine
+14	Ash Two-Hand
+15	Two-Hand Blow
+16	Two-Hand Delisher
+17	Careon Great
+18	Grand Giant
+19	Cooling Giant
+20	Great Sum
+21	Cao cấp Đại kiếm
+22	Cao cấp Hắc thiết
+23	Cao cấp Thép
+24	Cao cấp Two-Hand
+25	Cao cấp Jack Two-Hand
+26	Cao cấp Zweihander
+27	Cao cấp Ricaso
+28	Cao cấp Talwar
+29	Cao cấp Two-Hand Tooth
+30	Cao cấp Flamberge
+31	Cao cấp Great Sword
+32	Cao cấp Giant Sword
+33	Cao cấp Guillotine
+34	Cao cấp Ash Greatsword
+35	Cao cấp Blow Greatsword
+36	Cao cấp Delisher
+37	Cao cấp Careon
+38	Cao cấp Grand Sword
+39	Cao cấp Cooling Sword
+40	Cao cấp Layton Sum
+41	Sword End Great
+42	Big Lizard Sword
+43	Lycan Sword
+44	Cats The Great
+45	Dogs Two-Hand
+46	Shift Giant
+47	Fox Great Sword
+48	Turtles Two-Hand
+49	Lions Two-Hand
+50	Cheetahs Sword
+51	Karen Gran Sword
+52	Shaunal Great
+53	Đại kiếm phép Huyền Vũ
+54	Đại kiếm phép Chu Tước
+55	Đại kiếm phép Thanh Long
+56	Đại kiếm phép Bạch Hổ
+57	Great Unicorn
+58	Great Dragon
+59	Đại kiếm Ma linh
+60	Đại kiếm Vĩnh hằng
+61	Đại kiếm Ganulong
+62	Đại kiếm Gareth
+63	Đại kiếm Nasika
+64	Đại kiếm Nyar
+65	Đại kiếm Dana
+66	Đại kiếm Danu
+67	Đại kiếm Radon
+68	Đại kiếm Rania
+69	Đại kiếm Marna
+70	Đại kiếm Mador
+71	Đại kiếm Bas
+72	Đại kiếm Vaink
+73	Đại kiếm Saga
+74	Đại kiếm Saiba
+75	Đại kiếm Agnon
+76	Đại kiếm Agra
+77	Đại kiếm Jeward
+78	Đại kiếm Zetes
+79	Đại kiếm Phantom
+80	Đại kiếm Lost
+81	Đại kiếm Bulmine
+82	Đại kiếm Orcus
+83	Đại kiếm Sols
+84	Đại kiếm Nectar
+85	Đại kiếm Draup
+86	Đại kiếm Holyman
+87	Đại kiếm Agnal
+88	Đại kiếm Pandora
+89	Đại kiếm Necro
+90	Đại kiếm Heracle
+91	Đại kiếm Silion
+92	Đại kiếm Cunning
+93	Đại kiếm Requiem
+94	Đại kiếm Quake
+95	Đại kiếm Elladen
+96	Đại kiếm Death
+97	Đại kiếm Orphans
+98	Đại kiếm Văn minh
+99	Đại kiếm Thiên quân
+100	Đại kiếm Wine
+101	Đại kiếm Wyvern
+102	Đại kiếm Drake
+103	Đại kiếm Dragon
+104	Axe
+105	Hand Axe
+106	Iron Axe
+107	War Axe
+108	Jack Axe
+109	Lizard Axe
+110	Giant Axe
+111	Plas Axe
+112	Copis Axe
+113	Patapul Axe
+114	Double Axe
+115	Powerful Axe
+116	Blood Axe
+117	Flame Axe
+118	Doomed Axe
+119	Guardian Axe
+120	Shanic Axe
+121	Rupan Axe
+122	Jarl Axe
+123	Roy Axe
+124	Cao cấp Axe
+125	Cao cấp Hand Axe
+126	Cao cấp Iron Axe
+127	Cao cấp War Axe
+128	Cao cấp Jack Axe
+129	Cao cấp Lizard Axe
+130	Cao cấp Giant Axe
+131	Cao cấp Plas Axe
+132	Cao cấp Copis Axe
+133	Cao cấp Patapul Axe
+134	Cao cấp Double Axe
+135	Cao cấp Powerful Axe
+136	Cao cấp Blood Axe
+137	Cao cấp Flame Axe
+138	Cao cấp Doomed Axe
+139	Cao cấp Guardian Axe
+140	Cao cấp Shanic Axe
+141	Cao cấp Rupan Axe
+142	Cao cấp Jarl Axe
+143	Cao cấp Roy Axe
+144	Orkish Axe
+145	Entis Axe
+146	Barbarian Axe
+147	Quagard Axe
+148	Turis Axe
+149	Iremond Axe
+150	Furid Axe
+151	Harrias Axe
+152	Cronel Axe
+153	Gerka Axe
+154	Simon Axe
+155	Nawadi Axe
+156	Adax Axe
+157	Perro Axe
+158	Bersiman Axe
+159	Barantos Axe
+160	Lexis Axe
+161	Pegelon Axe
+162	Grond Axe
+163	Rakshazen Axe
+164	Rìu Ganulong
+165	Rìu Gareth
+166	Rìu Nasika
+167	Rìu Nyar
+168	Rìu Dana
+169	Rìu Danu
+170	Rìu Radon
+171	Rìu Rania
+172	Rìu Marna
+173	Rìu Mador
+174	Rìu Bas
+175	Rìu Vaink
+176	Rìu Saga
+177	Rìu Saiba
+178	Rìu Agnon
+179	Rìu Agra
+180	Rìu Jeward
+181	Rìu Zetes
+182	Rìu Phantom
+183	Rìu Lost
+184	Rìu Bulmine
+185	Rìu Orcus
+186	Rìu Sols
+187	Rìu Nectar
+188	Rìu Draup
+189	Rìu Holyman
+190	Rìu Agnal
+191	Rìu Pandora
+192	Rìu Necro
+193	Rìu Heracle
+194	Thần kiếm Silion
+195	Rìu Cunning
+196	Rìu Requiem
+197	Rìu Quake
+198	Rìu Elladen
+199	Rìu Death
+200	Rìu Orphans
+201	Rìu Văn minh
+202	Rìu Thiên quân
+203	Rìu Wine
+204	Rìu Wyvern
+205	Rìu Drake
+206	Rìu Dragon
+207	Two-Hand Hammer
+208	Iron Hammer
+209	Awl Hammer
+210	Loop Hammer
+211	Jack Hammer
+212	One-Point Hammer
+213	Crusher Hammer
+214	Janak Hammer
+215	Tooth Hammer
+216	Suns Hammer
+217	Max Hammer
+218	Cors Hammer
+219	Marno Hammer
+220	Flame Hammer
+221	Orald Hammer
+222	Double Suns Hammer
+223	Shanic Hammer
+224	Runic Hammer
+225	Summonak Hammer
+226	Lucelt Hammer
+227	Cao cấp Hammer
+228	Cao cấp Iron Hammer
+229	Cao cấp Awl Hammer
+230	Cao cấp Loop Hammer
+231	Cao cấp Jack Hammer
+232	Cao cấp Point Hammer
+233	Cao cấp Crusher Hammer
+234	Cao cấp Janak Hammer
+235	Cao cấp Tooth Hammer
+236	Cao cấp Suns Hammer
+237	Cao cấp Max Hammer
+238	Cao cấp Cors Hammer
+239	Cao cấp Marno Hammer
+240	Cao cấp Flame Hammer
+241	Cao cấp Orald Hammer
+242	Cao cấp Two Suns Hammer
+243	Cao cấp Shanic Hammer
+244	Cao cấp Runic Hammer
+245	Cao cấp Summonak Hammer
+246	Cao cấp Lucelt Hammer
+247	Hughman Hammer
+248	Gauge Hammer
+249	Cancider Hammer
+250	Low Macmud
+251	Swarrior Hammer
+252	Cockpit Hammer
+253	Giant Hammer
+254	Bomber Hammer
+255	Planter Palmer
+256	Blood Hammer
+257	Tolginen Palmer
+258	Drimum Hammer
+259	Makos Hammer
+260	Androud Ham
+261	Double Tooth Hammer
+262	Spiral Hammer
+263	Dryce Ham
+264	Finally Hammer
+265	Pratt Hammer
+266	Rust Hammer
+267	Búa Ganulong
+268	Búa Gareth
+269	Búa Nasika
+270	Búa Nyar
+271	Búa Dana
+272	Búa Danu
+273	Búa Radon
+274	Búa Rania
+275	Búa Marna
+276	Búa Mador
+277	Búa Bas
+278	Búa Vaink
+279	Búa Saga
+280	Búa Saiba
+281	Búa Agnon
+282	Búa Agra
+283	Búa Jeward
+284	Búa Zetes
+285	Búa Phantom
+286	Búa Lost
+287	Búa Bulmine
+288	Búa Orcus
+289	Búa Sols
+290	Búa Nectar
+291	Búa Draup
+292	Búa Holyman
+293	Búa Agnal
+294	Búa Pandora
+295	Búa Necro
+296	Búa Heracle
+297	Búa Silion
+298	Búa Cunning
+299	Búa Requiem
+300	Búa Quake
+301	Búa Elladen
+302	Búa Death
+303	Búa Orphans
+304	Búa Văn minh
+305	Búa Thiên quân
+306	Búa Wine
+307	Búa Wyvern
+308	Búa Drake
+309	Búa Dragon
+310	Dao găm cũ
+311	Iron Dagger
+312	Shoulder Dagger
+313	Reaper Dagger
+314	Jack Dagger
+315	Broad Dagger
+316	Lens Dagger
+317	Slash Dagger
+318	Thorns Dagger
+319	Lux Dagger
+320	Gauge Dagger
+321	Loose Dagger
+322	Corin Dagger
+323	Summon Dagger
+324	Carnian Dagger
+325	Abar Dagger
+326	Koiron Dagger
+327	Lash Dagger
+328	Axel Dagger
+329	Mute Dagger
+330	Cao cấp Dagger
+331	Cao cấp Iron Dagger
+332	Cao cấp Shoulder Dagger
+333	Cao cấp Reaper Dagger
+334	Cao cấp Jack Dagger
+335	Cao cấp Broad Dagger
+336	Cao cấp Lens Dagger
+337	Cao cấp Slash Dagger
+338	Cao cấp Thorns Dagger
+339	Cao cấp Lux Dagger
+340	Cao cấp Gauge Dagger
+341	Cao cấp Loose Dagger
+342	Cao cấp Corin Dagger
+343	Cao cấp Summon Dagger
+344	Cao cấp Carnian Dagger
+345	Cao cấp Abar Dagger
+346	Cao cấp Koiron Dagger
+347	Cao cấp Lash Dagger
+348	Cao cấp Axel Dagger
+349	Cao cấp Mute Dagger
+350	Dicamensis Dagger
+351	Sharp Dagger
+352	Cred Dagger
+353	Crute Dagger
+354	Letty Dagger
+355	Asnar Dagger
+356	Hurald Dagger
+357	Holzenban Dagger
+358	Dalzar Dagger
+359	Cuckle Dagger
+360	Rosmandal
+361	Lysun Dagger
+362	Dark Shadow Dagger
+363	Brendal Dagger
+364	Kamasdal
+365	Cursaris Dagger
+366	Killing Dagger
+367	Mort Dagger
+368	Shalling Dagger
+369	Goat Dagger
+370	Dao găm Gaevol
+371	Dao găm Garend
+372	Dao găm Nyab
+373	Dao găm Nemels
+374	Dao găm Darend
+375	Dao găm Diana
+376	Dao găm Ranium
+377	Dao găm Rarins
+378	Dao găm Marcil
+379	Dao găm Malgino
+380	Dao găm Kiria
+381	Dao găm Barahal
+382	Dao găm Seriol
+383	Dao găm Sarus
+384	Dao găm Agis
+385	Dao găm Arinder
+386	Dao găm Julian
+387	Dao găm Janar
+388	Dao găm Calin
+389	Dao găm Gert
+390	Dao găm Kadora
+391	Dao găm Kairon
+392	Dao găm Tara
+393	Dao găm Rtas
+394	Dao găm Medes
+395	Dao găm Tinus
+396	Dao găm Hagen
+397	Dao găm Harans
+398	Dao găm Gaiya
+399	Dao găm Heris
+400	Dao găm Ners
+401	Dao găm Pelas
+402	Dao găm Dene
+403	Dao găm Lila
+404	Dao găm Rayatl
+405	Dao găm Raio
+406	Dao găm Manas
+407	Dao găm Movail
+408	Dao găm Danbi
+409	Dao găm Ảo ảnh
+410	Dao găm Wyvern
+411	Dao găm Drake
+412	Dao găm Dragon
+413	Găng cũ
+414	Bronze Glove
+415	Iron Glove
+416	Reaper Glove
+417	Jack Glove
+418	Toothed Glove
+419	Jazil Glove
+420	Lucian Glove
+421	Locked Glove
+422	Point Glove
+423	Nut Glove
+424	Mac Glove
+425	Haran Glove
+426	Eyeple Glove
+427	Spawning Glove
+428	Crack Glove
+429	Balams Glove
+430	Spinning Glove
+431	Jaran Glove
+432	Zid Glove
+433	Cao cấp Glove
+434	Cao cấp Bronze Glove
+435	Cao cấp Iron Glove
+436	Cao cấp Reaper Glove
+437	Cao cấp Jack Glove
+438	Cao cấp Toothed Glove
+439	Cao cấp Jazil Glove
+440	Cao cấp Lucian Glove
+441	Cao cấp Locked Glove
+442	Cao cấp Nut Glove
+443	Cao cấp Mac Glove
+444	Cao cấp Haran Glove
+445	Cao cấp Eyeple Glove
+446	Cao cấp Spawning Glove
+447	Cao cấp Crack Glove
+448	Cao cấp Balams Glove
+449	Cao cấp Spinning Glove
+450	Cao cấp Jaran Glove
+451	Cao cấp Zid Glove
+452	Crush Glove
+453	Roinel Glove
+454	Fight Glove
+455	Grab Glove
+456	Lockmatch Glove
+457	Plas Glove
+458	Joint Glove
+459	Flying Glove
+460	Kuiman Glove
+461	Nodirald Glove
+462	Grand Glove
+463	One and Two Glove
+464	Upca Glove
+465	Gyeoktaragi Glove
+466	Lament Glove
+467	Thundren Glove
+468	Final Glove
+469	Champion Glove
+470	Ross Glove
+471	Pient Glove
+472	Găng tay Gaevol
+473	Găng tay Garend
+474	Găng tay Nyab
+475	Găng tay Nemels
+476	Găng tay Darend
+477	Găng tay Diana
+478	Găng tay Ranium
+479	Găng tay Rarins
+480	Găng tay Marcil
+481	Găng tay Malgino
+482	Găng tay Kiria
+483	Găng tay Barahal
+484	Găng tay Seriol
+485	Găng tay Sarus
+486	Găng tay Agis
+487	Găng tay Arinder
+488	Găng tay Julian
+489	Găng tay Janar
+490	Găng tay Calin
+491	Găng tay Gert
+492	Găng tay Kadora
+493	Găng tay Kairon
+494	Găng tay Tara
+495	Găng tay Rtas
+496	Găng tay Medes
+497	Găng tay Tinus
+498	Găng tay Hagen
+499	Găng tay Harans
+500	Găng tay Gaiya
+501	Găng tay Heris
+502	Găng tay Ners
+503	Găng tay Pelas
+504	Găng tay Dene
+505	Găng tay Lila
+506	Găng tay Rayatl
+507	Găng tay Raio
+508	Găng tay Manas
+509	Găng tay Movail
+510	Găng tay Danbi
+511	Găng tay Ảo ảnh
+512	Găng tay Wyvern
+513	Găng tay Drake
+514	Găng tay Dragon
+515	Vuốt cũ
+516	Bronze Claw
+517	Iron Claw
+518	Reaper Claw
+519	Jack Claw
+520	Streak Claw
+521	Fly Claw
+522	Kalt Claw
+523	Bobno Claw
+524	Roat Claw
+525	Deple Claw
+526	Kebe Claw
+527	Jet Claw
+528	Brin Claw
+529	Mas Claw
+530	Gerin Claw
+531	Shrine Claw
+532	Must Claw
+533	One Tooth Claw
+534	Enyar Claw
+535	Cao cấp Claw
+536	Cao cấp Bronze Claw
+537	Cao cấp Iron Claw
+538	Cao cấp Reaper Claw
+539	Cao cấp Jack Claw
+540	Cao cấp Streak Claw
+541	Cao cấp Fly Claw
+542	Cao cấp Kalt Claw
+543	Cao cấp Bobno Claw
+544	Cao cấp Roat Claw
+545	Cao cấp Deple Claw
+546	Cao cấp Kebe Claw
+547	Cao cấp Jet Claw
+548	Cao cấp Brin Claw
+549	Cao cấp Mas Claw
+550	Cao cấp Gerin Claw
+551	Cao cấp Shrine Claw
+552	Cao cấp Must Claw
+553	Cao cấp One Tooth Claw
+554	Cao cấp Enyar Claw
+555	Shoot Claw
+556	Short Claw
+557	Maas Claw
+558	Wolfen Claw
+559	Toothed Claw
+560	Brim Claw
+561	Sabetr Claw
+562	Margrit Claw
+563	Shadow Claw
+564	Gonenkus Claw
+565	Abyss Claw
+566	Madarin Claw
+567	Sipder Claw
+568	Trans Claw
+569	Vita Claw
+570	Grip Claw
+571	Alua Claw
+572	Assassin Claw
+573	Mercit Claw
+574	Jamad Claw
+575	Vuốt Gaevol
+576	Vuốt Garend
+577	Vuốt Nyab
+578	Vuốt Nemels
+579	Vuốt Darend
+580	Vuốt Diana
+581	Vuốt Ranium
+582	Vuốt Rarins
+583	Vuốt Marcil
+584	Vuốt Malgino
+585	Vuốt Kiria
+586	Vuốt Barahal
+587	Vuốt Seriol
+588	Vuốt Sarus
+589	Vuốt Agis
+590	Vuốt Arinder
+591	Vuốt Julian
+592	Vuốt Janar
+593	Vuốt Calin
+594	Vuốt Gert
+595	Vuốt Kadora
+596	Vuốt Kairon
+597	Vuốt Tara
+598	Vuốt Rtas
+599	Vuốt Medes
+600	Vuốt Tinus
+601	Vuốt Hagen
+602	Vuốt Harans
+603	Vuốt Gaiya
+604	Vuốt Heris
+605	Vuốt Ners
+606	Vuốt Pelas
+607	Vuốt Dene
+608	Vuốt Lila
+609	Vuốt Rayatl
+610	Vuốt Raio
+611	Vuốt Manas
+612	Vuốt Movail
+613	Vuốt Danbi
+614	Vuốt Ảo ảnh
+615	Vuốt Wyvern
+616	Vuốt Drake
+617	Vuốt Dragon
+618	Kiếm cũ
+619	Iron Sword
+620	Broad Sword
+621	Reaper Sword
+622	Jack Sword
+623	Viking Sword
+624	Schiavona
+625	Walloon Sword
+626	Katzbalger
+627	Spatha Sword
+628	Gladius
+629	Ibelt Sword
+630	Kert Sword
+631	Grans Sword
+632	Cutlass
+633	Pirangi Sword
+634	Kurano Sword
+635	Roint Sword
+636	Joynel Sword
+637	Manuk Sword
+638	Cao cấp Sword
+639	Cao cấp Iron Sword
+640	Cao cấp Broad Sword
+641	Cao cấp Reaper Sword
+642	Cao cấp Jack Sword
+643	Cao cấp Viking Sword
+644	Cao cấp Schiavona
+645	Cao cấp Walloon Sword
+646	Cao cấp Katzbalger
+647	Cao cấp Spatha Sword
+648	Cao cấp Gladius
+649	Cao cấp Ibelt Sword
+650	Cao cấp Kert Sword
+651	Cao cấp Grans Sword
+652	Cao cấp Cutlass
+653	Cao cấp Pirangi Sword
+654	Cao cấp Kurano Sword
+655	Cao cấp Roint Sword
+656	Cao cấp Joynel Sword
+657	Cao cấp Manuk Sword
+658	Zirka Sword
+659	Prine Sword
+660	Wit Sword
+661	Galen Sword
+662	Frita Sword
+663	Reverse Sword
+664	Blood Sword
+665	Shanic Sword
+666	Suns Sword
+667	Soul Blade
+668	Magma Blade
+669	Hell of Blade
+670	Grand Sword
+671	Promes Sword
+672	Kaumari Sword
+673	Gram
+674	Caliburn
+675	Axcalibur
+676	Longist
+677	Mandalin Sword
+678	Kiếm Galia
+679	Kiếm Headman
+680	Kiếm Trens
+681	Kiếm Norison
+682	Kiếm Deia
+683	Kiếm Deck
+684	Kiếm Lanus
+685	Kiếm Pites
+686	Kiếm Maclas
+687	Kiếm Midrin
+688	Kiếm Ban
+689	Kiếm Bevid
+690	Kiếm Salami
+691	Kiếm Mides
+692	Kiếm Aris
+693	Kiếm Abron
+694	Kiếm Jit
+695	Kiếm Jirra
+696	Kiếm Rushand
+697	Kiếm Cronel
+698	Kiếm Karki
+699	Kiếm Kerta
+700	Kiếm Tarquin
+701	Kiếm Temiran
+702	Kiếm Parante
+703	Kiếm Rji
+704	Kiếm Harold
+705	Kiếm Harpy
+706	Kiếm Gerion
+707	Kiếm Guest
+708	Kiếm Noise
+709	Kiếm Natal
+710	Kiếm Dehira
+711	Kiếm Del
+712	Kiếm Rakshar
+713	Kiếm Laslo
+714	Kiếm Megara
+715	Kiếm Huos
+716	Kiếm Maggie
+717	Kiếm Lionel
+718	Kiếm Wyvern
+719	Kiếm Drake
+720	Kiếm Dragon
+721	Saber cũ
+722	Bronze Saber
+723	Iron Saber
+724	Reaper Saber
+725	Jack Saber
+726	Claire Saber
+727	Schuar Saber
+728	Back Saber
+729	Rapier Saber
+730	Epair Saber
+731	Turk Saber
+732	Prare Saber
+733	Chater Saber
+734	Hunted Saber
+735	Kilij Saber
+736	Shashid Saber
+737	Paraz Saber
+738	Jamad Saber
+739	Roint Saber
+740	Girard Saber
+741	Cao cấp Saber
+742	Cao cấp Bronze Saber
+743	Cao cấp Iron Saber
+744	Cao cấp Reaper Saber
+745	Cao cấp Jack Saber
+746	Cao cấp Claire Saber
+747	Cao cấp Schuar Saber
+748	Cao cấp Back Saber
+749	Cao cấp Rapier Saber
+750	Cao cấp Epair Saber
+751	Cao cấp Turk Saber
+752	Cao cấp Prare Saber
+753	Cao cấp Chater Saber
+754	Cao cấp Hunted Saber
+755	Cao cấp Kilij Saber
+756	Cao cấp Shashid Saber
+757	Cao cấp Paraz Saber
+758	Cao cấp Jamad Saber
+759	Cao cấp Roint Saber
+760	Cao cấp Girard Saber
+761	Kramaker Saber
+762	Roisemagecha
+763	Arilanst Saber
+764	Gigent Saber
+765	Tutind Saber
+766	Aprchad Saber
+767	Gainoya Saber
+768	Tarihigeo Saber
+769	Blame Saber
+770	Holding Saber
+771	Guardian Saber
+772	Lizar Saber
+773	Phoenix Saber
+774	Powered Saber
+775	Tuslis Saber
+776	Support Saber
+777	Winded Saber
+778	Brandal Saber
+779	Rondiz Saber
+780	Rocknel Saber
+781	Saber Galia
+782	Saber Headman
+783	Saber Trens
+784	Saber Norison
+785	Saber Deia
+786	Saber Deck
+787	Saber Lanus
+788	Saber Pites
+789	Saber Maclas
+790	Saber Midrin
+791	Saber Ban
+792	Saber Bevid
+793	Saber Salami
+794	Saber Mides
+795	Saber Aris
+796	Saber Abron
+797	Saber Jit
+798	Saber Jirra
+799	Saber Rushand
+800	Saber Cronel
+801	Saber Karki
+802	Saber Kerta
+803	Saber Tarquin
+804	Saber Temiran
+805	Saber Parante
+806	Saber Rji
+807	Saber Harold
+808	Saber Harpy
+809	Saber Gerion
+810	Saber Guest
+811	Saber Noise
+812	Saber Natal
+813	Saber Dehira
+814	Saber Del
+815	Saber Rakshar
+816	Saber Laslo
+817	Saber Megara
+818	Saber Huos
+819	Saber Maggie
+820	Saber Lionel
+821	Saber Wyvern
+822	Saber Drake
+823	Saber Dragon
+824	Lance cũ
+825	Iron Lance
+826	Loop Lance
+827	Jack Lance
+828	Shadow Lance
+829	Plas Lance
+830	Risk Lance
+831	Blackrock Lance
+832	Triple Lance
+833	Birog Lance
+834	Toothed Lance
+835	Grand Lance
+836	Dark Lance
+837	Bleed Lance
+838	Sols Lance
+839	Rising Lance
+840	Big Ban Lance
+841	Friend Lance
+842	Wind Lance
+843	Held Lance
+844	Cao cấp Lance
+845	Cao cấp Iron Lance
+846	Cao cấp Loop Lance
+847	Cao cấp Jack Lance
+848	Cao cấp Shadow Lance
+849	Cao cấp Plas Lance
+850	Cao cấp Risk Lance
+851	Cao cấp Blackrock Lance
+852	Cao cấp Triple Lance
+853	Cao cấp Birog Lance
+854	Cao cấp Toothed Lance
+855	Cao cấp Grand Lance
+856	Cao cấp Dark Lance
+857	Cao cấp Bleed Lance
+858	Cao cấp Sols Lance
+859	Cao cấp Rising Lance
+860	Cao cấp Big Ban Lance
+861	Cao cấp Friend Lance
+862	Cao cấp Wind Lance
+863	Cao cấp Held Lance
+864	Pike Lance
+865	Sarisar Lance
+866	Counter Lance
+867	Budnacher
+868	Pramea Lance
+869	Lucerne Lance
+870	Corsesc Lance
+871	Partisan
+872	Trident
+873	Recover Lance
+874	Jedburgh Lance
+875	Scorpion Lance
+876	Halberd Lance
+877	Alspiess Lance
+878	Breach Pike
+879	Astaspiculum
+880	Longinus
+881	Gelervolg
+882	Adrian Lance
+883	Grundrun Lance
+884	Thương Galia
+885	Thương Headman
+886	Thương Trens
+887	Thương Norison
+888	Thương Deia
+889	Thương Deck
+890	Thương Lanus
+891	Thương Pites
+892	Thương Maclas
+893	Thương Midrin
+894	Thương Ban
+895	Thương Bevid
+896	Thương Salami
+897	Thương Mides
+898	Thương Aris
+899	Thương Abron
+900	Thương Jit
+901	Thương Jirra
+902	Thương Rushand
+903	Thương Cronel
+904	Thương Karki
+905	Thương Kerta
+906	Thương Tarquin
+907	Thương Temiran
+908	Thương Parante
+909	Thương Rji
+910	Thương Harold
+911	Thương Harpy
+912	Thương Gerion
+913	Thương Guest
+914	Thương Noise
+915	Thương Natal
+916	Thương Dehira
+917	Thương Del
+918	Thương Rakshar
+919	Thương Laslo
+920	Thương Megara
+921	Thương Huos
+922	Thương Maggie
+923	Thương Lionel
+924	Thương Wyvern
+925	Thương Drake
+926	Thương Dragon
+927	Gậy phép cũ
+928	Ruby Wand
+929	Loop Wand
+930	Jack Wand
+931	Plas Wand
+932	Krassen Wand
+933	Powered Wand
+934	Saint Wand
+935	Magi Wand
+936	Mana Wand
+937	Flame Wand
+938	Prolt Wand
+939	Wanded Wand
+940	Winged Wand
+941	Magical Wand
+942	Magma Wand
+943	Angel Wand
+944	Chris Wand
+945	Diamond Wand
+946	Ori Wand
+947	Cao cấp Wand
+948	Cao cấp Ruby Wand
+949	Cao cấp Loop Wand
+950	Cao cấp Jack Wand
+951	Cao cấp Plas Wand
+952	Cao cấp Krassen Wand
+953	Cao cấp Powered Wand
+954	Cao cấp Saint Wand
+955	Cao cấp Magi Wand
+956	Cao cấp Mana Wand
+957	Cao cấp Flame Wand
+958	Cao cấp Prolt Wand
+959	Cao cấp Wanded Wand
+960	Cao cấp Winged Wand
+961	Cao cấp Magical Wand
+962	Cao cấp Magma Wand
+963	Cao cấp Angel Wand
+964	Cao cấp Chris Wand
+965	Cao cấp Diamond Wand
+966	Cao cấp Ori Wand
+967	Selin Wand
+968	Diyor Wand
+969	Crit Wand
+970	Raiden Wand
+971	Rust Wand
+972	Grind Wand
+973	Remus Wand
+974	Bardolo Wand
+975	Release Wand
+976	Wise Wand
+977	Rusty Wand
+978	Remel Wand
+979	Fordin Wand
+980	Sumaritz Wand
+981	Novarts Wand
+982	Raist Wand
+983	Dice Wand
+984	Dowser Wand
+985	Rawlings Wand
+986	Ripab Wand
+987	Gậy phép Geatas
+988	Gậy phép Gepie
+989	Gậy phép Nuaja
+990	Gậy phép Nivargen
+991	Gậy phép Derose
+992	Gậy phép Delpazs
+993	Gậy phép Linos
+994	Gậy phép Reril
+995	Gậy phép Medols
+996	Gậy phép Madrk
+997	Gậy phép Berlac
+998	Gậy phép Gilius
+999	Gậy phép Sans
+1000	Gậy phép Sand
+1001	Gậy phép Agranom
+1002	Gậy phép Argai
+1003	Gậy phép Signi
+1004	Gậy phép Grant
+1005	Gậy phép Pla
+1006	Gậy phép Znol
+1007	Gậy phép Charzor
+1008	Gậy phép Tevars
+1009	Gậy phép Seud
+1010	Gậy phép Paris
+1011	Gậy phép Pasi
+1012	Gậy phép Hyarg
+1013	Gậy phép Hera
+1014	Gậy phép Gesr
+1015	Gậy phép Gorra
+1016	Gậy phép Forreld
+1017	Gậy phép Domun
+1018	Gậy phép Leria
+1019	Gậy phép Lewis
+1020	Gậy phép Media
+1021	Gậy phép Agros
+1022	Gậy phép Hermi
+1023	Gậy phép Jepro
+1024	Gậy phép Rapunzel
+1025	Gậy phép Daigo
+1026	Gậy phép Sini
+1027	Gậy phép Wyvern
+1028	Gậy phép Drake
+1029	Gậy phép Dragon
+1030	Hair Band
+1031	Bold Hood
+1032	Long Hood
+1033	Hard Hood
+1034	Color Hood
+1035	Boeing Hood
+1036	Pelicant
+1037	Realis
+1038	Unlimit
+1039	Aku the Moon
+1040	Molike
+1041	Havin Crew
+1042	Spoit
+1043	Yunkardo
+1044	Roipannen
+1045	Questero
+1046	Dedilins
+1047	Bandinaz
+1048	Upper Bandina
+1049	Hard Hair Band
+1050	Cao cấp Bold Hood
+1051	Cao cấp Long Hood
+1052	Cao cấp Hard Hood
+1053	Cao cấp Color Hood
+1054	Cao cấp Boeing Hood
+1055	Upper Pelicant
+1056	Upper Realis
+1057	Hard Unlimit
+1058	Upper Aku the Moon
+1059	Bold Molike
+1060	Upper Havin Crew
+1061	Upper Spoit
+1062	Hard Yunkardo
+1063	Cao cấp Roipannen
+1064	Hard Questero
+1065	Cao cấp Dedilins
+1066	Cao cấp Bandinaz
+1067	Cao cấp Upper Bandina
+1068	Arabian
+1069	Everes
+1070	Labias
+1071	Rebiluk
+1072	Zilnoid
+1073	Dragud
+1074	Sekoichen
+1075	Roust
+1076	Kipatos
+1077	Raylian
+1078	Subadro
+1079	Emilian
+1080	Basic Top
+1081	Waycops
+1082	Safaris
+1083	Archer Turkey
+1084	Asust
+1085	Cromberg
+1086	Sojirik Header
+1087	Golden Bandiz
+1088	Hood Ganulong
+1089	Hood Gareth
+1090	Hood Nasika
+1091	Hood Nyar
+1092	Hood Dana
+1093	Hood Danu
+1094	Hood Radon
+1095	Hood Rania
+1096	Hood Marna
+1097	Hood Mador
+1098	Hood Bas
+1099	Hood Vaink
+1100	Hood Saga
+1101	Hood Saiba
+1102	Hood Agnon
+1103	Hood Agra
+1104	Hood Jeward
+1105	Hood Zetes
+1106	Hood Phantom
+1107	Hood Lost
+1108	Hood Bulmine
+1109	Hood Orcus
+1110	Hood Sols
+1111	Hood Nectar
+1112	Hood Draup
+1113	Hood Holyman
+1114	Hood Agnal
+1115	Hood Pandora
+1116	Hood Necro
+1117	Hood Heracle
+1118	Hood Silion
+1119	Hood Cunning
+1120	Hood Requiem
+1121	Hood Quake
+1122	Hood Elladen
+1123	Hood Death
+1124	Hood Orphans
+1125	Hood Văn minh
+1126	Hood Thiên quân
+1127	Hood Wine
+1128	Hood Wyvern
+1129	Hood Drake
+1130	Hood Dragon
+1131	Bronze Helm
+1132	Steel Helm
+1133	Loop Helmet
+1134	Jack Helmet
+1135	Duran Helmet
+1136	Kellusus
+1137	Radian
+1138	Vital Q
+1139	Sapient
+1140	Calculus
+1141	Drice
+1142	Lace Up
+1143	Kraina
+1144	Let Go Flom
+1145	Under Siege
+1146	Never Let Go
+1147	Mineral Q
+1148	Helm Kỵ sĩ
+1149	Rond Helmet
+1150	Shans Helmet
+1151	Cao cấp Bronze Helm
+1152	Cao cấp Steel Helm
+1153	Upper Loop Helmet
+1154	Upper Jack Helmet
+1155	Upper Duran Helmet
+1156	Upper Kellusus
+1157	Upper Radian
+1158	Upper Vital Q
+1159	Upper Sapient
+1160	Upper Calculus
+1161	Upper Drice
+1162	Upper Lace Up
+1163	Upper Kraina
+1164	Upper Let Go Flom
+1165	Upper Under Siege
+1166	Upper Never Let Go
+1167	Upper Mineral Q
+1168	Helm Kỵ sĩ cao cấp
+1169	Cao cấp Rond Helmet
+1170	Cao cấp Shans Helmet
+1171	Wirin Head
+1172	Cooler Head
+1173	Lumen Gear
+1174	Witch Gear
+1175	Heli Gear
+1176	Trick Heron
+1177	Hidden Heads
+1178	Red Hail
+1179	Black Heptic
+1180	Over Gear
+1181	Tulanders
+1182	Ever Heads
+1183	Ronny Gear
+1184	Trias
+1185	Monixes
+1186	Altais
+1187	Genie Head
+1188	Super Heron
+1189	Fide Gear
+1190	Lens Gear
+1191	Helm Galia
+1192	Helm Headman
+1193	Helm Trens
+1194	Helm Norison
+1195	Helm Deia
+1196	Helm Deck
+1197	Helm Lanus
+1198	Helm Pites
+1199	Helm Maclas
+1200	Helm Midrin
+1201	Helm Ban
+1202	Helm Bevid
+1203	Helm Salami
+1204	Helm Mides
+1205	Helm Aris
+1206	Helm Abron
+1207	Helm Jit
+1208	Helm Jirra
+1209	Helm Rushand
+1210	Helm Cronel
+1211	Helm Karki
+1212	Helm Kerta
+1213	Helm Tarquin
+1214	Helm Temiran
+1215	Helm Parante
+1216	Helm Rji
+1217	Helm Harold
+1218	Helm Harpy
+1219	Helm Gerion
+1220	Helm Guest
+1221	Helm Noise
+1222	Helm Natal
+1223	Helm Dehira
+1224	Helm Del
+1225	Helm Rakshar
+1226	Helm Laslo
+1227	Helm Megara
+1228	Helm Huos
+1229	Helm Maggie
+1230	Helm Lionel
+1231	Helm Wyvern
+1232	Helm Drake
+1233	Helm Dragon
+1234	Low Mulrun
+1235	Middle Mulrun
+1236	High Mulrun
+1237	Rain Hat
+1238	Wonders Hat
+1239	Magical Hat
+1240	Saffras
+1241	Ruby Magic
+1242	Eternia
+1243	Extual
+1244	Trilis
+1245	Momentus
+1246	Henstco
+1247	Mobilian
+1248	Stras
+1249	Nosrat
+1250	Magic Leo
+1251	Magic Magic
+1252	Nos Magic Hat
+1253	Granun Hat
+1254	Upper Low Mulrun
+1255	Upper Middle Mulrun
+1256	Upper High Mulrun
+1257	Upper Rain Hat
+1258	Upper Wonders Hat
+1259	Upper Magical Hat
+1260	Upper Saffras
+1261	Upper Ruby Magic
+1262	Upper Eternia
+1263	Upper Extual
+1264	Upper Trilis
+1265	Upper Momentus
+1266	Upper Henstco
+1267	Upper Mobilian
+1268	Upper Stras
+1269	Upper Nosrat
+1270	Upper Magic Leo
+1271	Upper Magic Magic
+1272	Upper Nos Magic Hat
+1273	Upper Granun Hat
+1274	Rare Magic
+1275	In the Mana
+1276	All the Magic
+1277	Mana Gush
+1278	Magic Helper
+1279	Suffering Cap
+1280	Star Poller
+1281	Sun in the Moon
+1282	Obadis
+1283	Danius
+1284	Materian
+1285	Magic Bont
+1286	Max Mana
+1287	Super Magic
+1288	Under Power
+1289	Astric
+1290	Plus Two
+1291	Ace Moon
+1292	Marod Golden
+1293	Mana Gram
+1294	Mũ Geatas
+1295	Mũ Gepie
+1296	Mũ Nuaja
+1297	Mũ Nivargen
+1298	Mũ Derose
+1299	Mũ Delpazs
+1300	Mũ Linos
+1301	Mũ Reril
+1302	Mũ Medols
+1303	Mũ Madrk
+1304	Mũ Berlac
+1305	Mũ Gilius
+1306	Mũ Sans
+1307	Mũ Sand
+1308	Mũ Agranom
+1309	Mũ Argai
+1310	Mũ Signi
+1311	Mũ Grant
+1312	Mũ Pla
+1313	Mũ Znol
+1314	Mũ Charzor
+1315	Mũ Tevars
+1316	Mũ Seud
+1317	Mũ Paris
+1318	Mũ Pasi
+1319	Mũ Hyarg
+1320	Mũ Hera
+1321	Mũ Gesr
+1322	Mũ Gorra
+1323	Mũ Forreld
+1324	Mũ Domun
+1325	Mũ Leria
+1326	Mũ Lewis
+1327	Mũ Media
+1328	Mũ Agros
+1329	Mũ Hermi
+1330	Mũ Jepro
+1331	Mũ Rapunzel
+1332	Mũ Daigo
+1333	Mũ Sini
+1334	Mũ Wyvern
+1335	Mũ Drake
+1336	Mũ Dragon
+1337	Mask hạ cấp
+1338	Mask trung cấp
+1339	Mask thượng cấp
+1340	Mask bạc
+1341	Mask vàng
+1342	Neck Guiding
+1343	Nen Mask
+1344	Q Mask
+1345	Ron Mask
+1346	Up Mask
+1347	Z Mask
+1348	For Assassin
+1349	Hidden Week
+1350	Help Once
+1351	One Life
+1352	Hello Week
+1353	The Mask
+1354	Jari Mask
+1355	Rome Mask
+1356	Dulak Mask
+1357	Cường hóa Mask hạ cấp
+1358	Cường hóa Mask trung cấp
+1359	Cường hóa Mask thượng cấp
+1360	Cường hóa Mask bạc
+1361	Cường hóa Mask vàng
+1362	Upper Neck Guiding
+1363	Upper Nen Mask
+1364	Upper Q Mask
+1365	Upper Ron Mask
+1366	Upper Up Mask
+1367	Upper Z Mask
+1368	Upper For Assassin
+1369	Upper Hidden Week
+1370	Upper Help Once
+1371	Upper One Life
+1372	Upper Hello Week
+1373	Upper The Mask
+1374	Upper Jari Mask
+1375	Upper Rome Mask
+1376	Upper Dulak Mask
+1377	Mask Roo
+1378	Mask Chin
+1379	Masking Up
+1380	Black Cats
+1381	Aramis
+1382	Mặt nạ Ninja
+1383	Merit Blue
+1384	Masking Two
+1385	Blood Mask
+1386	Lily Wind
+1387	Flower Neck
+1388	Masking Q
+1389	Upside
+1390	Covering Up
+1391	Secret One
+1392	For the Ninja
+1393	Grip Next
+1394	Defending Neck
+1395	Deadly Mask
+1396	Death Mask
+1397	Mask Gaevol
+1398	Mask Garend
+1399	Mask Nyab
+1400	Mask Nemels
+1401	Mask Darend
+1402	Mask Diana
+1403	Mask Ranium
+1404	Mask Rarins
+1405	Mask Marcil
+1406	Mask Malgino
+1407	Mask Kiria
+1408	Mask Barahal
+1409	Mask Seriol
+1410	Mask Sarus
+1411	Mask Agis
+1412	Mask Arinder
+1413	Mask Julian
+1414	Mask Janar
+1415	Mask Calin
+1416	Mask Gert
+1417	Mask Kadora
+1418	Mask Kairon
+1419	Mask Tara
+1420	Mask Rtas
+1421	Mask Medes
+1422	Mask Tinus
+1423	Mask Hagen
+1424	Mask Harans
+1425	Mask Gaiya
+1426	Mask Heris
+1427	Mask Ners
+1428	Mask Pelas
+1429	Mask Dene
+1430	Mask Lila
+1431	Mask Rayatl
+1432	Mask Raio
+1433	Mask Manas
+1434	Mask Movail
+1435	Mask Danbi
+1436	Mask Ảo ảnh
+1437	Mask Wyvern
+1438	Mask Drake
+1439	Mask Dragon
+1440	Low Armor
+1441	Middle Armor
+1442	High Armor
+1443	Loop Armor
+1444	Jack Armor
+1445	Up Defense
+1446	Care Body
+1447	Fearless
+1448	Glandis
+1449	Ended Roll
+1450	Ever Rolling
+1451	Surround
+1452	One Defend
+1453	Air Cushion
+1454	Trick Armor
+1455	Brack Armor
+1456	Finally
+1457	Deep Sleeg
+1458	Nadalit
+1459	Flan Armor
+1460	Cao cấp Low Armor
+1461	Cao cấp Middle Armor
+1462	Cao cấp High Armor
+1463	Cao cấp Loop Armor
+1464	Cao cấp Jack Armor
+1465	Upper Up Defense
+1466	Upper Care Body
+1467	Upper Fearless
+1468	Upper Glandis
+1469	Upper Ended Roll
+1470	Upper Ever Rolling
+1471	Upper Surround
+1472	Upper One Defend
+1473	Upper Air Cushion
+1474	Upper Trick Armor
+1475	Upper Brack Armor
+1476	Upper Finally
+1477	Upper Deep Sleeg
+1478	Upper Nadalit
+1479	Upper Flan Armor
+1480	In the Mood
+1481	Black Rain
+1482	Supechury
+1483	Edelvai
+1484	Trisva
+1485	Altaino
+1486	Claychu
+1487	Kebatus
+1488	Mix Armor
+1489	Grand In
+1490	Shine Armor
+1491	Ever Armor
+1492	Noblis
+1493	Cure Raiden
+1494	Victorial
+1495	Factor and View
+1496	Alexury
+1497	Brynen
+1498	Rashadin Armor
+1499	Brox Armor
+1500	Armor Ganulong
+1501	Armor Gareth
+1502	Armor Nasika
+1503	Armor Nyar
+1504	Armor Dana
+1505	Armor Danu
+1506	Armor Radon
+1507	Armor Rania
+1508	Armor Marna
+1509	Armor Mador
+1510	Armor Bas
+1511	Armor Vaink
+1512	Armor Saga
+1513	Armor Saiba
+1514	Armor Agnon
+1515	Armor Agra
+1516	Armor Jeward
+1517	Armor Zetes
+1518	Armor Phantom
+1519	Armor Lost
+1520	Armor Bulmine
+1521	Armor Orcus
+1522	Armor Sols
+1523	Armor Nectar
+1524	Armor Draup
+1525	Armor Holyman
+1526	Armor Agnal
+1527	Armor Pandora
+1528	Armor Necro
+1529	Armor Heracle
+1530	Armor Silion
+1531	Armor Cunning
+1532	Armor Requiem
+1533	Armor Quake
+1534	Armor Elladen
+1535	Armor Death
+1536	Armor Orphans
+1537	Armor Văn minh
+1538	Armor Thiên quân
+1539	Armor Wine
+1540	Armor Wyvern
+1541	Armor Drake
+1542	Armor Dragon
+1543	Bronze Armor
+1544	Steel Armor
+1545	Heavy Armor
+1546	Black Bear
+1547	Mammoth Bone
+1548	Madlis
+1549	Hard Panel
+1550	Chain Loop
+1551	More Harder
+1552	Stronger
+1553	No Damage
+1554	Hell Defender
+1555	Turiad
+1556	Koisqu
+1557	Stropy
+1558	Fermata
+1559	Tent Up To
+1560	Bond Armor
+1561	Half Mail
+1562	Plate
+1563	Cao cấp Bronze Armor
+1564	Cao cấp Steel Armor
+1565	Upper Heavy Armor
+1566	Upper Black Bear
+1567	Upper Mammoth Bone
+1568	Upper Madlis
+1569	Upper Hard Panel
+1570	Upper Chain Loop
+1571	Upper More Harder
+1572	Upper Stronger
+1573	Upper No Damage
+1574	Upper Hell Defender
+1575	Upper Turiad
+1576	Upper Koisqu
+1577	Upper Stropy
+1578	Upper Fermata
+1579	Upper Tent Up To
+1580	Upper Bond Armor
+1581	Upper Half Mail
+1582	Upper Plate
+1583	Dax Heavy Armor
+1584	Slow Top
+1585	Halley Harder
+1586	Tinquiles
+1587	Dem Upsda
+1588	Dines
+1589	Lycus
+1590	Zirst
+1591	Play Top
+1592	To the Armor
+1593	Effects
+1594	Grandian
+1595	Blast
+1596	Beytoman
+1597	Zephysty
+1598	Back to the Top
+1599	Itris
+1600	Hubertz
+1601	Grand Mail
+1602	Plate Gorgon
+1603	Mail Galia
+1604	Mail Headman
+1605	Mail Trens
+1606	Mail Norison
+1607	Mail Deia
+1608	Mail Deck
+1609	Mail Lanus
+1610	Mail Pites
+1611	Mail Maclas
+1612	Mail Midrin
+1613	Mail Ban
+1614	Mail Bevid
+1615	Mail Salami
+1616	Mail Mides
+1617	Mail Aris
+1618	Mail Abron
+1619	Mail Jit
+1620	Mail Jirra
+1621	Mail Rushand
+1622	Mail Cronel
+1623	Mail Karki
+1624	Mail Kerta
+1625	Mail Tarquin
+1626	Mail Temiran
+1627	Mail Parante
+1628	Mail Rji
+1629	Mail Harold
+1630	Mail Harpy
+1631	Mail Gerion
+1632	Mail Guest
+1633	Mail Noise
+1634	Mail Natal
+1635	Mail Dehira
+1636	Mail Del
+1637	Mail Rakshar
+1638	Mail Laslo
+1639	Mail Megara
+1640	Mail Huos
+1641	Mail Maggie
+1642	Mail Lionel
+1643	Mail Wyvern
+1644	Mail Drake
+1645	Mail Dragon
+1646	Robe hạ cấp
+1647	Robe trung cấp
+1648	Robe thượng cấp
+1649	Robe bạc
+1650	Robe vàng
+1651	Tudias
+1652	Stroper
+1653	M Collection
+1654	Manatos
+1655	Magical Two
+1656	Black Mana
+1657	Real Magic
+1658	Manarian
+1659	Escalic
+1660	Ultratic
+1661	Magic Mana
+1662	Shark Robe
+1663	Mana Robe
+1664	Rushan Robe
+1665	Cường hóa Robe hạ cấp
+1666	Cường hóa Robe trung cấp
+1667	Cường hóa Robe thượng cấp
+1668	Cao cấp Robe bạc
+1669	Cao cấp Robe vàng
+1670	Upper Tudias
+1671	Upper Stroper
+1672	Upper M Collection
+1673	Upper Manatos
+1674	Upper Magical Two
+1675	Upper Black Mana
+1676	Upper Real Magic
+1677	Upper Super Magic
+1678	Upper Manarian
+1679	Upper Escalic
+1680	Upper Ultratic
+1681	Upper Magic Mana
+1682	Upper Shark Robe
+1683	Upper Mana Robe
+1684	Upper Rushan Robe
+1685	Dresster
+1686	Suit Magic
+1687	Cucutonic
+1688	Sias
+1689	Double Upper
+1690	Shipper Magic
+1691	Eliasel
+1692	Kyongbeti
+1693	Prabler
+1694	Rocrat
+1695	Bladds
+1696	Level Magic
+1697	One Make
+1698	Interspa
+1699	Alien
+1700	Grandian
+1701	Rocksmeltz
+1702	Twist Robe
+1703	Robe Geatas
+1704	Robe Gepie
+1705	Robe Nuaja
+1706	Robe Nivargen
+1707	Robe Derose
+1708	Robe Delpazs
+1709	Robe Linos
+1710	Robe Reril
+1711	Robe Medols
+1712	Robe Madrk
+1713	Robe Berlac
+1714	Robe Gilius
+1715	Robe Sans
+1716	Robe Sand
+1717	Robe Agranom
+1718	Robe Argai
+1719	Robe Signi
+1720	Robe Grant
+1721	Robe Pla
+1722	Robe Znol
+1723	Robe Charzor
+1724	Robe Tevars
+1725	Robe Seud
+1726	Robe Paris
+1727	Robe Pasi
+1728	Robe Hyarg
+1729	Robe Hera
+1730	Robe Gesr
+1731	Robe Gorra
+1732	Robe Forreld
+1733	Robe Domun
+1734	Robe Leria
+1735	Robe Lewis
+1736	Robe Media
+1737	Robe Agros
+1738	Robe Hermi
+1739	Robe Jepro
+1740	Robe Rapunzel
+1741	Robe Daigo
+1742	Robe Sini
+1743	Robe Wyvern
+1744	Robe Drake
+1745	Robe Dragon
+1746	Low Leather
+1747	Middle Leather
+1748	High Leather
+1749	Super Leather
+1750	Fox Furs
+1751	Bear Leather
+1752	Dragon Fur
+1753	Leather Skin
+1754	Hard Leather
+1755	Max Skin
+1756	Leo Skin
+1757	Monster Fur
+1758	Skin Harder
+1759	Well Maiden
+1760	Beoric Fur
+1761	Yeti Skin
+1762	Pinelli Fur
+1763	Leather Mark
+1764	Loose Leather
+1765	Rain Leather
+1766	Upper Low Leather
+1767	Upper Middle Leather
+1768	Upper High Leather
+1769	Upper Super Leather
+1770	Upper Fox Furs
+1771	Upper Bear Leather
+1772	Upper Dragon Fur
+1773	Upper Leather Skin
+1774	Upper Hard Leather
+1775	Upper Max Skin
+1776	Upper Leo Skin
+1777	Upper Monster Fur
+1778	Upper Skin Harder
+1779	Upper Well Maiden
+1780	Upper Beoric Fur
+1781	Upper Yeti Skin
+1782	Upper Pinelli Fur
+1783	Upper Leather Mark
+1784	Upper Loose Leather
+1785	Upper Rain Leather
+1786	Rare Leather
+1787	Dark Leather
+1788	Evil Leather
+1789	Balrog Skin
+1790	Demon Skin
+1791	Under Leather
+1792	Ended Fur
+1793	Hollow Fur
+1794	Defending Fur
+1795	Mass Miss
+1796	Mammoth Fur
+1797	Dried
+1798	Cucudad
+1799	Red Skin
+1800	Blending Fur
+1801	Amore Fur
+1802	Double Skin
+1803	Ten Guide
+1804	Shinmas Leather
+1805	Heris Leather
+1806	Leather Gaevol
+1807	Leather Garend
+1808	Leather Nyab
+1809	Leather Nemels
+1810	Leather Darend
+1811	Leather Diana
+1812	Leather Ranium
+1813	Leather Rarins
+1814	Leather Marcil
+1815	Leather Malgino
+1816	Leather Kiria
+1817	Leather Barahal
+1818	Leather Seriol
+1819	Leather Sarus
+1820	Leather Agis
+1821	Leather Arinder
+1822	Leather Julian
+1823	Leather Janar
+1824	Leather Calin
+1825	Leather Gert
+1826	Leather Kadora
+1827	Leather Kairon
+1828	Leather Tara
+1829	Leather Rtas
+1830	Leather Medes
+1831	Leather Tinus
+1832	Leather Hagen
+1833	Leather Harans
+1834	Leather Gaiya
+1835	Leather Heris
+1836	Leather Ners
+1837	Leather Pelas
+1838	Leather Dene
+1839	Leather Lila
+1840	Leather Rayatl
+1841	Leather Raio
+1842	Leather Manas
+1843	Leather Movail
+1844	Leather Danbi
+1845	Leather Ảo ảnh
+1846	Leather Wyvern
+1847	Leather Drake
+1848	Leather Dragon
+1849	Boots hạ cấp
+1850	Boots trung cấp
+1851	Boots thượng cấp
+1852	Boots bạc
+1853	Boots vàng
+1854	Victorican
+1855	Thomas Two
+1856	Matthews
+1857	Vikings
+1858	Maxkings
+1859	Mobidix
+1860	Princestic
+1861	Luxurious
+1862	Turiment
+1863	Thunderreal
+1864	Furderings
+1865	Mendelssohn
+1866	Shanics Boots
+1867	Ferind Boots
+1868	Matis Boots
+1869	Cường hóa Boots hạ cấp
+1870	Cường hóa Boots trung cấp
+1871	Cường hóa Boots thượng cấp
+1872	Cường hóa Boots bạc
+1873	Cường hóa Boots vàng
+1874	Upper Victorican
+1875	Upper Thomas Two
+1876	Upper Matthews
+1877	Upper Vikings
+1878	Upper Maxkings
+1879	Upper Mobidix
+1880	Upper Princestic
+1881	Upper Luxurious
+1882	Upper Turiment
+1883	Upper Thunderreal
+1884	Upper Furderings
+1885	Upper Mendelssohn
+1886	Upper Shanics Boots
+1887	Upper Ferind Boots
+1888	Upper Matis Boots
+1889	Boutiques
+1890	Club the One
+1891	Wondeus
+1892	Mutalical
+1893	Pelicans
+1894	Rain Boots
+1895	I am the One
+1896	Slight
+1897	Trivial
+1898	Bubble Flip
+1899	Feather Boots
+1900	Bite Ants
+1901	Collation
+1902	Element
+1903	Cotmos
+1904	Fat Snack Will
+1905	Tallcubri
+1906	Grip Tonger
+1907	Ganarks
+1908	Burint Boots
+1909	Boots Ganulong
+1910	Boots Gareth
+1911	Boots Nasika
+1912	Boots Nyar
+1913	Boots Dana
+1914	Boots Danu
+1915	Boots Radon
+1916	Boots Rania
+1917	Boots Marna
+1918	Boots Mador
+1919	Boots Bas
+1920	Boots Vaink
+1921	Boots Saga
+1922	Boots Saiba
+1923	Boots Agnon
+1924	Boots Agra
+1925	Boots Jeward
+1926	Boots Zetes
+1927	Boots Phantom
+1928	Boots Lost
+1929	Boots Bulmine
+1930	Boots Orcus
+1931	Boots Sols
+1932	Boots Nectar
+1933	Boots Draup
+1934	Boots Holyman
+1935	Boots Agnal
+1936	Boots Pandora
+1937	Boots Necro
+1938	Boots Heracle
+1939	Boots Silion
+1940	Boots Cunning
+1941	Boots Requiem
+1942	Boots Quake
+1943	Boots Elladen
+1944	Boots Death
+1945	Boots Orphans
+1946	Boots Văn minh
+1947	Boots Thiên quân
+1948	Boots Wine
+1949	Boots Wyvern
+1950	Boots Drake
+1951	Boots Dragon
+1952	Low Boots
+1953	Middle Boots
+1954	High Boots
+1955	Loop Boots
+1956	Jack Boots
+1957	Gigantic
+1958	Huge Mass
+1959	Mega Sign
+1960	Giant Cell
+1961	Ianthism
+1962	Big Afrac
+1963	Markmol
+1964	Levitidan
+1965	Visinever
+1966	Colocos
+1967	Hittowns
+1968	Mad Mond
+1969	Jatras
+1970	Mend Boots
+1971	Rockrow
+1972	Upper Low Boots
+1973	Upper Middle Boots
+1974	Upper High Boots
+1975	Upper Loop Boots
+1976	Upper Jack Boots
+1977	Upper Gigantic
+1978	Upper Huge Mass
+1979	Upper Mega Sign
+1980	Upper Giant Cell
+1981	Upper Ianthism
+1982	Upper Big Afrac
+1983	Upper Markmol
+1984	Upper Levitidan
+1985	Upper Visinever
+1986	Upper Colocos
+1987	Upper Hittowns
+1988	Upper Mad Mond
+1989	Upper Jatras
+1990	Upper Mend Boots
+1991	Upper Rockrow
+1992	Ferictis
+1993	Bledne
+1994	Fortune Compo
+1995	Enjoyter
+1996	Imonism
+1997	Viatitu
+1998	Idemoni
+1999	Empirical
+2000	Philasofe
+2001	Criticer
+2002	Moral Any
+2003	Kantiant
+2004	Outlook On
+2005	Defants
+2006	Myalty
+2007	Constis
+2008	Being Poit
+2009	Epicuro
+2010	Grund Boots
+2011	Big Earth Boots
+2012	Grip Galia
+2013	Grip Headman
+2014	Grip Trens
+2015	Grip Norison
+2016	Grip Deia
+2017	Grip Deck
+2018	Grip Lanus
+2019	Grip Pites
+2020	Grip Maclas
+2021	Grip Midrin
+2022	Grip Ban
+2023	Grip Bevid
+2024	Grip Salami
+2025	Grip Mides
+2026	Grip Aris
+2027	Grip Abron
+2028	Grip Jit
+2029	Grip Jirra
+2030	Grip Rushand
+2031	Grip Cronel
+2032	Grip Karki
+2033	Grip Kerta
+2034	Grip Tarquin
+2035	Grip Temiran
+2036	Grip Parante
+2037	Grip Rji
+2038	Grip Harold
+2039	Grip Harpy
+2040	Grip Gerion
+2041	Grip Guest
+2042	Grip Noise
+2043	Grip Natal
+2044	Grip Dehira
+2045	Grip Del
+2046	Grip Rakshar
+2047	Grip Laslo
+2048	Grip Megara
+2049	Grip Huos
+2050	Grip Maggie
+2051	Grip Lionel
+2052	Grip Wyvern
+2053	Grip Drake
+2054	Grip Dragon
+2055	Low Magic Shoe
+2056	Middlic Shoe
+2057	Hyper Shoe
+2058	Looplic Shoe
+2059	Jack Shoes
+2060	Tunedlic Shoe
+2061	Inst Shoe
+2062	Direct Shoe
+2063	Under-in Shoe
+2064	Daini Shoe
+2065	Clear Shoe
+2066	Indicate
+2067	Pronoun
+2068	Adcay
+2069	Notice Bo
+2070	Demonst
+2071	Unorder Shoe
+2072	Brand Shoe
+2073	Magiz Shoe
+2074	Final Shoe
+2075	Upper Low Magic Shoe
+2076	Upper Middlic Shoe
+2077	Upper Hyper Shoe
+2078	Upper Looplic Shoe
+2079	Upper Jack Shoes
+2080	Upper Tunedlic Shoe
+2081	Upper Inst Shoe
+2082	Upper Direct Shoe
+2083	Upper Under-in Shoe
+2084	Upper Daini Shoe
+2085	Upper Clear Shoe
+2086	Upper Indicate
+2087	Upper Pronoun
+2088	Upper Adcay
+2089	Upper Notice Bo
+2090	Upper Demonst
+2091	Upper Unorder Shoe
+2092	Upper Brand Shoe
+2093	Upper Magiz Shoe
+2094	Upper Final Shoe
+2095	Trust
+2096	Reliall
+2097	Wordsne
+2098	Poidis
+2099	Hopness
+2100	Sceres
+2101	Forkstow
+2102	Tableshear
+2103	In Stepper
+2104	Another Foot
+2105	Urgent Foot
+2106	Big Magic Foot
+2107	Ed and Shoe
+2108	Tread Shoe
+2109	Knitting Els
+2110	Ptuya
+2111	Before Death
+2112	Privis
+2113	Lixlit Shoe
+2114	Faides Shoe
+2115	Giày vải Geatas
+2116	Giày vải Gepie
+2117	Giày vải Nuaja
+2118	Giày vải Nivargen
+2119	Giày vải Derose
+2120	Giày vải Delpazs
+2121	Giày vải Linos
+2122	Giày vải Reril
+2123	Giày vải Medols
+2124	Giày vải Madrk
+2125	Giày vải Berlac
+2126	Giày vải Gilius
+2127	Giày vải Sans
+2128	Giày vải Sand
+2129	Giày vải Agranom
+2130	Giày vải Argai
+2131	Giày vải Signi
+2132	Giày vải Grant
+2133	Giày vải Pla
+2134	Giày vải Znol
+2135	Giày vải Charzor
+2136	Giày vải Tevars
+2137	Giày vải Seud
+2138	Giày vải Paris
+2139	Giày vải Pasi
+2140	Giày vải Hyarg
+2141	Giày vải Hera
+2142	Giày vải Gesr
+2143	Giày vải Gorra
+2144	Giày vải Forreld
+2145	Giày vải Domun
+2146	Giày vải Leria
+2147	Giày vải Lewis
+2148	Giày vải Media
+2149	Giày vải Agros
+2150	Giày vải Hermi
+2151	Giày vải Jepro
+2152	Giày vải Rapunzel
+2153	Giày vải Daigo
+2154	Giày vải Sini
+2155	Giày vải Wyvern
+2156	Giày vải Drake
+2157	Giày vải Dragon
+2158	Low Leather Shoes
+2159	Middle Leather Shoes
+2160	High Leather Shoes
+2161	Loop Leather Shoes
+2162	Jack Leather Shoes
+2163	Maxrity Shoes
+2164	Mustpi Shoes
+2165	Reason Sever Shoes
+2166	Bens Biter Shoes
+2167	Demandso Shoes
+2168	Dismantle Shoes
+2169	Rearpro Shoes
+2170	Gearsibi Shoes
+2171	Ensaidi Shoes
+2172	Forum Cooler Shoes
+2173	Pobal Leader Shoes
+2174	Unpubler Shoes
+2175	Dranas Shoes
+2176	Moss Shoes
+2177	Mute Shoes
+2178	Upper Low Shoes
+2179	Upper Middle Shoes
+2180	Upper High Shoes
+2181	Upper Loop Shoes
+2182	Upper Max Shoes
+2183	Upper Must Shoes
+2184	Upper Reason Shoes
+2185	Upper Bens Shoes
+2186	Upper Demand Shoes
+2187	Upper Dis Shoes
+2188	Upper Rear Shoes
+2189	Upper Gear Shoes
+2190	Upper Ensai Shoes
+2191	Upper Forum Shoes
+2192	Upper Pobal Shoes
+2193	Upper Unpub Shoes
+2194	Upper Nas Shoes
+2195	Upper Moss Shoes
+2196	Upper Mute Shoes
+2197	Remidric
+2198	Bin Public
+2199	Subjects
+2200	Notice Per
+2201	Snow Mer
+2202	Cut Eden
+2203	First Wetting
+2204	Suspengin
+2205	Prolanic
+2206	Elbow Ron
+2207	Hang on the Moon
+2208	War Family
+2209	Dividian
+2210	Hyers
+2211	Scris
+2212	Prosector
+2213	Opices
+2214	Immedia
+2215	Spinia
+2216	Morkz
+2217	Shoes Gaevol
+2218	Shoes Garend
+2219	Shoes Nyab
+2220	Shoes Nemels
+2221	Shoes Darend
+2222	Shoes Diana
+2223	Shoes Ranium
+2224	Shoes Rarins
+2225	Shoes Marcil
+2226	Shoes Malgino
+2227	Shoes Kiria
+2228	Shoes Barahal
+2229	Shoes Seriol
+2230	Shoes Sarus
+2231	Shoes Agis
+2232	Shoes Arinder
+2233	Shoes Julian
+2234	Shoes Janar
+2235	Shoes Calin
+2236	Shoes Gert
+2237	Shoes Kadora
+2238	Shoes Kairon
+2239	Shoes Tara
+2240	Shoes Rtas
+2241	Shoes Medes
+2242	Shoes Tinus
+2243	Shoes Hagen
+2244	Shoes Harans
+2245	Shoes Gaiya
+2246	Shoes Heris
+2247	Shoes Ners
+2248	Shoes Pelas
+2249	Shoes Dene
+2250	Shoes Lila
+2251	Shoes Rayatl
+2252	Shoes Raio
+2253	Shoes Manas
+2254	Shoes Movail
+2255	Shoes Danbi
+2256	Shoes Ảo ảnh
+2257	Shoes Wyvern
+2258	Shoes Drake
+2259	Shoes Dragon
+2260	Low Shield
+2261	Middle Shield
+2262	High Shield
+2263	Loop Shield
+2264	Jack Shield
+2265	Tunedrix
+2266	Aprix Shield
+2267	Q Defend
+2268	Harder Shield
+2269	Keeper Gru
+2270	Finegater
+2271	Take Manner
+2272	Leaking Shield
+2273	Benefiter
+2274	Hoteris
+2275	Accommode
+2276	Cheer Biter
+2277	Sharzak
+2278	Runic Panel
+2279	Paint Shield
+2280	Upper Low Shield
+2281	Upper Middle Shield
+2282	Upper High Shield
+2283	Upper Loop Shield
+2284	Upper Jack Shield
+2285	Upper Tunedrix
+2286	Upper Aprix Shield
+2287	Upper Q Defend
+2288	Upper Harder Shield
+2289	Upper Keeper Gru
+2290	Upper Finegater
+2291	Upper Take Manner
+2292	Upper Leaking Shield
+2293	Upper Benefiter
+2294	Upper Hoteris
+2295	Upper Accommode
+2296	Upper Cheer Biter
+2297	Upper Sharzak
+2298	Upper Runic Panel
+2299	Upper Paint Shield
+2300	Rare Blue Shield
+2301	Bradnic Shield
+2302	Heiry Shield
+2303	Rock and Shield Shield
+2304	Handed Shield
+2305	Hudist Shield
+2306	Concurrence Shield
+2307	Saimiri Shield
+2308	Tourbus Shield
+2309	Hebnodo Shield
+2310	Waste That Shield
+2311	Progene Shield
+2312	Usages Shield
+2313	Chaos Shield
+2314	Jinabaenin Shield
+2315	Atronic Shield
+2316	Cademinic Shield
+2317	Temperament Shield
+2318	Light Shield
+2319	Mocost Shield
+2320	Khiên Galia
+2321	Khiên Headman
+2322	Khiên Trens
+2323	Khiên Norison
+2324	Khiên Deia
+2325	Khiên Deck
+2326	Khiên Lanus
+2327	Khiên Pites
+2328	Khiên Maclas
+2329	Khiên Midrin
+2330	Khiên Ban
+2331	Khiên Bevid
+2332	Khiên Salami
+2333	Khiên Mides
+2334	Khiên Aris
+2335	Khiên Abron
+2336	Khiên Jit
+2337	Khiên Jirra
+2338	Khiên Rushand
+2339	Khiên Cronel
+2340	Khiên Karki
+2341	Khiên Kerta
+2342	Khiên Tarquin
+2343	Khiên Temiran
+2344	Khiên Parante
+2345	Khiên Rji
+2346	Khiên Harold
+2347	Khiên Harpy
+2348	Khiên Gerion
+2349	Khiên Guest
+2350	Khiên Noise
+2351	Khiên Natal
+2352	Khiên Dehira
+2353	Khiên Del
+2354	Khiên Rakshar
+2355	Khiên Laslo
+2356	Khiên Megara
+2357	Khiên Huos
+2358	Khiên Maggie
+2359	Khiên Lionel
+2360	Khiên Wyvern
+2361	Khiên Drake
+2362	Khiên Dragon
+2363	Sách phép hạ cấp
+2364	Sách phép sơ cấp
+2365	Sách phép trung cấp
+2366	Sách phép thượng cấp
+2367	Sách phép tối thượng
+2368	Sách chú hạ cấp
+2369	Sách chú sơ cấp
+2370	Sách chú trung cấp
+2371	Sách chú thượng cấp
+2372	Sách chú tối thượng
+2373	Ma pháp thư hạ cấp
+2374	Ma pháp thư sơ cấp
+2375	Ma pháp thư trung cấp
+2376	Ma pháp thư thượng cấp
+2377	Ma pháp thư tối thượng
+2378	Grand Spellbook
+2379	Final Spellbook
+2380	Mitten Spellbook
+2381	Trap Spellbook
+2382	Galteum Spellbook
+2383	Low Magic Book
+2384	Middle Magic Book
+2385	High Magic Book
+2386	Wit Magician
+2387	Fly Order Book
+2388	Minor Water Book
+2389	Clipwellston Book
+2390	Big Magicians Book
+2391	Heriporus Book
+2392	Kagamers Book
+2393	Sách Phù thủy vực sâu
+2394	Big Choice Book
+2395	Unlimit Wall
+2396	Eater and Brand
+2397	Mắt Ngọn lửa
+2398	Thành rực cháy
+2399	Tiếng thét Phẫn nộ
+2400	Sugar Magic Book
+2401	Zuo Magic Book
+2402	Master Magic Book
+2403	Sách Phù thủy cổ đại
+2404	Sách hiếm
+2405	Sách phép Vương quốc
+2406	Tiffany Magic Book
+2407	Wandering Magic Book
+2408	Dấu vết Kẻ siêu việt
+2409	Sách chú tà ác
+2410	Bình minh Thịnh nộ
+2411	Mana rực sáng
+2412	Cội nguồn Đại địa
+2413	Motican Magic Book
+2414	Slater Magic
+2415	Cuộn phép Tối thượng
+2416	Mana and Magic Book
+2417	Magic Know-how
+2418	Jeran Spellbook
+2419	Rant Spellbook
+2420	Char Scroll
+2421	Thư Gió
+2422	Nerim Spellbook
+2423	Sách phép Geatas
+2424	Sách phép Gepie
+2425	Sách phép Nuaja
+2426	Sách phép Nivargen
+2427	Sách phép Derose
+2428	Sách phép Delpazs
+2429	Sách phép Linos
+2430	Sách phép Reril
+2431	Sách phép Medols
+2432	Sách phép Madrk
+2433	Sách phép Berlac
+2434	Sách phép Gilius
+2435	Sách phép Sans
+2436	Sách phép Sand
+2437	Sách phép Agranom
+2438	Sách phép Argai
+2439	Sách phép Signi
+2440	Sách phép Grant
+2441	Sách phép Pla
+2442	Sách phép Znol
+2443	Sách phép Charzor
+2444	Sách phép Tevars
+2445	Sách phép Seud
+2446	Sách phép Paris
+2447	Sách phép Pasi
+2448	Sách phép Hyarg
+2449	Sách phép Hera
+2450	Sách phép Gesr
+2451	Sách phép Gorra
+2452	Sách phép Forreld
+2453	Sách phép Domun
+2454	Sách phép Leria
+2455	Sách phép Lewis
+2456	Sách phép Media
+2457	Sách phép Agros
+2458	Sách phép Hermi
+2459	Sách phép Jepro
+2460	Sách phép Rapunzel
+2461	Sách phép Daigo
+2462	Sách phép Sini
+2463	Sách phép Wyvern
+2464	Sách phép Drake
+2465	Sách phép Dragon
+2466	Cờ Label Town
+2467	Cờ Lính đánh thuê
+2468	Cờ Thương nhân
+2469	Mắt Ma thú hạ cấp
+2470	Cờ quán odeng
+2471	Cờ Kỵ sĩ đoàn
+2472	Cánh Thiên sứ hạ cấp
+2473	Pha lê Ma lực hạ cấp
+2474	Cánh Thiên sứ Lusha
+2475	Gáo Nô lệ
+2476	Đồ chơi Trẻ em
+2477	Lá Thần giới
+2478	Cờ Luke
+2479	Cánh Thiên sứ
+2480	Cánh Ác ma hạ cấp
+2481	Áo choàng Nam tước
+2482	Cánh Tiểu tinh linh
+2483	Cánh Hợp kim cũ
+2484	Cầu pha lê Ma đạo sĩ
+2485	Huy hiệu Thời đại ma đạo
+2486	Gáo Đông quốc
+2487	Cờ Đội trưởng lính thuê
+2488	Mắt Ma thú trung cấp
+2489	Cánh Thiên sứ nhỏ
+2490	Đồ chơi Quý bà
+2491	Cánh xương Ma thú
+2492	Cánh Tinh linh cây
+2493	Cánh Fairy
+2494	Cờ Lui City
+2495	Huy hiệu Ma đạo sĩ
+2496	Pha lê Ma lực trung cấp
+2497	Cánh Thiên sứ trung cấp
+2498	Pha lê Ma lực
+2499	Cờ odeng ngon
+2500	Cờ Thương đoàn
+2501	Pha lê Thời đại ma đạo
+2502	Cánh Skeleton
+2503	Lá thần thánh
+2504	Cờ Rus
+2505	Huy hiệu Dũng sĩ
+2506	Cờ quân Cerberus
+2507	Áo choàng Kỵ sĩ đoàn
+2508	Pha lê Đại pháp sư
+2509	Con ngươi Ma lực
+2510	Cờ quán odeng jjajang
+2511	Cánh Vĩnh hằng
+2512	Đồ chơi Chư thần
+2513	Cánh Thiên sứ trưởng
+2514	Cánh Ma thú
+2515	Hoa văn Lính đánh thuê
+2516	Gáo Hạ thần
+2517	Cầu pha lê Hỏa diệm
+2518	Huy hiệu Ma thú
+2519	Cờ Ma thú
+2520	Cờ odeng Ma vương
+2521	Áo choàng Ma thú
+2522	Cánh Thiên sứ sa ngã
+2523	Người canh Ma giới
+2524	Thủy tinh thể Bóng tối
+2525	Dark Aurora Wing
+2526	Người canh Trung giới
+2527	Cờ Người canh giữ
+2528	Áo choàng Giáng thế giả
+2529	Cánh Xương tinh khiết
+2530	Huy hiệu Người canh giữ
+2531	Cánh Đại thiên sứ
+2532	Cánh Ma thần
+2533	Thủy tinh thể Điện kích
+2534	Cánh Quang tốc
+2535	Cánh Bone Dragon
+2536	Cờ Liên minh Đông
+2537	Cờ Liên minh Tây
+2538	Mithril Coating Wing
+2539	Cánh Bóng tối
+2540	Cánh Master
+2541	Cánh Tinh linh thượng cấp
+2542	Cánh da Boglin
+2543	Lá Thế giới thụ
+2544	Huy hiệu Đại thiên sứ
+2545	Cờ Đế quốc
+2546	Cờ Rene
+2547	Cờ quán odeng vị cua
+2548	Cờ Chủ thương đoàn
+2549	Cánh Thiên thần
+2550	Cánh Tinh linh thần
+2551	Cánh Đại thiên sứ trưởng
+2552	Cánh Ác ma thượng cấp
+2553	Áo choàng Ma thần
+2554	Cánh Ma thú ma giới
+2555	Cánh Phong thần
+2556	Thiên lý nhãn Thượng thần
+2557	Cánh Ám thần
+2558	Lá Thiên giới
+2559	Huy hiệu Thiên giới
+2560	Cánh bị nguyền
+2561	Cánh thánh
+2562	Thủy tinh thể Ánh sáng
+2563	Hoa văn Ánh sáng
+2564	Cánh Ánh sáng
+2565	Cờ Wine
+2566	Cánh Wyvern
+2567	Cánh Drake
+2568	Cánh Dragon
+2569	Dây chuyền gỗ
+2570	Bronze Medal
+2571	Iron Medal
+2572	Loop Medal
+2573	Jack Medal
+2574	Red Ruby Medal
+2575	Big Jewel Medal
+2576	Maxwell Medal
+2577	Linus Medal
+2578	Super Power Medal
+2579	Hollow Wind Medal
+2580	Magic Circle Medal
+2581	Hyper Medal
+2582	Grand Medal
+2583	Secret Medal
+2584	Ultra Medal
+2585	Final Medal
+2586	Orion Medal
+2587	Drend Medal
+2588	Lyas Medal
+2589	Upper Medal
+2590	Tune Bronze Medal
+2591	Tune Iron Medal
+2592	Upper Loop Medal
+2593	Upper Jack Medal
+2594	Violet Medal
+2595	Upper Jewel Medal
+2596	Tune Maxwell Medal
+2597	Tune Brother Medal
+2598	Tune Speed Medal
+2599	Magic Wind Medal
+2600	Super Circle Medal
+2601	Tune Hyper Medal
+2602	Tune Grand Medal
+2603	Tune Secret Medal
+2604	Tune Ultra Medal
+2605	Tune Final Medal
+2606	Dune Orion Medal
+2607	Upper Drend Medal
+2608	Dune Lion Medal
+2609	Dây chuyền hiếm
+2610	Dây chuyền Bóng đêm
+2611	Dây chuyền Phẫn nộ
+2612	Dây chuyền Băng cực
+2613	Dây chuyền Hỏa diệm
+2614	Dây chuyền Lôi kích
+2615	Dây chuyền Bất diệt
+2616	Dây chuyền Diệt vong
+2617	Dây chuyền Thịnh nộ
+2618	Dây chuyền Dũng sĩ
+2619	Dây chuyền Cuồng nộ
+2620	Dây chuyền Huyết đỏ
+2621	Mostral Medal
+2622	Sapphire Medal
+2623	King Diamond Medal
+2624	Big Mutalic Medal
+2625	Turning Point Medal
+2626	Middle of Medal
+2627	Rare Scholz Medal
+2628	Maxirus Medal
+2629	Leos Medal
+2630	Cliu Medal
+2631	Returnt Medal
+2632	Verdin Medal
+2633	Tunia Medal
+2634	Manu Medal
+2635	Sharadin Medal
+2636	Surcoat Medal
+2637	Shanic Medal
+2638	Serene Medal
+2639	Repos Medal
+2640	Siren Medal
+2641	Setant Medal
+2642	Sper Medal
+2643	Soliman Medal
+2644	Verize Medal
+2645	Lirich Medal
+2646	Nesvan Medal
+2647	Naktis Medal
+2648	Jaznar Medal
+2649	Denian Medal
+2650	Snodo Medal
+2651	Baferi Medal
+2652	Kazaha Medal
+2653	Roski Medal
+2654	Kiron Medal
+2655	Killa Medal
+2656	Tenno Medal
+2657	Henge Medal
+2658	Fades Medal
+2659	Tixji Medal
+2660	Timpals Medal
+2661	Fnir Medal
+2662	Gale Medal
+2663	Gurd Medal
+2664	Fried Medal
+2665	Signa Medal
+2666	Sigi Medal
+2667	Jigyar Medal
+2668	Jibegapa Medal
+2669	Nhẫn thân gỗ
+2670	Bronze Ring
+2671	Iron Ring
+2672	Loop Ring
+2673	Jack Ring
+2674	Red Ruby Ring
+2675	Big Jewel Ring
+2676	Maxwell Ring
+2677	Linus Ring
+2678	Super Power Ring
+2679	Hollow Wind Ring
+2680	Magic Circle Ring
+2681	Hyper Magic Ring
+2682	Grand Magic Ring
+2683	Secret Magic Ring
+2684	Ultra Magic Ring
+2685	Final Magic Ring
+2686	Land Ring
+2687	Dante Ring
+2688	Mods Ring
+2689	Upper Ring
+2690	Upper Bronze Ring
+2691	Upper Iron Ring
+2692	Upper Loop Ring
+2693	Upper Jack Ring
+2694	Big Red Ruby Ring
+2695	Upper Big Jewel Ring
+2696	Upper Maxwell Ring
+2697	Tune Linus Ring
+2698	Tune Super Power Ring
+2699	Magic Wind Ring
+2700	Big Magic Circle Ring
+2701	Hyper Mana Ring
+2702	Grand Mana Ring
+2703	Secret Mana Ring
+2704	Ultra Mana Ring
+2705	Final Mana Ring
+2706	Stream Magic Ring
+2707	Kinals Ring
+2708	Giyond Ring
+2709	Nhẫn hiếm
+2710	Nhẫn Bóng đêm
+2711	Nhẫn Phẫn nộ
+2712	Nhẫn Băng cực
+2713	Nhẫn Hỏa diệm
+2714	Nhẫn Lôi kích
+2715	Nhẫn Bất diệt
+2716	Nhẫn Diệt vong
+2717	Nhẫn Thịnh nộ
+2718	Nhẫn Dũng sĩ
+2719	Nhẫn Cuồng nộ
+2720	Nhẫn Huyết đỏ
+2721	Mostral Ring
+2722	Red Sapphire Ring
+2723	King Diamond Ring
+2724	Big Mutalic Ring
+2725	Turning Point Ring
+2726	Middle of Middle Ring
+2727	Shining Finger Ring
+2728	Gate Ring
+2729	Goliath Ring
+2730	Gunita Ring
+2731	Randar Ring
+2732	Ruid Ring
+2733	Nosren Ring
+2734	Grans Ring
+2735	Mer Ring
+2736	Rius Ring
+2737	Berit Ring
+2738	Rikane Ring
+2739	Jainel Ring
+2740	Huront Ring
+2741	Jened Ring
+2742	Hiroren Ring
+2743	Minas Ring
+2744	Yougen Ring
+2745	Lindelt Ring
+2746	Warensd Ring
+2747	Boost Ring
+2748	Roini Ring
+2749	Ulaf Ring
+2750	Eden Hill Ring
+2751	Yanchip Ring
+2752	Geres Ring
+2753	Rtigen Ring
+2754	Boband Ring
+2755	Gebos Ring
+2756	Botand Ring
+2757	Borisets Ring
+2758	Bzri Ring
+2759	Bulfinge Ring
+2760	Gajidan Ring
+2761	Root Ring
+2762	Zirunb Ring
+2763	Brund Ring
+2764	Nutaros Ring
+2765	Semas Ring
+2766	Recent Ring
+2767	Huchi Ring
+2768	Big Back Ring
+2769	Vòng tay gỗ
+2770	Vòng tay đồng
+2771	Iron Bracelet
+2772	Loop Bracelet
+2773	Jack Bracelet
+2774	Red Ruby Bracelet
+2775	Big Jewel Bracelet
+2776	Maxwell Bracelet
+2777	Linus Bracelet
+2778	Super Power Bracelet
+2779	Hollow Wind Bracelet
+2780	Magic Circle Bracelet
+2781	Hyper Bracelet
+2782	Grand Bracelet
+2783	Secret Bracelet
+2784	Ultra Bracelet
+2785	Final Bracelet
+2786	Nex Bracelet
+2787	East Bracelet
+2788	Rind Bracelet
+2789	Upper Bracelet
+2790	Tune Bronze Bracelet
+2791	Tune Iron Bracelet
+2792	Upper Loop Bracelet
+2793	Upper Jack Bracelet
+2794	Violet Bracelet
+2795	Upper Jewel Bracelet
+2796	Tune Maxwell Bracelet
+2797	Tune Brother Bracelet
+2798	Tune Speed Bracelet
+2799	Magic Wind Bracelet
+2800	Super Circle Bracelet
+2801	Tune Hyper Bracelet
+2802	Tune Grand Bracelet
+2803	Tune Secret Bracelet
+2804	Tune Ultra Bracelet
+2805	Tune Final Bracelet
+2806	Tune Nex Bracelet
+2807	Tune East Bracelet
+2808	Tune Rind Bracelet
+2809	Vòng tay hiếm
+2810	Vòng tay Bóng đêm
+2811	Vòng tay Phẫn nộ
+2812	Vòng tay Băng cực
+2813	Vòng tay Hỏa diệm
+2814	Vòng tay Lôi kích
+2815	Vòng tay Bất diệt
+2816	Vòng tay Diệt vong
+2817	Vòng tay Thịnh nộ
+2818	Vòng tay Dũng sĩ
+2819	Vòng tay Cuồng nộ
+2820	Vòng tay Huyết đỏ
+2821	Mostral Bracelet
+2822	Sapphire Bracelet
+2823	King Diamond Bracelet
+2824	Big Mutalic Bracelet
+2825	Turning Point Bracelet
+2826	Middle of Bracelet
+2827	Needle Gront Bracelet
+2828	Mares Bracelet
+2829	Last Bracelet
+2830	Polond Bracelet
+2831	Rodis Bracelet
+2832	Geos Bracelet
+2833	Romake Bracelet
+2834	Drome Bracelet
+2835	Kises Bracelet
+2836	Moesa Bracelet
+2837	Antio Bracelet
+2838	Berich Bracelet
+2839	Alkme Bracelet
+2840	Nessos Bracelet
+2841	Ampor Bracelet
+2842	Pirit Bracelet
+2843	Seis Bracelet
+2844	Ulster Bracelet
+2845	Aegir Bracelet
+2846	Edda Bracelet
+2847	Fran Bracelet
+2848	Rosie Bracelet
+2849	Eros Bracelet
+2850	Ginos Bracelet
+2851	Mantos Bracelet
+2852	Eris Bracelet
+2853	Emand Bracelet
+2854	Ebar Bracelet
+2855	Brand Bracelet
+2856	Brogan Bracelet
+2857	Ridike Bracelet
+2858	Teos Bracelet
+2859	Uriale Bracelet
+2860	Litoi Bracelet
+2861	Maio Bracelet
+2862	Boia Bracelet
+2863	Uand Bracelet
+2864	Pemos Bracelet
+2865	Eir Bracelet
+2866	Ecer Bracelet
+2867	Rines Bracelet
+2868	Ruiner Bracelet
+2869	HP Potion nhỏ
+2870	Dùng để hồi 200 HP.
+2871	HP Potion vừa
+2872	Dùng để hồi 800 HP.
+2873	HP Potion lớn
+2874	Dùng để hồi 2000 HP.
+2875	MP Potion nhỏ
+2876	Dùng để hồi 100 MP.
+2877	MP Potion vừa
+2878	Dùng để hồi 400 MP.
+2879	MP Potion lớn
+2880	Dùng để hồi 1200 MP.
+2881	Hyper Potion
+2882	Dùng để hồi 3500 HP và 1500 MP.
+2883	Potion hồi phục
+2884	Dùng để chữa trạng thái nguyền rủa, trúng độc.
+2885	HP Aura Potion
+2886	Dùng: trong 10 giây hồi HP bằng 10% sát thương gây cho địch.
+2887	MP Aura Potion
+2888	Dùng: trong 10 giây hồi MP bằng 10% sát thương gây cho địch.
+2889	Portal Label Town
+2890	Dùng để di chuyển đến Label Town.
+2891	Portal Eastern City
+2892	Dùng để di chuyển đến Eastern City.
+2893	Portal Lui City
+2894	Dùng để di chuyển đến Lui City.
+2895	Portal Ortsk
+2896	Dùng để di chuyển đến Ortsk.
+2897	Portal Desert Camp
+2898	Dùng để di chuyển đến Desert Camp.
+2899	Portal Sky Valley
+2900	Dùng để di chuyển đến Sky Valley.
+2901	Túi nhỏ 9 ô
+2902	Túi có 9 ô chứa vật phẩm.
+2903	Túi vừa 18 ô
+2904	Túi có 18 ô chứa vật phẩm.
+2905	Túi lớn 36 ô
+2906	Túi có 36 ô chứa vật phẩm.
+2907	Reset Life
+2908	Vật phẩm đặt lại điểm kỹ năng và điểm chỉ số của nhân vật.
+2909	Reset chỉ số 
+2910	Vật phẩm đặt lại điểm chỉ số của nhân vật.
+2911	Reset kỹ năng
+2912	Vật phẩm đặt lại điểm kỹ năng của nhân vật.
+2913	Vé hầm ngục
+2914	Vật phẩm cho chọn hầm ngục và di chuyển ngay khi dùng.
+2915	Wine Potion
+2916	Hồi 100% HP, MP và trạng thái bất thường.
+2917	Sữa vị cay
+2918	Sữa vị cay hảo hạng. Uống vào khỏe hẳn! (5 phút tăng HP)
+2919	Nước ép vị cà ri
+2920	Nước ép vị cà ri tốt cho cơ thể! Uống vào mạnh hẳn! (5 phút tăng Công.)
+2921	Sữa vị nấm
+2922	Ai cảm nhận được vị kỳ diệu này đều bỏ chạy. (5 phút tăng chí mạng.)
+2923	Nước ép vị tương đen
+2924	Thức uống để lúc nào cũng thưởng thức được tương đen. (5 phút tăng EXP.)
+2925	Súp rau
+2926	Súp nấu từ nhiều loại rau. (Dùng: hồi 10% HP)
+2927	Súp nấm
+2928	Có vẻ nấu từ các loại nấm sặc sỡ. (Dùng: hồi 20% HP)
+2929	Súp sữa
+2930	Súp vị sữa béo ngậy hảo hạng. (Dùng: hồi 30% HP)
+2931	Súp cà phê
+2932	Ăn vào là đêm đó khỏi ngủ. (Dùng: hồi 40% HP)
+2933	Súp thịt cua
+2934	Súp ngon có thịt cua như Mitten Crab. (Dùng: hồi 50% HP)
+2935	Buckgas A
+2936	Thức uống nghe nói có 30.000 ml Tenuran. (Dùng: hồi 10% MP)
+2937	Bito 300
+2938	Thức uống nghe nói có 500 ml Vitamen. (Dùng: hồi 20% MP)
+2939	Nước tiết
+2940	Hương vị tiết ngon hảo hạng! Nước tiết! (Dùng: hồi 30% MP)
+2941	Nước gà
+2942	Thức uống xay từ thịt gà thanh đạm! (Dùng: hồi 40% MP)
+2943	Nước thịt cua
+2944	Nước thịt cua hợp nhất với súp thịt cua! (Dùng: hồi 50% MP)
+2945	Thứ đỏ lạ
+2946	Có người nói uống vào sẽ tăng Sức mạnh... nhưng có thể nguy hiểm.
+2947	Thứ xanh lạ
+2948	Có người nói uống vào sẽ tăng Ma lực... nhưng có thể nguy hiểm.
+2949	Thứ đen lạ
+2950	Có người nói uống vào sẽ tăng Nhanh nhẹn... nhưng có thể nguy hiểm.
+2951	Thứ trắng lạ
+2952	Có người nói uống vào sẽ tăng Thể lực... nhưng có thể nguy hiểm.
+2953	Thứ vàng lạ
+2954	Có người nói uống vào sẽ tăng May mắn... nhưng có thể nguy hiểm.
+2955	Túi rách 6 ô
+2956	Túi có 6 ô chứa vật phẩm.
+2957	Túi vải 12 ô
+2958	Túi có 12 ô chứa vật phẩm.
+2959	Túi da 24 ô
+2960	Túi có 24 ô chứa vật phẩm.
+2961	Hộp Kiltling
+2962	Nhận ngẫu nhiên 10 đá phép, đá cường hóa 
+2963	Hộp cũ Philis
+2964	Nhận ngẫu nhiên 1 trang bị (Rare-Unique)
+2965	Hộp Philis
+2966	Nhận ngẫu nhiên 1 trang bị (Rare-Legend)
+2967	Hộp cao cấp Philis
+2968	Nhận ngẫu nhiên 1 trang bị (Legend)
+2969	Bộ Wyvern
+2970	Bộ vật phẩm cấp 15 (chọn 1 vũ khí)
+2971	Bộ Drake
+2972	Bộ vật phẩm cấp 40 (chọn 1 vũ khí)
+2973	Bộ Dragon
+2974	Bộ vật phẩm cấp 70 (chọn 1 vũ khí)
+2975	Đá thoát hiểm
+2976	Đặt lại sai lầm của đấng sáng thế
+2977	Hộp Wine
+2978	Nhận ngẫu nhiên 1 trang bị
+2979	Skill Up
+2980	Tăng 1 điểm kỹ năng, chỉ dùng được tối đa 10 lần.
+2981	Bảo hộ Kilt
+2982	Dùng: 10 giây bất tử trước mọi đòn tấn công
+2983	Danh hiệu Danh dự
+2984	Nhận 1 danh hiệu danh dự. (Khi dùng, trang bị ở bảng danh hiệu)
+2985	Vé đổi nghề
+2986	Đổi nghề. Chỉ số và kỹ năng sẽ được đặt lại
+2987	Thỏi sắt
+2988	Nguyên liệu gia công từ quặng sắt
+2989	Quặng Mithril
+2990	Nguyên liệu ở dạng quặng thô chưa gia công
+2991	Quặng Ruby
+2992	Quặng sắt
+2993	Tấm kim loại hạ cấp
+2994	Nguyên liệu đã gia công để dung hợp
+2995	Quặng vàng
+2996	Thỏi vàng
+2997	Thỏi thép
+2998	Thỏi Mithril
+2999	Orichalcum
+3000	Tấm thép
+3001	Tấm Mithril
+3002	Thỏi bạch kim
+3003	Quặng bạc
+3004	Quặng ma
+3005	Quặng đồng
+3006	Hồng ngọc thô
+3007	Thạch anh
+3008	Tinh thể linh hồn
+3009	Topaz thô
+3010	Thỏi đồng
+3011	Thỏi hợp kim
+3012	Tấm kim loại cao cấp
+3013	Hell Iron
+3014	Gold Stick
+3015	Mắt Incubus
+3016	Mắt Incubus thấm đẫm ma khí
+3017	Garnet thô
+3018	Thịt cua
+3019	Nguyên liệu dạng thịt dùng cho dung hợp và nhiệm vụ
+3020	Thịt Wyem
+3021	Đuôi Scorpion
+3022	Thăn Gargoyle
+3023	Phần thăn Gargoyle dai ngon hảo hạng
+3024	Túi khả nghi
+3025	Túi thoang thoảng khí tức u tối
+3026	Lương khô
+3027	Thịt Troll
+3028	Thịt Scorpion
+3029	Xương Basilisk
+3030	Nguyên liệu dạng xương dùng cho dung hợp và nhiệm vụ
+3031	Xương Troll
+3032	Xương Crab
+3033	Trang sức Troll sa mạc
+3034	Trâm cài tóc Desert Troll dùng để búi tóc
+3035	Xương to
+3036	Xương to Troll
+3037	Xương Bigfoot
+3038	Xương Tauren
+3039	Xương đã gia công
+3040	Xương cứng
+3041	Xương Giant
+3042	Xương Cinnamon
+3043	Xương Gremlin
+3044	Xương Frog
+3045	Bột cỏ ba lá
+3046	Nguyên liệu dạng bột dùng cho dung hợp và nhiệm vụ
+3047	Bột Man-o-War
+3048	Bột sắt
+3049	Bột cát lấp lánh
+3050	Bột cát mịn
+3051	Bột cát sa mạc
+3052	Bột sáng Tinh linh
+3053	Bột cát
+3054	Wind Dust
+3055	Bột Sylph
+3056	Khí Tinh linh
+3057	Khí Bóng tối
+3058	Sky Dust
+3059	Bột dùng cho thuật
+3060	Bột dùng cho phép
+3061	Bột Mandragora
+3062	Thuốc súng
+3063	Grab Poison
+3064	Bột đá núi
+3065	Phân Lizard
+3066	Curse Poison
+3067	Bột đá thức tỉnh
+3068	Bột xyanua
+3069	Da Drake
+3070	Nguyên liệu da dùng cho dung hợp và nhiệm vụ
+3071	Da Rat
+3072	Da Bubblemon
+3073	Da Wyem
+3074	Da Hob Bubblemon
+3075	Black Bubble Leather
+3076	Da Giant
+3077	Da dùng dung hợp
+3078	Da chất lượng cao
+3079	Da bí ẩn
+3080	Mountain Bubble Leather
+3081	Lizard Leather
+3082	Drake Leather
+3083	Da Frog
+3084	Da Boglin
+3085	Mai cua
+3086	Da Phép thuật
+3087	Mai Totem Crab
+3088	Da Ma vật
+3089	Demon Leather
+3090	Nước mắt Sa mạc
+3091	Nguyên liệu dạng ngọc dùng cho dung hợp và nhiệm vụ
+3092	Ngọc sa mạc
+3093	Ngọc trai rừng
+3094	Ngọc xanh
+3095	Lõi Tornado
+3096	Sapphire
+3097	Ruby
+3098	Ngọc dùng dung hợp
+3099	Ngọc đã gia công
+3100	Ngọc rực rỡ
+3101	Pha lê dùng cho thuật
+3102	Sapphire dùng cho thuật
+3103	Magician Ruby
+3104	Pha lê hắc ma pháp
+3105	Nước mắt Gypsy
+3106	Black Sapphire
+3107	Pha lê bóng tối
+3108	Hồn thạch Mummy
+3109	Pha lê Ma đạo sĩ
+3110	Ngọc Blue Mountain
+3111	Huy chương Kỵ sĩ
+3112	Nguyên liệu dạng huy chương dùng cho dung hợp và nhiệm vụ
+3113	Mana Pendant
+3114	Greed Medal
+3115	Black Ruby
+3116	Black Medal
+3117	Huy chương Avenger
+3118	Curse Pendant
+3119	Demon Medal
+3120	Huxley Medal
+3121	Huy chương lính đào ngũ
+3122	Dây chuyền sơn tặc
+3123	Huy chương Dark Knight
+3124	Cổ vật của các Dark Knight thấm khí hắc ma pháp
+3125	Grab Seal
+3126	Dây chuyền Vong nhân
+3127	Soul Pendant
+3128	Giấy phép giao dịch
+3129	Nguyên liệu dạng giấy dùng cho dung hợp và nhiệm vụ
+3130	Tài liệu bí mật
+3131	Cuộn phép ma đạo
+3132	Giấy làm mặt nạ
+3133	Hard Paper
+3134	Giấy hắc ma pháp
+3135	Troll Paper
+3136	Wizard Paper
+3137	Danh sách ám sát
+3138	Tuyên ngôn Modern
+3139	Devil Book
+3140	Công thức gia vị ma vật
+3141	Công thức gia vị để làm vỏ ma vật (nhiệm vụ)
+3142	Đao Nhanh nhẹn
+3143	Vật phẩm nhiệm vụ
+3144	Giáo trình kỵ sĩ
+3145	Rèn luyện thể lực kiếm
+3146	Giấy chứng nhận tư cách
+3147	Thunder Count
+3148	Ultimate Swing
+3149	Giáo trình tối thượng
+3150	Noble Blading
+3151	Giấy chứng nhận thử
+3152	Super Storm Count
+3153	Lụa
+3154	Vải dai
+3155	Nguyên liệu dạng vải dùng cho dung hợp và nhiệm vụ
+3156	Nguyên liệu vải áo
+3157	Vải cứng
+3158	Vải mềm
+3159	Vải đen
+3160	Vải Sát thủ
+3161	Vải dùng dung hợp
+3162	Vải chất lượng cao
+3163	Vải thượng hạng
+3164	Vải vàng đục
+3165	Vải rách
+3166	Vải bị nguyền
+3167	Vải Xanh lá
+3168	Vải Ma giới
+3169	Băng Ma giới
+3170	Vải vàng đục dai
+3171	Băng Zombie
+3172	Băng cứu thương
+3173	Vải áo Gypsy
+3174	Bông dày
+3175	Vải áo cao cấp
+3176	Huy hiệu Blue Mountain
+3177	Cành cây dại
+3178	Nguyên liệu gỗ, ngà dùng cho dung hợp và nhiệm vụ
+3179	Thân Mandragora
+3180	Thân khoai lang
+3181	Cành Totem Plant
+3182	Cành Totem to
+3183	Cành Curse Plant
+3184	Cành Mandrake
+3185	Cành Drosera
+3186	Cành Nepenthes
+3187	Cành Barometz
+3188	Cành Sarracenia
+3189	Cành Man-o-War
+3190	Nguyên liệu sáp
+3191	Nước mắt Ác ma
+3192	Giấy thề bí mật
+3193	Giấy thề chứng minh kết giao 1:1 giữa Dark Mage và hội trộm
+3194	Gỗ cao cấp phương Bắc
+3195	Ngà trong cát
+3196	Nguyên liệu dùng cho dung hợp và nhiệm vụ
+3197	Càng cua
+3198	Lá xanh
+3199	Heart of Soldier
+3200	Vỏ Scorpion
+3201	Gai Chestnut
+3202	Răng Bubblemon
+3203	Gai sắc
+3204	Huy hiệu chiến binh cát
+3205	Black Bubble Eye
+3206	Gai Gremlin
+3207	Gai Totem Cinnamon
+3208	Gai nhọn
+3209	Gai Cinnamon
+3210	Gai Rat
+3211	Jack Tail
+3212	Jack Poison
+3213	Mặt nạ sắt
+3214	Magic Eye
+3215	Răng Giant
+3216	Càng Totem
+3217	Soldier of Fortune
+3218	Hạt Totem
+3219	Càng Spider
+3220	Devil Eye
+3221	Hạt Mandragora
+3222	Jack Leg
+3223	Lá Nepenthes
+3224	Báng súng
+3225	Đạn thép
+3226	Modern Glass
+3227	Gai Knife
+3228	Modernic Can
+3229	Modern Ringer
+3230	Soul Eye
+3231	Hạt Sarracenia
+3232	Rau trộn
+3233	Rau trộn làm từ cành Barometz (nhiệm vụ)
+3234	Sách hướng dẫn Tái sinh
+3235	Sách giải thích về Tái sinh bằng ngôn ngữ rune phức tạp (nhiệm vụ)
+3236	Hài cốt chiến binh
+3237	Hài cốt chiến binh Orc
+3238	Thuốc chữa Hepburn
+3239	Thuốc chữa đặc chế cho Big Joe (nhiệm vụ)
+3240	Dây chuyền ống khâu
+3241	Dây chuyền ống khâu làm từ da Bubblemon (nhiệm vụ)
+3242	Ma pháp thư của Hoàng đế
+3243	Ma pháp thư bí mật của hoàng đế khai quốc Chroisen (nhiệm vụ)
+3244	Hạt Curse Tower
+3245	Hộp chứa hạt Curse Tower (nhiệm vụ)
+3246	Túi trống
+3247	Túi chống nước để đựng nước
+3248	Túi nước
+3249	Túi nước đầy nước lạnh
+3250	Thanh tẩy thần lực
+3251	Tinh thể thần lực cô đặc từ vàng nguyên chất và thần lực
+3252	Đá cường hóa hạ cấp
+3253	Đá giúp cường hóa trang bị tối đa +10
+3254	Đá cường hóa trung cấp
+3255	Đá giúp cường hóa trang bị tối đa +13
+3256	Đá cường hóa thượng cấp
+3257	Đá giúp cường hóa trang bị tối đa +20
+3258	Kim loại Wine
+3259	Nguyên liệu thượng hạng dùng cho nhiều mục đích
+3260	Da Cinnamon
+3261	Kim loại xanh
+3262	Di vật của người cha
+3263	Huy chương người cha để lại cho nữ tu tập sự Koi (nhiệm vụ)
+3264	Kinh Jemes
+3265	Sách chứa giáo lý của giáo phái Jemes
+3266	Thư của Rocardo
+3267	Thư của thợ rèn Orc gửi thợ rèn con người (nhiệm vụ)
+3268	Dụng cụ thợ rèn
+3269	Quà Mickey gửi thợ rèn Orc Rocardo (nhiệm vụ)
+3270	Thư của Nadia
+3271	Thư chứa tấm lòng của Nadia (nhiệm vụ)
+3272	Sách hồi phục
+3273	Khi chết hồi sinh ngay tại chỗ, không mất kinh nghiệm
+3274	Sách bảo hộ
+3275	Chống hỏng trang bị khi cường hóa thất bại (chỉ +1~15)
+3276	Quyền năng Kilt
+3277	Gỡ toàn bộ phép đã phù cho vật phẩm bằng phước lành của Kilt.
+3278	Vé vào hầm ngục
+3279	Vật phẩm cho vào hầm ngục không mất phí vào cửa
+3280	Thư tình của Polzo
+3281	Thư tình Polzo viết cho Hepburn (nhiệm vụ)
+3282	Thư của Codry
+3283	Thư bí mật Codry viết (nhiệm vụ)
+3284	Đá phép hạng C
+3285	Phù phép chỉ số thấp, áp dụng vĩnh viễn
+3286	Đá phép hạng B
+3287	Phù phép chỉ số trung bình, áp dụng vĩnh viễn
+3288	Đá phép hạng A
+3289	Phù phép chỉ số cao, áp dụng vĩnh viễn
+3290	Hồi sinh ngay khi nhân vật chết 
+3291	Sách hồi phục x 15
+3292	Bộ 15 Sách hồi phục
+3293	Wine Potion x 30
+3294	Bộ 30 Wine Potion hồi cả HP và MP 
+3295	Dùng: nhận ngẫu nhiên 10 đá phép, đá cường hóa 
+3296	Đá phép ban phép thuật thượng cấp cho vật phẩm
+3297	Đá phép hạng A x 5
+3298	Bộ 5 Đá phép hạng A ban phép thuật thượng cấp cho vật phẩm
+3299	Đá phép hạng A x 10
+3300	Bộ 10 Đá phép hạng A ban phép thuật thượng cấp cho vật phẩm
+3301	Đá cường hóa thượng cấp x 10
+3302	Bộ 10 Đá cường hóa thượng cấp giúp cường hóa vật phẩm tới +20
+3303	Đá cường hóa thượng cấp x 35
+3304	Bộ 35 Đá cường hóa thượng cấp giúp cường hóa vật phẩm tới +20
+3305	Quyền năng Kilt
+3306	Gỡ toàn bộ phép đã phù cho vật phẩm bằng phước lành của Kilt. 
+3307	Quyền năng Kilt x 11
+3308	Bộ 11 Quyền năng Kilt
+3309	Sách bảo hộ x 10
+3310	Bộ 10 Sách bảo hộ chống hủy trang bị tới +15 khi cường hóa
+3311	Sách bảo hộ x 25
+3312	Bộ 25 Sách bảo hộ chống hủy trang bị tới +15 khi cường hóa
+3313	Túi lớn
+3314	Mở rộng túi đồ (36 ô) 
+3315	Tăng 1 điểm kỹ năng, chỉ dùng được tối đa 10 lần.
+3316	Bảo hộ Kilt x 5
+3317	Bộ 5 Bảo hộ Kilt giúp bất tử 5 giây trước mọi đòn tấn công
+3318	Danh hiệu danh dự
+3319	Ngẫu nhiên 1 trong [Chí mạng 50, Hút máu 8%, Rớt đồ 15%]
+3320	Gói Newbie
+3321	Gói Newbie (Sách hồi phục X5, Wine Potion X30, Túi lớn, Bộ Wyvern, Bảo hộ Kilt)
+3322	Thế giới tái ngộ
+3323	Gói Thế giới tái ngộ (Reset Life, Quyền năng Kilt X5, Sách hồi phục X15, Túi lớn, Skill Up)
+3324	Gói Chi mạnh
+3325	Gói Chi mạnh (Đá phép hạng A X10, Đá cường hóa thượng cấp X10, Sách bảo hộ X10, Bộ Drake, Hộp Kiltling)
+3326	Gói Master
+3327	Gói Master (Túi lớn, Bộ Dragon, Skill Up)
+3328	Phước lành thần Mua sắm
+3329	Gói Phước lành thần Mua sắm (Hộp Philis X5, Hộp Kiltling X5)

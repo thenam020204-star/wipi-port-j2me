@@ -1,0 +1,517 @@
+id	gốc	dịch
+T:490.dat:0:18	좀비	Zombie
+T:490.dat:0:24	바이팅	Biting
+T:490.dat:0:32	포이즌플레임	Poison Flame
+T:490.dat:0:46	포이즌볼	Poison Ball
+T:490.dat:1:18	버블몬	Bubblemon
+T:490.dat:1:26	버블링	Bubbling
+T:490.dat:1:34	샤크바이트	Shark Bite
+T:490.dat:2:18	흑마법사	Dark Mage
+T:490.dat:2:28	데스파이어	Death Fire
+T:490.dat:2:40	저주의외침	Tiếng thét nguyền
+T:490.dat:2:52	좀비소환	Gọi Zombie
+T:490.dat:3:18	리틀데몬	Little Demon
+T:490.dat:3:28	데스슬래시	Death Slash
+T:490.dat:4:18	샌드할로우	Sand Hollow
+T:490.dat:4:30	파이널할로우	Final Hollow
+T:490.dat:4:44	일반공격	Đánh thường
+T:490.dat:4:54	메이크홀	Make Hole
+T:490.dat:5:18	미튼크랩	Mitten Crab
+T:490.dat:6:18	솔저	Soldier
+T:490.dat:6:24	슬래시	Slash
+T:490.dat:6:32	파이어볼	Fireball
+T:490.dat:7:18	트롤	Troll
+T:490.dat:7:24	트롤어택	Troll Attack
+T:490.dat:7:34	데스러시	Death Rush
+T:490.dat:8:18	도적단	Băng cướp
+T:490.dat:8:26	급소공격	Đòn hiểm
+T:490.dat:8:36	러싱어택	Rushing Attack
+T:490.dat:9:18	만다고라	Mandragora
+T:490.dat:9:28	독공격	Đòn độc
+T:490.dat:10:18	체스트넛	Chestnut
+T:490.dat:11:18	기사	Knight
+T:490.dat:12:18	리오타르	Liotar
+T:490.dat:12:28	총기난사	Xả súng
+T:490.dat:12:38	도발	Khiêu khích
+T:490.dat:13:18	가드타워	Guard Tower
+T:490.dat:13:28	가드어택	Guard Attack
+T:490.dat:14:18	데몬타워	Demon Tower
+T:490.dat:14:28	저주가드어택	Curse Guard Attack
+T:490.dat:15:18	제메시스	Jemesis
+T:490.dat:15:28	평타	Đánh thường
+T:490.dat:15:34	신도부르기	Gọi tín đồ
+T:490.dat:15:46	자폭	Tự hủy
+T:490.dat:16:18	쿨리오	Coolio
+T:490.dat:16:36	분노의일격	Đòn phẫn nộ
+T:490.dat:17:18	데이거	Dager
+T:490.dat:18:18	오우거스피릿	Ogre Spirit
+T:490.dat:18:32	근접데미지	Sát thương cận chiến
+T:490.dat:18:44	스피릿볼	Spirit Ball
+T:490.dat:18:54	흡수	Hấp thụ
+T:490.dat:18:60	마나캐논	Mana Cannon
+T:490.dat:19:18	하우레스	Haures
+T:490.dat:19:38	스프레드볼	Spread Ball
+T:490.dat:20:18	프루스트	Frust
+T:490.dat:20:28	강한급소공격	Đòn hiểm mạnh
+T:490.dat:20:42	파이어슬래시	Fire Slash
+T:490.dat:21:18	제메스	Jemes
+T:490.dat:21:26	파이어다운	Fire Down
+T:490.dat:21:50	메테오폴	Meteor Fall
+T:490.dat:21:60	부활	Hồi sinh
+T:490.dat:22:18	데스나이트	Death Knight
+T:490.dat:23:18	헉슬리	Huxley
+T:490.dat:24:18	카이루	Kairu
+T:490.dat:24:26	마법	Phép thuật
+T:490.dat:24:32	암흑마법	Phép bóng tối
+T:490.dat:25:18	마도병기	Vũ khí ma đạo
+T:490.dat:25:28	중	Trung
+T:490.dat:25:35	내용없음	Trống
+T:491.dat:0:30	피냄새...	Mùi máu...
+T:491.dat:1:24	머미	Mummy
+T:491.dat:1:30	크아악!	Khááác!
+T:491.dat:2:24	구울	Ghoul
+T:491.dat:2:30	피의 향기...	Hương máu...
+T:491.dat:3:24	엘리트구울	Elite Ghoul
+T:491.dat:3:36	인...간..!	Con...người..!
+T:491.dat:4:24	좀비로드	Zombie Lord
+T:491.dat:4:34	인...간...	Con...người...
+T:491.dat:5:24	와이트	Wight
+T:491.dat:5:32	크르륵...	Khừ khừ...
+T:491.dat:6:24	망자	Vong nhân
+T:491.dat:6:30	내다리내놔..	Trả chân ta đây..
+T:491.dat:7:24	지옥의망자	Vong nhân địa ngục
+T:491.dat:7:36	크카카카!	Khà khà khà!
+T:491.dat:8:24	사막좀비	Desert Zombie
+T:491.dat:8:34	더..으..워..	Bẩn..quá..
+T:491.dat:9:24	사악한좀비	Evil Zombie
+T:491.dat:10:24	그루미머미	Gloomy Mummy
+T:491.dat:11:32	쿠아악!!	Khááác!!
+T:491.dat:12:24	와이엄	Wyem
+T:491.dat:12:32	와우르큭!	Gwaaa!
+T:491.dat:13:24	프로그	Frog
+T:491.dat:13:32	프록!프록!	Ộp! Ộp!
+T:491.dat:14:24	리자드	Lizard
+T:491.dat:14:32	인간이다!	Là con người!
+T:491.dat:15:24	보글린	Boglin
+T:491.dat:15:32	인간따위가!	Đồ con người!
+T:491.dat:16:24	리자드맨	Lizardman
+T:491.dat:16:34	핏덩이놈...	Đồ nhãi ranh...
+T:491.dat:17:24	마운틴리자드	Mountain Lizard
+T:491.dat:17:38	물러나라!	Lui ra!
+T:491.dat:18:24	홉버블몬	Hob Bubblemon
+T:491.dat:18:34	호호호홉!	Hô hô hô hố!
+T:491.dat:19:24	마운틴버블몬	Mountain Bubblemon
+T:491.dat:19:38	크크크...	Khặc khặc khặc...
+T:491.dat:20:24	블랙버블몬	Black Bubblemon
+T:491.dat:20:36	으르르...	Gừ gừ...
+T:491.dat:21:24	드레이크	Drake
+T:491.dat:21:34	샤으으크..  	Sháaak..  
+T:491.dat:22:24	바질리스크	Basilisk
+T:491.dat:22:36	바지일..!	Ba..zil..!
+T:491.dat:23:34	누구냐!	Ai đó!
+T:491.dat:24:24	마도술사	Ma đạo sư
+T:491.dat:24:34	암흑의 힘...!	Sức mạnh bóng tối...!
+T:491.dat:25:24	워락	Warlock
+T:491.dat:25:30	감히...	Dám sao...
+T:491.dat:26:24	마계마도사	Ma đạo sĩ ma giới
+T:491.dat:26:36	마계의 힘을!	Sức mạnh ma giới!
+T:491.dat:27:24	샤먼	Shaman
+T:491.dat:27:30	으하하하!	Ha ha ha!
+T:491.dat:28:24	슐탄	Sultan
+T:491.dat:28:30	네놈따위가!	Đồ như ngươi à!
+T:491.dat:29:24	서모너	Summoner
+T:491.dat:29:32	잡아라!	Bắt lấy!
+T:491.dat:30:24	위저드	Wizard
+T:491.dat:30:32	이 놈!	Tên này!
+T:491.dat:31:24	모던매지션	Modern Magician
+T:491.dat:31:36	오너라!	Lại đây!
+T:491.dat:32:24	언데드슐탄	Undead Sultan
+T:491.dat:32:36	복수한다!	Ta sẽ báo thù!
+T:491.dat:33:24	데블	Devil
+T:491.dat:33:30	우키키키!	Hí hí hí!
+T:491.dat:34:24	임프	Imp
+T:491.dat:35:34	놀아보자고~	Chơi nào~
+T:491.dat:36:24	데저트데블	Desert Devil
+T:491.dat:36:36	이리오너라~	Lại đây~
+T:491.dat:37:24	베리얼	Belial
+T:491.dat:37:32	마계의 힘...!	Sức mạnh ma giới...!
+T:491.dat:38:24	벨제부브	Beelzebub
+T:491.dat:39:24	인큐버스	Incubus
+T:491.dat:39:34	감히 인간이...	Dám cho con người...
+T:491.dat:40:24	마운틴데몬	Mountain Demon
+T:491.dat:41:24	데몬	Demon
+T:491.dat:41:30	죽..여..라!	Giết..hết..!
+T:491.dat:42:24	가고일	Gargoyle
+T:491.dat:42:32	잡..아..라!	Bắt..lấy..!
+T:491.dat:43:24	실프	Sylph
+T:491.dat:43:30	어디가~	Đi đâu thế~
+T:491.dat:44:36	나랑 놀아줘~	Chơi với tớ đi~
+T:491.dat:45:24	실라페	Sylape
+T:491.dat:45:32	자유의 바람!	Gió tự do!
+T:491.dat:46:24	실라이론	Sylairon
+T:491.dat:46:34	나 잡아봐라~	Bắt tớ đi~
+T:491.dat:47:24	스카이할로우	Sky Hollow
+T:491.dat:47:38	흐휘히익~	Hí hí hí~
+T:491.dat:48:24	그리드실프	Greed Sylph
+T:491.dat:48:36	생기를...	Sinh khí...
+T:491.dat:49:24	고스트	Ghost
+T:491.dat:49:32	으어어어..	Ư ư ư..
+T:491.dat:50:24	사막바람	Desert Wind
+T:491.dat:50:34	말려주지!	Khô cạn ngươi!
+T:491.dat:51:24	토네이도	Tornado
+T:491.dat:51:34	바람의 힘~	Sức gió~
+T:491.dat:52:24	암흑바람	Dark Wind
+T:491.dat:53:24	실레스틴	Celestine
+T:491.dat:53:34	정령의 힘을..	Sức mạnh tinh linh..
+T:491.dat:54:24	그래브	Grab
+T:491.dat:54:32	키륵~ ! 	Kịt kịt~ ! 
+T:491.dat:55:34	키르륵!	Kịt kịt!
+T:491.dat:56:24	크랩	Crab
+T:491.dat:56:30	크랩! 크랩!	Cua! Cua!
+T:491.dat:57:24	스파이더	Spider
+T:491.dat:57:34	눈..부..셔	Chói..quá..
+T:491.dat:58:24	스콜피온	Scorpion
+T:491.dat:59:24	타란튤라	Tarantula
+T:491.dat:59:34	맛있는 냄새..	Mùi ngon quá..
+T:491.dat:60:24	토템크랩	Totem Crab
+T:491.dat:61:24	골든크랩	Golden Crab
+T:491.dat:61:34	인간인가...	Là con người sao...
+T:491.dat:62:24	고스튤라	Ghostula
+T:491.dat:63:24	탈영병	Lính đào ngũ
+T:491.dat:64:24	모래전사	Chiến binh cát
+T:491.dat:64:34	감히 이곳에!	Sao dám đến đây!
+T:491.dat:65:24	모래전사단장	Đội trưởng chiến binh cát
+T:491.dat:66:24	스카이솔저	Sky Soldier
+T:491.dat:66:36	네 이놈!	Tên kia!
+T:491.dat:67:24	그리드솔저	Greed Soldier
+T:491.dat:67:36	용서치마라!	Đừng tha thứ!
+T:491.dat:68:24	이스턴솔저	Eastern Soldier
+T:491.dat:68:36	침입자다!	Có kẻ xâm nhập!
+T:491.dat:69:24	모던솔저	Modern Soldier
+T:491.dat:69:34	막아라!	Chặn lại!
+T:491.dat:70:30	저놈 잡아라!	Bắt tên kia!
+T:491.dat:71:24	사막트롤	Desert Troll
+T:491.dat:71:34	쿠오오오!	Gàaaa!
+T:491.dat:72:30	인간 냄새가...	Có mùi con người...
+T:491.dat:73:24	자이언트	Giant
+T:491.dat:74:24	마운틴트롤	Mountain Troll
+T:491.dat:74:36	인..간..이..	Con..người..
+T:491.dat:75:24	에틴	Ettin
+T:491.dat:75:30	크으으으...	Gừừừ...
+T:491.dat:76:24	타우렌	Tauren
+T:491.dat:76:32	먹..이..다..!	Ăn..hết..!
+T:491.dat:77:24	토템자이언트	Totem Giant
+T:491.dat:77:38	싱싱한 인간...	Con người tươi sống...
+T:491.dat:78:24	케이브트롤	Cave Troll
+T:491.dat:79:24	빅푸트	Bigfoot
+T:491.dat:80:24	산적	Sơn tặc
+T:491.dat:81:24	도적	Trộm
+T:491.dat:82:24	밴디츠	Bandits
+T:491.dat:82:32	후후후...	Hừ hừ hừ...
+T:491.dat:83:24	그리드어쌔신	Greed Assassin
+T:491.dat:83:38	여기까지다...	Đến đây thôi...
+T:491.dat:84:24	암살자	Sát thủ
+T:491.dat:84:32	없애주지...	Ta diệt ngươi...
+T:491.dat:85:24	검은도적단	Black Bandits
+T:491.dat:85:36	사라져랏!	Biến đi!
+T:491.dat:86:24	언데드도적	Undead Thief
+T:491.dat:86:36	복수한다...	Ta sẽ báo thù...
+T:491.dat:87:24	제메시스용사	Jemesis Warrior
+T:491.dat:88:24	멘드레이크	Mandrake
+T:491.dat:88:36	물 좀...	Cho miếng nước...
+T:491.dat:89:24	바로메츠	Barometz
+T:491.dat:89:34	스르르르...	Trườn trườn...
+T:491.dat:90:34	키륵...	Kịt...
+T:491.dat:91:24	네펜데스	Nepenthes
+T:491.dat:92:24	드로세라	Drosera
+T:491.dat:92:34	키륵륵...	Kịt kịt...
+T:491.dat:93:24	맨오워	Man-o-War
+T:491.dat:93:32	샤우어우..	Xàoooo..
+T:491.dat:94:24	커즈플랜트	Curse Plant
+T:491.dat:94:36	으흐흐흐...	Hự hự hự...
+T:491.dat:95:24	토템플랜트	Totem Plant
+T:491.dat:95:36	어둠의 향기..	Hương bóng tối..
+T:491.dat:96:24	사라세니아	Sarracenia
+T:491.dat:96:36	크크크크...	Khặc khặc khặc...
+T:491.dat:97:24	시나몬	Cinnamon
+T:491.dat:97:32	쿠르쿠르  	Khụ khụ  
+T:491.dat:98:34	키킥~!	Kík~!
+T:491.dat:99:24	성난체스트넛	Angry Chestnut
+T:491.dat:100:24	래트	Rat
+T:491.dat:100:30	캬륵~	Khịt~
+T:491.dat:101:24	그리드래트	Greed Rat
+T:491.dat:101:36	캬캬캬캬	Khà khà khà khà
+T:491.dat:102:24	그렘린	Gremlin
+T:491.dat:103:24	블랙시나몬	Black Cinnamon
+T:491.dat:103:36	키륵!	Kịt!
+T:491.dat:104:24	토템시나몬	Totem Cinnamon
+T:491.dat:104:36	키아아!!	Kiaaa!!
+T:491.dat:105:24	데저트래트	Desert Rat
+T:491.dat:105:36	카아카아~	Khaaa khaaa~
+T:491.dat:106:24	산적간부	Đầu mục sơn tặc
+T:491.dat:107:24	어벤져	Avenger
+T:491.dat:107:32	복수한다..	Ta báo thù..
+T:491.dat:108:24	캐슬나이트	Castle Knight
+T:491.dat:109:24	그리드나이트	Greed Knight
+T:491.dat:109:38	템을 내놔라!	Đưa đồ đây!
+T:491.dat:110:24	워리어	Warrior
+T:491.dat:111:24	모던나이트	Modern Knight
+T:491.dat:111:36	삶을 위하여!	Vì sự sống!
+T:491.dat:112:24	암흑기사	Dark Knight
+T:491.dat:112:34	암흑의 영광!	Vinh quang bóng tối!
+T:491.dat:113:24	기사단원	Thành viên kỵ sĩ đoàn
+T:491.dat:113:34	저 놈 잡아라! 	Bắt tên kia! 
+T:491.dat:115:24	탐욕마성주	Lord of Greed Castle
+T:491.dat:115:36	날 원망마라...	Đừng oán ta...
+T:491.dat:116:24	다하크거너	Dahak Gunner
+T:491.dat:117:24	좀비리오타르	Zombie Liotar
+T:491.dat:118:24	모던거너	Modern Gunner
+T:491.dat:119:34	덜컹덜컹	Lạch cạch lạch cạch
+T:491.dat:120:24	램프수호물	Lamp Guardian
+T:491.dat:120:36	츠츠츠츠	Tsss tsss
+T:491.dat:121:24	그리드타워	Greed Tower
+T:491.dat:121:36	적이 보인다!	Thấy địch rồi!
+T:491.dat:122:24	디펜스타워	Defense Tower
+T:491.dat:122:36	경계 태세!	Cảnh giới!
+T:491.dat:123:24	매직타워	Magic Tower
+T:491.dat:124:24	데저트타워	Desert Tower
+T:491.dat:125:24	모던타워	Modern Tower
+T:491.dat:126:24	이스턴타워	Eastern Tower
+T:491.dat:126:36	비상! 비상!	Khẩn cấp! Khẩn cấp!
+T:491.dat:127:24	커즈타워	Curse Tower
+T:491.dat:127:34	크아아아!!!	Khààà!!!
+T:491.dat:128:24	마계수호물	Demon Guardian
+T:491.dat:129:24	데빌타워	Devil Tower
+T:491.dat:129:34	카아아악!	Khaaác!
+T:491.dat:131:24	암흑수호물	Dark Guardian
+T:491.dat:131:36	침입자 발견!	Phát hiện kẻ xâm nhập!
+T:491.dat:132:24	다크타워	Dark Tower
+T:491.dat:133:24	아지스타워	Azis Tower
+T:491.dat:133:36	쿠아아악!	Khuààà!
+T:491.dat:134:24	산적주술사	Shaman sơn tặc
+T:491.dat:134:36	꼬맹이가!	Thằng nhóc!
+T:491.dat:135:24	집시주술사	Shaman Gypsy
+T:491.dat:136:24	마도사	Ma đạo sĩ
+T:491.dat:136:32	이리오게나...	Lại đây nào...
+T:491.dat:137:24	광신도	Cuồng tín
+T:491.dat:137:32	후후후후...	Hừ hừ hừ hừ...
+T:491.dat:138:24	드루이드	Druid
+T:491.dat:138:34	죽여주마!	Ta giết ngươi!
+T:491.dat:139:24	주술사	Thuật sĩ
+T:491.dat:139:32	메르미시움!	Mermisium!
+T:491.dat:140:24	모더니스트	Modernist
+T:491.dat:141:24	암흑술사	Dark Sorcerer
+T:491.dat:143:24	램프술사	Lamp Sorcerer
+T:491.dat:144:24	청산무법자	Blue Mountain Outlaw
+T:491.dat:145:32	이놈이 감히!	Tên này dám sao!
+T:491.dat:146:24	언데드쿨리오	Undead Coolio
+T:491.dat:146:38	오랜만이군..	Lâu rồi mới gặp..
+T:491.dat:147:24	일급암살자	Assassin hạng nhất
+T:491.dat:148:24	뭉크	Munk
+T:491.dat:148:30	권능의 힘...!	Sức mạnh quyền năng...!
+T:491.dat:149:32	애송이...!	Nhãi ranh...!
+T:491.dat:150:24	딥바벨영주	Deep Babel Lord
+T:491.dat:150:36	방해말아라!	Đừng cản ta!
+T:491.dat:151:24	다하크로드	Dahak Lord
+T:491.dat:152:24	검은램프바바	Black Lamp Baba
+T:491.dat:152:38	비비디바바!	Bibidi Baba!
+T:491.dat:153:24	오거스피릿	Ogre Spirit
+T:491.dat:153:36	우오오...!!!	Uooo...!!!
+T:491.dat:154:24	사이클롭스	Cyclops
+T:491.dat:155:24	오거소울	Ogre Soul
+T:491.dat:156:34	키루~~~!  	Kiru~~~!  
+T:491.dat:157:24	데빌리스	Devilis
+T:491.dat:157:34	키루~~~! 	Kiru~~~! 
+T:491.dat:158:24	데빌하우레스	Devil Haures
+T:491.dat:159:34	감히...!	Dám sao...!
+T:491.dat:160:24	타락성주	Lord of Fallen Castle
+T:491.dat:161:24	다하크나이트	Dahak Knight
+T:491.dat:162:24	좀비프루스트	Zombie Frust
+T:491.dat:162:38	날 기억하나?	Ngươi nhớ ta không?
+T:491.dat:163:24	지옥수문장	Hell Gatekeeper
+T:491.dat:165:24	저주술사	Curse Caster
+T:491.dat:165:34	움후르마샤!	Umhurmasha!
+T:491.dat:166:24	다하크매지션	Dahak Magician
+T:491.dat:166:38	보아라! 날!	Nhìn đây! Ta!
+T:491.dat:167:24	리치제메스	Lich Jemes
+T:491.dat:168:24	청산마도사	Blue Mountain Mage
+T:491.dat:168:36	이곳이 무덤!	Đây là mồ chôn!
+T:491.dat:169:24	그리드매지션	Greed Magician
+T:491.dat:169:38	넌 내꺼다...	Ngươi là của ta...
+T:491.dat:170:36	세!바!스!찬!	Se!Bas!Tian!
+T:491.dat:171:32	감히 이놈이!	Tên này dám!
+T:491.dat:173:34	크에에엑!	Khéééc!
+T:492.dat:0:11	찰스	Charles
+T:492.dat:0:17	경비병	Lính gác
+T:492.dat:1:11	윌리엄	William
+T:492.dat:2:11	제롬	Jerome
+T:492.dat:3:11	찰리	Charlie
+T:492.dat:4:11	척	Chuck
+T:492.dat:5:11	론	Ron
+T:492.dat:6:11	제리	Jerry
+T:492.dat:7:11	판넬리	Panelly
+T:492.dat:8:11	장클로드	Jean Claude
+T:492.dat:9:11	라파엘로	Raffaello
+T:492.dat:10:11	기욤	Guillaume
+T:492.dat:11:11	르판느	Lepanne
+T:492.dat:12:11	론다느	Rondane
+T:492.dat:13:11	헨리	Henry
+T:492.dat:13:17	경비기사	Kỵ sĩ gác
+T:492.dat:14:11	데리다	Derrida
+T:492.dat:15:11	토마스	Thomas
+T:492.dat:15:19	연합병사	Lính liên quân
+T:492.dat:16:11	루크	Luke
+T:492.dat:16:17	보따리상	Người bán rong
+T:492.dat:17:11	루스	Ruth
+T:492.dat:18:11	르네	Rene
+T:492.dat:18:17	스승	Sư phụ
+T:492.dat:19:11	제이미	Jamie
+T:492.dat:19:19	여관주인	Chủ quán trọ
+T:492.dat:20:11	다나	Dana
+T:492.dat:21:11	마릴리	Marily
+T:492.dat:22:11	존슨	Johnson
+T:492.dat:22:17	용병	Lính đánh thuê
+T:492.dat:23:11	존스	Jones
+T:492.dat:24:11	로니	Ronnie
+T:492.dat:24:17	잡화상	Tiệm tạp hóa
+T:492.dat:25:11	훈트	Hunt
+T:492.dat:26:11	빅터	Victor
+T:492.dat:27:11	필	Phil
+T:492.dat:27:15	대장장이	Thợ rèn
+T:492.dat:28:11	닉	Nick
+T:492.dat:29:11	미키	Mickey
+T:492.dat:30:11	엠마	Emma
+T:492.dat:30:17	할머니	Bà lão
+T:492.dat:31:11	포크너	Faulkner
+T:492.dat:31:19	성주	Lãnh chúa
+T:492.dat:32:11	테레사	Teresa
+T:492.dat:32:19	대수녀	Đại nữ tu
+T:492.dat:33:11	루니안	Lunian
+T:492.dat:33:19	대마법사	Đại pháp sư
+T:492.dat:34:11	알리시아	Alicia
+T:492.dat:34:21	견습수녀	Nữ tu tập sự
+T:492.dat:35:11	이니스	Innis
+T:492.dat:35:19	공작영애	Tiểu thư công tước
+T:492.dat:36:11	브리킷	Brigit
+T:492.dat:36:19	오크전사	Chiến binh Orc
+T:492.dat:37:11	리르케	Lirke
+T:492.dat:38:11	나디아	Nadia
+T:492.dat:38:19	족장의딸	Con gái tộc trưởng
+T:492.dat:39:11	이프리카	Ifrica
+T:492.dat:40:11	융크	Yunk
+T:492.dat:41:11	로카르도	Rocardo
+T:492.dat:42:11	융도르코	Yundorco
+T:492.dat:42:21	오크주민	Dân Orc
+T:492.dat:43:11	샤이먼	Shaimon
+T:492.dat:43:19	오크족장	Tộc trưởng Orc
+T:492.dat:44:11	료니엘	Ryoniel
+T:492.dat:44:19	수리공	Thợ sửa chữa
+T:492.dat:45:11	라구르도	Lagurdo
+T:492.dat:45:21	조사관	Điều tra viên
+T:492.dat:46:11	시체	Thi thể
+T:492.dat:49:11	마르폴로	Marpolo
+T:492.dat:49:21	뱃사공	Người lái đò
+T:492.dat:50:11	갈릴레이	Galilei
+T:492.dat:51:11	아르비아	Arvia
+T:492.dat:52:11	크루센	Krusen
+T:492.dat:53:11	랜달프	Randalph
+T:492.dat:53:19	용병대장	Đội trưởng lính đánh thuê
+T:492.dat:54:11	헵번	Hepburn
+T:492.dat:54:17	텔레포터	Teleporter
+T:492.dat:55:11	발레리	Valerie
+T:492.dat:55:19	고위관직	Quan chức cấp cao
+T:492.dat:56:11	하이	Hy
+T:492.dat:56:17	메신져	Messenger
+T:492.dat:57:11	라캉	Lacan
+T:492.dat:57:17	부관	Phó quan
+T:492.dat:58:11	세르게이	Sergei
+T:492.dat:58:21	연합관원	Quan chức liên quân
+T:492.dat:59:11	리드	Reed
+T:492.dat:60:11	엘리엇	Elliot
+T:492.dat:60:19	공작	Công tước
+T:492.dat:61:11	빅조	Big Joe
+T:492.dat:61:17	모험가	Nhà thám hiểm
+T:492.dat:62:11	토미	Tommy
+T:492.dat:62:17	소년	Cậu bé
+T:492.dat:63:11	미오르넴	Miornem
+T:492.dat:63:21	중매쟁이	Bà mối
+T:492.dat:64:11	바스틴루	Bastinlu
+T:492.dat:64:21	마법사	Pháp sư
+T:492.dat:65:11	트리시	Trish
+T:492.dat:65:19	위탁판매장	Quầy ký gửi
+T:492.dat:66:11	베티	Betty
+T:492.dat:66:17	꼬마	Nhóc con
+T:492.dat:67:11	엘레나	Elena
+T:492.dat:67:19	아줌마	Dì
+T:492.dat:68:11	다그리파	Dagripa
+T:492.dat:68:21	후작	Hầu tước
+T:492.dat:69:11	브리니	Briny
+T:492.dat:70:11	로잔느	Rosanne
+T:492.dat:70:19	백작부인	Bá tước phu nhân
+T:492.dat:71:11	폴조	Polzo
+T:492.dat:71:17	건축업자	Nhà thầu xây dựng
+T:492.dat:72:11	플로릴리	Florily
+T:492.dat:72:21	귀한집딸	Tiểu thư nhà quyền quý
+T:492.dat:73:11	드비쉬	Devish
+T:492.dat:73:19	남작	Nam tước
+T:492.dat:74:11	코드리	Codry
+T:492.dat:75:11	제라드	Gerard
+T:492.dat:75:19	훈련교관[전직]	Huấn luyện viên[Chuyển nghề]
+T:492.dat:76:11	카덴	Kaden
+T:492.dat:76:17	호위무사	Võ sĩ hộ vệ
+T:492.dat:77:11	아베르	Aber
+T:492.dat:78:11	케산	Kesan
+T:492.dat:79:11	루티나	Rutina
+T:492.dat:79:19	여관마담	Bà chủ quán trọ
+T:492.dat:80:11	쿠피	Kupi
+T:492.dat:80:17	오크꼬마	Nhóc Orc
+T:492.dat:81:11	플래카	Plaka
+T:492.dat:82:11	코이	Koi
+T:492.dat:83:11	헬레나	Helena
+T:492.dat:84:11	베넬	Benel
+T:492.dat:84:17	수녀	Nữ tu
+T:492.dat:85:11	겔헨	Gelhen
+T:492.dat:85:17	사감수녀	Nữ tu giám thị
+T:492.dat:86:11	제이슨	Jason
+T:492.dat:86:19	선원	Thủy thủ
+T:492.dat:87:11	자르키	Jarky
+T:492.dat:88:11	이블케이브	Evil Cave
+T:492.dat:88:23	적정레벨:6	Cấp đề nghị:6
+T:492.dat:89:11	샌드던전	Sand Dungeon
+T:492.dat:89:21	적정레벨:9	Cấp đề nghị:9
+T:492.dat:90:11	딥샌드던전	Deep Sand Dungeon
+T:492.dat:90:23	적정레벨:12	Cấp đề nghị:12
+T:492.dat:91:11	깊은악마의동굴	Deep Demon Cave
+T:492.dat:91:27	적정레벨:18	Cấp đề nghị:18
+T:492.dat:92:11	이스트포레스트	East Forest
+T:492.dat:92:27	적정레벨:23	Cấp đề nghị:23
+T:492.dat:93:11	데저트던전	Desert Dungeon
+T:492.dat:93:23	적정레벨:27	Cấp đề nghị:27
+T:492.dat:94:11	웨스트포레스트	West Forest
+T:492.dat:94:27	적정레벨:33	Cấp đề nghị:33
+T:492.dat:95:11	딥데저트던전	Deep Desert Dungeon
+T:492.dat:95:25	적정레벨:38	Cấp đề nghị:38
+T:492.dat:96:11	블루마운틴	Blue Mountain
+T:492.dat:96:23	적정레벨:42	Cấp đề nghị:42
+T:492.dat:97:11	딥블루마운틴	Deep Blue Mountain
+T:492.dat:97:25	적정레벨:48	Cấp đề nghị:48
+T:492.dat:98:11	캐슬스카이	Castle Sky
+T:492.dat:98:23	적정레벨:52	Cấp đề nghị:52
+T:492.dat:99:11	탐욕마성	Greed Castle
+T:492.dat:99:21	적정레벨:58	Cấp đề nghị:58
+T:492.dat:100:11	그리드바벨	Greed Babel
+T:492.dat:100:23	적정레벨:62	Cấp đề nghị:62
+T:492.dat:101:11	딥그리드바벨	Deep Greed Babel
+T:492.dat:101:25	적정레벨:72	Cấp đề nghị:72
+T:492.dat:102:11	검은램프성	Black Lamp Castle
+T:492.dat:102:23	적정레벨:68	Cấp đề nghị:68
+T:492.dat:103:11	광기의어비스	Abyss of Madness
+T:492.dat:103:25	적정레벨:88	Cấp đề nghị:88
+T:492.dat:104:11	악마의성	Demon Castle
+T:492.dat:104:21	적정레벨:78	Cấp đề nghị:78
+T:492.dat:105:11	타락한성	Fallen Castle
+T:492.dat:105:21	적정레벨:82	Cấp đề nghị:82
+T:492.dat:106:11	다하크입구	Dahak Entrance
+T:492.dat:106:23	적정레벨:92	Cấp đề nghị:92
+T:492.dat:107:11	다하크던전	Dahak Dungeon
+T:492.dat:107:23	적정레벨:98	Cấp đề nghị:98

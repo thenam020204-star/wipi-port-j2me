@@ -1,0 +1,71 @@
+1	Slasher có đặc trưng là |06sức công| mạnh và |06sinh lực| cao.
+2	Assassin có đặc trưng là |06tốc độ đánh nhanh| cùng |06chí mạng, né tránh|.
+3	Knight có đặc trưng là |06đòn đánh kết hợp vật lý và phép|.
+4	Magician có đặc trưng là các kỹ năng |06phép thuật| lộng lẫy.
+5	Mỗi nghề có thể |063 lần chuyển nghề| ở |06cấp 20|.
+6	|06Upper Slasher| dùng kiếm hai tay với chuỗi combo liên tiếp nhanh.
+7	|06Swing Slasher| dùng rìu, chiến đấu thiên về những nhát chém cực mạnh.
+8	|06Crashing Slasher| dùng búa, thiên về các đòn sóng xung kích mạnh mẽ.
+9	|06Upper Assassin| cầm dao găm và có thể chiến đấu tốc độ.
+10	|06Grappling Assassin| đeo găng, có kỹ thuật độc đáo như tóm địch rồi quăng, ném.
+11	|06Fighting Assassin| dùng vuốt với kỹ thuật năng động, chuyên cận chiến.
+12	|06Upper Knight| ưa lối chiến đấu hiệp sĩ điển hình với thương và khiên.
+13	|06Noble Knight| dùng Saber, có lối tấn công mượt mà như trượt đi.
+14	|06Super Knight| dùng kiếm một tay và phép, nhiều kỹ năng buff và hồi phục mạnh.
+15	|06Fire Magician| chuyên kỹ thuật dùng phép lửa nóng thiêu rụi phía trước.
+16	|06Ice Magician| có phép khí lạnh ngăn địch tiến lại gần.
+17	|06Thunder Magician| có phép đối nhân gây sét mạnh trong phạm vi nhất định.
+18	Sau khi chuyển nghề, đạt |06cấp 50| bạn có thể |06Thức tỉnh|.
+19	|06Chuyển nghề và Thức tỉnh| hãy tìm |06huấn luyện viên [Gerard]| trong làng.
+20	Mỗi lần |06lên cấp| nhận |063 điểm chỉ số| và |061 điểm kỹ năng|.
+21	|06Sức mạnh| tăng công vật lý.
+22	|06Ma lực| tăng công phép và MP.
+23	|06Nhanh nhẹn| tăng chí mạng và tỉ lệ né tránh.
+24	|06Thể lực| tăng phòng thủ và HP.
+25	|06May mắn| tăng chí mạng và tỉ lệ rớt vật phẩm.
+26	Một số potion hay đồ ăn có hiệu ứng buff độc đáo chỉ vật phẩm đó mới có.
+27	Dùng kỹ năng khác khi đang tung kỹ năng sẽ tạo |06combo hủy chiêu|.
+28	Cường hóa tối đa tới |06+20|.
+29	Khi cường hóa cần đá cường hóa |06hạ, trung, thượng cấp|.
+30	|06Đá cường hóa hạ cấp| là chất xúc tác cường hóa tới |06+10|.
+31	|06Đá cường hóa trung cấp| là chất xúc tác cường hóa tới |06+13|.
+32	|06Đá cường hóa thượng cấp| là chất xúc tác cường hóa tới |06+20|.
+33	|06Cường hóa| làm tại |06thợ rèn| ở lò rèn.
+34	Phù phép ban |06năng lực đặc biệt| cho trang bị.
+35	Chỉ dung hợp nguyên liệu mới nhận được các loại túi nhiều kích cỡ.
+36	|06Đá phép hạng C| ban phép thuật hiệu quả thấp.
+37	|06Đá phép hạng B| ban phép thuật hiệu quả trung bình.
+38	|06Đá phép hạng A| ban phép thuật hiệu quả tốt.
+39	|06Phù phép| làm tại |06thợ rèn|.
+40	|06Phù phép| tối đa |061 Normal, 2 Magic, 3 từ Rare trở lên|.
+41	Phép phù được loại khác nhau tùy từng loại trang bị.
+42	Không thể phù phép cho phụ kiện.
+43	Chọn vật phẩm trong túi đồ để |06dung hợp|.
+44	Dung hợp chỉ gồm |06trang bị+trang bị, nguyên liệu+nguyên liệu|.
+45	Khi dung hợp trang bị, |06độ hiếm cao hơn 1 bậc| có thể |06xuất hiện|.
+46	Khi nâng phẩm cấp lúc dung hợp trang bị cần đá phép.
+47	Dung hợp nguyên liệu sẽ ra các vật phẩm như potion, potion đặc biệt.
+48	Dung hợp nguyên liệu sẽ ra các loại túi hoặc vật phẩm Cash.
+49	Ngoài field, nhấn |06[*]| |06một lần| để bật minimap.
+50	Ngoài field, nhấn |06[*]| |06hai lần| để bật bản đồ toàn cảnh.
+51	Trong hầm ngục, nhấn |06[*]| |06ba lần| để bật bản đồ hầm ngục.
+52	Hầm ngục kho báu cho đăng ký thời gian hoàn thành vào xếp hạng từng hầm ngục.
+53	|06Phí vào hầm ngục kho báu được trả cho Lord (hạng 1~10)|.
+54	|06Lord hầm ngục là| người chơi hạng |061| xếp hạng hầm ngục, nhận phí vào do người khác trả. (hạng 1~10)
+55	|06Dịch chuyển| chỉ đến được |06những làng đã từng ghé|.
+56	Bạn có thể nhận |06nhiệm vụ phụ| từ nhiều NPC.
+57	|06Một số bản đồ cần hoàn thành sự kiện chính| mới đến được.
+58	Phẩm cấp trang bị: |12Trắng: Normal|, |02Xanh dương: Magic|, |03Vàng: Rare|, |14Xanh lá: Unique|, |05Tím: Legend|.
+59	Chỉ cần sưu tầm vật phẩm và săn quái cũng nhận được danh hiệu mạnh.
+60	Hết potion ở hầm ngục cấp cao, hãy xem bộ Wine Potion ở |06cửa hàng Cash|!
+61	Dù bị quái vây quanh mà chết, chỉ cần một Sách hồi phục là ổn!
+62	Quái có tên ở field và hầm ngục có tỉ lệ rớt Rare và đồ ăn buff cao.
+63	Vũ khí, khiên và cánh sẽ lấp lánh theo mức cường hóa.
+64	Danh hiệu nhận được khi đạt điều kiện ẩn trong game.
+65	Vật phẩm rớt ra có thể kèm tiền tố, từ 1~ tối đa 3 tiền tố.
+66	Mặc vật phẩm tăng kỹ năng sẽ hiện số màu xanh lá trong bảng kỹ năng.
+67	Có thể thêm túi từ dung hợp, cửa hàng hoặc các túi lớn bán ở cửa hàng Cash.
+68	Thiếu đá phép hay đá cường hóa thì hãy ghé cửa hàng Cash!
+69	Cửa hàng Cash nằm trong menu tùy chọn.
+70	Hãy thi đấu xếp hạng với người khác ở hầm ngục kho báu! (Bản offline: không hỗ trợ)
+71	Nơi hàng ngàn vật phẩm đang chờ bạn! Đó chính là Chroisen!
