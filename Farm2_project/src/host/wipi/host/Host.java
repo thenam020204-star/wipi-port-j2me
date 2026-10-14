@@ -384,6 +384,7 @@ public final class Host extends Canvas implements Runnable {
             Overlay.paint(backG);
         }
         present(g);
+        Sheet.release();
     }
 
     private void present(Graphics g) {

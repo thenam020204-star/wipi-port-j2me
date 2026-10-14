@@ -3,6 +3,7 @@ package org.kwis.msp.lcdui;
 import java.io.IOException;
 
 import wipi.host.Res;
+import wipi.host.Sheet;
 
 /**
  * WIPI-Java Image on top of MIDP 2.0.
@@ -42,7 +43,11 @@ public class Image {
     }
 
     public static Image createImage(byte[] data, int off, int len) {
+        if (Sheet.isRef(data, off, len)) {
+            return new Image(Sheet.frame(data, off, len), false); // unpacked plain-PNG art
+        }
         if (len >= 24 && data[off] == 'L' && data[off + 1] == 'B' && data[off + 2] == 'M' && data[off + 3] == 'P') {
+            wipi.host.Log.i("packed LBMP decoded (not unpacked by the build)");
             return decodeLbmp(data, off, len);
         }
         return new Image(javax.microedition.lcdui.Image.createImage(data, off, len), false);

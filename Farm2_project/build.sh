@@ -1,7 +1,7 @@
 #!/bin/bash
 # The Farm 2 (SKT WIPI-Java) -> J2ME MIDP 2.0 / CLDC 1.1 port.
 # usage: ./build.sh [out_name]      (env: OVERLAY=<dir of resources to add/replace>, HOOKS=<hooks file>)
-# Pipeline: compile shim+host (Java 1.3 source, CLDC classes) -> remap the
+# Pipeline: unpack packed images to plain PNG sheets -> compile shim+host (Java 1.3 source, CLDC classes) -> remap the
 # platform call sites of the original game classes -> convert SMAF sounds ->
 # ProGuard preverify (CLDC StackMap) -> jar + jad -> compatibility scan
 # (reject on error) -> binary diff against the original jar.
@@ -26,6 +26,9 @@ rm -rf "$W/jar/META-INF"
 cp "$W/orig/0066128696.jar" "$W/orig.jar"
 # game classes out of the resource tree
 ( cd "$W/jar" && find . -name '*.class' | while read c; do mkdir -p "$W/game_in/$(dirname "$c")"; mv "$c" "$W/game_in/$c"; done )
+
+echo "== 1b. packed images -> plain PNG sprite sheets (+ frame lists), same-length references in the containers"
+java -cp "$W/tools" Unpack "$W/jar" "$W/unpack.txt"
 
 echo "== 2. compile shim + host (+ ui) against CLDC 1.1 / MIDP 2.0, with the game classes on the classpath"
 SRC=$(find "$P/src" -name '*.java')
@@ -93,3 +96,4 @@ java -cp "$W/tools:$ASM" Scan "$OUT/$NAME.jar" "$P/build/reports/scan_$NAME.txt"
 echo "== 8. binary diff vs original"
 java -cp "$W/tools:$ASM" BinDiff "$W/orig.jar" "$OUT/$NAME.jar" "$P/build/reports/bindiff_$NAME.txt"
 cp "$W/remap.txt" "$P/build/reports/remap_$NAME.txt"
+cp "$W/unpack.txt" "$P/build/reports/unpack_$NAME.txt"
