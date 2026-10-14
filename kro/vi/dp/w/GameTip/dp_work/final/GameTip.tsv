@@ -1,0 +1,72 @@
+id	gốc	dịch	ghi chú
+T:GameTip.dat:0:0	슬래셔는 강한 |06공격력|과 |06생명력|이 특징입니다.	Slasher có đặc trưng là |06sức công| mạnh và |06sinh lực| cao.	
+T:GameTip.dat:1:0	어쌔신은 |06빠른 공격속도|와 |06크리, 회피|가 특징입니다.	Assassin có đặc trưng là |06tốc độ đánh nhanh| cùng |06chí mạng, né tránh|.	
+T:GameTip.dat:2:0	나이트는 |06물리와 마법의 복합 공격|이 특징입니다.	Knight có đặc trưng là |06đòn đánh kết hợp vật lý và phép|.	
+T:GameTip.dat:3:0	매지션은 |06화려한 마법|스킬이 특징입니다.	Magician có đặc trưng là các kỹ năng |06phép thuật| lộng lẫy.	
+T:GameTip.dat:4:0	각 직업은 |0620레벨|에 |063가지의 전직|이 가능합니다.	Mỗi nghề có thể |063 lần chuyển nghề| ở |06cấp 20|.	
+T:GameTip.dat:5:0	|06어퍼슬래셔|는 양손검을 사용하는 빠른 연속콤보가 특징입니다.	|06Upper Slasher| dùng kiếm hai tay với chuỗi combo liên tiếp nhanh.	
+T:GameTip.dat:6:0	|06스윙슬래셔|는 도끼를 사용한 강력한 베기위주의 전투 방식이 특징입니다.	|06Swing Slasher| dùng rìu, chiến đấu thiên về những nhát chém cực mạnh.	
+T:GameTip.dat:7:0	|06크래싱슬래셔|는 망치를 사용한 강력한 충격파 위주의 공격이 특징입니다.	|06Crashing Slasher| dùng búa, thiên về các đòn sóng xung kích mạnh mẽ.	
+T:GameTip.dat:8:0	|06어퍼어쌔신|은 단검을 들고 스피드한 전투를 할 수 있습니다.	|06Upper Assassin| cầm dao găm và có thể chiến đấu tốc độ.	
+T:GameTip.dat:9:0	|06그래플링어쌔신|은 글러브를 끼고 적을 잡아 메치고 던지는 등의 독특한 기술이 특징입니다.	|06Grappling Assassin| đeo găng, có kỹ thuật độc đáo như tóm địch rồi quăng, ném.	
+T:GameTip.dat:10:0	|06파이팅어쌔신|은 클러를 사용한 다이나믹한 기술로 근거리 전투에 특화된 직업 입니다.	|06Fighting Assassin| dùng vuốt với kỹ thuật năng động, chuyên cận chiến.	
+T:GameTip.dat:11:0	|06어퍼나이트|는 랜스와 방패를 사용한 전형적인 기사의 전투방식을 선호하는 직업 입니다.	|06Upper Knight| ưa lối chiến đấu hiệp sĩ điển hình với thương và khiên.	
+T:GameTip.dat:12:0	|06노블나이트|는 세이버를 사용하는 부드럽고 미끄러지는 듯한 공격방식이 특징입니다.	|06Noble Knight| dùng Saber, có lối tấn công mượt mà như trượt đi.	
+T:GameTip.dat:13:0	|06수퍼나이트|는 한손검과 마법을 사용하며 다양한 버프스킬과 강력한 힐링 등이 특징입니다.	|06Super Knight| dùng kiếm một tay và phép, nhiều kỹ năng buff và hồi phục mạnh.	
+T:GameTip.dat:14:0	|06파이어매지션|은 뜨거운 화염 마법으로 전방을 초토화시키는 기술에 특화된 직업입니다.	|06Fire Magician| chuyên kỹ thuật dùng phép lửa nóng thiêu rụi phía trước.	
+T:GameTip.dat:15:0	|06아이스매지션|은 차가운 냉기로 적들을 다가오지 못하게 하는 마법이 특징입니다.	|06Ice Magician| có phép khí lạnh ngăn địch tiến lại gần.	
+T:GameTip.dat:16:0	|06썬더매지션|은 한정된 범위에 강력한 전격공격을 시행하는 대인 공격 마법이 특징입니다.	|06Thunder Magician| có phép đối nhân gây sét mạnh trong phạm vi nhất định.	
+T:GameTip.dat:17:0	전직 후 |0650레벨|이 되면 |06각성|을 할 수 있습니다.	Sau khi chuyển nghề, đạt |06cấp 50| bạn có thể |06Thức tỉnh|.	
+T:GameTip.dat:18:0	|06전직과 각성|은 마을의 |06훈련교관 [제라드]|에게 하세요.	|06Chuyển nghề và Thức tỉnh| hãy tìm |06huấn luyện viên [Gerard]| trong làng.	
+T:GameTip.dat:19:0	|06레벨업|시 |06스텟포인트3|과 |06스킬포인트1|을 획득합니다.	Mỗi lần |06lên cấp| nhận |063 điểm chỉ số| và |061 điểm kỹ năng|.	
+T:GameTip.dat:20:0	|06근력|은 물리공격력을 올려줍니다.	|06Sức mạnh| tăng công vật lý.	
+T:GameTip.dat:21:0	|06마력|은 마법공격력과 MP를 올려줍니다.	|06Ma lực| tăng công phép và MP.	
+T:GameTip.dat:22:0	|06민첩|은 크리티컬과 회피확률을 올려줍니다.	|06Nhanh nhẹn| tăng chí mạng và tỉ lệ né tránh.	
+T:GameTip.dat:23:0	|06체력|은 방어력과 HP를 올려줍니다.	|06Thể lực| tăng phòng thủ và HP.	
+T:GameTip.dat:24:0	|06행운|은 크리, 아이템드랍율을 올려줍니다.	|06May mắn| tăng chí mạng và tỉ lệ rớt vật phẩm.	
+T:GameTip.dat:25:0	어떤 포션이나 음식에는 해당 아이템에서만 부여되어있는 독특한 버프 옵션이 달려있습니다.	Một số potion hay đồ ăn có hiệu ứng buff độc đáo chỉ vật phẩm đó mới có.	
+T:GameTip.dat:26:0	스킬 공격중 다른 스킬을 사용하여 |06캔슬콤보|가 가능합니다.	Dùng kỹ năng khác khi đang tung kỹ năng sẽ tạo |06combo hủy chiêu|.	
+T:GameTip.dat:27:0	강화는 |06+20|까지 가능합니다.	Cường hóa tối đa tới |06+20|.	
+T:GameTip.dat:28:0	강화시에는 |06하,중,상급|의 강화석이 필요합니다.	Khi cường hóa cần đá cường hóa |06hạ, trung, thượng cấp|.	
+T:GameTip.dat:29:0	|06하급강화석|은 |06+10|까지 강화가 가능한 촉매입니다.	|06Đá cường hóa hạ cấp| là chất xúc tác cường hóa tới |06+10|.	
+T:GameTip.dat:30:0	|06중급강화석|은 |06+13|까지 강화가 가능한 촉매입니다.	|06Đá cường hóa trung cấp| là chất xúc tác cường hóa tới |06+13|.	
+T:GameTip.dat:31:0	|06상급강화석|은 |06+20|까지 강화가 가능한 촉매입니다.	|06Đá cường hóa thượng cấp| là chất xúc tác cường hóa tới |06+20|.	
+T:GameTip.dat:32:0	|06강화|는 대장간에 있는 |06대장장이|에게서 할 수 있습니다.	|06Cường hóa| làm tại |06thợ rèn| ở lò rèn.	
+T:GameTip.dat:33:0	마법부여는 장비에 |06특수 능력|을 부여합니다.	Phù phép ban |06năng lực đặc biệt| cho trang bị.	
+T:GameTip.dat:34:0	재료 아이템 융합에서만 획득할수있는 다양한 사이즈의 가방이 존재합니다.	Chỉ dung hợp nguyên liệu mới nhận được các loại túi nhiều kích cỡ.	
+T:GameTip.dat:35:0	|06C급 마법석|은 적은 효과의 마법을 부여합니다.	|06Đá phép hạng C| ban phép thuật hiệu quả thấp.	
+T:GameTip.dat:36:0	|06B급 마법석|은 보통 효과의 마법을 부여합니다.	|06Đá phép hạng B| ban phép thuật hiệu quả trung bình.	
+T:GameTip.dat:37:0	|06A급마법석|은 좋은 효과의 마법을 부여합니다.	|06Đá phép hạng A| ban phép thuật hiệu quả tốt.	
+T:GameTip.dat:38:0	|06마법부여|는 |06대장장이|에게서 할 수 있습니다.	|06Phù phép| làm tại |06thợ rèn|.	
+T:GameTip.dat:39:0	|06마법부여|는 |06노멀1개, 매직2개 레어이상3개| 까지 가능합니다.	|06Phù phép| tối đa |061 Normal, 2 Magic, 3 từ Rare trở lên|.	
+T:GameTip.dat:40:0	마법부여는 장비 종류마다 마법종류가 달라집니다.	Phép phù được loại khác nhau tùy từng loại trang bị.	
+T:GameTip.dat:41:0	악세사리에는 마법부여를 할 수 없습니다.	Không thể phù phép cho phụ kiện.	
+T:GameTip.dat:42:0	자신의 인벤토리에서 아이템을 선택하여 |06융합|을 할 수 있습니다.	Chọn vật phẩm trong túi đồ để |06dung hợp|.	
+T:GameTip.dat:43:0	융합은 |06장비+장비, 재료+재료| 만 가능합니다.	Dung hợp chỉ gồm |06trang bị+trang bị, nguyên liệu+nguyên liệu|.	
+T:GameTip.dat:44:0	장비 아이템 융합 시 |061단계 더 높은 레어도|가 |06등장|할 수 있습니다.	Khi dung hợp trang bị, |06độ hiếm cao hơn 1 bậc| có thể |06xuất hiện|.	
+T:GameTip.dat:45:0	장비 아이템 융합 중 아이템 등급 진화시 마법석이 필요합니다.	Khi nâng phẩm cấp lúc dung hợp trang bị cần đá phép.	
+T:GameTip.dat:46:0	재료아이템 융합 시 포션, 특수포션, 등의 아이템이 등장합니다.	Dung hợp nguyên liệu sẽ ra các vật phẩm như potion, potion đặc biệt.	
+T:GameTip.dat:47:0	재료템 융합 시 각종 가방이나 캐시아이템이 등장합니다.	Dung hợp nguyên liệu sẽ ra các loại túi hoặc vật phẩm Cash.	
+T:GameTip.dat:48:0	필드에서 |06[*]|을 |06한 번| 누르면 미니맵이 활성화 됩니다.	Ngoài field, nhấn |06[*]| |06một lần| để bật minimap.	
+T:GameTip.dat:49:0	필드에서 |06[*]|을 |06두 번| 누르면 전체맵이 활성화 됩니다.	Ngoài field, nhấn |06[*]| |06hai lần| để bật bản đồ toàn cảnh.	
+T:GameTip.dat:50:0	던전에서 |06[*]|을 |06세 번| 누르면 던전맵이 활성화 됩니다.	Trong hầm ngục, nhấn |06[*]| |06ba lần| để bật bản đồ hầm ngục.	
+T:GameTip.dat:51:0	트레져 던전은 클리어타임을 각 던전별 랭킹에 등록할 수 있습니다.	Hầm ngục kho báu cho đăng ký thời gian hoàn thành vào xếp hạng từng hầm ngục.	
+T:GameTip.dat:52:0	트레져 |06던전의 입장료는 던전로드(1~10위)에게| 지급 됩니다.	|06Phí vào hầm ngục kho báu được trả cho Lord (hạng 1~10)|.	
+T:GameTip.dat:53:0	|06던전로드란!| 던전랭킹이 |061위|인 유저로써 다른 사람들이 지급하는 던전입장료를 받게됩니다. (1~10위까지)	|06Lord hầm ngục là| người chơi hạng |061| xếp hạng hầm ngục, nhận phí vào do người khác trả. (hạng 1~10)	
+T:GameTip.dat:54:0	|06텔레포트|는 |06한 번 다녀온 마을만| 가능합니다.	|06Dịch chuyển| chỉ đến được |06những làng đã từng ghé|.	
+T:GameTip.dat:55:0	여러 NPC 에게서 |06보조퀘스트|를 받을 수 있습니다.	Bạn có thể nhận |06nhiệm vụ phụ| từ nhiều NPC.	
+T:GameTip.dat:56:0	|06일부 맵은 메인이벤트를 진행해야| 갈 수 있습니다.	|06Một số bản đồ cần hoàn thành sự kiện chính| mới đến được.	
+T:GameTip.dat:57:0	장비 등급은 |12흰색: 노멀|, |02파랑색: 매직|, |03노란색: 레어|, |14초록색: 유니크|, |05보라색: 레전드| 입니다.	Phẩm cấp trang bị: |12Trắng: Normal|, |02Xanh dương: Magic|, |03Vàng: Rare|, |14Xanh lá: Unique|, |05Tím: Legend|.	
+T:GameTip.dat:58:0	특정 아이템 수집과 몬스터 사냥만으로도 강력한 칭호를 얻을 수 있습니다.	Chỉ cần sưu tầm vật phẩm và săn quái cũng nhận được danh hiệu mạnh.	
+T:GameTip.dat:59:0	고레벨 던전에서 포션이 떨어졌을때는 |06캐시상점|의 와인포션 세트를 확인해 보세요!	Hết potion ở hầm ngục cấp cao, hãy xem bộ Wine Potion ở |06cửa hàng Cash|!	
+T:GameTip.dat:60:0	몬스터들에게 둘러쌓여서 죽음을 맞이해도! 리커버리북 하나면 거뜬합니다!	Dù bị quái vây quanh mà chết, chỉ cần một Sách hồi phục là ổn!	
+T:GameTip.dat:61:0	필드와 던전에 출몰하는 네임드 몬스터는 각종 레어와 버프 음식의 드롭확률이 높습니다.	Quái có tên ở field và hầm ngục có tỉ lệ rớt Rare và đồ ăn buff cao.	
+T:GameTip.dat:62:0	무기와 방패, 날개는 강화에 비례해서 번쩍이게 됩니다.	Vũ khí, khiên và cánh sẽ lấp lánh theo mức cường hóa.	
+T:GameTip.dat:63:0	칭호는 게임내 숨겨진 조건을 만족하면 얻을 수 있습니다.	Danh hiệu nhận được khi đạt điều kiện ẩn trong game.	
+T:GameTip.dat:64:0	드랍되는 아이템에는 접두사가 붙어서 떨어질 경우가 있으며 1개~ 최대 3개 까지 붙을 수 있습니다.	Vật phẩm rớt ra có thể kèm tiền tố, từ 1~ tối đa 3 tiền tố.	
+T:GameTip.dat:65:0	스킬상승 아이템을 착용하면 스킬창에 녹색으로 숫자가 표시됩니다.	Mặc vật phẩm tăng kỹ năng sẽ hiện số màu xanh lá trong bảng kỹ năng.	
+T:GameTip.dat:66:0	가방은 융합에서 나오거나 상점에서 판매, 또는 캐시상점에서 파는 대형가방들으로 추가가 가능합니다.	Có thể thêm túi từ dung hợp, cửa hàng hoặc các túi lớn bán ở cửa hàng Cash.	
+T:GameTip.dat:67:0	마법석과 강화석이 모자르다면 캐시상점에 가보세요!	Thiếu đá phép hay đá cường hóa thì hãy ghé cửa hàng Cash!	
+T:GameTip.dat:68:0	캐시상점은 옵션 메뉴에 존재합니다.	Cửa hàng Cash nằm trong menu tùy chọn.	
+T:GameTip.dat:69:0	트레져 던전에서 다른 사람들과 랭킹대전을 해보세요!	Hãy thi đấu xếp hạng với người khác ở hầm ngục kho báu! (Bản offline: không hỗ trợ)	
+T:GameTip.dat:70:0	수천개의 아이템이 여러분을 기다리는 곳! 바로 크로이센 입니다!	Nơi hàng ngàn vật phẩm đang chờ bạn! Đó chính là Chroisen!	

@@ -1,0 +1,250 @@
+슬래셔	Slasher	lớp
+어쌔신	Assassin	lớp
+나이트	Knight	lớp
+매지션	Magician	lớp
+어퍼슬래셔	Upper Slasher	lớp
+스윙슬래셔	Swing Slasher	lớp
+크래싱슬래셔	Crashing Slasher	lớp
+어퍼어쌔신	Upper Assassin	lớp
+그래플링어쌔신	Grappling Assassin	lớp
+파이팅어쌔신	Fighting Assassin	lớp
+어퍼나이트	Upper Knight	lớp
+노블나이트	Noble Knight	lớp
+수퍼나이트	Super Knight	lớp
+파이어매지션	Fire Magician	lớp
+아이스매지션	Ice Magician	lớp
+썬더매지션	Thunder Magician	lớp
+크로이센	Chroisen	tên
+레이블타운	Label Town	địa danh
+이스턴시티	Eastern City	địa danh
+루이시티	Lui City	địa danh
+오르츠크	Ortsk	địa danh
+데저트캠프	Desert Camp	địa danh
+스카이밸리	Sky Valley	địa danh
+제라드	Gerard	tên
+근력	Sức mạnh	chỉ số
+마력	Ma lực	chỉ số
+민첩	Nhanh nhẹn	chỉ số
+체력	Thể lực	chỉ số
+행운	May mắn	chỉ số
+물리공격	Công vật lý	chỉ số
+마법공격	Công phép	chỉ số
+방어력	Phòng thủ	chỉ số
+크리티컬	Chí mạng	chỉ số
+회피	Né tránh	chỉ số
+아이템	vật phẩm	~
+스킬	kỹ năng	~
+퀘스트	nhiệm vụ	~
+던전	hầm ngục	~
+레벨	cấp	~
+포인트	điểm	~
+스텟	chỉ số	~
+환생	Tái sinh	hệ thống
+전직	Chuyển nghề	hệ thống
+각성	Thức tỉnh	hệ thống
+강화	Cường hóa	hệ thống
+마법부여	Phù phép	hệ thống
+융합	Dung hợp	hệ thống
+인벤토리	Túi đồ	~
+선물함	Hộp quà	~
+랭킹	Xếp hạng	~
+용병	lính đánh thuê	~
+캐시	Cash	~
+골드	Gold	~
+세바스찬	Sebastian	~	tên
+데이거	Dager	~	tên
+알리시아	Alicia	~	tên
+이니스	Innis	~	tên
+르네	Rene	~	tên
+나디아	Nadia	~	tên
+루크	Luke	~	tên
+랜달프	Randalph	~	tên
+헵번	Hepburn	~	tên
+세바그찬	Sebastian	~	tên
+세바스산	Sebastian	~	tên
+???	???	~	tên
+바스틴루	Bastinlu	~	tên
+제라드	Gerard	~	tên
+샤이먼	Shaimon	~	tên
+프루스트	Frust	~	tên
+테레사	Teresa	~	tên
+데스나이트	Death Knight	~	tên
+다그리파	Dagripa	~	tên
+폴조	Polzo	~	tên
+카이루	Kairu	~	tên
+드비쉬	Devish	~	tên
+필	Phil	~	tên
+리오타르	Liotar	~	tên
+코드리	Codry	~	tên
+제이슨	Jason	~	tên
+루니안	Lunian	~	tên
+존스	Jones	~	tên
+베넬	Benel	~	tên
+백작부인	Bá tước phu nhân	~	tên
+헬레나	Helena	~	tên
+헉슬리	Huxley	~	tên
+세르게이	Sergei	~	tên
+찰스	Charles	~	tên
+쿨리오	Coolio	~	tên
+루스	Ruth	~	tên
+포크너	Faulkner	~	tên
+융도르코	Yundorco	~	tên
+슐탄	Sultan	~	tên
+케산	Kesan	~	tên
+경고문	Bảng cảnh báo	~	tên
+크리스탈	Pha lê	~	tên
+존슨	Johnson	~	tên
+아베르	Aber	~	tên
+코이	Koi	~	tên
+로잔느	Rosanne	~	tên
+로니	Ronnie	~	tên
+헨리	Henry	~	tên
+마도술사	Ma đạo sư	~	tên
+르판느	Lepanne	~	tên
+제롬	Jerome	~	tên
+마릴리	Marily	~	tên
+닉	Nick	~	tên
+다나	Dana	~	tên
+플로릴리	Florily	~	tên
+엘레나	Elena	~	tên
+윌리엄	William	~	tên
+론	Ron	~	tên
+이프리카	Ifrica	~	tên
+갈릴레이	Galilei	~	tên
+크루센	Krusen	~	tên
+미키	Mickey	~	tên
+발레리	Valerie	~	tên
+찰리	Charlie	~	tên
+제메스	Jemes	~	tên
+제이미	Jamie	~	tên
+빅조	Big Joe	~	tên
+척	Chuck	~	tên
+꽃의 정령	Tinh linh hoa	~	tên
+카덴	Kaden	~	tên
+론다느	Rondane	~	tên
+기사1	Hiệp sĩ 1	~	tên
+기사2	Hiệp sĩ 2	~	tên
+기사3	Hiệp sĩ 3	~	tên
+로카르도	Rocardo	~	tên
+브리킷	Brigit	~	tên
+엠마	Emma	~	tên
+지르카	Zirka	~	tên
+리르케	Lirke	~	tên
+플래카	Plaka	~	tên
+루티나	Rutina	~	tên
+미오르넴	Miornem	~	tên
+쪽지	Mẩu giấy	~	tên
+토미	Tommy	~	tên
+토마스	Thomas	~	tên
+모던나이트	Modern Knight	~	tên
+라캉	Lacan	~	tên
+병사	Lính	~	tên
+병사들	Đám lính	~	tên
+엘리엇	Elliot	~	tên
+마도병기	Vũ khí ma đạo	~	tên
+겔헨	Gelhen	~	tên
+브리니	Briny	~	tên
+쿠피	Kupi	~	tên
+트리시	Trish	~	tên
+마르폴로	Marpolo	~	tên
+제리	Jerry	~	tên
+리드	Reed	~	tên
+하이	Hy	~	tên
+이스턴솔저	Eastern Soldier	~	tên
+오거스피릿	Ogre Spirit	~	tên
+마법서	Ma pháp thư	~	tên
+화분	Chậu hoa	~	tên
+암흑술사	Dark Sorcerer	~	tên
+대출 목록서	Sổ mượn sách	~	tên
+기욤	Guillaume	~	tên
+데리다	Derrida	~	tên
+라구르도	Ragurdo	~	tên
+라파엘로	Raffaello	~	tên
+료니엘	Ryoniel	~	tên
+베티	Betty	~	tên
+브로니	Brony	~	tên
+빅터	Victor	~	tên
+아르비아	Arbia	~	tên
+융크	Jung	~	tên
+자르키	Zarki	~	tên
+장클로드	Jean Claude	~	tên
+판넬리	Pannelli	~	tên
+훈트	Hund	~	tên
+공화정	nền Cộng hòa	~
+공화당	phe Cộng hòa	~
+공작	Công tước	~
+백작	Bá tước	~
+킹 제임스	King James	tên
+레이블 타운	Label Town	địa danh
+루이 시티	Lui City	địa danh
+미튼크랩	Mitten Crab	tên
+피스로드	Peace Road	địa danh
+디다크 기사단	Hiệp sĩ đoàn Didak	tên
+교관	huấn luyện viên	~
+대장장이	thợ rèn	~
+마법 부여	phù phép	~
+강화석	Đá cường hóa	~
+프로텍트북	Sách bảo hộ	~
+킬트의권능	Quyền năng Kilt	~
+마법석	Đá phép	~
+위탁판매	ký gửi	~
+텔레포트	Dịch chuyển	~
+철괴	Thỏi sắt	~
+로피스 항구	Cảng Lopis	địa danh
+견습수녀	Nữ tu tập sự	~
+중앙성당	Đại giáo đường	~
+대주교	Tổng giám mục	~
+트레져 던전	hầm ngục kho báu	~
+던전 로드	Lord hầm ngục	~
+포털	Portal	~
+천공신전	Thần điện Thiên Không	địa danh
+라젤항구	Cảng Razel	địa danh
+라젤 항구	Cảng Razel	địa danh
+라젤트로드	Razelt Road	địa danh
+사감수녀	Sơ quản lý	~
+마스항구	Cảng Mas	địa danh
+서부 연합	Liên minh phía Tây	~
+동부 연합	Liên minh phía Đông	~
+보좌관	phụ tá	~
+인장	ấn tín	~
+샌드할로우	Sand Hollow	tên quái
+오리하르콘	Orihalcon	~
+딥샌드 던전	hầm ngục Deep Sand	địa danh
+검은도적단	Black Bandits	~
+관원	quan viên	~
+성주	thành chủ	~
+성라피네 성당	thánh đường Saint Lafine	địa danh
+대수녀	sơ bề trên	~
+작위	tước vị	~
+의적	nghĩa tặc	~
+켈트로드	Kelt Road	địa danh
+하우레스	Haures	tên
+다크엘프	Dark Elf	~
+다크 엘프	Dark Elf	~
+대흑마법사	Đại hắc pháp sư	~
+흑마법	hắc ma pháp	~
+제물	vật tế	~
+오크족	tộc Orc	~
+어둠의 숲	Rừng Bóng Tối	địa danh
+엘라이덴 대륙	lục địa Elaiden	địa danh
+마왕	Ma vương	~
+마계	ma giới	~
+어둠의 왕	Vua bóng tối	~
+성막	trại	~
+데몬커즈	Demon Curse	~
+푸른나뭇잎	Lá xanh	~
+블루마운틴	Blue Mountain	địa danh
+노스마운틴	North Mountain	địa danh
+이스트베이	East Bay	địa danh
+노스이스트웨이	Northeast Way	địa danh
+제메스	Jemes	tên
+소드마스터	Kiếm thánh	~
+데스나이트	Death Knight	~
+태고신	Thái cổ thần	~
+교주	giáo chủ	~
+하인켈 바하	Heinkel Bach	~	tên
+알파	Alpha	~	tên
+창조신	Thần sáng tạo	~	
+평행우주	vũ trụ song song	~	
+와인모바일	Wine Mobile	~	nhà phát triển
+헵번	Hepburn	~	tên; nữ pháp sư trẻ. Sebastian: em – chị (chị Hepburn)

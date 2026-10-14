@@ -1,0 +1,3330 @@
+id	gốc	dịch
+T:IT01.dat:0:23	양손검	Kiếm hai tay
+T:IT01.dat:1:23	흑철대검	Đại kiếm Hắc thiết
+T:IT01.dat:2:23	강철대검	Đại kiếm Thép
+T:IT01.dat:3:23	투핸드소드	Two-Hand Sword
+T:IT01.dat:4:23	쟈크투핸드소드	Jack Two-Hand
+T:IT01.dat:5:23	츠바이한더	Zweihander
+T:IT01.dat:6:23	리카소대검	Đại kiếm Ricaso
+T:IT01.dat:7:23	탤와르대검	Đại kiếm Talwar
+T:IT01.dat:8:23	투핸드투스	Two-Hand Tooth
+T:IT01.dat:9:23	플랑베르주	Flamberge
+T:IT01.dat:10:23	그레이트소드	Great Sword
+T:IT01.dat:11:23	자이언트소드	Giant Sword
+T:IT01.dat:12:23	투핸드길로틴	Two-Hand Guillotine
+T:IT01.dat:13:23	에쉬투핸드소드	Ash Two-Hand
+T:IT01.dat:14:23	투핸드블로우	Two-Hand Blow
+T:IT01.dat:15:23	투핸드딜리셔	Two-Hand Delisher
+T:IT01.dat:16:23	카레온그레이트	Careon Great
+T:IT01.dat:17:23	그랜드자이언트	Grand Giant
+T:IT01.dat:18:23	쿨링자이언트	Cooling Giant
+T:IT01.dat:19:23	그레이트섬	Great Sum
+T:IT01.dat:20:23	고급대검	Cao cấp Đại kiếm
+T:IT01.dat:21:23	고급흑철대검	Cao cấp Hắc thiết
+T:IT01.dat:22:23	고급강철대검	Cao cấp Thép
+T:IT01.dat:23:23	고급투핸드소드	Cao cấp Two-Hand
+T:IT01.dat:24:23	고급투핸드쟈크	Cao cấp Jack Two-Hand
+T:IT01.dat:25:23	고급츠바이한더	Cao cấp Zweihander
+T:IT01.dat:26:23	고급리카소대검	Cao cấp Ricaso
+T:IT01.dat:27:23	고급텔와르대검	Cao cấp Talwar
+T:IT01.dat:28:23	고급투핸드투스	Cao cấp Two-Hand Tooth
+T:IT01.dat:29:23	고급플랑베르주	Cao cấp Flamberge
+T:IT01.dat:30:23	고급그레이소드	Cao cấp Great Sword
+T:IT01.dat:31:23	고급자이언소드	Cao cấp Giant Sword
+T:IT01.dat:32:23	고급길로틴소드	Cao cấp Guillotine
+T:IT01.dat:33:23	고급에쉬드대검	Cao cấp Ash Greatsword
+T:IT01.dat:34:23	고급블로우대검	Cao cấp Blow Greatsword
+T:IT01.dat:35:23	고급딜리셔대검	Cao cấp Delisher
+T:IT01.dat:36:23	고급카레온대검	Cao cấp Careon
+T:IT01.dat:37:23	고급그랜드소드	Cao cấp Grand Sword
+T:IT01.dat:38:23	고급쿨링소드	Cao cấp Cooling Sword
+T:IT01.dat:39:23	고급레이튼섬	Cao cấp Layton Sum
+T:IT01.dat:40:23	소드엔그레이트	Sword End Great
+T:IT01.dat:41:23	빅리자드소드	Big Lizard Sword
+T:IT01.dat:42:23	라이칸소드	Lycan Sword
+T:IT01.dat:43:23	캐츠더그레이트	Cats The Great
+T:IT01.dat:44:23	독스투핸드소드	Dogs Two-Hand
+T:IT01.dat:45:23	쉬프트자이언트	Shift Giant
+T:IT01.dat:46:23	폭스그레이소드	Fox Great Sword
+T:IT01.dat:47:23	터틀리스투핸드	Turtles Two-Hand
+T:IT01.dat:48:23	라이언즈투핸드	Lions Two-Hand
+T:IT01.dat:49:23	치타스소드	Cheetahs Sword
+T:IT01.dat:50:23	카렌그란소드	Karen Gran Sword
+T:IT01.dat:51:23	샤우날그레이트	Shaunal Great
+T:IT01.dat:52:23	현무마법대검	Đại kiếm phép Huyền Vũ
+T:IT01.dat:53:23	주작마법대검	Đại kiếm phép Chu Tước
+T:IT01.dat:54:23	청룡마법대검	Đại kiếm phép Thanh Long
+T:IT01.dat:55:23	백호마법대검	Đại kiếm phép Bạch Hổ
+T:IT01.dat:56:23	그레이트유니콘	Great Unicorn
+T:IT01.dat:57:23	그레이트드래곤	Great Dragon
+T:IT01.dat:58:23	마령대검	Đại kiếm Ma linh
+T:IT01.dat:59:23	영원대검	Đại kiếm Vĩnh hằng
+T:IT01.dat:60:23	가늘롱의대검	Đại kiếm Ganulong
+T:IT01.dat:61:23	가레스의대검	Đại kiếm Gareth
+T:IT01.dat:62:23	나시카의대검	Đại kiếm Nasika
+T:IT01.dat:63:23	냐르의대검	Đại kiếm Nyar
+T:IT01.dat:64:23	다나의대검	Đại kiếm Dana
+T:IT01.dat:65:23	다누의대검	Đại kiếm Danu
+T:IT01.dat:66:23	라돈의대검	Đại kiếm Radon
+T:IT01.dat:67:23	라니아의대검	Đại kiếm Rania
+T:IT01.dat:68:23	마르나의대검	Đại kiếm Marna
+T:IT01.dat:69:23	마도르의대검	Đại kiếm Mador
+T:IT01.dat:70:23	바스의대검	Đại kiếm Bas
+T:IT01.dat:71:23	바인크의대검	Đại kiếm Vaink
+T:IT01.dat:72:23	사가의대검	Đại kiếm Saga
+T:IT01.dat:73:23	사이바의대검	Đại kiếm Saiba
+T:IT01.dat:74:23	아가논의대검	Đại kiếm Agnon
+T:IT01.dat:75:23	아그라의대검	Đại kiếm Agra
+T:IT01.dat:76:23	제워드의대검	Đại kiếm Jeward
+T:IT01.dat:77:23	제테스의대검	Đại kiếm Zetes
+T:IT01.dat:78:23	팬덤의대검	Đại kiếm Phantom
+T:IT01.dat:79:23	로스트의대검	Đại kiếm Lost
+T:IT01.dat:80:23	불마인의대검	Đại kiếm Bulmine
+T:IT01.dat:81:23	오르크스의대검	Đại kiếm Orcus
+T:IT01.dat:82:23	쏠즈의대검	Đại kiếm Sols
+T:IT01.dat:83:23	넥타르의대검	Đại kiếm Nectar
+T:IT01.dat:84:23	드라우프의대검	Đại kiếm Draup
+T:IT01.dat:85:23	홀리맨의대검	Đại kiếm Holyman
+T:IT01.dat:86:23	아그날의대검	Đại kiếm Agnal
+T:IT01.dat:87:23	판도라의대검	Đại kiếm Pandora
+T:IT01.dat:88:23	네크로의대검	Đại kiếm Necro
+T:IT01.dat:89:23	헤라클의대검	Đại kiếm Heracle
+T:IT01.dat:90:23	실리온의대검	Đại kiếm Silion
+T:IT01.dat:91:23	커닝스의대검	Đại kiếm Cunning
+T:IT01.dat:92:23	레퀴엠의대검	Đại kiếm Requiem
+T:IT01.dat:93:23	퀘이크의대검	Đại kiếm Quake
+T:IT01.dat:94:23	엘라덴의대검	Đại kiếm Elladen
+T:IT01.dat:95:23	데스의대검	Đại kiếm Death
+T:IT01.dat:96:23	오펀스의대검	Đại kiếm Orphans
+T:IT01.dat:97:23	문명의대검	Đại kiếm Văn minh
+T:IT01.dat:98:23	천군의대검	Đại kiếm Thiên quân
+T:IT01.dat:99:23	와인의대검	Đại kiếm Wine
+T:IT01.dat:100:23	와이번의대검	Đại kiếm Wyvern
+T:IT01.dat:101:23	드레이크의대검	Đại kiếm Drake
+T:IT01.dat:102:23	드래곤의대검	Đại kiếm Dragon
+T:IT02.dat:0:23	엑스	Axe
+T:IT02.dat:1:23	핸드엑스	Hand Axe
+T:IT02.dat:2:23	아이언엑스	Iron Axe
+T:IT02.dat:3:23	워액스	War Axe
+T:IT02.dat:4:23	쟈크엑스	Jack Axe
+T:IT02.dat:5:23	리자즐엑스	Lizard Axe
+T:IT02.dat:6:23	자이언트엑스	Giant Axe
+T:IT02.dat:7:23	프라스엑스	Plas Axe
+T:IT02.dat:8:23	코피스엑스	Copis Axe
+T:IT02.dat:9:23	파타풀엑스	Patapul Axe
+T:IT02.dat:10:23	더블엑스	Double Axe
+T:IT02.dat:11:23	파워풀엑스	Powerful Axe
+T:IT02.dat:12:23	블러드엑스	Blood Axe
+T:IT02.dat:13:23	플레임엑스	Flame Axe
+T:IT02.dat:14:23	둠드엑스	Doomed Axe
+T:IT02.dat:15:23	가디언엑스	Guardian Axe
+T:IT02.dat:16:23	샤닉엑스	Shanic Axe
+T:IT02.dat:17:23	루판엑스	Rupan Axe
+T:IT02.dat:18:23	쟈를엑스	Jarl Axe
+T:IT02.dat:19:23	로이엑스	Roy Axe
+T:IT02.dat:20:23	고급엑스	Cao cấp Axe
+T:IT02.dat:21:23	고급핸드엑스	Cao cấp Hand Axe
+T:IT02.dat:22:23	고급아이언엑스	Cao cấp Iron Axe
+T:IT02.dat:23:23	고급워엑스	Cao cấp War Axe
+T:IT02.dat:24:23	고급쟈크엑스	Cao cấp Jack Axe
+T:IT02.dat:25:23	고급리자즐엑스	Cao cấp Lizard Axe
+T:IT02.dat:26:23	고급자이언엑스	Cao cấp Giant Axe
+T:IT02.dat:27:23	고급프라스엑스	Cao cấp Plas Axe
+T:IT02.dat:28:23	고급코피스엑스	Cao cấp Copis Axe
+T:IT02.dat:29:23	고급파타풀엑스	Cao cấp Patapul Axe
+T:IT02.dat:30:23	고금더블엑스	Cao cấp Double Axe
+T:IT02.dat:31:23	고급파워풀엑스	Cao cấp Powerful Axe
+T:IT02.dat:32:23	고급블러드엑스	Cao cấp Blood Axe
+T:IT02.dat:33:23	고급플레임엑스	Cao cấp Flame Axe
+T:IT02.dat:34:23	고급둠드엑스	Cao cấp Doomed Axe
+T:IT02.dat:35:23	고급가디언엑스	Cao cấp Guardian Axe
+T:IT02.dat:36:23	고급샤닉엑스	Cao cấp Shanic Axe
+T:IT02.dat:37:23	고급루판엑스	Cao cấp Rupan Axe
+T:IT02.dat:38:23	고급쟈를엑스	Cao cấp Jarl Axe
+T:IT02.dat:39:23	고급로이엑스	Cao cấp Roy Axe
+T:IT02.dat:40:23	오키쉬엑스	Orkish Axe
+T:IT02.dat:41:23	엔티스엑스	Entis Axe
+T:IT02.dat:42:23	바바리엑스	Barbarian Axe
+T:IT02.dat:43:23	콰가드엑스	Quagard Axe
+T:IT02.dat:44:23	튜리스엑스	Turis Axe
+T:IT02.dat:45:23	이레몬드엑스	Iremond Axe
+T:IT02.dat:46:23	퓨리드엑스	Furid Axe
+T:IT02.dat:47:23	하리어스엑스	Harrias Axe
+T:IT02.dat:48:23	크로넬엑스	Cronel Axe
+T:IT02.dat:49:23	게르카엑스	Gerka Axe
+T:IT02.dat:50:23	사이먼엑스	Simon Axe
+T:IT02.dat:51:23	나와디엑스	Nawadi Axe
+T:IT02.dat:52:23	애댁스엑스	Adax Axe
+T:IT02.dat:53:23	페르로엑스	Perro Axe
+T:IT02.dat:54:23	버시만엑스	Bersiman Axe
+T:IT02.dat:55:23	바란토스엑스	Barantos Axe
+T:IT02.dat:56:23	렉쉬즈엑스	Lexis Axe
+T:IT02.dat:57:23	페겔론엑스	Pegelon Axe
+T:IT02.dat:58:23	그롱드엑스	Grond Axe
+T:IT02.dat:59:23	락샤젠엑스	Rakshazen Axe
+T:IT02.dat:60:23	가늘롱의도끼	Rìu Ganulong
+T:IT02.dat:61:23	가레스의도끼	Rìu Gareth
+T:IT02.dat:62:23	나시카의도끼	Rìu Nasika
+T:IT02.dat:63:23	냐르의도끼	Rìu Nyar
+T:IT02.dat:64:23	다나의도끼	Rìu Dana
+T:IT02.dat:65:23	다누의도끼	Rìu Danu
+T:IT02.dat:66:23	라돈의도끼	Rìu Radon
+T:IT02.dat:67:23	라니아의도끼	Rìu Rania
+T:IT02.dat:68:23	마르나의도끼	Rìu Marna
+T:IT02.dat:69:23	마도르의도끼	Rìu Mador
+T:IT02.dat:70:23	바스의도끼	Rìu Bas
+T:IT02.dat:71:23	바인크의도끼	Rìu Vaink
+T:IT02.dat:72:23	사가의도끼	Rìu Saga
+T:IT02.dat:73:23	사이바의도끼	Rìu Saiba
+T:IT02.dat:74:23	아가논의도끼	Rìu Agnon
+T:IT02.dat:75:23	아그라의도끼	Rìu Agra
+T:IT02.dat:76:23	제워드의도끼	Rìu Jeward
+T:IT02.dat:77:23	제테스의도끼	Rìu Zetes
+T:IT02.dat:78:23	팬덤의도끼	Rìu Phantom
+T:IT02.dat:79:23	로스트의도끼	Rìu Lost
+T:IT02.dat:80:23	불마인의도끼	Rìu Bulmine
+T:IT02.dat:81:23	오르크스의도끼	Rìu Orcus
+T:IT02.dat:82:23	쏠즈의도끼	Rìu Sols
+T:IT02.dat:83:23	넥타르의도끼	Rìu Nectar
+T:IT02.dat:84:23	드라우프의도끼	Rìu Draup
+T:IT02.dat:85:23	홀리맨의도끼	Rìu Holyman
+T:IT02.dat:86:23	아그날의도끼	Rìu Agnal
+T:IT02.dat:87:23	판도라의도끼	Rìu Pandora
+T:IT02.dat:88:23	네크로의도끼	Rìu Necro
+T:IT02.dat:89:23	헤라클의도끼	Rìu Heracle
+T:IT02.dat:90:23	실리온의신검	Thần kiếm Silion
+T:IT02.dat:91:23	커닝스의도끼	Rìu Cunning
+T:IT02.dat:92:23	레퀴엠의도끼	Rìu Requiem
+T:IT02.dat:93:23	퀘이크의도끼	Rìu Quake
+T:IT02.dat:94:23	엘라덴의도끼	Rìu Elladen
+T:IT02.dat:95:23	데스의도끼	Rìu Death
+T:IT02.dat:96:23	오펀스의도끼	Rìu Orphans
+T:IT02.dat:97:23	문명의도끼	Rìu Văn minh
+T:IT02.dat:98:23	천군의도끼	Rìu Thiên quân
+T:IT02.dat:99:23	와인의도끼	Rìu Wine
+T:IT02.dat:100:23	와이번의도끼	Rìu Wyvern
+T:IT02.dat:101:23	드레이크의도끼	Rìu Drake
+T:IT02.dat:102:23	드래곤의도끼	Rìu Dragon
+T:IT03.dat:0:23	투핸드해머	Two-Hand Hammer
+T:IT03.dat:1:23	아이언해머	Iron Hammer
+T:IT03.dat:2:23	송곳망치	Awl Hammer
+T:IT03.dat:3:23	루프해머	Loop Hammer
+T:IT03.dat:4:23	쟈크해머	Jack Hammer
+T:IT03.dat:5:23	원포인트해머	One-Point Hammer
+T:IT03.dat:6:23	크래셔해머	Crusher Hammer
+T:IT03.dat:7:23	쟈낙해머	Janak Hammer
+T:IT03.dat:8:23	투스해머	Tooth Hammer
+T:IT03.dat:9:23	썬즈해머	Suns Hammer
+T:IT03.dat:10:23	맥스해머	Max Hammer
+T:IT03.dat:11:23	코르스해머	Cors Hammer
+T:IT03.dat:12:23	마르노해머	Marno Hammer
+T:IT03.dat:13:23	플레임해머	Flame Hammer
+T:IT03.dat:14:23	오럴드해머	Orald Hammer
+T:IT03.dat:15:23	더블썬즈해머	Double Suns Hammer
+T:IT03.dat:16:23	샤닉해머	Shanic Hammer
+T:IT03.dat:17:23	루닉해머	Runic Hammer
+T:IT03.dat:18:23	서모낙해머	Summonak Hammer
+T:IT03.dat:19:23	루첼트헤머	Lucelt Hammer
+T:IT03.dat:20:23	고급해머	Cao cấp Hammer
+T:IT03.dat:21:23	고급아이언해머	Cao cấp Iron Hammer
+T:IT03.dat:22:23	고급송곳망치	Cao cấp Awl Hammer
+T:IT03.dat:23:23	고급루프해머	Cao cấp Loop Hammer
+T:IT03.dat:24:23	고급쟈크해머	Cao cấp Jack Hammer
+T:IT03.dat:25:23	고급포인트해머	Cao cấp Point Hammer
+T:IT03.dat:26:23	고급크래셔해머	Cao cấp Crusher Hammer
+T:IT03.dat:27:23	고급쟈낙해머	Cao cấp Janak Hammer
+T:IT03.dat:28:23	고급투스해머	Cao cấp Tooth Hammer
+T:IT03.dat:29:23	고급썬즈해머	Cao cấp Suns Hammer
+T:IT03.dat:30:23	고급맥스해머	Cao cấp Max Hammer
+T:IT03.dat:31:23	고급코르스해머	Cao cấp Cors Hammer
+T:IT03.dat:32:23	고급마르노해머	Cao cấp Marno Hammer
+T:IT03.dat:33:23	고급플레임해머	Cao cấp Flame Hammer
+T:IT03.dat:34:23	고급오럴드해머	Cao cấp Orald Hammer
+T:IT03.dat:35:23	고급투썬즈해머	Cao cấp Two Suns Hammer
+T:IT03.dat:36:23	고급샤닉해머	Cao cấp Shanic Hammer
+T:IT03.dat:37:23	고급루닉해머	Cao cấp Runic Hammer
+T:IT03.dat:38:23	고급서모낙해머	Cao cấp Summonak Hammer
+T:IT03.dat:39:23	고급루첼트해머	Cao cấp Lucelt Hammer
+T:IT03.dat:40:23	휴즈만해머	Hughman Hammer
+T:IT03.dat:41:23	게이지해머	Gauge Hammer
+T:IT03.dat:42:23	캔시더해머	Cancider Hammer
+T:IT03.dat:43:23	로우맥머드	Low Macmud
+T:IT03.dat:44:23	스워리어해머	Swarrior Hammer
+T:IT03.dat:45:23	콕핏해머	Cockpit Hammer
+T:IT03.dat:46:23	자이언트해머	Giant Hammer
+T:IT03.dat:47:23	붐버해머	Bomber Hammer
+T:IT03.dat:48:23	플랜트파머	Planter Palmer
+T:IT03.dat:49:23	블러드해머	Blood Hammer
+T:IT03.dat:50:23	톨기넨파머드	Tolginen Palmer
+T:IT03.dat:51:23	드리멈해머	Drimum Hammer
+T:IT03.dat:52:23	마코스드머	Makos Hammer
+T:IT03.dat:53:23	안드라우드햄	Androud Ham
+T:IT03.dat:54:23	더블투스해머	Double Tooth Hammer
+T:IT03.dat:55:23	스파이럴해머	Spiral Hammer
+T:IT03.dat:56:23	드라이스햄	Dryce Ham
+T:IT03.dat:57:23	파이날리해머	Finally Hammer
+T:IT03.dat:58:23	프라트해머	Pratt Hammer
+T:IT03.dat:59:23	루스트해머	Rust Hammer
+T:IT03.dat:60:23	가늘롱의망치	Búa Ganulong
+T:IT03.dat:61:23	가레스의망치	Búa Gareth
+T:IT03.dat:62:23	나시카의망치	Búa Nasika
+T:IT03.dat:63:23	냐르의망치	Búa Nyar
+T:IT03.dat:64:23	다나의망치	Búa Dana
+T:IT03.dat:65:23	다누의망치	Búa Danu
+T:IT03.dat:66:23	라돈의망치	Búa Radon
+T:IT03.dat:67:23	라니아의망치	Búa Rania
+T:IT03.dat:68:23	마르나의망치	Búa Marna
+T:IT03.dat:69:23	마도르의망치	Búa Mador
+T:IT03.dat:70:23	바스의망치	Búa Bas
+T:IT03.dat:71:23	바인크의망치	Búa Vaink
+T:IT03.dat:72:23	사가의망치	Búa Saga
+T:IT03.dat:73:23	사이바의망치	Búa Saiba
+T:IT03.dat:74:23	아가논의망치	Búa Agnon
+T:IT03.dat:75:23	아그라의망치	Búa Agra
+T:IT03.dat:76:23	제워드의망치	Búa Jeward
+T:IT03.dat:77:23	제테스의망치	Búa Zetes
+T:IT03.dat:78:23	팬덤의망치	Búa Phantom
+T:IT03.dat:79:23	로스트의망치	Búa Lost
+T:IT03.dat:80:23	불마인의망치	Búa Bulmine
+T:IT03.dat:81:23	오르크스의망치	Búa Orcus
+T:IT03.dat:82:23	쏠즈의망치	Búa Sols
+T:IT03.dat:83:23	넥타르의망치	Búa Nectar
+T:IT03.dat:84:23	드라우프의망치	Búa Draup
+T:IT03.dat:85:23	홀리맨의망치	Búa Holyman
+T:IT03.dat:86:23	아그날의망치	Búa Agnal
+T:IT03.dat:87:23	판도라의망치	Búa Pandora
+T:IT03.dat:88:23	네크로의망치	Búa Necro
+T:IT03.dat:89:23	헤라클의망치	Búa Heracle
+T:IT03.dat:90:23	실리온의망치	Búa Silion
+T:IT03.dat:91:23	커닝스의망치	Búa Cunning
+T:IT03.dat:92:23	레퀴엠의망치	Búa Requiem
+T:IT03.dat:93:23	퀘이크의망치	Búa Quake
+T:IT03.dat:94:23	엘라덴의망치	Búa Elladen
+T:IT03.dat:95:23	데스의망치	Búa Death
+T:IT03.dat:96:23	오펀스의망치	Búa Orphans
+T:IT03.dat:97:23	문명의망치	Búa Văn minh
+T:IT03.dat:98:23	천군의망치	Búa Thiên quân
+T:IT03.dat:99:23	와인의망치	Búa Wine
+T:IT03.dat:100:23	와이번의망치	Búa Wyvern
+T:IT03.dat:101:23	드레이크의망치	Búa Drake
+T:IT03.dat:102:23	드래곤의망치	Búa Dragon
+T:IT04.dat:0:23	낡은대거	Dao găm cũ
+T:IT04.dat:1:23	아이언대거	Iron Dagger
+T:IT04.dat:2:23	숄트대거	Shoulder Dagger
+T:IT04.dat:3:23	르퍼대거	Reaper Dagger
+T:IT04.dat:4:23	쟈크대거	Jack Dagger
+T:IT04.dat:5:23	브로드대거	Broad Dagger
+T:IT04.dat:6:23	렌즈대거	Lens Dagger
+T:IT04.dat:7:23	슬레시대거	Slash Dagger
+T:IT04.dat:8:23	쏜즈대거	Thorns Dagger
+T:IT04.dat:9:23	락스대거	Lux Dagger
+T:IT04.dat:10:23	게이지대거	Gauge Dagger
+T:IT04.dat:11:23	루스대거	Loose Dagger
+T:IT04.dat:12:23	코린대거	Corin Dagger
+T:IT04.dat:13:23	서먼대거	Summon Dagger
+T:IT04.dat:14:23	카르냔대거	Carnian Dagger
+T:IT04.dat:15:23	아바르대거	Abar Dagger
+T:IT04.dat:16:23	코이론대거	Koiron Dagger
+T:IT04.dat:17:23	래시대거	Lash Dagger
+T:IT04.dat:18:23	악셀대거	Axel Dagger
+T:IT04.dat:19:23	뮤트대거	Mute Dagger
+T:IT04.dat:20:23	고급대거	Cao cấp Dagger
+T:IT04.dat:21:23	고급아이언대거	Cao cấp Iron Dagger
+T:IT04.dat:22:23	고급숄트대거	Cao cấp Shoulder Dagger
+T:IT04.dat:23:23	고급르퍼대거	Cao cấp Reaper Dagger
+T:IT04.dat:24:23	고급쟈크대거	Cao cấp Jack Dagger
+T:IT04.dat:25:23	고급브로드대거	Cao cấp Broad Dagger
+T:IT04.dat:26:23	고급렌즈대거	Cao cấp Lens Dagger
+T:IT04.dat:27:23	고급슬레시대거	Cao cấp Slash Dagger
+T:IT04.dat:28:23	고급쏜즈대거	Cao cấp Thorns Dagger
+T:IT04.dat:29:23	고급락스대거	Cao cấp Lux Dagger
+T:IT04.dat:30:23	고급게이지대거	Cao cấp Gauge Dagger
+T:IT04.dat:31:23	고급루스대거	Cao cấp Loose Dagger
+T:IT04.dat:32:23	고급코린대거	Cao cấp Corin Dagger
+T:IT04.dat:33:23	고급서먼대거	Cao cấp Summon Dagger
+T:IT04.dat:34:23	고급카르냔대거	Cao cấp Carnian Dagger
+T:IT04.dat:35:23	고급아바르대거	Cao cấp Abar Dagger
+T:IT04.dat:36:23	고급코이론대거	Cao cấp Koiron Dagger
+T:IT04.dat:37:23	고금래시대거	Cao cấp Lash Dagger
+T:IT04.dat:38:23	고급악셀대거	Cao cấp Axel Dagger
+T:IT04.dat:39:23	고급뮤트대거	Cao cấp Mute Dagger
+T:IT04.dat:40:23	디카멘시스대거	Dicamensis Dagger
+T:IT04.dat:41:23	샤프대거	Sharp Dagger
+T:IT04.dat:42:23	크레드대거	Cred Dagger
+T:IT04.dat:43:23	크루트대거	Crute Dagger
+T:IT04.dat:44:23	레티대거	Letty Dagger
+T:IT04.dat:45:23	아스나르대거	Asnar Dagger
+T:IT04.dat:46:23	후랄드치대거	Hurald Dagger
+T:IT04.dat:47:23	홀젠반대거	Holzenban Dagger
+T:IT04.dat:48:23	달쟈르대거	Dalzar Dagger
+T:IT04.dat:49:23	쿠클대거	Cuckle Dagger
+T:IT04.dat:50:23	로스만달거	Rosmandal
+T:IT04.dat:51:23	라이썬대거	Lysun Dagger
+T:IT04.dat:52:23	다크쉐도우대거	Dark Shadow Dagger
+T:IT04.dat:53:23	브렌달대거	Brendal Dagger
+T:IT04.dat:54:23	카마스달거	Kamasdal
+T:IT04.dat:55:23	커자리스대거	Cursaris Dagger
+T:IT04.dat:56:23	킬링대거	Killing Dagger
+T:IT04.dat:57:23	모르트대거	Mort Dagger
+T:IT04.dat:58:23	샬링대거	Shalling Dagger
+T:IT04.dat:59:23	고트대거	Goat Dagger
+T:IT04.dat:60:23	가에볼의단검	Dao găm Gaevol
+T:IT04.dat:61:23	가렌드의단검	Dao găm Garend
+T:IT04.dat:62:23	냐브의단검	Dao găm Nyab
+T:IT04.dat:63:23	네멜스의단검	Dao găm Nemels
+T:IT04.dat:64:23	다른드의단검	Dao găm Darend
+T:IT04.dat:65:23	다아나의단검	Dao găm Diana
+T:IT04.dat:66:23	라니움의단검	Dao găm Ranium
+T:IT04.dat:67:23	라린스의단검	Dao găm Rarins
+T:IT04.dat:68:23	마르실의단검	Dao găm Marcil
+T:IT04.dat:69:23	말기노의단검	Dao găm Malgino
+T:IT04.dat:70:23	키리아의단검	Dao găm Kiria
+T:IT04.dat:71:23	바라할의단검	Dao găm Barahal
+T:IT04.dat:72:23	세리올의단검	Dao găm Seriol
+T:IT04.dat:73:23	사라스의단검	Dao găm Sarus
+T:IT04.dat:74:23	아기스의단검	Dao găm Agis
+T:IT04.dat:75:23	아린더의단검	Dao găm Arinder
+T:IT04.dat:76:23	쥬리안의단검	Dao găm Julian
+T:IT04.dat:77:23	자나르의단검	Dao găm Janar
+T:IT04.dat:78:23	칼린의단검	Dao găm Calin
+T:IT04.dat:79:23	게르트의단검	Dao găm Gert
+T:IT04.dat:80:23	카도라의단검	Dao găm Kadora
+T:IT04.dat:81:23	카이론의단검	Dao găm Kairon
+T:IT04.dat:82:23	타라의단검	Dao găm Tara
+T:IT04.dat:83:23	르타스의단검	Dao găm Rtas
+T:IT04.dat:84:23	메데스의단검	Dao găm Medes
+T:IT04.dat:85:23	티누스의단검	Dao găm Tinus
+T:IT04.dat:86:23	하겐의단검	Dao găm Hagen
+T:IT04.dat:87:23	하란스의단검	Dao găm Harans
+T:IT04.dat:88:23	가이야의단검	Dao găm Gaiya
+T:IT04.dat:89:23	헤리스의단검	Dao găm Heris
+T:IT04.dat:90:23	네르스의단검	Dao găm Ners
+T:IT04.dat:91:23	펠라스의단검	Dao găm Pelas
+T:IT04.dat:92:23	데네의단검	Dao găm Dene
+T:IT04.dat:93:23	릴라의단검	Dao găm Lila
+T:IT04.dat:94:23	라야틀의단검	Dao găm Rayatl
+T:IT04.dat:95:23	라이오의단검	Dao găm Raio
+T:IT04.dat:96:23	마나스의단검	Dao găm Manas
+T:IT04.dat:97:23	모베일의단검	Dao găm Movail
+T:IT04.dat:98:23	단비의단검	Dao găm Danbi
+T:IT04.dat:99:23	환상의단검	Dao găm Ảo ảnh
+T:IT04.dat:100:23	와이번의단검	Dao găm Wyvern
+T:IT04.dat:101:23	드레이크의단검	Dao găm Drake
+T:IT04.dat:102:23	드래곤의단검	Dao găm Dragon
+T:IT05.dat:0:23	낡은글러브	Găng cũ
+T:IT05.dat:1:23	청동글러브	Bronze Glove
+T:IT05.dat:2:23	아이언글러브	Iron Glove
+T:IT05.dat:3:23	르퍼글러브	Reaper Glove
+T:IT05.dat:4:23	쟈크글러브	Jack Glove
+T:IT05.dat:5:23	투스트글러브	Toothed Glove
+T:IT05.dat:6:23	자질글러브	Jazil Glove
+T:IT05.dat:7:23	루치안글러브	Lucian Glove
+T:IT05.dat:8:23	락키드글러브	Locked Glove
+T:IT05.dat:9:23	포인트글러브	Point Glove
+T:IT05.dat:10:23	너트글러브	Nut Glove
+T:IT05.dat:11:23	맥글러브	Mac Glove
+T:IT05.dat:12:23	하란글러브	Haran Glove
+T:IT05.dat:13:23	아이플글러브	Eyeple Glove
+T:IT05.dat:14:23	스포닝글러브	Spawning Glove
+T:IT05.dat:15:23	크락글러브	Crack Glove
+T:IT05.dat:16:23	발람즈글러브	Balams Glove
+T:IT05.dat:17:23	스피닝글러브	Spinning Glove
+T:IT05.dat:18:23	쟈란글러브	Jaran Glove
+T:IT05.dat:19:23	지드글러브	Zid Glove
+T:IT05.dat:20:23	고급글러브	Cao cấp Glove
+T:IT05.dat:21:23	고급청동글러브	Cao cấp Bronze Glove
+T:IT05.dat:22:23	고급이언글러브	Cao cấp Iron Glove
+T:IT05.dat:23:23	고급르퍼글러브	Cao cấp Reaper Glove
+T:IT05.dat:24:23	고급쟈크글러브	Cao cấp Jack Glove
+T:IT05.dat:25:23	고급투스글러브	Cao cấp Toothed Glove
+T:IT05.dat:26:23	고급자질글러브	Cao cấp Jazil Glove
+T:IT05.dat:27:23	고급루치글러브	Cao cấp Lucian Glove
+T:IT05.dat:28:23	고급락키글러브	Cao cấp Locked Glove
+T:IT05.dat:30:23	고급너트글러브	Cao cấp Nut Glove
+T:IT05.dat:31:23	고급맥글러브	Cao cấp Mac Glove
+T:IT05.dat:32:23	고급하란글러브	Cao cấp Haran Glove
+T:IT05.dat:33:23	고급이플글러브	Cao cấp Eyeple Glove
+T:IT05.dat:34:23	고급포닝글러브	Cao cấp Spawning Glove
+T:IT05.dat:35:23	고급크락글러브	Cao cấp Crack Glove
+T:IT05.dat:36:23	고급발람글러브	Cao cấp Balams Glove
+T:IT05.dat:37:23	고급피닝글러브	Cao cấp Spinning Glove
+T:IT05.dat:38:23	고급쟈란글러브	Cao cấp Jaran Glove
+T:IT05.dat:39:23	고급지드글러브	Cao cấp Zid Glove
+T:IT05.dat:40:23	크러쉬글러브	Crush Glove
+T:IT05.dat:41:23	로이넬글러브	Roinel Glove
+T:IT05.dat:42:23	파이트글러브	Fight Glove
+T:IT05.dat:43:23	그라밥글러브	Grab Glove
+T:IT05.dat:44:23	락마치글러브	Lockmatch Glove
+T:IT05.dat:45:23	프라스글러브	Plas Glove
+T:IT05.dat:46:23	조인트글러브	Joint Glove
+T:IT05.dat:47:23	플라잉글러브	Flying Glove
+T:IT05.dat:48:23	쿠이만글러브	Kuiman Glove
+T:IT05.dat:49:23	노디랄드글러브	Nodirald Glove
+T:IT05.dat:50:23	그란드글러브	Grand Glove
+T:IT05.dat:51:23	원앤투글러브	One and Two Glove
+T:IT05.dat:52:23	어프카글러브	Upca Glove
+T:IT05.dat:53:23	격타라기글러브	Gyeoktaragi Glove
+T:IT05.dat:54:23	비탄글러브	Lament Glove
+T:IT05.dat:55:23	썬드렌글러브	Thundren Glove
+T:IT05.dat:56:23	파이널글러브	Final Glove
+T:IT05.dat:57:23	챔피언글러브	Champion Glove
+T:IT05.dat:58:23	로스글러브	Ross Glove
+T:IT05.dat:59:23	피엔트글러브	Pient Glove
+T:IT05.dat:60:23	가에볼의장갑	Găng tay Gaevol
+T:IT05.dat:61:23	가렌드의장갑	Găng tay Garend
+T:IT05.dat:62:23	냐브의장갑	Găng tay Nyab
+T:IT05.dat:63:23	네멜스의장갑	Găng tay Nemels
+T:IT05.dat:64:23	다른드의장갑	Găng tay Darend
+T:IT05.dat:65:23	다아나의장갑	Găng tay Diana
+T:IT05.dat:66:23	라니움의장갑	Găng tay Ranium
+T:IT05.dat:67:23	라린스의장갑	Găng tay Rarins
+T:IT05.dat:68:23	마르실의장갑	Găng tay Marcil
+T:IT05.dat:69:23	말기노의장갑	Găng tay Malgino
+T:IT05.dat:70:23	키리아의장갑	Găng tay Kiria
+T:IT05.dat:71:23	바라할의장갑	Găng tay Barahal
+T:IT05.dat:72:23	세리올의장갑	Găng tay Seriol
+T:IT05.dat:73:23	사라스의장갑	Găng tay Sarus
+T:IT05.dat:74:23	아기스의장갑	Găng tay Agis
+T:IT05.dat:75:23	아린더의장갑	Găng tay Arinder
+T:IT05.dat:76:23	쥬리안의장갑	Găng tay Julian
+T:IT05.dat:77:23	자나르의장갑	Găng tay Janar
+T:IT05.dat:78:23	칼린의장갑	Găng tay Calin
+T:IT05.dat:79:23	게르트의장갑	Găng tay Gert
+T:IT05.dat:80:23	카도라의장갑	Găng tay Kadora
+T:IT05.dat:81:23	카이론의장갑	Găng tay Kairon
+T:IT05.dat:82:23	타라의장갑	Găng tay Tara
+T:IT05.dat:83:23	르타스의장갑	Găng tay Rtas
+T:IT05.dat:84:23	메데스의장갑	Găng tay Medes
+T:IT05.dat:85:23	티누스의장갑	Găng tay Tinus
+T:IT05.dat:86:23	하겐의장갑	Găng tay Hagen
+T:IT05.dat:87:23	하란스의장갑	Găng tay Harans
+T:IT05.dat:88:23	가이야의장갑	Găng tay Gaiya
+T:IT05.dat:89:23	헤리스의장갑	Găng tay Heris
+T:IT05.dat:90:23	네르스의장갑	Găng tay Ners
+T:IT05.dat:91:23	펠라스의장갑	Găng tay Pelas
+T:IT05.dat:92:23	데네의장갑	Găng tay Dene
+T:IT05.dat:93:23	릴라의장갑	Găng tay Lila
+T:IT05.dat:94:23	라야틀의장갑	Găng tay Rayatl
+T:IT05.dat:95:23	라이오의장갑	Găng tay Raio
+T:IT05.dat:96:23	마나스의장갑	Găng tay Manas
+T:IT05.dat:97:23	모베일의장갑	Găng tay Movail
+T:IT05.dat:98:23	단비의장갑	Găng tay Danbi
+T:IT05.dat:99:23	환상의장갑	Găng tay Ảo ảnh
+T:IT05.dat:100:23	와이번의장갑	Găng tay Wyvern
+T:IT05.dat:101:23	드레이크의장갑	Găng tay Drake
+T:IT05.dat:102:23	드래곤의장갑	Găng tay Dragon
+T:IT06.dat:0:23	낡은클러	Vuốt cũ
+T:IT06.dat:1:23	브론즈클러	Bronze Claw
+T:IT06.dat:2:23	아이언클러	Iron Claw
+T:IT06.dat:3:23	르퍼클러	Reaper Claw
+T:IT06.dat:4:23	쟈크클러	Jack Claw
+T:IT06.dat:5:23	스트리클러	Streak Claw
+T:IT06.dat:6:23	플라이클러	Fly Claw
+T:IT06.dat:7:23	칼트클러	Kalt Claw
+T:IT06.dat:8:23	보브노클러	Bobno Claw
+T:IT06.dat:9:23	로오트클러	Roat Claw
+T:IT06.dat:10:23	드플클러	Deple Claw
+T:IT06.dat:11:23	케브클러	Kebe Claw
+T:IT06.dat:12:23	제트클러	Jet Claw
+T:IT06.dat:13:23	브린클러	Brin Claw
+T:IT06.dat:14:23	마스클러	Mas Claw
+T:IT06.dat:15:23	게린클러	Gerin Claw
+T:IT06.dat:16:23	슈린클러	Shrine Claw
+T:IT06.dat:17:23	머스트클러	Must Claw
+T:IT06.dat:18:23	원투스클러	One Tooth Claw
+T:IT06.dat:19:23	에냐르클러	Enyar Claw
+T:IT06.dat:20:23	고급클러	Cao cấp Claw
+T:IT06.dat:21:23	고급브론즈클러	Cao cấp Bronze Claw
+T:IT06.dat:22:23	고급아이언클러	Cao cấp Iron Claw
+T:IT06.dat:23:23	고급르퍼클러	Cao cấp Reaper Claw
+T:IT06.dat:24:23	고급쟈크클러	Cao cấp Jack Claw
+T:IT06.dat:25:23	고급스트리클러	Cao cấp Streak Claw
+T:IT06.dat:26:23	고급플라이클러	Cao cấp Fly Claw
+T:IT06.dat:27:23	고급칼트클러	Cao cấp Kalt Claw
+T:IT06.dat:28:23	고급보브노클러	Cao cấp Bobno Claw
+T:IT06.dat:29:23	고급로오트클러	Cao cấp Roat Claw
+T:IT06.dat:30:23	고급드플클러	Cao cấp Deple Claw
+T:IT06.dat:31:23	고급케브클러	Cao cấp Kebe Claw
+T:IT06.dat:32:23	고급제트클러	Cao cấp Jet Claw
+T:IT06.dat:33:23	고급브린클러	Cao cấp Brin Claw
+T:IT06.dat:34:23	고급마스클러	Cao cấp Mas Claw
+T:IT06.dat:35:23	고급게린클러	Cao cấp Gerin Claw
+T:IT06.dat:36:23	고급슈린클러	Cao cấp Shrine Claw
+T:IT06.dat:37:23	고급머스트클러	Cao cấp Must Claw
+T:IT06.dat:38:23	고급원투스클러	Cao cấp One Tooth Claw
+T:IT06.dat:39:23	고급에냐르클러	Cao cấp Enyar Claw
+T:IT06.dat:40:23	슈트클러	Shoot Claw
+T:IT06.dat:41:23	숏클러	Short Claw
+T:IT06.dat:42:23	마아스클러	Maas Claw
+T:IT06.dat:43:23	울펀클러	Wolfen Claw
+T:IT06.dat:44:23	투스드클러	Toothed Claw
+T:IT06.dat:45:23	브림클러	Brim Claw
+T:IT06.dat:46:23	샤베트르클러	Sabetr Claw
+T:IT06.dat:47:23	마그리트클러	Margrit Claw
+T:IT06.dat:48:23	쉐도우클러	Shadow Claw
+T:IT06.dat:49:23	고넨쿠스클러	Gonenkus Claw
+T:IT06.dat:50:23	어비스클러	Abyss Claw
+T:IT06.dat:51:23	마다린클러	Madarin Claw
+T:IT06.dat:52:23	시프더클러	Sipder Claw
+T:IT06.dat:53:23	트랜스클러	Trans Claw
+T:IT06.dat:54:23	비타클러	Vita Claw
+T:IT06.dat:55:23	그립클러	Grip Claw
+T:IT06.dat:56:23	알루아클러	Alua Claw
+T:IT06.dat:57:23	어쌔신클러	Assassin Claw
+T:IT06.dat:58:23	머시트클러	Mercit Claw
+T:IT06.dat:59:23	쟈마드클러	Jamad Claw
+T:IT06.dat:60:23	가에볼의클러	Vuốt Gaevol
+T:IT06.dat:61:23	가렌드의클러	Vuốt Garend
+T:IT06.dat:62:23	냐브의클러	Vuốt Nyab
+T:IT06.dat:63:23	네멜스의클러	Vuốt Nemels
+T:IT06.dat:64:23	다른드의클러	Vuốt Darend
+T:IT06.dat:65:23	다아나의클러	Vuốt Diana
+T:IT06.dat:66:23	라니움의클러	Vuốt Ranium
+T:IT06.dat:67:23	라린스의클러	Vuốt Rarins
+T:IT06.dat:68:23	마르실의클러	Vuốt Marcil
+T:IT06.dat:69:23	말기노의클러	Vuốt Malgino
+T:IT06.dat:70:23	키리아의클러	Vuốt Kiria
+T:IT06.dat:71:23	바라할의클러	Vuốt Barahal
+T:IT06.dat:72:23	세리올의클러	Vuốt Seriol
+T:IT06.dat:73:23	사라스의클러	Vuốt Sarus
+T:IT06.dat:74:23	아기스의클러	Vuốt Agis
+T:IT06.dat:75:23	아린더의클러	Vuốt Arinder
+T:IT06.dat:76:23	쥬리안의클러	Vuốt Julian
+T:IT06.dat:77:23	자나르의클러	Vuốt Janar
+T:IT06.dat:78:23	칼린의클러	Vuốt Calin
+T:IT06.dat:79:23	게르트의클러	Vuốt Gert
+T:IT06.dat:80:23	카도라의클러	Vuốt Kadora
+T:IT06.dat:81:23	카이론의클러	Vuốt Kairon
+T:IT06.dat:82:23	타라의클러	Vuốt Tara
+T:IT06.dat:83:23	르타스의클러	Vuốt Rtas
+T:IT06.dat:84:23	메데스의클러	Vuốt Medes
+T:IT06.dat:85:23	티누스의클러	Vuốt Tinus
+T:IT06.dat:86:23	하겐의클러	Vuốt Hagen
+T:IT06.dat:87:23	하란스의클러	Vuốt Harans
+T:IT06.dat:88:23	가이야의클러	Vuốt Gaiya
+T:IT06.dat:89:23	헤리스의클러	Vuốt Heris
+T:IT06.dat:90:23	네르스의클러	Vuốt Ners
+T:IT06.dat:91:23	펠라스의클러	Vuốt Pelas
+T:IT06.dat:92:23	데네의클러	Vuốt Dene
+T:IT06.dat:93:23	릴라의클러	Vuốt Lila
+T:IT06.dat:94:23	라야틀의클러	Vuốt Rayatl
+T:IT06.dat:95:23	라이오의클러	Vuốt Raio
+T:IT06.dat:96:23	마나스의클러	Vuốt Manas
+T:IT06.dat:97:23	모베일의클러	Vuốt Movail
+T:IT06.dat:98:23	단비의클러	Vuốt Danbi
+T:IT06.dat:99:23	환상의클러	Vuốt Ảo ảnh
+T:IT06.dat:100:23	와이번의클러	Vuốt Wyvern
+T:IT06.dat:101:23	드레이크의클러	Vuốt Drake
+T:IT06.dat:102:23	드래곤의클러	Vuốt Dragon
+T:IT07.dat:0:23	낡은소드	Kiếm cũ
+T:IT07.dat:1:23	아이언소드	Iron Sword
+T:IT07.dat:2:23	브로드소드	Broad Sword
+T:IT07.dat:3:23	르퍼소드	Reaper Sword
+T:IT07.dat:4:23	쟈크소드	Jack Sword
+T:IT07.dat:5:23	바이킹소드	Viking Sword
+T:IT07.dat:6:23	스키아보나	Schiavona
+T:IT07.dat:7:23	왈론소드	Walloon Sword
+T:IT07.dat:8:23	카츠발케르	Katzbalger
+T:IT07.dat:9:23	스파타소드	Spatha Sword
+T:IT07.dat:10:23	글라디우스	Gladius
+T:IT07.dat:11:23	이벨트소드	Ibelt Sword
+T:IT07.dat:12:23	케르트소드	Kert Sword
+T:IT07.dat:13:23	그란스소드	Grans Sword
+T:IT07.dat:14:23	커틀러스	Cutlass
+T:IT07.dat:15:23	피란기소드	Pirangi Sword
+T:IT07.dat:16:23	쿠라노소드	Kurano Sword
+T:IT07.dat:17:23	로인트소드	Roint Sword
+T:IT07.dat:18:23	조이넬소드	Joynel Sword
+T:IT07.dat:19:23	마느크소드	Manuk Sword
+T:IT07.dat:20:23	고급소드	Cao cấp Sword
+T:IT07.dat:21:23	고급아이언소드	Cao cấp Iron Sword
+T:IT07.dat:22:23	고급브로드소드	Cao cấp Broad Sword
+T:IT07.dat:23:23	고급르퍼소드	Cao cấp Reaper Sword
+T:IT07.dat:24:23	고급쟈크소드	Cao cấp Jack Sword
+T:IT07.dat:25:23	고급바이킹소드	Cao cấp Viking Sword
+T:IT07.dat:26:23	고급스키아보나	Cao cấp Schiavona
+T:IT07.dat:27:23	고급왈론소드	Cao cấp Walloon Sword
+T:IT07.dat:28:23	고급카츠발케르	Cao cấp Katzbalger
+T:IT07.dat:29:23	고급스파타소드	Cao cấp Spatha Sword
+T:IT07.dat:30:23	고급글라디우스	Cao cấp Gladius
+T:IT07.dat:31:23	고급이벨트소드	Cao cấp Ibelt Sword
+T:IT07.dat:32:23	고급케르트소드	Cao cấp Kert Sword
+T:IT07.dat:33:23	고급그란스소드	Cao cấp Grans Sword
+T:IT07.dat:34:23	고급커틀러스	Cao cấp Cutlass
+T:IT07.dat:35:23	고급피란기소드	Cao cấp Pirangi Sword
+T:IT07.dat:36:23	고급쿠라노소드	Cao cấp Kurano Sword
+T:IT07.dat:37:23	고급로인트소드	Cao cấp Roint Sword
+T:IT07.dat:38:23	고급조이넬소드	Cao cấp Joynel Sword
+T:IT07.dat:39:23	고급마느크소드	Cao cấp Manuk Sword
+T:IT07.dat:40:23	지르카소드	Zirka Sword
+T:IT07.dat:41:23	프라인소드	Prine Sword
+T:IT07.dat:42:23	위트소드	Wit Sword
+T:IT07.dat:43:23	갈렌소드	Galen Sword
+T:IT07.dat:44:23	프리타소드	Frita Sword
+T:IT07.dat:45:23	리버스소드	Reverse Sword
+T:IT07.dat:46:23	블러드소드	Blood Sword
+T:IT07.dat:47:23	샤닉소드	Shanic Sword
+T:IT07.dat:48:23	썬즈소드	Suns Sword
+T:IT07.dat:49:23	소울블레이드	Soul Blade
+T:IT07.dat:50:23	마그마블레이드	Magma Blade
+T:IT07.dat:51:23	헬오브블레이드	Hell of Blade
+T:IT07.dat:52:23	그랜드소드	Grand Sword
+T:IT07.dat:53:23	프로메스소드	Promes Sword
+T:IT07.dat:54:23	카우마리소드	Kaumari Sword
+T:IT07.dat:55:23	그람	Gram
+T:IT07.dat:56:23	칼리번	Caliburn
+T:IT07.dat:57:23	액스칼리버	Axcalibur
+T:IT07.dat:58:23	롱기스트	Longist
+T:IT07.dat:59:23	만달린소드	Mandalin Sword
+T:IT07.dat:60:23	갈리아의소드	Kiếm Galia
+T:IT07.dat:61:23	해드만의소드	Kiếm Headman
+T:IT07.dat:62:23	트렌스의소드	Kiếm Trens
+T:IT07.dat:63:23	노리슨의소드	Kiếm Norison
+T:IT07.dat:64:23	데이아의소드	Kiếm Deia
+T:IT07.dat:65:23	데크의소드	Kiếm Deck
+T:IT07.dat:66:23	라누스의소드	Kiếm Lanus
+T:IT07.dat:67:23	피테스의소드	Kiếm Pites
+T:IT07.dat:68:23	맥라스의소드	Kiếm Maclas
+T:IT07.dat:69:23	미드린의소드	Kiếm Midrin
+T:IT07.dat:70:23	밴의소드	Kiếm Ban
+T:IT07.dat:71:23	베비드의소드	Kiếm Bevid
+T:IT07.dat:72:23	살라미의소드	Kiếm Salami
+T:IT07.dat:73:23	미데스의소드	Kiếm Mides
+T:IT07.dat:74:23	아리스의소드	Kiếm Aris
+T:IT07.dat:75:23	아브론의소드	Kiếm Abron
+T:IT07.dat:76:23	지트의소드	Kiếm Jit
+T:IT07.dat:77:23	지르라의소드	Kiếm Jirra
+T:IT07.dat:78:23	루샨드의소드	Kiếm Rushand
+T:IT07.dat:79:23	크로넬의소드	Kiếm Cronel
+T:IT07.dat:80:23	카르키의소드	Kiếm Karki
+T:IT07.dat:81:23	케르타의소드	Kiếm Kerta
+T:IT07.dat:82:23	타퀸의소드	Kiếm Tarquin
+T:IT07.dat:83:23	테미란의소드	Kiếm Temiran
+T:IT07.dat:84:23	파란테의소드	Kiếm Parante
+T:IT07.dat:85:23	르지의소드	Kiếm Rji
+T:IT07.dat:86:23	해럴드의소드	Kiếm Harold
+T:IT07.dat:87:23	하르피의소드	Kiếm Harpy
+T:IT07.dat:88:23	게리온의소드	Kiếm Gerion
+T:IT07.dat:89:23	게스트의소드	Kiếm Guest
+T:IT07.dat:90:23	노이스의소드	Kiếm Noise
+T:IT07.dat:91:23	나탈의소드	Kiếm Natal
+T:IT07.dat:92:23	데히라의소드	Kiếm Dehira
+T:IT07.dat:93:23	델의소드	Kiếm Del
+T:IT07.dat:94:23	락샤르의소드	Kiếm Rakshar
+T:IT07.dat:95:23	라슬로의소드	Kiếm Laslo
+T:IT07.dat:96:23	메가라의소드	Kiếm Megara
+T:IT07.dat:97:23	후오스의소드	Kiếm Huos
+T:IT07.dat:98:23	매기의소드	Kiếm Maggie
+T:IT07.dat:99:23	리온델의소드	Kiếm Lionel
+T:IT07.dat:100:23	와이번의소드	Kiếm Wyvern
+T:IT07.dat:101:23	드레이크의소드	Kiếm Drake
+T:IT07.dat:102:23	드래곤의소드	Kiếm Dragon
+T:IT08.dat:0:23	낡은샤벨	Saber cũ
+T:IT08.dat:1:23	브론즈샤벨	Bronze Saber
+T:IT08.dat:2:23	아이언샤벨	Iron Saber
+T:IT08.dat:3:23	르퍼샤벨	Reaper Saber
+T:IT08.dat:4:23	쟈크샤벨	Jack Saber
+T:IT08.dat:5:23	클레어샤벨	Claire Saber
+T:IT08.dat:6:23	슈아르샤벨	Schuar Saber
+T:IT08.dat:7:23	백샤벨	Back Saber
+T:IT08.dat:8:23	레피어샤벨	Rapier Saber
+T:IT08.dat:9:23	에페르샤벨	Epair Saber
+T:IT08.dat:10:23	터크샤벨	Turk Saber
+T:IT08.dat:11:23	프라레샤벨	Prare Saber
+T:IT08.dat:12:23	샤테르샤벨	Chater Saber
+T:IT08.dat:13:23	헌티드샤벨	Hunted Saber
+T:IT08.dat:14:23	킬리지샤벨	Kilij Saber
+T:IT08.dat:15:23	샤쉬드샤벨	Shashid Saber
+T:IT08.dat:16:23	파라즈샤벨	Paraz Saber
+T:IT08.dat:17:23	쟈마드샤벨	Jamad Saber
+T:IT08.dat:18:23	로인트샤벨	Roint Saber
+T:IT08.dat:19:23	지라드샤벨	Girard Saber
+T:IT08.dat:20:23	고급샤벨	Cao cấp Saber
+T:IT08.dat:21:23	고급브론즈샤벨	Cao cấp Bronze Saber
+T:IT08.dat:22:23	고급아이언샤벨	Cao cấp Iron Saber
+T:IT08.dat:23:23	고급르퍼샤벨	Cao cấp Reaper Saber
+T:IT08.dat:24:23	고급쟈크샤벨	Cao cấp Jack Saber
+T:IT08.dat:25:23	고급클레어샤벨	Cao cấp Claire Saber
+T:IT08.dat:26:23	고급슈아르샤벨	Cao cấp Schuar Saber
+T:IT08.dat:27:23	고급백샤벨	Cao cấp Back Saber
+T:IT08.dat:28:23	고급레피어샤벨	Cao cấp Rapier Saber
+T:IT08.dat:29:23	고급에페르샤벨	Cao cấp Epair Saber
+T:IT08.dat:30:23	고급터크샤벨	Cao cấp Turk Saber
+T:IT08.dat:31:23	고급프라레샤벨	Cao cấp Prare Saber
+T:IT08.dat:32:23	고급샤테르샤벨	Cao cấp Chater Saber
+T:IT08.dat:33:23	고급헌티드샤벨	Cao cấp Hunted Saber
+T:IT08.dat:34:23	고급킬리지샤벨	Cao cấp Kilij Saber
+T:IT08.dat:35:23	고급샤쉬드샤벨	Cao cấp Shashid Saber
+T:IT08.dat:36:23	고급파라즈샤벨	Cao cấp Paraz Saber
+T:IT08.dat:37:23	고급쟈마드샤벨	Cao cấp Jamad Saber
+T:IT08.dat:38:23	고급로인트샤벨	Cao cấp Roint Saber
+T:IT08.dat:39:23	고급지라드샤벨	Cao cấp Girard Saber
+T:IT08.dat:40:23	크라메케르샤벨	Kramaker Saber
+T:IT08.dat:41:23	로이즈마게챠	Roisemagecha
+T:IT08.dat:42:23	아리란스트샤벨	Arilanst Saber
+T:IT08.dat:43:23	지젠트샤벨	Gigent Saber
+T:IT08.dat:44:23	투틴드샤벨	Tutind Saber
+T:IT08.dat:45:23	아프르챠드샤벨	Aprchad Saber
+T:IT08.dat:46:23	가이노야샤벨	Gainoya Saber
+T:IT08.dat:47:23	타리히거샤벨	Tarihigeo Saber
+T:IT08.dat:48:23	블레임샤벨	Blame Saber
+T:IT08.dat:49:23	홀딩샤벨	Holding Saber
+T:IT08.dat:50:23	가디언샤벨	Guardian Saber
+T:IT08.dat:51:23	리자르샤벨	Lizar Saber
+T:IT08.dat:52:23	피닉스샤벨	Phoenix Saber
+T:IT08.dat:53:23	파워드샤벨	Powered Saber
+T:IT08.dat:54:23	투스리즈샤벨	Tuslis Saber
+T:IT08.dat:55:23	서르포트샤벨	Support Saber
+T:IT08.dat:56:23	윈디드샤벨	Winded Saber
+T:IT08.dat:57:23	브랜달샤벨	Brandal Saber
+T:IT08.dat:58:23	론디즈샤벨	Rondiz Saber
+T:IT08.dat:59:23	락크넬샤벨	Rocknel Saber
+T:IT08.dat:60:23	갈리아의샤벨	Saber Galia
+T:IT08.dat:61:23	해드만의샤벨	Saber Headman
+T:IT08.dat:62:23	트렌스의샤벨	Saber Trens
+T:IT08.dat:63:23	노리슨의샤벨	Saber Norison
+T:IT08.dat:64:23	데이아의샤벨	Saber Deia
+T:IT08.dat:65:23	데크의샤벨	Saber Deck
+T:IT08.dat:66:23	라누스의샤벨	Saber Lanus
+T:IT08.dat:67:23	피테스의샤벨	Saber Pites
+T:IT08.dat:68:23	맥라스의샤벨	Saber Maclas
+T:IT08.dat:69:23	미드린의샤벨	Saber Midrin
+T:IT08.dat:70:23	밴의샤벨	Saber Ban
+T:IT08.dat:71:23	베비드의샤벨	Saber Bevid
+T:IT08.dat:72:23	살라미의샤벨	Saber Salami
+T:IT08.dat:73:23	미데스의샤벨	Saber Mides
+T:IT08.dat:74:23	아리스의샤벨	Saber Aris
+T:IT08.dat:75:23	아브론의샤벨	Saber Abron
+T:IT08.dat:76:23	지트의샤벨	Saber Jit
+T:IT08.dat:77:23	지르라의샤벨	Saber Jirra
+T:IT08.dat:78:23	루샨드의샤벨	Saber Rushand
+T:IT08.dat:79:23	크로넬의샤벨	Saber Cronel
+T:IT08.dat:80:23	카르키의샤벨	Saber Karki
+T:IT08.dat:81:23	케르타의샤벨	Saber Kerta
+T:IT08.dat:82:23	타퀸의샤벨	Saber Tarquin
+T:IT08.dat:83:23	테미란의샤벨	Saber Temiran
+T:IT08.dat:84:23	파란테의샤벨	Saber Parante
+T:IT08.dat:85:23	르지의샤벨	Saber Rji
+T:IT08.dat:86:23	해럴드의샤벨	Saber Harold
+T:IT08.dat:87:23	하르피의샤벨	Saber Harpy
+T:IT08.dat:88:23	게리온의샤벨	Saber Gerion
+T:IT08.dat:89:23	게스트의샤벨	Saber Guest
+T:IT08.dat:90:23	노이스의샤벨	Saber Noise
+T:IT08.dat:91:23	나탈의샤벨	Saber Natal
+T:IT08.dat:92:23	데히라의샤벨	Saber Dehira
+T:IT08.dat:93:23	델의샤벨	Saber Del
+T:IT08.dat:94:23	락샤르의샤벨	Saber Rakshar
+T:IT08.dat:95:23	라슬로의샤벨	Saber Laslo
+T:IT08.dat:96:23	메가라의샤벨	Saber Megara
+T:IT08.dat:97:23	후오스의샤벨	Saber Huos
+T:IT08.dat:98:23	매기의샤벨	Saber Maggie
+T:IT08.dat:99:23	리온델의샤벨	Saber Lionel
+T:IT08.dat:100:23	와이번의샤벨	Saber Wyvern
+T:IT08.dat:101:23	드레이크의샤벨	Saber Drake
+T:IT08.dat:102:23	드래곤의샤벨	Saber Dragon
+T:IT09.dat:0:23	낡은랜스	Lance cũ
+T:IT09.dat:1:23	아이언랜스	Iron Lance
+T:IT09.dat:2:23	루프랜스	Loop Lance
+T:IT09.dat:3:23	쟈크랜스	Jack Lance
+T:IT09.dat:4:23	쉐도우랜스	Shadow Lance
+T:IT09.dat:5:23	프라스랜스	Plas Lance
+T:IT09.dat:6:23	리스크랜스	Risk Lance
+T:IT09.dat:7:23	블랙락랜스	Blackrock Lance
+T:IT09.dat:8:23	트리플랜스	Triple Lance
+T:IT09.dat:9:23	비로그랜스	Birog Lance
+T:IT09.dat:10:23	투스트랜스	Toothed Lance
+T:IT09.dat:11:23	그랜드랜스	Grand Lance
+T:IT09.dat:12:23	다크랜스	Dark Lance
+T:IT09.dat:13:23	블리드랜스	Bleed Lance
+T:IT09.dat:14:23	쏠즈랜스	Sols Lance
+T:IT09.dat:15:23	라이징랜스	Rising Lance
+T:IT09.dat:16:23	빅바엔랜스	Big Ban Lance
+T:IT09.dat:17:23	프랜드랜스	Friend Lance
+T:IT09.dat:18:23	윈드랜스	Wind Lance
+T:IT09.dat:19:23	핼드랜스	Held Lance
+T:IT09.dat:20:23	고급랜스	Cao cấp Lance
+T:IT09.dat:21:23	고급아이언랜스	Cao cấp Iron Lance
+T:IT09.dat:22:23	고급루프랜스	Cao cấp Loop Lance
+T:IT09.dat:23:23	고급쟈크랜스	Cao cấp Jack Lance
+T:IT09.dat:24:23	고급쉐도우랜스	Cao cấp Shadow Lance
+T:IT09.dat:25:23	고급프라스랜스	Cao cấp Plas Lance
+T:IT09.dat:26:23	고급리스크랜스	Cao cấp Risk Lance
+T:IT09.dat:27:23	고급블랙락랜스	Cao cấp Blackrock Lance
+T:IT09.dat:28:23	고급트리플랜스	Cao cấp Triple Lance
+T:IT09.dat:29:23	고급비로그랜스	Cao cấp Birog Lance
+T:IT09.dat:30:23	고급투스트랜스	Cao cấp Toothed Lance
+T:IT09.dat:31:23	고급그랜드랜스	Cao cấp Grand Lance
+T:IT09.dat:32:23	고급다크랜스	Cao cấp Dark Lance
+T:IT09.dat:33:23	고급블리드랜스	Cao cấp Bleed Lance
+T:IT09.dat:34:23	고급쏠즈랜스	Cao cấp Sols Lance
+T:IT09.dat:35:23	고급라이징랜스	Cao cấp Rising Lance
+T:IT09.dat:36:23	고급빅바엔랜스	Cao cấp Big Ban Lance
+T:IT09.dat:37:23	고급프랜드랜스	Cao cấp Friend Lance
+T:IT09.dat:38:23	고급윈드랜스	Cao cấp Wind Lance
+T:IT09.dat:39:23	고급핼드랜스	Cao cấp Held Lance
+T:IT09.dat:40:23	파이크랜스	Pike Lance
+T:IT09.dat:41:23	사리샤르랜스	Sarisar Lance
+T:IT09.dat:42:23	컨터랜스	Counter Lance
+T:IT09.dat:43:23	버드나체르	Budnacher
+T:IT09.dat:44:23	프라메아랜스	Pramea Lance
+T:IT09.dat:45:23	루체른랜스	Lucerne Lance
+T:IT09.dat:46:23	코르세츠랜스	Corsesc Lance
+T:IT09.dat:47:23	팔티쟌	Partisan
+T:IT09.dat:48:23	트라이던트	Trident
+T:IT09.dat:49:23	리카버랜스	Recover Lance
+T:IT09.dat:50:23	제드버그랜스	Jedburgh Lance
+T:IT09.dat:51:23	스콜피언랜스	Scorpion Lance
+T:IT09.dat:52:23	하베르트랜스	Halberd Lance
+T:IT09.dat:53:23	알슈피스랜스	Alspiess Lance
+T:IT09.dat:54:23	브리치파이크	Breach Pike
+T:IT09.dat:55:23	아스타스피큐람	Astaspiculum
+T:IT09.dat:56:23	롱기누스	Longinus
+T:IT09.dat:57:23	겔러볼그	Gelervolg
+T:IT09.dat:58:23	아드리안랜스	Adrian Lance
+T:IT09.dat:59:23	그른드른랜스	Grundrun Lance
+T:IT09.dat:60:23	갈리아의창	Thương Galia
+T:IT09.dat:61:23	해드만의창	Thương Headman
+T:IT09.dat:62:23	트렌스의창	Thương Trens
+T:IT09.dat:63:23	노리슨의창	Thương Norison
+T:IT09.dat:64:23	데이아의창	Thương Deia
+T:IT09.dat:65:23	데크의창	Thương Deck
+T:IT09.dat:66:23	라누스의창	Thương Lanus
+T:IT09.dat:67:23	피테스의창	Thương Pites
+T:IT09.dat:68:23	맥라스의창	Thương Maclas
+T:IT09.dat:69:23	미드린의창	Thương Midrin
+T:IT09.dat:70:23	밴의창	Thương Ban
+T:IT09.dat:71:23	베비드의창	Thương Bevid
+T:IT09.dat:72:23	살라미의창	Thương Salami
+T:IT09.dat:73:23	미데스의창	Thương Mides
+T:IT09.dat:74:23	아리스의창	Thương Aris
+T:IT09.dat:75:23	아브론의창	Thương Abron
+T:IT09.dat:76:23	지트의창	Thương Jit
+T:IT09.dat:77:23	지르라의창	Thương Jirra
+T:IT09.dat:78:23	루샨드의창	Thương Rushand
+T:IT09.dat:79:23	크로넬의창	Thương Cronel
+T:IT09.dat:80:23	카르키의창	Thương Karki
+T:IT09.dat:81:23	케르타의창	Thương Kerta
+T:IT09.dat:82:23	타퀸의창	Thương Tarquin
+T:IT09.dat:83:23	테미란의창	Thương Temiran
+T:IT09.dat:84:23	파란테의창	Thương Parante
+T:IT09.dat:85:23	르지의창	Thương Rji
+T:IT09.dat:86:23	해럴드의창	Thương Harold
+T:IT09.dat:87:23	하르피의창	Thương Harpy
+T:IT09.dat:88:23	게리온의창	Thương Gerion
+T:IT09.dat:89:23	게스트의창	Thương Guest
+T:IT09.dat:90:23	노이스의창	Thương Noise
+T:IT09.dat:91:23	나탈의창	Thương Natal
+T:IT09.dat:92:23	데히라의창	Thương Dehira
+T:IT09.dat:93:23	델의창	Thương Del
+T:IT09.dat:94:23	락샤르의창	Thương Rakshar
+T:IT09.dat:95:23	라슬로의창	Thương Laslo
+T:IT09.dat:96:23	메가라의창	Thương Megara
+T:IT09.dat:97:23	후오스의창	Thương Huos
+T:IT09.dat:98:23	매기의창	Thương Maggie
+T:IT09.dat:99:23	리온델의창	Thương Lionel
+T:IT09.dat:100:23	와이번의창	Thương Wyvern
+T:IT09.dat:101:23	드레이크의창	Thương Drake
+T:IT09.dat:102:23	드래곤의창	Thương Dragon
+T:IT10.dat:0:23	낡은완드	Gậy phép cũ
+T:IT10.dat:1:23	루비완드	Ruby Wand
+T:IT10.dat:2:23	루프완드	Loop Wand
+T:IT10.dat:3:23	쟈크완드	Jack Wand
+T:IT10.dat:4:23	프라스완드	Plas Wand
+T:IT10.dat:5:23	크라센완드	Krassen Wand
+T:IT10.dat:6:23	파워드완드	Powered Wand
+T:IT10.dat:7:23	세인트완드	Saint Wand
+T:IT10.dat:8:23	마기완드	Magi Wand
+T:IT10.dat:9:23	마나완드	Mana Wand
+T:IT10.dat:10:23	플레임완드	Flame Wand
+T:IT10.dat:11:23	프롤트완드	Prolt Wand
+T:IT10.dat:12:23	완디드완드	Wanded Wand
+T:IT10.dat:13:23	윙드완드	Winged Wand
+T:IT10.dat:14:23	매지컬완드	Magical Wand
+T:IT10.dat:15:23	마그마완드	Magma Wand
+T:IT10.dat:16:23	엔젤완드	Angel Wand
+T:IT10.dat:17:23	크리스완드	Chris Wand
+T:IT10.dat:18:23	다이아완드	Diamond Wand
+T:IT10.dat:19:23	오리완드	Ori Wand
+T:IT10.dat:20:23	고급완드	Cao cấp Wand
+T:IT10.dat:21:23	고급루비완드	Cao cấp Ruby Wand
+T:IT10.dat:22:23	고급루프완드	Cao cấp Loop Wand
+T:IT10.dat:23:23	고급쟈크완드	Cao cấp Jack Wand
+T:IT10.dat:24:23	고급프라스완드	Cao cấp Plas Wand
+T:IT10.dat:25:23	크고급라센완드	Cao cấp Krassen Wand
+T:IT10.dat:26:23	고급파워드완드	Cao cấp Powered Wand
+T:IT10.dat:27:23	고급세인트완드	Cao cấp Saint Wand
+T:IT10.dat:28:23	고급마기완드	Cao cấp Magi Wand
+T:IT10.dat:29:23	고급마나완드	Cao cấp Mana Wand
+T:IT10.dat:30:23	고급플레임완드	Cao cấp Flame Wand
+T:IT10.dat:31:23	고급프롤트완드	Cao cấp Prolt Wand
+T:IT10.dat:32:23	고급완디드완드	Cao cấp Wanded Wand
+T:IT10.dat:33:23	고급윙드완드	Cao cấp Winged Wand
+T:IT10.dat:34:23	고급매지컬완드	Cao cấp Magical Wand
+T:IT10.dat:35:23	고급마그마완드	Cao cấp Magma Wand
+T:IT10.dat:36:23	고급엔젤완드	Cao cấp Angel Wand
+T:IT10.dat:37:23	고급크리스완드	Cao cấp Chris Wand
+T:IT10.dat:38:23	고급다이아완드	Cao cấp Diamond Wand
+T:IT10.dat:39:23	고급오리완드	Cao cấp Ori Wand
+T:IT10.dat:40:23	셀린완드	Selin Wand
+T:IT10.dat:41:23	디요르완드	Diyor Wand
+T:IT10.dat:42:23	크리트완드	Crit Wand
+T:IT10.dat:43:23	레이든완드	Raiden Wand
+T:IT10.dat:44:23	러스트완드	Rust Wand
+T:IT10.dat:45:23	그린드완드	Grind Wand
+T:IT10.dat:46:23	레므스완드	Remus Wand
+T:IT10.dat:47:23	바돌로완드	Bardolo Wand
+T:IT10.dat:48:23	릴리즈완드	Release Wand
+T:IT10.dat:49:23	와이즈완드	Wise Wand
+T:IT10.dat:50:23	루스티완드	Rusty Wand
+T:IT10.dat:51:23	레멜완드	Remel Wand
+T:IT10.dat:52:23	포르딘완드	Fordin Wand
+T:IT10.dat:53:23	서마르이츠완드	Sumaritz Wand
+T:IT10.dat:54:23	노바르츠완드	Novarts Wand
+T:IT10.dat:55:23	레이스트완드	Raist Wand
+T:IT10.dat:56:23	다이스완드	Dice Wand
+T:IT10.dat:57:23	다우져완드	Dowser Wand
+T:IT10.dat:58:23	롤링스완드	Rawlings Wand
+T:IT10.dat:59:23	리파브완드	Ripab Wand
+T:IT10.dat:60:23	게아타스의완드	Gậy phép Geatas
+T:IT10.dat:61:23	게피에의완드	Gậy phép Gepie
+T:IT10.dat:62:23	누아자의완드	Gậy phép Nuaja
+T:IT10.dat:63:23	니바르겐의완드	Gậy phép Nivargen
+T:IT10.dat:64:23	데로즈의완드	Gậy phép Derose
+T:IT10.dat:65:23	델파즈스의완드	Gậy phép Delpazs
+T:IT10.dat:66:23	리노스의완드	Gậy phép Linos
+T:IT10.dat:67:23	레릴의완드	Gậy phép Reril
+T:IT10.dat:68:23	메돌스의완드	Gậy phép Medols
+T:IT10.dat:69:23	마드르크의완드	Gậy phép Madrk
+T:IT10.dat:70:23	베르라크의완드	Gậy phép Berlac
+T:IT10.dat:71:23	길리우스의완드	Gậy phép Gilius
+T:IT10.dat:72:23	산스의완드	Gậy phép Sans
+T:IT10.dat:73:23	샌드의완드	Gậy phép Sand
+T:IT10.dat:74:23	아그란놈의완드	Gậy phép Agranom
+T:IT10.dat:75:23	아르가이의완드	Gậy phép Argai
+T:IT10.dat:76:23	시그니의완드	Gậy phép Signi
+T:IT10.dat:77:23	그란트의완드	Gậy phép Grant
+T:IT10.dat:78:23	플라의완드	Gậy phép Pla
+T:IT10.dat:79:23	즈놀의완드	Gậy phép Znol
+T:IT10.dat:80:23	차르조르의완드	Gậy phép Charzor
+T:IT10.dat:81:23	테바르스의완드	Gậy phép Tevars
+T:IT10.dat:82:23	세우드의완드	Gậy phép Seud
+T:IT10.dat:83:23	파리스의완드	Gậy phép Paris
+T:IT10.dat:84:23	파시의완드	Gậy phép Pasi
+T:IT10.dat:85:23	햐르그의완드	Gậy phép Hyarg
+T:IT10.dat:86:23	헤라의완드	Gậy phép Hera
+T:IT10.dat:87:23	게스르의완드	Gậy phép Gesr
+T:IT10.dat:88:23	고르라의완드	Gậy phép Gorra
+T:IT10.dat:89:23	포렐드의완드	Gậy phép Forreld
+T:IT10.dat:90:23	도믄의완드	Gậy phép Domun
+T:IT10.dat:91:23	레리아의완드	Gậy phép Leria
+T:IT10.dat:92:23	레위즈의완드	Gậy phép Lewis
+T:IT10.dat:93:23	메디아의완드	Gậy phép Media
+T:IT10.dat:94:23	아그로스의완드	Gậy phép Agros
+T:IT10.dat:95:23	헤르미의완드	Gậy phép Hermi
+T:IT10.dat:96:23	제프로의완드	Gậy phép Jepro
+T:IT10.dat:97:23	라푼델의완드	Gậy phép Rapunzel
+T:IT10.dat:98:23	다이고의완드	Gậy phép Daigo
+T:IT10.dat:99:23	시니의완드	Gậy phép Sini
+T:IT10.dat:100:23	와이번의완드	Gậy phép Wyvern
+T:IT10.dat:101:23	드레이크의완드	Gậy phép Drake
+T:IT10.dat:102:23	드래곤의완드	Gậy phép Dragon
+T:IT11.dat:0:23	헤어밴드	Hair Band
+T:IT11.dat:2:23	볼드두건	Bold Hood
+T:IT11.dat:3:23	롱두건	Long Hood
+T:IT11.dat:4:23	하드두건	Hard Hood
+T:IT11.dat:5:23	컬러두건	Color Hood
+T:IT11.dat:6:23	보잉두건	Boeing Hood
+T:IT11.dat:7:23	펠리컨트	Pelicant
+T:IT11.dat:8:23	리얼리스	Realis
+T:IT11.dat:9:23	언리미트	Unlimit
+T:IT11.dat:10:23	아쿠더문	Aku the Moon
+T:IT11.dat:11:23	몰라이크	Molike
+T:IT11.dat:12:23	해빈크루	Havin Crew
+T:IT11.dat:13:23	스포이트	Spoit
+T:IT11.dat:14:23	융카르도	Yunkardo
+T:IT11.dat:15:23	로이판넨	Roipannen
+T:IT11.dat:16:23	큐스테로	Questero
+T:IT11.dat:17:23	데딜린즈	Dedilins
+T:IT11.dat:18:23	반디나즈	Bandinaz
+T:IT11.dat:19:23	어퍼반디나	Upper Bandina
+T:IT11.dat:20:23	하드헤어밴드	Hard Hair Band
+T:IT11.dat:22:23	고급볼드두건	Cao cấp Bold Hood
+T:IT11.dat:23:23	고급롱두건	Cao cấp Long Hood
+T:IT11.dat:24:23	고급하드두건	Cao cấp Hard Hood
+T:IT11.dat:25:23	고급컬러두건	Cao cấp Color Hood
+T:IT11.dat:26:23	고급보잉두건	Cao cấp Boeing Hood
+T:IT11.dat:27:23	어퍼펠리컨트	Upper Pelicant
+T:IT11.dat:28:23	어퍼리얼리스	Upper Realis
+T:IT11.dat:29:23	하드언리미트	Hard Unlimit
+T:IT11.dat:30:23	어퍼아쿠더문	Upper Aku the Moon
+T:IT11.dat:31:23	볼드몰라이크	Bold Molike
+T:IT11.dat:32:23	어퍼해빈크루	Upper Havin Crew
+T:IT11.dat:33:23	어퍼스포이트	Upper Spoit
+T:IT11.dat:34:23	하드융카르도	Hard Yunkardo
+T:IT11.dat:35:23	고급로이판넨	Cao cấp Roipannen
+T:IT11.dat:36:23	하드큐스테로	Hard Questero
+T:IT11.dat:37:23	고급데딜린즈	Cao cấp Dedilins
+T:IT11.dat:38:23	고급반디나즈	Cao cấp Bandinaz
+T:IT11.dat:39:23	고급어퍼반디나	Cao cấp Upper Bandina
+T:IT11.dat:40:23	아라비안	Arabian
+T:IT11.dat:41:23	에베레스	Everes
+T:IT11.dat:42:23	라비아스	Labias
+T:IT11.dat:43:23	리빌러크	Rebiluk
+T:IT11.dat:44:23	질노이드	Zilnoid
+T:IT11.dat:45:23	드라구드	Dragud
+T:IT11.dat:46:23	세코이첸	Sekoichen
+T:IT11.dat:47:23	로우스트	Roust
+T:IT11.dat:48:23	키파토스	Kipatos
+T:IT11.dat:49:23	레일리언	Raylian
+T:IT11.dat:50:23	수바드로	Subadro
+T:IT11.dat:51:23	에밀리안	Emilian
+T:IT11.dat:52:23	베이직톱	Basic Top
+T:IT11.dat:53:23	웨이콥스	Waycops
+T:IT11.dat:54:23	사파리스	Safaris
+T:IT11.dat:55:23	아처터키	Archer Turkey
+T:IT11.dat:56:23	아수스트	Asust
+T:IT11.dat:57:23	크롬버그	Cromberg
+T:IT11.dat:58:23	소지릭해더	Sojirik Header
+T:IT11.dat:59:23	골든반디즈	Golden Bandiz
+T:IT11.dat:60:23	가늘롱의두건	Hood Ganulong
+T:IT11.dat:61:23	가레스의두건	Hood Gareth
+T:IT11.dat:62:23	나시카의두건	Hood Nasika
+T:IT11.dat:63:23	냐르의두건	Hood Nyar
+T:IT11.dat:64:23	다나의두건	Hood Dana
+T:IT11.dat:65:23	다누의두건	Hood Danu
+T:IT11.dat:66:23	라돈의두건	Hood Radon
+T:IT11.dat:67:23	라니아의두건	Hood Rania
+T:IT11.dat:68:23	마르나의두건	Hood Marna
+T:IT11.dat:69:23	마도르의두건	Hood Mador
+T:IT11.dat:70:23	바스의두건	Hood Bas
+T:IT11.dat:71:23	바인크의두건	Hood Vaink
+T:IT11.dat:72:23	사가의두건	Hood Saga
+T:IT11.dat:73:23	사이바의두건	Hood Saiba
+T:IT11.dat:74:23	아가논의두건	Hood Agnon
+T:IT11.dat:75:23	아그라의두건	Hood Agra
+T:IT11.dat:76:23	제워드의두건	Hood Jeward
+T:IT11.dat:77:23	제테스의두건	Hood Zetes
+T:IT11.dat:78:23	팬덤의두건	Hood Phantom
+T:IT11.dat:79:23	로스트의두건	Hood Lost
+T:IT11.dat:80:23	불마인의두건	Hood Bulmine
+T:IT11.dat:81:23	오르크스의두건	Hood Orcus
+T:IT11.dat:82:23	쏠즈의두건	Hood Sols
+T:IT11.dat:83:23	넥타르의두건	Hood Nectar
+T:IT11.dat:84:23	드라우프의두건	Hood Draup
+T:IT11.dat:85:23	홀리맨의두건	Hood Holyman
+T:IT11.dat:86:23	아그날의두건	Hood Agnal
+T:IT11.dat:87:23	판도라의두건	Hood Pandora
+T:IT11.dat:88:23	네크로의두건	Hood Necro
+T:IT11.dat:89:23	헤라클의두건	Hood Heracle
+T:IT11.dat:90:23	실리온의두건	Hood Silion
+T:IT11.dat:91:23	커닝스의두건	Hood Cunning
+T:IT11.dat:92:23	레퀴엠의두건	Hood Requiem
+T:IT11.dat:93:23	퀘이크의두건	Hood Quake
+T:IT11.dat:94:23	엘라덴의두건	Hood Elladen
+T:IT11.dat:95:23	데스의두건	Hood Death
+T:IT11.dat:96:23	오펀스의두건	Hood Orphans
+T:IT11.dat:97:23	문명의두건	Hood Văn minh
+T:IT11.dat:98:23	천군의두건	Hood Thiên quân
+T:IT11.dat:99:23	와인의두건	Hood Wine
+T:IT11.dat:100:23	와이번의두건	Hood Wyvern
+T:IT11.dat:101:23	드레이크의두건	Hood Drake
+T:IT11.dat:102:23	드래곤의두건	Hood Dragon
+T:IT12.dat:0:23	청동투구	Bronze Helm
+T:IT12.dat:1:23	강철투구	Steel Helm
+T:IT12.dat:2:23	루프헬멧	Loop Helmet
+T:IT12.dat:3:23	쟈크헬멧	Jack Helmet
+T:IT12.dat:4:23	듀란헬멧	Duran Helmet
+T:IT12.dat:5:23	켈루수스	Kellusus
+T:IT12.dat:6:23	레이디언	Radian
+T:IT12.dat:7:23	바이탈큐	Vital Q
+T:IT12.dat:8:23	사피엔트	Sapient
+T:IT12.dat:9:23	컬큘레스	Calculus
+T:IT12.dat:10:23	드라이스	Drice
+T:IT12.dat:11:23	레이스업	Lace Up
+T:IT12.dat:12:23	크래이나	Kraina
+T:IT12.dat:13:23	렛고플롬	Let Go Flom
+T:IT12.dat:14:23	언더시즈	Under Siege
+T:IT12.dat:15:23	네버렛고	Never Let Go
+T:IT12.dat:16:23	미네랄큐	Mineral Q
+T:IT12.dat:17:23	기사의투구	Helm Kỵ sĩ
+T:IT12.dat:18:23	론드헬멧	Rond Helmet
+T:IT12.dat:19:23	샨즈헬멧	Shans Helmet
+T:IT12.dat:20:23	고급청동투구	Cao cấp Bronze Helm
+T:IT12.dat:21:23	고급강철투구	Cao cấp Steel Helm
+T:IT12.dat:22:23	어퍼루프헬멧	Upper Loop Helmet
+T:IT12.dat:23:23	어퍼쟈크헬멧	Upper Jack Helmet
+T:IT12.dat:24:23	어퍼듀란헬멧	Upper Duran Helmet
+T:IT12.dat:25:23	어퍼켈루수스	Upper Kellusus
+T:IT12.dat:26:23	어퍼레이디언	Upper Radian
+T:IT12.dat:27:23	어퍼바이탈큐	Upper Vital Q
+T:IT12.dat:28:23	어퍼사피엔트	Upper Sapient
+T:IT12.dat:29:23	어퍼컬큘레스	Upper Calculus
+T:IT12.dat:30:23	어퍼드라이스	Upper Drice
+T:IT12.dat:31:23	어퍼레이스업	Upper Lace Up
+T:IT12.dat:32:23	어퍼크래이나	Upper Kraina
+T:IT12.dat:33:23	어퍼렛고플롬	Upper Let Go Flom
+T:IT12.dat:34:23	어퍼언더시즈	Upper Under Siege
+T:IT12.dat:35:23	어퍼네버렛고	Upper Never Let Go
+T:IT12.dat:36:23	어퍼미네랄큐	Upper Mineral Q
+T:IT12.dat:37:23	고급기사의투구	Helm Kỵ sĩ cao cấp
+T:IT12.dat:38:23	고급론드헬멧	Cao cấp Rond Helmet
+T:IT12.dat:39:23	고급샨즈헬멧	Cao cấp Shans Helmet
+T:IT12.dat:40:23	위린헤드	Wirin Head
+T:IT12.dat:41:23	쿨러헤드	Cooler Head
+T:IT12.dat:42:23	러먼기어	Lumen Gear
+T:IT12.dat:43:23	위치기어	Witch Gear
+T:IT12.dat:44:23	헬리기어	Heli Gear
+T:IT12.dat:45:23	트릭헤런	Trick Heron
+T:IT12.dat:46:23	히든헤즈	Hidden Heads
+T:IT12.dat:47:23	레드헤일	Red Hail
+T:IT12.dat:48:23	블랙헵틱	Black Heptic
+T:IT12.dat:49:23	오버기어	Over Gear
+T:IT12.dat:50:23	튤란더스	Tulanders
+T:IT12.dat:51:23	에버헤즈	Ever Heads
+T:IT12.dat:52:23	로니기어	Ronny Gear
+T:IT12.dat:53:23	트리어스	Trias
+T:IT12.dat:54:23	모닉세스	Monixes
+T:IT12.dat:55:23	알타이즈	Altais
+T:IT12.dat:56:23	지니헤드	Genie Head
+T:IT12.dat:57:23	슈퍼헤런	Super Heron
+T:IT12.dat:58:23	파이드기어	Fide Gear
+T:IT12.dat:59:23	렌즈기어	Lens Gear
+T:IT12.dat:60:23	갈리아의투구	Helm Galia
+T:IT12.dat:61:23	해드만의투구	Helm Headman
+T:IT12.dat:62:23	트렌스의투구	Helm Trens
+T:IT12.dat:63:23	노리슨의투구	Helm Norison
+T:IT12.dat:64:23	데이아의투구	Helm Deia
+T:IT12.dat:65:23	데크의투구	Helm Deck
+T:IT12.dat:66:23	라누스의투구	Helm Lanus
+T:IT12.dat:67:23	피테스의투구	Helm Pites
+T:IT12.dat:68:23	맥라스의투구	Helm Maclas
+T:IT12.dat:69:23	미드린의투구	Helm Midrin
+T:IT12.dat:70:23	밴의투구	Helm Ban
+T:IT12.dat:71:23	베비드의투구	Helm Bevid
+T:IT12.dat:72:23	살라미의투구	Helm Salami
+T:IT12.dat:73:23	미데스의투구	Helm Mides
+T:IT12.dat:74:23	아리스의투구	Helm Aris
+T:IT12.dat:75:23	아브론의투구	Helm Abron
+T:IT12.dat:76:23	지트의투구	Helm Jit
+T:IT12.dat:77:23	지르라의투구	Helm Jirra
+T:IT12.dat:78:23	루샨드의투구	Helm Rushand
+T:IT12.dat:79:23	크로넬의투구	Helm Cronel
+T:IT12.dat:80:23	카르키의투구	Helm Karki
+T:IT12.dat:81:23	케르타의투구	Helm Kerta
+T:IT12.dat:82:23	타퀸의투구	Helm Tarquin
+T:IT12.dat:83:23	테미란의투구	Helm Temiran
+T:IT12.dat:84:23	파란테의투구	Helm Parante
+T:IT12.dat:85:23	르지의투구	Helm Rji
+T:IT12.dat:86:23	해럴드의투구	Helm Harold
+T:IT12.dat:87:23	하르피의투구	Helm Harpy
+T:IT12.dat:88:23	게리온의투구	Helm Gerion
+T:IT12.dat:89:23	게스트의투구	Helm Guest
+T:IT12.dat:90:23	노이스의투구	Helm Noise
+T:IT12.dat:91:23	나탈의투구	Helm Natal
+T:IT12.dat:92:23	데히라의투구	Helm Dehira
+T:IT12.dat:93:23	델의투구	Helm Del
+T:IT12.dat:94:23	락샤르의투구	Helm Rakshar
+T:IT12.dat:95:23	라슬로의투구	Helm Laslo
+T:IT12.dat:96:23	메가라의투구	Helm Megara
+T:IT12.dat:97:23	후오스의투구	Helm Huos
+T:IT12.dat:98:23	매기의투구	Helm Maggie
+T:IT12.dat:99:23	리온델의투구	Helm Lionel
+T:IT12.dat:100:23	와이번의투구	Helm Wyvern
+T:IT12.dat:101:23	드레이크의투구	Helm Drake
+T:IT12.dat:102:23	드래곤의투구	Helm Dragon
+T:IT13.dat:0:23	로우뮬런	Low Mulrun
+T:IT13.dat:1:23	미들뮬런	Middle Mulrun
+T:IT13.dat:2:23	하이뮬런	High Mulrun
+T:IT13.dat:3:23	레인햇	Rain Hat
+T:IT13.dat:4:23	원더스햇	Wonders Hat
+T:IT13.dat:5:23	매직컬햇	Magical Hat
+T:IT13.dat:6:23	사프라스	Saffras
+T:IT13.dat:7:23	루비매직	Ruby Magic
+T:IT13.dat:8:23	이터니아	Eternia
+T:IT13.dat:9:23	엑스츄얼	Extual
+T:IT13.dat:10:23	트릴리스	Trilis
+T:IT13.dat:11:23	모멘터스	Momentus
+T:IT13.dat:12:23	헨스트코	Henstco
+T:IT13.dat:13:23	모빌리안	Mobilian
+T:IT13.dat:14:23	스트라스	Stras
+T:IT13.dat:15:23	노스라트	Nosrat
+T:IT13.dat:16:23	매직레오	Magic Leo
+T:IT13.dat:17:23	매직매직	Magic Magic
+T:IT13.dat:18:23	노스매직헷	Nos Magic Hat
+T:IT13.dat:19:23	그란운헷	Granun Hat
+T:IT13.dat:20:23	어퍼로우뮬런	Upper Low Mulrun
+T:IT13.dat:21:23	어퍼미들뮬런	Upper Middle Mulrun
+T:IT13.dat:22:23	어퍼하이뮬런	Upper High Mulrun
+T:IT13.dat:23:23	어퍼레인햇	Upper Rain Hat
+T:IT13.dat:24:23	어퍼원더스햇	Upper Wonders Hat
+T:IT13.dat:25:23	어퍼매직컬햇	Upper Magical Hat
+T:IT13.dat:26:23	어퍼사프라스	Upper Saffras
+T:IT13.dat:27:23	어퍼루비매직	Upper Ruby Magic
+T:IT13.dat:28:23	어퍼이터니아	Upper Eternia
+T:IT13.dat:29:23	어퍼엑스츄얼	Upper Extual
+T:IT13.dat:30:23	어퍼트릴리스	Upper Trilis
+T:IT13.dat:31:23	어퍼모멘터스	Upper Momentus
+T:IT13.dat:32:23	어퍼헨스트코	Upper Henstco
+T:IT13.dat:33:23	어퍼모빌리안	Upper Mobilian
+T:IT13.dat:34:23	어퍼스트라스	Upper Stras
+T:IT13.dat:35:23	어퍼노스라트	Upper Nosrat
+T:IT13.dat:36:23	어퍼매직레오	Upper Magic Leo
+T:IT13.dat:37:23	어퍼매직매직	Upper Magic Magic
+T:IT13.dat:38:23	어퍼노스매직헷	Upper Nos Magic Hat
+T:IT13.dat:39:23	어퍼그란운헷	Upper Granun Hat
+T:IT13.dat:40:23	레어매직	Rare Magic
+T:IT13.dat:41:23	인더마나	In the Mana
+T:IT13.dat:42:23	올더매직	All the Magic
+T:IT13.dat:43:23	마나거쉬	Mana Gush
+T:IT13.dat:44:23	매직헬퍼	Magic Helper
+T:IT13.dat:45:23	쉐퍼링캡	Suffering Cap
+T:IT13.dat:46:23	스타폴러	Star Poller
+T:IT13.dat:47:23	선인더문	Sun in the Moon
+T:IT13.dat:48:23	오바디스	Obadis
+T:IT13.dat:49:23	다니어스	Danius
+T:IT13.dat:50:23	매터리안	Materian
+T:IT13.dat:51:23	매직본트	Magic Bont
+T:IT13.dat:52:23	맥스마나	Max Mana
+T:IT13.dat:53:23	수퍼매직	Super Magic
+T:IT13.dat:54:23	언더파워	Under Power
+T:IT13.dat:55:23	아스트릭	Astric
+T:IT13.dat:56:23	플러스투	Plus Two
+T:IT13.dat:57:23	에이스문	Ace Moon
+T:IT13.dat:58:23	마로드골든	Marod Golden
+T:IT13.dat:59:23	마나그람	Mana Gram
+T:IT13.dat:60:23	게아타스의모자	Mũ Geatas
+T:IT13.dat:61:23	게피에의모자	Mũ Gepie
+T:IT13.dat:62:23	누아자의모자	Mũ Nuaja
+T:IT13.dat:63:23	니바르겐의모자	Mũ Nivargen
+T:IT13.dat:64:23	데로즈의모자	Mũ Derose
+T:IT13.dat:65:23	델파즈스의모자	Mũ Delpazs
+T:IT13.dat:66:23	리노스의모자	Mũ Linos
+T:IT13.dat:67:23	레릴의모자	Mũ Reril
+T:IT13.dat:68:23	메돌스의모자	Mũ Medols
+T:IT13.dat:69:23	마드르크의모자	Mũ Madrk
+T:IT13.dat:70:23	베르라크의모자	Mũ Berlac
+T:IT13.dat:71:23	길리우스의모자	Mũ Gilius
+T:IT13.dat:72:23	산스의모자	Mũ Sans
+T:IT13.dat:73:23	샌드의모자	Mũ Sand
+T:IT13.dat:74:23	아그란놈의모자	Mũ Agranom
+T:IT13.dat:75:23	아르가이의모자	Mũ Argai
+T:IT13.dat:76:23	시그니의모자	Mũ Signi
+T:IT13.dat:77:23	그란트의모자	Mũ Grant
+T:IT13.dat:78:23	플라의모자	Mũ Pla
+T:IT13.dat:79:23	즈놀의모자	Mũ Znol
+T:IT13.dat:80:23	차르조르의모자	Mũ Charzor
+T:IT13.dat:81:23	테바르스의모자	Mũ Tevars
+T:IT13.dat:82:23	세우드의모자	Mũ Seud
+T:IT13.dat:83:23	파리스의모자	Mũ Paris
+T:IT13.dat:84:23	파시의모자	Mũ Pasi
+T:IT13.dat:85:23	햐르그의모자	Mũ Hyarg
+T:IT13.dat:86:23	헤라의모자	Mũ Hera
+T:IT13.dat:87:23	게스르의모자	Mũ Gesr
+T:IT13.dat:88:23	고르라의모자	Mũ Gorra
+T:IT13.dat:89:23	포렐드의모자	Mũ Forreld
+T:IT13.dat:90:23	도믄의모자	Mũ Domun
+T:IT13.dat:91:23	레리아의모자	Mũ Leria
+T:IT13.dat:92:23	레위즈의모자	Mũ Lewis
+T:IT13.dat:93:23	메디아의모자	Mũ Media
+T:IT13.dat:94:23	아그로스의모자	Mũ Agros
+T:IT13.dat:95:23	헤르미의모자	Mũ Hermi
+T:IT13.dat:96:23	제프로의모자	Mũ Jepro
+T:IT13.dat:97:23	라푼델의모자	Mũ Rapunzel
+T:IT13.dat:98:23	다이고의모자	Mũ Daigo
+T:IT13.dat:99:23	시니의모자	Mũ Sini
+T:IT13.dat:100:23	와이번의모자	Mũ Wyvern
+T:IT13.dat:101:23	드레이크의모자	Mũ Drake
+T:IT13.dat:102:23	드래곤의모자	Mũ Dragon
+T:IT14.dat:0:23	하급복면	Mask hạ cấp
+T:IT14.dat:1:23	중급복면	Mask trung cấp
+T:IT14.dat:2:23	상급복면	Mask thượng cấp
+T:IT14.dat:3:23	은장복면	Mask bạc
+T:IT14.dat:4:23	금장복면	Mask vàng
+T:IT14.dat:5:23	넥가이딩	Neck Guiding
+T:IT14.dat:6:23	넨마스크	Nen Mask
+T:IT14.dat:7:23	큐마스크	Q Mask
+T:IT14.dat:8:23	론마스크	Ron Mask
+T:IT14.dat:9:23	업마스크	Up Mask
+T:IT14.dat:10:23	지마스크	Z Mask
+T:IT14.dat:11:23	포어쌔신	For Assassin
+T:IT14.dat:12:23	히든위크	Hidden Week
+T:IT14.dat:13:23	헬프원스	Help Once
+T:IT14.dat:14:23	원라이프	One Life
+T:IT14.dat:15:23	헬로위크	Hello Week
+T:IT14.dat:16:23	더마스크	The Mask
+T:IT14.dat:17:23	쟈리마스크	Jari Mask
+T:IT14.dat:18:23	로메마스크	Rome Mask
+T:IT14.dat:19:23	들락마스크	Dulak Mask
+T:IT14.dat:20:23	강화하급복면	Cường hóa Mask hạ cấp
+T:IT14.dat:21:23	강화중급복면	Cường hóa Mask trung cấp
+T:IT14.dat:22:23	강화상급복면	Cường hóa Mask thượng cấp
+T:IT14.dat:23:23	강화은장복면	Cường hóa Mask bạc
+T:IT14.dat:24:23	강화금장복면	Cường hóa Mask vàng
+T:IT14.dat:25:23	어퍼넥가이딩	Upper Neck Guiding
+T:IT14.dat:26:23	어퍼넨마스크	Upper Nen Mask
+T:IT14.dat:27:23	어퍼큐마스크	Upper Q Mask
+T:IT14.dat:28:23	어퍼론마스크	Upper Ron Mask
+T:IT14.dat:29:23	어퍼업마스크	Upper Up Mask
+T:IT14.dat:30:23	어퍼지마스크	Upper Z Mask
+T:IT14.dat:31:23	어퍼포어쌔신	Upper For Assassin
+T:IT14.dat:32:23	어퍼히든위크	Upper Hidden Week
+T:IT14.dat:33:23	어퍼헬프원스	Upper Help Once
+T:IT14.dat:34:23	어퍼원라이프	Upper One Life
+T:IT14.dat:35:23	어퍼헬로위크	Upper Hello Week
+T:IT14.dat:36:23	어퍼더마스크	Upper The Mask
+T:IT14.dat:37:23	어퍼쟈리마스크	Upper Jari Mask
+T:IT14.dat:38:23	어퍼로메마스크	Upper Rome Mask
+T:IT14.dat:39:23	어퍼들락마스크	Upper Dulak Mask
+T:IT14.dat:40:23	마스크루	Mask Roo
+T:IT14.dat:41:23	마스크친	Mask Chin
+T:IT14.dat:42:23	매스킹업	Masking Up
+T:IT14.dat:43:23	블랙캣츠	Black Cats
+T:IT14.dat:44:23	아라미스	Aramis
+T:IT14.dat:45:23	닌자복면	Mặt nạ Ninja
+T:IT14.dat:46:23	메릿블루	Merit Blue
+T:IT14.dat:47:23	매스킹투	Masking Two
+T:IT14.dat:48:23	혈마스크	Blood Mask
+T:IT14.dat:49:23	릴리윈드	Lily Wind
+T:IT14.dat:50:23	플라워넥	Flower Neck
+T:IT14.dat:51:23	매스킹큐	Masking Q
+T:IT14.dat:52:23	업사이드	Upside
+T:IT14.dat:53:23	커버링업	Covering Up
+T:IT14.dat:54:23	시크릿원	Secret One
+T:IT14.dat:55:23	포더닌사	For the Ninja
+T:IT14.dat:56:23	그립넥스	Grip Next
+T:IT14.dat:57:23	디펜딩넥	Defending Neck
+T:IT14.dat:58:23	데들리마스크	Deadly Mask
+T:IT14.dat:59:23	데스마스크	Death Mask
+T:IT14.dat:60:23	가에볼의복면	Mask Gaevol
+T:IT14.dat:61:23	가렌드의복면	Mask Garend
+T:IT14.dat:62:23	냐브의복면	Mask Nyab
+T:IT14.dat:63:23	네멜스의복면	Mask Nemels
+T:IT14.dat:64:23	다른드의복면	Mask Darend
+T:IT14.dat:65:23	다아나의복면	Mask Diana
+T:IT14.dat:66:23	라니움의복면	Mask Ranium
+T:IT14.dat:67:23	라린스의복면	Mask Rarins
+T:IT14.dat:68:23	마르실의복면	Mask Marcil
+T:IT14.dat:69:23	말기노의복면	Mask Malgino
+T:IT14.dat:70:23	키리아의복면	Mask Kiria
+T:IT14.dat:71:23	바라할의복면	Mask Barahal
+T:IT14.dat:72:23	세리올의복면	Mask Seriol
+T:IT14.dat:73:23	사라스의복면	Mask Sarus
+T:IT14.dat:74:23	아기스의복면	Mask Agis
+T:IT14.dat:75:23	아린더의복면	Mask Arinder
+T:IT14.dat:76:23	쥬리안의복면	Mask Julian
+T:IT14.dat:77:23	자나르의복면	Mask Janar
+T:IT14.dat:78:23	칼린의복면	Mask Calin
+T:IT14.dat:79:23	게르트의복면	Mask Gert
+T:IT14.dat:80:23	카도라의복면	Mask Kadora
+T:IT14.dat:81:23	카이론의복면	Mask Kairon
+T:IT14.dat:82:23	타라의복면	Mask Tara
+T:IT14.dat:83:23	르타스의복면	Mask Rtas
+T:IT14.dat:84:23	메데스의복면	Mask Medes
+T:IT14.dat:85:23	티누스의복면	Mask Tinus
+T:IT14.dat:86:23	하겐의복면	Mask Hagen
+T:IT14.dat:87:23	하란스의복면	Mask Harans
+T:IT14.dat:88:23	가이야의복면	Mask Gaiya
+T:IT14.dat:89:23	헤리스의복면	Mask Heris
+T:IT14.dat:90:23	네르스의복면	Mask Ners
+T:IT14.dat:91:23	펠라스의복면	Mask Pelas
+T:IT14.dat:92:23	데네의복면	Mask Dene
+T:IT14.dat:93:23	릴라의복면	Mask Lila
+T:IT14.dat:94:23	라야틀의복면	Mask Rayatl
+T:IT14.dat:95:23	라이오의복면	Mask Raio
+T:IT14.dat:96:23	마나스의복면	Mask Manas
+T:IT14.dat:97:23	모베일의복면	Mask Movail
+T:IT14.dat:98:23	단비의복면	Mask Danbi
+T:IT14.dat:99:23	환상의복면	Mask Ảo ảnh
+T:IT14.dat:100:23	와이번의복면	Mask Wyvern
+T:IT14.dat:101:23	드레이크의복면	Mask Drake
+T:IT14.dat:102:23	드래곤의복면	Mask Dragon
+T:IT15.dat:0:23	로우아머	Low Armor
+T:IT15.dat:1:23	미들아머	Middle Armor
+T:IT15.dat:2:23	하이아머	High Armor
+T:IT15.dat:3:23	루프아머	Loop Armor
+T:IT15.dat:4:23	쟈크아머	Jack Armor
+T:IT15.dat:5:23	업디펜스	Up Defense
+T:IT15.dat:6:23	캐어바디	Care Body
+T:IT15.dat:7:23	피어리스	Fearless
+T:IT15.dat:8:23	글랜디스	Glandis
+T:IT15.dat:9:23	엔디드롤	Ended Roll
+T:IT15.dat:10:23	에버롤링	Ever Rolling
+T:IT15.dat:11:23	서라운드	Surround
+T:IT15.dat:12:23	원디펜드	One Defend
+T:IT15.dat:13:23	에어쿠션	Air Cushion
+T:IT15.dat:14:23	트릭아머	Trick Armor
+T:IT15.dat:15:23	브랙아머	Brack Armor
+T:IT15.dat:16:23	파이널리	Finally
+T:IT15.dat:17:23	딥슬리그	Deep Sleeg
+T:IT15.dat:18:23	나달리트	Nadalit
+T:IT15.dat:19:23	플랑아머	Flan Armor
+T:IT15.dat:20:23	고급로우아머	Cao cấp Low Armor
+T:IT15.dat:21:23	고급미들아머	Cao cấp Middle Armor
+T:IT15.dat:22:23	고급하이아머	Cao cấp High Armor
+T:IT15.dat:23:23	고급루프아머	Cao cấp Loop Armor
+T:IT15.dat:24:23	고급쟈크아머	Cao cấp Jack Armor
+T:IT15.dat:25:23	어퍼업디펜스	Upper Up Defense
+T:IT15.dat:26:23	어퍼캐어바디	Upper Care Body
+T:IT15.dat:27:23	어퍼피어리스	Upper Fearless
+T:IT15.dat:28:23	어퍼글랜디스	Upper Glandis
+T:IT15.dat:29:23	어퍼엔디드롤	Upper Ended Roll
+T:IT15.dat:30:23	어퍼에버롤링	Upper Ever Rolling
+T:IT15.dat:31:23	어퍼서라운드	Upper Surround
+T:IT15.dat:32:23	어퍼원디펜드	Upper One Defend
+T:IT15.dat:33:23	어퍼에어쿠션	Upper Air Cushion
+T:IT15.dat:34:23	어퍼트릭아머	Upper Trick Armor
+T:IT15.dat:35:23	어퍼브랙아머	Upper Brack Armor
+T:IT15.dat:36:23	어퍼파이널리	Upper Finally
+T:IT15.dat:37:23	어퍼딥슬리그	Upper Deep Sleeg
+T:IT15.dat:38:23	어퍼나달리트	Upper Nadalit
+T:IT15.dat:39:23	어퍼플랑아머	Upper Flan Armor
+T:IT15.dat:40:23	인더무드	In the Mood
+T:IT15.dat:41:23	블랙레인	Black Rain
+T:IT15.dat:42:23	수페츄리	Supechury
+T:IT15.dat:43:23	에델바이	Edelvai
+T:IT15.dat:44:23	트리스바	Trisva
+T:IT15.dat:45:23	알타이노	Altaino
+T:IT15.dat:46:23	클레이츄	Claychu
+T:IT15.dat:47:23	케바튜스	Kebatus
+T:IT15.dat:48:23	믹스아머	Mix Armor
+T:IT15.dat:49:23	그랜드인	Grand In
+T:IT15.dat:50:23	샤인아머	Shine Armor
+T:IT15.dat:51:23	에버아머	Ever Armor
+T:IT15.dat:52:23	노블리스	Noblis
+T:IT15.dat:53:23	큐레이든	Cure Raiden
+T:IT15.dat:54:23	빅토리얼	Victorial
+T:IT15.dat:55:23	팩터앤뷰	Factor and View
+T:IT15.dat:56:23	알렉셔리	Alexury
+T:IT15.dat:57:23	브라이넨	Brynen
+T:IT15.dat:58:23	라샤딘아머	Rashadin Armor
+T:IT15.dat:59:23	브록스아머	Brox Armor
+T:IT15.dat:60:23	가늘롱의갑옷	Armor Ganulong
+T:IT15.dat:61:23	가레스의갑옷	Armor Gareth
+T:IT15.dat:62:23	나시카의갑옷	Armor Nasika
+T:IT15.dat:63:23	냐르의갑옷	Armor Nyar
+T:IT15.dat:64:23	다나의갑옷	Armor Dana
+T:IT15.dat:65:23	다누의갑옷	Armor Danu
+T:IT15.dat:66:23	라돈의갑옷	Armor Radon
+T:IT15.dat:67:23	라니아의갑옷	Armor Rania
+T:IT15.dat:68:23	마르나의갑옷	Armor Marna
+T:IT15.dat:69:23	마도르의갑옷	Armor Mador
+T:IT15.dat:70:23	바스의갑옷	Armor Bas
+T:IT15.dat:71:23	바인크의갑옷	Armor Vaink
+T:IT15.dat:72:23	사가의갑옷	Armor Saga
+T:IT15.dat:73:23	사이바의갑옷	Armor Saiba
+T:IT15.dat:74:23	아가논의갑옷	Armor Agnon
+T:IT15.dat:75:23	아그라의갑옷	Armor Agra
+T:IT15.dat:76:23	제워드의갑옷	Armor Jeward
+T:IT15.dat:77:23	제테스의갑옷	Armor Zetes
+T:IT15.dat:78:23	팬덤의갑옷	Armor Phantom
+T:IT15.dat:79:23	로스트의갑옷	Armor Lost
+T:IT15.dat:80:23	불마인의갑옷	Armor Bulmine
+T:IT15.dat:81:23	오르크스의갑옷	Armor Orcus
+T:IT15.dat:82:23	쏠즈의갑옷	Armor Sols
+T:IT15.dat:83:23	넥타르의갑옷	Armor Nectar
+T:IT15.dat:84:23	드라우프의갑옷	Armor Draup
+T:IT15.dat:85:23	홀리맨의갑옷	Armor Holyman
+T:IT15.dat:86:23	아그날의갑옷	Armor Agnal
+T:IT15.dat:87:23	판도라의갑옷	Armor Pandora
+T:IT15.dat:88:23	네크로의갑옷	Armor Necro
+T:IT15.dat:89:23	헤라클의갑옷	Armor Heracle
+T:IT15.dat:90:23	실리온의갑옷	Armor Silion
+T:IT15.dat:91:23	커닝스의갑옷	Armor Cunning
+T:IT15.dat:92:23	레퀴엠의갑옷	Armor Requiem
+T:IT15.dat:93:23	퀘이크의갑옷	Armor Quake
+T:IT15.dat:94:23	엘라덴의갑옷	Armor Elladen
+T:IT15.dat:95:23	데스의갑옷	Armor Death
+T:IT15.dat:96:23	오펀스의갑옷	Armor Orphans
+T:IT15.dat:97:23	문명의갑옷	Armor Văn minh
+T:IT15.dat:98:23	천군의갑옷	Armor Thiên quân
+T:IT15.dat:99:23	와인의갑옷	Armor Wine
+T:IT15.dat:100:23	와이번의갑옷	Armor Wyvern
+T:IT15.dat:101:23	드레이크의갑옷	Armor Drake
+T:IT15.dat:102:23	드래곤의갑옷	Armor Dragon
+T:IT16.dat:0:23	청동갑옷	Bronze Armor
+T:IT16.dat:1:23	강철갑옷	Steel Armor
+T:IT16.dat:2:23	헤비아머	Heavy Armor
+T:IT16.dat:3:23	블랙베어	Black Bear
+T:IT16.dat:4:23	매머드본	Mammoth Bone
+T:IT16.dat:5:23	매들리스	Madlis
+T:IT16.dat:6:23	하드판넬	Hard Panel
+T:IT16.dat:7:23	체인루프	Chain Loop
+T:IT16.dat:8:23	모어하더	More Harder
+T:IT16.dat:9:23	스트롱거	Stronger
+T:IT16.dat:10:23	노데미지	No Damage
+T:IT16.dat:11:23	헬디펜더	Hell Defender
+T:IT16.dat:12:23	튜리어드	Turiad
+T:IT16.dat:13:23	코이스큐	Koisqu
+T:IT16.dat:14:23	스토로피	Stropy
+T:IT16.dat:15:23	페르마타	Fermata
+T:IT16.dat:16:23	텐트업투	Tent Up To
+T:IT16.dat:17:23	본드갑옷	Bond Armor
+T:IT16.dat:18:23	하프메일	Half Mail
+T:IT16.dat:19:23	플레이트	Plate
+T:IT16.dat:20:23	고급청동갑옷	Cao cấp Bronze Armor
+T:IT16.dat:21:23	고급강철갑옷	Cao cấp Steel Armor
+T:IT16.dat:22:23	어퍼헤비아머	Upper Heavy Armor
+T:IT16.dat:23:23	어퍼블랙베어	Upper Black Bear
+T:IT16.dat:24:23	어퍼매머드본	Upper Mammoth Bone
+T:IT16.dat:25:23	어퍼매들리스	Upper Madlis
+T:IT16.dat:26:23	어퍼하드판넬	Upper Hard Panel
+T:IT16.dat:27:23	어퍼체인루프	Upper Chain Loop
+T:IT16.dat:28:23	어퍼모어하더	Upper More Harder
+T:IT16.dat:29:23	어퍼스트롱거	Upper Stronger
+T:IT16.dat:30:23	어퍼노데미지	Upper No Damage
+T:IT16.dat:31:23	어퍼헬디펜더	Upper Hell Defender
+T:IT16.dat:32:23	어퍼튜리어드	Upper Turiad
+T:IT16.dat:33:23	어퍼코이스큐	Upper Koisqu
+T:IT16.dat:34:23	어퍼스토로피	Upper Stropy
+T:IT16.dat:35:23	어퍼페르마타	Upper Fermata
+T:IT16.dat:36:23	어퍼텐트업투	Upper Tent Up To
+T:IT16.dat:37:23	어퍼본드갑옷	Upper Bond Armor
+T:IT16.dat:38:23	어퍼하프메일	Upper Half Mail
+T:IT16.dat:39:23	어퍼플레이트	Upper Plate
+T:IT16.dat:40:23	닥스중갑	Dax Heavy Armor
+T:IT16.dat:41:23	슬로우탑	Slow Top
+T:IT16.dat:42:23	할리하더	Halley Harder
+T:IT16.dat:43:23	팅퀼레스	Tinquiles
+T:IT16.dat:44:23	뎀업스다	Dem Upsda
+T:IT16.dat:45:23	다이네스	Dines
+T:IT16.dat:46:23	라이쿠스	Lycus
+T:IT16.dat:47:23	지르스트	Zirst
+T:IT16.dat:48:23	플레이탑	Play Top
+T:IT16.dat:49:23	투더아머	To the Armor
+T:IT16.dat:50:23	이펙트스	Effects
+T:IT16.dat:51:23	그랜디안	Grandian
+T:IT16.dat:52:23	블러스트	Blast
+T:IT16.dat:53:23	베이토만	Beytoman
+T:IT16.dat:54:23	제퍼스티	Zephysty
+T:IT16.dat:55:23	백투더탑	Back to the Top
+T:IT16.dat:56:23	이트리스	Itris
+T:IT16.dat:57:23	휘버트스	Hubertz
+T:IT16.dat:58:23	그란드메일	Grand Mail
+T:IT16.dat:59:23	플레이트고곤	Plate Gorgon
+T:IT16.dat:60:23	갈리아의메일	Mail Galia
+T:IT16.dat:61:23	해드만의메일	Mail Headman
+T:IT16.dat:62:23	트렌스의메일	Mail Trens
+T:IT16.dat:63:23	노리슨의메일	Mail Norison
+T:IT16.dat:64:23	데이아의메일	Mail Deia
+T:IT16.dat:65:23	데크의메일	Mail Deck
+T:IT16.dat:66:23	라누스의메일	Mail Lanus
+T:IT16.dat:67:23	피테스의메일	Mail Pites
+T:IT16.dat:68:23	맥라스의메일	Mail Maclas
+T:IT16.dat:69:23	미드린의메일	Mail Midrin
+T:IT16.dat:70:23	밴의메일	Mail Ban
+T:IT16.dat:71:23	베비드의메일	Mail Bevid
+T:IT16.dat:72:23	살라미의메일	Mail Salami
+T:IT16.dat:73:23	미데스의메일	Mail Mides
+T:IT16.dat:74:23	아리스의메일	Mail Aris
+T:IT16.dat:75:23	아브론의메일	Mail Abron
+T:IT16.dat:76:23	지트의메일	Mail Jit
+T:IT16.dat:77:23	지르라의메일	Mail Jirra
+T:IT16.dat:78:23	루샨드의메일	Mail Rushand
+T:IT16.dat:79:23	크로넬의메일	Mail Cronel
+T:IT16.dat:80:23	카르키의메일	Mail Karki
+T:IT16.dat:81:23	케르타의메일	Mail Kerta
+T:IT16.dat:82:23	타퀸의메일	Mail Tarquin
+T:IT16.dat:83:23	테미란의메일	Mail Temiran
+T:IT16.dat:84:23	파란테의메일	Mail Parante
+T:IT16.dat:85:23	르지의메일	Mail Rji
+T:IT16.dat:86:23	해럴드의메일	Mail Harold
+T:IT16.dat:87:23	하르피의메일	Mail Harpy
+T:IT16.dat:88:23	게리온의메일	Mail Gerion
+T:IT16.dat:89:23	게스트의메일	Mail Guest
+T:IT16.dat:90:23	노이스의메일	Mail Noise
+T:IT16.dat:91:23	나탈의메일	Mail Natal
+T:IT16.dat:92:23	데히라의메일	Mail Dehira
+T:IT16.dat:93:23	델의메일	Mail Del
+T:IT16.dat:94:23	락샤르의메일	Mail Rakshar
+T:IT16.dat:95:23	라슬로의메일	Mail Laslo
+T:IT16.dat:96:23	메가라의메일	Mail Megara
+T:IT16.dat:97:23	후오스의메일	Mail Huos
+T:IT16.dat:98:23	매기의메일	Mail Maggie
+T:IT16.dat:99:23	리온델의메일	Mail Lionel
+T:IT16.dat:100:23	와이번의메일	Mail Wyvern
+T:IT16.dat:101:23	드레이크의메일	Mail Drake
+T:IT16.dat:102:23	드래곤의메일	Mail Dragon
+T:IT17.dat:0:23	하급로브	Robe hạ cấp
+T:IT17.dat:1:23	중급로브	Robe trung cấp
+T:IT17.dat:2:23	상급로브	Robe thượng cấp
+T:IT17.dat:3:23	은장로브	Robe bạc
+T:IT17.dat:4:23	금장로브	Robe vàng
+T:IT17.dat:5:23	투디어스	Tudias
+T:IT17.dat:6:23	스트로퍼	Stroper
+T:IT17.dat:7:23	엠콜렉션	M Collection
+T:IT17.dat:8:23	마나토스	Manatos
+T:IT17.dat:9:23	매지컬투	Magical Two
+T:IT17.dat:10:23	블랙마나	Black Mana
+T:IT17.dat:11:23	리얼매직	Real Magic
+T:IT17.dat:13:23	마나리안	Manarian
+T:IT17.dat:14:23	에스컬릭	Escalic
+T:IT17.dat:15:23	울트라틱	Ultratic
+T:IT17.dat:16:23	매직마나	Magic Mana
+T:IT17.dat:17:23	샤크로브	Shark Robe
+T:IT17.dat:18:23	마나로브	Mana Robe
+T:IT17.dat:19:23	루샨로브	Rushan Robe
+T:IT17.dat:20:23	강화하급로브	Cường hóa Robe hạ cấp
+T:IT17.dat:21:23	강화중급로브	Cường hóa Robe trung cấp
+T:IT17.dat:22:23	강화상급로브	Cường hóa Robe thượng cấp
+T:IT17.dat:23:23	고급은장로브	Cao cấp Robe bạc
+T:IT17.dat:24:23	고급금장로브	Cao cấp Robe vàng
+T:IT17.dat:25:23	어퍼투디어스	Upper Tudias
+T:IT17.dat:26:23	어퍼스트로퍼	Upper Stroper
+T:IT17.dat:27:23	어퍼엠콜렉션	Upper M Collection
+T:IT17.dat:28:23	어퍼마나토스	Upper Manatos
+T:IT17.dat:29:23	어퍼매지컬투	Upper Magical Two
+T:IT17.dat:30:23	어퍼블랙마나	Upper Black Mana
+T:IT17.dat:31:23	어퍼리얼매직	Upper Real Magic
+T:IT17.dat:32:23	어퍼수퍼매직	Upper Super Magic
+T:IT17.dat:33:23	어퍼마나리안	Upper Manarian
+T:IT17.dat:34:23	어퍼에스컬릭	Upper Escalic
+T:IT17.dat:35:23	어퍼울트라틱	Upper Ultratic
+T:IT17.dat:36:23	어퍼매직마나	Upper Magic Mana
+T:IT17.dat:37:23	어퍼샤크로브	Upper Shark Robe
+T:IT17.dat:38:23	어퍼마나로브	Upper Mana Robe
+T:IT17.dat:39:23	어퍼루샨로브	Upper Rushan Robe
+T:IT17.dat:41:23	드레스터	Dresster
+T:IT17.dat:42:23	수트매직	Suit Magic
+T:IT17.dat:44:23	쿠쿠토닉	Cucutonic
+T:IT17.dat:45:23	사이어스	Sias
+T:IT17.dat:46:23	더블어퍼	Double Upper
+T:IT17.dat:47:23	쉬퍼매직	Shipper Magic
+T:IT17.dat:48:23	엘리아셀	Eliasel
+T:IT17.dat:49:23	크용베티	Kyongbeti
+T:IT17.dat:50:23	프라블러	Prabler
+T:IT17.dat:51:23	로크라트	Rocrat
+T:IT17.dat:52:23	블라드스	Bladds
+T:IT17.dat:53:23	레벨매직	Level Magic
+T:IT17.dat:54:23	원메이크	One Make
+T:IT17.dat:55:23	인터스파	Interspa
+T:IT17.dat:56:23	에일리언	Alien
+T:IT17.dat:57:23	그랜디언	Grandian
+T:IT17.dat:58:23	락스멜트즈	Rocksmeltz
+T:IT17.dat:59:23	트위스트로브	Twist Robe
+T:IT17.dat:60:23	게아타스의로브	Robe Geatas
+T:IT17.dat:61:23	게피에의로브	Robe Gepie
+T:IT17.dat:62:23	누아자의로브	Robe Nuaja
+T:IT17.dat:63:23	니바르겐의로브	Robe Nivargen
+T:IT17.dat:64:23	데로즈의로브	Robe Derose
+T:IT17.dat:65:23	델파즈스의로브	Robe Delpazs
+T:IT17.dat:66:23	리노스의로브	Robe Linos
+T:IT17.dat:67:23	레릴의로브	Robe Reril
+T:IT17.dat:68:23	메돌스의로브	Robe Medols
+T:IT17.dat:69:23	마드르크의로브	Robe Madrk
+T:IT17.dat:70:23	베르라크의로브	Robe Berlac
+T:IT17.dat:71:23	길리우스의로브	Robe Gilius
+T:IT17.dat:72:23	산스의로브	Robe Sans
+T:IT17.dat:73:23	샌드의로브	Robe Sand
+T:IT17.dat:74:23	아그란놈의로브	Robe Agranom
+T:IT17.dat:75:23	아르가이의로브	Robe Argai
+T:IT17.dat:76:23	시그니의로브	Robe Signi
+T:IT17.dat:77:23	그란트의로브	Robe Grant
+T:IT17.dat:78:23	플라의로브	Robe Pla
+T:IT17.dat:79:23	즈놀의로브	Robe Znol
+T:IT17.dat:80:23	차르조르의로브	Robe Charzor
+T:IT17.dat:81:23	테바르스의로브	Robe Tevars
+T:IT17.dat:82:23	세우드의로브	Robe Seud
+T:IT17.dat:83:23	파리스의로브	Robe Paris
+T:IT17.dat:84:23	파시의로브	Robe Pasi
+T:IT17.dat:85:23	햐르그의로브	Robe Hyarg
+T:IT17.dat:86:23	헤라의로브	Robe Hera
+T:IT17.dat:87:23	게스르의로브	Robe Gesr
+T:IT17.dat:88:23	고르라의로브	Robe Gorra
+T:IT17.dat:89:23	포렐드의로브	Robe Forreld
+T:IT17.dat:90:23	도믄의로브	Robe Domun
+T:IT17.dat:91:23	레리아의로브	Robe Leria
+T:IT17.dat:92:23	레위즈의로브	Robe Lewis
+T:IT17.dat:93:23	메디아의로브	Robe Media
+T:IT17.dat:94:23	아그로스의로브	Robe Agros
+T:IT17.dat:95:23	헤르미의로브	Robe Hermi
+T:IT17.dat:96:23	제프로의로브	Robe Jepro
+T:IT17.dat:97:23	라푼델의로브	Robe Rapunzel
+T:IT17.dat:98:23	다이고의로브	Robe Daigo
+T:IT17.dat:99:23	시니의로브	Robe Sini
+T:IT17.dat:100:23	와이번의로브	Robe Wyvern
+T:IT17.dat:101:23	드레이크의로브	Robe Drake
+T:IT17.dat:102:23	드래곤의로브	Robe Dragon
+T:IT18.dat:0:23	로우리더	Low Leather
+T:IT18.dat:1:23	미들리더	Middle Leather
+T:IT18.dat:2:23	하이리더	High Leather
+T:IT18.dat:3:23	슈퍼리더	Super Leather
+T:IT18.dat:4:23	폭스퍼스	Fox Furs
+T:IT18.dat:5:23	베어리더	Bear Leather
+T:IT18.dat:6:23	드래곤퍼	Dragon Fur
+T:IT18.dat:7:23	리더스씬	Leather Skin
+T:IT18.dat:8:23	하드리더	Hard Leather
+T:IT18.dat:9:23	맥스스킨	Max Skin
+T:IT18.dat:10:23	레오스킨	Leo Skin
+T:IT18.dat:11:23	몬스터퍼	Monster Fur
+T:IT18.dat:12:23	스킨하더	Skin Harder
+T:IT18.dat:13:23	웰메이든	Well Maiden
+T:IT18.dat:14:23	베오릭퍼	Beoric Fur
+T:IT18.dat:15:23	예티스킨	Yeti Skin
+T:IT18.dat:16:23	피넬리퍼	Pinelli Fur
+T:IT18.dat:17:23	리더마크	Leather Mark
+T:IT18.dat:18:23	루스리더	Loose Leather
+T:IT18.dat:19:23	레인리더	Rain Leather
+T:IT18.dat:20:23	어퍼로우리더	Upper Low Leather
+T:IT18.dat:21:23	어퍼미들리더	Upper Middle Leather
+T:IT18.dat:22:23	어퍼하이리더	Upper High Leather
+T:IT18.dat:23:23	어퍼슈퍼리더	Upper Super Leather
+T:IT18.dat:24:23	어퍼폭스퍼스	Upper Fox Furs
+T:IT18.dat:25:23	어퍼베어리더	Upper Bear Leather
+T:IT18.dat:26:23	어퍼드래곤퍼	Upper Dragon Fur
+T:IT18.dat:27:23	어퍼리더스씬	Upper Leather Skin
+T:IT18.dat:28:23	어퍼하드리더	Upper Hard Leather
+T:IT18.dat:29:23	어퍼맥스스킨	Upper Max Skin
+T:IT18.dat:30:23	어퍼레오스킨	Upper Leo Skin
+T:IT18.dat:31:23	어퍼몬스터퍼	Upper Monster Fur
+T:IT18.dat:32:23	어퍼스킨하더	Upper Skin Harder
+T:IT18.dat:33:23	어퍼웰메이든	Upper Well Maiden
+T:IT18.dat:34:23	어퍼베오릭퍼	Upper Beoric Fur
+T:IT18.dat:35:23	어퍼예티스킨	Upper Yeti Skin
+T:IT18.dat:36:23	어퍼피넬리퍼	Upper Pinelli Fur
+T:IT18.dat:37:23	어퍼리더마크	Upper Leather Mark
+T:IT18.dat:38:23	어퍼루스리더	Upper Loose Leather
+T:IT18.dat:39:23	어퍼레인리더	Upper Rain Leather
+T:IT18.dat:40:23	레어리더	Rare Leather
+T:IT18.dat:41:23	다크리더	Dark Leather
+T:IT18.dat:42:23	이블리더	Evil Leather
+T:IT18.dat:43:23	발록스킨	Balrog Skin
+T:IT18.dat:44:23	디몬스킨	Demon Skin
+T:IT18.dat:45:23	언더리더	Under Leather
+T:IT18.dat:46:23	엔디드퍼	Ended Fur
+T:IT18.dat:47:23	할로우퍼	Hollow Fur
+T:IT18.dat:48:23	디펜딩퍼	Defending Fur
+T:IT18.dat:49:23	매스미스	Mass Miss
+T:IT18.dat:50:23	매머디퍼	Mammoth Fur
+T:IT18.dat:51:23	드라이드	Dried
+T:IT18.dat:52:23	쿠쿠다드	Cucudad
+T:IT18.dat:53:23	레드스킨	Red Skin
+T:IT18.dat:54:23	브렌딩퍼	Blending Fur
+T:IT18.dat:55:23	아모레퍼	Amore Fur
+T:IT18.dat:56:23	더블스킨	Double Skin
+T:IT18.dat:57:23	텐가이드	Ten Guide
+T:IT18.dat:58:23	신마스리더	Shinmas Leather
+T:IT18.dat:59:23	혜리스리더	Heris Leather
+T:IT18.dat:60:23	가에볼의리더	Leather Gaevol
+T:IT18.dat:61:23	가렌드의리더	Leather Garend
+T:IT18.dat:62:23	냐브의리더	Leather Nyab
+T:IT18.dat:63:23	네멜스의리더	Leather Nemels
+T:IT18.dat:64:23	다른드의리더	Leather Darend
+T:IT18.dat:65:23	다아나의리더	Leather Diana
+T:IT18.dat:66:23	라니움의리더	Leather Ranium
+T:IT18.dat:67:23	라린스의리더	Leather Rarins
+T:IT18.dat:68:23	마르실의리더	Leather Marcil
+T:IT18.dat:69:23	말기노의리더	Leather Malgino
+T:IT18.dat:70:23	키리아의리더	Leather Kiria
+T:IT18.dat:71:23	바라할의리더	Leather Barahal
+T:IT18.dat:72:23	세리올의리더	Leather Seriol
+T:IT18.dat:73:23	사라스의리더	Leather Sarus
+T:IT18.dat:74:23	아기스의리더	Leather Agis
+T:IT18.dat:75:23	아린더의리더	Leather Arinder
+T:IT18.dat:76:23	쥬리안의리더	Leather Julian
+T:IT18.dat:77:23	자나르의리더	Leather Janar
+T:IT18.dat:78:23	칼린의리더	Leather Calin
+T:IT18.dat:79:23	게르트의리더	Leather Gert
+T:IT18.dat:80:23	카도라의리더	Leather Kadora
+T:IT18.dat:81:23	카이론의리더	Leather Kairon
+T:IT18.dat:82:23	타라의리더	Leather Tara
+T:IT18.dat:83:23	르타스의리더	Leather Rtas
+T:IT18.dat:84:23	메데스의리더	Leather Medes
+T:IT18.dat:85:23	티누스의리더	Leather Tinus
+T:IT18.dat:86:23	하겐의리더	Leather Hagen
+T:IT18.dat:87:23	하란스의리더	Leather Harans
+T:IT18.dat:88:23	가이야의리더	Leather Gaiya
+T:IT18.dat:89:23	헤리스의리더	Leather Heris
+T:IT18.dat:90:23	네르스의리더	Leather Ners
+T:IT18.dat:91:23	펠라스의리더	Leather Pelas
+T:IT18.dat:92:23	데네의리더	Leather Dene
+T:IT18.dat:93:23	릴라의리더	Leather Lila
+T:IT18.dat:94:23	라야틀의리더	Leather Rayatl
+T:IT18.dat:95:23	라이오의리더	Leather Raio
+T:IT18.dat:96:23	마나스의리더	Leather Manas
+T:IT18.dat:97:23	모베일의리더	Leather Movail
+T:IT18.dat:98:23	단비의리더	Leather Danbi
+T:IT18.dat:99:23	환상의리더	Leather Ảo ảnh
+T:IT18.dat:100:23	와이번의리더	Leather Wyvern
+T:IT18.dat:101:23	드레이크의리더	Leather Drake
+T:IT18.dat:102:23	드래곤의리더	Leather Dragon
+T:IT19.dat:0:23	하급부츠	Boots hạ cấp
+T:IT19.dat:1:23	중급부츠	Boots trung cấp
+T:IT19.dat:2:23	상급부츠	Boots thượng cấp
+T:IT19.dat:3:23	은장부츠	Boots bạc
+T:IT19.dat:4:23	금장부츠	Boots vàng
+T:IT19.dat:5:23	빅토리칸	Victorican
+T:IT19.dat:6:23	토마스투	Thomas Two
+T:IT19.dat:7:23	매튜어스	Matthews
+T:IT19.dat:8:23	바이킹스	Vikings
+T:IT19.dat:9:23	맥스킹스	Maxkings
+T:IT19.dat:10:23	모비딕스	Mobidix
+T:IT19.dat:11:23	프린스틱	Princestic
+T:IT19.dat:12:23	럭셔러스	Luxurious
+T:IT19.dat:13:23	튜리멘트	Turiment
+T:IT19.dat:14:23	툰더리얼	Thunderreal
+T:IT19.dat:15:23	퍼더링스	Furderings
+T:IT19.dat:16:23	멘델스존	Mendelssohn
+T:IT19.dat:17:23	샤닉스부츠	Shanics Boots
+T:IT19.dat:18:23	퍼린드부츠	Ferind Boots
+T:IT19.dat:19:23	마티스부츠	Matis Boots
+T:IT19.dat:20:23	강화하급부츠	Cường hóa Boots hạ cấp
+T:IT19.dat:21:23	강화중급부츠	Cường hóa Boots trung cấp
+T:IT19.dat:22:23	강화상급부츠	Cường hóa Boots thượng cấp
+T:IT19.dat:23:23	강화은장부츠	Cường hóa Boots bạc
+T:IT19.dat:24:23	강화금장부츠	Cường hóa Boots vàng
+T:IT19.dat:25:23	어퍼빅토리칸	Upper Victorican
+T:IT19.dat:26:23	어퍼토마스투	Upper Thomas Two
+T:IT19.dat:27:23	어퍼매튜어스	Upper Matthews
+T:IT19.dat:28:23	어퍼바이킹스	Upper Vikings
+T:IT19.dat:29:23	어퍼맥스킹스	Upper Maxkings
+T:IT19.dat:30:23	어퍼모비딕스	Upper Mobidix
+T:IT19.dat:31:23	어퍼프린스틱	Upper Princestic
+T:IT19.dat:32:23	어퍼럭셔러스	Upper Luxurious
+T:IT19.dat:33:23	어퍼튜리멘트	Upper Turiment
+T:IT19.dat:34:23	어퍼툰더리얼	Upper Thunderreal
+T:IT19.dat:35:23	어퍼퍼더링스	Upper Furderings
+T:IT19.dat:36:23	어퍼멘델스존	Upper Mendelssohn
+T:IT19.dat:37:23	어퍼샤닉스부츠	Upper Shanics Boots
+T:IT19.dat:38:23	어퍼퍼린드부츠	Upper Ferind Boots
+T:IT19.dat:39:23	어퍼마티스부츠	Upper Matis Boots
+T:IT19.dat:40:23	부티크스	Boutiques
+T:IT19.dat:41:23	클럽더원	Club the One
+T:IT19.dat:42:23	원디어스	Wondeus
+T:IT19.dat:43:23	무탈리컬	Mutalical
+T:IT19.dat:44:23	펠리컨스	Pelicans
+T:IT19.dat:45:23	레인부츠	Rain Boots
+T:IT19.dat:46:23	아임더원	I am the One
+T:IT19.dat:47:23	슬라이트	Slight
+T:IT19.dat:48:23	트리비얼	Trivial
+T:IT19.dat:49:23	버블플립	Bubble Flip
+T:IT19.dat:50:23	피더부츠	Feather Boots
+T:IT19.dat:51:23	바잇앤츠	Bite Ants
+T:IT19.dat:52:23	콜레이션	Collation
+T:IT19.dat:53:23	엘리멘트	Element
+T:IT19.dat:54:23	코트모스	Cotmos
+T:IT19.dat:55:23	팻스낵윌	Fat Snack Will
+T:IT19.dat:56:23	톨커브리	Tallcubri
+T:IT19.dat:57:23	그립통거	Grip Tonger
+T:IT19.dat:58:23	가나르크스	Ganarks
+T:IT19.dat:59:23	부린트부츠	Burint Boots
+T:IT19.dat:60:23	가늘롱의부츠	Boots Ganulong
+T:IT19.dat:61:23	가레스의부츠	Boots Gareth
+T:IT19.dat:62:23	나시카의부츠	Boots Nasika
+T:IT19.dat:63:23	냐르의부츠	Boots Nyar
+T:IT19.dat:64:23	다나의부츠	Boots Dana
+T:IT19.dat:65:23	다누의부츠	Boots Danu
+T:IT19.dat:66:23	라돈의부츠	Boots Radon
+T:IT19.dat:67:23	라니아의부츠	Boots Rania
+T:IT19.dat:68:23	마르나의부츠	Boots Marna
+T:IT19.dat:69:23	마도르의부츠	Boots Mador
+T:IT19.dat:70:23	바스의부츠	Boots Bas
+T:IT19.dat:71:23	바인크의부츠	Boots Vaink
+T:IT19.dat:72:23	사가의부츠	Boots Saga
+T:IT19.dat:73:23	사이바의부츠	Boots Saiba
+T:IT19.dat:74:23	아가논의부츠	Boots Agnon
+T:IT19.dat:75:23	아그라의부츠	Boots Agra
+T:IT19.dat:76:23	제워드의부츠	Boots Jeward
+T:IT19.dat:77:23	제테스의부츠	Boots Zetes
+T:IT19.dat:78:23	팬덤의부츠	Boots Phantom
+T:IT19.dat:79:23	로스트의부츠	Boots Lost
+T:IT19.dat:80:23	불마인의부츠	Boots Bulmine
+T:IT19.dat:81:23	오르크스의부츠	Boots Orcus
+T:IT19.dat:82:23	쏠즈의부츠	Boots Sols
+T:IT19.dat:83:23	넥타르의부츠	Boots Nectar
+T:IT19.dat:84:23	드라우프의부츠	Boots Draup
+T:IT19.dat:85:23	홀리맨의부츠	Boots Holyman
+T:IT19.dat:86:23	아그날의부츠	Boots Agnal
+T:IT19.dat:87:23	판도라의부츠	Boots Pandora
+T:IT19.dat:88:23	네크로의부츠	Boots Necro
+T:IT19.dat:89:23	헤라클의부츠	Boots Heracle
+T:IT19.dat:90:23	실리온의부츠	Boots Silion
+T:IT19.dat:91:23	커닝스의부츠	Boots Cunning
+T:IT19.dat:92:23	레퀴엠의부츠	Boots Requiem
+T:IT19.dat:93:23	퀘이크의부츠	Boots Quake
+T:IT19.dat:94:23	엘라덴의부츠	Boots Elladen
+T:IT19.dat:95:23	데스의부츠	Boots Death
+T:IT19.dat:96:23	오펀스의부츠	Boots Orphans
+T:IT19.dat:97:23	문명의부츠	Boots Văn minh
+T:IT19.dat:98:23	천군의부츠	Boots Thiên quân
+T:IT19.dat:99:23	와인의부츠	Boots Wine
+T:IT19.dat:100:23	와이번의부츠	Boots Wyvern
+T:IT19.dat:101:23	드레이크의부츠	Boots Drake
+T:IT19.dat:102:23	드래곤의부츠	Boots Dragon
+T:IT20.dat:0:23	로우부츠	Low Boots
+T:IT20.dat:1:23	미들부츠	Middle Boots
+T:IT20.dat:2:23	하이부츠	High Boots
+T:IT20.dat:3:23	루프부츠	Loop Boots
+T:IT20.dat:4:23	쟈크부츠	Jack Boots
+T:IT20.dat:5:23	자이언틱	Gigantic
+T:IT20.dat:6:23	휴즈매스	Huge Mass
+T:IT20.dat:7:23	메가사인	Mega Sign
+T:IT20.dat:8:23	지언트셀	Giant Cell
+T:IT20.dat:9:23	이안티즘	Ianthism
+T:IT20.dat:10:23	빅어프랙	Big Afrac
+T:IT20.dat:11:23	마르크몰	Markmol
+T:IT20.dat:12:23	레비티단	Levitidan
+T:IT20.dat:13:23	비지네버	Visinever
+T:IT20.dat:14:23	콜로코스	Colocos
+T:IT20.dat:15:23	힛타운스	Hittowns
+T:IT20.dat:16:23	매드몬드	Mad Mond
+T:IT20.dat:17:23	쟈트라스	Jatras
+T:IT20.dat:18:23	멘드부츠	Mend Boots
+T:IT20.dat:19:23	로크로우	Rockrow
+T:IT20.dat:20:23	어퍼로우부츠	Upper Low Boots
+T:IT20.dat:21:23	어퍼미들부츠	Upper Middle Boots
+T:IT20.dat:22:23	어퍼하이부츠	Upper High Boots
+T:IT20.dat:23:23	어퍼루프부츠	Upper Loop Boots
+T:IT20.dat:24:23	어퍼쟈크부츠	Upper Jack Boots
+T:IT20.dat:25:23	어퍼자이언틱	Upper Gigantic
+T:IT20.dat:26:23	어퍼휴즈매스	Upper Huge Mass
+T:IT20.dat:27:23	어퍼메가사인	Upper Mega Sign
+T:IT20.dat:28:23	어퍼지언트셀	Upper Giant Cell
+T:IT20.dat:29:23	어퍼이안티즘	Upper Ianthism
+T:IT20.dat:30:23	어퍼빅어프랙	Upper Big Afrac
+T:IT20.dat:31:23	어퍼마르크몰	Upper Markmol
+T:IT20.dat:32:23	어퍼레비티단	Upper Levitidan
+T:IT20.dat:33:23	어퍼비지네버	Upper Visinever
+T:IT20.dat:34:23	어퍼콜로코스	Upper Colocos
+T:IT20.dat:35:23	어퍼힛타운스	Upper Hittowns
+T:IT20.dat:36:23	어퍼매드몬드	Upper Mad Mond
+T:IT20.dat:37:23	어퍼쟈트라스	Upper Jatras
+T:IT20.dat:38:23	어퍼멘드부츠	Upper Mend Boots
+T:IT20.dat:39:23	어퍼로크로우	Upper Rockrow
+T:IT20.dat:40:23	페릭티스	Ferictis
+T:IT20.dat:41:23	블레드네	Bledne
+T:IT20.dat:42:23	포춘컴포	Fortune Compo
+T:IT20.dat:43:23	엔조이터	Enjoyter
+T:IT20.dat:44:23	이모니즘	Imonism
+T:IT20.dat:45:23	비아티튜	Viatitu
+T:IT20.dat:46:23	이데모니	Idemoni
+T:IT20.dat:47:23	엠피리컬	Empirical
+T:IT20.dat:48:23	필라소페	Philasofe
+T:IT20.dat:49:23	크리티커	Criticer
+T:IT20.dat:50:23	모럴애니	Moral Any
+T:IT20.dat:51:23	칸티안트	Kantiant
+T:IT20.dat:52:23	아웃룩온	Outlook On
+T:IT20.dat:53:23	데판트스	Defants
+T:IT20.dat:54:23	마이얼티	Myalty
+T:IT20.dat:55:23	컨스티스	Constis
+T:IT20.dat:56:23	비잉포잇	Being Poit
+T:IT20.dat:57:23	에피쿠로	Epicuro
+T:IT20.dat:58:23	그른드부츠	Grund Boots
+T:IT20.dat:59:23	빅어스부츠	Big Earth Boots
+T:IT20.dat:60:23	갈리아의그립	Grip Galia
+T:IT20.dat:61:23	해드만의그립	Grip Headman
+T:IT20.dat:62:23	트렌스의그립	Grip Trens
+T:IT20.dat:63:23	노리슨의그립	Grip Norison
+T:IT20.dat:64:23	데이아의그립	Grip Deia
+T:IT20.dat:65:23	데크의그립	Grip Deck
+T:IT20.dat:66:23	라누스의그립	Grip Lanus
+T:IT20.dat:67:23	피테스의그립	Grip Pites
+T:IT20.dat:68:23	맥라스의그립	Grip Maclas
+T:IT20.dat:69:23	미드린의그립	Grip Midrin
+T:IT20.dat:70:23	밴의그립	Grip Ban
+T:IT20.dat:71:23	베비드의그립	Grip Bevid
+T:IT20.dat:72:23	살라미의그립	Grip Salami
+T:IT20.dat:73:23	미데스의그립	Grip Mides
+T:IT20.dat:74:23	아리스의그립	Grip Aris
+T:IT20.dat:75:23	아브론의그립	Grip Abron
+T:IT20.dat:76:23	지트의그립	Grip Jit
+T:IT20.dat:77:23	지르라의그립	Grip Jirra
+T:IT20.dat:78:23	루샨드의그립	Grip Rushand
+T:IT20.dat:79:23	크로넬의그립	Grip Cronel
+T:IT20.dat:80:23	카르키의그립	Grip Karki
+T:IT20.dat:81:23	케르타의그립	Grip Kerta
+T:IT20.dat:82:23	타퀸의그립	Grip Tarquin
+T:IT20.dat:83:23	테미란의그립	Grip Temiran
+T:IT20.dat:84:23	파란테의그립	Grip Parante
+T:IT20.dat:85:23	르지의그립	Grip Rji
+T:IT20.dat:86:23	해럴드의그립	Grip Harold
+T:IT20.dat:87:23	하르피의그립	Grip Harpy
+T:IT20.dat:88:23	게리온의그립	Grip Gerion
+T:IT20.dat:89:23	게스트의그립	Grip Guest
+T:IT20.dat:90:23	노이스의그립	Grip Noise
+T:IT20.dat:91:23	나탈의그립	Grip Natal
+T:IT20.dat:92:23	데히라의그립	Grip Dehira
+T:IT20.dat:93:23	델의그립	Grip Del
+T:IT20.dat:94:23	락샤르의그립	Grip Rakshar
+T:IT20.dat:95:23	라슬로의그립	Grip Laslo
+T:IT20.dat:96:23	메가라의그립	Grip Megara
+T:IT20.dat:97:23	후오스의그립	Grip Huos
+T:IT20.dat:98:23	매기의그립	Grip Maggie
+T:IT20.dat:99:23	리온델의그립	Grip Lionel
+T:IT20.dat:100:23	와이번의그립	Grip Wyvern
+T:IT20.dat:101:23	드레이크의그립	Grip Drake
+T:IT20.dat:102:23	드래곤의그립	Grip Dragon
+T:IT21.dat:0:23	로매직슈	Low Magic Shoe
+T:IT21.dat:1:23	미들릭슈	Middlic Shoe
+T:IT21.dat:2:23	하이퍼슈	Hyper Shoe
+T:IT21.dat:3:23	루프릭슈	Looplic Shoe
+T:IT21.dat:4:23	쟈크슈즈	Jack Shoes
+T:IT21.dat:5:23	튠드릭슈	Tunedlic Shoe
+T:IT21.dat:6:23	인스트슈	Inst Shoe
+T:IT21.dat:7:23	디렉트슈	Direct Shoe
+T:IT21.dat:8:23	언더인슈	Under-in Shoe
+T:IT21.dat:9:23	데이니슈	Daini Shoe
+T:IT21.dat:10:23	클리어슈	Clear Shoe
+T:IT21.dat:11:23	인디케이	Indicate
+T:IT21.dat:12:23	프로나운	Pronoun
+T:IT21.dat:13:23	어드케이	Adcay
+T:IT21.dat:14:23	노티스보	Notice Bo
+T:IT21.dat:15:23	데몬스트	Demonst
+T:IT21.dat:16:23	언오더슈	Unorder Shoe
+T:IT21.dat:17:23	브랜드슈	Brand Shoe
+T:IT21.dat:18:23	마기즈슈	Magiz Shoe
+T:IT21.dat:19:23	파이널슈	Final Shoe
+T:IT21.dat:20:23	어퍼로매직슈	Upper Low Magic Shoe
+T:IT21.dat:21:23	어퍼미들릭슈	Upper Middlic Shoe
+T:IT21.dat:22:23	어퍼하이퍼슈	Upper Hyper Shoe
+T:IT21.dat:23:23	어퍼루프릭슈	Upper Looplic Shoe
+T:IT21.dat:24:23	어퍼쟈크슈즈	Upper Jack Shoes
+T:IT21.dat:25:23	어퍼튠드릭슈	Upper Tunedlic Shoe
+T:IT21.dat:26:23	어퍼인스트슈	Upper Inst Shoe
+T:IT21.dat:27:23	어퍼디렉트슈	Upper Direct Shoe
+T:IT21.dat:28:23	어퍼언더인슈	Upper Under-in Shoe
+T:IT21.dat:29:23	어퍼데이니슈	Upper Daini Shoe
+T:IT21.dat:30:23	어퍼클리어슈	Upper Clear Shoe
+T:IT21.dat:31:23	어퍼인디케이	Upper Indicate
+T:IT21.dat:32:23	어퍼프로나운	Upper Pronoun
+T:IT21.dat:33:23	어퍼어드케이	Upper Adcay
+T:IT21.dat:34:23	어퍼노티스보	Upper Notice Bo
+T:IT21.dat:35:23	어퍼데몬스트	Upper Demonst
+T:IT21.dat:36:23	어퍼언오더슈	Upper Unorder Shoe
+T:IT21.dat:37:23	어퍼브랜드슈	Upper Brand Shoe
+T:IT21.dat:38:23	어퍼마기즈슈	Upper Magiz Shoe
+T:IT21.dat:39:23	어퍼파이널슈	Upper Final Shoe
+T:IT21.dat:40:23	트러스트	Trust
+T:IT21.dat:41:23	리라이얼	Reliall
+T:IT21.dat:42:23	워드스네	Wordsne
+T:IT21.dat:43:23	포이디스	Poidis
+T:IT21.dat:44:23	호픈네스	Hopness
+T:IT21.dat:45:23	스케레스	Sceres
+T:IT21.dat:46:23	포크스토	Forkstow
+T:IT21.dat:47:23	테블레셔	Tableshear
+T:IT21.dat:48:23	인스텝퍼	In Stepper
+T:IT21.dat:49:23	어너더풋	Another Foot
+T:IT21.dat:50:23	어전트풋	Urgent Foot
+T:IT21.dat:51:23	빅매직풋	Big Magic Foot
+T:IT21.dat:52:23	에드앤슈	Ed and Shoe
+T:IT21.dat:53:23	트래드슈	Tread Shoe
+T:IT21.dat:54:23	니팅앨즈	Knitting Els
+T:IT21.dat:55:23	프터유아	Ptuya
+T:IT21.dat:56:23	비포데스	Before Death
+T:IT21.dat:57:23	프리비스	Privis
+T:IT21.dat:58:23	릭즈릿슈	Lixlit Shoe
+T:IT21.dat:59:23	파이데스슈	Faides Shoe
+T:IT21.dat:60:23	게아타스의천신	Giày vải Geatas
+T:IT21.dat:61:23	게피에의천신	Giày vải Gepie
+T:IT21.dat:62:23	누아자의천신	Giày vải Nuaja
+T:IT21.dat:63:23	니바르겐의천신	Giày vải Nivargen
+T:IT21.dat:64:23	데로즈의천신	Giày vải Derose
+T:IT21.dat:65:23	델파즈스의천신	Giày vải Delpazs
+T:IT21.dat:66:23	리노스의천신	Giày vải Linos
+T:IT21.dat:67:23	레릴의천신	Giày vải Reril
+T:IT21.dat:68:23	메돌스의천신	Giày vải Medols
+T:IT21.dat:69:23	마드르크의천신	Giày vải Madrk
+T:IT21.dat:70:23	베르라크의천신	Giày vải Berlac
+T:IT21.dat:71:23	길리우스의천신	Giày vải Gilius
+T:IT21.dat:72:23	산스의천신	Giày vải Sans
+T:IT21.dat:73:23	샌드의천신	Giày vải Sand
+T:IT21.dat:74:23	아그란놈의천신	Giày vải Agranom
+T:IT21.dat:75:23	아르가이의천신	Giày vải Argai
+T:IT21.dat:76:23	시그니의천신	Giày vải Signi
+T:IT21.dat:77:23	그란트의천신	Giày vải Grant
+T:IT21.dat:78:23	플라의천신	Giày vải Pla
+T:IT21.dat:79:23	즈놀의천신	Giày vải Znol
+T:IT21.dat:80:23	차르조르의천신	Giày vải Charzor
+T:IT21.dat:81:23	테바르스의천신	Giày vải Tevars
+T:IT21.dat:82:23	세우드의천신	Giày vải Seud
+T:IT21.dat:83:23	파리스의천신	Giày vải Paris
+T:IT21.dat:84:23	파시의천신	Giày vải Pasi
+T:IT21.dat:85:23	햐르그의천신	Giày vải Hyarg
+T:IT21.dat:86:23	헤라의천신	Giày vải Hera
+T:IT21.dat:87:23	게스르의천신	Giày vải Gesr
+T:IT21.dat:88:23	고르라의천신	Giày vải Gorra
+T:IT21.dat:89:23	포렐드의천신	Giày vải Forreld
+T:IT21.dat:90:23	도믄의천신	Giày vải Domun
+T:IT21.dat:91:23	레리아의천신	Giày vải Leria
+T:IT21.dat:92:23	레위즈의천신	Giày vải Lewis
+T:IT21.dat:93:23	메디아의천신	Giày vải Media
+T:IT21.dat:94:23	아그로스의천신	Giày vải Agros
+T:IT21.dat:95:23	헤르미의천신	Giày vải Hermi
+T:IT21.dat:96:23	제프로의천신	Giày vải Jepro
+T:IT21.dat:97:23	라푼델의천신	Giày vải Rapunzel
+T:IT21.dat:98:23	다이고의천신	Giày vải Daigo
+T:IT21.dat:99:23	시니의천신	Giày vải Sini
+T:IT21.dat:100:23	와이번의천신	Giày vải Wyvern
+T:IT21.dat:101:23	드레이크의천신	Giày vải Drake
+T:IT21.dat:102:23	드래곤의천신	Giày vải Dragon
+T:IT22.dat:0:23	로우리더슈즈	Low Leather Shoes
+T:IT22.dat:1:23	미들리더슈즈	Middle Leather Shoes
+T:IT22.dat:2:23	하이리더슈즈	High Leather Shoes
+T:IT22.dat:3:23	루프리더슈즈	Loop Leather Shoes
+T:IT22.dat:4:23	쟈크리더슈즈	Jack Leather Shoes
+T:IT22.dat:5:23	맥스리티슈즈	Maxrity Shoes
+T:IT22.dat:6:23	머스트피슈즈	Mustpi Shoes
+T:IT22.dat:7:23	리즌세버슈즈	Reason Sever Shoes
+T:IT22.dat:8:23	벤스비터슈즈	Bens Biter Shoes
+T:IT22.dat:9:23	디멘드소슈즈	Demandso Shoes
+T:IT22.dat:10:23	디스멘틀슈즈	Dismantle Shoes
+T:IT22.dat:11:23	리어프로슈즈	Rearpro Shoes
+T:IT22.dat:12:23	기어시비슈즈	Gearsibi Shoes
+T:IT22.dat:13:23	엔세이디슈즈	Ensaidi Shoes
+T:IT22.dat:14:23	포럼쿨러슈즈	Forum Cooler Shoes
+T:IT22.dat:15:23	포벌리더슈즈	Pobal Leader Shoes
+T:IT22.dat:16:23	언퍼블러슈즈	Unpubler Shoes
+T:IT22.dat:17:23	드라나스슈즈	Dranas Shoes
+T:IT22.dat:18:23	모스수즈	Moss Shoes
+T:IT22.dat:19:23	뮤트수즈	Mute Shoes
+T:IT22.dat:20:23	어퍼로우슈즈	Upper Low Shoes
+T:IT22.dat:21:23	어퍼미들슈즈	Upper Middle Shoes
+T:IT22.dat:22:23	어퍼하이슈즈	Upper High Shoes
+T:IT22.dat:23:23	어퍼루프슈즈	Upper Loop Shoes
+T:IT22.dat:25:23	어퍼맥스슈즈	Upper Max Shoes
+T:IT22.dat:26:23	어퍼머스슈즈	Upper Must Shoes
+T:IT22.dat:27:23	어퍼리즌슈즈	Upper Reason Shoes
+T:IT22.dat:28:23	어퍼벤스슈즈	Upper Bens Shoes
+T:IT22.dat:29:23	어퍼디멘슈즈	Upper Demand Shoes
+T:IT22.dat:30:23	어퍼디스슈즈	Upper Dis Shoes
+T:IT22.dat:31:23	어퍼리어슈즈	Upper Rear Shoes
+T:IT22.dat:32:23	어퍼기어슈즈	Upper Gear Shoes
+T:IT22.dat:33:23	어퍼엔세슈즈	Upper Ensai Shoes
+T:IT22.dat:34:23	어퍼포럼슈즈	Upper Forum Shoes
+T:IT22.dat:35:23	어퍼포벌슈즈	Upper Pobal Shoes
+T:IT22.dat:36:23	어퍼언퍼슈즈	Upper Unpub Shoes
+T:IT22.dat:37:23	어퍼나스슈즈	Upper Nas Shoes
+T:IT22.dat:38:23	어퍼모스슈즈	Upper Moss Shoes
+T:IT22.dat:39:23	어퍼뮤트슈즈	Upper Mute Shoes
+T:IT22.dat:40:23	레미드릭	Remidric
+T:IT22.dat:41:23	빈퍼블릭	Bin Public
+T:IT22.dat:42:23	서브젝스	Subjects
+T:IT22.dat:43:23	노티스퍼	Notice Per
+T:IT22.dat:44:23	스노우머	Snow Mer
+T:IT22.dat:45:23	커트이든	Cut Eden
+T:IT22.dat:46:23	퍼스웨팅	First Wetting
+T:IT22.dat:47:23	서스펜진	Suspengin
+T:IT22.dat:48:23	프로라닉	Prolanic
+T:IT22.dat:49:23	엘보우론	Elbow Ron
+T:IT22.dat:50:23	행온더문	Hang on the Moon
+T:IT22.dat:51:23	워패밀리	War Family
+T:IT22.dat:52:23	디비디안	Dividian
+T:IT22.dat:53:23	하이어스	Hyers
+T:IT22.dat:54:23	스크리스	Scris
+T:IT22.dat:55:23	프로섹터	Prosector
+T:IT22.dat:56:23	오피세스	Opices
+T:IT22.dat:57:23	이미디어	Immedia
+T:IT22.dat:58:23	스피니아	Spinia
+T:IT22.dat:59:23	모르크즈	Morkz
+T:IT22.dat:60:23	가에볼의슈즈	Shoes Gaevol
+T:IT22.dat:61:23	가렌드의슈즈	Shoes Garend
+T:IT22.dat:62:23	냐브의슈즈	Shoes Nyab
+T:IT22.dat:63:23	네멜스의슈즈	Shoes Nemels
+T:IT22.dat:64:23	다른드의슈즈	Shoes Darend
+T:IT22.dat:65:23	다아나의슈즈	Shoes Diana
+T:IT22.dat:66:23	라니움의슈즈	Shoes Ranium
+T:IT22.dat:67:23	라린스의슈즈	Shoes Rarins
+T:IT22.dat:68:23	마르실의슈즈	Shoes Marcil
+T:IT22.dat:69:23	말기노의슈즈	Shoes Malgino
+T:IT22.dat:70:23	키리아의슈즈	Shoes Kiria
+T:IT22.dat:71:23	바라할의슈즈	Shoes Barahal
+T:IT22.dat:72:23	세리올의슈즈	Shoes Seriol
+T:IT22.dat:73:23	사라스의슈즈	Shoes Sarus
+T:IT22.dat:74:23	아기스의슈즈	Shoes Agis
+T:IT22.dat:75:23	아린더의슈즈	Shoes Arinder
+T:IT22.dat:76:23	쥬리안의슈즈	Shoes Julian
+T:IT22.dat:77:23	자나르의슈즈	Shoes Janar
+T:IT22.dat:78:23	칼린의슈즈	Shoes Calin
+T:IT22.dat:79:23	게르트의슈즈	Shoes Gert
+T:IT22.dat:80:23	카도라의슈즈	Shoes Kadora
+T:IT22.dat:81:23	카이론의슈즈	Shoes Kairon
+T:IT22.dat:82:23	타라의슈즈	Shoes Tara
+T:IT22.dat:83:23	르타스의슈즈	Shoes Rtas
+T:IT22.dat:84:23	메데스의슈즈	Shoes Medes
+T:IT22.dat:85:23	티누스의슈즈	Shoes Tinus
+T:IT22.dat:86:23	하겐의슈즈	Shoes Hagen
+T:IT22.dat:87:23	하란스의슈즈	Shoes Harans
+T:IT22.dat:88:23	가이야의슈즈	Shoes Gaiya
+T:IT22.dat:89:23	헤리스의슈즈	Shoes Heris
+T:IT22.dat:90:23	네르스의슈즈	Shoes Ners
+T:IT22.dat:91:23	펠라스의슈즈	Shoes Pelas
+T:IT22.dat:92:23	데네의슈즈	Shoes Dene
+T:IT22.dat:93:23	릴라의슈즈	Shoes Lila
+T:IT22.dat:94:23	라야틀의슈즈	Shoes Rayatl
+T:IT22.dat:95:23	라이오의슈즈	Shoes Raio
+T:IT22.dat:96:23	마나스의슈즈	Shoes Manas
+T:IT22.dat:97:23	모베일의슈즈	Shoes Movail
+T:IT22.dat:98:23	단비의슈즈	Shoes Danbi
+T:IT22.dat:99:23	환상의슈즈	Shoes Ảo ảnh
+T:IT22.dat:100:23	와이번의슈즈	Shoes Wyvern
+T:IT22.dat:101:23	드레이크의슈즈	Shoes Drake
+T:IT22.dat:102:23	드래곤의슈즈	Shoes Dragon
+T:IT23.dat:0:23	로우쉴드	Low Shield
+T:IT23.dat:1:23	미들쉴드	Middle Shield
+T:IT23.dat:2:23	하이쉴드	High Shield
+T:IT23.dat:3:23	루프쉴드	Loop Shield
+T:IT23.dat:4:23	쟈크쉴드	Jack Shield
+T:IT23.dat:5:23	튠드릭스	Tunedrix
+T:IT23.dat:6:23	어프릭쉴	Aprix Shield
+T:IT23.dat:7:23	큐디펜드	Q Defend
+T:IT23.dat:8:23	하더쉴드	Harder Shield
+T:IT23.dat:9:23	키퍼그루	Keeper Gru
+T:IT23.dat:10:23	피네게터	Finegater
+T:IT23.dat:11:23	티케매너	Take Manner
+T:IT23.dat:12:23	리킹쉴드	Leaking Shield
+T:IT23.dat:13:23	베네피터	Benefiter
+T:IT23.dat:14:23	호테리스	Hoteris
+T:IT23.dat:15:23	어커모데	Accommode
+T:IT23.dat:16:23	치어비터	Cheer Biter
+T:IT23.dat:17:23	샤르자크	Sharzak
+T:IT23.dat:18:23	루닉패널	Runic Panel
+T:IT23.dat:19:23	파인트실드	Paint Shield
+T:IT23.dat:20:23	어퍼로우쉴드	Upper Low Shield
+T:IT23.dat:21:23	어퍼미들쉴드	Upper Middle Shield
+T:IT23.dat:22:23	어퍼하이쉴드	Upper High Shield
+T:IT23.dat:23:23	어퍼루프쉴드	Upper Loop Shield
+T:IT23.dat:24:23	어퍼쟈크쉴드	Upper Jack Shield
+T:IT23.dat:25:23	어퍼튠드릭스	Upper Tunedrix
+T:IT23.dat:26:23	어퍼어프릭쉴	Upper Aprix Shield
+T:IT23.dat:27:23	어퍼큐디펜드	Upper Q Defend
+T:IT23.dat:28:23	어퍼하더쉴드	Upper Harder Shield
+T:IT23.dat:29:23	어퍼키퍼그루	Upper Keeper Gru
+T:IT23.dat:30:23	어퍼피네게터	Upper Finegater
+T:IT23.dat:31:23	어퍼티케매너	Upper Take Manner
+T:IT23.dat:32:23	어퍼리킹쉴드	Upper Leaking Shield
+T:IT23.dat:33:23	어퍼베네피터	Upper Benefiter
+T:IT23.dat:34:23	어퍼호테리스	Upper Hoteris
+T:IT23.dat:35:23	어퍼어커모데	Upper Accommode
+T:IT23.dat:36:23	어퍼치어비터	Upper Cheer Biter
+T:IT23.dat:37:23	어퍼샤르자크	Upper Sharzak
+T:IT23.dat:38:23	어퍼루닉패널	Upper Runic Panel
+T:IT23.dat:39:23	어퍼파인트실드	Upper Paint Shield
+T:IT23.dat:40:23	레어블루쉴드	Rare Blue Shield
+T:IT23.dat:41:23	브라드닉쉴드	Bradnic Shield
+T:IT23.dat:42:23	헤이어리쉴드	Heiry Shield
+T:IT23.dat:43:23	록앤쉴드쉴드	Rock and Shield Shield
+T:IT23.dat:44:23	핸디드쉴쉴드	Handed Shield
+T:IT23.dat:45:23	후디스트쉴드	Hudist Shield
+T:IT23.dat:46:23	컨커렌스쉴드	Concurrence Shield
+T:IT23.dat:47:23	세이미리쉴드	Saimiri Shield
+T:IT23.dat:48:23	투어버스쉴드	Tourbus Shield
+T:IT23.dat:49:23	헤브노도쉴드	Hebnodo Shield
+T:IT23.dat:50:23	웨이스댓쉴드	Waste That Shield
+T:IT23.dat:51:23	프로제네쉴드	Progene Shield
+T:IT23.dat:52:23	유세지스쉴드	Usages Shield
+T:IT23.dat:53:23	카오스에쉴드	Chaos Shield
+T:IT23.dat:54:23	지나배닌쉴드	Jinabaenin Shield
+T:IT23.dat:55:23	아트로닉쉴드	Atronic Shield
+T:IT23.dat:56:23	카데미닉쉴드	Cademinic Shield
+T:IT23.dat:57:23	템퍼라메쉴드	Temperament Shield
+T:IT23.dat:58:23	라이트쉴드	Light Shield
+T:IT23.dat:59:23	모코스트쉴드	Mocost Shield
+T:IT23.dat:60:23	갈리아의방패	Khiên Galia
+T:IT23.dat:61:23	해드만의방패	Khiên Headman
+T:IT23.dat:62:23	트렌스의방패	Khiên Trens
+T:IT23.dat:63:23	노리슨의방패	Khiên Norison
+T:IT23.dat:64:23	데이아의방패	Khiên Deia
+T:IT23.dat:65:23	데크의방패	Khiên Deck
+T:IT23.dat:66:23	라누스의방패	Khiên Lanus
+T:IT23.dat:67:23	피테스의방패	Khiên Pites
+T:IT23.dat:68:23	맥라스의방패	Khiên Maclas
+T:IT23.dat:69:23	미드린의방패	Khiên Midrin
+T:IT23.dat:70:23	밴의방패	Khiên Ban
+T:IT23.dat:71:23	베비드의방패	Khiên Bevid
+T:IT23.dat:72:23	살라미의방패	Khiên Salami
+T:IT23.dat:73:23	미데스의방패	Khiên Mides
+T:IT23.dat:74:23	아리스의방패	Khiên Aris
+T:IT23.dat:75:23	아브론의방패	Khiên Abron
+T:IT23.dat:76:23	지트의방패	Khiên Jit
+T:IT23.dat:77:23	지르라의방패	Khiên Jirra
+T:IT23.dat:78:23	루샨드의방패	Khiên Rushand
+T:IT23.dat:79:23	크로넬의방패	Khiên Cronel
+T:IT23.dat:80:23	카르키의방패	Khiên Karki
+T:IT23.dat:81:23	케르타의방패	Khiên Kerta
+T:IT23.dat:82:23	타퀸의방패	Khiên Tarquin
+T:IT23.dat:83:23	테미란의방패	Khiên Temiran
+T:IT23.dat:84:23	파란테의방패	Khiên Parante
+T:IT23.dat:85:23	르지의방패	Khiên Rji
+T:IT23.dat:86:23	해럴드의방패	Khiên Harold
+T:IT23.dat:87:23	하르피의방패	Khiên Harpy
+T:IT23.dat:88:23	게리온의방패	Khiên Gerion
+T:IT23.dat:89:23	게스트의방패	Khiên Guest
+T:IT23.dat:90:23	노이스의방패	Khiên Noise
+T:IT23.dat:91:23	나탈의방패	Khiên Natal
+T:IT23.dat:92:23	데히라의방패	Khiên Dehira
+T:IT23.dat:93:23	델의방패	Khiên Del
+T:IT23.dat:94:23	락샤르의방패	Khiên Rakshar
+T:IT23.dat:95:23	라슬로의방패	Khiên Laslo
+T:IT23.dat:96:23	메가라의방패	Khiên Megara
+T:IT23.dat:97:23	후오스의방패	Khiên Huos
+T:IT23.dat:98:23	매기의방패	Khiên Maggie
+T:IT23.dat:99:23	리온델의방패	Khiên Lionel
+T:IT23.dat:100:23	와이번의방패	Khiên Wyvern
+T:IT23.dat:101:23	드레이크의방패	Khiên Drake
+T:IT23.dat:102:23	드래곤의방패	Khiên Dragon
+T:IT24.dat:0:23	하급마법책	Sách phép hạ cấp
+T:IT24.dat:1:23	초급마법책	Sách phép sơ cấp
+T:IT24.dat:2:23	중급마법책	Sách phép trung cấp
+T:IT24.dat:3:23	상급마법책	Sách phép thượng cấp
+T:IT24.dat:4:23	궁극마법책	Sách phép tối thượng
+T:IT24.dat:5:23	하급주술책	Sách chú hạ cấp
+T:IT24.dat:6:23	초급주술책	Sách chú sơ cấp
+T:IT24.dat:7:23	중급주술책	Sách chú trung cấp
+T:IT24.dat:8:23	상급주술책	Sách chú thượng cấp
+T:IT24.dat:9:23	궁극주술책	Sách chú tối thượng
+T:IT24.dat:10:23	하급마법서	Ma pháp thư hạ cấp
+T:IT24.dat:11:23	초급마법서	Ma pháp thư sơ cấp
+T:IT24.dat:12:23	중급마법서	Ma pháp thư trung cấp
+T:IT24.dat:13:23	상급마법서	Ma pháp thư thượng cấp
+T:IT24.dat:14:23	궁극마법서	Ma pháp thư tối thượng
+T:IT24.dat:15:23	그랜드마법서	Grand Spellbook
+T:IT24.dat:16:23	파이널마법서	Final Spellbook
+T:IT24.dat:17:23	미튼마법서	Mitten Spellbook
+T:IT24.dat:18:23	트랩마법서	Trap Spellbook
+T:IT24.dat:19:23	갈틈마법서	Galteum Spellbook
+T:IT24.dat:20:23	로우매직북	Low Magic Book
+T:IT24.dat:21:23	미들매직북	Middle Magic Book
+T:IT24.dat:22:23	하이매직북	High Magic Book
+T:IT24.dat:23:23	위트매지션	Wit Magician
+T:IT24.dat:24:23	플라이오더북	Fly Order Book
+T:IT24.dat:25:23	마이너워터북	Minor Water Book
+T:IT24.dat:26:23	클립웰스턴북	Clipwellston Book
+T:IT24.dat:27:23	빅매지션스북	Big Magicians Book
+T:IT24.dat:28:23	헤리포러스북	Heriporus Book
+T:IT24.dat:29:23	카가메르스북	Kagamers Book
+T:IT24.dat:30:23	깊은마녀의책	Sách Phù thủy vực sâu
+T:IT24.dat:31:23	빅초이스북	Big Choice Book
+T:IT24.dat:32:23	언리미트월	Unlimit Wall
+T:IT24.dat:33:23	이터앤브랜드	Eater and Brand
+T:IT24.dat:34:23	불꽃의눈	Mắt Ngọn lửa
+T:IT24.dat:35:23	타오르는성	Thành rực cháy
+T:IT24.dat:36:23	분노의외침	Tiếng thét Phẫn nộ
+T:IT24.dat:37:23	수가르매직북	Sugar Magic Book
+T:IT24.dat:38:23	즈우오매직북	Zuo Magic Book
+T:IT24.dat:39:23	마스터매직북	Master Magic Book
+T:IT24.dat:40:23	고대마녀의책	Sách Phù thủy cổ đại
+T:IT24.dat:41:23	희귀한책	Sách hiếm
+T:IT24.dat:42:23	왕국의마법서	Sách phép Vương quốc
+T:IT24.dat:43:23	티파니매직북	Tiffany Magic Book
+T:IT24.dat:44:23	원더링매직북	Wandering Magic Book
+T:IT24.dat:45:23	초월자의흔적	Dấu vết Kẻ siêu việt
+T:IT24.dat:46:23	사악한주술서	Sách chú tà ác
+T:IT24.dat:47:23	진노의새벽	Bình minh Thịnh nộ
+T:IT24.dat:48:23	빛나는마나	Mana rực sáng
+T:IT24.dat:49:23	대지의근원	Cội nguồn Đại địa
+T:IT24.dat:50:23	모티칸매직북	Motican Magic Book
+T:IT24.dat:51:23	슬레이터매직	Slater Magic
+T:IT24.dat:52:23	궁국의주문서	Cuộn phép Tối thượng
+T:IT24.dat:53:23	마나앤매직북	Mana and Magic Book
+T:IT24.dat:54:23	매직노하우스	Magic Know-how
+T:IT24.dat:55:23	제란마법서	Jeran Spellbook
+T:IT24.dat:56:23	란트마법서	Rant Spellbook
+T:IT24.dat:57:23	챠르주문서	Char Scroll
+T:IT24.dat:58:23	바람의서	Thư Gió
+T:IT24.dat:59:23	네리므마법서	Nerim Spellbook
+T:IT24.dat:60:23	게아타스의마책	Sách phép Geatas
+T:IT24.dat:61:23	게피에의마책	Sách phép Gepie
+T:IT24.dat:62:23	누아자의마책	Sách phép Nuaja
+T:IT24.dat:63:23	니바르겐의마책	Sách phép Nivargen
+T:IT24.dat:64:23	데로즈의마책	Sách phép Derose
+T:IT24.dat:65:23	델파즈스의마책	Sách phép Delpazs
+T:IT24.dat:66:23	리노스의마책	Sách phép Linos
+T:IT24.dat:67:23	레릴의마책	Sách phép Reril
+T:IT24.dat:68:23	메돌스의마책	Sách phép Medols
+T:IT24.dat:69:23	마드르크의마책	Sách phép Madrk
+T:IT24.dat:70:23	베르라크의마책	Sách phép Berlac
+T:IT24.dat:71:23	길리우스의마책	Sách phép Gilius
+T:IT24.dat:72:23	산스의마책	Sách phép Sans
+T:IT24.dat:73:23	샌드의마책	Sách phép Sand
+T:IT24.dat:74:23	아그란놈의마책	Sách phép Agranom
+T:IT24.dat:75:23	아르가이의마책	Sách phép Argai
+T:IT24.dat:76:23	시그니의마책	Sách phép Signi
+T:IT24.dat:77:23	그란트의마책	Sách phép Grant
+T:IT24.dat:78:23	플라의마책	Sách phép Pla
+T:IT24.dat:79:23	즈놀의마책	Sách phép Znol
+T:IT24.dat:80:23	차르조르의마책	Sách phép Charzor
+T:IT24.dat:81:23	테바르스의마책	Sách phép Tevars
+T:IT24.dat:82:23	세우드의마책	Sách phép Seud
+T:IT24.dat:83:23	파리스의마책	Sách phép Paris
+T:IT24.dat:84:23	파시의마책	Sách phép Pasi
+T:IT24.dat:85:23	햐르그의마책	Sách phép Hyarg
+T:IT24.dat:86:23	헤라의마책	Sách phép Hera
+T:IT24.dat:87:23	게스르의마책	Sách phép Gesr
+T:IT24.dat:88:23	고르라의마책	Sách phép Gorra
+T:IT24.dat:89:23	포렐드의마책	Sách phép Forreld
+T:IT24.dat:90:23	도믄의마책	Sách phép Domun
+T:IT24.dat:91:23	레리아의마책	Sách phép Leria
+T:IT24.dat:92:23	레위즈의마책	Sách phép Lewis
+T:IT24.dat:93:23	메디아의마책	Sách phép Media
+T:IT24.dat:94:23	아그로스의마책	Sách phép Agros
+T:IT24.dat:95:23	헤르미의마책	Sách phép Hermi
+T:IT24.dat:96:23	제프로의마책	Sách phép Jepro
+T:IT24.dat:97:23	라푼델의마책	Sách phép Rapunzel
+T:IT24.dat:98:23	다이고의마책	Sách phép Daigo
+T:IT24.dat:99:23	시니의마책	Sách phép Sini
+T:IT24.dat:100:23	와이번의마책	Sách phép Wyvern
+T:IT24.dat:101:23	드레이크의마책	Sách phép Drake
+T:IT24.dat:102:23	드래곤의마책	Sách phép Dragon
+T:IT25.dat:0:23	레이블타운깃발	Cờ Label Town
+T:IT25.dat:1:23	용병의깃발	Cờ Lính đánh thuê
+T:IT25.dat:2:23	상인의깃발	Cờ Thương nhân
+T:IT25.dat:3:23	하급마수의눈	Mắt Ma thú hạ cấp
+T:IT25.dat:4:23	오뎅포차깃발	Cờ quán odeng
+T:IT25.dat:5:23	기사단의깃발	Cờ Kỵ sĩ đoàn
+T:IT25.dat:6:23	하급천사의날개	Cánh Thiên sứ hạ cấp
+T:IT25.dat:7:23	하급마력의수정	Pha lê Ma lực hạ cấp
+T:IT25.dat:8:23	천사루샤의날개	Cánh Thiên sứ Lusha
+T:IT25.dat:9:23	노예의바가지	Gáo Nô lệ
+T:IT25.dat:10:23	아이들의장난감	Đồ chơi Trẻ em
+T:IT25.dat:11:23	신계의잎사귀	Lá Thần giới
+T:IT25.dat:12:23	루크의깃발	Cờ Luke
+T:IT25.dat:13:23	천사의날개	Cánh Thiên sứ
+T:IT25.dat:14:23	하급악마의날개	Cánh Ác ma hạ cấp
+T:IT25.dat:15:23	남작의망토	Áo choàng Nam tước
+T:IT25.dat:16:23	작은정령의날개	Cánh Tiểu tinh linh
+T:IT25.dat:17:23	낡은합금의날개	Cánh Hợp kim cũ
+T:IT25.dat:18:23	마도사의수정구	Cầu pha lê Ma đạo sĩ
+T:IT25.dat:19:23	마도시대의문장	Huy hiệu Thời đại ma đạo
+T:IT25.dat:20:23	동쪽나라바가지	Gáo Đông quốc
+T:IT25.dat:21:23	용병대장의깃발	Cờ Đội trưởng lính thuê
+T:IT25.dat:22:23	중급마수의눈	Mắt Ma thú trung cấp
+T:IT25.dat:23:23	어린천사의날개	Cánh Thiên sứ nhỏ
+T:IT25.dat:24:23	귀부인의장난감	Đồ chơi Quý bà
+T:IT25.dat:25:23	마수의뼈날개	Cánh xương Ma thú
+T:IT25.dat:26:23	나무정령의날개	Cánh Tinh linh cây
+T:IT25.dat:27:23	페어리의날개	Cánh Fairy
+T:IT25.dat:28:23	루이시티깃발	Cờ Lui City
+T:IT25.dat:29:23	마도사의문장	Huy hiệu Ma đạo sĩ
+T:IT25.dat:30:23	중급마력의수정	Pha lê Ma lực trung cấp
+T:IT25.dat:31:23	중급천사의날개	Cánh Thiên sứ trung cấp
+T:IT25.dat:32:23	마력의수정	Pha lê Ma lực
+T:IT25.dat:33:23	맛있는오뎅깃발	Cờ odeng ngon
+T:IT25.dat:34:23	상단의깃발	Cờ Thương đoàn
+T:IT25.dat:35:23	마도시대의수정	Pha lê Thời đại ma đạo
+T:IT25.dat:36:23	스켈레톤의날개	Cánh Skeleton
+T:IT25.dat:37:23	신성한잎사귀	Lá thần thánh
+T:IT25.dat:38:23	루스의깃발	Cờ Rus
+T:IT25.dat:39:23	용사의문장	Huy hiệu Dũng sĩ
+T:IT25.dat:40:23	케베로스군깃발	Cờ quân Cerberus
+T:IT25.dat:41:23	기사단의망토	Áo choàng Kỵ sĩ đoàn
+T:IT25.dat:42:23	대마법사의수정	Pha lê Đại pháp sư
+T:IT25.dat:43:23	마력의눈동자	Con ngươi Ma lực
+T:IT25.dat:44:23	짜장오뎅집깃발	Cờ quán odeng jjajang
+T:IT25.dat:45:23	영원의날개	Cánh Vĩnh hằng
+T:IT25.dat:46:23	신들의장난감	Đồ chơi Chư thần
+T:IT25.dat:47:23	천사장의날개	Cánh Thiên sứ trưởng
+T:IT25.dat:48:23	마수의날개	Cánh Ma thú
+T:IT25.dat:49:23	용병의문양	Hoa văn Lính đánh thuê
+T:IT25.dat:50:23	하급신의바가지	Gáo Hạ thần
+T:IT25.dat:51:23	화염의수정구	Cầu pha lê Hỏa diệm
+T:IT25.dat:52:23	마수의문장	Huy hiệu Ma thú
+T:IT25.dat:53:23	마수의깃발	Cờ Ma thú
+T:IT25.dat:54:23	마왕의오뎅깃발	Cờ odeng Ma vương
+T:IT25.dat:55:23	마수의망토	Áo choàng Ma thú
+T:IT25.dat:56:23	타천사의날개	Cánh Thiên sứ sa ngã
+T:IT25.dat:57:23	마계의파수꾼	Người canh Ma giới
+T:IT25.dat:58:23	암흑의수정체	Thủy tinh thể Bóng tối
+T:IT25.dat:59:23	다크오로라윙	Dark Aurora Wing
+T:IT25.dat:60:23	중간계의파수꾼	Người canh Trung giới
+T:IT25.dat:61:23	파수꾼의깃발	Cờ Người canh giữ
+T:IT25.dat:62:23	강림자의망토	Áo choàng Giáng thế giả
+T:IT25.dat:63:23	정화된뼈의날개	Cánh Xương tinh khiết
+T:IT25.dat:64:23	파수꾼의문장	Huy hiệu Người canh giữ
+T:IT25.dat:65:23	대천사의날개	Cánh Đại thiên sứ
+T:IT25.dat:66:23	마신의날개	Cánh Ma thần
+T:IT25.dat:67:23	전격의수정체	Thủy tinh thể Điện kích
+T:IT25.dat:68:23	광속의날개	Cánh Quang tốc
+T:IT25.dat:69:23	본드래곤의날개	Cánh Bone Dragon
+T:IT25.dat:70:23	동부연합의깃발	Cờ Liên minh Đông
+T:IT25.dat:71:23	서부연합의깃발	Cờ Liên minh Tây
+T:IT25.dat:72:23	미스릴코팅윙	Mithril Coating Wing
+T:IT25.dat:73:23	암흑의날개	Cánh Bóng tối
+T:IT25.dat:74:23	마스터의날개	Cánh Master
+T:IT25.dat:75:23	상급정령의날개	Cánh Tinh linh thượng cấp
+T:IT25.dat:76:23	보글린가죽날개	Cánh da Boglin
+T:IT25.dat:77:23	세계수의잎사귀	Lá Thế giới thụ
+T:IT25.dat:78:23	대천사의문장	Huy hiệu Đại thiên sứ
+T:IT25.dat:79:23	제국의깃발	Cờ Đế quốc
+T:IT25.dat:80:23	르네의깃발	Cờ Rene
+T:IT25.dat:81:23	게맛오뎅집깃발	Cờ quán odeng vị cua
+T:IT25.dat:82:23	상단주인의깃발	Cờ Chủ thương đoàn
+T:IT25.dat:83:23	천신의날개	Cánh Thiên thần
+T:IT25.dat:84:23	정령신의날개	Cánh Tinh linh thần
+T:IT25.dat:85:23	대천사장의날개	Cánh Đại thiên sứ trưởng
+T:IT25.dat:86:23	상급악마의날개	Cánh Ác ma thượng cấp
+T:IT25.dat:87:23	마신의망토	Áo choàng Ma thần
+T:IT25.dat:88:23	마계마수의날개	Cánh Ma thú ma giới
+T:IT25.dat:89:23	바람신의날개	Cánh Phong thần
+T:IT25.dat:90:23	상급신의천리안	Thiên lý nhãn Thượng thần
+T:IT25.dat:91:23	암흑신의날개	Cánh Ám thần
+T:IT25.dat:92:23	천계의잎사귀	Lá Thiên giới
+T:IT25.dat:93:23	천계의문장	Huy hiệu Thiên giới
+T:IT25.dat:94:23	저주받은날개	Cánh bị nguyền
+T:IT25.dat:95:23	성스러운날개	Cánh thánh
+T:IT25.dat:96:23	빛의수정체	Thủy tinh thể Ánh sáng
+T:IT25.dat:97:23	빛의문양	Hoa văn Ánh sáng
+T:IT25.dat:98:23	빛의날개	Cánh Ánh sáng
+T:IT25.dat:99:23	와인의깃발	Cờ Wine
+T:IT25.dat:100:23	와이번의날개	Cánh Wyvern
+T:IT25.dat:101:23	드레이크의날개	Cánh Drake
+T:IT25.dat:102:23	드래곤의날개	Cánh Dragon
+T:IT26.dat:0:23	나무목걸이	Dây chuyền gỗ
+T:IT26.dat:1:23	브론즈메달	Bronze Medal
+T:IT26.dat:2:23	아이언메달	Iron Medal
+T:IT26.dat:3:23	루프메달	Loop Medal
+T:IT26.dat:4:23	쟈크메달	Jack Medal
+T:IT26.dat:5:23	레드루비메달	Red Ruby Medal
+T:IT26.dat:6:23	빅주얼메달	Big Jewel Medal
+T:IT26.dat:7:23	맥스웰메달	Maxwell Medal
+T:IT26.dat:8:23	라이너스메달	Linus Medal
+T:IT26.dat:9:23	수퍼파워메달	Super Power Medal
+T:IT26.dat:10:23	할로윈드메달	Hollow Wind Medal
+T:IT26.dat:11:23	매직서클메달	Magic Circle Medal
+T:IT26.dat:12:23	하이퍼메달	Hyper Medal
+T:IT26.dat:13:23	그랜드메달	Grand Medal
+T:IT26.dat:14:23	시크릿메달	Secret Medal
+T:IT26.dat:15:23	울트라메달	Ultra Medal
+T:IT26.dat:16:23	파이널메달	Final Medal
+T:IT26.dat:17:23	오리온메달	Orion Medal
+T:IT26.dat:18:23	드렌드메달	Drend Medal
+T:IT26.dat:19:23	라이어스메달	Lyas Medal
+T:IT26.dat:20:23	어퍼메달	Upper Medal
+T:IT26.dat:21:23	튜브론즈메달	Tune Bronze Medal
+T:IT26.dat:22:23	튜아이언메달	Tune Iron Medal
+T:IT26.dat:23:23	어퍼루프메달	Upper Loop Medal
+T:IT26.dat:24:23	어퍼쟈크메달	Upper Jack Medal
+T:IT26.dat:25:23	바이올렛메달	Violet Medal
+T:IT26.dat:26:23	어퍼주얼메달	Upper Jewel Medal
+T:IT26.dat:27:23	튜맥스웰메달	Tune Maxwell Medal
+T:IT26.dat:28:23	튠브러더메달	Tune Brother Medal
+T:IT26.dat:29:23	튠스피드메달	Tune Speed Medal
+T:IT26.dat:30:23	매직윈드메달	Magic Wind Medal
+T:IT26.dat:31:23	수퍼서클메달	Super Circle Medal
+T:IT26.dat:32:23	튠하이퍼메달	Tune Hyper Medal
+T:IT26.dat:33:23	튠그랜드메달	Tune Grand Medal
+T:IT26.dat:34:23	튠시크릿메달	Tune Secret Medal
+T:IT26.dat:35:23	튠울트라메달	Tune Ultra Medal
+T:IT26.dat:36:23	튠파이널메달	Tune Final Medal
+T:IT26.dat:37:23	듄오리온메달	Dune Orion Medal
+T:IT26.dat:38:23	어퍼드렌드메달	Upper Drend Medal
+T:IT26.dat:39:23	듄라이언메달	Dune Lion Medal
+T:IT26.dat:40:23	희귀한목걸이	Dây chuyền hiếm
+T:IT26.dat:41:23	어둠의목걸이	Dây chuyền Bóng đêm
+T:IT26.dat:42:23	분노의목걸이	Dây chuyền Phẫn nộ
+T:IT26.dat:43:23	빙극의목걸이	Dây chuyền Băng cực
+T:IT26.dat:44:23	화염의목걸이	Dây chuyền Hỏa diệm
+T:IT26.dat:45:23	뢰격의목걸이	Dây chuyền Lôi kích
+T:IT26.dat:46:23	불멸의목걸이	Dây chuyền Bất diệt
+T:IT26.dat:47:23	파멸의목걸이	Dây chuyền Diệt vong
+T:IT26.dat:48:23	진노의목걸이	Dây chuyền Thịnh nộ
+T:IT26.dat:49:23	용사의목걸이	Dây chuyền Dũng sĩ
+T:IT26.dat:50:23	격노의목걸이	Dây chuyền Cuồng nộ
+T:IT26.dat:51:23	적혈의목걸이	Dây chuyền Huyết đỏ
+T:IT26.dat:52:23	모스트럴메달	Mostral Medal
+T:IT26.dat:53:23	사파이어메달	Sapphire Medal
+T:IT26.dat:54:23	킹다이아메달	King Diamond Medal
+T:IT26.dat:55:23	빅뮤탈릭메달	Big Mutalic Medal
+T:IT26.dat:56:23	터닝포인트메달	Turning Point Medal
+T:IT26.dat:57:23	미들오브메달	Middle of Medal
+T:IT26.dat:58:23	레어숄츠메달	Rare Scholz Medal
+T:IT26.dat:59:23	막시루스메달	Maxirus Medal
+T:IT26.dat:60:23	레오스메달	Leos Medal
+T:IT26.dat:61:23	클리우메달	Cliu Medal
+T:IT26.dat:62:23	리턴트메달	Returnt Medal
+T:IT26.dat:63:23	베르딘메달	Verdin Medal
+T:IT26.dat:64:23	투니아메달	Tunia Medal
+T:IT26.dat:65:23	마뉴메달	Manu Medal
+T:IT26.dat:66:23	샤라딘메달	Sharadin Medal
+T:IT26.dat:67:23	서코트메달	Surcoat Medal
+T:IT26.dat:68:23	샤닉메달	Shanic Medal
+T:IT26.dat:69:23	세레네메달	Serene Medal
+T:IT26.dat:70:23	리포스메달	Repos Medal
+T:IT26.dat:71:23	세이렌메달	Siren Medal
+T:IT26.dat:72:23	세탄트메달	Setant Medal
+T:IT26.dat:73:23	스페르메달	Sper Medal
+T:IT26.dat:74:23	소리만메달	Soliman Medal
+T:IT26.dat:75:23	버리즈메달	Verize Medal
+T:IT26.dat:76:23	리리히메달	Lirich Medal
+T:IT26.dat:77:23	네스반메달	Nesvan Medal
+T:IT26.dat:78:23	낙티스메달	Naktis Medal
+T:IT26.dat:79:23	자즈나르메달	Jaznar Medal
+T:IT26.dat:80:23	드니안메달	Denian Medal
+T:IT26.dat:81:23	스노도메달	Snodo Medal
+T:IT26.dat:82:23	바페리메달	Baferi Medal
+T:IT26.dat:83:23	카자하메달	Kazaha Medal
+T:IT26.dat:84:23	로스키메달	Roski Medal
+T:IT26.dat:85:23	키론메달	Kiron Medal
+T:IT26.dat:86:23	킬라메달	Killa Medal
+T:IT26.dat:87:23	텐노메달	Tenno Medal
+T:IT26.dat:88:23	헨지메달	Henge Medal
+T:IT26.dat:89:23	파데스메달	Fades Medal
+T:IT26.dat:90:23	틱스지메달	Tixji Medal
+T:IT26.dat:91:23	팀팔스메달	Timpals Medal
+T:IT26.dat:92:23	프니르메달	Fnir Medal
+T:IT26.dat:93:23	게일메달	Gale Medal
+T:IT26.dat:94:23	구르드메달	Gurd Medal
+T:IT26.dat:95:23	프리드메달	Fried Medal
+T:IT26.dat:96:23	시그나메달	Signa Medal
+T:IT26.dat:97:23	시기메달	Sigi Medal
+T:IT26.dat:98:23	지갸르메달	Jigyar Medal
+T:IT26.dat:99:23	지베가파메달	Jibegapa Medal
+T:IT27.dat:0:23	나무줄기링	Nhẫn thân gỗ
+T:IT27.dat:1:23	브론즈링	Bronze Ring
+T:IT27.dat:2:23	아이언링	Iron Ring
+T:IT27.dat:3:23	루프링	Loop Ring
+T:IT27.dat:4:23	쟈크링	Jack Ring
+T:IT27.dat:5:23	레드루비링	Red Ruby Ring
+T:IT27.dat:6:23	빅주얼링	Big Jewel Ring
+T:IT27.dat:7:23	맥스웰링	Maxwell Ring
+T:IT27.dat:8:23	라이너스링	Linus Ring
+T:IT27.dat:9:23	수퍼파워링	Super Power Ring
+T:IT27.dat:10:23	할로우윈드링	Hollow Wind Ring
+T:IT27.dat:11:23	매직서클링	Magic Circle Ring
+T:IT27.dat:12:23	하이퍼매직링	Hyper Magic Ring
+T:IT27.dat:13:23	그랜드매직링	Grand Magic Ring
+T:IT27.dat:14:23	시크릿매직링	Secret Magic Ring
+T:IT27.dat:15:23	울트라매직링	Ultra Magic Ring
+T:IT27.dat:16:23	파이널매직링	Final Magic Ring
+T:IT27.dat:17:23	란드링	Land Ring
+T:IT27.dat:18:23	단테링	Dante Ring
+T:IT27.dat:19:23	모즈링	Mods Ring
+T:IT27.dat:20:23	어퍼링	Upper Ring
+T:IT27.dat:21:23	어퍼브론즈링	Upper Bronze Ring
+T:IT27.dat:22:23	어퍼아이언링	Upper Iron Ring
+T:IT27.dat:23:23	어퍼루프링	Upper Loop Ring
+T:IT27.dat:24:23	어퍼쟈크링	Upper Jack Ring
+T:IT27.dat:25:23	빅레드루비링	Big Red Ruby Ring
+T:IT27.dat:26:23	어퍼빅주얼링	Upper Big Jewel Ring
+T:IT27.dat:27:23	어퍼맥스웰링	Upper Maxwell Ring
+T:IT27.dat:28:23	튠라이너스링	Tune Linus Ring
+T:IT27.dat:29:23	튠수퍼파워링	Tune Super Power Ring
+T:IT27.dat:30:23	매직윈드링	Magic Wind Ring
+T:IT27.dat:31:23	빅매직서클링	Big Magic Circle Ring
+T:IT27.dat:32:23	하이퍼마나링	Hyper Mana Ring
+T:IT27.dat:33:23	그랜드마나링	Grand Mana Ring
+T:IT27.dat:34:23	시크릿마나링	Secret Mana Ring
+T:IT27.dat:35:23	울트라마나링	Ultra Mana Ring
+T:IT27.dat:36:23	파이널마나링	Final Mana Ring
+T:IT27.dat:37:23	스트림매직링	Stream Magic Ring
+T:IT27.dat:38:23	카이널즈링	Kinals Ring
+T:IT27.dat:39:23	기욘드링	Giyond Ring
+T:IT27.dat:40:23	희귀한반지	Nhẫn hiếm
+T:IT27.dat:41:23	어둠의반지	Nhẫn Bóng đêm
+T:IT27.dat:42:23	분노의반지	Nhẫn Phẫn nộ
+T:IT27.dat:43:23	빙극의반지	Nhẫn Băng cực
+T:IT27.dat:44:23	화염의반지	Nhẫn Hỏa diệm
+T:IT27.dat:45:23	뢰격의반지	Nhẫn Lôi kích
+T:IT27.dat:46:23	불멸의반지	Nhẫn Bất diệt
+T:IT27.dat:47:23	파멸의반지	Nhẫn Diệt vong
+T:IT27.dat:48:23	진노의반지	Nhẫn Thịnh nộ
+T:IT27.dat:49:23	용사의반지	Nhẫn Dũng sĩ
+T:IT27.dat:50:23	격노의반지	Nhẫn Cuồng nộ
+T:IT27.dat:51:23	적혈의반지	Nhẫn Huyết đỏ
+T:IT27.dat:52:23	모스트럴링	Mostral Ring
+T:IT27.dat:53:23	레드사파이어링	Red Sapphire Ring
+T:IT27.dat:54:23	킹다이아몬드링	King Diamond Ring
+T:IT27.dat:55:23	빅뮤탈릭링	Big Mutalic Ring
+T:IT27.dat:56:23	터닝포인트링	Turning Point Ring
+T:IT27.dat:57:23	미들오브미들링	Middle of Middle Ring
+T:IT27.dat:58:23	샤이닝핑거링	Shining Finger Ring
+T:IT27.dat:59:23	게이트링	Gate Ring
+T:IT27.dat:60:23	골리앗링	Goliath Ring
+T:IT27.dat:61:23	구니타링	Gunita Ring
+T:IT27.dat:62:23	란다르링	Randar Ring
+T:IT27.dat:63:23	루이드링	Ruid Ring
+T:IT27.dat:64:23	노스렌링	Nosren Ring
+T:IT27.dat:65:23	그란스링	Grans Ring
+T:IT27.dat:66:23	메르링	Mer Ring
+T:IT27.dat:67:23	리우스링	Rius Ring
+T:IT27.dat:68:23	베리트링	Berit Ring
+T:IT27.dat:69:23	리케인링	Rikane Ring
+T:IT27.dat:70:23	쟈이넬링	Jainel Ring
+T:IT27.dat:71:23	후론드링	Huront Ring
+T:IT27.dat:72:23	제네드링	Jened Ring
+T:IT27.dat:73:23	히로렌링	Hiroren Ring
+T:IT27.dat:74:23	미나스링	Minas Ring
+T:IT27.dat:75:23	요우겐링	Yougen Ring
+T:IT27.dat:76:23	린델트링	Lindelt Ring
+T:IT27.dat:77:23	와렌스드링	Warensd Ring
+T:IT27.dat:78:23	부스트링	Boost Ring
+T:IT27.dat:79:23	로이니링	Roini Ring
+T:IT27.dat:80:23	울라프링	Ulaf Ring
+T:IT27.dat:81:23	이든힐링	Eden Hill Ring
+T:IT27.dat:82:23	얀치프링	Yanchip Ring
+T:IT27.dat:83:23	게레스링	Geres Ring
+T:IT27.dat:84:23	르티겐링	Rtigen Ring
+T:IT27.dat:85:23	보븐드링	Boband Ring
+T:IT27.dat:86:23	게보즈링	Gebos Ring
+T:IT27.dat:87:23	보탄드링	Botand Ring
+T:IT27.dat:88:23	보리세츠링	Borisets Ring
+T:IT27.dat:89:23	브즈리링	Bzri Ring
+T:IT27.dat:90:23	불핀지링	Bulfinge Ring
+T:IT27.dat:91:23	가지단링	Gajidan Ring
+T:IT27.dat:92:23	루트링	Root Ring
+T:IT27.dat:93:23	지룬브링	Zirunb Ring
+T:IT27.dat:94:23	브륜드링	Brund Ring
+T:IT27.dat:95:23	뉴타로스링	Nutaros Ring
+T:IT27.dat:96:23	세마스링	Semas Ring
+T:IT27.dat:97:23	리센트링	Recent Ring
+T:IT27.dat:98:23	후치링	Huchi Ring
+T:IT27.dat:99:23	빅백링	Big Back Ring
+T:IT28.dat:0:23	나무재질팔찌	Vòng tay gỗ
+T:IT28.dat:1:23	청동재질팔찌	Vòng tay đồng
+T:IT28.dat:2:23	아이언팔찌	Iron Bracelet
+T:IT28.dat:3:23	루프팔찌	Loop Bracelet
+T:IT28.dat:4:23	쟈크팔찌	Jack Bracelet
+T:IT28.dat:5:23	레드루비팔찌	Red Ruby Bracelet
+T:IT28.dat:6:23	빅주얼팔찌	Big Jewel Bracelet
+T:IT28.dat:7:23	맥스웰팔찌	Maxwell Bracelet
+T:IT28.dat:8:23	라이너스팔찌	Linus Bracelet
+T:IT28.dat:9:23	수퍼파워팔찌	Super Power Bracelet
+T:IT28.dat:10:23	할로윈드팔찌	Hollow Wind Bracelet
+T:IT28.dat:11:23	매직서클팔찌	Magic Circle Bracelet
+T:IT28.dat:12:23	하이퍼팔찌	Hyper Bracelet
+T:IT28.dat:13:23	그랜드팔찌	Grand Bracelet
+T:IT28.dat:14:23	시크릿팔찌	Secret Bracelet
+T:IT28.dat:15:23	울트라팔찌	Ultra Bracelet
+T:IT28.dat:16:23	파이널팔찌	Final Bracelet
+T:IT28.dat:17:23	넥스팔찌	Nex Bracelet
+T:IT28.dat:18:23	이스트팔찌	East Bracelet
+T:IT28.dat:19:23	라인드팔찌	Rind Bracelet
+T:IT28.dat:20:23	어퍼팔찌	Upper Bracelet
+T:IT28.dat:21:23	튜브론즈팔찌	Tune Bronze Bracelet
+T:IT28.dat:22:23	튜아이언팔찌	Tune Iron Bracelet
+T:IT28.dat:23:23	어퍼루프팔찌	Upper Loop Bracelet
+T:IT28.dat:24:23	어퍼쟈크팔찌	Upper Jack Bracelet
+T:IT28.dat:25:23	바이올렛팔찌	Violet Bracelet
+T:IT28.dat:26:23	어퍼주얼팔찌	Upper Jewel Bracelet
+T:IT28.dat:27:23	튜맥스웰팔찌	Tune Maxwell Bracelet
+T:IT28.dat:28:23	튠브러더팔찌	Tune Brother Bracelet
+T:IT28.dat:29:23	튠스피드팔찌	Tune Speed Bracelet
+T:IT28.dat:30:23	매직윈드팔찌	Magic Wind Bracelet
+T:IT28.dat:31:23	수퍼서클팔찌	Super Circle Bracelet
+T:IT28.dat:32:23	튠하이퍼팔찌	Tune Hyper Bracelet
+T:IT28.dat:33:23	튠그랜드팔찌	Tune Grand Bracelet
+T:IT28.dat:34:23	튠시크릿팔찌	Tune Secret Bracelet
+T:IT28.dat:35:23	튠울트라팔찌	Tune Ultra Bracelet
+T:IT28.dat:36:23	튠파이널팔찌	Tune Final Bracelet
+T:IT28.dat:37:23	튠넥스팔찌	Tune Nex Bracelet
+T:IT28.dat:38:23	튠이스트팔찌	Tune East Bracelet
+T:IT28.dat:39:23	튠라인드팔찌	Tune Rind Bracelet
+T:IT28.dat:40:23	희귀한팔찌	Vòng tay hiếm
+T:IT28.dat:41:23	어둠의팔찌	Vòng tay Bóng đêm
+T:IT28.dat:42:23	분노의팔찌	Vòng tay Phẫn nộ
+T:IT28.dat:43:23	빙극의팔찌	Vòng tay Băng cực
+T:IT28.dat:44:23	화염의팔찌	Vòng tay Hỏa diệm
+T:IT28.dat:45:23	뢰격의팔찌	Vòng tay Lôi kích
+T:IT28.dat:46:23	불멸의팔찌	Vòng tay Bất diệt
+T:IT28.dat:47:23	파멸의팔찌	Vòng tay Diệt vong
+T:IT28.dat:48:23	진노의팔찌	Vòng tay Thịnh nộ
+T:IT28.dat:49:23	용사의팔찌	Vòng tay Dũng sĩ
+T:IT28.dat:50:23	격노의팔찌	Vòng tay Cuồng nộ
+T:IT28.dat:51:23	적혈의팔찌	Vòng tay Huyết đỏ
+T:IT28.dat:52:23	모스트럴팔찌	Mostral Bracelet
+T:IT28.dat:53:23	사파이어팔찌	Sapphire Bracelet
+T:IT28.dat:54:23	킹다이아팔찌	King Diamond Bracelet
+T:IT28.dat:55:23	빅뮤탈릭팔찌	Big Mutalic Bracelet
+T:IT28.dat:56:23	터닝포인트팔찌	Turning Point Bracelet
+T:IT28.dat:57:23	미들오브팔찌	Middle of Bracelet
+T:IT28.dat:58:23	니들그론트팔찌	Needle Gront Bracelet
+T:IT28.dat:59:23	마레스팔찌	Mares Bracelet
+T:IT28.dat:60:23	라스트팔찌	Last Bracelet
+T:IT28.dat:61:23	폴론드팔찌	Polond Bracelet
+T:IT28.dat:62:23	로디스팔찌	Rodis Bracelet
+T:IT28.dat:63:23	게오스팔찌	Geos Bracelet
+T:IT28.dat:64:23	로마케팔찌	Romake Bracelet
+T:IT28.dat:65:23	드로메팔찌	Drome Bracelet
+T:IT28.dat:66:23	키세스팔찌	Kises Bracelet
+T:IT28.dat:67:23	모에사팔찌	Moesa Bracelet
+T:IT28.dat:68:23	안티오팔찌	Antio Bracelet
+T:IT28.dat:69:23	베리히팔찌	Berich Bracelet
+T:IT28.dat:70:23	알크메팔찌	Alkme Bracelet
+T:IT28.dat:71:23	네소스팔찌	Nessos Bracelet
+T:IT28.dat:72:23	암포르팔찌	Ampor Bracelet
+T:IT28.dat:73:23	피리트팔찌	Pirit Bracelet
+T:IT28.dat:74:23	세이스팔찌	Seis Bracelet
+T:IT28.dat:75:23	얼스터팔찌	Ulster Bracelet
+T:IT28.dat:76:23	에기르팔찌	Aegir Bracelet
+T:IT28.dat:77:23	에다팔찌	Edda Bracelet
+T:IT28.dat:78:23	프란팔찌	Fran Bracelet
+T:IT28.dat:79:23	로지팔찌	Rosie Bracelet
+T:IT28.dat:80:23	에로즈팔찌	Eros Bracelet
+T:IT28.dat:81:23	기노스팔찌	Ginos Bracelet
+T:IT28.dat:82:23	만토스팔찌	Mantos Bracelet
+T:IT28.dat:83:23	에리스팔찌	Eris Bracelet
+T:IT28.dat:84:23	에만드팔찌	Emand Bracelet
+T:IT28.dat:85:23	에바르팔찌	Ebar Bracelet
+T:IT28.dat:86:23	브란드팔찌	Brand Bracelet
+T:IT28.dat:87:23	브로강팔찌	Brogan Bracelet
+T:IT28.dat:88:23	리디케팔찌	Ridike Bracelet
+T:IT28.dat:89:23	테오스팔찌	Teos Bracelet
+T:IT28.dat:90:23	우리알레팔찌	Uriale Bracelet
+T:IT28.dat:91:23	리토이팔찌	Litoi Bracelet
+T:IT28.dat:92:23	마이오팔찌	Maio Bracelet
+T:IT28.dat:93:23	보이아팔찌	Boia Bracelet
+T:IT28.dat:94:23	우안드팔찌	Uand Bracelet
+T:IT28.dat:95:23	페모스팔찌	Pemos Bracelet
+T:IT28.dat:96:23	에이르팔찌	Eir Bracelet
+T:IT28.dat:97:23	에체르팔찌	Ecer Bracelet
+T:IT28.dat:98:23	라인즈팔찌	Rines Bracelet
+T:IT28.dat:99:23	루이네르팔찌	Ruiner Bracelet
+T:IT29.dat:0:25	소형HP포션	HP Potion nhỏ
+T:IT29.dat:0:37	사용시 HP 200을 회복합니다.	Dùng để hồi 200 HP.
+T:IT29.dat:1:25	중형HP포션	HP Potion vừa
+T:IT29.dat:1:37	사용시 HP 800을 회복합니다.	Dùng để hồi 800 HP.
+T:IT29.dat:2:25	대형HP포션	HP Potion lớn
+T:IT29.dat:2:37	사용시 HP 2000을 회복합니다.	Dùng để hồi 2000 HP.
+T:IT29.dat:3:25	소형MP포션	MP Potion nhỏ
+T:IT29.dat:3:37	사용시 MP 100을 회복합니다.	Dùng để hồi 100 MP.
+T:IT29.dat:4:25	중형MP포션	MP Potion vừa
+T:IT29.dat:4:37	사용시 MP 400을 회복합니다.	Dùng để hồi 400 MP.
+T:IT29.dat:5:25	대형MP포션	MP Potion lớn
+T:IT29.dat:5:37	사용시 MP 1200을 회복합니다.	Dùng để hồi 1200 MP.
+T:IT29.dat:6:25	하이퍼포션	Hyper Potion
+T:IT29.dat:6:37	사용시 HP 3500, MP 1500을 회복합니다.	Dùng để hồi 3500 HP và 1500 MP.
+T:IT29.dat:7:25	회복포션	Potion hồi phục
+T:IT29.dat:7:35	사용시 저주,중독 상태가 회복 됩니다.	Dùng để chữa trạng thái nguyền rủa, trúng độc.
+T:IT29.dat:8:25	HP오러포션	HP Aura Potion
+T:IT29.dat:8:37	사용시 10초간 적에게 입히는 데미지의 10%를 HP로 회복합니다.	Dùng: trong 10 giây hồi HP bằng 10% sát thương gây cho địch.
+T:IT29.dat:9:25	MP오러포션	MP Aura Potion
+T:IT29.dat:9:37	사용시 10초간 적에게 입히는 데미지의 10%를 MP로 회복합니다.	Dùng: trong 10 giây hồi MP bằng 10% sát thương gây cho địch.
+T:IT29.dat:10:25	레이블타운포털	Portal Label Town
+T:IT29.dat:10:41	사용시 레이블타운으로 이동합니다.	Dùng để di chuyển đến Label Town.
+T:IT29.dat:11:25	이스턴시티포털	Portal Eastern City
+T:IT29.dat:11:41	사용시 이스턴시티로 이동합니다.	Dùng để di chuyển đến Eastern City.
+T:IT29.dat:12:25	루이시티포털	Portal Lui City
+T:IT29.dat:12:39	사용시 루이시티로 이동합니다.	Dùng để di chuyển đến Lui City.
+T:IT29.dat:13:25	오르츠크포털	Portal Ortsk
+T:IT29.dat:13:39	사용시 오르츠크로 이동합니다.	Dùng để di chuyển đến Ortsk.
+T:IT29.dat:14:25	데저트캠프포털	Portal Desert Camp
+T:IT29.dat:14:41	사용시 데저트캠프로이동합니다.	Dùng để di chuyển đến Desert Camp.
+T:IT29.dat:15:25	스카이밸리포털	Portal Sky Valley
+T:IT29.dat:15:41	사용시 스카이밸리로 이동합니다.	Dùng để di chuyển đến Sky Valley.
+T:IT29.dat:16:25	소형9칸가방	Túi nhỏ 9 ô
+T:IT29.dat:16:38	아이템 수납 공간이 9칸인 가방입니다.	Túi có 9 ô chứa vật phẩm.
+T:IT29.dat:17:25	중형18칸가방	Túi vừa 18 ô
+T:IT29.dat:17:39	아이템 수납 공간이 18칸인 가방입니다.	Túi có 18 ô chứa vật phẩm.
+T:IT29.dat:18:25	대형36칸가방	Túi lớn 36 ô
+T:IT29.dat:18:39	아이템 수납 공간이 36칸인 가방입니다.	Túi có 36 ô chứa vật phẩm.
+T:IT29.dat:19:25	리셋 라이프	Reset Life
+T:IT29.dat:19:38	플레이어 캐릭터의 스킬, 스텟포인트 초기화 해주는 아이템입니다.	Vật phẩm đặt lại điểm kỹ năng và điểm chỉ số của nhân vật.
+T:IT29.dat:20:25	리셋 스텟 	Reset chỉ số 
+T:IT29.dat:20:37	플레이어 캐릭터의 스텟포인트를 초기화 해주는 아이템입니다.	Vật phẩm đặt lại điểm chỉ số của nhân vật.
+T:IT29.dat:21:25	리셋 스킬	Reset kỹ năng
+T:IT29.dat:21:36	플레이어 캐릭터의 스킬 포인트를 초기화 해주는 아이템입니다.	Vật phẩm đặt lại điểm kỹ năng của nhân vật.
+T:IT29.dat:22:25	던전이동권	Vé hầm ngục
+T:IT29.dat:22:37	사용시 던전을 선택하고 바로 이동할 수 있는 아이템입니다.	Vật phẩm cho chọn hầm ngục và di chuyển ngay khi dùng.
+T:IT29.dat:23:25	와인포션	Wine Potion
+T:IT29.dat:23:35	HP와 MP 및 상태이상이 100% 회복 됩니다.	Hồi 100% HP, MP và trạng thái bất thường.
+T:IT29.dat:24:25	매운맛우유	Sữa vị cay
+T:IT29.dat:24:37	매콤한 맛이 일품인 우유. 마시면 체력이 불끈! (5분간 HP상승)	Sữa vị cay hảo hạng. Uống vào khỏe hẳn! (5 phút tăng HP)
+T:IT29.dat:25:25	카레맛쥬스	Nước ép vị cà ri
+T:IT29.dat:25:37	몸에 좋은 카레 맛 쥬스! 마시면 힘이 불끈! (5분간 공격력상승. )	Nước ép vị cà ri tốt cho cơ thể! Uống vào mạnh hẳn! (5 phút tăng Công.)
+T:IT29.dat:26:25	버섯맛우유	Sữa vị nấm
+T:IT29.dat:26:37	이 맛의 오묘함을 느낀 이는 모두 뛰쳐나갔다.(5분간 크리티컬상승.)	Ai cảm nhận được vị kỳ diệu này đều bỏ chạy. (5 phút tăng chí mạng.)
+T:IT29.dat:27:25	짜장맛쥬스	Nước ép vị tương đen
+T:IT29.dat:27:37	언제든지 짜장을 먹을 수 있게 만든 음료.(5분간 경험치 상승.)	Thức uống để lúc nào cũng thưởng thức được tương đen. (5 phút tăng EXP.)
+T:IT29.dat:28:25	야채수프	Súp rau
+T:IT29.dat:28:35	여러가지 야채를 재료로 사용한 수프. (사용시 HP 10%회복)	Súp nấu từ nhiều loại rau. (Dùng: hồi 10% HP)
+T:IT29.dat:29:25	버섯수프	Súp nấm
+T:IT29.dat:29:35	알록달록한 버섯이 재료로 사용된듯. (사용시 HP 20%회복)	Có vẻ nấu từ các loại nấm sặc sỡ. (Dùng: hồi 20% HP)
+T:IT29.dat:30:25	우유수프	Súp sữa
+T:IT29.dat:30:35	구수한 우유맛이 일품인 수프. (사용시 HP 30%회복)	Súp vị sữa béo ngậy hảo hạng. (Dùng: hồi 30% HP)
+T:IT29.dat:31:25	커피수프	Súp cà phê
+T:IT29.dat:31:35	먹으면 그날밤은 잠 다 잔다는 수프. (사용시 HP 40%회복)	Ăn vào là đêm đó khỏi ngủ. (Dùng: hồi 40% HP)
+T:IT29.dat:32:25	게살수프	Súp thịt cua
+T:IT29.dat:32:35	미튼크랩등의 게살이 들어간 맛있는 수프. (사용시 HP 50%회복)	Súp ngon có thịt cua như Mitten Crab. (Dùng: hồi 50% HP)
+T:IT29.dat:33:25	벅가스에이	Buckgas A
+T:IT29.dat:33:37	텐우란 3만밀리가 들어있다는 드링크. (사용시 MP 10%회복)	Thức uống nghe nói có 30.000 ml Tenuran. (Dùng: hồi 10% MP)
+T:IT29.dat:34:25	비토삼백	Bito 300
+T:IT29.dat:34:35	비타멘 500밀리가 들어있다는 드링크. (사용시 MP 20%회복)	Thức uống nghe nói có 500 ml Vitamen. (Dùng: hồi 20% MP)
+T:IT29.dat:35:25	선지드링크	Nước tiết
+T:IT29.dat:35:37	맛있는 선지맛이 일품! 선지드링크! (사용시 MP 30%회복)	Hương vị tiết ngon hảo hạng! Nước tiết! (Dùng: hồi 30% MP)
+T:IT29.dat:36:25	치킨드링크	Nước gà
+T:IT29.dat:36:37	담백한 치킨살을 갈아만든 드링크! (사용시 MP 40%회복)	Thức uống xay từ thịt gà thanh đạm! (Dùng: hồi 40% MP)
+T:IT29.dat:37:25	게살드링크	Nước thịt cua
+T:IT29.dat:37:37	게살 수프와 최고의 궁합이라는 게살 드링크! (사용시 MP 50%회복)	Nước thịt cua hợp nhất với súp thịt cua! (Dùng: hồi 50% MP)
+T:IT29.dat:38:25	알수없는붉은것	Thứ đỏ lạ
+T:IT29.dat:38:41	마시면 근력이 높아진다는 사람들이 있던데… 위험할지도 모른다.	Có người nói uống vào sẽ tăng Sức mạnh... nhưng có thể nguy hiểm.
+T:IT29.dat:39:25	알수없는푸른것	Thứ xanh lạ
+T:IT29.dat:39:41	마시면 마력이 높아진다는 사람들이 있던데… 위험할지도 모른다.	Có người nói uống vào sẽ tăng Ma lực... nhưng có thể nguy hiểm.
+T:IT29.dat:40:25	알수없는검은것	Thứ đen lạ
+T:IT29.dat:40:41	마시면 민첩이 높아진다는 사람들이 있던데… 위험할지도 모른다.	Có người nói uống vào sẽ tăng Nhanh nhẹn... nhưng có thể nguy hiểm.
+T:IT29.dat:41:25	알수없는하얀것	Thứ trắng lạ
+T:IT29.dat:41:41	마시면 체력이 높아진다는 사람들이 있던데… 위험할지도 모른다.	Có người nói uống vào sẽ tăng Thể lực... nhưng có thể nguy hiểm.
+T:IT29.dat:42:25	알수없는노란것	Thứ vàng lạ
+T:IT29.dat:42:41	마시면 행운이 높아진다는 사람들이 있던데… 위험할지도 모른다.	Có người nói uống vào sẽ tăng May mắn... nhưng có thể nguy hiểm.
+T:IT29.dat:43:25	6칸찢어진가방	Túi rách 6 ô
+T:IT29.dat:43:40	아이템 수납 공간이 6칸인 가방입니다.	Túi có 6 ô chứa vật phẩm.
+T:IT29.dat:44:25	12칸천가방	Túi vải 12 ô
+T:IT29.dat:44:37	아이템 수납 공간이 12칸인 가방입니다.	Túi có 12 ô chứa vật phẩm.
+T:IT29.dat:45:25	24칸가죽가방	Túi da 24 ô
+T:IT29.dat:45:39	아이템 수납 공간이 24칸인 가방입니다.	Túi có 24 ô chứa vật phẩm.
+T:IT29.dat:46:25	킬트링의 상자	Hộp Kiltling
+T:IT29.dat:46:40	마법석, 강화석 랜덤으로 10개 지급 	Nhận ngẫu nhiên 10 đá phép, đá cường hóa 
+T:IT29.dat:47:25	필리스의낡은상자	Hộp cũ Philis
+T:IT29.dat:47:43	장비 아이템을 랜덤으로 1개 지급 (레어-유니크)	Nhận ngẫu nhiên 1 trang bị (Rare-Unique)
+T:IT29.dat:48:25	필리스의상자	Hộp Philis
+T:IT29.dat:48:39	장비 아이템을 랜덤으로 1개 지급 (레어-레전드)	Nhận ngẫu nhiên 1 trang bị (Rare-Legend)
+T:IT29.dat:49:25	필리스의고급상자	Hộp cao cấp Philis
+T:IT29.dat:49:43	장비 아이템을 랜덤으로 1개 지급 (레전드)	Nhận ngẫu nhiên 1 trang bị (Legend)
+T:IT29.dat:50:25	와이번 세트	Bộ Wyvern
+T:IT29.dat:50:38	15렙제 세트 아이템(무기중 택1)	Bộ vật phẩm cấp 15 (chọn 1 vũ khí)
+T:IT29.dat:51:25	드레이크 세트	Bộ Drake
+T:IT29.dat:51:40	40렙제 세트 아이템(무기중 택1)	Bộ vật phẩm cấp 40 (chọn 1 vũ khí)
+T:IT29.dat:52:25	드래곤 세트	Bộ Dragon
+T:IT29.dat:52:38	70렙제 세트 아이템(무기중 택1)	Bộ vật phẩm cấp 70 (chọn 1 vũ khí)
+T:IT29.dat:53:25	탈출석	Đá thoát hiểm
+T:IT29.dat:53:33	창조주의 실수를 리셋한다	Đặt lại sai lầm của đấng sáng thế
+T:IT29.dat:54:25	와인의상자	Hộp Wine
+T:IT29.dat:54:37	장비 아이템을 랜덤으로 1개 지급한다	Nhận ngẫu nhiên 1 trang bị
+T:IT29.dat:55:25	스킬 업	Skill Up
+T:IT29.dat:55:34	스킬포인트 1을 올려주며, 최대 10회만 사용이 가능합니다.	Tăng 1 điểm kỹ năng, chỉ dùng được tối đa 10 lần.
+T:IT29.dat:56:25	킬트의 보호	Bảo hộ Kilt
+T:IT29.dat:56:38	사용시 10초간 모든 공격으로부터 무적효과	Dùng: 10 giây bất tử trước mọi đòn tấn công
+T:IT29.dat:57:25	명예의칭호	Danh hiệu Danh dự
+T:IT29.dat:57:37	명예의 칭호중 1개를 획득한다.(사용시 칭호창에서 장착)	Nhận 1 danh hiệu danh dự. (Khi dùng, trang bị ở bảng danh hiệu)
+T:IT29.dat:58:25	직업변경권	Vé đổi nghề
+T:IT29.dat:58:37	직업을 변경시켜준다 스텟,스킬은 초기화된다	Đổi nghề. Chỉ số và kỹ năng sẽ được đặt lại
+T:IT30.dat:0:13	철괴	Thỏi sắt
+T:IT30.dat:0:19	철광석을 가공해 만든 재료	Nguyên liệu gia công từ quặng sắt
+T:IT30.dat:1:13	미스릴원석	Quặng Mithril
+T:IT30.dat:1:25	가공되지 않은 원석상태의 재료	Nguyên liệu ở dạng quặng thô chưa gia công
+T:IT30.dat:2:13	루비광석	Quặng Ruby
+T:IT30.dat:3:13	철광석	Quặng sắt
+T:IT30.dat:4:13	하급판금	Tấm kim loại hạ cấp
+T:IT30.dat:4:23	융합용으로 가공한 상태의 재료	Nguyên liệu đã gia công để dung hợp
+T:IT30.dat:5:13	금광석	Quặng vàng
+T:IT30.dat:6:13	금괴	Thỏi vàng
+T:IT30.dat:7:13	강철주괴	Thỏi thép
+T:IT30.dat:8:13	미스릴주괴	Thỏi Mithril
+T:IT30.dat:9:13	오리하르콘	Orichalcum
+T:IT30.dat:10:13	강철판금	Tấm thép
+T:IT30.dat:11:13	미스릴판금	Tấm Mithril
+T:IT30.dat:12:13	백금주괴	Thỏi bạch kim
+T:IT30.dat:13:13	은광석	Quặng bạc
+T:IT30.dat:14:13	마광석	Quặng ma
+T:IT30.dat:15:13	구리광석	Quặng đồng
+T:IT30.dat:16:13	홍옥원석	Hồng ngọc thô
+T:IT30.dat:17:13	수정석	Thạch anh
+T:IT30.dat:18:13	영혼결정	Tinh thể linh hồn
+T:IT30.dat:19:13	토파즈원석	Topaz thô
+T:IT30.dat:20:13	구리주괴	Thỏi đồng
+T:IT30.dat:21:13	합금주쇠	Thỏi hợp kim
+T:IT30.dat:22:13	고급판금	Tấm kim loại cao cấp
+T:IT30.dat:23:13	헬아이언	Hell Iron
+T:IT30.dat:24:13	골드스틱	Gold Stick
+T:IT30.dat:25:13	인큐버스아이	Mắt Incubus
+T:IT30.dat:25:27	마기를 흠뻑 머금은 인큐버스의 눈	Mắt Incubus thấm đẫm ma khí
+T:IT30.dat:26:13	가넷원석	Garnet thô
+T:IT30.dat:27:13	게살	Thịt cua
+T:IT30.dat:27:19	융합과 퀘스트에 쓰이는 살코기 형태의 재료	Nguyên liệu dạng thịt dùng cho dung hợp và nhiệm vụ
+T:IT30.dat:28:13	와이엄고기	Thịt Wyem
+T:IT30.dat:29:13	스콜피온꼬리	Đuôi Scorpion
+T:IT30.dat:30:13	가고일 등심살	Thăn Gargoyle
+T:IT30.dat:30:28	쫄깃한 맛이 일품인 가고일의 등심부위	Phần thăn Gargoyle dai ngon hảo hạng
+T:IT30.dat:31:13	수상한 주머니	Túi khả nghi
+T:IT30.dat:31:28	어두운 기운이 은밀하게 묻어나는 주머니	Túi thoang thoảng khí tức u tối
+T:IT30.dat:32:13	비상용식량	Lương khô
+T:IT30.dat:33:13	트롤의고기	Thịt Troll
+T:IT30.dat:34:13	스콜피온살	Thịt Scorpion
+T:IT30.dat:35:13	바질리스크뼈	Xương Basilisk
+T:IT30.dat:35:27	융합과 퀘스트에 쓰이는 뼈 형태의 재료	Nguyên liệu dạng xương dùng cho dung hợp và nhiệm vụ
+T:IT30.dat:36:13	트롤의 뼈	Xương Troll
+T:IT30.dat:37:13	크랩의 뼈	Xương Crab
+T:IT30.dat:38:13	사막트롤의장식	Trang sức Troll sa mạc
+T:IT30.dat:38:29	사막트롤이 머리를 틀어올리기 위해 꽂는 장신구	Trâm cài tóc Desert Troll dùng để búi tóc
+T:IT30.dat:39:13	굵은 뼈	Xương to
+T:IT30.dat:40:13	트롤의굵은뼈	Xương to Troll
+T:IT30.dat:41:13	빅푸드의뼈	Xương Bigfoot
+T:IT30.dat:42:13	타우렌의 뼈	Xương Tauren
+T:IT30.dat:43:13	가공한 뼈	Xương đã gia công
+T:IT30.dat:44:13	단단한 뼈	Xương cứng
+T:IT30.dat:45:13	자이언트의뼈	Xương Giant
+T:IT30.dat:46:13	시나몬의 뼈	Xương Cinnamon
+T:IT30.dat:47:13	그렘린의 뼈	Xương Gremlin
+T:IT30.dat:48:13	프로그 뼈	Xương Frog
+T:IT30.dat:49:13	클로버가루	Bột cỏ ba lá
+T:IT30.dat:49:25	융합과 퀘스트에 쓰이는 가루 형태의 재료	Nguyên liệu dạng bột dùng cho dung hợp và nhiệm vụ
+T:IT30.dat:50:13	맨오워의가루	Bột Man-o-War
+T:IT30.dat:51:13	철가루	Bột sắt
+T:IT30.dat:52:13	빛나는모래가루	Bột cát lấp lánh
+T:IT30.dat:53:13	고운모래가루	Bột cát mịn
+T:IT30.dat:54:13	사막모래가루	Bột cát sa mạc
+T:IT30.dat:55:13	정령의빛가루	Bột sáng Tinh linh
+T:IT30.dat:56:13	모래가루	Bột cát
+T:IT30.dat:57:13	윈드더스트	Wind Dust
+T:IT30.dat:58:13	실프의가루	Bột Sylph
+T:IT30.dat:59:13	정령의기운	Khí Tinh linh
+T:IT30.dat:60:13	암흑의기운	Khí Bóng tối
+T:IT30.dat:61:13	스카이더스트	Sky Dust
+T:IT30.dat:62:13	주술용가루	Bột dùng cho thuật
+T:IT30.dat:63:13	마법용가루	Bột dùng cho phép
+T:IT30.dat:64:13	만다고라가루	Bột Mandragora
+T:IT30.dat:65:13	화약가루	Thuốc súng
+T:IT30.dat:66:13	그래브포이즌	Grab Poison
+T:IT30.dat:67:13	산돌가루	Bột đá núi
+T:IT30.dat:68:13	리자드배설물	Phân Lizard
+T:IT30.dat:69:13	커즈포이즌	Curse Poison
+T:IT30.dat:70:13	각성원석가루	Bột đá thức tỉnh
+T:IT30.dat:71:13	청산가루	Bột xyanua
+T:IT30.dat:72:13	드레이크가죽	Da Drake
+T:IT30.dat:72:27	융합과 퀘스트에 쓰이는 가죽 재료	Nguyên liệu da dùng cho dung hợp và nhiệm vụ
+T:IT30.dat:73:13	래트가죽	Da Rat
+T:IT30.dat:74:13	버블몬가죽	Da Bubblemon
+T:IT30.dat:75:13	와이엄가죽	Da Wyem
+T:IT30.dat:76:13	홉버블몬가죽	Da Hob Bubblemon
+T:IT30.dat:77:13	블랙버블리더	Black Bubble Leather
+T:IT30.dat:78:13	자이언트가죽	Da Giant
+T:IT30.dat:79:13	융합용가죽	Da dùng dung hợp
+T:IT30.dat:80:13	고품질가죽	Da chất lượng cao
+T:IT30.dat:81:13	신비한가죽	Da bí ẩn
+T:IT30.dat:82:13	마운틴버블리더	Mountain Bubble Leather
+T:IT30.dat:83:13	리자드리더	Lizard Leather
+T:IT30.dat:84:13	드레이크리더	Drake Leather
+T:IT30.dat:85:13	프로그가죽	Da Frog
+T:IT30.dat:86:13	보글린가죽	Da Boglin
+T:IT30.dat:87:13	크랩껍데기	Mai cua
+T:IT30.dat:88:13	마법의가죽	Da Phép thuật
+T:IT30.dat:89:13	토템크랩껍데기	Mai Totem Crab
+T:IT30.dat:90:13	마물의가죽	Da Ma vật
+T:IT30.dat:91:13	데몬리더	Demon Leather
+T:IT30.dat:92:13	사막의눈물	Nước mắt Sa mạc
+T:IT30.dat:92:25	융합과 퀘스트에 쓰이는 보석 형태의 재료	Nguyên liệu dạng ngọc dùng cho dung hợp và nhiệm vụ
+T:IT30.dat:93:13	사막보석	Ngọc sa mạc
+T:IT30.dat:94:13	숲속진주	Ngọc trai rừng
+T:IT30.dat:95:13	푸른보석	Ngọc xanh
+T:IT30.dat:96:13	토네이도핵	Lõi Tornado
+T:IT30.dat:97:13	사파이어	Sapphire
+T:IT30.dat:98:13	루비	Ruby
+T:IT30.dat:99:13	융합용옥	Ngọc dùng dung hợp
+T:IT30.dat:100:13	가공한옥	Ngọc đã gia công
+T:IT30.dat:101:13	찬란한옥	Ngọc rực rỡ
+T:IT30.dat:102:13	주술용수정	Pha lê dùng cho thuật
+T:IT30.dat:103:13	주술사파이어	Sapphire dùng cho thuật
+T:IT30.dat:104:13	매지션루비	Magician Ruby
+T:IT30.dat:105:13	흑마법용수정	Pha lê hắc ma pháp
+T:IT30.dat:106:13	집시의눈물	Nước mắt Gypsy
+T:IT30.dat:107:13	블랙사파이어	Black Sapphire
+T:IT30.dat:108:13	암흑수정	Pha lê bóng tối
+T:IT30.dat:109:13	머미의혼석	Hồn thạch Mummy
+T:IT30.dat:110:13	마도사의수정	Pha lê Ma đạo sĩ
+T:IT30.dat:111:13	청산보석	Ngọc Blue Mountain
+T:IT30.dat:112:13	기사의메달	Huy chương Kỵ sĩ
+T:IT30.dat:112:25	융합과 퀘스트에 쓰이는 메달 형태의 재료	Nguyên liệu dạng huy chương dùng cho dung hợp và nhiệm vụ
+T:IT30.dat:113:13	마나펜던트	Mana Pendant
+T:IT30.dat:114:13	그리드메달	Greed Medal
+T:IT30.dat:115:13	블랙루비	Black Ruby
+T:IT30.dat:116:13	블랙메달	Black Medal
+T:IT30.dat:117:13	어벤져의메달	Huy chương Avenger
+T:IT30.dat:118:13	커즈펜던트	Curse Pendant
+T:IT30.dat:119:13	데몬메달	Demon Medal
+T:IT30.dat:120:13	헉슬리메달	Huxley Medal
+T:IT30.dat:121:13	탈영병메달	Huy chương lính đào ngũ
+T:IT30.dat:122:13	산적목걸이	Dây chuyền sơn tặc
+T:IT30.dat:123:13	암흑기사메달	Huy chương Dark Knight
+T:IT30.dat:123:27	흑마법의 기운이 서려있는 암흑기사들의 아티팩트	Cổ vật của các Dark Knight thấm khí hắc ma pháp
+T:IT30.dat:124:13	그래브씰	Grab Seal
+T:IT30.dat:125:13	망자의목걸이	Dây chuyền Vong nhân
+T:IT30.dat:126:13	소울펜던트	Soul Pendant
+T:IT30.dat:127:13	거래허가증	Giấy phép giao dịch
+T:IT30.dat:127:25	융합과 퀘스트에 쓰이는 종이 형태의 재료	Nguyên liệu dạng giấy dùng cho dung hợp và nhiệm vụ
+T:IT30.dat:128:13	비밀서류	Tài liệu bí mật
+T:IT30.dat:129:13	마도주문서	Cuộn phép ma đạo
+T:IT30.dat:130:13	마스크용지	Giấy làm mặt nạ
+T:IT30.dat:131:13	하드페이퍼	Hard Paper
+T:IT30.dat:132:13	흑마법용지	Giấy hắc ma pháp
+T:IT30.dat:133:13	트롤페이퍼	Troll Paper
+T:IT30.dat:134:13	위저드페이퍼	Wizard Paper
+T:IT30.dat:135:13	암살목록서	Danh sách ám sát
+T:IT30.dat:136:13	모던선언문	Tuyên ngôn Modern
+T:IT30.dat:137:13	데빌북	Devil Book
+T:IT30.dat:138:13	마물양념레시피	Công thức gia vị ma vật
+T:IT30.dat:138:29	마물껍데기를 만들기위한 양념의 조리법(퀘스트)	Công thức gia vị để làm vỏ ma vật (nhiệm vụ)
+T:IT30.dat:139:13	민첩의도	Đao Nhanh nhẹn
+T:IT30.dat:139:23	퀘스트용 아이템	Vật phẩm nhiệm vụ
+T:IT30.dat:140:13	기사교본	Giáo trình kỵ sĩ
+T:IT30.dat:141:13	검체력단련	Rèn luyện thể lực kiếm
+T:IT30.dat:142:13	자격증명서	Giấy chứng nhận tư cách
+T:IT30.dat:143:13	썬더카운트	Thunder Count
+T:IT30.dat:144:13	궁극스윙	Ultimate Swing
+T:IT30.dat:145:13	궁극교본	Giáo trình tối thượng
+T:IT30.dat:146:13	노블블레이딩	Noble Blading
+T:IT30.dat:147:13	테스트증명서	Giấy chứng nhận thử
+T:IT30.dat:148:13	수퍼스톰카운트	Super Storm Count
+T:IT30.dat:149:13	실크	Lụa
+T:IT30.dat:150:13	질긴천	Vải dai
+T:IT30.dat:150:21	융합과 퀘스트에 쓰이는 천 형태의 재료	Nguyên liệu dạng vải dùng cho dung hợp và nhiệm vụ
+T:IT30.dat:151:13	옷감재료	Nguyên liệu vải áo
+T:IT30.dat:152:13	딱딱한천	Vải cứng
+T:IT30.dat:153:13	부드러운천	Vải mềm
+T:IT30.dat:154:13	검은천	Vải đen
+T:IT30.dat:155:13	암살자의천	Vải Sát thủ
+T:IT30.dat:156:13	융합용천	Vải dùng dung hợp
+T:IT30.dat:157:13	고품질천	Vải chất lượng cao
+T:IT30.dat:158:13	최고급천	Vải thượng hạng
+T:IT30.dat:159:13	누런천	Vải vàng đục
+T:IT30.dat:160:13	너덜한천	Vải rách
+T:IT30.dat:161:13	저주받은천	Vải bị nguyền
+T:IT30.dat:162:13	녹색의천	Vải Xanh lá
+T:IT30.dat:163:13	마계의천	Vải Ma giới
+T:IT30.dat:164:13	마계의붕대	Băng Ma giới
+T:IT30.dat:165:13	질긴누런천	Vải vàng đục dai
+T:IT30.dat:166:13	좀비의붕대	Băng Zombie
+T:IT30.dat:167:13	응급붕대	Băng cứu thương
+T:IT30.dat:168:13	집시의옷감	Vải áo Gypsy
+T:IT30.dat:169:13	두꺼운면	Bông dày
+T:IT30.dat:170:13	고급옷감	Vải áo cao cấp
+T:IT30.dat:171:13	청산휘장	Huy hiệu Blue Mountain
+T:IT30.dat:172:13	야생나무가지	Cành cây dại
+T:IT30.dat:172:27	융합과 퀘스트에 쓰이는 나무, 상아종류의 재료	Nguyên liệu gỗ, ngà dùng cho dung hợp và nhiệm vụ
+T:IT30.dat:173:13	만다고라줄기	Thân Mandragora
+T:IT30.dat:174:13	고구마줄기	Thân khoai lang
+T:IT30.dat:175:13	토템플랜트가지	Cành Totem Plant
+T:IT30.dat:176:13	굵은토템가지	Cành Totem to
+T:IT30.dat:177:13	커즈플랜트가지	Cành Curse Plant
+T:IT30.dat:178:13	맨드레이크가지	Cành Mandrake
+T:IT30.dat:179:13	드로세라가지	Cành Drosera
+T:IT30.dat:180:13	네펜데스가지	Cành Nepenthes
+T:IT30.dat:181:13	바로메츠가지	Cành Barometz
+T:IT30.dat:182:13	사라세니아가지	Cành Sarracenia
+T:IT30.dat:183:13	맨오워의가지	Cành Man-o-War
+T:IT30.dat:184:13	왁스재료	Nguyên liệu sáp
+T:IT30.dat:185:13	악마의눈물	Nước mắt Ác ma
+T:IT30.dat:186:13	밀약의 서약서	Giấy thề bí mật
+T:IT30.dat:186:28	흑마법사와 도적길드간의 1:1결연을 증명하는 서약서	Giấy thề chứng minh kết giao 1:1 giữa Dark Mage và hội trộm
+T:IT30.dat:187:13	북부고급목재	Gỗ cao cấp phương Bắc
+T:IT30.dat:188:13	모래속상아	Ngà trong cát
+T:IT30.dat:188:25	융합과 퀘스트에 쓰이는 재료	Nguyên liệu dùng cho dung hợp và nhiệm vụ
+T:IT30.dat:189:13	크랩집게발	Càng cua
+T:IT30.dat:190:13	푸른나뭇잎	Lá xanh
+T:IT30.dat:191:13	하트오브솔저	Heart of Soldier
+T:IT30.dat:192:13	스콜피언껍질	Vỏ Scorpion
+T:IT30.dat:193:13	체스트넛가시	Gai Chestnut
+T:IT30.dat:194:13	버블몬이빨	Răng Bubblemon
+T:IT30.dat:195:13	날카로운가시	Gai sắc
+T:IT30.dat:196:13	모래전사휘장	Huy hiệu chiến binh cát
+T:IT30.dat:197:13	블랙버블아이	Black Bubble Eye
+T:IT30.dat:198:13	그렘린의가시	Gai Gremlin
+T:IT30.dat:199:13	토템시나온가시	Gai Totem Cinnamon
+T:IT30.dat:200:13	뾰족한가시	Gai nhọn
+T:IT30.dat:201:13	시나몬의가시	Gai Cinnamon
+T:IT30.dat:202:13	래트가시	Gai Rat
+T:IT30.dat:203:13	쟈크테일	Jack Tail
+T:IT30.dat:204:13	쟈크포이즌	Jack Poison
+T:IT30.dat:205:13	철마스크	Mặt nạ sắt
+T:IT30.dat:206:13	매직아이	Magic Eye
+T:IT30.dat:207:13	자이언트이빨	Răng Giant
+T:IT30.dat:208:13	토템집게	Càng Totem
+T:IT30.dat:209:13	솔저오브포춘	Soldier of Fortune
+T:IT30.dat:210:13	토템씨앗	Hạt Totem
+T:IT30.dat:211:13	스파이더집게	Càng Spider
+T:IT30.dat:212:13	데블아이	Devil Eye
+T:IT30.dat:213:13	만다고라씨앗	Hạt Mandragora
+T:IT30.dat:214:13	쟈크레그	Jack Leg
+T:IT30.dat:215:13	네펜데스의잎	Lá Nepenthes
+T:IT30.dat:216:13	총기피스	Báng súng
+T:IT30.dat:217:13	강철탄환	Đạn thép
+T:IT30.dat:218:13	모던글라스	Modern Glass
+T:IT30.dat:219:13	가이나이프	Gai Knife
+T:IT30.dat:220:13	모더닉캔	Modernic Can
+T:IT30.dat:221:13	모던링거	Modern Ringer
+T:IT30.dat:222:13	소울아이	Soul Eye
+T:IT30.dat:223:13	사라세니아씨앗	Hạt Sarracenia
+T:IT30.dat:224:13	나물범벅	Rau trộn
+T:IT30.dat:224:23	바로메츠 가지로 만들어진 나물범벅(퀘스트)	Rau trộn làm từ cành Barometz (nhiệm vụ)
+T:IT30.dat:225:13	환생 지침서	Sách hướng dẫn Tái sinh
+T:IT30.dat:225:26	환생에 대해 복잡한 룬어로 설명해 둔 책(퀘스트)	Sách giải thích về Tái sinh bằng ngôn ngữ rune phức tạp (nhiệm vụ)
+T:IT30.dat:226:13	전사의 유골	Hài cốt chiến binh
+T:IT30.dat:226:26	오크전사의 유골	Hài cốt chiến binh Orc
+T:IT30.dat:227:13	헵번의치료약	Thuốc chữa Hepburn
+T:IT30.dat:227:27	빅조를 위한 특제 치료약(퀘스트)	Thuốc chữa đặc chế cho Big Joe (nhiệm vụ)
+T:IT30.dat:228:13	골무 목걸이	Dây chuyền ống khâu
+T:IT30.dat:228:26	버블몬 가죽으로 만들어진 골무목걸이(퀘스트)	Dây chuyền ống khâu làm từ da Bubblemon (nhiệm vụ)
+T:IT30.dat:229:13	황제의 마법서	Ma pháp thư của Hoàng đế
+T:IT30.dat:229:28	크로이센 건국황제의 비밀마법서(퀘스트)	Ma pháp thư bí mật của hoàng đế khai quốc Chroisen (nhiệm vụ)
+T:IT30.dat:230:13	커즈타워 씨앗	Hạt Curse Tower
+T:IT30.dat:230:28	커즈타워의 씨앗이 담긴 상자(퀘스트)	Hộp chứa hạt Curse Tower (nhiệm vụ)
+T:IT30.dat:231:13	빈 주머니	Túi trống
+T:IT30.dat:231:24	물을 담을 수 있게 방수 처리된 주머니	Túi chống nước để đựng nước
+T:IT30.dat:232:13	물 주머니	Túi nước
+T:IT30.dat:232:24	차가운 물이 가득 담겨있는 물주머니	Túi nước đầy nước lạnh
+T:IT30.dat:233:13	신성력의 정화	Thanh tẩy thần lực
+T:IT30.dat:233:28	순수한 금과 신성력이 극도로 응축된 신성력의 결정체	Tinh thể thần lực cô đặc từ vàng nguyên chất và thần lực
+T:IT30.dat:234:13	하급강화석	Đá cường hóa hạ cấp
+T:IT30.dat:234:25	장비를 최대 +10 까지 강화 할 수 있는 강화석	Đá giúp cường hóa trang bị tối đa +10
+T:IT30.dat:235:13	중급강화석	Đá cường hóa trung cấp
+T:IT30.dat:235:25	장비를 최대 +13 까지 강화 할 수 있는 강화석	Đá giúp cường hóa trang bị tối đa +13
+T:IT30.dat:236:13	상급강화석	Đá cường hóa thượng cấp
+T:IT30.dat:236:25	장비를 최대 +20 까지 강화 할 수 있는 강화석	Đá giúp cường hóa trang bị tối đa +20
+T:IT30.dat:237:13	와인금속	Kim loại Wine
+T:IT30.dat:237:23	여러가지 용도로 사용되는최고급 재료	Nguyên liệu thượng hạng dùng cho nhiều mục đích
+T:IT30.dat:238:13	시나몬의가죽	Da Cinnamon
+T:IT30.dat:239:13	푸른금속	Kim loại xanh
+T:IT30.dat:240:13	아버지의 유품	Di vật của người cha
+T:IT30.dat:240:28	수련수녀 코이의 아버지가 남긴 메달(퀘스트)	Huy chương người cha để lại cho nữ tu tập sự Koi (nhiệm vụ)
+T:IT30.dat:241:13	제메신경	Kinh Jemes
+T:IT30.dat:241:23	제메스교의 교리가 담긴 책	Sách chứa giáo lý của giáo phái Jemes
+T:IT30.dat:242:13	로카르도의 편지	Thư của Rocardo
+T:IT30.dat:242:30	인간 대장장이에게 보내는 오크 대장장이의 편지(퀘스트)	Thư của thợ rèn Orc gửi thợ rèn con người (nhiệm vụ)
+T:IT30.dat:243:13	대장장이 공구	Dụng cụ thợ rèn
+T:IT30.dat:243:28	미키가 오크 대장장이 로카르도에게 보내는 선물(퀘스트)	Quà Mickey gửi thợ rèn Orc Rocardo (nhiệm vụ)
+T:IT30.dat:244:13	나디아의 편지	Thư của Nadia
+T:IT30.dat:244:28	나디아의 마음이 담긴 편지(퀘스트)	Thư chứa tấm lòng của Nadia (nhiệm vụ)
+T:IT30.dat:245:13	리커버리북	Sách hồi phục
+T:IT30.dat:245:25	사망시 경험치 손실없이, 바로 그자리 부활	Khi chết hồi sinh ngay tại chỗ, không mất kinh nghiệm
+T:IT30.dat:246:13	프로텍트북	Sách bảo hộ
+T:IT30.dat:246:25	강화 실패시 장비 파손 방지 (단, 1~15강)	Chống hỏng trang bị khi cường hóa thất bại (chỉ +1~15)
+T:IT30.dat:247:13	킬트의권능	Quyền năng Kilt
+T:IT30.dat:247:25	킬트의 축복으로 아이템에 부여된 모든 마법을 해제합니다.	Gỡ toàn bộ phép đã phù cho vật phẩm bằng phước lành của Kilt.
+T:IT30.dat:248:13	던전입장권	Vé vào hầm ngục
+T:IT30.dat:248:25	던전에 입장료 없이 입장 할 수 있도록 해주는 아이템	Vật phẩm cho vào hầm ngục không mất phí vào cửa
+T:IT30.dat:249:13	폴조의 연애편지	Thư tình của Polzo
+T:IT30.dat:249:30	폴조가 헵번에게 쓴 연애편지(퀘스트)	Thư tình Polzo viết cho Hepburn (nhiệm vụ)
+T:IT30.dat:250:13	코드리의 편지	Thư của Codry
+T:IT30.dat:250:28	코드리가 쓴 은밀한 편지(퀘스트)	Thư bí mật Codry viết (nhiệm vụ)
+T:IT31.dat:0:13	C급 마법석	Đá phép hạng C
+T:IT31.dat:0:25	낮은수치의 마법부여가 영구히 적용 됩니다	Phù phép chỉ số thấp, áp dụng vĩnh viễn
+T:IT31.dat:1:13	B급 마법석	Đá phép hạng B
+T:IT31.dat:1:25	보통수치의 마법부여가 영구히 적용 됩니다	Phù phép chỉ số trung bình, áp dụng vĩnh viễn
+T:IT31.dat:2:13	A급 마법석	Đá phép hạng A
+T:IT31.dat:2:25	높은수치의 마법부여가 영구히 적용 됩니다	Phù phép chỉ số cao, áp dụng vĩnh viễn
+T:IT32.dat:3:37	캐릭터 사망시 즉시 부활 	Hồi sinh ngay khi nhân vật chết 
+T:IT32.dat:4:25	리커버리북 x 15	Sách hồi phục x 15
+T:IT32.dat:4:42	리커버리북 15개 세트	Bộ 15 Sách hồi phục
+T:IT32.dat:5:25	와인포션 x 30	Wine Potion x 30
+T:IT32.dat:5:40	HP, MP 모두 회복하는 와인포션 30개 세트 	Bộ 30 Wine Potion hồi cả HP và MP 
+T:IT32.dat:12:40	사용시 마법석, 강화석 랜덤으로 10개 지급 	Dùng: nhận ngẫu nhiên 10 đá phép, đá cường hóa 
+T:IT32.dat:13:37	아이템에 상급 마법옵션을 부여하는 마법석	Đá phép ban phép thuật thượng cấp cho vật phẩm
+T:IT32.dat:14:25	A급 마법석 x 5	Đá phép hạng A x 5
+T:IT32.dat:14:41	아이템에 상급 마법옵션을 부여하는 A급 마법석 5개 세트	Bộ 5 Đá phép hạng A ban phép thuật thượng cấp cho vật phẩm
+T:IT32.dat:15:25	A급 마법석 x 10	Đá phép hạng A x 10
+T:IT32.dat:15:42	아이템에 상급 마법옵션을 부여하는 A급 마법석 10개 세트	Bộ 10 Đá phép hạng A ban phép thuật thượng cấp cho vật phẩm
+T:IT32.dat:16:25	상급 강화석 x 10	Đá cường hóa thượng cấp x 10
+T:IT32.dat:16:43	아이템을 +20까지 강화 할수 있는 상급 강화석 10개 세트	Bộ 10 Đá cường hóa thượng cấp giúp cường hóa vật phẩm tới +20
+T:IT32.dat:17:25	상급 강화석 x 35	Đá cường hóa thượng cấp x 35
+T:IT32.dat:17:43	아이템을 +20까지 강화 할수 있는 상급 강화석 35개 세트	Bộ 35 Đá cường hóa thượng cấp giúp cường hóa vật phẩm tới +20
+T:IT32.dat:18:25	킬트의 권능	Quyền năng Kilt
+T:IT32.dat:18:38	킬트의 축복으로 아이템에 부여된 모든 마법을 해제합니다. 	Gỡ toàn bộ phép đã phù cho vật phẩm bằng phước lành của Kilt. 
+T:IT32.dat:19:25	킬트의 권능 x 11	Quyền năng Kilt x 11
+T:IT32.dat:19:43	킬트의 권능 11개 세트	Bộ 11 Quyền năng Kilt
+T:IT32.dat:20:25	프로텍트북 x 10	Sách bảo hộ x 10
+T:IT32.dat:20:42	강화시 +15 까지 장비의 파괴를 막아주는 프로텍트북 10개 세트	Bộ 10 Sách bảo hộ chống hủy trang bị tới +15 khi cường hóa
+T:IT32.dat:21:25	프로텍트북 x 25	Sách bảo hộ x 25
+T:IT32.dat:21:42	강화시 +15 까지 장비의 파괴를 막아주는 프로텍트북 25개 세트	Bộ 25 Sách bảo hộ chống hủy trang bị tới +15 khi cường hóa
+T:IT32.dat:22:25	대형가방	Túi lớn
+T:IT32.dat:22:35	인벤토리 확장 (36칸) 	Mở rộng túi đồ (36 ô) 
+T:IT32.dat:23:34	스킬포인트 1을 올려주며, 최대 10회만 사용가능합니다.	Tăng 1 điểm kỹ năng, chỉ dùng được tối đa 10 lần.
+T:IT32.dat:24:25	킬트의 보호 x 5	Bảo hộ Kilt x 5
+T:IT32.dat:24:42	5초간 모든 공격으로부터 무적이 되는 킬트의 보호 5개세트	Bộ 5 Bảo hộ Kilt giúp bất tử 5 giây trước mọi đòn tấn công
+T:IT32.dat:25:25	명예의 칭호	Danh hiệu danh dự
+T:IT32.dat:25:38	[크리티컬 50, 흡혈 8% 드랍률 15%]중 랜덤으로 1개	Ngẫu nhiên 1 trong [Chí mạng 50, Hút máu 8%, Rớt đồ 15%]
+T:IT32.dat:26:25	뉴비 패키지	Gói Newbie
+T:IT32.dat:26:38	뉴비 패키지(리커버리북X5,와인포션X30,대형가방,와이번세트,킬트의보호)	Gói Newbie (Sách hồi phục X5, Wine Potion X30, Túi lớn, Bộ Wyvern, Bảo hộ Kilt)
+T:IT32.dat:27:25	다시만난세계	Thế giới tái ngộ
+T:IT32.dat:27:39	다시만난세계 패키지(리셋라이프,킬트의권능X5,리커버리북X15,대형가방,스킬업)	Gói Thế giới tái ngộ (Reset Life, Quyền năng Kilt X5, Sách hồi phục X15, Túi lớn, Skill Up)
+T:IT32.dat:28:25	지름 패키지	Gói Chi mạnh
+T:IT32.dat:28:38	지름 패키지(A급마법석X10,상급강화석X10,프로텍트북X10,드레이크세트,킬트링의상자)	Gói Chi mạnh (Đá phép hạng A X10, Đá cường hóa thượng cấp X10, Sách bảo hộ X10, Bộ Drake, Hộp Kiltling)
+T:IT32.dat:29:25	마스터 패키지	Gói Master
+T:IT32.dat:29:40	마스터 패키지(대형가방,드래곤세트,스킬업)	Gói Master (Túi lớn, Bộ Dragon, Skill Up)
+T:IT32.dat:30:25	지름신의 축복	Phước lành thần Mua sắm
+T:IT32.dat:30:40	지름신의 축복 패키지(필리스의상자X5,킬트링의상자X5)	Gói Phước lành thần Mua sắm (Hộp Philis X5, Hộp Kiltling X5)

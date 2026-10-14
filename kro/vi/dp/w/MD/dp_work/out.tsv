@@ -1,0 +1,876 @@
+1	Label Town
+2	Eastern City
+3	Lui City
+4	Ortsk
+5	Dinh thự Huxley
+6	Đền Thiên Không
+7	Cảng Lopis
+8	Cảng Mas
+9	Trại Orc
+10	Desert Camp
+11	Sky Valley
+12	Peace Road 1
+13	Peace Road 2
+14	Peace Road 3
+15	Rừng Trung Tâm
+16	Rừng phía Nam
+17	Cửa Sand Dungeon
+18	Ngoại ô Label Town 1
+19	Ngoại ô Label Town 2
+20	Ngoại ô Label Town 3
+21	Cửa Evil Cave
+22	Razelt Road 1
+23	Razelt Road 2
+24	Razelt Road 3
+25	Razelt Road 4
+26	Thánh địa bóng tối
+27	Khu hầm 1
+28	Khu hầm 2
+29	Phòng bí mật
+30	Mas Road 1
+31	Mas Road 2
+32	Mas Road 3
+33	Cửa Deep Sand Dungeon
+34	Đường Eastern City 1
+35	Đường Eastern City 2
+36	Đường Eastern City 3
+37	Cửa Deep Demon Cave
+38	Ngoại ô Bắc Eastern 1
+39	Ngoại ô Bắc Eastern 2
+40	Ngoại ô Bắc Eastern 3
+41	Ngoại ô Bắc Eastern 4
+42	Hang Black Bandits 1
+43	Hang Black Bandits 2
+44	Hang Black Bandits 3
+45	Hang Black Bandits 4
+46	Boss Black Bandits
+47	Ngoại ô Nam Eastern 1
+48	Ngoại ô Nam Eastern 2
+49	Ngoại ô Nam Eastern 3
+50	Cửa East Forest
+51	Đường đại dinh thự 1
+52	Đường đại dinh thự 2
+53	Đại dinh thự Huxley 1
+54	Đại dinh thự Huxley 2
+55	Đại dinh thự Huxley 3
+56	Đại dinh thự Huxley 4
+57	Đại dinh thự Huxley 5
+58	Đại dinh thự Huxley 6
+59	Đại dinh thự Huxley 7
+60	Đại dinh thự Huxley 8
+61	Đại dinh thự Huxley 9
+62	Đại dinh thự Huxley 10
+63	Đại dinh thự Huxley 11
+64	Đại dinh thự Huxley 12
+65	Đại dinh thự Huxley 13
+66	Đại dinh thự Huxley 14
+67	Phòng Huxley
+68	Sa mạc Yên Bình 1
+69	Sa mạc Yên Bình 2
+70	Sa mạc Yên Bình 3
+71	Cửa Desert Dungeon
+72	Rừng Bóng Tối 1
+73	Rừng Bóng Tối 2
+74	Rừng Bóng Tối 3
+75	Rừng Bóng Tối 4
+76	Hầm Dark Mage 1
+77	Hầm Dark Mage 2
+78	Hầm Dark Mage 3
+79	Hầm Dark Mage 4
+80	Hầm Dark Mage 5
+81	Hầm Dark Mage 6
+82	Hầm Dark Mage 7
+83	Hầm Dark Mage 8
+84	Hầm Dark Mage 9
+85	Boss Dark Mage 1
+86	Boss Dark Mage 2
+87	Ngoại ô Bắc Lui City 1
+88	Ngoại ô Bắc Lui City 2
+89	Ngoại ô Bắc Lui City 3
+90	Ngoại ô Bắc Lui City 4
+91	Cửa West Forest
+92	Trường luyện ngầm Lui City
+93	Phía Tây Lui City
+94	Sa mạc phía Tây 1
+95	Sa mạc phía Tây 2
+96	Sa mạc phía Tây 3
+97	Cửa Deep Desert Dungeon
+98	Cao nguyên 1
+99	Cao nguyên 2
+100	Cao nguyên 3
+101	Hầm Sa mạc Tây 1
+102	Hầm Sa mạc Tây 2
+103	Hầm Sa mạc Tây 3
+104	Hầm Sa mạc Tây 4
+105	Hầm Sa mạc Tây 5
+106	Phòng boss Hầm Sa mạc Tây
+107	Khu Bắc Ortsk 1
+108	Khu Bắc Ortsk 2
+109	Cửa Blue Mountain
+110	Đường Trại Orc 1
+111	Đường Trại Orc 2
+112	Đường Trại Orc 3
+113	Trong Trại Orc
+114	Biên giới phía Nam 1
+115	Biên giới phía Nam 2
+116	Biên giới phía Nam 3
+117	Đường bí mật 1
+118	Đường bí mật 2
+119	Lối bí mật Lâu đài Dager
+120	Lâu đài Dager 1
+121	Lâu đài Dager 2
+122	Lâu đài Dager 3
+123	Lâu đài Dager 4
+124	Lâu đài Dager 5
+125	Lâu đài Dager 6
+126	Lâu đài Dager 7
+127	Nơi của Dager
+128	Dãy núi phía Bắc 1
+129	Dãy núi phía Bắc 2
+130	Dãy núi phía Bắc 3
+131	Cửa Deep Blue Mountain
+132	North Mountain 1
+133	North Mountain 2
+134	North Mountain 3
+135	Hang Bóng Tối 1
+136	Hang Bóng Tối 2
+137	Hang Bóng Tối 3
+138	Hang Bóng Tối 4
+139	Hang Bóng Tối 5
+140	Hang Bóng Tối 6
+141	Hang Bóng Tối 7
+142	Cuối Hang Bóng Tối
+143	Celt Road 1
+144	Celt Road 2
+145	Celt Road 3
+146	Celt Road 4
+147	Celt Road 5
+148	Đền Jemes 1
+149	Đền Jemes 2
+150	Đền Jemes 3
+151	Nơi của giáo chủ
+152	Nơi Death Knight 1
+153	Nơi Death Knight 2
+154	Nơi Death Knight 3
+155	Nơi Death Knight 4
+156	Nơi Death Knight 5
+157	Nơi Death Knight 6
+158	Nơi Death Knight 7
+159	Nơi Death Knight 8
+160	Nơi Death Knight 9
+161	Nơi Death Knight 10
+162	Death Knight 1
+163	Death Knight 2
+164	Death Knight 3
+165	Death Knight 4
+166	Death Knight 5
+167	Death Knight 6
+168	Death Knight 7
+169	Death Knight 8
+170	Nơi bí mật
+171	Quán trọ Label Town
+172	Cửa hàng Label Town
+173	Nhà Sebastian
+174	Nhà bà Emma
+175	Trong thành Label Town
+176	Quán trọ Eastern City
+177	Cửa hàng Eastern City
+178	Trong thành Eastern City
+179	Quán trọ Lui City
+180	Cửa hàng Lui City
+181	Trong thành Lui City
+182	Nhà tộc trưởng Ortsk
+183	Quán trọ Ortsk
+184	Cửa hàng Ortsk
+185	Nhà dân Ortsk
+186	Trong thánh đường Saint Rafine
+187	Nơi của Dager 2
+188	Dinh thự Huxley 2
+189	Lui City 2
+190	Evil Cave 1
+191	Evil Cave 2
+192	Evil Cave 3
+193	Evil Cave 4
+194	Evil Cave 5
+195	Evil Cave 6
+196	Evil Cave 7
+197	Sand Dungeon 1
+198	Sand Dungeon 2
+199	Sand Dungeon 3
+200	Sand Dungeon 4
+201	Sand Dungeon 5
+202	Sand Dungeon 6
+203	Sand Dungeon 7
+204	Sand Dungeon 8
+205	Sand Dungeon 9
+206	Deep Sand Dungeon 1
+207	Deep Sand Dungeon 2
+208	Deep Sand Dungeon 3
+209	Deep Sand Dungeon 4
+210	Deep Sand Dungeon 5
+211	Deep Sand Dungeon 6
+212	Deep Sand Dungeon 7
+213	Deep Sand Dungeon 8
+214	Deep Sand Dungeon 9
+215	Deep Sand Dungeon 10
+216	Deep Sand Dungeon 11
+217	Deep Sand Dungeon 12
+218	Deep Sand Dungeon 13
+219	Deep Sand Dungeon 14
+220	Deep Sand Dungeon 15
+221	Deep Demon Cave 1
+222	Deep Demon Cave 2
+223	Deep Demon Cave 3
+224	Deep Demon Cave 4
+225	Deep Demon Cave 5
+226	Deep Demon Cave 6
+227	Deep Demon Cave 7
+228	Deep Demon Cave 8
+229	Deep Demon Cave 9
+230	Deep Demon Cave 10
+231	Deep Demon Cave 11
+232	Deep Demon Cave 12
+233	Deep Demon Cave 13
+234	Deep Demon Cave 14
+235	Deep Demon Cave 15
+236	Deep Demon Cave 16
+237	Deep Demon Cave 17
+238	Deep Demon Cave 18
+239	East Forest 1
+240	East Forest 2
+241	East Forest 3
+242	East Forest 4
+243	East Forest 5
+244	East Forest 6
+245	East Forest 7
+246	East Forest 8
+247	East Forest 9
+248	East Forest 10
+249	East Forest 11
+250	East Forest 12
+251	East Forest 13
+252	East Forest 14
+253	East Forest 15
+254	East Forest 16
+255	East Forest 17
+256	East Forest 18
+257	East Forest 19
+258	Desert Dungeon 1
+259	Desert Dungeon 2
+260	Desert Dungeon 3
+261	Desert Dungeon 4
+262	Desert Dungeon 5
+263	Desert Dungeon 6
+264	Desert Dungeon 7
+265	Desert Dungeon 8
+266	Desert Dungeon 9
+267	Desert Dungeon 10
+268	Desert Dungeon 11
+269	Desert Dungeon 12
+270	Desert Dungeon 13
+271	Desert Dungeon 14
+272	Desert Dungeon 15
+273	Desert Dungeon 16
+274	Desert Dungeon 17
+275	Desert Dungeon 18
+276	Desert Dungeon 19
+277	Desert Dungeon 20
+278	Desert Dungeon 21
+279	Desert Dungeon 22
+280	West Forest 1
+281	West Forest 2
+282	West Forest 3
+283	West Forest 4
+284	West Forest 5
+285	West Forest 6
+286	West Forest 7
+287	West Forest 8
+288	West Forest 9
+289	West Forest 10
+290	West Forest 11
+291	West Forest 12
+292	West Forest 13
+293	West Forest 14
+294	West Forest 15
+295	West Forest 16
+296	West Forest 17
+297	West Forest 18
+298	West Forest 19
+299	West Forest 20
+300	West Forest 21
+301	West Forest 22
+302	Deep Desert Dungeon 1
+303	Deep Desert Dungeon 2
+304	Deep Desert Dungeon 3
+305	Deep Desert Dungeon 4
+306	Deep Desert Dungeon 5
+307	Deep Desert Dungeon 6
+308	Deep Desert Dungeon 7
+309	Deep Desert Dungeon 8
+310	Deep Desert Dungeon 9
+311	Deep Desert Dungeon 10
+312	Deep Desert Dungeon 11
+313	Deep Desert Dungeon 12
+314	Deep Desert Dungeon 13
+315	Deep Desert Dungeon 14
+316	Deep Desert Dungeon 15
+317	Deep Desert Dungeon 16
+318	Deep Desert Dungeon 17
+319	Deep Desert Dungeon 18
+320	Deep Desert Dungeon 19
+321	Deep Desert Dungeon 20
+322	Deep Desert Dungeon 21
+323	Deep Desert Dungeon 22
+324	Deep Desert Dungeon 23
+325	Deep Desert Dungeon 24
+326	Deep Desert Dungeon 25
+327	Deep Desert Dungeon 26
+328	Deep Desert Dungeon 27
+329	Deep Desert Dungeon 28
+330	Blue Mountain 1
+331	Blue Mountain 2
+332	Blue Mountain 3
+333	Blue Mountain 4
+334	Blue Mountain 5
+335	Blue Mountain 6
+336	Blue Mountain 7
+337	Blue Mountain 8
+338	Blue Mountain 9
+339	Blue Mountain 10
+340	Blue Mountain 11
+341	Blue Mountain 12
+342	Blue Mountain 13
+343	Blue Mountain 14
+344	Blue Mountain 15
+345	Blue Mountain 16
+346	Blue Mountain 17
+347	Blue Mountain 18
+348	Blue Mountain 19
+349	Blue Mountain 20
+350	Blue Mountain 21
+351	Blue Mountain 22
+352	Blue Mountain 23
+353	Blue Mountain 24
+354	Blue Mountain 25
+355	Blue Mountain 26
+356	Blue Mountain 27
+357	Blue Mountain 28
+358	Blue Mountain 29
+359	Blue Mountain 30
+360	Blue Mountain 31
+361	Blue Mountain 32
+362	Deep Blue Mountain 1
+363	Deep Blue Mountain 2
+364	Deep Blue Mountain 3
+365	Deep Blue Mountain 4
+366	Deep Blue Mountain 5
+367	Deep Blue Mountain 6
+368	Deep Blue Mountain 7
+369	Deep Blue Mountain 8
+370	Deep Blue Mountain 9
+371	Deep Blue Mountain 10
+372	Deep Blue Mountain 11
+373	Deep Blue Mountain 12
+374	Deep Blue Mountain 13
+375	Deep Blue Mountain 14
+376	Deep Blue Mountain 15
+377	Deep Blue Mountain 16
+378	Deep Blue Mountain 17
+379	Deep Blue Mountain 18
+380	Deep Blue Mountain 19
+381	Deep Blue Mountain 20
+382	Deep Blue Mountain 21
+383	Deep Blue Mountain 22
+384	Deep Blue Mountain 23
+385	Deep Blue Mountain 24
+386	Deep Blue Mountain 25
+387	Deep Blue Mountain 26
+388	Deep Blue Mountain 27
+389	Deep Blue Mountain 28
+390	Deep Blue Mountain 29
+391	Deep Blue Mountain 30
+392	Deep Blue Mountain 31
+393	Deep Blue Mountain 32
+394	Deep Blue Mountain 33
+395	Deep Blue Mountain 34
+396	Deep Blue Mountain 35
+397	Deep Blue Mountain 36
+398	Deep Blue Mountain 37
+399	Deep Blue Mountain 38
+400	Deep Blue Mountain 39
+401	Deep Blue Mountain 40
+402	Deep Blue Mountain 41
+403	Deep Blue Mountain 42
+404	Castle Sky 1
+405	Castle Sky 2
+406	Castle Sky 3
+407	Castle Sky 4
+408	Castle Sky 5
+409	Castle Sky 6
+410	Castle Sky 7
+411	Castle Sky 8
+412	Castle Sky 9
+413	Castle Sky 10
+414	Castle Sky 11
+415	Castle Sky 12
+416	Castle Sky 13
+417	Castle Sky 14
+418	Castle Sky 15
+419	Castle Sky 16
+420	Castle Sky 17
+421	Castle Sky 18
+422	Castle Sky 19
+423	Castle Sky 20
+424	Castle Sky 21
+425	Castle Sky 22
+426	Castle Sky 23
+427	Castle Sky 24
+428	Castle Sky 25
+429	Castle Sky 26
+430	Castle Sky 27
+431	Castle Sky 28
+432	Castle Sky 29
+433	Castle Sky 30
+434	Castle Sky 31
+435	Castle Sky 32
+436	Castle Sky 33
+437	Castle Sky 34
+438	Castle Sky 35
+439	Castle Sky 36
+440	Castle Sky 37
+441	Castle Sky 38
+442	Castle Sky 39
+443	Castle Sky 40
+444	Greed Castle 1
+445	Greed Castle 2
+446	Greed Castle 3
+447	Greed Castle 4
+448	Greed Castle 5
+449	Greed Castle 6
+450	Greed Castle 7
+451	Greed Castle 8
+452	Greed Castle 9
+453	Greed Castle 10
+454	Greed Castle 11
+455	Greed Castle 12
+456	Greed Castle 13
+457	Greed Castle 14
+458	Greed Castle 15
+459	Greed Castle 16
+460	Greed Castle 17
+461	Greed Castle 18
+462	Greed Castle 19
+463	Greed Castle 20
+464	Greed Castle 21
+465	Greed Castle 22
+466	Greed Castle 23
+467	Greed Castle 24
+468	Greed Castle 25
+469	Greed Castle 26
+470	Greed Castle 27
+471	Greed Castle 28
+472	Greed Castle 29
+473	Greed Castle 30
+474	Greed Babel 1
+475	Greed Babel 2
+476	Greed Babel 3
+477	Greed Babel 4
+478	Greed Babel 5
+479	Greed Babel 6
+480	Greed Babel 7
+481	Greed Babel 8
+482	Greed Babel 9
+483	Greed Babel 10
+484	Greed Babel 11
+485	Greed Babel 12
+486	Greed Babel 13
+487	Greed Babel 14
+488	Greed Babel 15
+489	Greed Babel 16
+490	Greed Babel 17
+491	Greed Babel 18
+492	Greed Babel 19
+493	Greed Babel 20
+494	Greed Babel 21
+495	Greed Babel 22
+496	Greed Babel 23
+497	Greed Babel 24
+498	Greed Babel 25
+499	Greed Babel 26
+500	Greed Babel 27
+501	Greed Babel 28
+502	Greed Babel 29
+503	Greed Babel 30
+504	Greed Babel 31
+505	Greed Babel 32
+506	Greed Babel 33
+507	Greed Babel 34
+508	Greed Babel 35
+509	Greed Babel 36
+510	Greed Babel 37
+511	Greed Babel 38
+512	Greed Babel 39
+513	Greed Babel 40
+514	Black Lamp Castle 1
+515	Black Lamp Castle 2
+516	Black Lamp Castle 3
+517	Black Lamp Castle 4
+518	Black Lamp Castle 5
+519	Black Lamp Castle 6
+520	Black Lamp Castle 7
+521	Black Lamp Castle 8
+522	Black Lamp Castle 9
+523	Black Lamp Castle 10
+524	Black Lamp Castle 11
+525	Black Lamp Castle 12
+526	Black Lamp Castle 13
+527	Black Lamp Castle 14
+528	Black Lamp Castle 15
+529	Black Lamp Castle 16
+530	Black Lamp Castle 17
+531	Black Lamp Castle 18
+532	Black Lamp Castle 19
+533	Black Lamp Castle 20
+534	Black Lamp Castle 21
+535	Black Lamp Castle 22
+536	Black Lamp Castle 23
+537	Black Lamp Castle 24
+538	Black Lamp Castle 25
+539	Black Lamp Castle 26
+540	Black Lamp Castle 27
+541	Black Lamp Castle 28
+542	Black Lamp Castle 29
+543	Black Lamp Castle 30
+544	Deep Greed Babel 1
+545	Deep Greed Babel 2
+546	Deep Greed Babel 3
+547	Deep Greed Babel 4
+548	Deep Greed Babel 5
+549	Deep Greed Babel 6
+550	Deep Greed Babel 7
+551	Deep Greed Babel 8
+552	Deep Greed Babel 9
+553	Deep Greed Babel 10
+554	Deep Greed Babel 11
+555	Deep Greed Babel 12
+556	Deep Greed Babel 13
+557	Deep Greed Babel 14
+558	Deep Greed Babel 15
+559	Deep Greed Babel 16
+560	Deep Greed Babel 17
+561	Deep Greed Babel 18
+562	Deep Greed Babel 19
+563	Deep Greed Babel 20
+564	Deep Greed Babel 21
+565	Deep Greed Babel 22
+566	Deep Greed Babel 23
+567	Deep Greed Babel 24
+568	Deep Greed Babel 25
+569	Deep Greed Babel 26
+570	Deep Greed Babel 27
+571	Deep Greed Babel 28
+572	Deep Greed Babel 29
+573	Deep Greed Babel 30
+574	Deep Greed Babel 31
+575	Deep Greed Babel 32
+576	Deep Greed Babel 33
+577	Deep Greed Babel 34
+578	Deep Greed Babel 35
+579	Deep Greed Babel 36
+580	Deep Greed Babel 37
+581	Deep Greed Babel 38
+582	Deep Greed Babel 39
+583	Deep Greed Babel 40
+584	Deep Greed Babel 41
+585	Deep Greed Babel 42
+586	Deep Greed Babel 43
+587	Deep Greed Babel 44
+588	Deep Greed Babel 45
+589	Deep Greed Babel 46
+590	Deep Greed Babel 47
+591	Deep Greed Babel 48
+592	Deep Greed Babel 49
+593	Deep Greed Babel 50
+594	Deep Greed Babel 51
+595	Deep Greed Babel 52
+596	Deep Greed Babel 53
+597	Deep Greed Babel 54
+598	Deep Greed Babel 55
+599	Deep Greed Babel 56
+600	Deep Greed Babel 57
+601	Deep Greed Babel 58
+602	Deep Greed Babel 59
+603	Deep Greed Babel 60
+604	Demon Castle 1
+605	Demon Castle 2
+606	Demon Castle 3
+607	Demon Castle 4
+608	Demon Castle 5
+609	Demon Castle 6
+610	Demon Castle 7
+611	Demon Castle 8
+612	Demon Castle 9
+613	Demon Castle 10
+614	Demon Castle 11
+615	Demon Castle 12
+616	Demon Castle 13
+617	Demon Castle 14
+618	Demon Castle 15
+619	Demon Castle 16
+620	Demon Castle 17
+621	Demon Castle 18
+622	Demon Castle 19
+623	Demon Castle 20
+624	Demon Castle 21
+625	Demon Castle 22
+626	Demon Castle 23
+627	Demon Castle 24
+628	Demon Castle 25
+629	Demon Castle 26
+630	Demon Castle 27
+631	Demon Castle 28
+632	Demon Castle 29
+633	Demon Castle 30
+634	Demon Castle 31
+635	Demon Castle 32
+636	Demon Castle 33
+637	Demon Castle 34
+638	Demon Castle 35
+639	Demon Castle 36
+640	Demon Castle 37
+641	Demon Castle 38
+642	Demon Castle 39
+643	Demon Castle 40
+644	Demon Castle 41
+645	Demon Castle 42
+646	Demon Castle 43
+647	Demon Castle 44
+648	Demon Castle 45
+649	Demon Castle 46
+650	Demon Castle 47
+651	Demon Castle 48
+652	Demon Castle 49
+653	Demon Castle 50
+654	Demon Castle 51
+655	Demon Castle 52
+656	Demon Castle 53
+657	Demon Castle 54
+658	Demon Castle 55
+659	Demon Castle 56
+660	Demon Castle 57
+661	Demon Castle 58
+662	Demon Castle 59
+663	Demon Castle 60
+664	Demon Castle 61
+665	Demon Castle 62
+666	Demon Castle 63
+667	Demon Castle 64
+668	Fallen Castle 1
+669	Fallen Castle 2
+670	Fallen Castle 3
+671	Fallen Castle 4
+672	Fallen Castle 5
+673	Fallen Castle 6
+674	Fallen Castle 7
+675	Fallen Castle 8
+676	Fallen Castle 9
+677	Fallen Castle 10
+678	Fallen Castle 11
+679	Fallen Castle 12
+680	Fallen Castle 13
+681	Fallen Castle 14
+682	Fallen Castle 15
+683	Fallen Castle 16
+684	Fallen Castle 17
+685	Fallen Castle 18
+686	Fallen Castle 19
+687	Fallen Castle 20
+688	Fallen Castle 21
+689	Fallen Castle 22
+690	Fallen Castle 23
+691	Fallen Castle 24
+692	Fallen Castle 25
+693	Fallen Castle 26
+694	Fallen Castle 27
+695	Fallen Castle 28
+696	Fallen Castle 29
+697	Fallen Castle 30
+698	Fallen Castle 31
+699	Fallen Castle 32
+700	Fallen Castle 33
+701	Fallen Castle 34
+702	Fallen Castle 35
+703	Fallen Castle 36
+704	Fallen Castle 37
+705	Fallen Castle 38
+706	Fallen Castle 39
+707	Fallen Castle 40
+708	Fallen Castle 41
+709	Fallen Castle 42
+710	Fallen Castle 43
+711	Fallen Castle 44
+712	Fallen Castle 45
+713	Fallen Castle 46
+714	Fallen Castle 47
+715	Fallen Castle 48
+716	Fallen Castle 49
+717	Fallen Castle 50
+718	Fallen Castle 51
+719	Fallen Castle 52
+720	Fallen Castle 53
+721	Fallen Castle 54
+722	Fallen Castle 55
+723	Fallen Castle 56
+724	Fallen Castle 57
+725	Fallen Castle 58
+726	Fallen Castle 59
+727	Fallen Castle 60
+728	Fallen Castle 61
+729	Fallen Castle 62
+730	Fallen Castle 63
+731	Fallen Castle 64
+732	Fallen Castle 65
+733	Fallen Castle 66
+734	Abyss of Madness 1
+735	Abyss of Madness 2
+736	Abyss of Madness 3
+737	Abyss of Madness 4
+738	Abyss of Madness 5
+739	Abyss of Madness 6
+740	Abyss of Madness 7
+741	Abyss of Madness 8
+742	Abyss of Madness 9
+743	Abyss of Madness 10
+744	Abyss of Madness 11
+745	Abyss of Madness 12
+746	Abyss of Madness 13
+747	Abyss of Madness 14
+748	Abyss of Madness 15
+749	Abyss of Madness 16
+750	Abyss of Madness 17
+751	Abyss of Madness 18
+752	Abyss of Madness 19
+753	Abyss of Madness 20
+754	Abyss of Madness 21
+755	Abyss of Madness 22
+756	Abyss of Madness 23
+757	Abyss of Madness 24
+758	Abyss of Madness 25
+759	Abyss of Madness 26
+760	Abyss of Madness 27
+761	Abyss of Madness 28
+762	Abyss of Madness 29
+763	Abyss of Madness 30
+764	Abyss of Madness 31
+765	Abyss of Madness 32
+766	Abyss of Madness 33
+767	Abyss of Madness 34
+768	Abyss of Madness 35
+769	Abyss of Madness 36
+770	Abyss of Madness 37
+771	Dahak Entrance 1
+772	Dahak Entrance 2
+773	Dahak Entrance 3
+774	Dahak Entrance 4
+775	Dahak Entrance 5
+776	Dahak Entrance 6
+777	Dahak Entrance 7
+778	Dahak Entrance 8
+779	Dahak Entrance 9
+780	Dahak Entrance 10
+781	Dahak Entrance 11
+782	Dahak Entrance 12
+783	Dahak Entrance 13
+784	Dahak Entrance 14
+785	Dahak Entrance 15
+786	Dahak Entrance 16
+787	Dahak Entrance 17
+788	Dahak Entrance 18
+789	Dahak Entrance 19
+790	Dahak Entrance 20
+791	Dahak Entrance 21
+792	Dahak Entrance 22
+793	Dahak Entrance 23
+794	Dahak Entrance 24
+795	Dahak Entrance 25
+796	Dahak Entrance 26
+797	Dahak Entrance 27
+798	Dahak Entrance 28
+799	Dahak Entrance 29
+800	Dahak Entrance 30
+801	Dahak Entrance 31
+802	Dahak Entrance 32
+803	Dahak Entrance 33
+804	Dahak Entrance 34
+805	Dahak Entrance 35
+806	Dahak Entrance 36
+807	Dahak Entrance 37
+808	Dahak Entrance 38
+809	Dahak Entrance 39
+810	Dahak Entrance 40
+811	Dahak Entrance 41
+812	Dahak Dungeon 1
+813	Dahak Dungeon 2
+814	Dahak Dungeon 3
+815	Dahak Dungeon 4
+816	Dahak Dungeon 5
+817	Dahak Dungeon 6
+818	Dahak Dungeon 7
+819	Dahak Dungeon 8
+820	Dahak Dungeon 9
+821	Dahak Dungeon 10
+822	Dahak Dungeon 11
+823	Dahak Dungeon 12
+824	Dahak Dungeon 13
+825	Dahak Dungeon 14
+826	Dahak Dungeon 15
+827	Dahak Dungeon 16
+828	Dahak Dungeon 17
+829	Dahak Dungeon 18
+830	Dahak Dungeon 19
+831	Dahak Dungeon 20
+832	Dahak Dungeon 21
+833	Dahak Dungeon 22
+834	Dahak Dungeon 23
+835	Dahak Dungeon 24
+836	Dahak Dungeon 25
+837	Dahak Dungeon 26
+838	Dahak Dungeon 27
+839	Dahak Dungeon 28
+840	Dahak Dungeon 29
+841	Dahak Dungeon 30
+842	Dahak Dungeon 31
+843	Dahak Dungeon 32
+844	Dahak Dungeon 33
+845	Dahak Dungeon 34
+846	Dahak Dungeon 35
+847	Dahak Dungeon 36
+848	Dahak Dungeon 37
+849	Dahak Dungeon 38
+850	Dahak Dungeon 39
+851	Dahak Dungeon 40
+852	Dahak Dungeon 41
+853	Dahak Dungeon 42
+854	Dahak Dungeon 43
+855	Dahak Dungeon 44
+856	Dahak Dungeon 45
+857	Dahak Dungeon 46
+858	Dahak Dungeon 47
+859	Cửa Greed Castle
+860	Peace Road 21
+861	Đền Thiên Không (xa)
+862	Bản đồ trống
+863	Cảng Razel
+864	Cảng Prot
+865	Hầm Sa mạc Tây 6
+866	Sự kiện Sand Dungeon
+867	Khu Dahak
+868	Ending
+869	Prologue
+870	Epilogue
+871	Cửa Tàn tích ngầm
+872	Cửa Tàn tích ngầm
+873	Tàn tích ngầm 1
+874	Tàn tích ngầm 2
+875	Tàn tích ngầm 3
+876	Di tích cổ đại

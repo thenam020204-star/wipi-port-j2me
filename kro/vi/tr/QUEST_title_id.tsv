@@ -1,0 +1,5 @@
+# Tên quest trùng chữ Hàn với tên đồ/hầm ngục (bảng by_ko dùng chung) nhưng phải ngắn hơn: khung tên quest <= 99px (QUEST_TITLE_W)
+T:QUEST00.dat:26:31	황제의 마법서	Ma thư hoàng đế
+T:QUEST00.dat:175:31	딥샌드던전	Deep Sand D.
+T:QUEST00.dat:180:31	딥데저트던전	Deep Desert D.
+T:QUEST00.dat:182:31	딥블루마운틴	Deep Blue Mt.

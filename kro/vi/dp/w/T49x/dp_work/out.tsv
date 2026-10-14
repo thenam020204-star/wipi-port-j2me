@@ -1,0 +1,516 @@
+1	Zombie
+2	Biting
+3	Poison Flame
+4	Poison Ball
+5	Bubblemon
+6	Bubbling
+7	Shark Bite
+8	Dark Mage
+9	Death Fire
+10	Tiếng thét nguyền
+11	Gọi Zombie
+12	Little Demon
+13	Death Slash
+14	Sand Hollow
+15	Final Hollow
+16	Đánh thường
+17	Make Hole
+18	Mitten Crab
+19	Soldier
+20	Slash
+21	Fireball
+22	Troll
+23	Troll Attack
+24	Death Rush
+25	Băng cướp
+26	Đòn hiểm
+27	Rushing Attack
+28	Mandragora
+29	Đòn độc
+30	Chestnut
+31	Knight
+32	Liotar
+33	Xả súng
+34	Khiêu khích
+35	Guard Tower
+36	Guard Attack
+37	Demon Tower
+38	Curse Guard Attack
+39	Jemesis
+40	Đánh thường
+41	Gọi tín đồ
+42	Tự hủy
+43	Coolio
+44	Đòn phẫn nộ
+45	Dager
+46	Ogre Spirit
+47	Sát thương cận chiến
+48	Spirit Ball
+49	Hấp thụ
+50	Mana Cannon
+51	Haures
+52	Spread Ball
+53	Frust
+54	Đòn hiểm mạnh
+55	Fire Slash
+56	Jemes
+57	Fire Down
+58	Meteor Fall
+59	Hồi sinh
+60	Death Knight
+61	Huxley
+62	Kairu
+63	Phép thuật
+64	Phép bóng tối
+65	Vũ khí ma đạo
+66	Trung
+67	Trống
+68	Mùi máu...
+69	Mummy
+70	Khááác!
+71	Ghoul
+72	Hương máu...
+73	Elite Ghoul
+74	Con...người..!
+75	Zombie Lord
+76	Con...người...
+77	Wight
+78	Khừ khừ...
+79	Vong nhân
+80	Trả chân ta đây..
+81	Vong nhân địa ngục
+82	Khà khà khà!
+83	Desert Zombie
+84	Bẩn..quá..
+85	Evil Zombie
+86	Gloomy Mummy
+87	Khááác!!
+88	Wyem
+89	Gwaaa!
+90	Frog
+91	Ộp! Ộp!
+92	Lizard
+93	Là con người!
+94	Boglin
+95	Đồ con người!
+96	Lizardman
+97	Đồ nhãi ranh...
+98	Mountain Lizard
+99	Lui ra!
+100	Hob Bubblemon
+101	Hô hô hô hố!
+102	Mountain Bubblemon
+103	Khặc khặc khặc...
+104	Black Bubblemon
+105	Gừ gừ...
+106	Drake
+107	Sháaak..  
+108	Basilisk
+109	Ba..zil..!
+110	Ai đó!
+111	Ma đạo sư
+112	Sức mạnh bóng tối...!
+113	Warlock
+114	Dám sao...
+115	Ma đạo sĩ ma giới
+116	Sức mạnh ma giới!
+117	Shaman
+118	Ha ha ha!
+119	Sultan
+120	Đồ như ngươi à!
+121	Summoner
+122	Bắt lấy!
+123	Wizard
+124	Tên này!
+125	Modern Magician
+126	Lại đây!
+127	Undead Sultan
+128	Ta sẽ báo thù!
+129	Devil
+130	Hí hí hí!
+131	Imp
+132	Chơi nào~
+133	Desert Devil
+134	Lại đây~
+135	Belial
+136	Sức mạnh ma giới...!
+137	Beelzebub
+138	Incubus
+139	Dám cho con người...
+140	Mountain Demon
+141	Demon
+142	Giết..hết..!
+143	Gargoyle
+144	Bắt..lấy..!
+145	Sylph
+146	Đi đâu thế~
+147	Chơi với tớ đi~
+148	Sylape
+149	Gió tự do!
+150	Sylairon
+151	Bắt tớ đi~
+152	Sky Hollow
+153	Hí hí hí~
+154	Greed Sylph
+155	Sinh khí...
+156	Ghost
+157	Ư ư ư..
+158	Desert Wind
+159	Khô cạn ngươi!
+160	Tornado
+161	Sức gió~
+162	Dark Wind
+163	Celestine
+164	Sức mạnh tinh linh..
+165	Grab
+166	Kịt kịt~ ! 
+167	Kịt kịt!
+168	Crab
+169	Cua! Cua!
+170	Spider
+171	Chói..quá..
+172	Scorpion
+173	Tarantula
+174	Mùi ngon quá..
+175	Totem Crab
+176	Golden Crab
+177	Là con người sao...
+178	Ghostula
+179	Lính đào ngũ
+180	Chiến binh cát
+181	Sao dám đến đây!
+182	Đội trưởng chiến binh cát
+183	Sky Soldier
+184	Tên kia!
+185	Greed Soldier
+186	Đừng tha thứ!
+187	Eastern Soldier
+188	Có kẻ xâm nhập!
+189	Modern Soldier
+190	Chặn lại!
+191	Bắt tên kia!
+192	Desert Troll
+193	Gàaaa!
+194	Có mùi con người...
+195	Giant
+196	Mountain Troll
+197	Con..người..
+198	Ettin
+199	Gừừừ...
+200	Tauren
+201	Ăn..hết..!
+202	Totem Giant
+203	Con người tươi sống...
+204	Cave Troll
+205	Bigfoot
+206	Sơn tặc
+207	Trộm
+208	Bandits
+209	Hừ hừ hừ...
+210	Greed Assassin
+211	Đến đây thôi...
+212	Sát thủ
+213	Ta diệt ngươi...
+214	Black Bandits
+215	Biến đi!
+216	Undead Thief
+217	Ta sẽ báo thù...
+218	Jemesis Warrior
+219	Mandrake
+220	Cho miếng nước...
+221	Barometz
+222	Trườn trườn...
+223	Kịt...
+224	Nepenthes
+225	Drosera
+226	Kịt kịt...
+227	Man-o-War
+228	Xàoooo..
+229	Curse Plant
+230	Hự hự hự...
+231	Totem Plant
+232	Hương bóng tối..
+233	Sarracenia
+234	Khặc khặc khặc...
+235	Cinnamon
+236	Khụ khụ  
+237	Kík~!
+238	Angry Chestnut
+239	Rat
+240	Khịt~
+241	Greed Rat
+242	Khà khà khà khà
+243	Gremlin
+244	Black Cinnamon
+245	Kịt!
+246	Totem Cinnamon
+247	Kiaaa!!
+248	Desert Rat
+249	Khaaa khaaa~
+250	Đầu mục sơn tặc
+251	Avenger
+252	Ta báo thù..
+253	Castle Knight
+254	Greed Knight
+255	Đưa đồ đây!
+256	Warrior
+257	Modern Knight
+258	Vì sự sống!
+259	Dark Knight
+260	Vinh quang bóng tối!
+261	Thành viên kỵ sĩ đoàn
+262	Bắt tên kia! 
+263	Lord of Greed Castle
+264	Đừng oán ta...
+265	Dahak Gunner
+266	Zombie Liotar
+267	Modern Gunner
+268	Lạch cạch lạch cạch
+269	Lamp Guardian
+270	Tsss tsss
+271	Greed Tower
+272	Thấy địch rồi!
+273	Defense Tower
+274	Cảnh giới!
+275	Magic Tower
+276	Desert Tower
+277	Modern Tower
+278	Eastern Tower
+279	Khẩn cấp! Khẩn cấp!
+280	Curse Tower
+281	Khààà!!!
+282	Demon Guardian
+283	Devil Tower
+284	Khaaác!
+285	Dark Guardian
+286	Phát hiện kẻ xâm nhập!
+287	Dark Tower
+288	Azis Tower
+289	Khuààà!
+290	Shaman sơn tặc
+291	Thằng nhóc!
+292	Shaman Gypsy
+293	Ma đạo sĩ
+294	Lại đây nào...
+295	Cuồng tín
+296	Hừ hừ hừ hừ...
+297	Druid
+298	Ta giết ngươi!
+299	Thuật sĩ
+300	Mermisium!
+301	Modernist
+302	Dark Sorcerer
+303	Lamp Sorcerer
+304	Blue Mountain Outlaw
+305	Tên này dám sao!
+306	Undead Coolio
+307	Lâu rồi mới gặp..
+308	Assassin hạng nhất
+309	Munk
+310	Sức mạnh quyền năng...!
+311	Nhãi ranh...!
+312	Deep Babel Lord
+313	Đừng cản ta!
+314	Dahak Lord
+315	Black Lamp Baba
+316	Bibidi Baba!
+317	Ogre Spirit
+318	Uooo...!!!
+319	Cyclops
+320	Ogre Soul
+321	Kiru~~~!  
+322	Devilis
+323	Kiru~~~! 
+324	Devil Haures
+325	Dám sao...!
+326	Lord of Fallen Castle
+327	Dahak Knight
+328	Zombie Frust
+329	Ngươi nhớ ta không?
+330	Hell Gatekeeper
+331	Curse Caster
+332	Umhurmasha!
+333	Dahak Magician
+334	Nhìn đây! Ta!
+335	Lich Jemes
+336	Blue Mountain Mage
+337	Đây là mồ chôn!
+338	Greed Magician
+339	Ngươi là của ta...
+340	Se!Bas!Tian!
+341	Tên này dám!
+342	Khéééc!
+343	Charles
+344	Lính gác
+345	William
+346	Jerome
+347	Charlie
+348	Chuck
+349	Ron
+350	Jerry
+351	Panelly
+352	Jean Claude
+353	Raffaello
+354	Guillaume
+355	Lepanne
+356	Rondane
+357	Henry
+358	Kỵ sĩ gác
+359	Derrida
+360	Thomas
+361	Lính liên quân
+362	Luke
+363	Người bán rong
+364	Ruth
+365	Rene
+366	Sư phụ
+367	Jamie
+368	Chủ quán trọ
+369	Dana
+370	Marily
+371	Johnson
+372	Lính đánh thuê
+373	Jones
+374	Ronnie
+375	Tiệm tạp hóa
+376	Hunt
+377	Victor
+378	Phil
+379	Thợ rèn
+380	Nick
+381	Mickey
+382	Emma
+383	Bà lão
+384	Faulkner
+385	Lãnh chúa
+386	Teresa
+387	Đại nữ tu
+388	Lunian
+389	Đại pháp sư
+390	Alicia
+391	Nữ tu tập sự
+392	Innis
+393	Tiểu thư công tước
+394	Brigit
+395	Chiến binh Orc
+396	Lirke
+397	Nadia
+398	Con gái tộc trưởng
+399	Ifrica
+400	Yunk
+401	Rocardo
+402	Yundorco
+403	Dân Orc
+404	Shaimon
+405	Tộc trưởng Orc
+406	Ryoniel
+407	Thợ sửa chữa
+408	Lagurdo
+409	Điều tra viên
+410	Thi thể
+411	Marpolo
+412	Người lái đò
+413	Galilei
+414	Arvia
+415	Krusen
+416	Randalph
+417	Đội trưởng lính đánh thuê
+418	Hepburn
+419	Teleporter
+420	Valerie
+421	Quan chức cấp cao
+422	Hy
+423	Messenger
+424	Lacan
+425	Phó quan
+426	Sergei
+427	Quan chức liên quân
+428	Reed
+429	Elliot
+430	Công tước
+431	Big Joe
+432	Nhà thám hiểm
+433	Tommy
+434	Cậu bé
+435	Miornem
+436	Bà mối
+437	Bastinlu
+438	Pháp sư
+439	Trish
+440	Quầy ký gửi
+441	Betty
+442	Nhóc con
+443	Elena
+444	Dì
+445	Dagripa
+446	Hầu tước
+447	Briny
+448	Rosanne
+449	Bá tước phu nhân
+450	Polzo
+451	Nhà thầu xây dựng
+452	Florily
+453	Tiểu thư nhà quyền quý
+454	Devish
+455	Nam tước
+456	Codry
+457	Gerard
+458	Huấn luyện viên[Chuyển nghề]
+459	Kaden
+460	Võ sĩ hộ vệ
+461	Aber
+462	Kesan
+463	Rutina
+464	Bà chủ quán trọ
+465	Kupi
+466	Nhóc Orc
+467	Plaka
+468	Koi
+469	Helena
+470	Benel
+471	Nữ tu
+472	Gelhen
+473	Nữ tu giám thị
+474	Jason
+475	Thủy thủ
+476	Jarky
+477	Evil Cave
+478	Cấp đề nghị:6
+479	Sand Dungeon
+480	Cấp đề nghị:9
+481	Deep Sand Dungeon
+482	Cấp đề nghị:12
+483	Deep Demon Cave
+484	Cấp đề nghị:18
+485	East Forest
+486	Cấp đề nghị:23
+487	Desert Dungeon
+488	Cấp đề nghị:27
+489	West Forest
+490	Cấp đề nghị:33
+491	Deep Desert Dungeon
+492	Cấp đề nghị:38
+493	Blue Mountain
+494	Cấp đề nghị:42
+495	Deep Blue Mountain
+496	Cấp đề nghị:48
+497	Castle Sky
+498	Cấp đề nghị:52
+499	Greed Castle
+500	Cấp đề nghị:58
+501	Greed Babel
+502	Cấp đề nghị:62
+503	Deep Greed Babel
+504	Cấp đề nghị:72
+505	Black Lamp Castle
+506	Cấp đề nghị:68
+507	Abyss of Madness
+508	Cấp đề nghị:88
+509	Demon Castle
+510	Cấp đề nghị:78
+511	Fallen Castle
+512	Cấp đề nghị:82
+513	Dahak Entrance
+514	Cấp đề nghị:92
+515	Dahak Dungeon
+516	Cấp đề nghị:98

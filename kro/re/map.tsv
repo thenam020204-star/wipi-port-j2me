@@ -1,0 +1,71 @@
+# binary.mod (Thumb, .text @0x1000): địa chỉ -> tên có nghĩa. Binary không có ký hiệu/obfuscation tên; đây là bảng RE.
+# conf: H = nhiều bằng chứng (code + chạy động), M = rất có khả năng, L = suy luận (chưa dùng để vá)
+addr	kind	name	conf	evidence
+0x1000	func	fn_init	H	LGT init struct 0x1400000 (log HL4)
+0x1069	func	clet_event	H	CletRegister event
+0x10bd	func	clet_paint	H	CletRegister paint
+0x10c1	func	clet_start	H	CletRegister start
+0x20d4	func	logo_draw	H	vẽ ảnh logo giữa màn hình theo w/h trong slot (0x1508984+0x20*i), đếm khung [0x150d2a4]
+0x4acb8	func	logo_load	H	mở image/logo.dat, nạp 5 ảnh vào slot 0x1508984
+0x4ad80	func	logo_free	H	giải phóng 5 slot
+0x24a18	func	dialog_wrap	H	ngắt dòng thoại dùng text_measure
+0x26590	func	image_load_png	H	phân tích PNG/PLTE, ép điểm trong suốt 0xFFF7 (cứng ở 0x3a184)
+0x28e14	func	text_measure	H	KroText.MEASURE; tự kiểm 49052 lời gọi trùng
+0x28ed8	func	text_ascii_glyph	H	vẽ glyph ASCII (6 px)
+0x292ec	func	text_glyph	H	vẽ 1 glyph 10x12 (cắt/alpha/gradient/viền) — được gọi lại từ hook
+0x296d8	func	text_draw_string	H	vòng ký tự; điểm móc 0x297e8
+0x297e8	site	text_hook_site	H	cmp r2,#0xa4 (lead không phải Hangul) -> HLE KroText.draw
+0x29aa0	site	text_hook_ascii	H	nhánh ASCII (narrow space)
+0x29ad0	func	text_draw_wrap1	M	bọc 0x296d8
+0x29b74	func	text_draw_xy_align	H	(str,x,y,align)
+0x29c70	func	text_draw_wrap3	M	bọc 0x296d8
+0x29db0	func	text_visible_len	M	độ dài hiển thị (bỏ mã màu)
+0x29e3c	func	describ_load_wrap	H	nạp Describ%d.dat + ngắt theo byte*5 >= rộng-15
+0x3e4e8	func	cashorder_a	M	dùng cashorder.dat (đơn hàng cash)
+0x3e9bc	func	cashorder_b	M	dùng cashorder.dat
+0x3ea3c	func	net_request_start	H	(type,sub,arg): kiểm DS_LOCK/AIRPLANE_MODE/ROAMING_AREA, cấp bộ đệm, đặt [0x15081c4]=1,[0x1508330]=type
+0x3ebb8	func	net_connect_cb	H	MC_netConnect callback (state<=2 -> MC_netSocket)
+0x3f71c	func	net_result	H	(type,status): status 1 = xong, 2 = lỗi; bảng nhánh 0x5d4a4 (30 loại)
+0x3f9fa	func	net_result_purchase	H	nhánh loại 3 và 30: chốt mua / hoàn tác, "구입을 완료하였습니다"
+0x40c64	func	net_error	H	gọi net_result(type,2); bảng 0x5d51c
+0x40d04	func	net_read_reply	H	đọc trả lời (r6 = số byte mong đợi theo loại)
+0x40f00	func	net_send	H	gửi bộ đệm, đặt '0000' vào đầu bộ đệm trả lời
+0x40f84	func	net_build_request	H	dựng gói (bảng nhánh 0x5d6d8, 31 loại), dùng AID "0002CCCB"
+0x41750	func	net_socket_cb	H	callback MC_netSocketConnect (>=0 -> state 5)
+0x41adc	func	net_close	H	đóng socket
+0x41b00	func	net_tick	H	máy trạng thái (6 trạng thái), timeout 30 s / 60 s
+0x1bea0	func	ui_flash_sale	M	"반짝 세일 찬스!!" (quan sát màn hình)
+0x1b770	func	ui_death_revival_purchase	M	mua Sách hồi phục khi chết
+0x2b9a0	func	ui_cash_shop	M	danh sách cash shop
+0x1c37c	func	ui_cash_package_confirm	M	xác nhận gói
+0x5d454	data	server_ip_str	H	"222.231.57.145"
+0x5de10	data	str_image_logo_dat	H	"image/logo.dat"
+0x15081c4	global	net_state	H	byte; 0..6
+0x1508330	global	net_request_type	H	byte
+0x1502d14	global	net_request_params	H	{u32 a, u32 sub}; sub 8 = gói Newbie
+0x1502d1c	global	net_request_buf	H	{ptr,ptr}
+0x1509d30	global	net_reply_buf	H	{ptr,ptr}; ptr[1] cấp bởi 0x4d5e1 (0xe5c byte)
+0x1503ba0	global	net_socket_fd	H	-
+0x1503ba4	global	net_timers	M	6 mốc thời gian (u64)
+0x150d2a4	global	logo_frame	H	đếm khung màn logo
+0x1508984	global	logo_slots	H	5 x 0x20 byte {img*,..., w@+0x18, h@+0x1a}
+0x1509f6c	global	screen_center	H	{cx,cy}
+0x15006c2	global	font_hangul_advance	H	=10
+0x15008d6	global	font_ascii_advance	H	=6
+0x15008d5	global	font_bytes_per_glyph	H	-
+0x15008d8	global	font_glyph_table	H	* (0x300c glyph từ font.dat)
+0x15008e8	global	font_johab_table	H	* (2350 mã)
+0x1506600	global	transparent_key16	H	=0xF81F; điểm ảnh giải mã trong suốt 0xFFF7 (0x15108e4)
+0x150e565	global	display_16bpp	H	=1
+0x14003d4	import	MC_netSocketRead	M	bảng import LGT
+0x638c	code	map_cell_decor_loop (đọc 2 mảng thuộc tính ô bản đồ, attr&3 -> số ngẫu nhiên [0x150d2a4])	M	profile diff + instrument 0x63a4/0x63ae: đọc chỉ số 416..418 của khối heap 416 byte (vượt biên, lỗi gốc của game)
+0x4d9fc	code	safe_mod(a,b) (b==0 -> 0, else __modsi3 0x558a0)	H	disasm 0x4d9fc..0x4da0e
+0x57240	str	"필드" (loại vùng; bảng chuỗi sau dữ liệu)	H	1 literal ref 0xb100; byte trước = 0x0f (bộ trích xuất cũ bỏ sót)
+0x572db	str	"투구" (nhóm trang bị)	H	1 literal ref 0xefdc
+0x580e2	str	"종류" ô đầu mảng nhãn char[5] (종류/등급/레벨/정렬/옵션, màn tìm ký gửi)	H	1 literal ref 0x177dc; các ô cách nhau 5 byte; ảnh chụp màn ký gửi
+0x58274	str	"포션 패키지"	H	1 literal ref 0x1bac4
+0x58314	str	"[포션 패키지]"	H	1 literal ref 0x1c754
+0x58c40	str	"입구"	H	1 literal ref 0x1fba8
+0x5dca4	str	"맵퀘스트 제목 길이 오류" (thông báo lỗi debug)	H	1 literal ref 0x48f98
+0x5deaf	str	"도움말"	H	1 literal ref 0x4b438
+0x5e1a4	str	"배경음크기" (Cài đặt, mục 1)	H	1 literal ref 0x4d4dc; ảnh chụp màn Cài đặt

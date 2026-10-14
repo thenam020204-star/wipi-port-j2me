@@ -1,0 +1,205 @@
+# jardiff kro/orig/0002CCCB.jar -> dist/CHROISEN_LGT_vi2.jar
+kích thước: 2634314 -> 3205097 byte; mục: 433 -> 521
+
+## Tài nguyên: +51 -0 ~119
+ + icon.png
+ + sound/000.mid
+ + sound/001.mid
+ + sound/002.mid
+ + sound/003.mid
+ + sound/004.mid
+ + sound/005.mid
+ + sound/006.mid
+ + sound/007.mid
+ + sound/008.mid
+ + sound/009.mid
+ + sound/010.mid
+ + sound/011.mid
+ + sound/012.mid
+ + sound/101.wav
+ + sound/102.wav
+ + sound/103.wav
+ + sound/104.wav
+ + sound/105.wav
+ + sound/106.wav
+ + sound/107.wav
+ + sound/108.wav
+ + sound/109.wav
+ + sound/110.wav
+ + sound/111.wav
+ + sound/112.wav
+ + sound/113.wav
+ + sound/114.wav
+ + sound/115.wav
+ + sound/116.wav
+ + sound/117.wav
+ + sound/118.wav
+ + sound/119.wav
+ + sound/120.wav
+ + sound/121.mid
+ + sound/122.mid
+ + sound/123.mid
+ + sound/124.mid
+ + sound/125.wav
+ + sound/126.wav
+ + … (11 mục nữa, dùng -v)
+ ~ META-INF/MANIFEST.MF 71 -> 459 (18c98aedc2 -> a1b5ddd18e)
+ ~ binary.mod 535864 -> 535864 (1326f9b373 -> 3624bb254f)
+ ~ data/490.dat 1535 -> 1254 (6ee545b619 -> 015d7d61a1)
+ ~ data/491.dat 8737 -> 7657 (164a343eb0 -> fa277f030c)
+ ~ data/492.dat 3536 -> 3203 (d0c90ca3e1 -> 7119d7ecdd)
+ ~ data/DIAL.dat 30399 -> 25898 (b8ee744474 -> 2a72d8abe7)
+ ~ data/Describ0.dat 6073 -> 5194 (92ef4db3b8 -> d8f90e7951)
+ ~ data/Describ2.dat 3059 -> 2357 (e2b2b33604 -> 2c91946a1f)
+ ~ data/Describ3.dat 527 -> 362 (079105e4e6 -> 5b9ab3e754)
+ ~ data/Describ4.dat 3953 -> 3172 (4a23d26dba -> 38d228e8fc)
+ ~ data/Describ5.dat 2321 -> 1698 (f6e6f33750 -> f1923200dd)
+ ~ data/EV00.dat 41100 -> 35281 (5b2f3e20b5 -> 39d8046ec4)
+ ~ data/EV01.dat 17677 -> 15196 (8171d8fa88 -> 929d687631)
+ ~ data/EV02.dat 18246 -> 16249 (bac448c173 -> 2e2251d0f5)
+ ~ data/EV03.dat 14765 -> 12468 (e26c3f9af8 -> 031548b5f9)
+ ~ data/EV04.dat 16894 -> 14573 (20b17f6572 -> 9b7103883c)
+ ~ data/EV05.dat 21315 -> 18671 (86d938a912 -> 820a596407)
+ ~ data/EV06.dat 21074 -> 18067 (01e252dcc9 -> 4b7eb086ad)
+ ~ data/EV07.dat 11635 -> 10102 (928a0d53af -> 8233c2f0e7)
+ ~ data/EV08.dat 18795 -> 15983 (969f910b95 -> bbb2b43b25)
+ ~ data/EV09.dat 14894 -> 12924 (bb30c9066b -> 470167d954)
+ ~ data/EV10.dat 14863 -> 12941 (44915763e2 -> ed12d294f9)
+ ~ data/EV11.dat 26100 -> 22083 (facec63e27 -> 0978e93dc0)
+ ~ data/EV12.dat 1931 -> 1715 (b324ed55a6 -> 7565facce7)
+ ~ data/EV14.dat 10027 -> 7904 (aef1f24fd4 -> 283b39cd6c)
+ ~ data/EV15.dat 1577 -> 1402 (3f4d5f1d60 -> 8af7902a20)
+ ~ data/EV18.dat 1601 -> 1271 (0f75388b65 -> 8f22ff8057)
+ ~ data/EV19.dat 780 -> 732 (3a2c214759 -> 11c88eb33e)
+ ~ data/EV20.dat 763 -> 561 (f9ff6c357e -> 3c3f9bd0e0)
+ ~ data/EV21.dat 364 -> 280 (35e7034c3b -> b274faa3fb)
+ ~ data/GameTip.dat 4765 -> 3424 (491b593e3e -> 72d6aa3c60)
+ ~ data/IT01.dat 4219 -> 3805 (77d0fcb729 -> 08c44047f2)
+ ~ data/IT02.dat 4121 -> 3625 (a883775baa -> 61d02901d4)
+ ~ data/IT03.dat 4137 -> 3634 (486ff4d00c -> 4739f48e12)
+ ~ data/IT04.dat 4115 -> 3751 (849a5af9e0 -> d4c53430d8)
+ ~ data/IT05.dat 4217 -> 3751 (a83661f2ae -> 237b8bba61)
+ ~ data/IT06.dat 4113 -> 3628 (73edf9ab8a -> e0d3545840)
+ ~ data/IT07.dat 4135 -> 3586 (4b553b8436 -> 3a38ee43e0)
+ ~ data/IT08.dat 4157 -> 3616 (190809fac0 -> d5141fccda)
+ ~ data/IT09.dat 4061 -> 3607 (3eca3e9bf4 -> ea9a28d589)
+ ~ data/IT10.dat 4153 -> 3751 (e35a28f812 -> 4d4bbafe4b)
+ ~ data/IT11.dat 4049 -> 3496 (070f7aecf4 -> 2cdff850ab)
+ ~ data/IT12.dat 4051 -> 3547 (a4a4e5568f -> 79e797dfd2)
+ ~ data/IT13.dat 4071 -> 3514 (9b34503f82 -> 37c840c7c4)
+ ~ data/IT14.dat 4067 -> 3598 (e61de709eb -> d1f6d2b012)
+ ~ data/IT15.dat 4049 -> 3529 (e3a2b521d5 -> 7494e345b4)
+ ~ data/IT16.dat 4051 -> 3511 (3467487af2 -> fc03a0c7c8)
+ ~ data/IT17.dat 4075 -> 3520 (84b4b03fc6 -> 10fdf1ec97)
+ ~ data/IT18.dat 4053 -> 3559 (3a6e936a35 -> b26e8b5958)
+ ~ data/IT19.dat 4061 -> 3514 (44b4ea4659 -> eacd7e1229)
+ ~ data/IT20.dat 4049 -> 3469 (74377a5bbc -> 4afccde382)
+ ~ data/IT21.dat 4071 -> 3649 (407d0afa00 -> 287aaa0c55)
+ ~ data/IT22.dat 4121 -> 3562 (ead479cc29 -> e72b073acc)
+ ~ data/IT23.dat 4127 -> 3538 (8785ed627c -> fd5a9760c4)
+ ~ data/IT24.dat 4153 -> 3856 (8a2d9ec5af -> 7ef200e667)
+ ~ data/IT25.dat 4245 -> 4066 (2bb5026ae1 -> efe702a049)
+ ~ data/IT26.dat 3976 -> 3556 (64f4aaaee1 -> e00b2e1753)
+ ~ data/IT27.dat 3838 -> 3556 (a80cfa14bb -> 30117e8e16)
+ ~ data/IT28.dat 3958 -> 3559 (0c37e12cf2 -> 70821b5ee0)
+ ~ data/IT29.dat 5218 -> 4213 (795ec20554 -> 9d8c22650d)
+ ~ data/IT30.dat 16621 -> 14441 (0d9a99fca3 -> 1a47022851)
+ ~ data/IT31.dat 213 -> 180 (fccca3c1e5 -> 5f6ab9133d)
+ ~ data/IT32.dat 2873 -> 2413 (50087c6fea -> ad86cfb6b5)
+ ~ data/MD0.dat 20243 -> 17595 (9a19b664fb -> e0c3b60464)
+ ~ data/QUEST0.dat 9417 -> 7795 (b459e1671b -> f72a02342a)
+ ~ data/QUEST00.dat 22900 -> 17921 (284586403b -> 9b6487ddd9)
+ ~ data/QUEST1.dat 136027 -> 104483 (3189de11a3 -> eea08ca9f7)
+ ~ data/SKILL.dat 12105 -> 9337 (13914ff13a -> cbb175f2d4)
+ ~ data/TitleN.dat 2624 -> 2510 (a862c87ea8 -> d740406ce7)
+ ~ image/logo.dat 8878 -> 45217 (2ac6fc63f1 -> 9c8980f1ab)
+ ~ image/title.dat 73231 -> 69393 (dba9c2121b -> d4460e526b)
+ ~ image/uiinner.dat 13497 -> 20503 (ea398bb3c7 -> 141658db38)
+ ~ sound/000.dat 8877 -> 21 (eefa259e34 -> bda6a257d0)
+ ~ sound/001.dat 1719 -> 21 (d6057816c2 -> 62a3130b6d)
+ ~ sound/002.dat 1774 -> 21 (7087d3d19f -> 1f102810af)
+ ~ sound/003.dat 1493 -> 21 (26954cd1ad -> 309a4316fc)
+ ~ sound/004.dat 1633 -> 21 (e23494dcd5 -> 2e6d620cb6)
+ ~ sound/005.dat 6635 -> 21 (581585bc52 -> 3fd4184360)
+ ~ sound/006.dat 6644 -> 21 (0ec8f9bcbf -> a15e25718b)
+ ~ sound/007.dat 3218 -> 21 (9c9789046a -> 860f8b7db9)
+ ~ sound/008.dat 2018 -> 21 (eb5cb56a13 -> 3f95d19cb9)
+ ~ sound/009.dat 7488 -> 21 (99849d929d -> c0fff2d807)
+ ~ sound/010.dat 2145 -> 21 (977aaf4bee -> a897128f66)
+ ~ sound/011.dat 5138 -> 21 (b25110c516 -> fff4f52dd1)
+ ~ sound/012.dat 2224 -> 21 (1a6f05a45b -> 8283b70a35)
+ ~ sound/101.dat 1868 -> 21 (b24a320bbe -> 0a24e549a1)
+ ~ sound/102.dat 2138 -> 21 (93b3f09447 -> 7112f53fb2)
+ ~ sound/103.dat 2575 -> 21 (15846cdf9f -> 3e092d9999)
+ ~ sound/104.dat 7395 -> 21 (28335b6e37 -> 7765bb7143)
+ ~ sound/105.dat 3089 -> 21 (8ab9ccfd93 -> b23712f97f)
+ ~ sound/106.dat 1638 -> 21 (30d31f952c -> b3f9c71be1)
+ ~ sound/107.dat 2247 -> 21 (5075438492 -> 16487b4ed5)
+ ~ sound/108.dat 1917 -> 21 (7b934ea15e -> 63fefbe1be)
+ ~ sound/109.dat 3374 -> 21 (66fed02c73 -> 46b036d5f1)
+ ~ sound/110.dat 2776 -> 21 (6bbb3ff7e4 -> e27c650171)
+ ~ sound/111.dat 2094 -> 21 (9bb63e7a8b -> 3fd86ca3c1)
+ ~ sound/112.dat 2466 -> 21 (089fabee6b -> c7e24c1c0d)
+ ~ sound/113.dat 2623 -> 21 (5f3662d94d -> 7fb688ee40)
+ ~ sound/114.dat 2944 -> 21 (9f68ff26ff -> 4c48ef7f3b)
+ ~ sound/115.dat 3420 -> 21 (bc989d19e0 -> 50c3a9904c)
+ ~ sound/116.dat 4450 -> 21 (2c583198d3 -> 55c9af9323)
+ ~ sound/117.dat 2574 -> 21 (0c5218a52a -> 98b5348636)
+ ~ sound/118.dat 6170 -> 21 (1ee4ce7067 -> 7287152559)
+ ~ sound/119.dat 6392 -> 21 (6c5ab8553f -> f796466586)
+ ~ sound/120.dat 2479 -> 21 (8303b4069b -> 5d1e175676)
+ ~ sound/121.dat 339 -> 21 (f27be57296 -> 725e4b43ea)
+ ~ sound/122.dat 428 -> 21 (0e4c4c280b -> c1397e73ac)
+ ~ sound/123.dat 433 -> 21 (de1f91d2a7 -> 05f3fdf32d)
+ ~ sound/124.dat 328 -> 21 (9476989c2c -> 7d456cce53)
+ ~ sound/125.dat 3681 -> 21 (19db24c89c -> 482b98f01f)
+ ~ sound/126.dat 1998 -> 21 (23ea2d5659 -> 0d061793aa)
+ ~ sound/127.dat 373 -> 21 (b541139109 -> d0a8a724a4)
+ ~ sound/128.dat 3052 -> 21 (7fa277a735 -> 3c274970d4)
+ ~ sound/151.dat 1905 -> 21 (00ebd593c6 -> f00e334722)
+ ~ sound/152.dat 2138 -> 21 (e0b4190dc0 -> a324f9a989)
+ ~ sound/153.dat 2575 -> 21 (e20be47810 -> 9d49d71c37)
+ ~ sound/154.dat 7395 -> 21 (5f10b4abbb -> 143fe1265c)
+ ~ sound/160.dat 1917 -> 21 (7b934ea15e -> 15cde2a2a6)
+ ~ sound/161.dat 2094 -> 21 (760878e0c3 -> 74dc3561c7)
+
+## Class: +37 -0 ~0
+ + hl4/aot/LgtAot.class
+ + hl4/core/Gfx16$Surface.class
+ + hl4/core/Gfx16.class
+ + hl4/core/Heap.class
+ + hl4/core/Host.class
+ + hl4/core/Runtime$ResHook.class
+ + hl4/core/Runtime$Timer.class
+ + hl4/core/Runtime.class
+ + hl4/core/Smaf$Converted.class
+ + hl4/core/Smaf$Ev.class
+ + hl4/core/Smaf.class
+ + hl4/core/TextEngine$Sink.class
+ + hl4/core/TextEngine.class
+ + hl4/core/UiOverlay$T.class
+ + hl4/core/UiOverlay.class
+ + hl4/core/VnFont.class
+ + hl4/cpu/Aot.class
+ + hl4/cpu/Cpu$TraceSink.class
+ + hl4/cpu/Cpu.class
+ + hl4/cpu/CpuException.class
+ + hl4/cpu/Memory$Watch.class
+ + hl4/cpu/Memory.class
+ + hl4/cpu/SvcHandler.class
+ + hl4/lgt/KroGame.class
+ + hl4/lgt/KroText.class
+ + hl4/lgt/LgtGame.class
+ + hl4/lgt/LgtRuntime$1.class
+ + hl4/lgt/LgtRuntime$2.class
+ + hl4/lgt/LgtRuntime$DbFile.class
+ + hl4/lgt/LgtRuntime$FileBuf.class
+ + hl4/lgt/LgtRuntime.class
+ + hl4/midp/GameCanvas.class
+ + hl4/midp/HL4Midlet.class
+ + hl4/midp/Sound$1.class
+ + hl4/midp/Sound$Bank.class
+ + hl4/midp/Sound$Clip.class
+ + hl4/midp/Sound.class
+
+## B: class version > 48 / StackMapTable: 0

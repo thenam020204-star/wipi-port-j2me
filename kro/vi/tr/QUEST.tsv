@@ -1,0 +1,593 @@
+id	gốc	dịch
+T:QUEST0.dat:0:31	사냥해보자	Thử đi săn
+T:QUEST0.dat:0:43	눈앞의 트롤 3마리를 처치하자.	Hãy hạ 3 con Troll trước mặt.
+T:QUEST0.dat:1:31	현실은 수련	Đời là tu luyện
+T:QUEST0.dat:1:44	미튼크랩을 잡고 게살 5개를 구해오자.	Bắt Mitten Crab, kiếm 5 thịt cua về.
+T:QUEST0.dat:2:31	강화의 힘	Uy lực Cường hóa
+T:QUEST0.dat:2:42	대장장이에게 말을 걸어 강화를 1회 해보자.	Nói chuyện với thợ rèn, thử Cường hóa 1 lần.
+T:QUEST0.dat:3:31	대장장이의 능력	Tài nghệ thợ rèn
+T:QUEST0.dat:3:48	대장장이에게 말을 걸어 마법부여를 1회 해보자.	Nói chuyện với thợ rèn, thử Phù phép 1 lần.
+T:QUEST0.dat:4:31	아이템 융합	Dung hợp vật phẩm
+T:QUEST0.dat:4:44	가방칸에서 융합을 1회 해보자. 	Thử Dung hợp 1 lần ở ô túi đồ. 
+T:QUEST0.dat:5:31	텔레포터	Dịch chuyển
+T:QUEST0.dat:5:41	마을 광장의 텔레포터 헵번에게 가서 텔레포트 교육을 받자.	Đến chỗ người dịch chuyển Hepburn ở quảng trường làng để học cách Dịch chuyển.
+T:QUEST0.dat:6:31	영웅 데이거	Anh hùng Dager
+T:QUEST0.dat:6:44	로피스항구로 데이거를 마중하러 가자.	Ra cảng Lopis đón Dager.
+T:QUEST0.dat:7:31	운명적인 만남	Gặp gỡ định mệnh
+T:QUEST0.dat:7:46	데이거에게 말을 걸어보자.	Hãy nói chuyện với Dager.
+T:QUEST0.dat:8:31	새로운 동문	Đồng môn mới
+T:QUEST0.dat:8:44	데이거와 함께 레이블타운의 르네선생님에게 돌아가자.	Cùng Dager quay về chỗ thầy Rene ở Label Town.
+T:QUEST0.dat:9:31	영주의저택으로	Tới phủ chúa
+T:QUEST0.dat:9:47	데이거와 함께 영주의 저택 앞으로 가보자.	Cùng Dager đến trước dinh lãnh chúa.
+T:QUEST0.dat:10:31	미지막인사	Lời chào cuối
+T:QUEST0.dat:10:43	데이거와 함께 다시 르네선생님에게 가자.	Cùng Dager quay lại chỗ thầy Rene.
+T:QUEST0.dat:11:31	짧은 만남	Gặp gỡ ngắn ngủi
+T:QUEST0.dat:11:42	데이거를 배웅하러 로피스항구로 가자.	Ra cảng Lopis tiễn Dager.
+T:QUEST0.dat:12:31	납치	Bắt cóc
+T:QUEST0.dat:12:37	누군가 도움을 요청하고 있다. 피스로드로 나가보자.	Có người đang kêu cứu. Hãy ra Peace Road.
+T:QUEST0.dat:13:31	포로 구출1	Cứu tù binh 1
+T:QUEST0.dat:13:43	비열한 적들을 물리쳐라.	Đánh bại kẻ địch hèn hạ.
+T:QUEST0.dat:14:31	레이블타운으로	Về Label Town
+T:QUEST0.dat:14:47	레이블타운으로 이동하자.	Hãy đến Label Town.
+T:QUEST0.dat:15:31	영주의 비밀	Bí mật lãnh chúa
+T:QUEST0.dat:15:44	레이블타운의 북서쪽에 있는 비밀입구로 가보자.	Đến lối vào bí mật ở phía tây bắc Label Town.
+T:QUEST0.dat:16:31	영주의 지하실	Hầm lãnh chúa
+T:QUEST0.dat:16:46	의심스러운 지하실을 조사하자.	Điều tra căn hầm khả nghi.
+T:QUEST0.dat:17:31	포로 구출2	Cứu tù binh 2
+T:QUEST0.dat:17:43	지하 어딘가에 있는 포로를 구출하라.	Giải cứu tù binh ở đâu đó dưới hầm.
+T:QUEST0.dat:18:31	리오타르를 찾자	Tìm Liotar
+T:QUEST0.dat:18:48	지하실 어딘가에 있을 리오타르를 찾자.	Tìm Liotar đang ở đâu đó trong hầm.
+T:QUEST0.dat:19:31	탐욕의 리오타르	Liotar tham lam
+T:QUEST0.dat:19:48	리오타르를 무찔러라.	Đánh bại Liotar.
+T:QUEST0.dat:20:31	선생님에게 보고	Báo cáo thầy
+T:QUEST0.dat:20:48	르네 선생님에게 지금까지의 일을 이야기하자.	Kể lại cho thầy Rene mọi chuyện đến giờ.
+T:QUEST0.dat:21:31	회담장소로 가자	Đến nơi hội đàm
+T:QUEST0.dat:21:48	로피스항구에서 배를 타고 라젤항구로가자.	Đi thuyền từ cảng Lopis đến Cảng Razel.
+T:QUEST0.dat:22:31	병사들의 무리	Toán lính
+T:QUEST0.dat:22:46	의심이 가는 적 병사들을 공격하라.	Tấn công đám lính địch khả nghi.
+T:QUEST0.dat:23:31	이상한 낌새	Dấu hiệu lạ
+T:QUEST0.dat:23:44	도망간 적 병사를 따라 추적하라.	Bám theo tên lính địch bỏ chạy.
+T:QUEST0.dat:24:31	거대한 음모	Âm mưu lớn
+T:QUEST0.dat:24:44	적들을 물리쳐라.	Đánh bại kẻ địch.
+T:QUEST0.dat:25:31	추적	Truy đuổi
+T:QUEST0.dat:25:37	적을 따라서 라젤트로드3으로 이동하라.	Bám theo địch đến Razelt Road 3.
+T:QUEST0.dat:26:31	수녀님 구출	Cứu các sơ
+T:QUEST0.dat:26:44	수녀님들을 구해라.	Hãy cứu các nữ tu.
+T:QUEST0.dat:27:31	수녀님과 대화	Hỏi chuyện sơ
+T:QUEST0.dat:27:46	사감 수녀님에게 말을 걸어라.	Nói chuyện với Sơ quản lý.
+T:QUEST0.dat:28:31	정상 회담	Hội đàm cấp cao
+T:QUEST0.dat:28:42	천공신전으로 가자.	Hãy đến Thần điện Thiên Không.
+T:QUEST0.dat:29:31	오해	Hiểu lầm
+T:QUEST0.dat:29:37	이니스에게 말을 걸어 보자.	Thử nói chuyện với Innis.
+T:QUEST0.dat:30:31	사건의 현장	Nơi xảy ra vụ án
+T:QUEST0.dat:30:44	사건 현장에서 단서를 찾아보자.	Tìm manh mối ở hiện trường vụ án.
+T:QUEST0.dat:31:31	사망자 정보	Tin người chết
+T:QUEST0.dat:31:44	경비병 르판느에게 가서 사망자 정보를 알아보자.	Đến chỗ lính gác Lepanne hỏi tin về người chết.
+T:QUEST0.dat:32:31	마르폴로	Marpolo
+T:QUEST0.dat:32:41	로피스항구의 뱃사공 마르폴로에게 가보자.	Đến chỗ người chèo thuyền Marpolo ở cảng Lopis.
+T:QUEST0.dat:33:31	이스턴시티	Eastern City
+T:QUEST0.dat:33:43	동부의 이스턴 시티로 가보자.	Hãy đến Eastern City ở miền Đông.
+T:QUEST0.dat:34:31	통행 수수료	Phí qua đường
+T:QUEST0.dat:34:44	마스로드에서 샌드할로우 10마리를 잡고 오자.	Bắt 10 con Sand Hollow ở Mas Road.
+T:QUEST0.dat:35:31	성주에게	Gặp thành chủ
+T:QUEST0.dat:35:41	성문 경비 제롬에게 가보자.	Đến chỗ lính gác cổng thành Jerome.
+T:QUEST0.dat:36:31	마을의 정보	Tin tức của làng
+T:QUEST0.dat:36:44	여관에 가서 정보를 얻어 보자.	Đến quán trọ dò la tin tức.
+T:QUEST0.dat:37:31	대장장이 닉	Thợ rèn Nick
+T:QUEST0.dat:37:44	대장장이 닉에게 가서 정보를 얻어 보자.	Đến chỗ thợ rèn Nick dò la tin tức.
+T:QUEST0.dat:38:31	납품 마감	Hạn giao hàng
+T:QUEST0.dat:38:42	딥샌드 던전에 가서 오리하르콘 10개를 구해 대장장이 닉에게 가져다주다.	Vào hầm ngục Deep Sand kiếm 10 Orichalcum đem cho thợ rèn Nick.
+T:QUEST0.dat:39:31	접근의 방법	Cách tiếp cận
+T:QUEST0.dat:39:44	여관에 가서 관원 세르게이를 만나자.	Đến quán trọ gặp quan viên Sergei.
+T:QUEST0.dat:40:31	검은도적단	Black Bandits
+T:QUEST0.dat:40:43	이스턴 북쪽 외곽의 검은도적단 20명을 처리해서, 세르게이의 신임을 얻자.	Diệt 20 tên Black Bandits ở ngoại ô phía bắc Eastern để lấy lòng tin của Sergei.
+T:QUEST0.dat:41:31	성주에게	Gặp thành chủ
+T:QUEST0.dat:41:41	이스턴시티 성주에게 가보자.	Đến chỗ thành chủ Eastern City.
+T:QUEST0.dat:42:31	접근 성공	Đã tiếp cận
+T:QUEST0.dat:42:42	이스턴시티 성주, 포크너에게 가보자.	Đến chỗ Faulkner, thành chủ Eastern City.
+T:QUEST0.dat:43:31	공성장비	Đồ công thành
+T:QUEST0.dat:43:41	이스턴북쪽외곽 부근으로 가서 검은도적단을 토벌하고 공성장비를 찾아오자.	Đến vùng ngoại ô phía bắc Eastern, thảo phạt Black Bandits và tìm lại khí tài công thành.
+T:QUEST0.dat:44:31	쿨리오 격파	Hạ Coolio
+T:QUEST0.dat:44:44	검은도적단 동굴에 가서 보스 쿨리오를 처리하자.	Vào hang Black Bandits xử lý tên trùm Coolio.
+T:QUEST0.dat:45:31	인내심기르기	Rèn sự kiên nhẫn
+T:QUEST0.dat:45:45	성라피네 성당의 대수녀에게 가보자.	Đến chỗ sơ bề trên ở thánh đường Saint Lafine.
+T:QUEST0.dat:46:31	대저택	Đại dinh thự
+T:QUEST0.dat:46:39	헉슬리대저택에 가서, 경비를 피해 옆문으로 잠입해서 예비수녀를 찾아보자.	Đến đại dinh thự Huxley, tránh lính gác lẻn vào cửa hông để tìm nữ tu dự bị.
+T:QUEST0.dat:47:31	동행	Đồng hành
+T:QUEST0.dat:47:37	저택을 샅샅히 뒤져 헉슬리의 방을 찾아가자.	Lục soát khắp dinh thự để tìm phòng của Huxley.
+T:QUEST0.dat:48:31	중요한문서	Tài liệu hệ trọng
+T:QUEST0.dat:48:43	방을 더 자세히 살펴보자.	Xem xét căn phòng kỹ hơn.
+T:QUEST0.dat:49:31	친구	Bạn bè
+T:QUEST0.dat:49:37	위기에 상황에서 벗어날 대책을 생각해보자.	Nghĩ cách thoát khỏi tình thế nguy hiểm.
+T:QUEST0.dat:50:31	확신	Tin chắc
+T:QUEST0.dat:50:37	저택안에 있는 헉슬리의 방으로 이동하자.	Đến phòng của Huxley trong dinh thự.
+T:QUEST0.dat:51:31	헉슬리백작	Bá tước Huxley
+T:QUEST0.dat:51:43	헉슬리백작을 처리하자.	Xử lý Bá tước Huxley.
+T:QUEST0.dat:52:31	어둠의숲	Rừng Bóng Tối
+T:QUEST0.dat:52:41	데저트캠프로 이동하자.	Hãy đến Desert Camp.
+T:QUEST0.dat:53:31	흑마법사	Hắc pháp sư
+T:QUEST0.dat:53:41	어둠의 숲 어딘가에 있는 흑마법사던전으로 가보자.	Đến hầm ngục Hắc pháp sư ở đâu đó trong Rừng Bóng Tối.
+T:QUEST0.dat:54:31	깊은곳으로	Vào sâu hơn
+T:QUEST0.dat:54:43	흑마법사의던전 안쪽으로 가보자.	Đi sâu vào trong hầm ngục của Hắc pháp sư.
+T:QUEST0.dat:55:31	대흑마법사	Đại hắc pháp sư
+T:QUEST0.dat:55:43	대흑마법사 슐탄을 찾아 가보자.	Đi tìm Đại hắc pháp sư Sultan.
+T:QUEST0.dat:56:31	슐탄	Sultan
+T:QUEST0.dat:56:37	대흑마법사 슐탄을 처리하자.	Xử lý Đại hắc pháp sư Sultan.
+T:QUEST0.dat:57:31	카이루	Kairu
+T:QUEST0.dat:57:39	카이루를 쫓아 던전밖으로 나가자.	Đuổi theo Kairu ra khỏi hầm ngục.
+T:QUEST0.dat:58:31	하우레스	Haures
+T:QUEST0.dat:58:41	악마 하우레스를 처리하고 탈출하자.	Xử lý ác quỷ Haures rồi thoát ra.
+T:QUEST0.dat:59:31	신중함	Thận trọng
+T:QUEST0.dat:59:39	대수녀 테레사에게 가보자.	Đến chỗ sơ bề trên Teresa.
+T:QUEST0.dat:60:31	해결	Giải quyết
+T:QUEST0.dat:60:37	루이시티에 있는 이니스를 찾아가자.	Đến Lui City tìm Innis.
+T:QUEST0.dat:61:31	이니스에게	Gặp Innis
+T:QUEST0.dat:61:43	성안으로 들어가 이니스를 만나자.	Vào trong thành gặp Innis.
+T:QUEST0.dat:62:31	중요한물건	Vật quan trọng
+T:QUEST0.dat:62:43	지하수련장에 가서 프루스트를 만나자.	Đến sân tập dưới lòng đất gặp Frust.
+T:QUEST0.dat:63:31	프루스트	Frust
+T:QUEST0.dat:63:41	프루스트를 처리하자.	Xử lý Frust.
+T:QUEST0.dat:64:31	괴소문	Tin đồn lạ
+T:QUEST0.dat:64:39	존스에게 가서 소문에 대해 직접 물어보자.	Đến hỏi thẳng Jones về tin đồn.
+T:QUEST0.dat:65:31	동향	Động tĩnh
+T:QUEST0.dat:65:37	레이블타운의 명물 게살을 구해오자.	Kiếm thịt cua, đặc sản của Label Town.
+T:QUEST0.dat:66:31	데이거에게	Đến chỗ Dager
+T:QUEST0.dat:66:43	서쪽 사막을 경유해 데이거가 통치하는 남부지역으로 이동하자.	Đi qua sa mạc phía tây đến vùng phía nam do Dager cai trị.
+T:QUEST0.dat:67:31	목소리	Giọng nói
+T:QUEST0.dat:67:39	여인의 목소리가 들리는 곳으로 가보자.	Đến nơi có tiếng phụ nữ vọng ra.
+T:QUEST0.dat:68:31	데이거의부하	Thuộc hạ Dager
+T:QUEST0.dat:68:45	데이거의 부하들을 모두 물리치자.	Đánh bại toàn bộ thuộc hạ của Dager.
+T:QUEST0.dat:69:31	동굴안으로	Vào trong hang
+T:QUEST0.dat:69:43	동굴 안으로 들어가서 여인을 구출하자.	Vào trong hang cứu người phụ nữ.
+T:QUEST0.dat:70:31	오거스피릿	Ogre Spirit
+T:QUEST0.dat:70:43	오거스피릿이 있는 곳을 찾자.	Tìm nơi có Ogre Spirit.
+T:QUEST0.dat:71:31	구출	Giải cứu
+T:QUEST0.dat:71:37	오크여인 나디아를 구하기 위해 오거스피릿을 처리하자.	Xử lý Ogre Spirit để cứu cô gái Orc Nadia.
+T:QUEST0.dat:72:31	남부로	Xuống phía nam
+T:QUEST0.dat:72:39	남부지역으로 이동하자.	Hãy đến vùng phía nam.
+T:QUEST0.dat:73:31	오크마을	Làng Orc
+T:QUEST0.dat:73:41	오르츠크 마을에 가서 나디아에게 도움을 청하자.	Đến làng Ortsk nhờ Nadia giúp đỡ.
+T:QUEST0.dat:74:31	족장 샤이먼	Thủ lĩnh Shaimon
+T:QUEST0.dat:74:44	족장 샤이먼의 집으로 가보자.	Đến nhà tộc trưởng Shaimon.
+T:QUEST0.dat:75:31	오크성막	Trại Orc
+T:QUEST0.dat:75:41	오크 성막으로 가서 마도술사를 처리하자.	Đến trại Orc xử lý Ma đạo sư.
+T:QUEST0.dat:76:31	마도술사	Ma đạo sư
+T:QUEST0.dat:76:41	다크엘프의 하수인 마도술사를 처리하자.	Xử lý Ma đạo sư, tay sai của Dark Elf.
+T:QUEST0.dat:77:31	샤이먼에게	Đến chỗ Shaimon
+T:QUEST0.dat:77:43	족장 샤이먼의 집으로 가보자.	Đến nhà tộc trưởng Shaimon.
+T:QUEST0.dat:78:31	비밀통로	Lối đi bí mật
+T:QUEST0.dat:78:41	데이거의 성으로 가는 비밀입구를 찾아 가보자.	Tìm lối vào bí mật dẫn đến thành của Dager.
+T:QUEST0.dat:79:31	데이거에게	Đến chỗ Dager
+T:QUEST0.dat:79:43	데이거의 장소로 가보자.	Đến chỗ Dager.
+T:QUEST0.dat:80:31	더 이상은..	Không thể nữa..
+T:QUEST0.dat:80:44	데이거를 쓰러뜨리자.	Hãy hạ gục Dager.
+T:QUEST0.dat:81:31	치료약	Thuốc chữa
+T:QUEST0.dat:81:39	푸른나뭇잎을 3개 구해오자.	Kiếm 3 Lá xanh về.
+T:QUEST0.dat:82:31	조언과 평안	Khuyên và an ủi
+T:QUEST0.dat:82:44	이스턴 시티 성라피네성당에 가서 대수녀를 만나자.	Đến thánh đường Saint Lafine ở Eastern City gặp sơ bề trên.
+T:QUEST0.dat:83:31	이니스에게	Gặp Innis
+T:QUEST0.dat:83:43	이니스에게 가보자.	Hãy đến chỗ Innis.
+T:QUEST0.dat:84:31	노스마운틴	North Mountain
+T:QUEST0.dat:84:43	노스마운틴으로 가보자.	Hãy đến North Mountain.
+T:QUEST0.dat:85:31	암흑동굴	Hang bóng tối
+T:QUEST0.dat:85:41	동굴에 들어가서 조사해보자.	Vào hang điều tra.
+T:QUEST0.dat:86:31	흔적	Dấu vết
+T:QUEST0.dat:86:37	데이거의 흔적을 찾아 가보자.	Lần theo dấu vết của Dager.
+T:QUEST0.dat:87:31	이니스에게	Gặp Innis
+T:QUEST0.dat:87:43	이니스에게 가보자.	Hãy đến chỗ Innis.
+T:QUEST0.dat:88:31	제메스신전	Thần điện Jemes
+T:QUEST0.dat:88:43	켈트로드 쪽의 제메스신전을 찾아 가보자.	Tìm Thần điện Jemes ở phía Kelt Road.
+T:QUEST0.dat:89:31	교주의 장소	Chỗ của giáo chủ
+T:QUEST0.dat:89:44	제메스 신전안의 교주의 장소를 찾아 가보자.	Tìm chỗ của giáo chủ trong Thần điện Jemes.
+T:QUEST0.dat:90:31	심판	Phán xét
+T:QUEST0.dat:90:37	제메스를 처리하자.	Xử lý Jemes.
+T:QUEST0.dat:91:31	고대유적의흔적	Dấu tích cổ đại
+T:QUEST0.dat:91:47	르네가 찾은 고대 유적의 흔적을 발견한 장소로 가자.	Đến nơi Rene đã phát hiện dấu vết di tích cổ.
+T:QUEST0.dat:92:31	고대동굴탐사	Thám hiểm hang cổ
+T:QUEST0.dat:92:45	고대 유적이 있는 동굴안을 탐험해서 유적을 찾아내자.	Thám hiểm hang có di tích cổ để tìm ra di tích.
+T:QUEST0.dat:93:31	오거스피릿퇴치	Diệt Ogre Spirit
+T:QUEST0.dat:93:47	오거스피릿을 물리치자.	Đánh bại Ogre Spirit.
+T:QUEST0.dat:94:31	오르츠크로	Đến Ortsk
+T:QUEST0.dat:94:43	오르츠크의 족장 집으로 가자.	Đến nhà tộc trưởng Ortsk.
+T:QUEST0.dat:95:31	지하유적	Di tích ngầm
+T:QUEST0.dat:95:41	족장의집 지하에 있는 지하유적으로가보자.	Đến di tích ngầm dưới nhà tộc trưởng.
+T:QUEST0.dat:96:31	지하유적의질문	Câu hỏi di tích
+T:QUEST0.dat:96:47	지하유적의 크리스탈이 질문하는 질문 3가지를 맞추어라.	Trả lời đúng 3 câu hỏi của Pha lê trong di tích ngầm.
+T:QUEST0.dat:97:31	지하유적탐사	Thám hiểm di tích
+T:QUEST0.dat:97:45	지하유적을 탐험하자.	Thám hiểm di tích ngầm.
+T:QUEST0.dat:98:31	매직가디언	Magic Guardian
+T:QUEST0.dat:98:43	지하유적을 지키는 마도병기를 퇴치하라.	Tiêu diệt Vũ khí ma đạo canh giữ di tích ngầm.
+T:QUEST0.dat:99:31	대수녀에게	Gặp sơ bề trên
+T:QUEST0.dat:99:43	이스턴 시티 성라피네성당에 가서 대수녀를 만나자.	Đến thánh đường Saint Lafine ở Eastern City gặp sơ bề trên.
+T:QUEST0.dat:100:31	데스나이트	Death Knight
+T:QUEST0.dat:100:43	천공신전에 있는 데스나이트에게 찾아가서 모든 것을 바로 잡자.	Đến chỗ Death Knight ở Thần điện Thiên Không để sửa lại mọi chuyện.
+T:QUEST0.dat:101:31	좀비 리오타르	Zombie Liotar
+T:QUEST0.dat:101:46	좀비리오타르를 격파하자	Đánh bại Zombie Liotar
+T:QUEST0.dat:102:31	언데드 쿨리오	Undead Coolio
+T:QUEST0.dat:102:46	언데드쿨리오를 격파하자	Đánh bại Undead Coolio
+T:QUEST0.dat:103:31	언데드 슐탄	Undead Sultan
+T:QUEST0.dat:103:44	언데드슐탄을 격파하자	Đánh bại Undead Sultan
+T:QUEST0.dat:104:31	데빌 하우레스	Devil Haures
+T:QUEST0.dat:104:46	데빌하우레스를 격파하자	Đánh bại Devil Haures
+T:QUEST0.dat:105:31	좀비 프루스트	Zombie Frust
+T:QUEST0.dat:105:46	좀비프루스트를 격파하자	Đánh bại Zombie Frust
+T:QUEST0.dat:106:31	오거 소울	Ogre Soul
+T:QUEST0.dat:106:42	오거소울를 격파하자	Đánh bại Ogre Soul
+T:QUEST0.dat:107:31	리치 제메스	Lich Jemes
+T:QUEST0.dat:107:44	리치제메스를 격파하자	Đánh bại Lich Jemes
+T:QUEST0.dat:108:31	진리의 증명	Chứng cứ chân lý
+T:QUEST0.dat:108:44	데스나이트를 격파하자.	Đánh bại Death Knight.
+T:QUEST0.dat:109:31	오르츠크로	Đến Ortsk
+T:QUEST0.dat:109:43	오르츠크의 족장 집으로 가보자.	Hãy đến nhà tộc trưởng Ortsk.
+T:QUEST0.dat:110:31	유적 안으로	Vào di tích
+T:QUEST0.dat:110:44	유적안으로 들어가보자.	Hãy vào trong di tích.
+T:QUEST0.dat:111:31	고대유적지로	Đến di tích cổ
+T:QUEST0.dat:111:45	유적의 가장 안쪽에 있는 고대유적지로 가보자.	Đến khu di tích cổ ở tận cùng bên trong di tích.
+T:QUEST0.dat:112:31	내가 해야할 일	Việc ta phải làm
+T:QUEST0.dat:112:47	마도병기와 융합한 르네 선생님을 쓰러트리자.	Hạ gục thầy Rene đã dung hợp với Vũ khí ma đạo.
+T:QUEST00.dat:0:31	르네의 선물	Quà của Rene
+T:QUEST00.dat:0:44	르네 선생님이 여관 침대 근처에 떨어트린 가방을 찾자.	Tìm cái túi thầy Rene đánh rơi gần giường ở quán trọ.
+T:QUEST00.dat:1:31	여관주인 제이미	Chủ quán Jamie
+T:QUEST00.dat:1:48	제이미 아줌마에게 가서 르네가 두고간 가방을 받자.	Đến chỗ cô Jamie nhận cái túi Rene để lại.
+T:QUEST00.dat:2:31	마을의 잡화상	Tiệm tạp hoá làng
+T:QUEST00.dat:2:46	상점에 있는 잡화상 로니에게 찾아가자.	Tìm Ronnie, chủ tạp hoá ở cửa hàng.
+T:QUEST00.dat:3:31	기억의 잔영	Dư ảnh ký ức
+T:QUEST00.dat:3:44	플로릴리의 기억속에 남아있는 수정석을 찾아, 피스로드의 샌드할로우를 처치하자.	Tìm viên thạch anh còn trong ký ức Florily, hãy diệt Sand Hollow ở Peace Road.
+T:QUEST00.dat:4:31	중독된 빅조	Big Joe trúng độc
+T:QUEST00.dat:4:44	빅조의 치료약을 만들기 위해, 남쪽숲에서 와이엄의 고기를 구해 텔레포더 마법사 헵번에게 가져다 주자.	Để làm thuốc chữa cho Big Joe, kiếm Thịt Wyem ở Rừng phía Nam đem cho pháp sư dịch chuyển Hepburn.
+T:QUEST00.dat:5:31	부족한 재료	Thiếu vật liệu
+T:QUEST00.dat:5:44	체스트넛의 가시가 부족하다. 레이블타운 외곽지역의 체스트넛을 처치하고 구해오자.	Thiếu Gai Chestnut. Hãy diệt Chestnut ở ngoại ô Label Town để lấy.
+T:QUEST00.dat:6:31	빅조의 치료약	Thuốc của Big Joe
+T:QUEST00.dat:6:46	완성된 헵번의 특제 치료약을 빅조에게 가져다주자.	Mang thuốc đặc chế Hepburn đã làm xong cho Big Joe.
+T:QUEST00.dat:7:31	중급강화석(반복)	Đá cấp trung (lặp)
+T:QUEST00.dat:7:49	하급강화석 20개를 루크에게 가져다주고, 중급강화석 5개로 교환받자.	Mang 20 Đá cường hóa hạ cấp cho Luke, đổi lấy 5 Đá cường hóa trung cấp.
+T:QUEST00.dat:8:31	상급강화석(반복)	Đá cấp cao (lặp)
+T:QUEST00.dat:8:49	중급강화석 20개를 루크에게 가져다주고, 상급강화석 3개로 교환받자.	Mang 20 Đá cường hóa trung cấp cho Luke, đổi lấy 3 Đá cường hóa thượng cấp.
+T:QUEST00.dat:9:31	수상한몬스터	Quái vật khả nghi
+T:QUEST00.dat:9:45	중앙숲에 나타난 수상한 몬스터의 비밀 나무통을 살펴보자.	Xem xét thùng gỗ bí mật của con quái vật khả nghi xuất hiện ở Rừng Trung Tâm.
+T:QUEST00.dat:10:31	머미의비밀	Bí mật Mummy
+T:QUEST00.dat:10:43	머미의 비밀을 알았다. 엘레나 아주머니에게 돌아가자.	Đã biết bí mật của Mummy. Hãy quay về chỗ cô Elena.
+T:QUEST00.dat:11:31	장사아이템	Món hàng mới
+T:QUEST00.dat:11:43	마을 보따리상인 루크아저씨에게 새로운 장사 아이템에 대해 알려주자.	Báo cho chú Luke bán hàng rong trong làng biết về món hàng mới.
+T:QUEST00.dat:12:31	윌리엄의 재산	Tài sản William
+T:QUEST00.dat:12:46	상점부근에서 윌리엄아저씨의 돈주머니의 행방을 찾아보자.	Tìm tung tích túi tiền của chú William quanh cửa hàng.
+T:QUEST00.dat:13:31	깊은 발자국	Dấu chân sâu
+T:QUEST00.dat:13:44	윌리엄에게 깊은 발자국을 만들 수 있는 용의자에 대해 물어보자.	Hỏi William về kẻ khả nghi có thể để lại dấu chân sâu.
+T:QUEST00.dat:14:31	용의자	Kẻ khả nghi
+T:QUEST00.dat:14:39	용의자로 정해진 영주성 경비병  찰스에게 가서 조사를 하자.	Đến điều tra Charles, lính gác thành lãnh chúa bị coi là kẻ khả nghi.
+T:QUEST00.dat:15:31	노인의 지혜	Trí tuệ người già
+T:QUEST00.dat:15:44	레이블타운의 터줏대감인 엠마할머니한테 윌리엄을 도울 수 있는 방법을 알아보자.	Hỏi bà Emma, người lâu năm nhất Label Town, cách giúp William.
+T:QUEST00.dat:16:31	부패한 군대	Quân đội mục nát
+T:QUEST00.dat:16:44	부패한 기사단원들을 처치하고, 그들이 빼돌린 강철판금을 가져와 윌리엄을 도와주자.	Diệt bọn hiệp sĩ đoàn mục nát, lấy lại Tấm thép chúng tuồn đi để giúp William.
+T:QUEST00.dat:17:31	용병의 길	Đường lính thuê
+T:QUEST00.dat:17:42	라젤트로드에서 행인을 위협하는 산적주술사를 무찌르고 랜달프에게 보고하자.	Đánh bại Shaman sơn tặc đe doạ người đi đường ở Razelt Road rồi báo cho Randalph.
+T:QUEST00.dat:18:31	가족을 위해	Vì gia đình
+T:QUEST00.dat:18:44	피스로드의 버블몬 가죽을 구해, 잡화상 로니에게서 골무를 만들어보자.	Kiếm Da Bubblemon ở Peace Road, nhờ chủ tạp hoá Ronnie làm ống khâu.
+T:QUEST00.dat:19:31	골무목걸이	Vòng cổ ống khâu
+T:QUEST00.dat:19:43	만들어진 골무 목걸이를 존슨에게 가져다주자.	Mang dây chuyền ống khâu đã làm xong cho Johnson.
+T:QUEST00.dat:20:31	잔당 처치	Diệt tàn dư
+T:QUEST00.dat:20:42	리오타르가 당한뒤에도 여전히 소란을 피우는 지하 2구역의 워리어들을 혼내주자.	Trừng trị bọn Warrior ở khu hầm 2 vẫn còn gây rối sau khi Liotar bị hạ.
+T:QUEST00.dat:21:31	되살아난 기억	Ký ức sống lại
+T:QUEST00.dat:21:46	플로릴리의 편지를 이스턴 시티 성당의 헬레나 수녀에게 전달하자.	Chuyển thư của Florily cho sơ Helena ở giáo đường Eastern City.
+T:QUEST00.dat:22:31	건국황제의 보물1	Báu vật Đế Tổ 1
+T:QUEST00.dat:22:49	아베르가 알려준 마스로드1의 상자를 찾아보자.	Tìm cái rương ở Mas Road 1 mà Aber đã chỉ.
+T:QUEST00.dat:23:31	건국황제의 보물2	Báu vật Đế Tổ 2
+T:QUEST00.dat:23:49	황제의 안배대로 마스로드2의 상자를 찾아보자.	Theo sắp đặt của hoàng đế, tìm cái rương ở Mas Road 2.
+T:QUEST00.dat:24:31	건국황제의 보물3	Báu vật Đế Tổ 3
+T:QUEST00.dat:24:49	마스로드3의 상자를 찾아보자.	Tìm cái rương ở Mas Road 3.
+T:QUEST00.dat:25:31	황제의 안배	Sắp đặt hoàng đế
+T:QUEST00.dat:25:44	딥샌드 던전입구에서 황제의 최후 안배인 상자를 찾아보자.	Tìm cái rương, sắp đặt cuối cùng của hoàng đế, ở lối vào hầm ngục Deep Sand.
+T:QUEST00.dat:26:31	황제의 마법서	Ma pháp thư của Hoàng đế
+T:QUEST00.dat:26:46	굉장한 가치를 지녔겠지만, 내가 손대서는 안될 물건인것 같다. 아베르에게 돌아가자.	Hẳn là có giá trị rất lớn, nhưng có lẽ mình không nên động vào. Hãy quay về chỗ Aber.
+T:QUEST00.dat:27:31	사막의 몬스터	Quái vật sa mạc
+T:QUEST00.dat:27:46	마스로드에서 스콜피온 꼬리를 모아서 갈릴레이에게 가져다주자.	Gom Đuôi Scorpion ở Mas Road đem cho Galilei.
+T:QUEST00.dat:28:31	항로의 방해꾼	Kẻ chặn hải lộ
+T:QUEST00.dat:28:46	마스로드에서 뱃길에 위협을 주는 디펜스타워를 처치하고, 갈릴레이에게 돌아가자.	Diệt Defense Tower đe doạ đường thuyền ở Mas Road rồi quay về chỗ Galilei.
+T:QUEST00.dat:29:31	녹음의 파괴자	Kẻ phá cây xanh
+T:QUEST00.dat:29:46	이스턴 외곽지역에서 이스턴 지역의 생기를 빨아먹는 커즈타워를 파괴하자.	Phá huỷ Curse Tower đang hút sinh khí vùng Eastern ở ngoại ô Eastern.
+T:QUEST00.dat:30:31	그들의 음모	Âm mưu của chúng
+T:QUEST00.dat:30:44	범인의 윤곽이 드러났다. 산적간부들이 가진 수상한 주머니를 뺏어오자.	Đã lộ hình dạng thủ phạm. Hãy cướp lại Túi khả nghi của bọn Đầu mục sơn tặc.
+T:QUEST00.dat:31:31	악마의 씨앗	Hạt giống ác quỷ
+T:QUEST00.dat:31:44	주머니에서 나온 커즈타워의 씨앗을 이스턴 성당의 테레사 대수녀에게 가져가 정화시키자.	Mang hạt giống Curse Tower lấy từ túi cho sơ bề trên Teresa ở giáo đường Eastern để thanh tẩy.
+T:QUEST00.dat:32:31	사라진 친구	Cậu bạn mất tích
+T:QUEST00.dat:32:44	브리니의 하나뿐인 친구, 토미가 왜 숨어있는지 토미의 아빠인 폴조에게 물어보자.	Hỏi Polzo, bố của Tommy, xem tại sao Tommy, người bạn duy nhất của Briny, lại trốn đi.
+T:QUEST00.dat:33:31	사막트롤의 장식	Trang sức Troll
+T:QUEST00.dat:33:48	토미를 위해 마스로드의 사막트롤을 처치하고, 머리에 꽂고있는 장식품을 수집해 폴조에게 가자.	Vì Tommy, hãy diệt Desert Troll ở Mas Road, gom trang sức cài trên đầu chúng rồi đến chỗ Polzo.
+T:QUEST00.dat:34:31	토미를 찾아서	Đi tìm Tommy
+T:QUEST00.dat:34:46	깊은 악마 동굴앞에 숨어있는 토미를 찾아, 폴조에게 데리고 가자.	Tìm Tommy đang trốn trước Hang Ác Quỷ Sâu, đưa về cho Polzo.
+T:QUEST00.dat:35:31	못된 어른	Người lớn xấu xa
+T:QUEST00.dat:35:42	깊은 악마 동굴에서 가고일을 처치하고 가고일의 등심살을 얻어. 이스턴 시티의 성당경비병 척에게 가져가자.	Diệt Gargoyle ở Hang Ác Quỷ Sâu lấy Thăn Gargoyle, đem cho Chuck, lính gác giáo đường Eastern City.
+T:QUEST00.dat:36:31	폴조의 마음	Tấm lòng Polzo
+T:QUEST00.dat:36:44	폴조의 연애편지를 주인인 이스턴 시티의 폴조에게 가져다 주자.	Đem bức thư tình của Polzo trả cho chính chủ là Polzo ở Eastern City.
+T:QUEST00.dat:37:31	아버지의 유품	Di vật của cha
+T:QUEST00.dat:37:46	이스턴 성당의 코이수녀의 아버지 유품을 찾아 헉슬리대저택7의 화분을 찾아보자.	Tìm di vật của cha sơ Koi ở giáo đường Eastern, hãy tìm Chậu hoa ở đại dinh thự Huxley 7.
+T:QUEST00.dat:38:31	남의 물건	Đồ của người khác
+T:QUEST00.dat:38:42	헉슬리저택 경비병인 헨리가 코이수녀 아버지의 유품을 집어갔다. 그를 찾아가 물건을 회수하자.	Henry, lính gác dinh thự Huxley, đã lấy mất di vật của cha sơ Koi. Hãy tìm hắn đòi lại.
+T:QUEST00.dat:39:31	주술용수정	Pha lê thuật
+T:QUEST00.dat:39:43	뻔뻔한 헨리의 조건으로 헉슬리대저택8의 주술사들에게 주술용수정을 뺏어 물건을 교환하자.	Theo điều kiện của tên Henry trơ trẽn, cướp Pha lê dùng cho thuật từ bọn thầy pháp ở đại dinh thự Huxley 8 để đổi đồ.
+T:QUEST00.dat:40:31	코이수녀에게	Đến chỗ sơ Koi
+T:QUEST00.dat:40:45	이스턴 성당의 코이수녀에게 아버지의 유품을 돌려주자.	Trả di vật của cha cho sơ Koi ở giáo đường Eastern.
+T:QUEST00.dat:41:31	용병교육	Đào tạo lính thuê
+T:QUEST00.dat:41:41	여관 아래에 있는 랜달프 아저씨에게 가보자.	Đến chỗ chú Randalph ở dưới quán trọ.
+T:QUEST00.dat:42:31	용병 의뢰	Nhờ lính thuê
+T:QUEST00.dat:42:42	성당안에서 용병을 찾고 있는 헬레나 수녀를 찾아가자.	Tìm sơ Helena đang tìm lính đánh thuê trong giáo đường.
+T:QUEST00.dat:43:31	사악한 종교	Tôn giáo tà ác
+T:QUEST00.dat:43:44	고대종교인 드루이드교의 드루이드를 무찌르고, 암흑수정을 가져오자.	Đánh bại Druid của giáo phái cổ Druid, lấy Pha lê bóng tối về.
+T:QUEST00.dat:44:31	뒤틀린 암흑수정	Pha lê tối méo mó
+T:QUEST00.dat:44:48	뭔가 잘못되었다. 테레사 대수녀에게 도움을 청하자!	Có gì đó không ổn. Hãy nhờ sơ bề trên Teresa giúp!
+T:QUEST00.dat:45:31	순결함의 상징	Sự trong sạch
+T:QUEST00.dat:45:46	이스턴 남쪽외곽의 임프들에게 순수한 금의 광석을 되찾아 테레사 대수녀에게 전해주자.	Đoạt lại Quặng vàng nguyên chất từ bọn Imp ở ngoại ô phía nam Eastern, đem cho sơ bề trên Teresa.
+T:QUEST00.dat:46:31	신성력의 결정체	Tinh thể thần lực
+T:QUEST00.dat:46:48	신성력이 극도로 응축된 신성력의 정화를 헬레나 수녀에게 가져다줘서 뒤틀린 암흑수정을 정화시키자.	Đem Thanh tẩy thần lực, thần lực cô đặc tột độ, cho sơ Helena để thanh tẩy Pha lê bóng tối bị méo.
+T:QUEST00.dat:47:31	마계의 통로	Lối vào ma giới
+T:QUEST00.dat:47:44	마계와 이어진 던전, 이블케이브에서 서식하는 블랙버블몬을 척살하고 블랙버블아이를 모아 헵번에게 가져다주자.	Tiêu diệt Black Bubblemon ở Evil Cave, hầm ngục thông với ma giới, gom Black Bubble Eye đem cho Hepburn.
+T:QUEST00.dat:48:31	은밀한 전언	Lời nhắn bí mật
+T:QUEST00.dat:48:44	코드리공작의 전언를 이스턴시티 여관의 세르게이에게 전달하자	Chuyển lời nhắn của Công tước Codry cho Sergei ở quán trọ Eastern City
+T:QUEST00.dat:49:31	밀약의 증거	Chứng cứ mật ước
+T:QUEST00.dat:49:44	코드리공작의 말을 그대로 신뢰하기는 어렵다. 어둠의 숲4의 흑마법사 던전에 가서 흑마법사에게 밀약의 서약서를 뺏어오자.	Khó mà tin hẳn lời Công tước Codry. Hãy đến hầm ngục Hắc pháp sư ở Rừng Bóng Tối 4 cướp Giấy thề bí mật từ tay Hắc pháp sư.
+T:QUEST00.dat:50:31	경계 강화	Tăng canh phòng
+T:QUEST00.dat:50:42	데저트 캠프에 있는 토마스에게 경계를 강화하라고 세르게이의 전언을 전하자.	Chuyển lời Sergei bảo Thomas ở Desert Camp tăng cường canh gác.
+T:QUEST00.dat:51:31	토마스의 부탁	Nhờ vả của Thomas
+T:QUEST00.dat:51:46	산적간부들의 위협으로 던전 감시가 쉽지않다. 산적간부 10명을 해치워 부담을 덜어주자.	Bị Đầu mục sơn tặc đe doạ nên khó canh hầm ngục. Hãy diệt 10 Đầu mục sơn tặc giúp anh ta.
+T:QUEST00.dat:52:31	나이트의 동상	Tượng Knight
+T:QUEST00.dat:52:46	프루스트의 동상제작에 필요한 고급판금을, 루이시티 북쪽외곽의 어벤져에게 뺏아서 루이시티 대장간의 미키에게 가져다주자.	Cướp Tấm kim loại cao cấp cần để làm tượng Frust từ bọn Avenger ở ngoại ô phía bắc Lui City, đem cho Mickey ở lò rèn Lui City.
+T:QUEST00.dat:53:31	장인의 고집	Cố chấp nghệ nhân
+T:QUEST00.dat:53:44	나이트의 품위를 표현하기엔 재료가 부족하다. 웨스트 포레스트가서 드레이크에게 헬아이언을 8개 구해 루이시티 대장간의 미키에게 돌아가자.	Nguyên liệu chưa đủ để thể hiện phẩm cách Knight. Đến West Forest kiếm 8 Hell Iron từ Drake rồi về chỗ Mickey ở lò rèn Lui City.
+T:QUEST00.dat:54:31	카덴의 호출	Kaden gọi
+T:QUEST00.dat:54:44	루이시티 성안의 카덴이 급하게 찾고 있다. 그를 찾아가보자.	Kaden trong thành Lui City đang gấp gáp tìm cậu. Hãy đến gặp anh ta.
+T:QUEST00.dat:55:31	귀부인의 보석	Đá quý quý bà
+T:QUEST00.dat:55:46	고원지대의 도적들이 훔쳐간 홍옥원석을 되찾아, 루이시티 성안의 카덴에게 돌려주자.	Đoạt lại Hồng ngọc thô bọn trộm ở Cao nguyên đã lấy, trả cho Kaden trong thành Lui City.
+T:QUEST00.dat:56:31	여자의 욕심	Lòng tham phụ nữ
+T:QUEST00.dat:56:44	루이시티 서쪽의 집시주술사에게서 집시의 눈물을 모아와 루이시티 성안의 로잔느 백작부인에게 가져다주자.	Gom Nước mắt Gypsy từ Shaman Gypsy ở phía tây Lui City, đem cho Bá tước phu nhân Rosanne trong thành Lui City.
+T:QUEST00.dat:57:31	드비쉬경의 고민	Ngài Devish lo âu
+T:QUEST00.dat:57:48	루이시티의 물을 오염시키는 원인을 찾아야한다. 대륙 곳곳을 돌아다니는 보따리상 루크에게 원인을 알아보자.	Phải tìm ra nguyên nhân làm ô nhiễm nước Lui City. Hãy hỏi Luke, người bán rong đi khắp đại lục.
+T:QUEST00.dat:58:31	수상한 나무통	Thùng gỗ lạ
+T:QUEST00.dat:58:46	루이시티 북쪽외곽4에 놓여있는 나무통이 수상하다. 암흑술사가 지키고 있는 나무통을 살펴보자	Thùng gỗ ở ngoại ô phía bắc Lui City 4 rất khả nghi. Hãy xem xét thùng gỗ do Dark Sorcerer canh giữ
+T:QUEST00.dat:59:31	암흑술사 격파	Hạ Dark Sorcerer
+T:QUEST00.dat:59:46	암흑술사로 인해 나무통을 자세히 살펴보기가 불가능하다. 암흑술사를 무찌르자.	Có Dark Sorcerer nên không thể xem kỹ thùng gỗ. Hãy đánh bại Dark Sorcerer.
+T:QUEST00.dat:60:31	드비쉬경에게	Gặp Ngài Devish
+T:QUEST00.dat:60:45	루이시티의 드비쉬경에게 그들의 음모를 알리자.	Báo cho Ngài Devish ở Lui City biết âm mưu của chúng.
+T:QUEST00.dat:61:31	고향의 음식	Món ăn quê nhà
+T:QUEST00.dat:61:44	오랜 객지 생활로 고향의 음식을 그리워하는 제이슨을 위해, 루이시티 여관의 다나에게 도움을 청하자.	Vì Jason xa quê lâu ngày nhớ món ăn quê hương, hãy nhờ Dana ở quán trọ Lui City giúp.
+T:QUEST00.dat:62:31	마물껍데기	Vỏ ma vật
+T:QUEST00.dat:62:43	오크마을 여관에 가서 여관주인인 이프리카에게 그곳의 특산품인 마물껍데기 구이 양념의 레시피를 부탁하자.	Đến quán trọ làng Orc nhờ chủ quán Ifrica cho công thức gia vị món vỏ ma vật nướng, đặc sản ở đó.
+T:QUEST00.dat:63:31	음식의 재료	Vật liệu món ăn
+T:QUEST00.dat:63:44	레시피를 받기위한 조건으로, 마물의 가죽을 구해와 오르츠크 여관의 이프리카에게 가져다 주자.	Điều kiện để nhận công thức: kiếm Da Ma vật đem cho Ifrica ở quán trọ Ortsk.
+T:QUEST00.dat:64:31	특별한 레시피	Công thức độc đáo
+T:QUEST00.dat:64:46	루이시티 여관의 다나에게 마물껍데기 구이 양념의 레시피를 가져다주자.	Đem công thức gia vị món vỏ ma vật nướng cho Dana ở quán trọ Lui City.
+T:QUEST00.dat:65:31	인큐버스의 눈	Mắt Incubus
+T:QUEST00.dat:65:46	던전 생성의 비밀을 풀기위해 남부접경지대에서 인큐버스아이를 구해 텔레포터 마법사 헵번에게 가져다주자.	Để giải bí mật hầm ngục sinh ra, kiếm Mắt Incubus ở Biên giới phía Nam đem cho pháp sư dịch chuyển Hepburn.
+T:QUEST00.dat:66:31	상심한 오크	Orc đau lòng
+T:QUEST00.dat:66:44	나디아의 부탁으로 오크마을의 민가에 사는 융도르코를 찾아가보자	Theo lời nhờ của Nadia, hãy đến tìm Yundorco sống trong nhà dân ở làng Orc
+T:QUEST00.dat:67:31	융도르코의 분노	Yundorco phẫn nộ
+T:QUEST00.dat:67:48	오크성막길에 있는 샤먼들이 융도르코의 부인을 실험체로 사용했다! 융도르코를 대신해 샤먼에게 복수하자.	Bọn Shaman ở Đường Trại Orc đã dùng vợ Yundorco làm vật thí nghiệm! Hãy thay Yundorco trả thù bọn Shaman.
+T:QUEST00.dat:68:31	잔인한 복수극	Báo thù tàn nhẫn
+T:QUEST00.dat:68:46	샤먼에게 융도르코의 부인을 잡아다 바친 마운틴 리자드들을 처치하고 그들의 가죽을 융도르코에게 가져다주고 한을 풀어주자.	Diệt bọn Mountain Lizard đã bắt vợ Yundorco dâng cho Shaman, đem da chúng cho Yundorco để giải mối hận.
+T:QUEST00.dat:69:31	소년의 꿈	Giấc mơ cậu bé
+T:QUEST00.dat:69:42	대장장이가 꿈인 오크소년을 위해 북부산맥지역의 에틴에게 구리주괴를 구해오자.	Vì cậu bé Orc mơ làm thợ rèn, hãy kiếm Thỏi đồng từ Ettin ở Dãy núi phía Bắc.
+T:QUEST00.dat:70:31	형재애	Tình anh em
+T:QUEST00.dat:70:39	동생의 꿈을 도와주려는 형의 부탁이다. 딥블루마운틴의 광신도에게서 마광석를 가져다 동생에게 가져다주자.	Người anh nhờ giúp giấc mơ của em. Lấy Quặng ma từ bọn Cuồng tín ở Deep Blue Mountain đem cho người em.
+T:QUEST00.dat:71:31	나물범벅	Rau trộn
+T:QUEST00.dat:71:41	노스마운틴에서 바로메츠 가지를 구해와, 오르츠크의 루티나에게 나물재료로 가져다주자.	Kiếm Cành Barometz ở North Mountain, đem cho Rutina ở Ortsk làm nguyên liệu rau trộn.
+T:QUEST00.dat:72:31	오크경매인	Người đấu giá Orc
+T:QUEST00.dat:72:43	오르츠크 상점에 있는 경매인 지르크에게 나물범벅을 가져다 주자.	Đem rau trộn cho Zirka, người đấu giá ở cửa hàng Ortsk.
+T:QUEST00.dat:73:31	남자의 질투	Cơn ghen đàn ông
+T:QUEST00.dat:73:44	미오르넴이 오크성막길의 마운틴 트롤 녀석들에게 된통 당하고 온것 같다. 서부사막에 가서 손을 봐주자.	Hình như Miornem bị lũ Mountain Troll ở Đường Trại Orc cho một trận nhừ tử. Đến Sa mạc phía Tây dạy cho chúng một bài học.
+T:QUEST00.dat:74:31	인간과 오크	Con người và Orc
+T:QUEST00.dat:74:44	인간과 오크 대장장이간의 교류를 위한 로카르도의 희망을 루이시티의 대장장이 미키에게 전하자.	Chuyển niềm hy vọng giao lưu giữa thợ rèn người và Orc của Rocardo cho thợ rèn Mickey ở Lui City.
+T:QUEST00.dat:75:31	미키의 답변	Mickey trả lời
+T:QUEST00.dat:75:44	미키의 마음을 담은 재료를 오크마을 대장장이인 로카르도에게 전달하자.	Chuyển nguyên liệu chứa tấm lòng Mickey cho Rocardo, thợ rèn làng Orc.
+T:QUEST00.dat:76:31	케산의 마음	Tấm lòng Kesan
+T:QUEST00.dat:76:44	케산이 나디아에게 고백을 하려한다. 그의 마음을 전해주기 위해 루이시티 잡화점에서 [반지]맥스웰링을 사와, 나디아에게 전해주자. 	Kesan định tỏ tình với Nadia. Để chuyển tấm lòng anh ấy, hãy mua [Nhẫn]Maxwell Ring ở tạp hoá Lui City đem cho Nadia. 
+T:QUEST00.dat:77:31	나디아의 마음	Tấm lòng Nadia
+T:QUEST00.dat:77:46	나디아의 마음이 담긴 편지를 케산에게 전달해주자.	Chuyển lá thư chứa tấm lòng Nadia cho Kesan.
+T:QUEST00.dat:78:31	브리킷의 분노	Cơn giận Brigit
+T:QUEST00.dat:78:46	서부사막3에서 갈수있는 서부사막던전1의 케이브트롤들이 오크전사의 유골을 장난감으로 사용하고 있다. 유골을 회수해서 브리킷에게 가져오자.	Bọn Cave Troll ở hầm ngục Sa mạc phía Tây 1 (đi từ Sa mạc phía Tây 3) đang lấy hài cốt chiến binh Orc làm đồ chơi. Thu hồi hài cốt đem về cho Brigit.
+T:QUEST00.dat:79:31	오크의 명예전사	Dũng sĩ Orc
+T:QUEST00.dat:79:48	브리킷이 샤이먼에게 이 사건을 보고해서, 샤이먼이 세바스찬을 만나고 싶어한다. 샤이먼에게 가보자.	Brigit đã báo việc này cho Shaimon, và Shaimon muốn gặp Sebastian. Hãy đến chỗ Shaimon.
+T:QUEST00.dat:80:31	더럽혀진 기사도	Kỵ sĩ đạo ô uế
+T:QUEST00.dat:80:48	암흑기사들의 메달이 그들에게 영향을 끼치는것 같다. 암흑기사를 제압하고 그들의 메달을 뺏아 텔레포터 마법사 헵번에게 가져다주자.	Huy chương của Dark Knight hình như đang ảnh hưởng đến chúng. Hãy chế ngự Dark Knight, cướp huy chương đem cho pháp sư dịch chuyển Hepburn.
+T:QUEST00.dat:81:31	의심가는 종교	Tôn giáo khả nghi
+T:QUEST00.dat:81:46	제메스교의 교리가 의심스럽다. 제메시스를 상대해서 그들의 교리서인 제메신경을 라젤항구의 크루센에게 가져다주자. 	Giáo lý giáo phái Jemes rất khả nghi. Hãy đấu với Jemesis, lấy sách giáo lý Kinh Jemes đem cho Krusen ở Cảng Razel. 
+T:QUEST00.dat:82:31	크루센의 전언	Lời nhắn Krusen
+T:QUEST00.dat:82:46	종교를 위장한 사기단체인 제메스교의 실상을 천공신전의 론다느 경비병에게 알려주자.	Cho lính gác Rondane ở Thần điện Thiên Không biết bộ mặt thật của giáo phái Jemes, một tổ chức lừa đảo đội lốt tôn giáo.
+T:QUEST00.dat:83:31	론다느의 친구	Bạn của Rondane
+T:QUEST00.dat:83:46	제메스 신전에 몸을 기탁한 론다느의 친구가 걱정된다. 항상 화분을 가지고 다녔다는 그를 찾아보자.	Rondane lo cho người bạn đã nương thân ở Thần điện Jemes. Hãy tìm người luôn mang theo Chậu hoa ấy.
+T:QUEST00.dat:84:31	안타까운 소식	Tin buồn
+T:QUEST00.dat:84:46	론다느의 친구는 제메스교 내부에서 희생당한것 같다. 이 사실을 천공신전의 론다느에게 전해주자.	Bạn của Rondane hình như đã bị hại trong giáo phái Jemes. Hãy báo tin này cho Rondane ở Thần điện Thiên Không.
+T:QUEST00.dat:85:31	되살아난 사람들	Người hồi sinh
+T:QUEST00.dat:85:48	환생에 대해서 자세히 알아보야겠다. 이스턴 시티 성당의 오른쪽 하단에 위치한 도서관에서 정보를 찾자.	Phải tìm hiểu kỹ về Tái sinh. Hãy tìm thông tin ở thư viện góc dưới bên phải giáo đường Eastern City.
+T:QUEST00.dat:86:31	대마법사 루니안	Pháp sư Lunian
+T:QUEST00.dat:86:48	성당에서 요양중인 대마법사 루니안에게 가서 책을 빌릴 수 있는지 확인해보자.	Đến chỗ đại pháp sư Lunian đang tĩnh dưỡng ở giáo đường, hỏi xem có mượn sách được không.
+T:QUEST00.dat:87:31	환생의 정보	Tin về Tái sinh
+T:QUEST00.dat:87:44	빌려온 책을 텔레포터 마법사 헵번에게 가져다주고, 해석을 부탁하도록 하자.	Đem sách đã mượn cho pháp sư dịch chuyển Hepburn, nhờ cô ấy giải đọc.
+T:QUEST00.dat:88:31	캐슬스카이 1	Castle Sky 1
+T:QUEST00.dat:88:45	캐슬스카이의 워락들을 조사하고, 그들의 마나펜던트를 구해오자.	Điều tra bọn Warlock ở Castle Sky, lấy Mana Pendant của chúng về.
+T:QUEST00.dat:89:31	캐슬스카이 2	Castle Sky 2
+T:QUEST00.dat:89:45	캐슬스카이의 스카이솔저들을 처치하고 하트오브솔저를 구해오자.	Diệt bọn Sky Soldier ở Castle Sky, lấy Heart of Soldier về.
+T:QUEST00.dat:90:31	캐슬스카이 3	Castle Sky 3
+T:QUEST00.dat:90:45	잘못된 충심의 비극. 캐슬나이트의 가신 - 워락들을 처치하고 바스틴루에게 돌아가자.	Bi kịch của lòng trung thành sai lầm. Diệt bọn Warlock, gia thần của Castle Knight, rồi quay về chỗ Bastinlu.
+T:QUEST00.dat:91:31	탐욕마성 1	Greed Castle 1
+T:QUEST00.dat:91:43	탐욕마성의 마물. 맨오워을 무찌르자.	Ma vật của Greed Castle. Hãy đánh bại Man-o-War.
+T:QUEST00.dat:92:31	탐욕마성 2	Greed Castle 2
+T:QUEST00.dat:92:43	마계침략의 선봉인 다크다워. 탐욕마성에서 다크타워를 처치하자.	Dark Tower, tiên phong của cuộc xâm lược từ ma giới. Hãy diệt Dark Tower ở Greed Castle.
+T:QUEST00.dat:93:31	그리드바벨 1	Greed Babel 1
+T:QUEST00.dat:93:45	그리드 바벨에서 흑마법사에게 세뇌되어 인간계를 파탄시키는 그리드어쌔신을 처치하자. 	Diệt Greed Assassin bị hắc pháp sư tẩy não ở Greed Babel, đang phá hoại nhân giới. 
+T:QUEST00.dat:94:31	그리드바벨 2	Greed Babel 2
+T:QUEST00.dat:94:45	마기에 오염된 실프인 그리드 실프를 잠재워 정령계로 돌려보내자.	Ru ngủ Greed Sylph, Sylph bị ma khí làm ô nhiễm, đưa chúng về tinh linh giới.
+T:QUEST00.dat:95:31	검은 램프성 1	Black Lamp 1
+T:QUEST00.dat:95:46	인육을 즐기는 바바에게 협조해 인륜을 저버린 램프술사를 처치하자.	Diệt Lamp Sorcerer, kẻ đã chối bỏ nhân luân để giúp Baba thích ăn thịt người.
+T:QUEST00.dat:96:31	검은 램프성 2	Black Lamp 2
+T:QUEST00.dat:96:46	검은램프 바바의 힘의 원천, 램프 수호물을 파괴하자.	Phá huỷ Lamp Guardian, nguồn sức mạnh của Baba Đèn Đen.
+T:QUEST00.dat:97:31	딥그리드바벨 1	Greed Babel 1
+T:QUEST00.dat:97:47	마기에 오염되어, 탐욕에 미쳐날뛰는 그리드 솔저를 처치하자.	Diệt Greed Soldier bị ma khí làm ô nhiễm, điên cuồng vì tham lam.
+T:QUEST00.dat:98:31	딥그리드바벨 2	Greed Babel 2
+T:QUEST00.dat:98:47	대항할수 있음에도 불구하고, 쾌락을 몸을 내맡긴 과거 영광의 기사단. 그리드나이트를 처치하자	Hiệp sĩ đoàn vinh quang ngày trước, dù có thể chống cự vẫn phó mặc thân mình cho khoái lạc. Hãy diệt Greed Knight
+T:QUEST00.dat:99:31	광기의 어비스 1	Abyss Madness 1
+T:QUEST00.dat:99:48	드루이드교에 심취해, 본연의 임무를 져버린 뭉크. 그들을 처치하자.	Bọn Munk say mê giáo phái Druid, chối bỏ bổn phận vốn có. Hãy diệt chúng.
+T:QUEST00.dat:100:31	광기의 어비스 2	Abyss Madness 2
+T:QUEST00.dat:100:48	고대종교인 드루이드교의 마지막 후손. 드루이드를 처치해 그들의 음모를 저지하자.	Hậu duệ cuối cùng của giáo phái cổ Druid. Hãy diệt Druid để ngăn âm mưu của chúng.
+T:QUEST00.dat:101:31	어퍼슬래셔 1	Upper Slasher 1
+T:QUEST00.dat:101:45	이스턴 시티의 폴조를 찾아가 인내력에 대해 알아보자.(다른 직업을 선택하려면, 본 퀘스트를 취소한 후, 제라드에게 다시 전직퀘스트를 받으십시오.)	Đến tìm Polzo ở Eastern City để học về sức nhẫn nại.(Muốn chọn nghề khác thì hủy nhiệm vụ này rồi nhận lại nhiệm vụ Chuyển nghề từ Gerard.)
+T:QUEST00.dat:102:31	어퍼슬래셔 2	Upper Slasher 2
+T:QUEST00.dat:102:45	이스턴시티길의 프로그를 상대하며, 자신과의 싸움에서 이길 수 있다는 것을 증명하자.	Đấu với Frog ở Đường Eastern City, chứng minh mình có thể chiến thắng chính mình.
+T:QUEST00.dat:103:31	어퍼슬래셔 3	Upper Slasher 3
+T:QUEST00.dat:103:45	이스턴시티길의 드루이드들을 처치하고, 전직테스트에 통과하자.	Diệt bọn Druid ở Đường Eastern City để vượt qua bài kiểm tra Chuyển nghề.
+T:QUEST00.dat:104:31	스윙슬래셔 1	Swing Slasher 1
+T:QUEST00.dat:104:45	이스턴시티의 폴조에게 도끼다루는 법을 배우러가자.(다른 직업을 선택하려면, 본 퀘스트를 취소한 후, 제라드에게 다시 전직퀘스트를 받으십시오.)	Đến chỗ Polzo ở Eastern City học cách dùng rìu.(Muốn chọn nghề khác thì hủy nhiệm vụ này rồi nhận lại nhiệm vụ Chuyển nghề từ Gerard.)
+T:QUEST00.dat:105:31	스윙슬래셔 2	Swing Slasher 2
+T:QUEST00.dat:105:45	이스턴시티길에서 빅푸트의 뼈를 구해, 폴조에게 가져다주자.	Kiếm xương Bigfoot ở Đường Eastern City đem cho Polzo.
+T:QUEST00.dat:106:31	스윙슬래셔 3	Swing Slasher 3
+T:QUEST00.dat:106:45	이스턴시티길의 드루이드들을 처치하고, 전직테스트에 통과하자.	Diệt bọn Druid ở Đường Eastern City để vượt qua bài kiểm tra Chuyển nghề.
+T:QUEST00.dat:107:31	크래싱슬래셔 1	C. Slasher 1
+T:QUEST00.dat:107:47	이스턴시티의 폴조에게 조언을 구하러가자.(다른 직업을 선택하려면, 본 퀘스트를 취소한 후, 제라드에게 다시 전직퀘스트를 받으십시오.)	Đến chỗ Polzo ở Eastern City xin lời khuyên.(Muốn chọn nghề khác thì hủy nhiệm vụ này rồi nhận lại nhiệm vụ Chuyển nghề từ Gerard.)
+T:QUEST00.dat:108:31	크래싱슬래셔 2	C. Slasher 2
+T:QUEST00.dat:108:47	이스턴시티길의 데블에게서 루비광석을 구해오자.	Kiếm Quặng Ruby từ Devil ở Đường Eastern City.
+T:QUEST00.dat:109:31	크래싱슬래셔 3	C. Slasher 3
+T:QUEST00.dat:109:47	이스턴시티길의 빅푸트들을 처치하고, 전직테스트에 통과하자.	Diệt bọn Bigfoot ở Đường Eastern City để vượt qua bài kiểm tra Chuyển nghề.
+T:QUEST00.dat:110:31	어퍼어쌔신 1	Upper Assassin 1
+T:QUEST00.dat:110:45	이스턴시티 성당의 전직 어쌔신이었던 베넬수녀를 찾아가자.(다른 직업을 선택하려면, 본 퀘스트를 취소한 후, 제라드에게 다시 전직퀘스트를 받으십시오.)	Đến tìm sơ Benel, cựu Assassin ở giáo đường Eastern City.(Muốn chọn nghề khác thì hủy nhiệm vụ này rồi nhận lại nhiệm vụ Chuyển nghề từ Gerard.)
+T:QUEST00.dat:111:31	어퍼어쌔신 2	Upper Assassin 2
+T:QUEST00.dat:111:45	이스턴시티길의 프로그를 상대하여, 베넬수녀의 테스트를 통과하자.	Đấu với Frog ở Đường Eastern City để vượt qua bài kiểm tra của sơ Benel.
+T:QUEST00.dat:112:31	어퍼어쌔신 3	Upper Assassin 3
+T:QUEST00.dat:112:45	이스턴시티길의 드루이드들을 처치하고 암흑의 기운을 가져와, 전직테스트에 통과하자.	Diệt bọn Druid ở Đường Eastern City lấy Khí Bóng tối về để vượt qua bài kiểm tra Chuyển nghề.
+T:QUEST00.dat:113:31	그래플링어쌔신 1	G. Assassin 1
+T:QUEST00.dat:113:49	이스턴시티 성당의 전직 어쌔신이었던 베넬수녀를 찾아가자.(다른 직업을 선택하려면, 본 퀘스트를 취소한 후, 제라드에게 다시 전직퀘스트를 받으십시오.)	Đến tìm sơ Benel, cựu Assassin ở giáo đường Eastern City.(Muốn chọn nghề khác thì hủy nhiệm vụ này rồi nhận lại nhiệm vụ Chuyển nghề từ Gerard.)
+T:QUEST00.dat:114:31	그래플링어쌔신 2	G. Assassin 2
+T:QUEST00.dat:114:49	이스턴 시티길의 데블을 상대하며, 힘을 기르자.	Đấu với Devil ở Đường Eastern City để rèn sức mạnh.
+T:QUEST00.dat:115:31	그래플링어쌔신 3	G. Assassin 3
+T:QUEST00.dat:115:49	이스턴 시티길의 만다고라를 처치하고 전직테스트에 통과하자.	Diệt Mandragora ở Đường Eastern City để vượt qua bài kiểm tra Chuyển nghề.
+T:QUEST00.dat:116:31	파이팅어쌔신 1	F. Assassin 1
+T:QUEST00.dat:116:47	이스턴시티 성당의 전직 어쌔신이었던 베넬수녀를 찾아가자.(다른 직업을 선택하려면, 본 퀘스트를 취소한 후, 제라드에게 다시 전직퀘스트를 받으십시오.)	Đến tìm sơ Benel, cựu Assassin ở giáo đường Eastern City.(Muốn chọn nghề khác thì hủy nhiệm vụ này rồi nhận lại nhiệm vụ Chuyển nghề từ Gerard.)
+T:QUEST00.dat:117:31	파이팅어쌔신 2	F. Assassin 2
+T:QUEST00.dat:117:47	이스턴 시티길의 만다고라를 처치하자	Diệt Mandragora ở Đường Eastern City
+T:QUEST00.dat:118:31	파이팅어쌔신 3	F. Assassin 3
+T:QUEST00.dat:118:47	이스턴 시티길의 드루이드를 처치하고 전직테스트에 통과하자.	Diệt Druid ở Đường Eastern City để vượt qua bài kiểm tra Chuyển nghề.
+T:QUEST00.dat:119:31	어퍼나이트 1	Upper Knight 1
+T:QUEST00.dat:119:45	이스턴시티의 다그리파 후작에게 조언을 청하러가자.(다른 직업을 선택하려면, 본 퀘스트를 취소한 후, 제라드에게 다시 전직퀘스트를 받으십시오.)	Đến chỗ Hầu tước Dagripa ở Eastern City xin lời khuyên.(Muốn chọn nghề khác thì hủy nhiệm vụ này rồi nhận lại nhiệm vụ Chuyển nghề từ Gerard.)
+T:QUEST00.dat:120:31	어퍼나이트 2	Upper Knight 2
+T:QUEST00.dat:120:45	이스턴시티길의 데블에게서 루비광석을 구해오자.	Kiếm Quặng Ruby từ Devil ở Đường Eastern City.
+T:QUEST00.dat:121:31	어퍼나이트 3	Upper Knight 3
+T:QUEST00.dat:121:45	이스턴 시티길의 만다고라를 처치하고 전직테스트에 통과하자.	Diệt Mandragora ở Đường Eastern City để vượt qua bài kiểm tra Chuyển nghề.
+T:QUEST00.dat:122:31	노블나이트 1	Noble Knight 1
+T:QUEST00.dat:122:45	이스턴시티의 다그리파 후작에게 조언을 청하러 가자.(다른 직업을 선택하려면, 본 퀘스트를 취소한 후, 제라드에게 다시 전직퀘스트를 받으십시오.)	Đến chỗ Hầu tước Dagripa ở Eastern City xin lời khuyên.(Muốn chọn nghề khác thì hủy nhiệm vụ này rồi nhận lại nhiệm vụ Chuyển nghề từ Gerard.)
+T:QUEST00.dat:123:31	노블나이트 2	Noble Knight 2
+T:QUEST00.dat:123:45	이스턴시티길의 프로그들을 처리하자.	Xử lý bọn Frog ở Đường Eastern City.
+T:QUEST00.dat:124:31	노블나이트 3	Noble Knight 3
+T:QUEST00.dat:124:45	이스턴 시티길의 드루이드를 처치하고 전직테스트에 통과하자.	Diệt Druid ở Đường Eastern City để vượt qua bài kiểm tra Chuyển nghề.
+T:QUEST00.dat:125:31	수퍼나이트 1	Super Knight 1
+T:QUEST00.dat:125:45	이스턴시티의 다그리파 후작에게 조언을 청하러가자.(다른 직업을 선택하려면, 본 퀘스트를 취소한 후, 제라드에게 다시 전직퀘스트를 받으십시오.)	Đến chỗ Hầu tước Dagripa ở Eastern City xin lời khuyên.(Muốn chọn nghề khác thì hủy nhiệm vụ này rồi nhận lại nhiệm vụ Chuyển nghề từ Gerard.)
+T:QUEST00.dat:126:31	수퍼나이트 2	Super Knight 2
+T:QUEST00.dat:126:45	이스턴시티길의 데블들을 처리하자.	Xử lý bọn Devil ở Đường Eastern City.
+T:QUEST00.dat:127:31	수퍼나이트 3	Super Knight 3
+T:QUEST00.dat:127:45	이스턴 시티길의 빅푸트를 처치하고 전직테스트에 통과하자.	Diệt Bigfoot ở Đường Eastern City để vượt qua bài kiểm tra Chuyển nghề.
+T:QUEST00.dat:128:31	파이어매지션 1	Fire Magician 1
+T:QUEST00.dat:128:47	이스턴시티 성당에서 요양중인 마법사, 루니안을 찾아가자.(다른 직업을 선택하려면, 본 퀘스트를 취소한 후, 제라드에게 다시 전직퀘스트를 받으십시오.)	Đến tìm Lunian, pháp sư đang tĩnh dưỡng ở giáo đường Eastern City.(Muốn chọn nghề khác thì hủy nhiệm vụ này rồi nhận lại nhiệm vụ Chuyển nghề từ Gerard.)
+T:QUEST00.dat:129:31	파이어매지션 2	Fire Magician 2
+T:QUEST00.dat:129:47	이스턴시티길의 빅푸트를 처치하자.	Diệt Bigfoot ở Đường Eastern City.
+T:QUEST00.dat:130:31	파이어매지션 3	Fire Magician 3
+T:QUEST00.dat:130:47	이스턴 시티길의 드루이드를 처치하고 전직테스트에 통과하자.	Diệt Druid ở Đường Eastern City để vượt qua bài kiểm tra Chuyển nghề.
+T:QUEST00.dat:131:31	아이스매지션 1	Ice Magician 1
+T:QUEST00.dat:131:47	이스턴시티 성당에서 요양중인 마법사, 루니안을 찾아가자.(다른 직업을 선택하려면, 본 퀘스트를 취소한 후, 제라드에게 다시 전직퀘스트를 받으십시오.)	Đến tìm Lunian, pháp sư đang tĩnh dưỡng ở giáo đường Eastern City.(Muốn chọn nghề khác thì hủy nhiệm vụ này rồi nhận lại nhiệm vụ Chuyển nghề từ Gerard.)
+T:QUEST00.dat:132:31	아이스매지션 2	Ice Magician 2
+T:QUEST00.dat:132:47	이스턴시티길의 데블에게서 루비광석을 구해오자.	Kiếm Quặng Ruby từ Devil ở Đường Eastern City.
+T:QUEST00.dat:133:31	아이스매지션 3	Ice Magician 3
+T:QUEST00.dat:133:47	이스터 시티길의 만다고라를 처치하고, 만다로라 줄기를 가져와 전직테스트에 통과하자.	Diệt Mandragora ở Đường Eastern City, lấy Thân Mandragora về để vượt qua bài kiểm tra Chuyển nghề.
+T:QUEST00.dat:134:31	썬더매지션 1	T. Magician 1
+T:QUEST00.dat:134:45	이스턴시티 성당에서 요양중인 마법사, 루니안을 찾아가자.(다른 직업을 선택하려면, 본 퀘스트를 취소한 후, 제라드에게 다시 전직퀘스트를 받으십시오.)	Đến tìm Lunian, pháp sư đang tĩnh dưỡng ở giáo đường Eastern City.(Muốn chọn nghề khác thì hủy nhiệm vụ này rồi nhận lại nhiệm vụ Chuyển nghề từ Gerard.)
+T:QUEST00.dat:135:31	썬더매지션 2	T. Magician 2
+T:QUEST00.dat:135:45	이스턴 시티길의 만다고라를 처치하고 만다고라 줄기를 가져오자.	Diệt Mandragora ở Đường Eastern City, lấy Thân Mandragora về.
+T:QUEST00.dat:136:31	썬더매지션 3	T. Magician 3
+T:QUEST00.dat:136:45	이스턴 시티길의 드루이드를 처치하고 전직테스트에 통과하자.	Diệt Druid ở Đường Eastern City để vượt qua bài kiểm tra Chuyển nghề.
+T:QUEST00.dat:137:31	그랜드슬래셔 1	Grand Slasher 1
+T:QUEST00.dat:137:47	루이시티의 드비쉬 남작을 찾아, 조언을 청하자.	Đến tìm Nam tước Devish ở Lui City xin lời khuyên.
+T:QUEST00.dat:138:31	그랜드슬래셔 2	Grand Slasher 2
+T:QUEST00.dat:138:47	고원지대의 구울들을 처치하자.	Diệt bọn Ghoul ở Cao nguyên.
+T:QUEST00.dat:139:31	그랜드슬래셔 3	Grand Slasher 3
+T:QUEST00.dat:139:47	딥데저트던전의 네펜데스를 처치하고 돌아와서, 그랜드 슬래셔로 각성하자.	Diệt Nepenthes ở Deep Desert Dungeon rồi quay về để Thức tỉnh thành Grand Slasher.
+T:QUEST00.dat:140:31	스윙워리어 1	Swing Warrior 1
+T:QUEST00.dat:140:45	루이시티의 드비쉬 남작을 찾아, 조언을 청하자.	Đến tìm Nam tước Devish ở Lui City xin lời khuyên.
+T:QUEST00.dat:141:31	스윙워리어 2	Swing Warrior 2
+T:QUEST00.dat:141:45	고원지대의 구울들을 처치하자.	Diệt bọn Ghoul ở Cao nguyên.
+T:QUEST00.dat:142:31	스윙워리어 3	Swing Warrior 3
+T:QUEST00.dat:142:45	딥데저트던전의 네펜데스를 처치하고 돌아와서, 스윙워리어로 각성하자.	Diệt Nepenthes ở Deep Desert Dungeon rồi quay về để Thức tỉnh thành Swing Warrior.
+T:QUEST00.dat:143:31	크래싱버서커 1	C. Berserker 1
+T:QUEST00.dat:143:47	루이시티의 드비쉬 남작을 찾아, 조언을 청하자.	Đến tìm Nam tước Devish ở Lui City xin lời khuyên.
+T:QUEST00.dat:144:31	크래싱버서커 2	C. Berserker 2
+T:QUEST00.dat:144:47	서부사막의 데저트데블들을 처치하고, 데블아이를 가져오자.	Diệt bọn Desert Devil ở Sa mạc phía Tây, lấy Devil Eye về.
+T:QUEST00.dat:145:31	크래싱버서커 3	C. Berserker 3
+T:QUEST00.dat:145:47	딥데저트던전의 네펜데스를 처치하고 돌아와서, 크래싱버서커로 각성하자.	Diệt Nepenthes ở Deep Desert Dungeon rồi quay về để Thức tỉnh thành Crashing Berserker.
+T:QUEST00.dat:146:31	그랜드어쌔신 1	Grand Assassin 1
+T:QUEST00.dat:146:47	루이시티 성안에 있는 로잔느 백작부인을 찾아가자.	Đến tìm Bá tước phu nhân Rosanne trong thành Lui City.
+T:QUEST00.dat:147:31	그랜드어쌔신 2	Grand Assassin 2
+T:QUEST00.dat:147:47	루이시티 서쪽 집시주술사에게서 집시의 옷감을 구해오자.	Kiếm Vải áo Gypsy từ Shaman Gypsy ở phía tây Lui City.
+T:QUEST00.dat:148:31	그랜드어쌔신 3	Grand Assassin 3
+T:QUEST00.dat:148:47	딥데저트던전의 네펜데스를 처치하고, 옷감재료를 가져와  돌아와서, 그랜드 어쌔신으로 각성하자.	Diệt Nepenthes ở Deep Desert Dungeon, lấy Nguyên liệu vải áo về để Thức tỉnh thành Grand Assassin.
+T:QUEST00.dat:149:31	파이널그래플러 1	Final Grappler 1
+T:QUEST00.dat:149:49	루이시티 성안에 있는 로잔느 백작부인을 찾아가자.	Đến tìm Bá tước phu nhân Rosanne trong thành Lui City.
+T:QUEST00.dat:150:31	파이널그래플러 2	Final Grappler 2
+T:QUEST00.dat:150:49	고원지대의 구울들을 처치하자.	Diệt bọn Ghoul ở Cao nguyên.
+T:QUEST00.dat:151:31	파이널그래플러 3	Final Grappler 3
+T:QUEST00.dat:151:49	딥데저트던전의 지옥망자들을 처치하고, 영혼결정를 가지고 돌아와서, 파이널그래플러로 각성하자.	Diệt Vong nhân địa ngục ở Deep Desert Dungeon, mang Tinh thể linh hồn về để Thức tỉnh thành Final Grappler.
+T:QUEST00.dat:152:31	울트라파이터 1	Ultra Fighter 1
+T:QUEST00.dat:152:47	루이시티 성안에 있는 로잔느 백작부인을 찾아가자.	Đến tìm Bá tước phu nhân Rosanne trong thành Lui City.
+T:QUEST00.dat:153:31	울트라파이터 2	Ultra Fighter 2
+T:QUEST00.dat:153:47	서부사막의 데저트데블들을 처치하고, 데블아이를 가져오자.	Diệt bọn Desert Devil ở Sa mạc phía Tây, lấy Devil Eye về.
+T:QUEST00.dat:154:31	울트라파이터 3	Ultra Fighter 3
+T:QUEST00.dat:154:47	딥데저트던전의 지옥망자들을 처치하고, 영혼결정를 가지고 돌아와서, 울트라파이터로 각성하자.	Diệt Vong nhân địa ngục ở Deep Desert Dungeon, mang Tinh thể linh hồn về để Thức tỉnh thành Ultra Fighter.
+T:QUEST00.dat:155:31	그랜드나이트 1	Grand Knight 1
+T:QUEST00.dat:155:47	루이시티에 있는 코드리 공작에게 조언을 청해보자.	Đến xin lời khuyên Công tước Codry ở Lui City.
+T:QUEST00.dat:156:31	그랜드나이트 2	Grand Knight 2
+T:QUEST00.dat:156:47	고원지대의 탈영병들을 처치하자.	Diệt bọn Lính đào ngũ ở Cao nguyên.
+T:QUEST00.dat:157:31	그랜드나이트 3	Grand Knight 3
+T:QUEST00.dat:157:47	딥데저트던전의 네펜데스를 처치하고 돌아와서, 그랜드 나이트로 각성하자.	Diệt Nepenthes ở Deep Desert Dungeon rồi quay về để Thức tỉnh thành Grand Knight.
+T:QUEST00.dat:158:31	노블블레이더 1	Noble Blader 1
+T:QUEST00.dat:158:47	루이시티에 있는 코드리 공작에게 조언을 청해보자.	Đến xin lời khuyên Công tước Codry ở Lui City.
+T:QUEST00.dat:159:31	노블블레이더 2	Noble Blader 2
+T:QUEST00.dat:159:47	고원지대의 구울들을 처치하자.	Diệt bọn Ghoul ở Cao nguyên.
+T:QUEST00.dat:160:31	노블블레이더 3	Noble Blader 3
+T:QUEST00.dat:160:47	딥데저트던전의 네펜데스를 처치하고 돌아와서, 노블 블레이더로 각성하자.	Diệt Nepenthes ở Deep Desert Dungeon rồi quay về để Thức tỉnh thành Noble Blader.
+T:QUEST00.dat:161:31	수퍼가디언 1	Super Guardian 1
+T:QUEST00.dat:161:45	루이시티에 있는 코드리 공작에게 조언을 청해보자.	Đến xin lời khuyên Công tước Codry ở Lui City.
+T:QUEST00.dat:162:31	수퍼가디언 2	Super Guardian 2
+T:QUEST00.dat:162:45	고원지대의 탈영병들을 처치하자.	Diệt bọn Lính đào ngũ ở Cao nguyên.
+T:QUEST00.dat:163:31	수퍼가디언 3	Super Guardian 3
+T:QUEST00.dat:163:45	딥데저트던전의 네펜데스를 처치하고 돌아와서, 수퍼가디안으로 각성하자.	Diệt Nepenthes ở Deep Desert Dungeon rồi quay về để Thức tỉnh thành Super Guardian.
+T:QUEST00.dat:164:31	파이어위자드 1	Fire Wizard 1
+T:QUEST00.dat:164:47	루이시티의 제이슨을 찾아가, 각성에 필요한 도움을 받자.	Đến tìm Jason ở Lui City để được giúp Thức tỉnh.
+T:QUEST00.dat:165:31	파이어위자드 2	Fire Wizard 2
+T:QUEST00.dat:165:47	고원지대의 맨드레이크를 처치하고, 맨드레이크 가지를 가져오자.	Diệt Mandrake ở Cao nguyên, lấy Cành Mandrake về.
+T:QUEST00.dat:166:31	파이어위자드 3	Fire Wizard 3
+T:QUEST00.dat:166:47	딥데저트던전의 지옥망자들을 처치하고, 영혼결정를 가지고 돌아와서 파이어위자드로 각성하자.	Diệt Vong nhân địa ngục ở Deep Desert Dungeon, mang Tinh thể linh hồn về để Thức tỉnh thành Fire Wizard.
+T:QUEST00.dat:167:31	아이스위자드 1	Ice Wizard 1
+T:QUEST00.dat:167:47	루이시티의 제이슨을 찾아가, 각성에 필요한 도움을 받자.	Đến tìm Jason ở Lui City để được giúp Thức tỉnh.
+T:QUEST00.dat:168:31	아이스위자드 2	Ice Wizard 2
+T:QUEST00.dat:168:47	서부사막의 데저트데블에게 데블아이를 구해오자.	Kiếm Devil Eye từ Desert Devil ở Sa mạc phía Tây.
+T:QUEST00.dat:169:31	아이스위자드 3	Ice Wizard 3
+T:QUEST00.dat:169:47	딥데저트던전의 지옥망자들을 처치하고 돌아와서, 아이스 위자드로 각성하자.	Diệt Vong nhân địa ngục ở Deep Desert Dungeon rồi quay về để Thức tỉnh thành Ice Wizard.
+T:QUEST00.dat:170:31	썬더위자드 1	Thunder Wizard 1
+T:QUEST00.dat:170:45	루이시티의 제이슨을 찾아가, 각성에 필요한 도움을 받자.	Đến tìm Jason ở Lui City để được giúp Thức tỉnh.
+T:QUEST00.dat:171:31	썬더위자드 2	Thunder Wizard 2
+T:QUEST00.dat:171:45	루이시티 서쪽의 집시주술자를 처치하자.	Diệt Shaman Gypsy ở phía tây Lui City.
+T:QUEST00.dat:172:31	썬더위자드 3	Thunder Wizard 3
+T:QUEST00.dat:172:45	딥데저트던전의 네펜데스를 처치하고, 옷감재료를 가지고 돌아와, 썬더위자드로 각성하자.	Diệt Nepenthes ở Deep Desert Dungeon, mang Nguyên liệu vải áo về để Thức tỉnh thành Thunder Wizard.
+T:QUEST00.dat:173:31	이블케이브	Evil Cave
+T:QUEST00.dat:173:43	현상포고-구울 10마리를 처치하고 용병대장 랜달프에게 보고해서, 보상을 받자.	Cáo thị treo thưởng - Diệt 10 con Ghoul rồi báo cho đội trưởng lính đánh thuê Randalph để nhận thưởng.
+T:QUEST00.dat:174:31	샌드던전	Sand Dungeon
+T:QUEST00.dat:174:41	현상포고-실라페를 처치하고 사막의 눈물을 10개 모아 용병대장 랜달프에게 가져다주고, 보상을 받자.	Cáo thị treo thưởng - Diệt Sylape, gom 10 Nước mắt Sa mạc đem cho đội trưởng lính đánh thuê Randalph để nhận thưởng.
+T:QUEST00.dat:175:31	딥샌드던전	Deep Sand Dungeon
+T:QUEST00.dat:175:43	현상포고-스파이더 8마리를 처치하고 용병대장 랜달프에게 보고해서, 보상을 받자.	Cáo thị treo thưởng - Diệt 8 con Spider rồi báo cho đội trưởng lính đánh thuê Randalph để nhận thưởng.
+T:QUEST00.dat:176:31	깊은악마의동굴	Hang Ác Quỷ Sâu
+T:QUEST00.dat:176:47	현상포고-엘리트구울 10마리를 처치하고 용병대장 랜달프에게 보고해서, 보상을 받자.	Cáo thị treo thưởng - Diệt 10 con Elite Ghoul rồi báo cho đội trưởng lính đánh thuê Randalph để nhận thưởng.
+T:QUEST00.dat:177:31	이스트포레스트	East Forest
+T:QUEST00.dat:177:47	현상포고-바질리스크를 처치하고 바질리스크의 뼈 10개를 용병대장 랜달프에게 가져다주고, 보상을 받자.	Cáo thị treo thưởng - Diệt Basilisk, đem 10 Xương Basilisk cho đội trưởng lính đánh thuê Randalph để nhận thưởng.
+T:QUEST00.dat:178:31	데저트던전	Desert Dungeon
+T:QUEST00.dat:178:43	현상포고-고스튤라 15마리를 처치하고 용병대장 랜달프에게 보고해서, 보상을 받자.	Cáo thị treo thưởng - Diệt 15 con Ghostula rồi báo cho đội trưởng lính đánh thuê Randalph để nhận thưởng.
+T:QUEST00.dat:179:31	웨스트포레스트	West Forest
+T:QUEST00.dat:179:47	현상포고-드레이크 15마리를 처치하고 용병대장 랜달프에게 보고해서, 보상을 받자.	Cáo thị treo thưởng - Diệt 15 con Drake rồi báo cho đội trưởng lính đánh thuê Randalph để nhận thưởng.
+T:QUEST00.dat:180:31	딥데저트던전	Deep Desert Dungeon
+T:QUEST00.dat:180:45	현상포고-네펜데스 20마리를 처치하고, 오르츠크의 리르케에게 알려주고, 보상을 받자.	Cáo thị treo thưởng - Diệt 20 con Nepenthes, báo cho Lirke ở Ortsk để nhận thưởng.
+T:QUEST00.dat:181:31	블루마운틴	Blue Mountain
+T:QUEST00.dat:181:43	현상포고-마운틴 트롤 20마리를 처치하고, 오르츠크의 리르케에게 알려주고, 보상을 받자.	Cáo thị treo thưởng - Diệt 20 con Mountain Troll, báo cho Lirke ở Ortsk để nhận thưởng.
+T:QUEST00.dat:182:31	딥블루마운틴	Deep Blue Mountain
+T:QUEST00.dat:182:45	현상포고-광신도 25명을 처치하고, 용병대장 랜달프에게 보고해서, 보상을 받자.	Cáo thị treo thưởng - Diệt 25 tên Cuồng tín rồi báo cho đội trưởng lính đánh thuê Randalph để nhận thưởng.

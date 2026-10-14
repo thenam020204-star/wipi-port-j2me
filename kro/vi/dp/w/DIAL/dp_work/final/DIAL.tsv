@@ -1,0 +1,405 @@
+id	gốc	dịch	ghi chú	giới hạn
+S:DIAL.dat:0:0	이 평민꼬마놈... 어서 나가지 못해?	Thằng nhóc thường dân này... còn không mau cút ra?	리오타르	
+S:DIAL.dat:1:0	내가 고소당할만큼, 큰 죄를 저지른거냐? 와놔...	Ta đã phạm tội gì lớn tới mức bị kiện chứ? Thật là...	리오타르	
+S:DIAL.dat:1:1	이 인간이 아직도 정신을 못차렸군. 쯧쯧...	Gã này vẫn chưa tỉnh ngộ nhỉ. Chậc chậc...	세바스찬	
+S:DIAL.dat:2:0	난 개인적으로 도끼를 좋아하는데, 뭔가 좀 있어 보인다고 해야 할까?	Riêng tôi thì thích rìu, phải nói là trông nó ngầu ngầu sao ấy?	찰스	
+S:DIAL.dat:3:0	옛날에 존슨 형이 있었는데, 정말 대단했지.	Hồi trước có anh Johnson, giỏi thật sự đấy.	찰스	
+S:DIAL.dat:3:1	외모는 거의 쌍둥이 같은데 속은 완전히 다른 사람이었어.	Ngoại hình gần như sinh đôi mà bên trong thì khác hẳn nhau.	찰스	
+S:DIAL.dat:4:0	이거 요새 분위기가 심상치 않은데....너도 몸조심하라고.	Dạo này không khí bất thường lắm.... cậu cũng giữ mình đấy.	찰스	
+S:DIAL.dat:5:0	할 말이 있어?<EMO 0 8 2><t>근무 중이니까 짧게 하자고!	Có chuyện gì à?<EMO 0 8 2><t>Đang trực nên nói ngắn thôi!	찰스	
+S:DIAL.dat:6:0	요즘 분위기가 심상치 않아.. 전쟁의 냄새가 난단 말이야..	Dạo này không khí bất thường lắm.. có mùi chiến tranh đấy..	윌리엄	
+S:DIAL.dat:7:0	아 ~ 하루종일 이곳에만 있으려니 지루하군.	Ôi~ cả ngày chỉ đứng ở đây chán quá.	윌리엄	
+S:DIAL.dat:8:0	헵번님에게 말을 걸어봐!	Thử nói chuyện với cô Hepburn đi!	윌리엄	
+S:DIAL.dat:8:1	놀랍게도 마법도구를 이용해서 전에 다녀왔었던 마을로 텔레포트 시켜 주신다니깐?!	Không ngờ cô ấy dùng pháp cụ dịch chuyển người ta về làng đã từng đến đấy?!	윌리엄	
+S:DIAL.dat:9:0	여긴 아무나 들락거리는 곳이 아니라고!!	Đây không phải chỗ ai muốn ra vào cũng được!!	제롬	
+S:DIAL.dat:10:0	이 곳은 영주님의 허가 없이는 절대 들어 갈 수 없는 곳이야.	Nơi này tuyệt đối không được vào nếu không có phép của lãnh chúa.	제롬	
+S:DIAL.dat:11:0	근무 중 이상무!	Đang trực, không có gì bất thường!	찰리	
+S:DIAL.dat:11:1	시민들은 걱정 말고 생업에 종사하면 된다고!	Người dân cứ yên tâm mà làm ăn!	찰리	
+S:DIAL.dat:12:0	넌 누구냐?	Ngươi là ai?	척	
+S:DIAL.dat:12:1	용병이에요.  초A급!	Lính đánh thuê ạ. Hạng siêu A!	세바스찬	
+S:DIAL.dat:12:2	그냥 여행자라고?	Chỉ là lữ khách thôi à?	척	
+S:DIAL.dat:12:3	그래. 가끔 오고 싶으면 오거라.	Được. Thỉnh thoảng muốn đến thì cứ đến.	척	
+S:DIAL.dat:12:4	이제 얼굴 도장 찍었으니 내가 봐줄게.	Giờ đã quen mặt rồi, ta sẽ châm chước cho.	척	
+S:DIAL.dat:13:0	하루종일 성당이나 지키니..몸이 근질근질 하다구.	Cả ngày chỉ canh giáo đường.. ngứa ngáy chân tay quá.	척	
+S:DIAL.dat:14:0	엘리엇 공작님이 그렇게 가시다니..! 우리가 기필고 복수하겠어!	Công tước Elliot lại ra đi như vậy..! Chúng ta nhất định sẽ báo thù!	론	
+S:DIAL.dat:15:0	근!무!철!저!	Trực! Gác! Nghiêm! Chỉnh!	론	
+S:DIAL.dat:15:1	이곳은 엘리엇 공작 가문의 루이시티성이다!	Đây là thành Lui City của gia tộc Công tước Elliot!	론	
+S:DIAL.dat:16:0	아니. 병사가 이렇게 부족한데! 왜 추가 채용을 안 하는 거야!!	Trời. Thiếu lính đến thế này! Sao không tuyển thêm chứ!!	제리	
+S:DIAL.dat:17:0	근!무!	Trực! Gác!	제리	
+S:DIAL.dat:17:1	엥? 뭐야.. 너였잖아?<EMO 1 4 2><t>헷갈리게 하지 말라고!	Hả? Gì vậy.. là cậu à?<EMO 1 4 2><t>Đừng làm người ta rối!	제리	
+S:DIAL.dat:17:2	그냥 지나가는 길인데 -_-;	Tôi chỉ đi ngang qua thôi mà -_-;	세바스찬	
+S:DIAL.dat:18:0	천공신전도 파괴 되어 버리고, 이젠 다 끝인가?	Thần điện Thiên Không cũng bị phá huỷ rồi, giờ hết thật rồi sao?	판넬리	
+S:DIAL.dat:18:1	더 이상 희망이 없는 건가?	Không còn hy vọng gì nữa sao?	판넬리	
+S:DIAL.dat:19:0	왕국 안팎으로 좋지 못한 소식이 너무 많아.	Trong ngoài vương quốc toàn tin chẳng lành.	판넬리	
+S:DIAL.dat:20:0	요샌 정말 가슴이 답답하군!!	Dạo này thật là nghẹt thở!!	장클로드	
+S:DIAL.dat:21:0	진짜 나쁜놈은 리오... 그 녀석이야.	Kẻ xấu thật sự là Lio... chính hắn đấy.	라파엘로	
+S:DIAL.dat:21:1	더러운 짓 하고 있다는 소문이 많더군.	Có nhiều tin đồn hắn đang làm chuyện bẩn thỉu.	라파엘로	
+S:DIAL.dat:22:0	세상이 다 그렇지 뭐! 죽지못해 사는거라고!	Đời là thế mà! Sống vì chưa chết được thôi!	라파엘로	
+S:DIAL.dat:23:0	오늘은 기분이 별로야.그러니까 말 걸지 마<EMO 2 5 2><t>.	Hôm nay tôi không vui. Nên đừng bắt chuyện<EMO 2 5 2><t>.	기욤	
+S:DIAL.dat:24:0	그 높고 아름답던 천공신전이 이렇게 되다니.	Thần điện Thiên Không cao đẹp ấy lại ra nông nỗi này.	르판느	
+S:DIAL.dat:24:1	정말 믿을 수 없어.	Thật không thể tin được.	르판느	
+S:DIAL.dat:25:0	요즘 부숴진 천공신전 보러 오는 사람들이 꽤 늘고 있어.	Dạo này người đến xem Thần điện Thiên Không đổ nát đông lên khá nhiều.	론다느	
+S:DIAL.dat:25:1	복구 하려면 몇 년이나 걸릴까?	Muốn phục dựng chắc mất mấy năm nhỉ?	론다느	
+S:DIAL.dat:26:0	뭐?	Gì?	헨리	
+S:DIAL.dat:26:1	네? 전 암말도 안했는데요?	Dạ? Tôi có nói gì đâu?	세바스찬	
+S:DIAL.dat:26:2	시끄러. 저리안가?	Ồn ào. Còn không đi đi?	헨리	
+S:DIAL.dat:26:3	헐.. 이상한 사람이네..	Hả.. người đâu mà lạ..	세바스찬	
+S:DIAL.dat:27:0	꼬마야. 혼나기 싫으면 어서 돌아가라.	Nhóc con. Không muốn ăn mắng thì về mau.	데리다	
+S:DIAL.dat:27:1	누가 꼬마에요!	Ai là nhóc con chứ!	세바스찬	
+S:DIAL.dat:28:0	정말 위에서 시키는 과도한 임무 맡는 것도 지겨워 죽겠어.	Chán muốn chết cái kiểu cấp trên giao nhiệm vụ quá sức thế này.	토마스	
+S:DIAL.dat:29:0	병사를 여기 혼자 놔두고 가버리는 게 말이 돼?	Bỏ một mình lính ở đây rồi đi mất, thế có được không?	토마스	
+S:DIAL.dat:29:1	말만 파견 근무지, 사실상은 유배라니까!	Nói là đi công tác, thực ra là đày ải thì có!	토마스	
+S:DIAL.dat:30:0	언제나 여러분의 곁에 있는 루크의 노점상입니다~	Quầy hàng rong của Luke luôn ở bên mọi người đây~	루크	
+S:DIAL.dat:31:0	세바스찬~ 사냥전에 포션 챙겨가는것 잊지말라고~	Sebastian~ trước khi đi săn đừng quên mang theo thuốc nhé~	루크	
+S:DIAL.dat:31:1	꼭 내껄 사가라는건 아니야~	Không phải bắt cậu mua đồ của tôi đâu~	루크	
+S:DIAL.dat:32:0	던전 노하우라..	Kinh nghiệm hầm ngục à..	루스	
+S:DIAL.dat:32:1	던전에 들어가면*을 누르면 미니맵을, *을 한번 더 누르면 전체맵에서, *을 한번 더 눌러 던전맵을 볼 수 있지.	Vào hầm ngục bấm * sẽ thấy bản đồ nhỏ, bấm * lần nữa là bản đồ toàn cảnh, bấm * thêm lần nữa là bản đồ hầm ngục.	루스	
+S:DIAL.dat:33:0	던전로드? 트래져 던전에서 일정기간내 가장 랭킹이 높은 사람을 로드로 삼고,	Lord hầm ngục? Nghe nói người có hạng cao nhất trong hầm ngục kho báu trong một thời gian nhất định sẽ thành Lord,	루스	
+S:DIAL.dat:33:1	그 사람과 그 밑의 9명을 선발해서 순위별로	rồi chọn người đó và 9 người dưới nữa, theo thứ hạng	루스	
+S:DIAL.dat:33:2	다른 유저들이 내는 입장료중 일정비율을 세금으로 준다고 하더군.	được nhận một phần tiền vào cửa của người chơi khác làm thuế.	루스	
+S:DIAL.dat:33:3	한번 도전해봐~	Thử thách một lần xem~	루스	
+S:DIAL.dat:34:0	평상시에 통화키는 빠른 저장키로 쓰이지만,	Bình thường phím Gọi dùng để lưu nhanh,	루스	
+S:DIAL.dat:34:1	던전 안에서는 던전 진행도와 포기여부를 결정할 수 도 있지.	nhưng trong hầm ngục thì có thể xem tiến độ hầm ngục và quyết định bỏ cuộc.	루스	
+S:DIAL.dat:35:0	트레져 던전 가기전에 물약 챙겨가~	Trước khi vào hầm ngục kho báu nhớ mang thuốc~	루스	
+S:DIAL.dat:35:1	트레져 던전안에서는 세이브도 안되는데, 후회하지 말고~	Trong hầm ngục kho báu không lưu được đâu, đừng có hối hận~	루스	
+S:DIAL.dat:36:0	가끔 네임드 몬스터가 나타나면 너무 무서워하지말고 상대해봐. 그만한 가치가 있을거다.	Thỉnh thoảng có quái vật có tên xuất hiện thì đừng sợ quá, cứ đánh thử. Đáng công lắm đấy.	르네	
+S:DIAL.dat:36:1	누..누가 무서워한다고 그래요!	Ai.. ai bảo con sợ chứ!	세바스찬	
+S:DIAL.dat:37:0	일반 공격중에 스킬을 같이 써봐.	Trong lúc đánh thường hãy thử dùng kỹ năng cùng lúc.	르네	
+S:DIAL.dat:37:1	캔슬스킬시스템의 무궁무진한 가능성을 볼 수 있을게다.	Con sẽ thấy khả năng vô tận của hệ thống Hủy chiêu.	르네	
+S:DIAL.dat:38:0	전직이나 각성할때가 되면, 집앞에 있는 훈련교관 제라드경에게 찾아가서 전직퀘스트를 수행하도록 해라.	Đến lúc Chuyển nghề hay Thức tỉnh thì hãy tìm huấn luyện viên Ngài Gerard trước nhà để làm nhiệm vụ Chuyển nghề.	르네	
+S:DIAL.dat:39:0	성장하는데 있어, 정석은 없다. 너만의 스킬트리와 스텟구성으로 성장하고 강해져라!	Trưởng thành không có lối đi chuẩn nào cả. Hãy lớn mạnh bằng cây kỹ năng và chỉ số của riêng con!	르네	
+S:DIAL.dat:40:0	어느 마을이던지 처음 가면 여관에 들러봐.<EMO 0 2 2><t>여관주인과 얘기를 해보면 그 마을에 대해 대강은 알 수 있을 거야.	Đến làng nào lần đầu thì cứ ghé quán trọ.<EMO 0 2 2><t>Nói chuyện với chủ quán là biết sơ qua về làng đó.	제이미	
+S:DIAL.dat:41:0	리오타르 그 돼지 영주 녀석이 어떻게 아직도 버티는 지는 모르겠어.	Cô không hiểu sao tên lãnh chúa heo Liotar vẫn còn trụ được.	제이미	
+S:DIAL.dat:42:0	텔레포터 헵번에게 가봐. 한번 가본 마을이라면 간편하게 다시 갈 수 있지!	Thử đến chỗ người dịch chuyển Hepburn đi. Làng nào đã đến một lần là có thể quay lại dễ dàng!	제이미	
+S:DIAL.dat:42:1	참 편리하고 좋은 세상이야!	Đúng là thời đại tiện lợi!	제이미	
+S:DIAL.dat:43:0	천공신전은 정말 아름다운 곳이야.<EMO 0 15 2><t>마치 하늘에 떠있는 건물같이 느껴지거든.	Thần điện Thiên Không thật là nơi tuyệt đẹp.<EMO 0 15 2><t>Cảm giác như một toà nhà lơ lửng trên trời vậy.	제이미	
+S:DIAL.dat:44:0	세바스찬 왔구나~자러 온 거야?	Sebastian đến rồi à~ đến ngủ đấy à?	제이미	
+S:DIAL.dat:44:1	아님 얘기하고 싶어서 온 거야?	Hay muốn tâm sự?	제이미	
+S:DIAL.dat:45:0	이봐~ 그 소문을 들었어? 이니스님이 말이야~	Này~ nghe tin đồn chưa? Về tiểu thư Innis ấy~	다나	
+S:DIAL.dat:45:1	예전엔 데이거하고 그렇고 그런 사이라는 소문이 오랫동안 있었어.	Ngày trước có tin đồn suốt một thời gian dài rằng cô ấy với Dager có gì đó với nhau.	다나	
+S:DIAL.dat:46:0	자 ~ 편하게 쉬어갈 수 있는, 손님들을 최선으로 생각하는 다나의 여관이에요.	Nào~ quán trọ của Dana đây, nơi nghỉ chân thoải mái, luôn đặt khách lên hàng đầu.	다나	
+S:DIAL.dat:47:0	원래 영주인 헉슬리경이 직접 통치 할 때는 경제가 이렇게 나쁘지 않았는데....	Hồi lãnh chúa gốc là Ngài Huxley trực tiếp cai quản thì kinh tế đâu có tệ thế này....	마릴리	
+S:DIAL.dat:48:0	요즘 관부 분위기가 별로야. 무슨 일이 있었는지 모르지만 기분이 안 좋아 보이더라고..	Dạo này không khí ở phủ quan không ổn. Chẳng biết có chuyện gì nhưng trông ai cũng không vui..	마릴리	
+S:DIAL.dat:49:0	휴식과 따뜻한 음식은 몸과 마음을 편히 쉬게 해주지~	Nghỉ ngơi và đồ ăn nóng sẽ giúp thân tâm thư thái~	마릴리	
+S:DIAL.dat:50:0	에잉 ~ 딸꾹 ~~	Ơ~ hức~~	존슨	
+S:DIAL.dat:51:0	우리 형은 나랑 다르게 아주 강하다구!.	Anh tôi khác tôi, mạnh lắm đấy!.	존슨	
+S:DIAL.dat:53:0	누구야 넌?.	Ngươi là ai?.	존슨	
+S:DIAL.dat:54:0	술 가져와! 술!..	Mang rượu ra đây! Rượu!..	존스	
+S:DIAL.dat:55:0	이곳에서 나보다 질좋은 물건을 파는곳은 별로 없다고~	Ở đây ít chỗ nào bán đồ tốt hơn chú đâu~	로니	
+S:DIAL.dat:56:0	한번 골라봐.	Chọn thử đi.	로니	
+S:DIAL.dat:56:1	필요한 게 있다면 싸게 넘길게~	Cần gì thì chú bán rẻ cho~	로니	
+S:DIAL.dat:57:0	와! 바로 그 유명한 세바스찬 이군.	Oa! Ra là Sebastian nổi tiếng đây.	훈트	
+S:DIAL.dat:57:1	앞으로 서비스라도 꼭 챙겨 줄게.	Từ giờ nhất định tôi sẽ có ưu đãi cho cậu.	훈트	
+S:DIAL.dat:58:0	자~ 싸요 싸~	Nào~ rẻ đây rẻ đây~	훈트	
+S:DIAL.dat:58:1	이 부근에서 가장 싼 상점입니다.	Cửa hàng rẻ nhất vùng này đây.	훈트	
+S:DIAL.dat:59:0	이니스님이 약간 신경쇠약이 있으신 것 같아.	Hình như tiểu thư Innis hơi bị suy nhược thần kinh.	빅터	
+S:DIAL.dat:59:1	무슨 말씀이세요?	Ý ông là sao ạ?	세바스찬	
+S:DIAL.dat:59:2	성밖에서 헛소리를 하시는 걸 조금 들었지.	Tôi có nghe cô ấy nói mê sảng ngoài thành.	빅터	
+S:DIAL.dat:59:3	안돼요. 내 아기만은 안돼요. 라고 하셨던가?	Không được. Không được động vào con tôi. Hình như cô ấy nói vậy?	빅터	
+S:DIAL.dat:59:4	헐…..	Hả.....	세바스찬	
+S:DIAL.dat:60:0	멀리 가지 말고 여기서 좋은 물건을 찾아봐~	Đừng đi đâu xa, tìm đồ tốt ở đây đi~	빅터	
+S:DIAL.dat:61:0	장비는 +20강화까지 강화가 가능하지.	Trang bị có thể Cường hóa tới +20.	필	
+S:DIAL.dat:61:1	고강화된 장비의 그 찬란한 빛이란 사람의 이성을 마비시키기 딱 좋지!	Ánh sáng rực rỡ của trang bị Cường hóa cao đúng là làm người ta mờ cả lý trí!	필	
+S:DIAL.dat:62:0	아직도 내 실력을 알아보는 녀석이 있다니, 담에 기회가 되면 A급으로 한번 강화 해주고 싶군!	Vẫn còn đứa nhận ra tay nghề của ta, lần sau có dịp ta muốn Cường hóa hạng A cho một lần!	닉	
+S:DIAL.dat:63:0	환생이라는 것에 대해 들어보았어?	Cậu từng nghe về Tái sinh chưa?	닉	
+S:DIAL.dat:63:1	믿기힘든 일이지만, 간간히 그런 사람들이 나타나는 모양이야.	Khó tin thật, nhưng hình như thỉnh thoảng lại có những người như thế xuất hiện.	닉	
+S:DIAL.dat:64:0	난 최고의 실력으로 유명한 대장장이 닉이라고!	Ta là Nick, thợ rèn nổi tiếng tay nghề giỏi nhất đấy!	닉	
+S:DIAL.dat:65:0	요근래 데이거님이 폭정을 시작했다는 소리를 들었어.	Gần đây nghe nói Ngài Dager bắt đầu cai trị bạo ngược.	미키	
+S:DIAL.dat:65:1	많은 사람이 죽고 억울한 일을 당하고 아주 심각하다던데?	Nghe bảo nhiều người chết, chịu oan ức, nghiêm trọng lắm?	미키	
+S:DIAL.dat:66:0	여긴 서부 최고의 대장장이 미키의 대장간입니다!	Đây là lò rèn của Mickey, thợ rèn giỏi nhất miền Tây!	미키	
+S:DIAL.dat:66:1	나한테 한번 장비를 맡겨 보는 게 어때?	Thử giao trang bị cho tôi xem sao?	미키	
+S:DIAL.dat:67:0	아주 먼~~ 옛날에 144명의 영웅들이 있었는데 이들은 한명 한명이 모두 대단한 역사를 만들었단다. 홀홀	Ngày xửa ngày xưa~~ có 144 vị anh hùng, ai cũng làm nên lịch sử phi thường. Hô hô	엠마	
+S:DIAL.dat:68:0	홀홀~ 내가 이렇게 할머니가 되다니,<EMO 0 6 2><t>인생이 너무 짧구나.	Hô hô~ bà đã thành bà già thế này rồi,<EMO 0 6 2><t>đời người ngắn quá.	엠마	
+S:DIAL.dat:68:1	세바스찬,너도 시간을 아껴야 해.	Sebastian, cháu cũng phải biết quý thời gian.	엠마	
+S:DIAL.dat:68:2	전 아직 걱정없어요;;	Cháu còn chưa phải lo đâu ạ;;	세바스찬	
+S:DIAL.dat:69:0	아~ 그 녀석들이 대체 왜 우리 공성장비를 훔쳐 갔는지 알 수가 없군.	Ôi~ không hiểu sao bọn chúng lại trộm khí tài công thành của ta.	포크너	
+S:DIAL.dat:69:1	그거 들고 가기도 힘들었을 텐데 말이야.	Mang đống đó đi chắc cũng vất vả lắm.	포크너	
+S:DIAL.dat:70:0	휴...생각 할수록 걱정이 태산이군..	Haizz...càng nghĩ càng lo..	포크너	
+S:DIAL.dat:71:0	신의 말씀을 경청하세요.	Hãy lắng nghe lời của Thần.	테레사	
+S:DIAL.dat:71:1	그대도 144명의 영웅들과 같이 신의 힘을 받은 영웅이 될 수 있을겁니다.	Anh cũng có thể trở thành anh hùng được Thần ban sức mạnh như 144 vị anh hùng.	테레사	
+S:DIAL.dat:72:0	당신은 악과 싸울 수 있는, 정말 큰 힘을 가지고 있군요.	Anh mang sức mạnh rất lớn, có thể chiến đấu với cái ác.	테레사	
+S:DIAL.dat:73:0	신의 축복이 늘 당신과 함께 하길 ...	Nguyện phước lành của Thần luôn ở bên anh ...	테레사	
+S:DIAL.dat:74:0	내가 오랫동안 마법의 힘을 쓰지 못했는데..	Lâu lắm rồi ta không dùng được sức mạnh ma pháp..	루니안	
+S:DIAL.dat:74:1	자네 같은 친구가 와서 이렇게 멋지게 해결해주다니.	Một người như cậu đến và giải quyết đẹp thế này.	루니안	
+S:DIAL.dat:75:0	정말 환생이라는게 존재한다니!	Tái sinh có thật sao!	루니안	
+S:DIAL.dat:75:1	정말 대단해!	Thật phi thường!	루니안	
+S:DIAL.dat:75:2	정말 대단하다고!!!	Thật là phi thường!!!	루니안	
+S:DIAL.dat:76:0	대마법사였던 내가 이런 곳에 누워있는 신세가 되다니..	Ta từng là đại pháp sư mà giờ lại nằm ở chỗ thế này..	루니안	
+S:DIAL.dat:77:0	세바스찬! 자꾸 어디로 돌아다니는거야!	Sebastian! Sao cứ đi lung tung thế hả!	알리시아	
+S:DIAL.dat:78:0	다음에 시간 되면 꼭 들러 주세요.	Lần sau có thời gian thì nhất định ghé chơi nhé.	이니스	
+S:DIAL.dat:79:0	사랑하는 사람들이 하나 둘씩 내 곁을 떠나가네요.	Những người tôi yêu thương lần lượt rời xa tôi.	이니스	
+S:DIAL.dat:79:1	전 정말 어떻게 해야 되죠?	Tôi thật sự phải làm sao đây?	이니스	
+S:DIAL.dat:80:0	절 너무 이상하게 생각하지 말아주세요.	Xin đừng nghĩ tôi kỳ lạ quá.	이니스	
+S:DIAL.dat:80:1	너무 힘들어서 그랬어요.	Tại tôi mệt mỏi quá thôi.	이니스	
+S:DIAL.dat:80:2	이해하시죠?	Cậu hiểu cho chứ?	이니스	
+S:DIAL.dat:81:0	왜 나한테는 이런 일만 일어 나는걸까요...	Sao toàn chuyện như vậy xảy ra với tôi...	이니스	
+S:DIAL.dat:82:0	네가 바로 나디아와 샤이먼 어르신을 구출 했다는 그 인간이구나.	Ngươi chính là con người đã cứu Nadia và trưởng lão Shaimon đấy à.	브리킷	
+S:DIAL.dat:82:1	너 같은 인간이 있다니…..	Không ngờ có con người như ngươi.....	브리킷	
+S:DIAL.dat:83:0	정말 고마워.	Cảm ơn ngươi nhiều.	브리킷	
+S:DIAL.dat:83:1	네가 흑마법사까지 처리해줬다는 말을 들었어.	Nghe nói ngươi còn xử lý luôn tên hắc pháp sư.	브리킷	
+S:DIAL.dat:83:2	역시 넌 다르구나!!	Quả nhiên ngươi khác hẳn!!	브리킷	
+S:DIAL.dat:84:0	너 같은 인간도 있군.	Hoá ra cũng có con người như ngươi.	브리킷	
+S:DIAL.dat:85:0	너희 인간들 중에서도 너같이 강하고 정의로운 용사가 있구나!	Trong loài người các ngươi cũng có dũng sĩ mạnh mẽ và chính nghĩa như ngươi!	리르케	
+S:DIAL.dat:86:0	넌 진정한 용사야!	Ngươi là dũng sĩ thật sự!	리르케	
+S:DIAL.dat:86:1	우리 오크의 용사 못지 않은 진정한 용사!!!	Dũng sĩ thật sự không thua gì dũng sĩ Orc của ta!!!	리르케	
+S:DIAL.dat:87:0	이걸 기억해.	Nhớ lấy điều này.	리르케	
+S:DIAL.dat:87:1	진정한 전사는 우리 오크족에만 존재한다는 것!	Chiến binh thật sự chỉ có trong tộc Orc!	리르케	
+S:DIAL.dat:88:0	세바스찬님~	Anh Sebastian~	나디아	
+S:DIAL.dat:88:1	제가 보답 할 때까지 머물러주시면 정말 좋겠어요.	Anh ở lại cho đến khi tôi báo đáp được thì tốt quá.	나디아	
+S:DIAL.dat:88:2	전 별로 그럴 생각이….	Tôi không định thế lắm....	세바스찬	
+S:DIAL.dat:89:0	앗! 세바스찬니임~~	Á! Anh Sebastiaaan~~	나디아	
+S:DIAL.dat:90:0	나디아 봤지? 그렇게 예쁜 딸이 어떻게 족장님 딸이겠어.	Thấy Nadia chưa? Đẹp thế kia sao lại là con gái tộc trưởng được chứ.	이프리카	
+S:DIAL.dat:90:1	내 생각에는 분명히 뭔가 있어.	Theo tôi thì chắc chắn có gì đó.	이프리카	
+S:DIAL.dat:91:0	우리 나디아 아가씨 어때?그만하면 예쁘고 착하고~ 너랑 딱 어울릴 거 같은데.	Tiểu thư Nadia nhà tôi thế nào? Xinh xắn, hiền lành~ tôi thấy hợp với cậu lắm đấy.	이프리카	
+S:DIAL.dat:91:1	헐….	Hả....	세바스찬	
+S:DIAL.dat:91:2	왜?	Sao?	이프리카	
+S:DIAL.dat:91:3	부끄러워?	Ngại à?	이프리카	
+S:DIAL.dat:92:0	맘 놓고 쉬어 가요.	Cứ yên tâm nghỉ ngơi nhé.	이프리카	
+S:DIAL.dat:92:1	이 곳 침대는 장수 돌 침대랍니다.	Giường ở đây là giường đá trường thọ đấy.	이프리카	
+S:DIAL.dat:93:0	나 인간에게 물건 파는 건 태어나서 처음이라고!!	Ta sinh ra lần đầu bán đồ cho con người đấy!!	융크	
+S:DIAL.dat:94:0	자~ 원하는 게 있으면 둘러 보고 가.	Nào~ muốn gì thì xem rồi hẵng đi.	융크	
+S:DIAL.dat:95:0	사실 우리마을의 무기는 드워프보다 한수위라고 평가받고 있지!!	Thật ra vũ khí làng ta được đánh giá trên cơ cả người Dwarf đấy!!	로카르도	
+S:DIAL.dat:96:0	특별한 장비를 원하나?	Muốn trang bị đặc biệt à?	로카르도	
+S:DIAL.dat:97:0	아아..뭉쉐르...	Ôi.. Mungser...	융도르코	
+S:DIAL.dat:98:0	예전 인간들의 내전이 있기전에는 인간과 오크족사이도 좋은편이었지.	Trước cuộc nội chiến của loài người, quan hệ giữa con người và tộc Orc cũng khá tốt.	샤이먼	
+S:DIAL.dat:99:0	족장이라는 직책이 요즘 더 무겁게 느껴지는군.	Dạo này chức tộc trưởng càng thấy nặng nề hơn.	샤이먼	
+S:DIAL.dat:100:0	말 시키지마!	Đừng bắt chuyện!	료니엘	
+S:DIAL.dat:100:1	이거 언제 끝날지 모르는 작업이란 말이야!	Việc này chẳng biết bao giờ mới xong đâu!	료니엘	
+S:DIAL.dat:101:0	천공신전이 파괴된 이유에 대해 조사중인데.. 쉽지않군..	Ta đang điều tra lý do Thần điện Thiên Không bị phá huỷ.. không dễ chút nào..	라구르도	
+S:DIAL.dat:102:0	오늘도 힘차게 항해를 시작해 보자고!	Hôm nay lại hăng hái ra khơi thôi!	마르폴로	
+S:DIAL.dat:103:0	뱃사람이야 말로 진짜 남자야.	Dân đi biển mới là đàn ông thật sự.	마르폴로	
+S:DIAL.dat:103:1	어때 생각 있나?	Thế nào, có hứng không?	마르폴로	
+S:DIAL.dat:104:0	이 갈릴레이의 배는 어디라도 가고 싶은 곳으로 모셔다 드리죠.	Thuyền của Galilei này sẽ đưa quý khách đến bất cứ nơi nào muốn đến.	갈릴레이	
+S:DIAL.dat:105:0	세상은 둥글다고 생각해요.	Tôi nghĩ thế giới này hình tròn.	갈릴레이	
+S:DIAL.dat:105:1	그러니 계속 항해를 해 나가다 보면 다시 원점으로 돌아 올 수 있겠죠?	Nên cứ đi biển mãi thì sẽ quay về điểm xuất phát được nhỉ?	갈릴레이	
+S:DIAL.dat:106:0	유니크급, 레전드급의 세트 아이템을 다 모으면, 놀라운 셋트 효과가 나타나지.	Gom đủ bộ vật phẩm hạng Unique, Legend thì sẽ có hiệu ứng bộ đáng kinh ngạc.	랜달프	
+S:DIAL.dat:107:0	아이템의 등급은 총 5등급으로 분류되는데..	Vật phẩm được chia làm 5 hạng tất cả..	랜달프	
+S:DIAL.dat:107:1	[노멀](흰색), [매직](파랑색), [레어](노란색), [유니크](초록색), [레전드](보라색) 의 다섯 가지 종류가 있지.	Có năm loại: [Normal](trắng), [Magic](xanh dương), [Rare](vàng), [Unique](xanh lá), [Legend](tím).	랜달프	
+S:DIAL.dat:108:0	용병은 길을 잘 찾아다녀야 하지.	Lính đánh thuê thì phải biết tìm đường.	랜달프	
+S:DIAL.dat:108:1	*을 누르면 미니맵을, *을 한번 더 누르면 월드맵을 볼 수 있지.	Bấm * sẽ thấy bản đồ nhỏ, bấm * lần nữa là bản đồ thế giới.	랜달프	
+S:DIAL.dat:109:0	난 마법수정구를 이용해서 이곳 저곳의 마을로 텔레포터를 시켜준단다.	Chị dùng cầu pha lê ma thuật để dịch chuyển mọi người đến các làng.	헵번	
+S:DIAL.dat:109:1	다만 ~한번 이상 다녀온 마을이어야 한다구!	Có điều~ phải là làng đã từng đến ít nhất một lần đấy!	헵번	
+S:DIAL.dat:110:0	여기에 있음 아무도 못찾겠지?	Trốn ở đây thì chẳng ai tìm ra đâu nhỉ?	토미	
+S:DIAL.dat:111:0	너 용병이야?	Ngươi là lính đánh thuê à?	세르게이	
+S:DIAL.dat:111:1	아.. 아니야. 그냥 가봐.	À.. không có gì. Đi đi.	세르게이	
+S:DIAL.dat:111:2	아... 이 상태로 가면 내 자리도 위험 할 텐데..	Haizz... cứ thế này thì ghế của ta cũng nguy mất..	세르게이	
+S:DIAL.dat:112:0	너 참 내 맘에 드는군.	Ngươi hợp ý ta lắm đấy.	세르게이	
+S:DIAL.dat:112:1	앞으로도 자주 들러 혹시 일 있으면 맡길 테니까.	Sau này cứ ghé thường xuyên, có việc gì ta sẽ giao cho.	세르게이	
+S:DIAL.dat:113:0	어느 도시에 있다 왔지?	Ngươi từ thành phố nào đến?	세르게이	
+S:DIAL.dat:113:1	아~ 레이블타운 그곳은 어떤가.	À~ Label Town, ở đó thế nào.	세르게이	
+S:DIAL.dat:113:2	뭐 다 마찬가지겠지만...	Chắc chỗ nào cũng như nhau thôi...	세르게이	
+S:DIAL.dat:114:0	요즘 치안 상황이 정말 말이 아니군.	Dạo này trị an đúng là tệ hết chỗ nói.	세르게이	
+S:DIAL.dat:115:0	요즘 신부들이 열악한 오크 부족으로 시집을 오려고 하지를 않아.	Dạo này cô dâu chẳng chịu gả về bộ tộc Orc nghèo khó.	미오르넴	
+S:DIAL.dat:116:0	우리 족장도 타 종족과 아기를 만들어 왔지.	Tộc trưởng chúng ta cũng có con với tộc khác đấy.	미오르넴	
+S:DIAL.dat:116:1	여자는 엘프라는 소문도 있어서 쉬쉬하지만 말이야.	Có tin đồn người phụ nữ ấy là Elf nên mọi người giấu nhẹm đi.	미오르넴	
+S:DIAL.dat:117:0	행복을 만들어 주는 오크 미오르넴이라고 불러줘.	Cứ gọi ta là Miornem, Orc mang hạnh phúc đến cho mọi người.	미오르넴	
+S:DIAL.dat:118:0	그래.. 이런 이야기가 있지..	Phải.. có câu chuyện thế này..	바스틴루	
+S:DIAL.dat:118:1	144명의 영웅중에 와인, 모베스, 후오스, 라푼델 네사람은 어린시절부터 절친한 친구였는데...	Trong 144 anh hùng, bốn người Wine, Mobes, Huos, Rapundel là bạn thân từ thuở nhỏ...	바스틴루	
+S:DIAL.dat:118:2	어느순간 사이가 틀어지고는 비극이 일어났지..	Rồi một lúc nào đó họ bất hoà và bi kịch đã xảy ra..	바스틴루	
+S:DIAL.dat:119:0	내생각에 고대영웅 144명 중에도 으뜸은 대마도사 제프로야.	Theo ta, đứng đầu 144 anh hùng cổ đại là đại pháp sư Jeffro.	바스틴루	
+S:DIAL.dat:119:1	라푼델님보다는 저평가 받지만 가장 인간적인 분이었지.	Ông ấy bị đánh giá thấp hơn ngài Rapundel nhưng là người giàu tình người nhất.	바스틴루	
+S:DIAL.dat:119:2	그분의 아이템을 모으는것이 내 소원이라네.	Gom đồ của ông ấy là ước nguyện của ta.	바스틴루	
+S:DIAL.dat:120:0	어디서 시작되고, 어디서 끝나는지...	Bắt đầu từ đâu, kết thúc ở đâu...	바스틴루	
+S:DIAL.dat:121:0	로피스항구로 출항하는 배가 곧 떠납니다 ~ 어서 승선하세요 ~	Thuyền đi cảng Lopis sắp khởi hành rồi~ mau lên thuyền nào~	아르비아	
+S:DIAL.dat:122:0	반갑습니다. 어서오세요~	Xin chào. Mời vào~	크루센	
+S:DIAL.dat:122:1	마스항구로 안전하게 모셔다 드리겠습니다 ~	Chúng tôi sẽ đưa quý khách đến cảng Mas an toàn~	크루센	
+S:DIAL.dat:123:0	난 위탁판매장을 맡고 있는 트리시라고 해~	Tôi là Trish, phụ trách chợ ký gửi~	트리시	
+S:DIAL.dat:123:1	위탁판매장이란 네트워크로 다른 유저들하고 거래를 할 수 있는 오픈마켓이야.	Chợ ký gửi là chợ mở để giao dịch với người chơi khác qua mạng.	트리시	
+S:DIAL.dat:124:0	어머나! 오빠 이름이 머에요?	Ôi! Anh tên là gì thế?	베티	
+S:DIAL.dat:124:1	오빠라고 불러두 되죠? 전 베티에요.	Em gọi là anh nhé? Em là Betty.	베티	
+S:DIAL.dat:125:0	우리 엠마 할머닌 레이블 타운에서 손재주가 제일 좋아.	Bà Emma của em khéo tay nhất Label Town đấy.	베티	
+S:DIAL.dat:125:1	내 머리띠랑 옷도 다 할머니가 만들어 주셨다니까요.	Băng đô với quần áo của em đều do bà làm cho đấy.	베티	
+S:DIAL.dat:125:2	우리 엄마두 이렇게 잘 하면 좋을텐데...	Mẹ em mà cũng khéo thế này thì hay biết mấy...	베티	
+S:DIAL.dat:126:0	그거 알아요? 게임하다가 통화키를 누르면 실시간으로 저장 되는거?	Anh biết không? Đang chơi mà bấm phím Gọi là lưu ngay tức thì đấy?	베티	
+S:DIAL.dat:126:1	혹시 모르니까 틈틈히 눌러주는 센스!!알지?	Phòng hờ thì thỉnh thoảng bấm một cái!! Biết chưa?	베티	
+S:DIAL.dat:127:0	이거? 이건 우리 세바스챤 오빠꺼야.	Cái này á? Cái này là của anh Sebastian đấy.	베티	
+S:DIAL.dat:127:1	난 이 다음에 자라서 세바스챤 오빠한테 시집갈꺼야 헤헤.	Sau này lớn lên em sẽ lấy anh Sebastian hì hì.	베티	
+S:DIAL.dat:128:0	으으...	Ư ư...	빅조	
+S:DIAL.dat:129:0	우리 딸은 엄마인 나보다 할머니를 더 좋아하나봐.	Con gái tôi hình như thích bà nó hơn mẹ.	엘레나	
+S:DIAL.dat:129:1	도무지 엄마 위신이 서지를 않네.	Chẳng giữ được chút uy nào của người mẹ.	엘레나	
+S:DIAL.dat:129:2	열심히 연습해서 우리 베티한테 세상에서 제일 이쁜 옷 만들어 줘야지.	Phải chăm chỉ tập để may cho Betty bộ đồ đẹp nhất trên đời.	엘레나	
+S:DIAL.dat:130:0	리오타르 영주? 개 어릴 때 나랑 말타면서 놀았는데,	Lãnh chúa Liotar? Hồi nhỏ thằng đó cưỡi ngựa chơi với tôi suốt,	엘레나	
+S:DIAL.dat:130:1	영주되더니 목에 얼마나 힘을 주는지.. 돈만 밝히는 주제에!	Lên làm lãnh chúa rồi thì vênh váo ra sao.. đồ chỉ biết tiền!	엘레나	
+S:DIAL.dat:131:0	정말 뜨개질은 내 취미가 아니야. 얼른 끝내놓고 낚시하러 가야지!	Đan len đúng là không phải sở thích của tôi. Làm cho xong rồi đi câu cá thôi!	엘레나	
+S:DIAL.dat:132:0	저 아인 내 딸 브로니라고 하지.	Đứa bé kia là con gái ta, tên Brony.	다그리파	
+S:DIAL.dat:132:1	애 엄마가 저 세상으로 간 후 저 아이를 바라보는게 내 낙이라네.	Từ khi mẹ nó qua đời, niềm vui của ta là được nhìn con bé.	다그리파	
+S:DIAL.dat:133:0	솔직히 난 테레사 수녀님은 존경하지만, 그 분의 신앙은 잘 모르겠네.	Thật lòng ta kính trọng sơ Teresa, nhưng đức tin của sơ thì ta không rõ lắm.	다그리파	
+S:DIAL.dat:133:1	나에게 그런 질문은 하지 말아주게.	Đừng hỏi ta câu đó.	다그리파	
+S:DIAL.dat:134:0	이 지역에 뭔가 심상치 않은 기운이 감돌고 있어.	Ở vùng này đang có luồng khí gì đó bất thường.	다그리파	
+S:DIAL.dat:134:1	자네도 느껴지는가?	Cậu có cảm thấy không?	다그리파	
+S:DIAL.dat:135:0	흑흑 우리 강아지 욜리 못 봤어요?	Hu hu, có thấy cún Yoli nhà em không?	브로니	
+S:DIAL.dat:135:1	방금 전까지 나랑 같이 있었는데 찾을 수가 없어요 흑흑...	Vừa nãy còn ở với em mà giờ không tìm thấy đâu hu hu...	브로니	
+S:DIAL.dat:136:0	난 우리 마을이 참 좋아요.나무도 많고 꽃도 여기저기 활짝 피어있고...	Em thích làng mình lắm. Nhiều cây, hoa nở khắp nơi...	브리니	
+S:DIAL.dat:136:1	움~~ 아! 나비들도 엄청 많아요.	Ừm~~ À! Bướm cũng nhiều lắm.	브리니	
+S:DIAL.dat:137:0	전 엄마가 없어요..흑흑 엄마 엄마...	Em không có mẹ.. hu hu mẹ ơi mẹ...	브리니	
+S:DIAL.dat:138:0	이 마을에 사는 여자아이는 모두 수녀가 되어야 한다는데 사실이에요?	Nghe nói con gái sống ở làng này đều phải làm nữ tu, có thật không?	브리니	
+S:DIAL.dat:138:1	얼마전 떠돌아 다니던 머리에 꽃 단 언니가 얘기해주던데.<EMO 8 6 2><t>.	Mới đây có chị lang thang cài hoa trên đầu kể với em đấy<EMO 8 6 2><t>.	브리니	
+S:DIAL.dat:139:0	천한것! 어딜 함부로 들어오는게냐!	Đồ hèn mọn! Dám tự tiện vào đây à!	로잔느	
+S:DIAL.dat:139:1	난 로잔느 엘레강스 리드백작부인이다.	Ta là Bá tước phu nhân Rosanne Elegance Reed.	로잔느	
+S:DIAL.dat:140:0	내 머리의 장식을 바꿀 때가 됐는데...요즘엔 최고의 보석은 뭐지?	Đến lúc thay trang sức trên đầu rồi... dạo này đá quý nào là tốt nhất?	로잔느	
+S:DIAL.dat:141:0	이 왕국 최고의 미녀가 누구냐고?	Mỹ nhân đẹp nhất vương quốc này là ai à?	로잔느	
+S:DIAL.dat:141:1	두 말 할 것도 없이 나 로잔느 엘레강스 리드 백작부인이지. 오호호 ~	Khỏi phải nói, chính là ta, Bá tước phu nhân Rosanne Elegance Reed. Ô hô hô~	로잔느	
+S:DIAL.dat:142:0	호위무사 하나 구해 달랬더니, 저 녀석은 아는게 없어!!	Bảo tìm cho một hộ vệ, thế mà tên kia chẳng biết gì cả!!	로잔느	
+S:DIAL.dat:142:1	얼굴도 못생긴게, 어휴 속터져.	Mặt mũi thì xấu xí, hừ tức chết đi được.	로잔느	
+S:DIAL.dat:143:0	헉헉! 바쁘다 바빠!	Hộc hộc! Bận quá bận quá!	폴조	
+S:DIAL.dat:143:1	매일같이 일해도 일이 끝나지가 않아.	Ngày nào cũng làm mà việc chẳng bao giờ hết.	폴조	
+S:DIAL.dat:144:0	난 이스턴시티 최고의 건축업자 폴조라고 해!	Ta là Polzo, thợ xây giỏi nhất Eastern City!	폴조	
+S:DIAL.dat:144:1	얼른 장인이 되서 천공신전에 입성하는게 내 소원이지.	Ước nguyện của ta là mau thành nghệ nhân để được vào Thần điện Thiên Không.	폴조	
+S:DIAL.dat:145:0	내가 만든 가구가 없는 집이 없지.	Nhà nào cũng có đồ gỗ ta làm.	폴조	
+S:DIAL.dat:145:1	너도 하나 만들어 줄까? 잘보여 봐.	Muốn ta làm cho một cái không? Lấy lòng ta đi.	폴조	
+S:DIAL.dat:146:0	내 이름이 유명해 진건지, 얼마전 루이시티에 초빙되어 갔지뭐야?	Chắc tên ta nổi tiếng rồi, mới đây ta được mời đến Lui City đấy?	폴조	
+S:DIAL.dat:146:1	그곳에서 난 너무 아름다운 천사를 봤어.다시 한번 볼 수만 있으면...휴~	Ở đó ta đã thấy một thiên thần đẹp tuyệt trần. Giá được gặp lại một lần...haizz~	폴조	
+S:DIAL.dat:147:0	목표가 바꼈다. 난 루이시티의 전속 건축업자가 될꺼야!	Mục tiêu đổi rồi. Ta sẽ thành thợ xây riêng của Lui City!	폴조	
+S:DIAL.dat:147:1	그래서 꼭 그천사를 다시 만날꺼야.	Để nhất định được gặp lại thiên thần ấy.	폴조	
+S:DIAL.dat:148:0	알로하~~울라 울라 울라셩~~ 난 릴리라고 해~	Aloha~~ Ula ula ula~~ Tớ là Lily~	플로릴리	
+S:DIAL.dat:148:1	근데 왜 사람들이 광뇬이라고 하는거지? ~~울라울라~	Mà sao mọi người lại gọi tớ là cô nàng điên nhỉ? ~~Ula ula~	플로릴리	
+S:DIAL.dat:149:0	안녕~ 이꽃 너무 이쁘지 않니?	Chào~ bông hoa này đẹp quá phải không?	플로릴리	
+S:DIAL.dat:149:1	하하하하~나비야 이리와~~	Ha ha ha~ bướm ơi lại đây~~	플로릴리	
+S:DIAL.dat:150:0	아하하하~~아하하핫!!  나비야 이리와~~	A ha ha ha~~ A ha ha!! Bướm ơi lại đây~~	플로릴리	
+S:DIAL.dat:151:0	난 드비쉬 남작이라고 하네. 용병인가 보군. 행운을 비네..	Ta là Nam tước Devish. Cậu là lính đánh thuê à. Chúc may mắn..	드비쉬	
+S:DIAL.dat:152:0	코드리 공작님은 내가 본 최고의 귀족이야.	Công tước Codry là quý tộc tuyệt vời nhất ta từng gặp.	드비쉬	
+S:DIAL.dat:152:1	그 청렴결백함이 우리 젊은 기사를 이끌어 주시지..	Sự thanh liêm trong sạch của ngài dẫn dắt các hiệp sĩ trẻ chúng ta..	드비쉬	
+S:DIAL.dat:153:0	이니스님... 이 나라 모든 이들에게 여신과 같은 존재이지.	Tiểu thư Innis... là nữ thần đối với mọi người trên đất nước này.	드비쉬	
+S:DIAL.dat:153:1	요즘 이니시님이 말이 없으셔...어디 편찮으신건 아닌지.	Dạo này tiểu thư Innis ít nói...không biết có ốm đau gì không.	드비쉬	
+S:DIAL.dat:154:0	루이시티를 둘러싼 아름다운 강 때문에 "물위의 도시"라고도 불리우지.	Nhờ dòng sông tuyệt đẹp bao quanh, Lui City còn được gọi là "Thành phố trên mặt nước".	드비쉬	
+S:DIAL.dat:154:1	이 강이 우리에겐 생명줄과 같다네.	Dòng sông này như mạch sống của chúng ta.	드비쉬	
+S:DIAL.dat:155:0	이 아름다운 루이시티를 보게.	Hãy nhìn Lui City tươi đẹp này.	코드리	
+S:DIAL.dat:155:1	우리 선조들이 이 제국을 완공하기 위해 흘린 피와 땀을 잊지 말아야 할걸세...	Đừng quên máu và mồ hôi tổ tiên ta đã đổ để dựng nên đế quốc này...	코드리	
+S:DIAL.dat:156:0	우리 루이시티의 정신적 지주는 이니스님일세.	Chỗ dựa tinh thần của Lui City chúng ta là tiểu thư Innis.	코드리	
+S:DIAL.dat:156:1	누구든 그분의 아름다운 자태를 한번 보면 절로 무릎을 꿇게 된다네.	Ai đã một lần thấy dáng vẻ xinh đẹp của tiểu thư đều tự khắc quỳ gối.	코드리	
+S:DIAL.dat:157:0	데이거를 배신한 이가 그의 수하라지? 훔...	Nghe nói kẻ phản bội Dager là thuộc hạ của hắn? Hừm...	코드리	
+S:DIAL.dat:158:0	이래봐도 왕국 곳곳에 내가 키운 제자들이 쫙~ 깔려있지.	Trông thế thôi chứ học trò ta dạy có mặt khắp vương quốc đấy~	제라드	
+S:DIAL.dat:159:0	레벨 20때는 전직을, 레벨 50때는 각성을 할수 있게 도와줄테니, 때가 되면 찾아오라고.	Ta sẽ giúp cậu Chuyển nghề ở cấp 20, Thức tỉnh ở cấp 50, đến lúc thì tìm ta nhé.	제라드	
+S:DIAL.dat:160:0	반갑군.	Rất vui được gặp.	카덴	
+S:DIAL.dat:160:1	난 백작부인의 호위무사 카덴이다.	Ta là Kaden, hộ vệ của Bá tước phu nhân.	카덴	
+S:DIAL.dat:161:0	주위에 위험한 인물도 없어보이는데	Quanh đây cũng chẳng có kẻ nguy hiểm nào	카덴	
+S:DIAL.dat:161:1	왜 호위무사를 두는건지..	sao lại cần hộ vệ chứ..	카덴	
+S:DIAL.dat:161:2	귀족부인 옆에만 있으니 솔직히 좀 따분하군.	Cứ ở bên quý phu nhân, thật lòng mà nói hơi chán.	카덴	
+S:DIAL.dat:162:0	모험을 찾아 떠나는 용병인가?	Cậu là lính đánh thuê đi tìm phiêu lưu à?	카덴	
+S:DIAL.dat:162:1	남자란 말이야...	Đàn ông ấy mà...	카덴	
+S:DIAL.dat:162:2	부와 명예보다 진정 자신의 가치를 알아주는 이를 만나는게 최고의 기쁨이지.	Niềm vui lớn nhất không phải giàu sang danh vọng, mà là gặp được người hiểu giá trị thật của mình.	카덴	
+S:DIAL.dat:163:0	백작부인에겐 몸종이 더 필요한듯 해.	Bá tước phu nhân hình như cần thêm người hầu.	카덴	
+S:DIAL.dat:163:1	하긴 와서 한달을 견디는 시녀가 없었다더군.	Mà nghe nói chưa có thị nữ nào chịu nổi quá một tháng.	카덴	
+S:DIAL.dat:164:0	던전에 들어가면 필드보다 강한 몬스터들이 나타나지~! 또한 입장할때마다 보스 위치도 변한다고~!	Vào hầm ngục sẽ gặp quái vật mạnh hơn ngoài đồng~! Mà mỗi lần vào vị trí boss cũng đổi đấy~!	아베르	
+S:DIAL.dat:164:1	하지만 그만큼 보상이 크니깐 도전해보라고~!	Nhưng phần thưởng cũng lớn tương xứng, thử thách xem~!	아베르	
+S:DIAL.dat:165:0	자네... 마나의 근본에 대해 생각해 본적이 있는가...?	Cậu... đã bao giờ nghĩ về cội nguồn của mana chưa...?	아베르	
+S:DIAL.dat:165:1	생각해 본적이 없다고?	Chưa nghĩ bao giờ à?	아베르	
+S:DIAL.dat:165:2	허어 ~허어 ~	Hừm~ hừm~	아베르	
+S:DIAL.dat:166:0	잡담은 사절이다!	Không tán chuyện!	케산	
+S:DIAL.dat:167:0	난 나디아님의 호위무사 케산이라고 한다.	Ta là Kesan, hộ vệ của tiểu thư Nadia.	케산	
+S:DIAL.dat:167:1	얼마전의 납치사건으로 인해 족장님의 근심이 말이 아니지.	Vì vụ bắt cóc mới đây mà tộc trưởng lo lắng vô cùng.	케산	
+S:DIAL.dat:168:0	우리 족장님의 명성은 너도 들어서 알거야.	Danh tiếng của tộc trưởng chúng ta chắc ngươi cũng từng nghe.	케산	
+S:DIAL.dat:168:1	그렇게 용맹스럽던 분도 세월 앞에선 어찌할 수 없나 봐.	Người dũng mãnh như vậy mà trước năm tháng cũng đành bất lực.	케산	
+S:DIAL.dat:169:0	근무 중 이상무!!	Đang trực, không có gì bất thường!!	케산	
+S:DIAL.dat:170:0	어서 오세요~	Mời vào~	루티나	
+S:DIAL.dat:170:1	오르츠크 여관에 오신걸 환영해요.	Chào mừng đến quán trọ Ortsk.	루티나	
+S:DIAL.dat:170:2	여자 두명이서 이 큰 여관을 운영하려니 힘이 많이 부치네요.	Hai người phụ nữ trông coi quán trọ lớn thế này thật quá sức.	루티나	
+S:DIAL.dat:171:0	뭐 필요한거 있으세요?	Quý khách cần gì không?	루티나	
+S:DIAL.dat:171:1	침대시트도 보송보송하게 다 세탁해 뒀으니 편히 쉬다 가세요.	Ga giường đã giặt sạch thơm tho cả rồi, cứ nghỉ ngơi thoải mái nhé.	루티나	
+S:DIAL.dat:172:0	근방에 여관이 여기 뿐인데도 요즘 왜이리 손님이 없는 건지 모르겠네.	Quanh đây chỉ có mỗi quán trọ này mà dạo này chẳng hiểu sao vắng khách thế.	루티나	
+S:DIAL.dat:173:0	앗! 날 어떻게 찾은거야?	Á! Sao tìm ra tớ hay vậy?	쿠피	
+S:DIAL.dat:173:1	여기 숨으면 안 보일 줄 알았더니 헤헤..들켰네.	Tưởng trốn ở đây không ai thấy, hì hì.. bị lộ rồi.	쿠피	
+S:DIAL.dat:174:0	우리 형 못 봤어?	Có thấy anh em đâu không?	쿠피	
+S:DIAL.dat:174:1	엄마 몰래 나가서 놀자더니 아직도 안오네.	Rủ em trốn mẹ ra ngoài chơi mà giờ vẫn chưa về.	쿠피	
+S:DIAL.dat:175:0	난 나중에 우리 로카르도님처럼 멋진 대장장이가 될꺼야<EMO 5 14 2><t>.	Sau này em sẽ thành thợ rèn giỏi như ngài Rocardo<EMO 5 14 2><t>.	쿠피	
+S:DIAL.dat:176:0	나도 나가서 놀고 싶은데 엄만 맨날 날 못 부려 먹어서 안달이야.	Em cũng muốn ra ngoài chơi mà mẹ ngày nào cũng chỉ lo sai vặt em.	플래카	
+S:DIAL.dat:176:1	이 나이에 여관에서 심부름이나 하는게 정상이야?	Tuổi này mà chạy việc vặt ở quán trọ thì có bình thường không?	플래카	
+S:DIAL.dat:177:0	형! 혹시 우리엄마가 나 찾으면 못 봤다고 해 줘!  알았지?	Anh! Nếu mẹ em có tìm em thì bảo là không thấy nhé! Nhớ chưa?	플래카	
+S:DIAL.dat:177:1	쿠피랑 놀러나 가야지.	Phải đi chơi với Kupi thôi.	플래카	
+S:DIAL.dat:178:0	얼마전에 여관에 묵었던 가족들한테 들었는데 물의 도시라고 불리는 아름다운 곳이 있다지?	Mới đây em nghe gia đình trọ ở quán kể có nơi rất đẹp gọi là thành phố trên mặt nước?	플래카	
+S:DIAL.dat:178:1	나도 한번 가보고 싶어.	Em cũng muốn đến đó một lần.	플래카	
+S:DIAL.dat:179:0	형!	Anh!	플래카	
+S:DIAL.dat:179:1	내 동생 쿠피 못봤어?	Có thấy Kupi em trai em đâu không?	플래카	
+S:DIAL.dat:179:2	조그만 녀석이 어디를 이렇게 쏘다니는건지 모르겠네.	Nhóc tí xíu mà không biết chạy lung tung đi đâu nữa.	플래카	
+S:DIAL.dat:180:0	어서오세요 전 수련수녀 코이에요.	Mời vào, tôi là nữ tu tập sự Koi.	코이	
+S:DIAL.dat:180:1	저희 성당엔 무슨일로 오셨나요?	Anh đến giáo đường chúng tôi có việc gì ạ?	코이	
+S:DIAL.dat:181:0	테레사 수녀님을 찾아 오신거면 좌측 성당예배당에 가 보세요.	Nếu anh tìm sơ Teresa thì đến nhà nguyện bên trái nhé.	코이	
+S:DIAL.dat:182:0	그렇게 시끄럽게 걸어 다니시면 겔헨수녀님께 혼날지도 몰라요.	Đi lại ồn ào như thế thì có khi bị sơ Gelhen mắng đấy.	코이	
+S:DIAL.dat:183:0	던전 - 이스트 포레스트 - 적정 Lv [23]	Hầm ngục - East Forest - Lv phù hợp [23]	경고문	
+S:DIAL.dat:183:1	이 근처의 모험가들과 벌목공들이 빈번히 실종돼, 최근 던전지역으로 지정된 지역임.	Nhà thám hiểm và tiều phu quanh đây liên tục mất tích, gần đây đã bị xếp vào khu vực hầm ngục.	경고문	
+S:DIAL.dat:183:2	검증받은 C급이상 모험가 및 용병을 제외하고 출입을 삼가하길 바람.	Ngoài nhà thám hiểm và lính đánh thuê từ hạng C trở lên đã qua kiểm định, xin đừng ra vào.	경고문	
+S:DIAL.dat:184:0	던전 - 데저트 던전 - 적정 Lv [27]	Hầm ngục - Desert Dungeon - Lv phù hợp [27]	경고문	
+S:DIAL.dat:184:1	기존에 소탕된 사막암살단들의 소굴로, 현재 잔당들이 몬스터들을 사육하는 것으로 알려져있음.	Là sào huyệt của Sát thủ đoàn Sa mạc đã bị càn quét, hiện nghe nói tàn dư đang nuôi quái vật ở đây.	경고문	
+S:DIAL.dat:184:2	파악이 덜 된만큼 자격없는 자는 출입을 삼가하길 바람.	Vì chưa nắm rõ tình hình, người không đủ tư cách xin đừng ra vào.	경고문	
+S:DIAL.dat:185:0	던전 - 웨스트 포레스트 - 적정 Lv [33]	Hầm ngục - West Forest - Lv phù hợp [33]	경고문	
+S:DIAL.dat:185:1	마계외 지역에서 최초로 포착된 보스급 몬스터, 좀비로드가 출몰하고 있는것으로 확인됨.	Đã xác nhận Zombie Lord, quái cấp boss đầu tiên bị phát hiện ngoài ma giới, đang xuất hiện.	경고문	
+S:DIAL.dat:185:2	이에 검증받은 B급이상 모험가 및 용병을 제외하고 출입을 삼가하길 바람.	Vì vậy, ngoài nhà thám hiểm và lính đánh thuê từ hạng B trở lên đã qua kiểm định, xin đừng ra vào.	경고문	
+S:DIAL.dat:186:0	던전 - 딥데저트 던전 - 적정 Lv [38]	Hầm ngục - Deep Desert Dungeon - Lv phù hợp [38]	경고문	
+S:DIAL.dat:186:1	인간지역에 넘어온 암살단들이 만들어 놓은 소굴로, 현재는 마계의 악마가 지배하고 있다고 알려짐.	Là sào huyệt do Sát thủ đoàn tràn sang đất người lập nên, hiện nghe nói do ác quỷ ma giới cai quản.	경고문	
+S:DIAL.dat:186:2	이에 자격없는 자는 출입을 삼가하길 바람.	Vì vậy, người không đủ tư cách xin đừng ra vào.	경고문	
+S:DIAL.dat:187:0	던전 - 블루마운틴 - 적정 Lv [42]	Hầm ngục - Blue Mountain - Lv phù hợp [42]	경고문	
+S:DIAL.dat:187:1	과거 시민대항군이 왕국에 대항해 숨어있던 소굴이었으나, 변절자 및 다크엘프의 수하들에게 빼앗긴 지역으로,	Từng là sào huyệt nơi Quân kháng chiến dân thường ẩn náu chống lại vương quốc, nhưng đã bị kẻ phản bội và thuộc hạ Dark Elf chiếm,	경고문	
+S:DIAL.dat:187:2	후에 그 위험성으로 인해 던전으로 지정됨을 알림.	sau đó vì quá nguy hiểm nên được xếp vào hầm ngục.	경고문	
+S:DIAL.dat:188:0	던전 - 딥블루마운틴 - 적정 Lv [48]	Hầm ngục - Deep Blue Mountain - Lv phù hợp [48]	경고문	
+S:DIAL.dat:188:1	어둠의 마나를 신의 힘이라 착각하는 광신도들의 소굴로, 마물과 더불어 극히 위험성이 높다고 판단,	Sào huyệt của bọn cuồng tín coi mana bóng tối là sức mạnh của Thần, cùng với ma vật nên được đánh giá cực kỳ nguy hiểm,	경고문	
+S:DIAL.dat:188:2	이에 던전으로 지정하고  자격없는 자는 출입을 삼가하길 바람.	vì vậy được xếp vào hầm ngục, người không đủ tư cách xin đừng ra vào.	경고문	
+S:DIAL.dat:189:0	던전 - 캐슬스카이 - 적정 Lv [52]	Hầm ngục - Castle Sky - Lv phù hợp [52]	경고문	
+S:DIAL.dat:189:1	과거 데이거의 라이벌로 유명했던 캐슬나이트의 던전.	Hầm ngục của Castle Knight, kẻ từng nổi danh là đối thủ của Dager.	경고문	
+S:DIAL.dat:189:2	데이거와의 경쟁에서 패한후, 암흑세력과 교류하며 인간계에 타격을 가할 준비를 하고 있는것으로 알려져 있으므로 출입에 주의가 필요함.	Nghe nói sau khi thua Dager, hắn giao du với thế lực bóng tối, chuẩn bị giáng đòn vào nhân giới, nên cần cẩn trọng khi ra vào.	경고문	
+S:DIAL.dat:190:0	던전 - 탐욕마성 - 적정 Lv [58]	Hầm ngục - Greed Castle - Lv phù hợp [58]	경고문	
+S:DIAL.dat:190:1	마물에게 영혼을 팔고, 마왕의 강림을 기다리는 한 몰락귀족의 던전.	Hầm ngục của một quý tộc sa sút đã bán linh hồn cho ma vật, chờ Ma vương giáng thế.	경고문	
+S:DIAL.dat:190:2	성 곳곳에 마기가 흘러 넘치는 만큼  A급이상 모험가 및 용병을 제외하고 출입을 삼가하길 바람.	Ma khí tràn ngập khắp thành, nên ngoài nhà thám hiểm và lính đánh thuê từ hạng A trở lên, xin đừng ra vào.	경고문	
+S:DIAL.dat:191:0	던전 - 그리드 바벨 - 적정 Lv [62]	Hầm ngục - Greed Babel - Lv phù hợp [62]	경고문	
+S:DIAL.dat:191:1	과거 탐욕마성주의 하수인으로 있던 매지션이, 탐욕마성의 흘러넘치는 마기로 인해, 6서클의 흑마법사로 올라서며 마물을 이끌고 세운 던전으로,	Một Magician từng là tay sai của chủ Greed Castle, nhờ ma khí tràn ngập ở đó mà lên thành hắc pháp sư 6 vòng, dẫn ma vật lập nên hầm ngục này,	경고문	
+S:DIAL.dat:191:2	그 위험성으로 인해 자격없는 자의 출입을 엄금함.	vì quá nguy hiểm nên nghiêm cấm người không đủ tư cách ra vào.	경고문	
+S:DIAL.dat:192:0	던전 - 딥그리드바벨 - 적정 Lv [72]	Hầm ngục - Deep Greed Babel - Lv phù hợp [72]	경고문	
+S:DIAL.dat:192:1	과거 탐욕마성을 지키던 강한 기사단이 모두 마기에 오염되어, 탐욕에 미쳐 날뛰는것을, 성주가 탑을 내주고 그 주인으로 삼은 던전.	Đội hiệp sĩ hùng mạnh từng giữ Greed Castle đều nhiễm ma khí, điên cuồng vì tham lam, thành chủ bèn giao tháp cho chúng làm chủ.	경고문	
+S:DIAL.dat:192:2	최하 S급 이상의 용병급을 제외하고 출입을 엄금함.	Nghiêm cấm ra vào, trừ lính đánh thuê thấp nhất hạng S trở lên.	경고문	
+S:DIAL.dat:193:0	던전 - 검은 램프성 - 적정 Lv [68]	Hầm ngục - Black Lamp Castle - Lv phù hợp [68]	경고문	
+S:DIAL.dat:193:1	전설의 검은 램프에서 살고 있다는 검은램프의 바바가 있는것으로 알려져있으나, 전설과는 달리 인육을 즐기는 마물로 파악된바 있어,	Tương truyền có Baba của Đèn Đen sống trong cây đèn đen huyền thoại, nhưng khác truyền thuyết, đã xác định đó là ma vật thích ăn thịt người,	경고문	
+S:DIAL.dat:193:2	이에 던전으로 지정하고 자격없는 자는 출입을 삼가하길 바람.	vì vậy được xếp vào hầm ngục, người không đủ tư cách xin đừng ra vào.	경고문	
+S:DIAL.dat:194:0	던전 - 광기의 어비스 - 적정 Lv [88]	Hầm ngục - Abyss of Madness - Lv phù hợp [88]	경고문	
+S:DIAL.dat:194:1	흑마법에 심취하거나, 어둠의 마나를 너무 깊이 흡기해 운용하던	Nơi cực kỳ nguy hiểm, các pháp sư cấp cao và binh lính say mê hắc ma pháp, hấp thụ và vận dụng mana bóng tối quá sâu	경고문	
+S:DIAL.dat:194:2	고위 마법사와 군사들이 광기에 쌓여 군집해있는 극히 위험한 곳으로, 실력을 검증받지 못한 자의 출입을 엄금함.	đã hoá điên và tụ tập tại đây, nghiêm cấm người chưa được kiểm định thực lực ra vào.	경고문	
+S:DIAL.dat:195:0	언제 수련수녀 생활이 끝나는건지...	Bao giờ mới hết thời tu tập đây...	코이	
+S:DIAL.dat:195:1	시간은 왜 이리 안가는 걸까요?	Sao thời gian trôi chậm thế nhỉ?	코이	
+S:DIAL.dat:196:0	쉿~조용히 해주세요.	Suỵt~ xin giữ yên lặng.	헬레나	
+S:DIAL.dat:196:1	이곳은 병든이들이 마지막을 보내는 곳이랍니다.	Đây là nơi người bệnh trải qua những ngày cuối đời.	헬레나	
+S:DIAL.dat:197:0	얼마전 강을 떠내려온 아가씨 한분을 구해 드린 적이 있어요.	Mới đây chúng tôi đã cứu một cô gái trôi dạt theo dòng sông.	헬레나	
+S:DIAL.dat:197:1	사고 충격이 너무 심한 탓인지 정신을 놓아버려서 다들 안타까워 하셨어요.	Có lẽ cú sốc quá nặng nên cô ấy mất trí, ai cũng thấy thương.	헬레나	
+S:DIAL.dat:197:2	참 고운 얼굴이었는데...	Gương mặt thật xinh đẹp...	헬레나	
+S:DIAL.dat:198:0	베넬 수녀님은 수녀계의 나이팅게일과 같은 존재야.	Sơ Benel như là Nightingale của giới nữ tu vậy.	헬레나	
+S:DIAL.dat:198:1	그 분은 진짜 천사가 아니신지 모르겠어요.	Không biết sơ ấy có phải thiên thần thật không nữa.	헬레나	
+S:DIAL.dat:199:0	여기는 영혼의 안식을 찾는 곳이지.	Đây là nơi tìm sự yên nghỉ cho linh hồn.	베넬	
+S:DIAL.dat:200:0	혹시 마음의 병이 든 아가씨를 찾으면 여기로 꼭 데려다 주길 바래요.	Nếu anh gặp một cô gái mắc bệnh tâm lý, nhất định hãy đưa cô ấy đến đây.	베넬	
+S:DIAL.dat:200:1	귀한 집 자손인데 치료 중 갑자기 사라져서 찾을수가 없군요.	Cô ấy con nhà quyền quý, đang chữa trị thì đột nhiên biến mất, không tìm đâu ra.	베넬	
+S:DIAL.dat:201:0	시간이 나면 병든 어르신들과 얘기라도 해 주면 좋겠네요.	Có thời gian thì anh trò chuyện với các cụ ốm yếu ở đây cũng tốt.	베넬	
+S:DIAL.dat:201:1	거동이 불편하셔서 나가질 못하시니 세상 돌아가는 얘기를 들으시면 차도가 있을것 같네요.	Các cụ đi lại khó khăn nên không ra ngoài được, nghe chuyện thế gian chắc sẽ khá hơn.	베넬	
+S:DIAL.dat:202:0	쉿! 정숙하세요.	Suỵt! Xin giữ trật tự.	겔헨	
+S:DIAL.dat:202:1	전 이곳의 사감수녀 겔헨입니다.	Tôi là Gelhen, Sơ quản lý ở đây.	겔헨	
+S:DIAL.dat:203:0	육체적인 수련을 쌓는 것 만큼 마음의 양식을 쌓는 것도 중요하답니다.	Tích luỹ dưỡng chất cho tâm hồn cũng quan trọng như rèn luyện thể xác.	겔헨	
+S:DIAL.dat:204:0	무기는 입구 수련수녀에게 맡기고 들어오는게 좋을 것 같군요.	Anh nên gửi vũ khí cho nữ tu tập sự ở cửa rồi hẵng vào.	겔헨	
+S:DIAL.dat:204:1	차가운 쇳덩이 소리는 여기와 어울리지가 않는군요.	Tiếng sắt thép lạnh lẽo không hợp với nơi này.	겔헨	
+S:DIAL.dat:205:0	쉿!!!	Suỵt!!!	겔헨	
+S:DIAL.dat:205:1	예술은 왼쪽, 교양은 오른쪽	Nghệ thuật bên trái, giáo dục bên phải	겔헨	
+S:DIAL.dat:205:2	소설, 수필은 입구쪽에서 찾을 수 있을 거에요.	Tiểu thuyết, tuỳ bút thì tìm ở phía cửa vào.	겔헨	
+S:DIAL.dat:206:0	듣자하니 이곳에도 네임드 몬스터가 출연한다더군.	Nghe nói ở đây cũng có quái vật có tên xuất hiện.	제이슨	
+S:DIAL.dat:206:1	무시무시한 놈들이니 만나면 몸 조심하게나!	Bọn đó đáng sợ lắm, gặp thì giữ mình nhé!	제이슨	
+S:DIAL.dat:207:0	이곳에선 나한테 위탁판매를 할수 있지!	Ở đây có thể nhờ tôi bán ký gửi đấy!	자르키	
+S:DIAL.dat:207:1	다른 유저에게 필요없는 물건을 팔수있다고~	Có thể bán đồ không cần cho người chơi khác~	자르키	
+S:DIAL.dat:208:0	가끔가다가 귀한 장비를 싸게 구입한 친구들 얘기를 들은적이 있지~	Thỉnh thoảng tôi nghe kể có người mua được trang bị quý với giá rẻ~	자르키	
+S:DIAL.dat:208:1	너도 행운을 잡아보라고~	Cậu cũng thử bắt lấy May mắn xem~	자르키	
+S:DIAL.dat:209:0	던전 - 이블 케이브 - 적정 Lv [6]	Hầm ngục - Evil Cave - Lv phù hợp [6]	경고문	
+S:DIAL.dat:209:1	마계에서나 볼 수 있던 구울등이 다수 출현하는 지역으로, 수많은 사람들이 실종된 악명높은 던전임.	Hầm ngục khét tiếng, nơi nhiều Ghoul vốn chỉ thấy ở ma giới xuất hiện, rất nhiều người đã mất tích.	경고문	
+S:DIAL.dat:209:2	이에 실력을 검증받지 않아 자격없는 자는 출입을 삼가하길 바람.	Vì vậy, người chưa được kiểm định thực lực, không đủ tư cách xin đừng ra vào.	경고문	
+S:DIAL.dat:210:0	던전 - 샌드 던전 - 적정 Lv [9]	Hầm ngục - Sand Dungeon - Lv phù hợp [9]	경고문	
+S:DIAL.dat:210:1	실라페와 크랩들이 정체불명의 마인에게 조종을 당하는 것으로 파악됨.	Đã xác định Sylape và Crab đang bị một ma nhân bí ẩn điều khiển.	경고문	
+S:DIAL.dat:210:2	동종계열 몬스터에 비해 위험하므로 자격없는 자는 출입을 삼가하길 바람.	Nguy hiểm hơn quái vật cùng loại, người không đủ tư cách xin đừng ra vào.	경고문	
+S:DIAL.dat:211:0	던전 - 딥샌드 던전- 적정 Lv [12]	Hầm ngục - Deep Sand - Lv phù hợp [12]	경고문	
+S:DIAL.dat:211:1	샌드던전에서 마기를 받아 진화한 실라이론과 스파이더들이 군집을 이루어 존재하고 있음.	Sylairon và Spider nhận ma khí ở Sand Dungeon mà tiến hoá, đang sống thành bầy.	경고문	
+S:DIAL.dat:211:2	검증받은 C급이상 모험가 및 용병을 제외하고 출입을 삼가하길 바람.	Ngoài nhà thám hiểm và lính đánh thuê từ hạng C trở lên đã qua kiểm định, xin đừng ra vào.	경고문	
+S:DIAL.dat:212:0	던전 - 깊은 악마의 동굴 - 적정 Lv [18]	Hầm ngục - Hang Ác Quỷ Sâu - Lv phù hợp [18]	경고문	
+S:DIAL.dat:212:1	흑마술에 조예깊은 마도술사가 이블케이브의 마물을 강화시켜 풀어놓은것으로 추정되는 위험한 지역임.	Khu vực nguy hiểm, được cho là một Ma đạo sư am tường hắc thuật đã Cường hóa ma vật ở Evil Cave rồi thả ra.	경고문	
+S:DIAL.dat:212:2	이에 자격없는 자는 출입을 삼가하길 바람.	Vì vậy, người không đủ tư cách xin đừng ra vào.	경고문	
+S:DIAL.dat:213:0	던전 - 악마의 성 - 적정 Lv [78]	Hầm ngục - Demon Castle - Lv phù hợp [78]	경고문	
+S:DIAL.dat:213:1	마계의 마물 데빌리스가 마왕에게 잘못을 저질러 추방당하면서,	Ma vật ma giới Devilis phạm lỗi với Ma vương nên bị trục xuất,	경고문	
+S:DIAL.dat:213:2	수하를 이끌고 인간계에 소굴을 만든곳으로 긴급히 던전으로 지정하고, 또한 이 지역의 출입을 엄금함.	dẫn thuộc hạ lập sào huyệt ở nhân giới, nay khẩn cấp xếp vào hầm ngục và nghiêm cấm ra vào khu vực này.	경고문	
+S:DIAL.dat:214:0	던전 - 타락한 성 - 적정 Lv [82]	Hầm ngục - Fallen Castle - Lv phù hợp [82]	경고문	
+S:DIAL.dat:214:1	왕국의 충성스런 신하였던 성주가  마물에게 영혼을 침범당한후, 수많은 왕국민을 살해하는등의 악행을 저지르는바,	Thành chủ vốn là bề tôi trung thành của vương quốc, sau khi bị ma vật xâm chiếm linh hồn đã gây tội ác như sát hại vô số dân vương quốc,	경고문	
+S:DIAL.dat:214:2	이에 임시 던전으로 지정하고, 소탕을 함께할 부대를 모집예정임.	nên tạm xếp vào hầm ngục, sắp chiêu mộ đội quân cùng càn quét.	경고문	
+S:DIAL.dat:215:0	던전 - 다하크 입구 - 적정 Lv [92]	Hầm ngục - Dahak Entrance - Lv phù hợp [92]	경고문	
+S:DIAL.dat:215:1	마계 최강의 전투집단으로 불리어지던 다하크의 문지기들이 그들의 마기를 나누어 받고, 성장해 위험성이 커지고 있어,	Đám gác cổng của Dahak, đội chiến đấu được gọi là mạnh nhất ma giới, nhận được ma khí của chúng mà lớn mạnh, ngày càng nguy hiểm,	경고문	
+S:DIAL.dat:215:2	이에 SS급이상 모험가 및 용병을 제외하고 출입을 삼가하길 바람.	vì vậy ngoài nhà thám hiểm và lính đánh thuê từ hạng SS trở lên, xin đừng ra vào.	경고문	
+S:DIAL.dat:216:0	던전 - 다하크 던전 - 적정 Lv [98]	Hầm ngục - Dahak Dungeon - Lv phù hợp [98]	경고문	
+S:DIAL.dat:216:1	최강의 마물집단 다하크들이 인간계 진출을 위해 마련한 은신처로 최근 위치가 확인되어, 던전으로 지정.	Nơi ẩn náu mà Dahak, bầy ma vật mạnh nhất, chuẩn bị để tiến vào nhân giới, vị trí mới được xác nhận gần đây nên xếp vào hầm ngục.	경고문	
+S:DIAL.dat:216:2	이에 던전으로 지정하고 자격없는 자는 출입을 삼가하길 바람.	vì vậy được xếp vào hầm ngục, người không đủ tư cách xin đừng ra vào.	경고문	
