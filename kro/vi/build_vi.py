@@ -27,9 +27,22 @@ XLEADS = [0xA2, 0xA3] + list(range(0xA5, 0xB0))
 MAXCODES = BASE + len(XLEADS) * TRAILS
 NAMES = os.path.join(W, 'names.tsv')
 PARA_W = 170                       # prologue (autoscroll) line width, px
+QUEST_TITLE_W = 99                 # quest window title box (measured: Korean/vi screenshots, 'vis' run)
 FONT = os.path.join(W, 'font', 'f12.bin')
 ASCII_W, SPACE_W = 6, 3            # game ASCII cell; space of a Vietnamese string (KroText.spaceW)
-DESCRIB_W, DESCRIB_BYTES = 150, 27  # help box: text width, game wraps when bytes*5 >= 155-15
+# Describ%d.dat box width W per file (stack arg 0 of the loader 0x29e3c at its call sites; Describ0 also opened with
+# W=154 at 0x37e56). The page drawer 0x2a8a6 breaks a line as soon as text_measure(line) >= W-15, then skips one CRLF
+# and pulls the next ASCII byte onto the full line (a '|' of a colour code, the CR of an empty line); the line-count pass
+# 0x29e3c breaks when bytes*5 >= W-15. Pre-wrapped lines must stay below both: width <= W-16, bytes <= (W-16)//5.
+DESCRIB_BOX = {0: 154, 1: 140, 3: 150, 4: 160, 5: 160}
+DESCRIB_BOX_DEFAULT = 150          # Describ2: no call site with a constant file number found -> narrowest known >= 150
+
+
+def describ_limits(name):
+    w = DESCRIB_BOX.get(int(re.match(r'Describ(\d+)', name).group(1)), DESCRIB_BOX_DEFAULT)
+    return w - 16, (w - 16) // 5
+
+
 REPL = {'…': '...', '“': '"', '”': '"', '‘': "'", '’': "'", '–': '-', '—': '-', ' ': ' ', '　': ' ',
         '·': '.', '•': '.', '×': 'x', '★': '*', '☆': '*', '♥': '*', '♡': '*', '→': '>', '←': '<', '~': '~'}
 LEADP = '(["\'['          # attached to the following word
@@ -305,17 +318,24 @@ def main():
         if kind != 'D': continue
         orig = open(os.path.join(X.JAR, 'data', name), 'rb').read()
         tmap = {}
+        dw, db = describ_limits(name)
         for e in es:
             vi = tr(e)
             if vi is None: continue
             lines = []
             for src in vi.split('\n'):
-                lines += wrap(enc, src, DESCRIB_W, DESCRIB_BYTES, True) if src.strip() else ['']
+                lines += wrap(enc, src, dw, db, True) if src.strip() else ['']
             tmap[int(e['id'].split(':')[2])] = [enc.encode(l, True) for l in lines]
+            for l in lines:
+                if enc.width(l, True) > dw or len(enc.encode(l, True)) > db:
+                    raise SystemExit('%s: dòng quá khung Describ (%dpx/%dB > %d/%d) | %s' % (e['id'], enc.width(l, True), len(enc.encode(l, True)), dw, db, l))
         lmap = {}
         for e in byfile.get(('L', name), []):
             vi = tr(e)
-            if vi is not None: lmap[int(e['id'].split(':')[2])] = enc.encode(vi, True)
+            if vi is None: continue
+            if enc.width(vi, True) > dw or len(enc.encode(vi, True)) > db:
+                raise SystemExit('%s: dòng quá khung Describ (%dpx/%dB > %d/%d) | %s' % (e['id'], enc.width(vi, True), len(enc.encode(vi, True)), dw, db, vi))
+            lmap[int(e['id'].split(':')[2])] = enc.encode(vi, True)
         if not tmap and not lmap: continue
         res, cur, skip = [], None, False
         for k, line in enumerate(orig.split(b'\r\n')):
@@ -463,6 +483,9 @@ def main():
             vi = by_id.get(e['id'], by_ko.get(e['ko']))
             if vi is not None and len(enc.fit(vi, None, detached(e))[0]) > e['max'] and len(enc.encode_compact(vi)) > e['max']:
                 errors.append('%s: quá %d byte | %s' % (e['id'], e['max'], vi))
+            # quest title: drawn centred (x~147) in the title box of the quest window, inner edge x=97..201
+            if vi is not None and re.match(r'T:QUEST0?0?\.dat:\d+:31$', e['id']) and enc.width(vi) > QUEST_TITLE_W:
+                errors.append('%s: tên quest rộng %dpx > %d (tràn khung) | %s' % (e['id'], enc.width(vi), QUEST_TITLE_W, vi))
         elif re.match(r'T:QUEST0?0?\.dat:', e['id']):  # quest description: wrapped text, no phrase codes
             vi = by_id.get(e['id'], by_ko.get(e['ko']))
             if vi is not None and len(enc.encode(vi, True)) > 254:
