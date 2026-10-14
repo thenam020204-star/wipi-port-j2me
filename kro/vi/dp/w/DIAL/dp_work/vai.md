@@ -8,3 +8,10 @@
 - Quý tộc, phản diện: ta – ngươi. Lính với cấp trên: thuộc hạ/tôi – ngài.
 - 경 = Ngài (vd. 발레리 경 = Ngài Valerie), 님 = ngài/thầy tùy vai. 선생님 = thầy.
 - Giữ ~ ... ! ? như gốc. Mã <n> <EMO..> <DELAY..> giữ đúng chỗ. Không dùng dấu nháy đơn (font không có) -> dùng ".
+- Dager ↔ Sebastian: Dager với người lạ: ta – cậu; sau khi biết là đồng môn: anh – em. Sebastian với Dager: em – ngài (Ngài Dager).
+- Đám hiệp sĩ quý tộc côn đồ (기사1/2/3) với Dager: ta – ngươi/mày; khi sợ: tôi – ngài.
+- Sebastian → Innis: tôi – tiểu thư (Tiểu thư Innis); Innis → Sebastian: tôi – cậu. Alicia ↔ Sebastian: tôi/mình – cậu.
+- Faulkner: ta – cậu; Sebastian: tôi – ngài. Shaimon (tộc trưởng Ortsk): ta – cậu; Sebastian: tôi – bác. Nadia ↔ Sebastian: tôi – anh/cô. Teresa: tôi – anh.
+- Kairu, Sultan, Death Knight (Dager khi sa ngã) với phe chính: ta – ngươi. Rene khi lộ mặt phản diện: ta – ngươi; Sebastian gọi Rene lúc đó: ông.
+- Không viết thán từ kéo dài lạ (Haaa, Uoooh): dùng Hừ, Hự, Ồ, Á, Hả, Ha ha, Gràaa (quái vật).
+- 9999 = "chín nghìn chín trăm chín mươi chín" (chữ số trong câu Việt cũng được, nhưng giữ thống nhất).

@@ -258,7 +258,9 @@ def main():
         return vi
 
     def detached(e):
-        return e['id'].startswith(('T:QUEST0.dat:', 'T:QUEST00.dat:'))
+        # u16 tables and Describ text: punctuation as separate ASCII bytes (frees the 'word!' 'word...' codes);
+        # binary strings (B:) keep attached punctuation (tight slots, shared tails)
+        return e['id'].startswith(('T:', 'D:'))
 
     def put(e, limit):
         vi = tr(e)
@@ -308,8 +310,8 @@ def main():
             if vi is None: continue
             lines = []
             for src in vi.split('\n'):
-                lines += wrap(enc, src, DESCRIB_W, DESCRIB_BYTES) if src.strip() else ['']
-            tmap[int(e['id'].split(':')[2])] = [enc.encode(l) for l in lines]
+                lines += wrap(enc, src, DESCRIB_W, DESCRIB_BYTES, True) if src.strip() else ['']
+            tmap[int(e['id'].split(':')[2])] = [enc.encode(l, True) for l in lines]
         if not tmap: continue
         res, cur, skip = [], None, False
         for line in orig.split(b'\r\n'):

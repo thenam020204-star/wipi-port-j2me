@@ -293,7 +293,7 @@
 293	Đá cường hóa có loại hạ cấp, trung cấp và thượng cấp,
 294	loại càng cao thì tỉ lệ thành công càng cao.
 295	Sau đó quyết định có dùng Sách bảo hộ hay không.
-296	Sách bảo hộ giúp vật phẩm tới +10 không bị phá hủy.
+296	Sách bảo hộ giúp vật phẩm Cường hóa tới +10 không bị phá hủy.
 297	Còn nữa, điều quan trọng là Cường hóa xong sẽ tự động lưu, nên cẩn thận đấy.
 298	A ~ Ra là làm vậy.
 299	Cháu làm được đấy chứ?
@@ -2867,3 +2867,627 @@
 2867	Cuối cùng cũng đến lượt Death Knight rồi sao..Nếu ngài trở lại là Ngài Dager thì tốt biết bao...
 2868	Được! Không có thời gian nghĩ thế nữa! Lần này mới thật sự là cuối cùng!
 2869	Kẻ thù lớn nhất Death Knight
+2870	B.. bọn các ngươi.... T.. ta không thể gục ngã thế này!
+2871	T.. ta sẽ báo thù lũ người đã cướp đi tất cả của ta!
+2872	Gràaa!!
+2873	Dager! Tỉnh lại đi!
+2874	Con đâu yếu đến mức bị sức mạnh bóng tối nuốt chửng như thế!
+2875	Đúng vậy!
+2876	Ngài Dager! Ngài là hy vọng của mọi người mà!
+2877	Dù hiểu lầm đã gây ra nhiều chuyện không hay! Ngài vẫn có thể đứng dậy lần nữa!
+2878	Các ngươi.. không hiểu nỗi đau của ta...
+2879	Bị người mình yêu phản bội...
+2880	Bị tất cả những ai từng tin ta căm ghét..
+2881	Các ngươi thì hiểu gì chứ!!
+2882	Ma vương sắp phục sinh rồi.. Các ngươi có vùng vẫy thế nào thì tất cả cũng sẽ chết!
+2883	Ha ha ha!
+2884	Innis! Sao con lại tới đây!
+2885	Con đã đi theo suốt từ nãy...
+2886	Vì con rất muốn gặp Dager..
+2887	Dager... Em xin lỗi...
+2888	Trong khoảng thời gian không gặp được anh, em...
+2889	đã biết được về đ.. đứa con mà chúng ta đánh mất ngày trước...
+2890	Đ.. đó là ý gì vậy Innis..
+2891	Alicia! Cậu cũng biết chuyện này à?
+2892	Ừ...
+2893	Hồi trước ở tu viện tôi đã nghe kể..
+2894	Trước đó tôi cứ tưởng mình là trẻ mồ côi..
+2895	Biết mình có cha mẹ nhưng vì thân phận nên không thể gặp..
+2896	Thế nên tôi lấy cớ tu hành để đi khắp nơi.. và đã biết chắc chắn..
+2897	Mẹ tôi là.. tiểu thư Innis đây... Còn cha tôi là..
+2898	K.. không lẽ....
+2899	Đ.. đứa bé đó..?
+2900	Đến đây thôi! Lũ các ngươi!
+2901	Dám phá đám đúng lúc mọi thứ đã hoàn hảo...
+2902	Không thể để các ngươi yên được!
+2903	Death Knight! Đừng bận tâm, hạ hết bọn chúng rồi nâng chén mừng Ma vương phục sinh đi!!
+2904	Ngài đang nghĩ gì vậy, Death Knight!
+2905	Chính ta là kẻ đã giúp ngài nhận được sức mạnh của Ma vương đấy!
+2906	Thân này đã thành ra thế này.. ta biết không thể quay lại được nữa..
+2907	Nhưng ta không thể giết máu mủ của mình..
+2908	Hừ.. ng.. ngươi!
+2909	Dám phản bội ta!
+2910	Hừ! Ta sẽ giết sạch các ngươi ngay tại đây!
+2911	Dù sao để Ma vương phục sinh cũng cần thật nhiều vật tế và linh hồn sa ngã của kẻ lương thiện!
+2912	Ta sẽ giết hết lũ ở đây rồi lấy luôn linh hồn của ngươi!
+2913	R.. rốt cuộc biến Dager thành Death Knight.. là để lấy linh hồn của Death Knight sao..
+2914	Sultan! Đã đến lúc ngài thực hiện giao ước với ta!
+2915	Được.. ta sẽ giữ lời.
+2916	[Me.Dra.Zaines]
+2917	[Draynan.Front]
+2918	K.. không được! Phép thuật đó!
+2919	Hỡi điểm tận cùng của vạn vật!
+2920	Hãy nhận sức mạnh của Ma vương mà hồi sinh nơi đây!
+2921	Gràaa!
+2922	Ng.. ngươi! Dám tuồn bọn chúng đi!
+2923	Trước khi quá muộn, ta sẽ nuốt hồn ngươi và tên Sebastian kia!!!!!!
+2924	Đừng hòng được như ý!
+2925	Có quá nhiều điều ta thấy có lỗi..
+2926	Alicia.. con gái của ta.. Ta buồn vì với hình dạng này chẳng thể ôm con..
+2927	Innis.. anh xin lỗi vì không thể sưởi ấm trái tim đau khổ của em..
+2928	Và.. thầy Rene.. thầy đã vất vả vì đứa học trò kém cỏi... Giờ con sẽ chấm dứt cơn ác mộng này..
+2929	Q.. quả là mạnh...
+2930	Nhưng ta không thể thua! Aaa!!
+2931	Hự.. đ.. đây là...
+2932	Đ.. điều này có vẻ là..
+2933	Dager đã dịch chuyển chúng ta đi để cứu chúng ta..
+2934	D.. Dager!!
+2935	Xin chờ đã!
+2936	Giờ vào trong thì quá nguy hiểm.
+2937	Nhưng tôi lo cho Ngài Dager... Để tôi vào xem.
+2938	Sebastian! Như vậy quá nguy hiểm!
+2939	Không sao đâu Alicia..
+2940	Tôi thì không có vấn đề gì.
+2941	Thầy Rene, nhờ thầy trông tiểu thư Innis và Alicia.
+2942	Để hai người này lại con thấy bất an lắm..
+2943	Có thầy ở đây thì con yên tâm..
+2944	Nhưng mà..
+2945	Thấy nguy hiểm thì nhất định phải thoát ra đấy, Sebastian!
+2946	Vâng. Con sẽ làm vậy....
+2947	Ng.. Ngài Dager!!
+2948	S.. Sebastian.. hự..
+2949	Thằng nhóc này. Đã cất công đưa cậu ra rồi, sao còn quay lại!
+2950	N.. ngài bị thương đến vậy mà vẫn cứu chúng tôi...
+2951	Đừng nói vậy..
+2952	Ta đã phạm quá nhiều tội lỗi...
+2953	Thành ra thế này cũng là lẽ đương nhiên..
+2954	Sebastian! Không còn thời gian nữa.
+2955	Dù sao ta cũng đang định nói với cậu chuyện này..
+2956	Ngày trước, ta và thầy Rene khi tu luyện trong núi
+2957	đã từng bị quái vật bao vây, suýt mất mạng..
+2958	Sao tự nhiên ngài lại nói chuyện đó..
+2959	Vết thương nặng lắm, mau ra ngoài thôi!
+2960	Không.. vết thương của thân xác này... không thể chữa theo cách thông thường đâu...
+2961	Mà thôi... mau nghe ta nói hết đã..
+2962	Thầy và ta vì bị lũ quái vật
+2963	truy đuổi và vây hãm dai dẳng nên đã kiệt sức...
+2964	Cuối cùng bị chúng đuổi kịp..
+2965	Ngay lúc đó.. một người chỉ vung kiếm một lần đã hạ hàng trăm con quái vật..
+2966	người được gọi là Kiếm thánh huyền thoại đã xuất hiện.....
+2967	Đó chính là "Heinkel Bach"..
+2968	Sau đó chúng ta đã học kiếm thuật của người ấy... và đi được đến ngày hôm nay...
+2969	....H....Heinkel Bach...
+2970	K.. không lẽ..
+2971	Phải.. đó chính là cha của cậu..
+2972	Không còn thời gian...
+2973	Sebastian! Nghe cho kỹ!
+2974	Người ấy hẳn vẫn đang lang thang khắp các hầm ngục chưa ai phát hiện
+2975	để tiếp tục rèn luyện bản thân..
+2976	Nếu cậu muốn gặp người ấy, hãy tìm manh mối trong các hầm ngục trên lục địa...
+2977	......C... chuyện đó để sau, mau ra ngoài đi!
+2978	Không..
+2979	Câu chuyện của chúng ta kết thúc rồi, Sebastian...
+2980	Gửi lời hỏi thăm của ta đến người thầy đáng kính... và Innis cùng Alicia yêu dấu..
+2981	Ngài Dager!!!!!!!!!!!
+2982	Người ấy dùng sức mạnh bóng tối cứu chúng ta rồi biến mất ngay...
+2983	Lần cuối ta thấy người ấy, ông ta đang dẫn theo một đứa bé.... Có lẽ.. đứa bé đó chính là cậu, Sebastian...
+2984	Hãy gặp người ấy và kể chuyện về ta..Và...hãy cẩn thận...với kẻ đó..
+2985	Muốn gặp người ấy, hãy tìm ngôi thần điện ở gần Ortsk
+2986	......Nơi ta thấy người ấy lần cuối là gần đó..
+2987	Nhờ cậu đấy Sebastian...
+2988	Hãy nhắn với người thầy đáng kính...và Innis cùng Alicia yêu dấu rằng hãy sống thật hạnh phúc..
+2989	Kết thúc... và sau đó...
+2990	S.. Sebastian..?
+2991	Có chuyện gì vậy...?
+2992	Xin lỗi...xin lỗi...
+2993	Ngài Dager.. giờ đã....
+2994	Á! K.. không....
+2995	D.. Dager...
+2996	Tôi xin lỗi tiểu thư Innis..
+2997	Xin lỗi Alicia..
+2998	Lúc tôi đến nơi.. thì đã...
+2999	S...sao lại....
+3000	Mình còn.. chưa kịp gọi một tiếng cha cho đàng hoàng...
+3001	Dù đau lòng nhưng...cậu phải mạnh mẽ lên...
+3002	Ngài Dager bảo cậu và tiểu thư Innis hãy sống thật hạnh phúc....
+3003	Ngài đã nói vậy...
+3004	Mình không thể cứ gục xuống khóc mãi được...
+3005	Tôi hiểu cậu đau lòng, nhưng giờ quan trọng là
+3006	cùng tiểu thư Innis nghỉ ngơi ở nơi an toàn..
+3007	Tiểu thư Innis..
+3008	Dù khó khăn nhưng xin tiểu thư hãy đi cùng Alicia...
+3009	Tiểu thư là mẹ cô ấy mà..?
+3010	Giờ tiểu thư có thể đường hoàng đưa Alicia đi cùng rồi.
+3011	Dù chỉ là vì ngài ấy....
+3012	Phải..
+3013	Vì người ấy.. và vì Alicia..
+3014	Từ giờ tôi sẽ chăm lo cho Alicia..
+3015	Vâng! Phải vậy chứ!
+3016	Xin tiểu thư hãy vững lòng.
+3017	Mau đưa tiểu thư Innis xuống đi.
+3018	Hả..? Kh.. không đi cùng sao?
+3019	Cậu định làm gì...?
+3020	Tôi.. vẫn còn việc phải làm.
+3021	... Ừ..
+3022	Mình hiểu rồi.
+3023	... Sebastian. Mình sẽ đợi cậu.
+3024	Mẹ.. giờ chúng ta đi thôi..
+3025	Ừ....
+3026	Sebastian.. cảm ơn cậu.
+3027	Nhờ cậu mà tôi có thể đường hoàng gặp con gái mình...
+3028	Và.. tôi cũng sẽ đợi Sebastian.
+3029	Vì tôi vẫn chưa cảm ơn cậu cho trọn...
+3030	K.. không cần vậy đâu ạ..
+3031	Vậy mọi người đi trước đi. Xong việc tôi sẽ đến tìm.
+3032	Vậy chúng tôi đi đây...
+3033	Sebastian! Nhất định phải đến đấy!
+3034	Ừ. Nhất định tôi sẽ đến.
+3035	..... Liệu.. có gặp lại được không...
+3036	(Ngài Dager..)
+3037	Không có thời gian mà buồn bã.
+3038	Phải tìm nơi cha mình ở như Ngài Dager đã nói...
+3039	Giờ thì Ma vương sẽ không thể phục sinh nữa...
+3040	Ừm.. thần điện gần Ortsk.. lẽ nào là thần điện trong nhà tộc trưởng Ortsk..?
+3041	Được, thử đến đó xem!
+3042	Ừm..? Mà thầy đi đâu rồi nhỉ.. Từ nãy không thấy đâu...
+3043	Ừm.. chắc thầy có việc gì đó..?
+3044	Phải.. sau này gặp thầy
+3045	mình phải kể cho thầy về giây phút cuối của Ngài Dager.
+3046	Nào. Giờ thì đi thôi..?
+3047	Giờ.. việc của ta đã xong...
+3048	Cứ thế tan biến thì ta sẽ đi về đâu...
+3049	Nếu cứ thế mà chết
+3050	thì linh hồn đã trở về nên có lẽ sẽ được lên trời..
+3051	Nhưng ngươi thì không được như vậy.
+3052	Thầy!?
+3053	S.. sao thầy lại ở đây..
+3054	Mà thầy nói vậy là ý gì..
+3055	Ngươi phải chết dưới tay ta..
+3056	thì kế hoạch của ta mới thành.. Vốn là ta định tự làm
+3057	nhưng Sebastian xen vào nên hơi rắc rối..
+3058	Mà thôi kệ. Giết ngươi bây giờ dễ như trở bàn tay.
+3059	Vĩnh biệt Dager!
+3060	À không, Death Knight! Ha ha ha!
+3061	Áaaa!!!!!!!!!
+3062	Nào! Mau đi gặp tộc trưởng Ortsk thôi!
+3063	Di tích cổ đại
+3064	Ồ, ai đây này!
+3065	Sebastian, lần này có chuyện gì thế?
+3066	Việc của cậu xong cả rồi à?
+3067	À.. chuyện là...
+3068	Xong thì xong rồi, nhưng...
+3069	lần này tôi có việc cần đến tộc trưởng...
+3070	Hửm? Cần ta à?
+3071	Được, có chuyện gì vậy..
+3072	Chuyện là..
+3073	tôi nghĩ mình phải vào lại di tích
+3074	nối với phòng của tộc trưởng thêm lần nữa...
+3075	Cậu để quên thứ gì à?
+3076	À...
+3077	Tôi hỏi bác một chuyện được không..?
+3078	Có phải.. trước đây cũng từng có người vào di tích đó..?
+3079	Nghĩ lại thì có thể cậu không phải người đầu tiên.....
+3080	Lâu lắm rồi, trong lúc ta vắng mặt
+3081	có một người đàn ông đã vào trong di tích..
+3082	Nhưng phong ấn ở lối vào di tích vẫn y nguyên
+3083	nên bọn ta cho rằng hắn không phá được phong ấn mà đã quay về..
+3084	Nhưng lúc ấy lại nghe thấy tiếng một đứa bé khóc.
+3085	Là một bé trai trông rất khoẻ mạnh, nhưng là con người
+3086	nên làng ta không thể nuôi
+3087	mà phải gửi về làng của con người..
+3088	Nghĩ lại thì nếu đứa bé ấy lớn lên chắc cũng trạc tuổi cậu.
+3089	(...Đứa bé loài người.. di tích.. lẽ nào...
+3090	là người mà Ngài Dager nói là cha mình..
+3091	Vậy đứa bé bị bỏ lại ấy là mình..?)
+3092	Mà nói đi cũng phải nói lại, đứa bé đó
+3093	có vẻ là do người đàn ông ấy mang theo..
+3094	Nếu hắn bằng cách nào đó đã vào được di tích
+3095	thì để đứa bé lại là may đấy..
+3096	Bên trong di tích đâu dễ đến mức vừa bảo vệ đứa bé vừa vượt qua được..
+3097	À! Cậu từng vào rồi nên cũng biết nhỉ!
+3098	(...Chắc chắn đứa bé đó là mình..
+3099	Vậy là cha đã vào trong di tích sao..?
+3100	Lần trước mình bối rối quá nên không để ý dấu vết..
+3101	Lần này phải xem thật kỹ.)
+3102	Tộc trưởng! Tôi vào lại di tích được không?
+3103	Tôi có việc quan trọng...
+3104	Hừm.. được! Là cậu thì muốn qua bao nhiêu lần cũng được.
+3105	Nào. Vào đi.
+3106	Cảm ơn tộc trưởng!
+3107	... Hửm?
+3108	K.. không lẽ! Sebastian chính là đứa bé sơ sinh năm ấy!
+3109	Khà khà.. nhận ra chậm thật đấy, tộc trưởng Shaimon.
+3110	Lâu rồi không gặp, tộc trưởng Shaimon..
+3111	A! Ngài là thầy của
+3112	Sebastian, ngài Rene đây mà!
+3113	Hừ hừ...tiếc là ta chẳng có việc gì với hạng như ngươi.
+3114	Những gì ngươi biết, ngươi phải mang theo xuống mồ hết..
+3115	Sống lâu vậy là đủ rồi, giờ chết đi thôi...
+3116	Hự.......
+3117	Đ.. đây là..
+3118	Ồ.. thế này mà vẫn chưa chết à..
+3119	Thôi được ngươi cũng vô dụng..dù sao cũng sắp chết rồi.. hừ hừ..
+3120	Hự...S.. Sebastian gặp nguy rồi...
+3121	Giá mà đâu đó ở đây có manh mối về cha thì tốt...
+3122	Còn cả lời trăng trối của Ngài Dager nữa..
+3123	Giờ vào thôi.
+3124	Trận quyết đấu cuối cùng
+3125	Ừm.. lần đầu đến đây vì vội nên mình chưa xem kỹ..
+3126	nhưng hình như còn dấu vết có người từng sống ở đây, dù chỉ một thời gian ngắn...
+3127	A ha! Đúng rồi.
+3128	Lần trước thầy Rene có đọc gì đó trên phiến đá ở bức tường kia!
+3129	Mình cũng thử đến xem!
+3130	Đ.. đây là...
+3131	Mình cũng đọc được này..!
+3132	Để xem nào...
+3133	"Nơi này.. trước kia là thần điện của thần linh..
+3134	ta làm phiến đá này để ghi lại những dòng cuối cùng...
+3135	Nếu ngươi là kẻ đã vượt qua hệ thống bảo vệ nơi đây
+3136	có thể đọc xong ngươi sẽ nảy ý xấu..
+3137	nhưng sức mạnh vốn tuỳ vào tâm của người dùng
+3138	nên mong ngươi dùng cách sử dụng sức mạnh Ma vương bóng tối ta ghi lại đây vào việc tốt..."
+3139	Rốt cuộc là ý gì vậy...
+3140	Đoạn tiếp theo hình như đã bị ai đó xoá mất...
+3141	Xem phiến đá đằng kia nào?
+3142	A.. đ.. đây là...
+3143	"Ta... đã có một đứa con...
+3144	Đó là đứa con quý giá thương yêu của ta..
+3145	nhưng ta không nỡ đưa nó vào đây...
+3146	Nơi ta sắp đến từ giờ..
+3147	có thể quá đau khổ với đứa trẻ này..
+3148	Không.. may ra cũng có thể là nơi tốt đẹp..
+3149	nhưng điều đó không ai biết được...
+3150	Cuối cùng ta đã để đứa bé ở lối vào..."
+3151	S... sao lại thế này... Đây là phiến đá cha mình để lại...
+3152	Hừ.. phần sau lại bị xoá mất rồi..
+3153	Phải xem cả những phiến đá khác!
+3154	Cái này...
+3155	Hình như chữ trên hầu hết các phiến đá đều bị ai đó xoá mất..
+3156	Rốt cuộc là ai làm chuyện này...
+3157	Người đã vào được đây
+3158	chỉ có mình.. và thầy Rene..
+3159	Không lẽ... là thầy?!
+3160	N.. nghĩ lại thì lần trước đến đây
+3161	thầy cũng chỉ chọn đúng một phiến trong cả đống phiến đá để đọc..
+3162	Lẽ nào..
+3163	Nhận ra rồi à!
+3164	Nhưng giờ thì muộn rồi!
+3165	Th.. thầy
+3166	Chuyện này là sao?
+3167	Rốt cuộc đã xảy ra chuyện gì vậy!
+3168	Chắc con đã đoán ra rồi chứ...?
+3169	Giết vua, nổi loạn, Death Knight, chín nghìn chín trăm chín mươi chín vật tế....
+3170	Tất cả đều do ta sắp đặt.
+3171	S.. sao lại!
+3172	Vậy việc Ngài Dager trở thành Death Knight...
+3173	và bao nhiêu người phải chết
+3174	đều là do thầy sắp đặt sao?
+3175	Quả nhiên, hiểu nhanh thật đáng khen.
+3176	Giờ ta đã có trong tay linh hồn Death Knight...
+3177	Nghĩa là ta có thể dùng sức mạnh của Ma vương..
+3178	Chẳng hạn như thế này!
+3179	...Hự
+3180	....Gràaa!!
+3181	M.. một mình mà gọi được Vũ khí ma đạo...
+3182	Lần trước khi ta
+3183	triệu hồi Vũ khí ma đạo ở đây
+3184	ta đã phải mượn sức mạnh của di tích...
+3185	Nhưng giờ chính ta đã có đủ sức mạnh
+3186	để dung hợp với Vũ khí ma đạo! Ha ha ha!
+3187	Hả? V.. vậy Vũ khí ma đạo lần đó là...
+3188	Giá mà lúc đó ngươi chết đi thì đỡ phiền..
+3189	Mà thôi kệ.
+3190	Với sức mạnh Ma vương, ta sắp
+3191	dùng phép mà Heinkel chỉ cho
+3192	để đến một thế giới khác...
+3193	Ở nơi đó ta sẽ dùng sức mạnh này để sống vĩnh hằng
+3194	và thống trị thế giới!
+3195	Thế giới do Alpha thống trị ta đã chán ngấy rồi!
+3196	Ha ha ha! Ta cũng sẽ giết ngươi ở đây.
+3197	Thế giới khác..?
+3198	Hy sinh bao nhiêu người như vậy
+3199	mà thứ ông muốn chỉ có thế thôi sao?!
+3200	Hừ. Câm miệng!
+3201	Ngươi không hiểu đâu..!
+3202	Thực lực ta tưởng là mạnh nhất thế gian... lại không bằng
+3203	một gã ăn mày như thế..
+3204	Khà khà.. nhưng giờ thì sức mạnh hắn từng có
+3205	ta cũng có rồi...
+3206	Nhưng hắn cũng đã biết..
+3207	có được sức mạnh này thì không thể sống ở thế giới này..
+3208	Thần sáng tạo Alpha đâu đời nào để yên!
+3209	Thứ sức mạnh đe doạ chính mình!
+3210	Nhưng hắn đã tìm ra!
+3211	Khà khà... Ngươi biết là gì không?
+3212	Đ.. đó là gì..?
+3213	Vũ trụ song song...
+3214	Giống thế giới ta đang ở nhưng lại khác..
+3215	sự thật là có vô số thế giới khác trải dài vô tận..
+3216	Hắn biết sự thật đó
+3217	nên đã bỏ ngươi lại mà một mình sang thế giới khác...
+3218	Để tránh Alpha!
+3219	Nhưng! Khác với hắn, ta có giấc mơ
+3220	lớn lao hơn nhiều!
+3221	Đó là tập hợp những ta ở các thế giới khác để đánh bại Thần sáng tạo Alpha.
+3222	Tất nhiên ta nào chống lại thì chỉ có chết.. ...
+3223	...Ông...
+3224	không phải thầy Rene mà tôi từng biết...
+3225	Nếu ông định làm chuyện đó thì tôi sẽ ngăn lại!
+3226	Đã đến lúc chấm dứt cơn ác mộng này!
+3227	Đến thế giới mới...
+3228	Hự.. con đã trưởng thành rồi.. Sebastian..
+3229	Th.. thầy Rene...
+3230	Thầy đã tỉnh lại rồi sao...?
+3231	C.. con đã làm gì thế này..
+3232	Đừng lại gần!
+3233	Lại gần ta thêm nữa con cũng sẽ bị vấy bẩn..
+3234	Đ.. thầy nói vậy là sao?
+3235	Dù sao.. ta cũng sắp chết... ta sẽ kể hết cho con..
+3236	Sau ngày gặp Heinkel ta đã thay đổi...
+3237	Tâm của Ma vương trong người hắn đã xâm chiếm ta...
+3238	Rồi đến một lúc ta biết được.. cách để có sức mạnh Ma vương...
+3239	Và sau đó sẽ không thể ở lại nơi này được nữa..
+3240	sự thật..là vậy...
+3241	Cuối cùng ta lừa Kairu và Sultan
+3242	khiến Dager sa ngã... hấp thụ linh hồn nó để có sức mạnh Ma vương..
+3243	Nhưng rốt cuộc không thể thoát khỏi thế giới này...
+3244	Nhưng con nhớ cho kỹ...ngoài ta ra, những ta ở thế giới khác
+3245	có thể đã thoát ra được và đang định làm chuyện giống ta...
+3246	Nếu bọn họ đến thế giới này
+3247	thì Sebastian con... sẽ làm gì....
+3248	Ngoài Alpha ra không gì có thể ngăn được họ...
+3249	S.. sao lại....
+3250	C.. con sẽ ngăn bọn họ lại..
+3251	Dù có chuyện gì đi nữa!
+3252	Con sẽ không để ai phải hy sinh thêm nữa!
+3253	Khà khà.. với tính cách của con, ta đã nghĩ con sẽ nói vậy...
+3254	Ta sẽ cho con biết một điều hay...
+3255	Chắc con cũng đã đến đó vài lần...
+3256	Hầm ngục kho báu....
+3257	Chính hầm ngục kho báu đó có kết nối phần nào với thế giới khác...
+3258	Nếu con lọt vào bảng xếp hạng Lord hầm ngục..
+3259	và hợp sức với họ thì một ngày nào đó
+3260	sẽ có thể ngăn được những ta ở thế giới khác...
+3261	Khụ khụ....
+3262	Hự.. ta nói nhiều quá rồi...
+3263	Ở lại mạnh khoẻ nhé Sebastian... Từ giờ hãy cùng mọi người tích tụ sức mạnh ở hầm ngục kho báu.. hừ hừ..
+3264	Rồi sẽ có ngày ta quay lại..
+3265	Áaaa!!!!!!
+3266	Th.. thầy... sao lại thế này...
+3267	Không còn cách nào khác.. chính mình đã khiến thầy ra đi..
+3268	Theo lời thầy dặn
+3269	từ giờ mình phải thử tiếp xúc với thế giới khác ở hầm ngục kho báu...
+3270	Hầm ngục à....
+3271	Phải. Đến Sky Valley, nơi có nhiều hầm ngục nhất thôi!
+3272	Chuỗi thế giới giống mà khác...
+3273	Nơi Sebastian tái sinh.. không phải thế giới cậu từng biết..
+3274	mà là một thế giới khác...
+3275	Có người từng nghĩ...
+3276	Nếu lựa chọn của mình khác đi thì sẽ ra sao...
+3277	Không phải con đường ta đã chọn...
+3278	nếu có con đường khác thì đó sẽ là đường nào...
+3279	Thế giới khác của bạn mang hình dạng gì...
+3280	Bạn có thể vừa nghĩ về nó vừa chờ tôi không...
+3281	Nếu bạn chờ tôi..
+3282	tôi..sẽ đưa bạn đi..
+3283	Đến một câu chuyện và thế giới khác..
+3284	Hãy...chờ tôi....
+3285	Cúi chào~ (__)
+3286	Cảm ơn bạn đã chơi đến cuối cùng.
+3287	-Toàn thể đội ngũ Wine Mobile-
+3288	Từ giờ hãy đến gặp
+3289	pháp sư Bastinlu ở Sky Valley
+3290	và cùng những người chơi khác
+3291	bảo vệ các hầm ngục từng bị phong ấn nhé.^^
+3292	Ít lâu sau, Innis nhờ Rene giúp đỡ
+3293	đã bôn ba khắp nơi để xây dựng
+3294	một đất nước nơi quý tộc và
+3295	thường dân cùng chung sống, còn Alicia
+3296	trở thành sơ bề trên của thần điện,
+3297	cứu rỗi biết bao người.
+3298	Còn Sebastian...
+3299	từ chối được đối đãi như anh hùng..
+3300	cậu đi tìm những ghi chép mà
+3301	Death Knight.. không, Dager từng nói
+3302	là do cha cậu để lại, thám hiểm
+3303	khắp các hầm ngục, và gần đây có tin
+3304	đồn cậu xuất hiện ở Sky Valley.
+3305	Nhân vật chính Sebastian của chúng ta đã ngăn hiểm hoạ của một thế giới nhỏ..
+3306	Còn bạn..
+3307	có thể ngăn hiểm hoạ lớn hơn nữa không...?
+3308	Dù đó là một thế giới khác...
+3309	Nếu có ý chí...
+3310	Được ạ. Vậy con sẽ xem từng thứ một!
+3311	Con sẽ cho thầy thấy con chẳng cần học cơ bản làm gì!
+3312	Nào! Đây chính là! Sinh lực và ma lực của con!
+3313	Con tự rèn luyện đấy.. cỡ này thì đi đâu cũng chẳng bị ai đánh đâu! Ha ha!
+3314	Hừm.. thôi khoe khoang đi, giờ cho ta xem chỉ số của con nào.
+3315	Ha ha! Xem rồi đừng có giật mình vì chỉ số khủng nhé.
+3316	Con biết là phải bấm phím huỷ thì bảng thông tin mới hiện lên! E hèm!
+3317	Ồ! Đúng là cái này! Mình đúng là thiên tài? Nào, để xem trạng thái hiện giờ của mình xem?
+3318	... Tự chơi một mình cũng vui nhỉ..
+3319	Nào! Đây là chỉ số khủng của con!
+3320	(Gì đây... chỉ số tệ hại thế này..)
+3321	Thầy ngạc nhiên quá nên cứng họng rồi à?
+3322	Nào, con giải thích từng cái một, thầy tỉnh táo lại đi!
+3323	Cái này hiển thị danh hiệu đấy.
+3324	Danh hiệu được lưu lại kiểu như thế này.
+3325	Chọn danh hiệu ở đây thì chỉ số của danh hiệu đó sẽ tăng!
+3326	Hừm.. nhưng con chẳng có danh hiệu nào.
+3327	(Giật mình!) Đ.. đó là.. vì con còn nhỏ mà!!
+3328	Ha ha ha!!(Nhất quyết không được nói là mình không biết kiếm ở đâu!)
+3329	Nhân tiện, nghe nói danh hiệu sẽ tự nhận được
+3330	khi thoả mãn điều kiện nhất định không ai biết.
+3331	Ta cũng có vài cái.
+3332	Hình như còn có cả danh hiệu khá thú vị nữa.
+3333	À~ đúng rồi. Đúng. Là làm vậy đó!
+3334	Nào~ nào! Mau sang phần tiếp theo!
+3335	Sức mạnh xưa nay là biểu tượng của đàn ông! Có sức thì công vật lý mới mạnh, muốn cầm vũ khí đánh nhau thì phải có Sức mạnh!
+3336	Hừm.. chuyện đó ai mà chẳng biết?
+3337	Hự...
+3338	E hèm!!
+3339	Nào! Tăng Ma lực thì cũng tăng được công phép và mana (MP)! Dòng chiến binh thì gần như không cần!
+3340	Thằng nhóc này!
+3341	Knight còn dùng được phép, đâu phải là không cần?!
+3342	Muốn tăng lượng mana để dùng kỹ năng nhiều thì tăng Ma lực cũng không tệ.
+3343	Nhớ cho kỹ.
+3344	Xì...
+3345	Nhanh nhẹn! Người ta xưa nay phải nhanh nhẹn!
+3346	Nó tăng tỉ lệ Né tránh đòn của địch, nên có dư thì tăng một ít cũng không tệ!
+3347	Hừm.. nói đúng đấy, nhưng chỉ số Nhanh nhẹn tăng thêm nhìn thì có thể ít, nên phải lưu ý kỹ.
+3348	Cuối cùng là Thể lực và May mắn!
+3349	Thể lực ảnh hưởng tới Phòng thủ và sinh lực (HP), còn May mắn thì có chút hiệu ứng thêm cho tỉ lệ rơi vật phẩm và Chí mạng, đúng không?
+3350	Phải. Nói đúng lắm. Không có Thể lực thì sẽ quá dễ gục trước đòn của quái vật..
+3351	Tăng May mắn để tăng tỉ lệ Chí mạng gây sát thương lớn và tỉ lệ rơi vật phẩm tốt cũng không tệ.
+3352	Nói thêm một điều, chỉ số tăng bằng điểm chỉ số
+3353	sẽ hơi khác nhau theo đặc tính từng nghề, nhớ lấy.
+3354	Giờ thì mở thử túi của con xem nào?
+3355	Đây là túi để sắp xếp vật phẩm~. Con biết là thiếu túi thì có thể kiếm thêm.
+3356	Túi không dùng thì phá đi, còn vật phẩm tiêu hao thì gán được phím tắt! Sao nào, hoàn hảo chứ?
+3357	Nhân tiện, ta cho con một thông tin hay.
+3358	Phẩm cấp vật phẩm chia làm 5 bậc..
+3359	Gồm năm loại: [Normal](trắng), [Magic](xanh dương), [Rare](vàng), [Unique](xanh lá), [Legend](tím).
+3360	Vật phẩm Normal, Magic phù phép tối đa 1, 2 lần, từ Rare trở lên được 3 lần.
+3361	Ngoài ra vật phẩm Unique và Legend, gom đủ bộ trang bị cùng tên mà mặc vào thì sẽ được thêm chỉ số.
+3362	Cái đó con cũng biết rồi!
+3363	(..G.. gì vậy..? Chẳng hiểu thầy nói gì. Chết thật;)
+3364	Đây là chỗ để mặc hoặc tháo trang bị.
+3365	Phải. Mặc trang bị ở đây thì xem ngay được chỉ số của con, nên kiểm tra thường xuyên.
+3366	Đây là bảng sắp xếp kỹ năng.
+3367	Kỹ năng có nhiều loại khác nhau tuỳ theo nghề, cứ học theo sở thích.
+3368	Nói thêm cho con biết,
+3369	trong các kỹ năng sau Chuyển nghề có loại gọi là kỹ năng tiên quyết, phải học kỹ năng nhất định đến mức nào đó mới học được
+3370	nên khi học những kỹ năng đó, học không được thì đừng nổi nóng, hãy đáp ứng điều kiện tiên quyết trước.
+3371	Mà con muốn học loại kỹ năng nào?
+3372	Con nhất định muốn học kỹ năng diệt gọn cả đám!
+3373	(... Quả nhiên cần dạy dỗ thêm..)
+3374	E hèm! Mà này Sebastian! Con có biết [Hủy chiêu] không.
+3375	Hửm? Hủy chiêu?
+3376	Họ hàng với kẹo à?
+3377	(.....Biết làm sao đây...)
+3378	Gán kỹ năng vào phím tắt thì dùng được trong trận đấu.
+3379	Cái đó con cũng biết!
+3380	Hừm.. giải thích kỹ thì,
+3381	nếu đang đánh thường hoặc đang dùng kỹ năng mà bấm kỹ năng khác trên phím tắt,
+3382	kỹ năng đang thi triển sẽ bị huỷ và kỹ năng tiếp theo phát động ngay, tạo được nhiều hiệu ứng combo.
+3383	Đó chính là tính năng Hủy chiêu!
+3384	À.. vậy chỉ cần quen tay là có thể đánh rất hoa mỹ rồi!
+3385	Mỗi người có thể tạo tổ hợp theo cá tính riêng.
+3386	Ở đây còn xem trước được kỹ năng học được khi Chuyển nghề.
+3387	Nào~ sang phần tiếp theo nhé?
+3388	Đây là chỗ hiển thị thông tin nhiệm vụ.
+3389	Không biết phải làm gì thì xem kỹ ở đây sẽ biết việc cần làm.
+3390	Con cũng biết M là nhiệm vụ chính, S là nhiệm vụ phụ!
+3391	Hừm.. phải.
+3392	Quan trọng là xem kỹ và hiểu vị trí mục tiêu, nội dung, và điều kiện hoàn thành nhiệm vụ ở cuối cùng.
+3393	Đây là chỗ để cài đặt chung của trò chơi hoặc kết nối mạng.
+3394	Phải. Nhưng dù tò mò thì để sau hãy xem từng mục.
+3395	Còn lưu game thì bấm phím gọi cũng được, khá tiện nhỉ?
+3396	Vâng! Cái đó chắc tiện lắm!
+3397	Giờ ta tìm hiểu sơ qua về di chuyển và tấn công.
+3398	Trước tiên, di chuyển bằng phím lên, xuống, trái, phải hoặc phím 2, 4, 6, 8.
+3399	Thế này ạ?
+3400	Phải! Khởi động như thế. Khi cần có thể bấm liên tiếp cùng một hướng để lướt.
+3401	Lướt thì mỗi nghề một khác..
+3402	Trước hết Slasher lao thẳng phía trước đẩy lùi kẻ địch!! Sức xung phong thật đáng nể!
+3403	Còn Knight thì đẩy mạnh kẻ địch phía trước!
+3404	Ngược lại Assassin dùng thuật ẩn thân trong bóng, Magician thi triển Blink, di chuyển nhanh bỏ qua kẻ địch,
+3405	lao nhanh về phía trước, nên lối đánh mỗi nghề lại khác nhau!!
+3406	Nào~! Giờ thử tấn công đi!
+3407	Ừm~ hôm nay người ngợm thấy ổn đấy?
+3408	Tuỳ nghề mà khác, nhưng bấm liên tục phím tấn công thì có thể đánh liên hoàn.
+3409	Tất nhiên cũng có thể dùng kỹ năng để tạo đòn liên hoàn. Giờ xem phím tắt kỹ năng nào.
+3410	À~ đây là phím tắt.
+3411	Phải, muốn dùng phím tắt mặc định thì bấm số trên phím tắt từng kỹ năng là dùng được kỹ năng đó.
+3412	Còn có thể dùng nút # để đổi sang ô phụ, sau này thử xem.
+3413	À phải! Cấp 20 thì Chuyển nghề, cấp 50 thì Thức tỉnh được!
+3414	Đến cấp đó thì tìm huấn luyện viên "Gerard" ở mỗi làng.
+3415	Thầy biết chú Gerard ạ?
+3416	Tất nhiên! Ai Chuyển nghề cũng phải đến nói chuyện với người nhà Gerard.
+3417	Thôi...coi như xem qua hết rồi.
+3418	Giờ ta tặng quà cho con
+3419	Oa! Quà gì vậy ạ?
+3420	Con đã học cơ bản đúng lời ta..
+3421	nên ta cho con 10 bình HP, MP cơ bản mỗi loại, 2 Đá cường hóa hạ cấp và 2 Đá phép hạng C.
+3422	Ồ!! Đúng lúc con sắp hết bình thuốc!
+3423	Con có làm gì đặc biệt đâu mà được nhận thế này?
+3424	Lại còn Đá cường hóa là chất xúc tác làm trang bị mạnh lên, Đá phép là chất xúc tác phù phép cho vật phẩm..? Thứ quý thế này...
+3425	Ha ha. Cứ nhận đi.
+3426	Con đã là đệ tử của ta thì ta phải cho gì đó,
+3427	nhưng giờ ta chỉ có mấy thứ này thôi, đừng thất vọng quá..
+3428	Cường hóa và Phù phép thì đến lò rèn là làm được.
+3429	Vâng.. Con cảm ơn thầy Rene!
+3430	Ha ha.. thái độ khác hẳn rồi.
+3431	Giờ đánh với bọn kia để làm quen nào!
+3432	Nào! Xông lên~ Sebastian!
+3433	Dạ? K.. kia là Troll mà? Nhất định phải đánh sao?
+3434	Dũng khí lúc cứu ta đi đâu rồi! Mau chạy tới!
+3435	À phải! Bấm phím * thì hiện bản đồ nhỏ, bấm lần nữa thì hiện bản đồ toàn cảnh, con biết rồi chứ?
+3436	Hừ.. con biết rồi! Haizz..
+3437	Đành vậy. Nào! Ta tới đây! Lũ kia!
+3438	Mấy cái đó con không cần!
+3439	Hạ bọn kia là được chứ gì?
+3440	Nào! Ta tới đây! Lũ kia!
+3441	.. Câu hỏi thứ hai....
+3442	Hả..? Này!
+3443	Không phải chỉ một câu thôi sao?
+3444	Hừ.. đành vậy, làm tới cùng xem!
+3445	Chuyển nghề thì tìm Gerard...Vậy ai là người dịch chuyển cho ngươi?
+3446	Hepburn
+3447	Luke
+3448	.. Câu hỏi thứ ba....
+3449	Vẫn chưa xong à?
+3450	Haizz...dễ quá phát chán..
+3451	Thứ tự phẩm cấp vật phẩm nào là đúng?
+3452	Normal,Rare,Unique,Magic,Legend
+3453	Normal,Magic,Rare,Unique,Legend
+3454	Đã giải hết mọi câu hỏi...
+3455	Ồ.. ở chỗ này lại có cửa..
+3456	Nào! Thầy ơi mau đi thôi!
+3457	Được!
+3458	Trả lời sai nên các ngươi là kẻ xâm nhập trái phép.. Phải chịu phạt..
+3459	Đây là Label Town.. làng nơi mình sống.
+3460	Đây là quán trọ. Cô Jamie trông coi.
+3461	Phía dưới quán trọ có chú Randalph, đội trưởng lính đánh thuê.
+3462	Cửa hàng của làng mình. Có chú Phil thợ rèn giỏi và chú Ronnie bán tạp hoá.
+3463	Nhà bà Emma, người cố chấp nhất làng. Lúc nào cũng thấy bà đan len.. định dùng làm gì nhỉ?
+3464	Dinh thự của lãnh chúa béo ú Liotar. Đúng là tên đáng ghét.
+3465	Đây là quảng trường giữa làng, có chú Hepburn dịch chuyển, chú Luke bán hàng rong và huấn luyện viên Gerard.
+3466	Giờ đi kiếm thịt cua thôi nhỉ?
+3467	Đây là Eastern City
+3468	Nơi Bá tước Huxley cai quản, nhưng dân trong lãnh địa có vẻ sống cũng không tệ.
+3469	Đặc biệt ở đây ngoài cửa hàng, quán trọ còn có cả nhà thờ!
+3470	Đây là Lui City
+3471	Vùng được biết là lãnh địa của nhà Elliot, nơi tiểu thư Innis ở.
+3472	Nghe nói ai muốn Thức tỉnh thì có thể làm nhiệm vụ ở đây.
+3473	Hôm nay đến ngủ hả.
+3474	Nghỉ ngơi cho khoẻ, mai gặp nhé.
+3475	Ngủ đủ giấc sẽ rất có ích cho hoạt động hôm sau.
+3476	Nghỉ ngơi cho khoẻ nhé.^^
+3477	Mọi tiện nghi tôi sẽ cố hết sức lo cho, cứ yên tâm nghỉ đi.
+3478	Giường đá mát lắm đấy.
+3479	Chỗ này hình như bị cấm ra vào. Lần sau quay lại vậy.
+3480	Khoá chặt rồi. Rốt cuộc cửa này thông tới đâu nhỉ?
+3481	Vẫn còn việc phải làm. Chỗ này để sau hãy đi.
+3482	Vẫn chưa có chuyến tàu nào chạy.
+3483	Chỗ này có vẻ không phải nơi muốn đi là đi được?
+3484	Muốn vào hầm ngục này thì cần giấy phép. Đến gặp chú Randalph đi.
+3485	Đây là hầm ngục bị phong toả bởi sức mạnh huyền bí của Đại pháp sư Bastinlu.
+3486	Không có Bastinlu giúp thì không ai vào được đây.
+3487	Ơ kìa? Chỗ này hình như bị sức mạnh huyền bí nào đó chặn lại.
+3488	Khoá chặt rồi. Có cách nào vào được đây không nhỉ?
+3489	Muốn thám hiểm hầm ngục này thì nói chuyện với chiến binh tộc Orc Lirke xem.
+3490	Giờ chắc không cần đi lối này.
+3491	À phải! Lối này bị đống đá chặn mất rồi.
+3492	Chỗ này khoá chặt rồi.
+3493	Vẫn còn việc phải làm!
