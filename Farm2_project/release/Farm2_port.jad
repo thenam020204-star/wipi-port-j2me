@@ -1,0 +1,12 @@
+MIDlet-1: Nong Trai Vui Ve 2,/icon.png,wipi.host.FarmMidlet
+MIDlet-Name: Nong Trai Vui Ve 2
+MIDlet-Vendor: Com2us (J2ME port)
+MIDlet-Version: 1.0.0
+MicroEdition-Configuration: CLDC-1.1
+MicroEdition-Profile: MIDP-2.0
+Farm-Jlet: TheFarm2
+Farm-Screen: auto
+Farm-Scale: auto
+Farm-Save-Seed: 1
+MIDlet-Jar-URL: Farm2_port.jar
+MIDlet-Jar-Size: 1285783

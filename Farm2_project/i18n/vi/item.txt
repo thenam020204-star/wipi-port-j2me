@@ -1,0 +1,15 @@
+0=Nợ của Alfred
+1=Tờ rơi quỹ đầu tư
+2=Táo độc phù thủy
+3=Búp bê Barber
+4=Sương lạnh
+5=Viên thuốc thần bí
+6=Lon ăn xin
+7=Thư của Edward
+8=Canh cá Maggie
+9=Bản đồ kho báu
+10=Băng video
+11=Con cóc
+12=Củ cải trắng
+13=Thuốc của Lila
+14=Bộ rìu

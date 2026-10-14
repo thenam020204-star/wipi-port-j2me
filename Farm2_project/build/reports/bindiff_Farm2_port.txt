@@ -1,0 +1,947 @@
+CLASS CharacterDat.class
+  method <init>(LGameCanvas;)V:
+    instructions 216 -> 218
+  method ActionOk()V:
+    instructions 559 -> 561
+  method CheckDownAction()B:
+    instructions 336 -> 352
+  method CheckScript()V:
+    instructions 170 -> 172
+  method DrawCh(Lorg/kwis/msp/lcdui/Graphics;LImageData;)V:
+    instructions 5437 -> 5441
+  method EndQuest()V:
+    instructions 79 -> 81
+  method EndWork()V:
+    instructions 3329 -> 3333
+  method MapCheck(I)Z:
+    instructions 173 -> 177
+  method NextQuest()V:
+    instructions 51 -> 53
+  method PlayCh()V:
+    instructions 2232 -> 2244
+  method Scriptcheck(I)I:
+    instructions 616 -> 642
+  method SubTalk(III)V:
+    instructions 1008 -> 1112
+
+RESOURCE CHANGED Data/NPC/0.dat 18737 -> 18737
+RESOURCE CHANGED Data/NPC/1.dat 26875 -> 26875
+RESOURCE CHANGED Data/NPC/2.dat 25266 -> 25266
+RESOURCE CHANGED Data/NPC/3.dat 24381 -> 24381
+RESOURCE CHANGED Data/Pet/0.pet 4303 -> 4303
+RESOURCE CHANGED Data/Pet/1.pet 4134 -> 4134
+RESOURCE CHANGED Data/Pet/10.pet 5017 -> 5017
+RESOURCE CHANGED Data/Pet/11.pet 4647 -> 4647
+RESOURCE CHANGED Data/Pet/12.pet 4591 -> 4591
+RESOURCE CHANGED Data/Pet/13.pet 4189 -> 4189
+RESOURCE CHANGED Data/Pet/14.pet 3672 -> 3672
+RESOURCE CHANGED Data/Pet/15.pet 3857 -> 3857
+RESOURCE CHANGED Data/Pet/16.pet 4265 -> 4265
+RESOURCE CHANGED Data/Pet/17.pet 4351 -> 4351
+RESOURCE CHANGED Data/Pet/18.pet 4734 -> 4734
+RESOURCE CHANGED Data/Pet/19.pet 3797 -> 3797
+RESOURCE CHANGED Data/Pet/2.pet 3962 -> 3962
+RESOURCE CHANGED Data/Pet/20.pet 4746 -> 4746
+RESOURCE CHANGED Data/Pet/21.pet 4934 -> 4934
+RESOURCE CHANGED Data/Pet/22.pet 5207 -> 5207
+RESOURCE CHANGED Data/Pet/23.pet 3710 -> 3710
+RESOURCE CHANGED Data/Pet/24.pet 4906 -> 4906
+RESOURCE CHANGED Data/Pet/3.pet 4914 -> 4914
+RESOURCE CHANGED Data/Pet/4.pet 4215 -> 4215
+RESOURCE CHANGED Data/Pet/5.pet 4098 -> 4098
+RESOURCE CHANGED Data/Pet/6.pet 3963 -> 3963
+RESOURCE CHANGED Data/Pet/7.pet 3275 -> 3275
+RESOURCE CHANGED Data/Pet/8.pet 4128 -> 4128
+RESOURCE CHANGED Data/Pet/9.pet 3580 -> 3580
+CLASS Effect.class
+  method DrawFade(Lorg/kwis/msp/lcdui/Graphics;)V:
+    - INVOKEVIRTUAL org/kwis/msp/lcdui/Graphics.drawRect (IIII)V
+    + INVOKESTATIC UiHud.tutRect (Lorg/kwis/msp/lcdui/Graphics;IIII)V
+    - INVOKEVIRTUAL org/kwis/msp/lcdui/Graphics.drawRect (IIII)V
+    + INVOKESTATIC UiHud.tutRect (Lorg/kwis/msp/lcdui/Graphics;IIII)V
+    - INVOKEVIRTUAL org/kwis/msp/lcdui/Graphics.drawRect (IIII)V
+    + INVOKESTATIC UiHud.tutRect (Lorg/kwis/msp/lcdui/Graphics;IIII)V
+    - INVOKEVIRTUAL org/kwis/msp/lcdui/Graphics.drawRect (IIII)V
+    + INVOKESTATIC UiHud.tutRect (Lorg/kwis/msp/lcdui/Graphics;IIII)V
+    - INVOKEVIRTUAL org/kwis/msp/lcdui/Graphics.drawRect (IIII)V
+    + INVOKESTATIC UiHud.tutRect (Lorg/kwis/msp/lcdui/Graphics;IIII)V
+    - INVOKEVIRTUAL org/kwis/msp/lcdui/Graphics.drawRect (IIII)V
+    + INVOKESTATIC UiHud.tutRect (Lorg/kwis/msp/lcdui/Graphics;IIII)V
+    - INVOKEVIRTUAL org/kwis/msp/lcdui/Graphics.drawRect (IIII)V
+    + INVOKESTATIC UiHud.tutRect (Lorg/kwis/msp/lcdui/Graphics;IIII)V
+    - INVOKEVIRTUAL org/kwis/msp/lcdui/Graphics.drawRect (IIII)V
+    + INVOKESTATIC UiHud.tutRect (Lorg/kwis/msp/lcdui/Graphics;IIII)V
+    - INVOKEVIRTUAL org/kwis/msp/lcdui/Graphics.drawRect (IIII)V
+    + INVOKESTATIC UiHud.tutRect (Lorg/kwis/msp/lcdui/Graphics;IIII)V
+    - INVOKEVIRTUAL org/kwis/msp/lcdui/Graphics.drawRect (IIII)V
+    + INVOKESTATIC UiHud.tutRect (Lorg/kwis/msp/lcdui/Graphics;IIII)V
+    - INVOKEVIRTUAL org/kwis/msp/lcdui/Graphics.drawRect (IIII)V
+    + INVOKESTATIC UiHud.tutRect (Lorg/kwis/msp/lcdui/Graphics;IIII)V
+    - INVOKEVIRTUAL org/kwis/msp/lcdui/Graphics.drawRect (IIII)V
+    + INVOKESTATIC UiHud.tutRect (Lorg/kwis/msp/lcdui/Graphics;IIII)V
+  method LoadImg(II)V:
+    - INVOKEVIRTUAL java/lang/Class.getResourceAsStream (Ljava/lang/String;)Ljava/io/InputStream;
+    + INVOKESTATIC wipi/host/Res.open (Ljava/lang/Class;Ljava/lang/String;)Ljava/io/InputStream;
+    - INVOKEVIRTUAL java/lang/Class.getResourceAsStream (Ljava/lang/String;)Ljava/io/InputStream;
+    + INVOKESTATIC wipi/host/Res.open (Ljava/lang/Class;Ljava/lang/String;)Ljava/io/InputStream;
+    - INVOKEVIRTUAL java/lang/Class.getResourceAsStream (Ljava/lang/String;)Ljava/io/InputStream;
+    + INVOKESTATIC wipi/host/Res.open (Ljava/lang/Class;Ljava/lang/String;)Ljava/io/InputStream;
+
+CLASS GameCanvas.class
+  method <init>(LTheFarm2;)V:
+    instructions 616 -> 726
+  method BuySeed(I)V:
+    instructions 83 -> 85
+  method DrawDay(Lorg/kwis/msp/lcdui/Graphics;)V:
+    instructions 87 -> 4
+  method DrawDown(Lorg/kwis/msp/lcdui/Graphics;Z)V:
+    instructions 26 -> 5
+  method DrawDownAction(Lorg/kwis/msp/lcdui/Graphics;)V:
+    instructions 854 -> 4
+  method DrawEnding0(Lorg/kwis/msp/lcdui/Graphics;)V:
+    instructions 60 -> 62
+  method DrawEnding2(Lorg/kwis/msp/lcdui/Graphics;)V:
+    instructions 368 -> 382
+  method DrawGameMenu(Lorg/kwis/msp/lcdui/Graphics;)V:
+    instructions 177 -> 4
+  method DrawHp(Lorg/kwis/msp/lcdui/Graphics;)V:
+    instructions 147 -> 4
+  method DrawInven(Lorg/kwis/msp/lcdui/Graphics;I)V:
+    instructions 1506 -> 1520
+  method DrawMenu(Lorg/kwis/msp/lcdui/Graphics;)V:
+    instructions 277 -> 4
+  method DrawMenuItem(Lorg/kwis/msp/lcdui/Graphics;)V:
+    instructions 327 -> 4
+  method DrawMiniTime(Lorg/kwis/msp/lcdui/Graphics;II)V:
+    instructions 108 -> 6
+  method DrawPoint(Lorg/kwis/msp/lcdui/Graphics;)V:
+    instructions 4148 -> 4
+  method DrawPointBox(Lorg/kwis/msp/lcdui/Graphics;)V:
+    instructions 201 -> 203
+  method DrawPopup(Lorg/kwis/msp/lcdui/Graphics;)V:
+    instructions 109 -> 4
+  method DrawTalk(Lorg/kwis/msp/lcdui/Graphics;)V:
+    instructions 514 -> 4
+  method DrawTime(Lorg/kwis/msp/lcdui/Graphics;)V:
+    instructions 393 -> 4
+  method DrawTitle(Lorg/kwis/msp/lcdui/Graphics;)V:
+    instructions 833 -> 837
+  method DrawUp(Lorg/kwis/msp/lcdui/Graphics;)V:
+    instructions 30 -> 4
+  method DrawUpState(Lorg/kwis/msp/lcdui/Graphics;)V:
+    instructions 512 -> 4
+  method DrawWeather(Lorg/kwis/msp/lcdui/Graphics;)V:
+    instructions 197 -> 4
+  method GameKey()V:
+    instructions 345 -> 347
+  method GameMenuKey()V:
+    instructions 2817 -> 2849
+  method InvenKey(I)V:
+    instructions 352 -> 354
+  method LoadExplanDat()V:
+    instructions 762 -> 3
+  method LoadGame(I)V:
+    instructions 1188 -> 1196
+  method LoadGameMenu(I)V:
+    - INVOKESTATIC org/kwis/msp/lcdui/Image.createImage (II)Lorg/kwis/msp/lcdui/Image;
+    + INVOKESTATIC UiGM.buf (II)Lorg/kwis/msp/lcdui/Image;
+  method LoadKey()V:
+    instructions 419 -> 421
+  method LoadLotto(Z)V:
+    instructions 904 -> 908
+  method LoadMini(I)V:
+    - INVOKEVIRTUAL java/lang/Class.getResourceAsStream (Ljava/lang/String;)Ljava/io/InputStream;
+    + INVOKESTATIC wipi/host/Res.open (Ljava/lang/Class;Ljava/lang/String;)Ljava/io/InputStream;
+  method LoadPetInfo(I)V:
+    instructions 216 -> 4
+  method LoadPetShop()V:
+    - INVOKESTATIC org/kwis/msp/lcdui/Image.createImage (II)Lorg/kwis/msp/lcdui/Image;
+    + INVOKESTATIC UiGM.buf (II)Lorg/kwis/msp/lcdui/Image;
+  method LoadPoint()I:
+    instructions 135 -> 137
+  method LoadShopMenu(I)V:
+    - INVOKESTATIC org/kwis/msp/lcdui/Image.createImage (II)Lorg/kwis/msp/lcdui/Image;
+    + INVOKESTATIC UiGM.buf (II)Lorg/kwis/msp/lcdui/Image;
+  method LoadSkillShop(I)V:
+    - INVOKESTATIC org/kwis/msp/lcdui/Image.createImage (II)Lorg/kwis/msp/lcdui/Image;
+    + INVOKESTATIC UiGM.buf (II)Lorg/kwis/msp/lcdui/Image;
+  method MakeGameMenu(Lorg/kwis/msp/lcdui/Graphics;)V:
+    instructions 962 -> 4
+  method MakePetShop(Lorg/kwis/msp/lcdui/Graphics;)V:
+    instructions 232 -> 4
+  method MakeQuestExplan()V:
+    instructions 161 -> 3
+  method MakeShopMenu(Lorg/kwis/msp/lcdui/Graphics;I)V:
+    instructions 475 -> 5
+  method MakeSkillShop(Lorg/kwis/msp/lcdui/Graphics;)V:
+    instructions 296 -> 4
+  method MakeSubBuf()V:
+    instructions 150 -> 3
+  method MakeTheFarmSub(Lorg/kwis/msp/lcdui/Graphics;IIII)V:
+    instructions 357 -> 377
+  method PlayGame(Lorg/kwis/msp/lcdui/Graphics;)V:
+    instructions 773 -> 775
+  method PlayMini0(Lorg/kwis/msp/lcdui/Graphics;)V:
+    instructions 443 -> 461
+  method PlayMini1(Lorg/kwis/msp/lcdui/Graphics;)V:
+    instructions 1084 -> 1100
+  method PlayMini2(Lorg/kwis/msp/lcdui/Graphics;)V:
+    instructions 795 -> 813
+  method SaveGame(Z)V:
+    instructions 1117 -> 1123
+  method init()V:
+    instructions 116 -> 3
+  method keyNotify(II)Z:
+    - INVOKESTATIC com/skt/m/Device.invokeWapBrowser (Ljava/lang/String;)V
+    + INVOKESTATIC wipi/skt/Device.invokeWapBrowser (Ljava/lang/String;)V
+    - INVOKESTATIC com/skt/m/Device.invokeWapBrowser (Ljava/lang/String;)V
+    + INVOKESTATIC wipi/skt/Device.invokeWapBrowser (Ljava/lang/String;)V
+    - INVOKESTATIC com/skt/m/Device.invokeWapBrowser (Ljava/lang/String;)V
+    + INVOKESTATIC wipi/skt/Device.invokeWapBrowser (Ljava/lang/String;)V
+  method paint(Lorg/kwis/msp/lcdui/Graphics;)V:
+    instructions 3473 -> 4
+
+RESOURCE CHANGED Image/Ch/ChOpen.dat 25326 -> 25326
+RESOURCE CHANGED Image/Ch/ChStandard.dat 10616 -> 10616
+RESOURCE CHANGED Image/Ch/Farm1.dat 6432 -> 6432
+RESOURCE CHANGED Image/Ch/Fishing.dat 3644 -> 3644
+RESOURCE CHANGED Image/Ch/Marry.dat 25608 -> 25608
+RESOURCE CHANGED Image/Ch/Trea.dat 2640 -> 2640
+RESOURCE CHANGED Image/Ch/Work.dat 5821 -> 5821
+RESOURCE CHANGED Image/Crop/Complet.dat 16821 -> 16821
+RESOURCE CHANGED Image/Crop/Process.dat 18121 -> 18121
+RESOURCE CHANGED Image/Crop/Seed.dat 1776 -> 1776
+RESOURCE CHANGED Image/Effect/Bird.dat 1760 -> 1760
+RESOURCE CHANGED Image/Effect/Crab.dat 580 -> 580
+RESOURCE CHANGED Image/Effect/Light.dat 1816 -> 1816
+RESOURCE CHANGED Image/Effect/Rabbit0.dat 1872 -> 1872
+RESOURCE CHANGED Image/Effect/Rain.lbm 45 -> 45
+RESOURCE CHANGED Image/Meet/0.dat 2550 -> 2550
+RESOURCE CHANGED Image/Meet/1.dat 15590 -> 15590
+RESOURCE CHANGED Image/Meet/2.dat 17583 -> 17583
+RESOURCE CHANGED Image/Meet/3.dat 2312 -> 2312
+RESOURCE CHANGED Image/Menu/Sub0.dat 4357 -> 4357
+RESOURCE CHANGED Image/Menu/Sub1.dat 1831 -> 1831
+RESOURCE CHANGED Image/Menu/Sub2.dat 7992 -> 7992
+RESOURCE CHANGED Image/Mini/0.dat 15000 -> 15000
+RESOURCE CHANGED Image/Mini/1.dat 8824 -> 8824
+RESOURCE CHANGED Image/Mini/2.dat 5396 -> 5396
+RESOURCE CHANGED Image/Object/Ga0.dat 1831 -> 1831
+RESOURCE CHANGED Image/Object/Ga1.dat 2144 -> 2144
+RESOURCE CHANGED Image/Object/Ga2.dat 3792 -> 3792
+RESOURCE CHANGED Image/Object/O00.dat 15336 -> 15336
+RESOURCE CHANGED Image/Object/O000.dat 23856 -> 23856
+RESOURCE CHANGED Image/Object/O0000.dat 31808 -> 31808
+RESOURCE CHANGED Image/Object/O0003.dat 21016 -> 21016
+RESOURCE CHANGED Image/Object/O000_1.dat 23856 -> 23856
+RESOURCE CHANGED Image/Object/O000_2.dat 23856 -> 23856
+RESOURCE CHANGED Image/Object/O000_3.dat 23856 -> 23856
+RESOURCE CHANGED Image/Object/O001.dat 25560 -> 25560
+RESOURCE CHANGED Image/Object/O001_1.dat 25560 -> 25560
+RESOURCE CHANGED Image/Object/O001_2.dat 25560 -> 25560
+RESOURCE CHANGED Image/Object/O001_3.dat 25560 -> 25560
+RESOURCE CHANGED Image/Object/O002.dat 28400 -> 28400
+RESOURCE CHANGED Image/Object/O002_1.dat 28400 -> 28400
+RESOURCE CHANGED Image/Object/O002_2.dat 28400 -> 28400
+RESOURCE CHANGED Image/Object/O002_3.dat 28400 -> 28400
+RESOURCE CHANGED Image/Object/O003.dat 28400 -> 28400
+RESOURCE CHANGED Image/Object/O005.dat 14664 -> 14664
+RESOURCE CHANGED Image/Object/O006.dat 6864 -> 6864
+RESOURCE CHANGED Image/Object/O009.dat 1872 -> 1872
+RESOURCE CHANGED Image/Object/O00_1.dat 15336 -> 15336
+RESOURCE CHANGED Image/Object/O00_2.dat 15336 -> 15336
+RESOURCE CHANGED Image/Object/O00_3.dat 15336 -> 15336
+RESOURCE CHANGED Image/Object/O01.dat 13064 -> 13064
+RESOURCE CHANGED Image/Object/O01_1.dat 13064 -> 13064
+RESOURCE CHANGED Image/Object/O01_2.dat 13064 -> 13064
+RESOURCE CHANGED Image/Object/O01_3.dat 13064 -> 13064
+RESOURCE CHANGED Image/Object/O02.dat 15904 -> 15904
+RESOURCE CHANGED Image/Object/O02_1.dat 15904 -> 15904
+RESOURCE CHANGED Image/Object/O02_2.dat 15904 -> 15904
+RESOURCE CHANGED Image/Object/O02_3.dat 15904 -> 15904
+RESOURCE CHANGED Image/Tile/T00.dat 18760 -> 18760
+RESOURCE CHANGED Image/Tile/T0000.dat 21976 -> 21976
+RESOURCE CHANGED Image/Tile/T0003.dat 27872 -> 27872
+RESOURCE CHANGED Image/Tile/T0005.dat 8424 -> 8424
+RESOURCE CHANGED Image/Tile/T005.dat 3432 -> 3432
+RESOURCE CHANGED Image/Tile/T005G.dat 1248 -> 1248
+RESOURCE CHANGED Image/Tile/T006.dat 10608 -> 10608
+RESOURCE CHANGED Image/Tile/T006G.dat 1248 -> 1248
+RESOURCE CHANGED Image/Tile/T00G.dat 524 -> 524
+RESOURCE CHANGED Image/Tile/T00_1.dat 18760 -> 18760
+RESOURCE CHANGED Image/Tile/T00_1G.dat 524 -> 524
+RESOURCE CHANGED Image/Tile/T00_2.dat 18760 -> 18760
+RESOURCE CHANGED Image/Tile/T00_2G.dat 524 -> 524
+RESOURCE CHANGED Image/Tile/T00_3.dat 18760 -> 18760
+RESOURCE CHANGED Image/Tile/T00_3G.dat 524 -> 524
+RESOURCE CHANGED Image/Tile/T01.dat 23048 -> 23048
+RESOURCE CHANGED Image/Tile/T01G.dat 524 -> 524
+RESOURCE CHANGED Image/Tile/T01_1.dat 23048 -> 23048
+RESOURCE CHANGED Image/Tile/T01_1G.dat 524 -> 524
+RESOURCE CHANGED Image/Tile/T01_2.dat 23048 -> 23048
+RESOURCE CHANGED Image/Tile/T01_2G.dat 524 -> 524
+RESOURCE CHANGED Image/Tile/T01_3.dat 23048 -> 23048
+RESOURCE CHANGED Image/Tile/T01_3G.dat 524 -> 524
+RESOURCE CHANGED Image/Tile/T02.dat 19296 -> 19296
+RESOURCE CHANGED Image/Tile/T02G.dat 524 -> 524
+RESOURCE CHANGED Image/Tile/T02_1.dat 19296 -> 19296
+RESOURCE CHANGED Image/Tile/T02_1G.dat 524 -> 524
+RESOURCE CHANGED Image/Tile/T02_2.dat 19296 -> 19296
+RESOURCE CHANGED Image/Tile/T02_2G.dat 524 -> 524
+RESOURCE CHANGED Image/Tile/T02_3.dat 19296 -> 19296
+RESOURCE CHANGED Image/Tile/T02_3G.dat 524 -> 524
+RESOURCE CHANGED Image/Title/Menu.dat 5256 -> 5256
+RESOURCE CHANGED Image/UI/Down.dat 13456 -> 13456
+RESOURCE CHANGED Image/UI/GM.dat 6172 -> 6172
+RESOURCE CHANGED Image/UI/IItem.dat 2272 -> 2272
+RESOURCE CHANGED Image/UI/Imo.dat 2960 -> 2960
+RESOURCE CHANGED Image/UI/Item.dat 12180 -> 12180
+RESOURCE CHANGED Image/UI/Lotto.dat 2046 -> 2046
+RESOURCE CHANGED Image/UI/Money.dat 3884 -> 3884
+RESOURCE CHANGED Image/UI/NowAct.dat 6040 -> 6040
+RESOURCE CHANGED Image/UI/PShop.dat 4536 -> 4536
+RESOURCE CHANGED Image/UI/Reside.dat 1086 -> 1086
+RESOURCE CHANGED Image/UI/Shop.dat 4634 -> 4634
+RESOURCE CHANGED Image/UI/Skill.dat 6432 -> 6432
+RESOURCE CHANGED Image/UI/State.dat 5578 -> 5578
+RESOURCE CHANGED Image/UI/Tou.dat 1672 -> 1672
+RESOURCE CHANGED Image/UI/UP/MapName.dat 1293 -> 1293
+RESOURCE CHANGED Image/UI/Wea.dat 2899 -> 2899
+CLASS ImageData.class
+  method GetSize(Ljava/lang/String;)[I:
+    - INVOKEVIRTUAL java/lang/Class.getResourceAsStream (Ljava/lang/String;)Ljava/io/InputStream;
+    + INVOKESTATIC wipi/host/Res.open (Ljava/lang/Class;Ljava/lang/String;)Ljava/io/InputStream;
+  method LoadImage(Ljava/lang/String;)[Lorg/kwis/msp/lcdui/Image;:
+    - INVOKEVIRTUAL java/lang/Class.getResourceAsStream (Ljava/lang/String;)Ljava/io/InputStream;
+    + INVOKESTATIC wipi/host/Res.open (Ljava/lang/Class;Ljava/lang/String;)Ljava/io/InputStream;
+  method LoadMap(Ljava/lang/String;I)V:
+    - INVOKEVIRTUAL java/lang/Class.getResourceAsStream (Ljava/lang/String;)Ljava/io/InputStream;
+    + INVOKESTATIC wipi/host/Res.open (Ljava/lang/Class;Ljava/lang/String;)Ljava/io/InputStream;
+  method LoadMini(I)V:
+    - INVOKEVIRTUAL java/lang/Class.getResourceAsStream (Ljava/lang/String;)Ljava/io/InputStream;
+    + INVOKESTATIC wipi/host/Res.open (Ljava/lang/Class;Ljava/lang/String;)Ljava/io/InputStream;
+  method LoadPetShop(I)V:
+    - INVOKEVIRTUAL java/lang/Class.getResourceAsStream (Ljava/lang/String;)Ljava/io/InputStream;
+    + INVOKESTATIC wipi/host/Res.open (Ljava/lang/Class;Ljava/lang/String;)Ljava/io/InputStream;
+  method LoadTileObject(ILjava/lang/String;III[B)V:
+    - INVOKEVIRTUAL java/lang/Class.getResourceAsStream (Ljava/lang/String;)Ljava/io/InputStream;
+    + INVOKESTATIC wipi/host/Res.open (Ljava/lang/Class;Ljava/lang/String;)Ljava/io/InputStream;
+    - INVOKEVIRTUAL java/lang/Class.getResourceAsStream (Ljava/lang/String;)Ljava/io/InputStream;
+    + INVOKESTATIC wipi/host/Res.open (Ljava/lang/Class;Ljava/lang/String;)Ljava/io/InputStream;
+    - INVOKEVIRTUAL java/lang/Class.getResourceAsStream (Ljava/lang/String;)Ljava/io/InputStream;
+    + INVOKESTATIC wipi/host/Res.open (Ljava/lang/Class;Ljava/lang/String;)Ljava/io/InputStream;
+    - INVOKEVIRTUAL java/lang/Class.getResourceAsStream (Ljava/lang/String;)Ljava/io/InputStream;
+    + INVOKESTATIC wipi/host/Res.open (Ljava/lang/Class;Ljava/lang/String;)Ljava/io/InputStream;
+    - INVOKEVIRTUAL java/lang/Class.getResourceAsStream (Ljava/lang/String;)Ljava/io/InputStream;
+    + INVOKESTATIC wipi/host/Res.open (Ljava/lang/Class;Ljava/lang/String;)Ljava/io/InputStream;
+
+CLASS MapDat.class
+  method LoadCropData()V:
+    instructions 189 -> 187
+  method LoadItemName(I)V:
+    instructions 84 -> 82
+  method LoadMap(I)V:
+    instructions 853 -> 847
+  method LoadPopup(III)V:
+    instructions 420 -> 418
+  method LoadQuest(I)V:
+    instructions 238 -> 234
+  method LoadSkill()V:
+    instructions 152 -> 150
+  method PopUpOk(II)V:
+    instructions 2406 -> 2418
+  method SetMap()V:
+    - INVOKEVIRTUAL java/lang/Class.getResourceAsStream (Ljava/lang/String;)Ljava/io/InputStream;
+    + INVOKESTATIC wipi/host/Res.open (Ljava/lang/Class;Ljava/lang/String;)Ljava/io/InputStream;
+
+CLASS NPC.class
+  method CheckQuest(I)V:
+    instructions 5302 -> 5318
+  method DrawNPC(Lorg/kwis/msp/lcdui/Graphics;I)V:
+    instructions 3874 -> 3876
+  method DrawTalk(Lorg/kwis/msp/lcdui/Graphics;)V:
+    instructions 752 -> 4
+  method LoadAnimation(I)V:
+    instructions 102 -> 100
+  method LoadData(Ljava/lang/String;I)[B:
+    - INVOKEVIRTUAL java/lang/Class.getResourceAsStream (Ljava/lang/String;)Ljava/io/InputStream;
+    + INVOKESTATIC wipi/host/Res.open (Ljava/lang/Class;Ljava/lang/String;)Ljava/io/InputStream;
+  method LoadTalk(IILjava/lang/String;)V:
+    instructions 389 -> 385
+  method MakeNameBuf(ILjava/lang/String;)V:
+    instructions 107 -> 5
+  method NPCSetup(I)V:
+    instructions 328 -> 326
+  method TScript()V:
+    instructions 1663 -> 1673
+
+CLASS NetWork.class
+  method GetPhonenum()Ljava/lang/String;:
+    - INVOKESTATIC java/lang/System.getProperty (Ljava/lang/String;)Ljava/lang/String;
+    + INVOKESTATIC wipi/host/Sys.getProperty (Ljava/lang/String;)Ljava/lang/String;
+    - INVOKESTATIC java/lang/System.getProperty (Ljava/lang/String;)Ljava/lang/String;
+    + INVOKESTATIC wipi/host/Sys.getProperty (Ljava/lang/String;)Ljava/lang/String;
+    - INVOKESTATIC java/lang/System.getProperty (Ljava/lang/String;)Ljava/lang/String;
+    + INVOKESTATIC wipi/host/Sys.getProperty (Ljava/lang/String;)Ljava/lang/String;
+    - INVOKESTATIC java/lang/System.getProperty (Ljava/lang/String;)Ljava/lang/String;
+    + INVOKESTATIC wipi/host/Sys.getProperty (Ljava/lang/String;)Ljava/lang/String;
+    - INVOKESTATIC java/lang/System.getProperty (Ljava/lang/String;)Ljava/lang/String;
+    + INVOKESTATIC wipi/host/Sys.getProperty (Ljava/lang/String;)Ljava/lang/String;
+  method ReceiveCash()V:
+    instructions 323 -> 321
+  method ReceiveRank()V:
+    instructions 314 -> 312
+
+CLASS Pet.class
+  method CheckVersion()V:
+    instructions 176 -> 174
+  method DrawAllPet(Lorg/kwis/msp/lcdui/Graphics;I)V:
+    instructions 478 -> 480
+  method LoadPet2(II)V:
+    - INVOKEVIRTUAL java/lang/Class.getResourceAsStream (Ljava/lang/String;)Ljava/io/InputStream;
+    + INVOKESTATIC wipi/host/Res.open (Ljava/lang/Class;Ljava/lang/String;)Ljava/io/InputStream;
+  method LoadSkillExplan()V:
+    instructions 99 -> 97
+
+RESOURCE CHANGED Sound/b0.mmf 13537 -> 15
+RESOURCE CHANGED Sound/b1.mmf 2268 -> 15
+RESOURCE CHANGED Sound/b10.mmf 3334 -> 16
+RESOURCE CHANGED Sound/b11.mmf 1507 -> 16
+RESOURCE CHANGED Sound/b2.mmf 1823 -> 15
+RESOURCE CHANGED Sound/b3.mmf 3416 -> 15
+RESOURCE CHANGED Sound/b4.mmf 4816 -> 15
+RESOURCE CHANGED Sound/b5.mmf 2844 -> 15
+RESOURCE CHANGED Sound/b6.mmf 2668 -> 15
+RESOURCE CHANGED Sound/b7.mmf 827 -> 15
+RESOURCE CHANGED Sound/b8.mmf 3277 -> 15
+RESOURCE CHANGED Sound/b9.mmf 1328 -> 15
+RESOURCE CHANGED Sound/m0.mmf 4132 -> 15
+RESOURCE CHANGED Sound/m1.mmf 1436 -> 15
+RESOURCE CHANGED Sound/m10.mmf 1235 -> 16
+RESOURCE CHANGED Sound/m11.mmf 292 -> 16
+RESOURCE CHANGED Sound/m12.mmf 2197 -> 16
+RESOURCE CHANGED Sound/m13.mmf 1475 -> 16
+RESOURCE CHANGED Sound/m14.mmf 1166 -> 16
+RESOURCE CHANGED Sound/m15.mmf 1154 -> 16
+RESOURCE CHANGED Sound/m16.mmf 1029 -> 16
+RESOURCE CHANGED Sound/m17.mmf 1725 -> 16
+RESOURCE CHANGED Sound/m18.mmf 4071 -> 16
+RESOURCE CHANGED Sound/m2.mmf 384 -> 15
+RESOURCE CHANGED Sound/m3.mmf 1198 -> 15
+RESOURCE CHANGED Sound/m4.mmf 799 -> 15
+RESOURCE CHANGED Sound/m5.mmf 252 -> 15
+RESOURCE CHANGED Sound/m6.mmf 1728 -> 15
+RESOURCE CHANGED Sound/m7.mmf 842 -> 15
+RESOURCE CHANGED Sound/m8.mmf 861 -> 15
+RESOURCE CHANGED Sound/m9.mmf 244 -> 15
+CLASS SoundPlayer.class
+  fields changed
+  method <init>(LGameCanvas;)V:
+    - INVOKESTATIC com/skt/m/AudioSystem.getMaxVolume (Ljava/lang/String;)I
+    + INVOKESTATIC wipi/skt/AudioSystem.getMaxVolume (Ljava/lang/String;)I
+    - INVOKESTATIC com/skt/m/AudioSystem.getAudioClip (Ljava/lang/String;)Lcom/skt/m/AudioClip;
+    + INVOKESTATIC wipi/skt/AudioSystem.getAudioClip (Ljava/lang/String;)Lwipi/skt/AudioClip;
+    - PUTFIELD SoundPlayer.clip : Lcom/skt/m/AudioClip;
+    + PUTFIELD SoundPlayer.clip : Lwipi/skt/AudioClip;
+  method SetVolume()V:
+    - INVOKESTATIC com/skt/m/AudioSystem.setVolume (Ljava/lang/String;I)V
+    + INVOKESTATIC wipi/skt/AudioSystem.setVolume (Ljava/lang/String;I)V
+  method SoundPlay(IZ)V:
+    instructions 331 -> 351 (jsr/ret subroutines inlined by preverify)
+  method Stop()V:
+    - GETFIELD SoundPlayer.clip : Lcom/skt/m/AudioClip;
+    + GETFIELD SoundPlayer.clip : Lwipi/skt/AudioClip;
+    - INVOKEINTERFACE com/skt/m/AudioClip.stop ()V (itf)
+    + INVOKEINTERFACE wipi/skt/AudioClip.stop ()V (itf)
+    - GETFIELD SoundPlayer.clip : Lcom/skt/m/AudioClip;
+    + GETFIELD SoundPlayer.clip : Lwipi/skt/AudioClip;
+    - INVOKEINTERFACE com/skt/m/AudioClip.stop ()V (itf)
+    + INVOKEINTERFACE wipi/skt/AudioClip.stop ()V (itf)
+  method run()V:
+    - GETFIELD SoundPlayer.clip : Lcom/skt/m/AudioClip;
+    + GETFIELD SoundPlayer.clip : Lwipi/skt/AudioClip;
+    - INVOKEINTERFACE com/skt/m/AudioClip.loop ()V (itf)
+    + INVOKEINTERFACE wipi/skt/AudioClip.loop ()V (itf)
+    - GETFIELD SoundPlayer.clip : Lcom/skt/m/AudioClip;
+    + GETFIELD SoundPlayer.clip : Lwipi/skt/AudioClip;
+    - INVOKEINTERFACE com/skt/m/AudioClip.play ()V (itf)
+    + INVOKEINTERFACE wipi/skt/AudioClip.play ()V (itf)
+
+CLASS TheFarm2.class
+  method startApp([Ljava/lang/String;)V:
+    - INVOKESTATIC com/skt/m/Device.setKeyToneEnabled (Z)V
+    + INVOKESTATIC wipi/skt/Device.setKeyToneEnabled (Z)V
+
+CLASS gxg/GXGNet.class
+  method gxgClose(Z)I:
+    instructions 175 -> 304 (jsr/ret subroutines inlined by preverify)
+  method gxgReceive(Lgxg/Confirm;)[B:
+    instructions 213 -> 206
+  method gxgReceiveData()Lgxg/DataPacket;:
+    instructions 285 -> 279
+  method gxgReconnect(Ljava/lang/String;[B)Lgxg/InitConfirm;:
+    - INVOKESTATIC javax/microedition/io/Connector.open (Ljava/lang/String;)Ljavax/microedition/io/Connection;
+    + INVOKESTATIC wipi/host/Net.open (Ljava/lang/String;)Ljavax/microedition/io/Connection;
+
+CLASS gxg/Header.class
+  method parse([B)V:
+    instructions 47 -> 45
+
+CLASS gxg/InitConfirm.class
+  method parse([B)V:
+    instructions 257 -> 247
+
+CLASS gxg/MyPricingQueryConfirm.class
+  method getMessage()Ljava/lang/String;:
+    instructions 8 -> 6
+  method parse([B)V:
+    instructions 385 -> 377
+
+CLASS gxg/PricingBuyConfirm.class
+  method parse([B)V:
+    instructions 67 -> 65
+
+CLASS gxg/PricingQueryConfirm.class
+  method getMessage()Ljava/lang/String;:
+    instructions 8 -> 6
+  method parse([B)V:
+    instructions 272 -> 264
+
+ADDED Data/NPC/0.png (10206 B)
+ADDED Data/NPC/0.txt (688 B)
+ADDED Data/NPC/1.png (16554 B)
+ADDED Data/NPC/1.txt (972 B)
+ADDED Data/NPC/2.png (13927 B)
+ADDED Data/NPC/2.txt (932 B)
+ADDED Data/NPC/3.png (16783 B)
+ADDED Data/NPC/3.txt (891 B)
+ADDED Data/Pet/0.png (1482 B)
+ADDED Data/Pet/0.txt (331 B)
+ADDED Data/Pet/1.png (1702 B)
+ADDED Data/Pet/1.txt (330 B)
+ADDED Data/Pet/10.png (2372 B)
+ADDED Data/Pet/10.txt (334 B)
+ADDED Data/Pet/11.png (1747 B)
+ADDED Data/Pet/11.txt (333 B)
+ADDED Data/Pet/12.png (1671 B)
+ADDED Data/Pet/12.txt (334 B)
+ADDED Data/Pet/13.png (1589 B)
+ADDED Data/Pet/13.txt (332 B)
+ADDED Data/Pet/14.png (1385 B)
+ADDED Data/Pet/14.txt (333 B)
+ADDED Data/Pet/15.png (1534 B)
+ADDED Data/Pet/15.txt (333 B)
+ADDED Data/Pet/16.png (1676 B)
+ADDED Data/Pet/16.txt (332 B)
+ADDED Data/Pet/17.png (1615 B)
+ADDED Data/Pet/17.txt (332 B)
+ADDED Data/Pet/18.png (1780 B)
+ADDED Data/Pet/18.txt (333 B)
+ADDED Data/Pet/19.png (1584 B)
+ADDED Data/Pet/19.txt (333 B)
+ADDED Data/Pet/2.png (1199 B)
+ADDED Data/Pet/2.txt (331 B)
+ADDED Data/Pet/20.png (1537 B)
+ADDED Data/Pet/20.txt (333 B)
+ADDED Data/Pet/21.png (1975 B)
+ADDED Data/Pet/21.txt (333 B)
+ADDED Data/Pet/22.png (2197 B)
+ADDED Data/Pet/22.txt (333 B)
+ADDED Data/Pet/23.png (1230 B)
+ADDED Data/Pet/23.txt (333 B)
+ADDED Data/Pet/24.png (2028 B)
+ADDED Data/Pet/24.txt (334 B)
+ADDED Data/Pet/3.png (2106 B)
+ADDED Data/Pet/3.txt (332 B)
+ADDED Data/Pet/4.png (1573 B)
+ADDED Data/Pet/4.txt (332 B)
+ADDED Data/Pet/5.png (1816 B)
+ADDED Data/Pet/5.txt (331 B)
+ADDED Data/Pet/6.png (1193 B)
+ADDED Data/Pet/6.txt (331 B)
+ADDED Data/Pet/7.png (1371 B)
+ADDED Data/Pet/7.txt (330 B)
+ADDED Data/Pet/8.png (1632 B)
+ADDED Data/Pet/8.txt (331 B)
+ADDED Data/Pet/9.png (1343 B)
+ADDED Data/Pet/9.txt (332 B)
+ADDED Image/Ch/ChOpen.png (3881 B)
+ADDED Image/Ch/ChOpen.txt (373 B)
+ADDED Image/Ch/ChStandard.png (5155 B)
+ADDED Image/Ch/ChStandard.txt (509 B)
+ADDED Image/Ch/Farm1.png (1770 B)
+ADDED Image/Ch/Farm1.txt (280 B)
+ADDED Image/Ch/Fishing.png (2269 B)
+ADDED Image/Ch/Fishing.txt (239 B)
+ADDED Image/Ch/Marry.png (7262 B)
+ADDED Image/Ch/Marry.txt (368 B)
+ADDED Image/Ch/Trea.png (703 B)
+ADDED Image/Ch/Trea.txt (166 B)
+ADDED Image/Ch/Work.png (3078 B)
+ADDED Image/Ch/Work.txt (333 B)
+ADDED Image/Crop/Complet.png (8949 B)
+ADDED Image/Crop/Complet.txt (997 B)
+ADDED Image/Crop/Process.png (7939 B)
+ADDED Image/Crop/Process.txt (1227 B)
+ADDED Image/Crop/Seed.png (619 B)
+ADDED Image/Crop/Seed.txt (170 B)
+ADDED Image/Effect/Bird.png (623 B)
+ADDED Image/Effect/Bird.txt (227 B)
+ADDED Image/Effect/Crab.png (286 B)
+ADDED Image/Effect/Crab.txt (148 B)
+ADDED Image/Effect/Light.png (345 B)
+ADDED Image/Effect/Light.txt (150 B)
+ADDED Image/Effect/Rabbit0.png (691 B)
+ADDED Image/Effect/Rabbit0.txt (206 B)
+ADDED Image/Effect/Rain.png (86 B)
+ADDED Image/Effect/Rain.txt (133 B)
+ADDED Image/Meet/0.png (771 B)
+ADDED Image/Meet/0.txt (138 B)
+ADDED Image/Meet/1.png (2800 B)
+ADDED Image/Meet/1.txt (277 B)
+ADDED Image/Meet/2.png (4406 B)
+ADDED Image/Meet/2.txt (380 B)
+ADDED Image/Meet/3.png (851 B)
+ADDED Image/Meet/3.txt (138 B)
+ADDED Image/Menu/Sub0.png (1816 B)
+ADDED Image/Menu/Sub0.txt (376 B)
+ADDED Image/Menu/Sub1.png (1330 B)
+ADDED Image/Menu/Sub1.txt (252 B)
+ADDED Image/Menu/Sub2.png (1250 B)
+ADDED Image/Menu/Sub2.txt (172 B)
+ADDED Image/Mini/0.png (1566 B)
+ADDED Image/Mini/0.txt (181 B)
+ADDED Image/Mini/1.png (899 B)
+ADDED Image/Mini/1.txt (152 B)
+ADDED Image/Mini/2.png (772 B)
+ADDED Image/Mini/2.txt (201 B)
+ADDED Image/Object/Ga0.png (646 B)
+ADDED Image/Object/Ga0.txt (172 B)
+ADDED Image/Object/Ga1.png (367 B)
+ADDED Image/Object/Ga1.txt (172 B)
+ADDED Image/Object/Ga2.png (680 B)
+ADDED Image/Object/Ga2.txt (172 B)
+ADDED Image/Object/O00.png (3553 B)
+ADDED Image/Object/O00.txt (514 B)
+ADDED Image/Object/O000.png (6084 B)
+ADDED Image/Object/O000.txt (749 B)
+ADDED Image/Object/O0000.png (6388 B)
+ADDED Image/Object/O0000.txt (968 B)
+ADDED Image/Object/O0003.png (4344 B)
+ADDED Image/Object/O0003.txt (671 B)
+ADDED Image/Object/O000_1.png (6206 B)
+ADDED Image/Object/O000_1.txt (753 B)
+ADDED Image/Object/O000_2.png (6165 B)
+ADDED Image/Object/O000_2.txt (753 B)
+ADDED Image/Object/O000_3.png (6227 B)
+ADDED Image/Object/O000_3.txt (753 B)
+ADDED Image/Object/O001.png (5724 B)
+ADDED Image/Object/O001.txt (797 B)
+ADDED Image/Object/O001_1.png (5734 B)
+ADDED Image/Object/O001_1.txt (801 B)
+ADDED Image/Object/O001_2.png (5728 B)
+ADDED Image/Object/O001_2.txt (801 B)
+ADDED Image/Object/O001_3.png (5592 B)
+ADDED Image/Object/O001_3.txt (801 B)
+ADDED Image/Object/O002.png (7571 B)
+ADDED Image/Object/O002.txt (871 B)
+ADDED Image/Object/O002_1.png (6247 B)
+ADDED Image/Object/O002_1.txt (875 B)
+ADDED Image/Object/O002_2.png (7592 B)
+ADDED Image/Object/O002_2.txt (875 B)
+ADDED Image/Object/O002_3.png (6358 B)
+ADDED Image/Object/O002_3.txt (875 B)
+ADDED Image/Object/O003.png (5675 B)
+ADDED Image/Object/O003.txt (871 B)
+ADDED Image/Object/O005.png (5583 B)
+ADDED Image/Object/O005.txt (826 B)
+ADDED Image/Object/O006.png (2893 B)
+ADDED Image/Object/O006.txt (436 B)
+ADDED Image/Object/O009.png (836 B)
+ADDED Image/Object/O009.txt (200 B)
+ADDED Image/Object/O00_1.png (3630 B)
+ADDED Image/Object/O00_1.txt (518 B)
+ADDED Image/Object/O00_2.png (3841 B)
+ADDED Image/Object/O00_2.txt (518 B)
+ADDED Image/Object/O00_3.png (3655 B)
+ADDED Image/Object/O00_3.txt (518 B)
+ADDED Image/Object/O01.png (3205 B)
+ADDED Image/Object/O01.txt (450 B)
+ADDED Image/Object/O01_1.png (3231 B)
+ADDED Image/Object/O01_1.txt (454 B)
+ADDED Image/Object/O01_2.png (3255 B)
+ADDED Image/Object/O01_2.txt (454 B)
+ADDED Image/Object/O01_3.png (3159 B)
+ADDED Image/Object/O01_3.txt (454 B)
+ADDED Image/Object/O02.png (3420 B)
+ADDED Image/Object/O02.txt (530 B)
+ADDED Image/Object/O02_1.png (3431 B)
+ADDED Image/Object/O02_1.txt (534 B)
+ADDED Image/Object/O02_2.png (3389 B)
+ADDED Image/Object/O02_2.txt (534 B)
+ADDED Image/Object/O02_3.png (3519 B)
+ADDED Image/Object/O02_3.txt (534 B)
+ADDED Image/Tile/T00.png (5554 B)
+ADDED Image/Tile/T00.txt (632 B)
+ADDED Image/Tile/T0000.png (3670 B)
+ADDED Image/Tile/T0000.txt (731 B)
+ADDED Image/Tile/T0003.png (5884 B)
+ADDED Image/Tile/T0003.txt (900 B)
+ADDED Image/Tile/T0005.png (2562 B)
+ADDED Image/Tile/T0005.txt (514 B)
+ADDED Image/Tile/T005.png (1919 B)
+ADDED Image/Tile/T005.txt (267 B)
+ADDED Image/Tile/T005G.png (315 B)
+ADDED Image/Tile/T005G.txt (172 B)
+ADDED Image/Tile/T006.png (4597 B)
+ADDED Image/Tile/T006.txt (619 B)
+ADDED Image/Tile/T006G.png (315 B)
+ADDED Image/Tile/T006G.txt (172 B)
+ADDED Image/Tile/T00G.png (231 B)
+ADDED Image/Tile/T00G.txt (166 B)
+ADDED Image/Tile/T00_1.png (5679 B)
+ADDED Image/Tile/T00_1.txt (636 B)
+ADDED Image/Tile/T00_1G.png (186 B)
+ADDED Image/Tile/T00_1G.txt (170 B)
+ADDED Image/Tile/T00_2.png (5508 B)
+ADDED Image/Tile/T00_2.txt (636 B)
+ADDED Image/Tile/T00_2G.png (186 B)
+ADDED Image/Tile/T00_2G.txt (170 B)
+ADDED Image/Tile/T00_3.png (5372 B)
+ADDED Image/Tile/T00_3.txt (636 B)
+ADDED Image/Tile/T00_3G.png (192 B)
+ADDED Image/Tile/T00_3G.txt (170 B)
+ADDED Image/Tile/T01.png (6145 B)
+ADDED Image/Tile/T01.txt (759 B)
+ADDED Image/Tile/T01G.png (237 B)
+ADDED Image/Tile/T01G.txt (166 B)
+ADDED Image/Tile/T01_1.png (6006 B)
+ADDED Image/Tile/T01_1.txt (763 B)
+ADDED Image/Tile/T01_1G.png (186 B)
+ADDED Image/Tile/T01_1G.txt (170 B)
+ADDED Image/Tile/T01_2.png (6043 B)
+ADDED Image/Tile/T01_2.txt (763 B)
+ADDED Image/Tile/T01_2G.png (186 B)
+ADDED Image/Tile/T01_2G.txt (170 B)
+ADDED Image/Tile/T01_3.png (5981 B)
+ADDED Image/Tile/T01_3.txt (763 B)
+ADDED Image/Tile/T01_3G.png (233 B)
+ADDED Image/Tile/T01_3G.txt (170 B)
+ADDED Image/Tile/T02.png (4687 B)
+ADDED Image/Tile/T02.txt (647 B)
+ADDED Image/Tile/T02G.png (237 B)
+ADDED Image/Tile/T02G.txt (166 B)
+ADDED Image/Tile/T02_1.png (4941 B)
+ADDED Image/Tile/T02_1.txt (651 B)
+ADDED Image/Tile/T02_1G.png (186 B)
+ADDED Image/Tile/T02_1G.txt (170 B)
+ADDED Image/Tile/T02_2.png (5037 B)
+ADDED Image/Tile/T02_2.txt (651 B)
+ADDED Image/Tile/T02_2G.png (186 B)
+ADDED Image/Tile/T02_2G.txt (170 B)
+ADDED Image/Tile/T02_3.png (4976 B)
+ADDED Image/Tile/T02_3.txt (651 B)
+ADDED Image/Tile/T02_3G.png (192 B)
+ADDED Image/Tile/T02_3G.txt (170 B)
+ADDED Image/Title/Menu.png (4810 B)
+ADDED Image/Title/Menu.txt (431 B)
+ADDED Image/UI/Down.png (1085 B)
+ADDED Image/UI/Down.txt (325 B)
+ADDED Image/UI/GM.png (3443 B)
+ADDED Image/UI/GM.txt (614 B)
+ADDED Image/UI/IItem.png (442 B)
+ADDED Image/UI/IItem.txt (168 B)
+ADDED Image/UI/Imo.png (502 B)
+ADDED Image/UI/Imo.txt (189 B)
+ADDED Image/UI/Item.png (3646 B)
+ADDED Image/UI/Item.txt (427 B)
+ADDED Image/UI/Lotto.png (1514 B)
+ADDED Image/UI/Lotto.txt (250 B)
+ADDED Image/UI/Money.png (654 B)
+ADDED Image/UI/Money.txt (304 B)
+ADDED Image/UI/NowAct.png (1657 B)
+ADDED Image/UI/NowAct.txt (267 B)
+ADDED Image/UI/PShop.png (828 B)
+ADDED Image/UI/PShop.txt (190 B)
+ADDED Image/UI/Reside.png (690 B)
+ADDED Image/UI/Reside.txt (204 B)
+ADDED Image/UI/Shop.png (3292 B)
+ADDED Image/UI/Shop.txt (425 B)
+ADDED Image/UI/Skill.png (1605 B)
+ADDED Image/UI/Skill.txt (280 B)
+ADDED Image/UI/State.png (915 B)
+ADDED Image/UI/State.txt (361 B)
+ADDED Image/UI/Tou.png (328 B)
+ADDED Image/UI/Tou.txt (187 B)
+ADDED Image/UI/UP/MapName.png (934 B)
+ADDED Image/UI/UP/MapName.txt (200 B)
+ADDED Image/UI/Wea.png (692 B)
+ADDED Image/UI/Wea.txt (202 B)
+ADDED UiDebug.class (1691 B)
+ADDED UiGM.class (28490 B)
+ADDED UiHud.class (12169 B)
+ADDED UiKit.class (9901 B)
+ADDED UiPaint.class (8582 B)
+ADDED UiRank.class (1843 B)
+ADDED UiTalk.class (8962 B)
+ADDED UiTitle.class (11303 B)
+ADDED enc/map.bin (10590 B)
+ADDED font/f12.bin (2788 B)
+ADDED org/kwis/msf/io/Network.class (312 B)
+ADDED org/kwis/msf/io/Socket.class (303 B)
+ADDED org/kwis/msf/io/URL.class (552 B)
+ADDED org/kwis/msp/handset/BackLight.class (432 B)
+ADDED org/kwis/msp/io/File.class (2450 B)
+ADDED org/kwis/msp/io/FileSystem.class (941 B)
+ADDED org/kwis/msp/lcdui/Card.class (1300 B)
+ADDED org/kwis/msp/lcdui/Display.class (2302 B)
+ADDED org/kwis/msp/lcdui/Font.class (2153 B)
+ADDED org/kwis/msp/lcdui/Graphics.class (7694 B)
+ADDED org/kwis/msp/lcdui/Image.class (4188 B)
+ADDED org/kwis/msp/lcdui/Jlet.class (1090 B)
+ADDED org/kwis/msp/lwc/AnnunciatorComponent.class (381 B)
+ADDED org/kwis/msp/media/Vibrator.class (369 B)
+ADDED save/FSave0.dat (39455 B)
+ADDED save/FSave1.dat (39455 B)
+ADDED save/Option.dat (4 B)
+ADDED save/index.txt (33 B)
+ADDED snd/b0.mid (17233 B)
+ADDED snd/b1.mid (3986 B)
+ADDED snd/b10.mid (5535 B)
+ADDED snd/b11.mid (2451 B)
+ADDED snd/b2.mid (2489 B)
+ADDED snd/b3.mid (5054 B)
+ADDED snd/b4.mid (9577 B)
+ADDED snd/b5.mid (5326 B)
+ADDED snd/b6.mid (4293 B)
+ADDED snd/b7.mid (880 B)
+ADDED snd/b8.mid (1984 B)
+ADDED snd/b9.mid (1867 B)
+ADDED snd/m0.mid (2945 B)
+ADDED snd/m1.wav (5324 B)
+ADDED snd/m10.wav (4420 B)
+ADDED snd/m11.mid (276 B)
+ADDED snd/m12.wav (8244 B)
+ADDED snd/m13.wav (5424 B)
+ADDED snd/m14.wav (4152 B)
+ADDED snd/m15.mid (1101 B)
+ADDED snd/m16.mid (1302 B)
+ADDED snd/m17.mid (2426 B)
+ADDED snd/m18.wav (15744 B)
+ADDED snd/m2.wav (1076 B)
+ADDED snd/m3.wav (4300 B)
+ADDED snd/m4.wav (2612 B)
+ADDED snd/m5.mid (78 B)
+ADDED snd/m6.wav (6492 B)
+ADDED snd/m7.wav (2924 B)
+ADDED snd/m8.wav (3024 B)
+ADDED snd/m9.mid (174 B)
+ADDED text/anim.txt (560 B)
+ADDED text/crop.txt (894 B)
+ADDED text/explan.txt (3061 B)
+ADDED text/index.bin (29710 B)
+ADDED text/item.txt (437 B)
+ADDED text/map_name.txt (861 B)
+ADDED text/npc_name.txt (2491 B)
+ADDED text/pet_name.txt (462 B)
+ADDED text/petskill.txt (1591 B)
+ADDED text/popup.txt (2270 B)
+ADDED text/popup1.txt (2564 B)
+ADDED text/qexplan.txt (10989 B)
+ADDED text/quest.txt (1641 B)
+ADDED text/skill.txt (824 B)
+ADDED text/talk_0_00.txt (523 B)
+ADDED text/talk_0_01.txt (468 B)
+ADDED text/talk_0_02.txt (5174 B)
+ADDED text/talk_0_03.txt (9465 B)
+ADDED text/talk_0_04.txt (3292 B)
+ADDED text/talk_0_05.txt (3372 B)
+ADDED text/talk_0_06.txt (6257 B)
+ADDED text/talk_0_07.txt (1396 B)
+ADDED text/talk_0_08.txt (6640 B)
+ADDED text/talk_0_09.txt (1549 B)
+ADDED text/talk_1_00.txt (3789 B)
+ADDED text/talk_1_01.txt (3860 B)
+ADDED text/talk_1_02.txt (1722 B)
+ADDED text/talk_1_03.txt (6868 B)
+ADDED text/talk_1_04.txt (1230 B)
+ADDED text/talk_1_05.txt (550 B)
+ADDED text/talk_1_06.txt (255 B)
+ADDED text/talk_1_07.txt (1079 B)
+ADDED text/talk_1_08.txt (3560 B)
+ADDED text/talk_1_09.txt (666 B)
+ADDED text/talk_1_10.txt (415 B)
+ADDED text/talk_1_11.txt (4452 B)
+ADDED text/talk_1_12.txt (5125 B)
+ADDED text/talk_1_13.txt (5631 B)
+ADDED text/talk_1_14.txt (2760 B)
+ADDED text/talk_2_00.txt (1676 B)
+ADDED text/talk_2_01.txt (740 B)
+ADDED text/talk_2_02.txt (2705 B)
+ADDED text/talk_2_03.txt (4704 B)
+ADDED text/talk_2_04.txt (2046 B)
+ADDED text/talk_2_05.txt (1261 B)
+ADDED text/talk_2_06.txt (1845 B)
+ADDED text/talk_2_07.txt (680 B)
+ADDED text/talk_2_08.txt (4847 B)
+ADDED text/talk_2_09.txt (966 B)
+ADDED text/talk_2_10.txt (3090 B)
+ADDED text/talk_2_11.txt (1003 B)
+ADDED text/talk_2_12.txt (1347 B)
+ADDED text/talk_2_13.txt (1221 B)
+ADDED text/talk_2_14.txt (4462 B)
+ADDED text/talk_2_15.txt (1196 B)
+ADDED text/talk_2_16.txt (1293 B)
+ADDED text/talk_2_17.txt (2904 B)
+ADDED text/talk_2_18.txt (1296 B)
+ADDED text/talk_2_19.txt (4706 B)
+ADDED text/talk_3_00.txt (2341 B)
+ADDED text/talk_3_01.txt (1265 B)
+ADDED text/talk_3_02.txt (3937 B)
+ADDED text/talk_3_03.txt (1406 B)
+ADDED text/talk_3_04.txt (1216 B)
+ADDED text/talk_3_05.txt (1825 B)
+ADDED text/talk_3_06.txt (223 B)
+ADDED text/talk_3_07.txt (2936 B)
+ADDED text/talk_3_08.txt (678 B)
+ADDED text/talk_3_09.txt (590 B)
+ADDED text/talk_3_10.txt (3595 B)
+ADDED text/talk_3_11.txt (618 B)
+ADDED text/talk_3_12.txt (470 B)
+ADDED text/talk_3_13.txt (1636 B)
+ADDED text/talk_3_14.txt (347 B)
+ADDED text/talk_3_15.txt (268 B)
+ADDED text/talk_3_16.txt (282 B)
+ADDED text/talk_3_17.txt (1061 B)
+ADDED text/talk_3_18.txt (849 B)
+ADDED text/talk_3_19.txt (240 B)
+ADDED text/talk_3_20.txt (3614 B)
+ADDED text/talk_3_21.txt (2671 B)
+ADDED text/talk_T0.txt (39099 B)
+ADDED text/ui.txt (8553 B)
+ADDED wipi/host/BitmapFont.class (10826 B)
+ADDED wipi/host/Enc.class (2512 B)
+ADDED wipi/host/FakeGxg$1.class (1187 B)
+ADDED wipi/host/FakeGxg$2.class (1075 B)
+ADDED wipi/host/FakeGxg.class (4344 B)
+ADDED wipi/host/FarmMidlet.class (762 B)
+ADDED wipi/host/Host.class (12783 B)
+ADDED wipi/host/Keys.class (1181 B)
+ADDED wipi/host/Log.class (994 B)
+ADDED wipi/host/Net.class (736 B)
+ADDED wipi/host/Opt.class (624 B)
+ADDED wipi/host/Overlay.class (1150 B)
+ADDED wipi/host/Res.class (2076 B)
+ADDED wipi/host/Sheet.class (3505 B)
+ADDED wipi/host/Snd.class (4214 B)
+ADDED wipi/host/Store.class (6581 B)
+ADDED wipi/host/Str$File.class (608 B)
+ADDED wipi/host/Str.class (7028 B)
+ADDED wipi/host/Sys.class (681 B)
+ADDED wipi/host/Touch.class (366 B)
+ADDED wipi/host/Txt.class (3483 B)
+ADDED wipi/skt/AudioClip.class (281 B)
+ADDED wipi/skt/AudioSystem.class (610 B)
+ADDED wipi/skt/Clip.class (863 B)
+ADDED wipi/skt/Device.class (343 B)
+SUMMARY classes: 4 identical code, 16 changed [CharacterDat.class, Effect.class, GameCanvas.class, ImageData.class, MapDat.class, NPC.class, NetWork.class, Pet.class, SoundPlayer.class, TheFarm2.class, gxg/GXGNet.class, gxg/Header.class, gxg/InitConfirm.class, gxg/MyPricingQueryConfirm.class, gxg/PricingBuyConfirm.class, gxg/PricingQueryConfirm.class]; resources: 162 identical, 166 changed; entries added 437, removed 0

@@ -1,0 +1,31 @@
+# Game drawing methods whose body is replaced by the new UI layer (src/ui, default package).
+# Line: Class.method(descriptor) -> UiClass.method   (static, receiver first, same arguments/return)
+# The Ui method contains the original logic of the method (copied, cross-checked with
+# FernFlower/bytecode); only the drawing changed.
+GameCanvas.paint(Lorg/kwis/msp/lcdui/Graphics;)V -> UiPaint.paint
+GameCanvas.DrawTalk(Lorg/kwis/msp/lcdui/Graphics;)V -> UiTalk.DrawTalk
+GameCanvas.DrawPopup(Lorg/kwis/msp/lcdui/Graphics;)V -> UiTalk.DrawPopup
+GameCanvas.DrawMiniTime(Lorg/kwis/msp/lcdui/Graphics;II)V -> UiHud.DrawMiniTime
+GameCanvas.init()V -> UiHud.init
+GameCanvas.DrawUp(Lorg/kwis/msp/lcdui/Graphics;)V -> UiHud.DrawUp
+GameCanvas.DrawDown(Lorg/kwis/msp/lcdui/Graphics;Z)V -> UiHud.DrawDown
+GameCanvas.DrawHp(Lorg/kwis/msp/lcdui/Graphics;)V -> UiHud.DrawHp
+GameCanvas.DrawTime(Lorg/kwis/msp/lcdui/Graphics;)V -> UiHud.none
+GameCanvas.DrawDay(Lorg/kwis/msp/lcdui/Graphics;)V -> UiHud.none
+GameCanvas.DrawWeather(Lorg/kwis/msp/lcdui/Graphics;)V -> UiHud.none
+GameCanvas.DrawDownAction(Lorg/kwis/msp/lcdui/Graphics;)V -> UiHud.DrawDownAction
+GameCanvas.DrawUpState(Lorg/kwis/msp/lcdui/Graphics;)V -> UiHud.DrawUpState
+NPC.DrawTalk(Lorg/kwis/msp/lcdui/Graphics;)V -> UiTalk.DrawTalk
+NPC.MakeNameBuf(ILjava/lang/String;)V -> UiTalk.MakeNameBuf
+GameCanvas.DrawMenu(Lorg/kwis/msp/lcdui/Graphics;)V -> UiTitle.DrawMenu
+GameCanvas.DrawMenuItem(Lorg/kwis/msp/lcdui/Graphics;)V -> UiTitle.DrawMenuItem
+GameCanvas.LoadExplanDat()V -> UiTitle.LoadExplanDat
+GameCanvas.MakeGameMenu(Lorg/kwis/msp/lcdui/Graphics;)V -> UiGM.MakeGameMenu
+GameCanvas.MakeShopMenu(Lorg/kwis/msp/lcdui/Graphics;I)V -> UiGM.MakeShopMenu
+GameCanvas.MakeSkillShop(Lorg/kwis/msp/lcdui/Graphics;)V -> UiGM.MakeSkillShop
+GameCanvas.MakePetShop(Lorg/kwis/msp/lcdui/Graphics;)V -> UiGM.MakePetShop
+GameCanvas.MakeSubBuf()V -> UiGM.MakeSubBuf
+GameCanvas.MakeQuestExplan()V -> UiGM.MakeQuestExplan
+GameCanvas.LoadPetInfo(I)V -> UiGM.LoadPetInfo
+GameCanvas.DrawGameMenu(Lorg/kwis/msp/lcdui/Graphics;)V -> UiGM.DrawGameMenu
+GameCanvas.DrawPoint(Lorg/kwis/msp/lcdui/Graphics;)V -> UiGM.DrawPoint

@@ -1,0 +1,17 @@
+1.0=1 năm sau...
+23.0=Ngày hôm sau
+24.0=Ngày hôm sau
+40.0=Vài giờ sau...
+55.0=Ngày hôm sau
+70.0=2 giờ sáng
+86.0=Một lát sau
+147.0=Lễ cưới
+151.0=Lễ cưới
+156.0=Lễ cưới
+159.0=Lễ cưới
+163.0=Lễ cưới
+165.0=Lễ cưới
+169.0=Lễ cưới
+174.0=Cảm ơn bạn đã chơi
+174.1=đến tận đây.
+174.2=- Đội ngũ phát triển -
