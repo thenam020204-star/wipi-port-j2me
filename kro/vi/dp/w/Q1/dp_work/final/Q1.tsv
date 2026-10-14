@@ -48,7 +48,7 @@ S:QUEST1.dat:4:8	휴. 그럼 다른 방법이 없을까요?	Haizz. Vậy không 
 S:QUEST1.dat:4:9	이런 신경독의 경우 와이엄의 고기를 마법사에게 가져다주면	Tôi từng nghe nói độc thần kinh kiểu này nếu đem thịt Wyem cho pháp sư	빅조	
 S:QUEST1.dat:4:10	치료약을 만들수도 있다고 들은적이 있소.쿨럭!쿨럭	thì có thể chế ra thuốc chữa. Khụ! Khụ	빅조	
 S:QUEST1.dat:4:11	와이엄이라면 저희마을 남쪽숲에 꽤 서식하고 있어요!	Wyem thì ở khu rừng phía nam làng tôi có khá nhiều!	세바스찬	
-S:QUEST1.dat:4:12	마법사라면 헵번님이 계시니,충분히 치료약을 만드실수 있으실거에요.	Pháp sư thì có ngài Hepburn, chắc chắn chế được thuốc chữa.	세바스찬	
+S:QUEST1.dat:4:12	마법사라면 헵번님이 계시니,충분히 치료약을 만드실수 있으실거에요.	Pháp sư thì có chị Hepburn, chắc chắn chế được thuốc chữa.	세바스찬	
 S:QUEST1.dat:4:13	독기운이 퍼지지않게 조용히 누워계세요.	Anh cứ nằm yên kẻo độc lan ra nhé.	세바스찬	
 S:QUEST1.dat:4:14	고..고맙소...쿨럭! 쿨럭!	C.. cảm ơn cậu... Khụ! Khụ!	빅조	
 S:QUEST1.dat:7:0	오늘부턴 특별한 교환이벤트를 시작할테니깐 생각있으면 오라고~	Từ hôm nay ta mở sự kiện đổi đồ đặc biệt, có hứng thì ghé nhé~	루크	
@@ -256,10 +256,10 @@ S:QUEST1.dat:42:2	내가 아니고 성당안에, 헬레나 견습수녀님이 �
 S:QUEST1.dat:42:3	바쁘지 않다면 잠깐 가서 만나보는게 어때?	Nếu không bận thì cậu đến gặp thử xem?	척	
 S:QUEST1.dat:42:4	견습수녀라... 누군가가 떠오르는데..?	Nữ tu tập sự à... lại nhớ đến một người..?	세바스찬	
 S:QUEST1.dat:42:5	일단 한번 만나보기로 할까.	Trước hết cứ đến gặp thử.	세바스찬	
-S:QUEST1.dat:47:0	세바스찬, 이제 용병일을 본격적으로 시작하는거야?	Sebastian, giờ cậu bắt đầu làm lính đánh thuê thật rồi à?	헵번	
-S:QUEST1.dat:47:1	네! 의뢰하실 일이라도 있으신거에요?	Vâng! Ngài có việc gì muốn nhờ ạ?	세바스찬	
+S:QUEST1.dat:47:0	세바스찬, 이제 용병일을 본격적으로 시작하는거야?	Sebastian, giờ em bắt đầu làm lính đánh thuê thật rồi à?	헵번	
+S:QUEST1.dat:47:1	네! 의뢰하실 일이라도 있으신거에요?	Vâng! Chị có việc gì muốn nhờ ạ?	세바스찬	
 S:QUEST1.dat:47:2	응. 귀족과 공화정의 대립이 시작된 이후,	Ừ. Từ khi quý tộc và phe Cộng hòa bắt đầu đối đầu,	헵번	
-S:QUEST1.dat:47:3	각지의 분쟁으로, 곳곳에서 대량 살상사태가 일어나면서, 억울하게 희생된 영혼이 급증하기 시작한건 너도 알거야.	tranh chấp khắp nơi gây ra thảm sát hàng loạt, cậu cũng biết linh hồn chết oan tăng vọt rồi đấy.	헵번	
+S:QUEST1.dat:47:3	각지의 분쟁으로, 곳곳에서 대량 살상사태가 일어나면서, 억울하게 희생된 영혼이 급증하기 시작한건 너도 알거야.	tranh chấp khắp nơi gây ra thảm sát hàng loạt, em cũng biết linh hồn chết oan tăng vọt rồi đấy.	헵번	
 S:QUEST1.dat:47:4	네, 안타까운 일이죠...	Vâng, thật đáng tiếc...	세바스찬	
 S:QUEST1.dat:47:5	문제는 이 원혼들이 마나가 뒤틀린 공간에 고여, 마계와 통하는 홀을 생성시켰다는 거지.	Vấn đề là những oan hồn ấy tụ lại ở không gian mana bị vặn xoắn, tạo ra cái hố thông với ma giới.	헵번	
 S:QUEST1.dat:47:6	그런 홀 근처의 몬스터들 마계에서 나오는 마기를 쐬인후,  마물화가 진행되면서	Quái vật gần những hố đó nhiễm ma khí từ ma giới, dần hoá thành ma vật,	헵번	
@@ -267,8 +267,8 @@ S:QUEST1.dat:47:7	현재 대륙 곳곳에 수십개의 던전이 생기게 되�
 S:QUEST1.dat:47:8	무서운 일이군요.	Thật đáng sợ.	세바스찬	
 S:QUEST1.dat:47:9	그래, 이들 중 버블몬은 강한 마기에 반응해 더욱 광폭해지고 사나운 블랙버블몬으로 진화했지.	Phải, trong số đó Bubblemon phản ứng với ma khí mạnh, tiến hoá thành Black Bubblemon cuồng bạo, hung dữ hơn.	헵번	
 S:QUEST1.dat:47:10	특이한것은 그놈들의 눈이 마기로 인해 붉은 결정체화 되었다는 건데,	Điều đặc biệt là mắt chúng bị ma khí biến thành tinh thể đỏ,	헵번	
-S:QUEST1.dat:47:11	이것을 조사하면 몬스터들이 어떻게 마물화 되는지 알 수 있을거야. 좀 도와주겠어?	nghiên cứu nó sẽ biết quái vật hoá thành ma vật thế nào. Giúp ta nhé?	헵번	
-S:QUEST1.dat:47:12	그런 깜장 도마뱀따위! 맡겨만 주세요!	Mấy con thằn lằn đen thui đó! Cứ giao cho tôi!	세바스찬	
+S:QUEST1.dat:47:11	이것을 조사하면 몬스터들이 어떻게 마물화 되는지 알 수 있을거야. 좀 도와주겠어?	nghiên cứu nó sẽ biết quái vật hoá thành ma vật thế nào. Giúp chị nhé?	헵번	
+S:QUEST1.dat:47:12	그런 깜장 도마뱀따위! 맡겨만 주세요!	Mấy con thằn lằn đen thui đó! Cứ giao cho em!	세바스찬	
 S:QUEST1.dat:48:0	거기 자네.	Cậu kia.	코드리	
 S:QUEST1.dat:48:1	혹시 이스턴 시티를 지나오지 않았나?	Cậu có đi qua Eastern City không?	코드리	
 S:QUEST1.dat:48:2	네. 그곳 사람은 아니지만, 거쳐오긴 했었죠.	Có. Tôi không phải người ở đó, nhưng có đi ngang qua.	세바스찬	
@@ -341,7 +341,7 @@ S:QUEST1.dat:61:8	어떻게 구할 방법이 없을까?	Có cách nào kiếm đ
 S:QUEST1.dat:61:9	음...아~ 이곳 여관의 다나님은 크로이센 왕국에서 소문난 요리사라고 하던데,	Ừm...À~ nghe nói bà Dana ở quán trọ này là đầu bếp nổi tiếng vương quốc Chroisen,	세바스찬	
 S:QUEST1.dat:61:10	제가 한번 알아볼까요?	để tôi hỏi thử nhé?	세바스찬	
 S:QUEST1.dat:61:11	그래, 어찌되었건 그 맛을 다시 한번 맛 볼 수 있게 도와줬음 해.	Ừ, dù sao cũng mong cậu giúp ta được nếm lại hương vị đó.	제이슨	
-S:QUEST1.dat:65:0	세바스찬. 전에 내가 부탁했었던 의뢰 기억나?	Sebastian. Cậu còn nhớ việc ta nhờ lần trước không?	헵번	
+S:QUEST1.dat:65:0	세바스찬. 전에 내가 부탁했었던 의뢰 기억나?	Sebastian. Em còn nhớ việc chị nhờ lần trước không?	헵번	
 S:QUEST1.dat:65:1	네, 던전에 관련해서 블랙버블아이를 모아오는 일이었죠?	Vâng, việc thu thập Black Bubble Eye liên quan đến hầm ngục phải không?	세바스찬	
 S:QUEST1.dat:65:2	그래, 잘 기억하고 있네? 제법 머리가 좋은걸?	Phải, nhớ kỹ đấy chứ? Đầu óc khá lắm?	헵번	
 S:QUEST1.dat:65:3	쳇!	Xì!	세바스찬	
@@ -354,12 +354,12 @@ S:QUEST1.dat:65:9	만약 마계의 몬스터들이 이곳으로 쏟아져 나온
 S:QUEST1.dat:65:10	....! 정말 큰일이네요.	....! Gay to thật.	세바스찬	
 S:QUEST1.dat:65:11	그래. 그것들이 일시적인 현상에 의해 나온건지 아니면,	Phải. Cần điều tra xem chúng ra đây do hiện tượng nhất thời	헵번	
 S:QUEST1.dat:65:12	다른 무언가가 있는지를 조사해야해.	hay còn có gì khác nữa.	헵번	
-S:QUEST1.dat:65:13	이번에도 역시 마기를 머금어 결정화된 인큐버스의 눈을 10개만 가져다줘.	Lần này cũng vậy, mang về giúp ta 10 con mắt Incubus thấm ma khí đã kết tinh.	헵번	
-S:QUEST1.dat:65:14	으...그거 생각보다 좀 징그럽거든요. 생각 좀 해볼께요.	Ư...cái đó ghê hơn tôi tưởng. Để tôi nghĩ đã.	세바스찬	
+S:QUEST1.dat:65:13	이번에도 역시 마기를 머금어 결정화된 인큐버스의 눈을 10개만 가져다줘.	Lần này cũng vậy, mang về giúp chị 10 con mắt Incubus thấm ma khí đã kết tinh.	헵번	
+S:QUEST1.dat:65:14	으...그거 생각보다 좀 징그럽거든요. 생각 좀 해볼께요.	Ư...cái đó ghê hơn em tưởng. Để em nghĩ đã.	세바스찬	
 S:QUEST1.dat:65:15	이곳의 모든 인간과 이종족,	Đây là việc vì mọi con người và dị tộc ở đây,	헵번	
 S:QUEST1.dat:65:16	살이있는 모든 생명체를 위한 일이니 망설이지 말고 다녀와.	vì mọi sinh linh đang sống, đừng do dự, đi đi.	헵번	
-S:QUEST1.dat:65:17	합당한 보상을 해줄께.	Ta sẽ thưởng xứng đáng.	헵번	
-S:QUEST1.dat:65:18	그렇다면 별수 없죠. 알겠어요.	Vậy thì đành chịu. Tôi hiểu rồi.	세바스찬	
+S:QUEST1.dat:65:17	합당한 보상을 해줄께.	Chị sẽ thưởng xứng đáng.	헵번	
+S:QUEST1.dat:65:18	그렇다면 별수 없죠. 알겠어요.	Vậy thì đành chịu. Em hiểu rồi.	세바스찬	
 S:QUEST1.dat:66:0	세바스찬님~~	Ngài Sebastian~~	나디아	
 S:QUEST1.dat:66:1	저요? 의뢰라도 하시게요?	Tôi à? Cô muốn nhờ việc sao?	세바스찬	
 S:QUEST1.dat:66:2	저말고 저희 마을에 있는 융토르코가 큰일을 당했는데 좀 도와주세요.	Không phải tôi, mà Yundorco trong làng tôi gặp chuyện lớn, xin hãy giúp.	나디아	
@@ -430,21 +430,21 @@ S:QUEST1.dat:78:7	인간. 마을에 도는 소문으로는 너는 아주 강하�
 S:QUEST1.dat:78:8	케이브 트롤들을 응징해달라는 소리인가요?	Ý ông là muốn tôi trừng trị lũ Cave Troll sao?	세바스찬	
 S:QUEST1.dat:78:9	그렇다.	Đúng thế.	브리킷	
 S:QUEST1.dat:78:10	그리고 그들에게 명예를 훼손당한 우리 전사들의 유골을 회수해서 가져다주기 바란다.	Và mong ngươi thu hồi hài cốt các chiến binh bị chúng bôi nhọ danh dự mang về.	브리킷	
-S:QUEST1.dat:80:0	전에 인큐버스 건은 정말 고마웠어. 큰 도움이 된것 같아.	Chuyện Incubus lần trước cảm ơn cậu nhiều. Giúp ích lắm đấy.	헵번	
+S:QUEST1.dat:80:0	전에 인큐버스 건은 정말 고마웠어. 큰 도움이 된것 같아.	Chuyện Incubus lần trước cảm ơn em nhiều. Giúp ích lắm đấy.	헵번	
 S:QUEST1.dat:80:1	도움이 됐다면 다행이네요.	Giúp được thì tốt quá.	세바스찬	
 S:QUEST1.dat:80:2	조사해본 결과 그들은 마기를 압축시켜, 담아놓을 수 있는 일종의 아티팩트를 착용함으로써	Điều tra cho thấy chúng đeo một loại cổ vật nén và chứa được ma khí	헵번	
 S:QUEST1.dat:80:3	던전밖으로 빠져나옴을 감수할 수 있는것 같아,	nên mới chịu được việc ra khỏi hầm ngục,	헵번	
 S:QUEST1.dat:80:4	만약 이런 아티팩트가 모든 던전 몬스터에게 뿌려진다면 세상은 그 즉시 어둠과 혼돈의 나날로 가득차게 될거야.	nếu cổ vật này được phát cho mọi quái vật hầm ngục thì thế gian lập tức sẽ chìm trong bóng tối và hỗn loạn.	헵번	
 S:QUEST1.dat:80:5	설마 지능이 낮은 몬스터들이 그런일을 벌일 수가 ...	Không lẽ quái vật trí tuệ thấp lại làm được chuyện đó ...	세바스찬	
-S:QUEST1.dat:80:6	그렇지. 아무래도 고위마족이나..	Đúng vậy. Ta có cảm giác là ma tộc cấp cao..	헵번	
+S:QUEST1.dat:80:6	그렇지. 아무래도 고위마족이나..	Đúng vậy. Chị có cảm giác là ma tộc cấp cao..	헵번	
 S:QUEST1.dat:80:7	인간들이 일을 벌이고 있는 느낌이야.	hoặc con người đứng sau chuyện này.	헵번	
-S:QUEST1.dat:80:8	너 암흑동굴에서 암흑기사들을 본적이 있지?	Cậu từng thấy Dark Knight ở Hang Bóng Tối rồi chứ?	헵번	
+S:QUEST1.dat:80:8	너 암흑동굴에서 암흑기사들을 본적이 있지?	Em từng thấy Dark Knight ở Hang Bóng Tối rồi chứ?	헵번	
 S:QUEST1.dat:80:9	네, 설마 그들이...	Vâng, không lẽ bọn họ...	세바스찬	
 S:QUEST1.dat:80:10	그래. 마기에 중독된 기사단의 기사들이지...	Phải. Là hiệp sĩ của đoàn hiệp sĩ bị nhiễm ma khí...	헵번	
 S:QUEST1.dat:80:11	그들이 가지고 있는 암흑메달이 그런 아티팩트인것 같아.	Huy chương bóng tối chúng mang có vẻ là cổ vật đó.	헵번	
 S:QUEST1.dat:80:12	아무래도 흑마법사들의 소행인것 같은데, 그게 어떤 식의 마법구조로 이루어져 있는지 파악할 필요가 있어.	Có lẽ là do bọn hắc pháp sư làm, cần nắm được nó được tạo bởi cấu trúc ma pháp thế nào.	헵번	
-S:QUEST1.dat:80:13	그러니 네가 가서 그것들을 10개정도만 수거해 주지 않겠어?	Nên cậu đi thu về giúp ta chừng 10 cái được không?	헵번	
-S:QUEST1.dat:80:14	네, 그렇게 하죠.	Vâng, tôi sẽ làm.	세바스찬	
+S:QUEST1.dat:80:13	그러니 네가 가서 그것들을 10개정도만 수거해 주지 않겠어?	Nên em đi thu về giúp chị chừng 10 cái được không?	헵번	
+S:QUEST1.dat:80:14	네, 그렇게 하죠.	Vâng, em sẽ làm.	세바스찬	
 S:QUEST1.dat:80:15	이런 일은 더 커지기 전에 막아야 할것 같네요!	Chuyện này phải ngăn lại trước khi to chuyện hơn!	세바스찬	
 S:QUEST1.dat:81:0	이곳을 지나가나는 용병님은 참 오랜만에 보는것 같군요.	Lâu lắm rồi mới thấy một lính đánh thuê đi qua đây.	크루센	
 S:QUEST1.dat:81:1	혹시 지금 의뢰도 가능합니까?	Giờ cậu có nhận việc không?	크루센	
@@ -458,14 +458,14 @@ S:QUEST1.dat:81:8	제메시스가 가지고 있는 제메신경이라는 책이 
 S:QUEST1.dat:81:9	용병님이 그들에게서 한권만 구해다 주시면 확인해볼 수 있을것 같습니다.	nếu cậu kiếm cho tôi một cuốn từ chỗ chúng thì tôi có thể kiểm tra.	크루센	
 S:QUEST1.dat:81:10	이래뵈도 예전엔 종교학자로 꽤 오랜세월을 보낸적이 있거든요.	Trông vậy chứ ngày trước tôi đã làm học giả tôn giáo khá lâu đấy.	크루센	
 S:QUEST1.dat:81:11	좋아요. 구하게 되면 가지고 오도록 하죠.	Được thôi. Kiếm được thì tôi sẽ mang đến.	세바스찬	
-S:QUEST1.dat:85:0	세바스찬, 혹시 환생이라는 이야기에 대해서 들어본적이 있어?	Sebastian, cậu đã nghe chuyện về Tái sinh bao giờ chưa?	헵번	
+S:QUEST1.dat:85:0	세바스찬, 혹시 환생이라는 이야기에 대해서 들어본적이 있어?	Sebastian, em đã nghe chuyện về Tái sinh bao giờ chưa?	헵번	
 S:QUEST1.dat:85:1	환생이라면... 뭐 죽었다가 다시 살아간다는 소리인가요?	Tái sinh... là chết rồi sống lại sao?	세바스찬	
 S:QUEST1.dat:85:2	어느정도 경지를 넘긴 사람들은,	Người đã vượt qua một cảnh giới nhất định	헵번	
 S:QUEST1.dat:85:3	전생에서 체득한 일정량의 능력치를 가지고 다시 태어난다는 것 같은데,	có vẻ sẽ tái sinh cùng một lượng chỉ số đã lĩnh hội ở kiếp trước,	헵번	
-S:QUEST1.dat:85:4	이런 사람을 실제로 만나본 적이 없어서 헷갈리긴 하네..	nhưng ta chưa từng gặp người như vậy nên cũng hơi mơ hồ..	헵번	
+S:QUEST1.dat:85:4	이런 사람을 실제로 만나본 적이 없어서 헷갈리긴 하네..	nhưng chị chưa từng gặp người như vậy nên cũng hơi mơ hồ..	헵번	
 S:QUEST1.dat:85:5	음...그런 사람이 있을려나?	Ừm...liệu có người như thế không nhỉ?	세바스찬	
 S:QUEST1.dat:85:6	참, 이스턴 시티의 성당에 가면 도서관에 그런 내용의 책이 있을지도 모르니 한번 찾아가보렴.	À, đến thư viện ở nhà thờ Eastern City có khi có sách viết về chuyện đó, thử đến xem.	헵번	
-S:QUEST1.dat:85:7	네, 알겠어요. 한번 들려볼께요.	Vâng, tôi hiểu rồi. Tôi sẽ ghé thử.	세바스찬	
+S:QUEST1.dat:85:7	네, 알겠어요. 한번 들려볼께요.	Vâng, em hiểu rồi. Em sẽ ghé thử.	세바스찬	
 S:QUEST1.dat:88:0	최근에 강력한 힘에 의해 통제 되던 마계에 심상치 않은 움직임이 감돌고 있어.	Gần đây ma giới vốn bị một sức mạnh lớn khống chế đang có động tĩnh bất thường.	바스틴루	
 S:QUEST1.dat:88:1	나 혼자서 이곳들을 모두 막아내기엔 힘이 부족하네.	Một mình ta không đủ sức ngăn hết những nơi này.	바스틴루	
 S:QUEST1.dat:88:2	자네같은 사람의 힘이 필요하네.	Ta cần sức mạnh của người như cậu.	바스틴루	
@@ -977,18 +977,18 @@ S:QUEST1.dat:203:1	뭔가 기억이 나세요?	Cô có nhớ ra gì không?	세�
 S:QUEST1.dat:203:2	우앙 ~ 반짝이다 ~ 알로하 ~~울라 울라 울라셩 ~~	Oa~ lấp lánh quá~ Aloha~~ula ula ulaxong~~	플로릴리	
 S:QUEST1.dat:203:3	자! 그거 나 주고 넌 이거 가져!	Nào! Đưa cái đó cho tôi, còn anh cầm cái này!	플로릴리	
 S:QUEST1.dat:203:4	헐......	Hả......	세바스찬	
-S:QUEST1.dat:204:0	와이엄 고기를 들고 헐레벌떡 뛰어오는걸 보니, 누가 신경독에 중독되었나보네?	Thấy cậu cầm thịt Wyem hớt hải chạy tới, chắc ai đó trúng độc thần kinh rồi?	헵번	
-S:QUEST1.dat:204:1	역시! 마법사님들은 대단하시다니깐.	Quả nhiên! Pháp sư thật là giỏi.	세바스찬	
+S:QUEST1.dat:204:0	와이엄 고기를 들고 헐레벌떡 뛰어오는걸 보니, 누가 신경독에 중독되었나보네?	Thấy em cầm thịt Wyem hớt hải chạy tới, chắc ai đó trúng độc thần kinh rồi?	헵번	
+S:QUEST1.dat:204:1	역시! 마법사님들은 대단하시다니깐.	Quả nhiên! Pháp sư đúng là giỏi.	세바스찬	
 S:QUEST1.dat:204:2	이블케이브 앞에 누군가 쓰러져있던데, 마법사의 치료약말고는 어쩔수가 없데요.	Có người gục trước Evil Cave, ngoài thuốc của pháp sư thì chẳng còn cách nào.	세바스찬	
-S:QUEST1.dat:204:3	뭐~ 사람구하는 일이야 나도 그렇게 인색하지 않으니 도와는 주겠다만...	Thôi~ việc cứu người thì ta cũng không keo kiệt, sẽ giúp thôi...	헵번	
+S:QUEST1.dat:204:3	뭐~ 사람구하는 일이야 나도 그렇게 인색하지 않으니 도와는 주겠다만...	Thôi~ việc cứu người thì chị cũng không keo kiệt, sẽ giúp thôi...	헵번	
 S:QUEST1.dat:204:4	결정적으로 뭔가 하나가 빠졌네.	nhưng còn thiếu đúng một thứ quan trọng.	헵번	
 S:QUEST1.dat:204:5	윽.	Ư.	세바스찬	
 S:QUEST1.dat:204:6	고기가 더 필요한가요?	Cần thêm thịt sao?	세바스찬	
 S:QUEST1.dat:204:7	와이엄 고기는 충분해.	Thịt Wyem đủ rồi.	헵번	
-S:QUEST1.dat:204:8	다만, 내 특제 레시피에는 체스트넛 가시가 꼭 들어가야하니, 어서 가서 구해오렴.	Chỉ là công thức đặc chế của ta nhất định phải có Gai Chestnut, mau đi kiếm về.	헵번	
+S:QUEST1.dat:204:8	다만, 내 특제 레시피에는 체스트넛 가시가 꼭 들어가야하니, 어서 가서 구해오렴.	Chỉ là công thức đặc chế của chị nhất định phải có Gai Chestnut, mau đi kiếm về.	헵번	
 S:QUEST1.dat:204:9	으... 이런건 한번에 같이 하면 좋으련만...	Ư... mấy việc này làm một lần luôn thì hay biết mấy...	세바스찬	
 S:QUEST1.dat:204:10	불평불만도 많다 ~어서 레이블타운 외곽에 가서 체스트넛 가시를 구해와 ~	Lắm lời than vãn quá~ mau đến ngoại ô Label Town kiếm Gai Chestnut về đi~	헵번	
-S:QUEST1.dat:205:0	수고가 많았어 ~	Vất vả cho cậu rồi~	헵번	
+S:QUEST1.dat:205:0	수고가 많았어 ~	Vất vả cho em rồi~	헵번	
 S:QUEST1.dat:205:1	자, 이제 살짝 정화 마법까지 더하면~	Nào, giờ thêm chút phép thanh tẩy nữa là~	헵번	
 S:QUEST1.dat:205:2	-정화마법-	-Phép thanh tẩy-	typing	39
 S:QUEST1.dat:205:3	[큐어]	[Cure]	typing2	39
@@ -1297,7 +1297,7 @@ S:QUEST1.dat:236:4	지금은 겁먹어서 조금있다가 돌아온다니깐 너
 S:QUEST1.dat:236:5	크흐흠..흠흠..	E hèm..hừm hừm..	폴조	
 S:QUEST1.dat:236:6	그..그래. 으득!	Đ..được. Hừ!	폴조	
 S:QUEST1.dat:236:7	참, 너도 오해하지 말아라.	À, cậu cũng đừng hiểu lầm.	폴조	
-S:QUEST1.dat:236:8	단지 헵번님을 상대로 연애편지 연습이나 해본거니깐.흠흠	Ta chỉ tập viết thư tình gửi ngài Hepburn thôi. Hừm hừm	폴조	
+S:QUEST1.dat:236:8	단지 헵번님을 상대로 연애편지 연습이나 해본거니깐.흠흠	Ta chỉ tập viết thư tình gửi cô Hepburn thôi. Hừm hừm	폴조	
 S:QUEST1.dat:236:9	감사의 뜻으로 내가 아껴오던 날개장식을 하나 주도록 하지.	Để cảm ơn, ta tặng cậu món trang sức cánh ta quý nhất.	폴조	
 S:QUEST1.dat:236:10	결코 입을 막으려고 하는게 아니니깐 오해는 마라.	Tuyệt đối không phải để bịt miệng đâu, đừng hiểu lầm.	폴조	
 S:QUEST1.dat:236:11	헐...아 네~	Hả...à vâng~	세바스찬	
@@ -1444,8 +1444,8 @@ S:QUEST1.dat:246:4	이젠 모두 제자리로 돌아온것 같네요. 도움에 
 S:QUEST1.dat:246:5	큰 도움도 못드렸는데요.뭐.. 수녀님이 고생하셨죠.	Tôi có giúp được gì nhiều đâu.. sơ mới vất vả.	세바스찬	
 S:QUEST1.dat:246:6	자, 제가 드릴수 있는건 이게 다에요.	Đây, tôi chỉ có thể tặng anh chừng này.	헬레나	
 S:QUEST1.dat:246:7	하지만 위급하실땐 큰 도움이 될거에요. 그럼 그대에게 축복을!	Nhưng lúc nguy cấp nó sẽ giúp ích nhiều. Cầu phước lành cho anh!	헬레나	
-S:QUEST1.dat:247:0	고마워. 이제 곧 몬스터들의 마물화를 늦출 수 있는 방법을 찾을 수 있을거야.	Cảm ơn cậu. Ta sắp tìm ra cách làm chậm quá trình ma hoá của quái vật rồi.	헵번	
-S:QUEST1.dat:247:1	연구가 성공하길 빌께요!	Chúc ngài nghiên cứu thành công!	세바스찬	
+S:QUEST1.dat:247:0	고마워. 이제 곧 몬스터들의 마물화를 늦출 수 있는 방법을 찾을 수 있을거야.	Cảm ơn em. Chị sắp tìm ra cách làm chậm quá trình ma hoá của quái vật rồi.	헵번	
+S:QUEST1.dat:247:1	연구가 성공하길 빌께요!	Chúc chị nghiên cứu thành công!	세바스찬	
 S:QUEST1.dat:248:0	코드리 공작의 전언?	Lời nhắn của Công tước Codry?	세르게이	
 S:QUEST1.dat:248:1	엘리엇가의 사람과 자꾸 왕래가 오가는걸 보이면 서로 좋은게 없을텐데...? 음...	Để người ta thấy qua lại mãi với người nhà Elliot thì chẳng tốt cho bên nào...? Hừm...	세르게이	
 S:QUEST1.dat:248:2	국가의 미래가 걸린 일이라고 하셨어요.	Ngài ấy nói là việc liên quan tới tương lai quốc gia.	세바스찬	
@@ -1591,13 +1591,13 @@ S:QUEST1.dat:264:2	잠깐, 얼마 안걸릴것 같으니 한입 하고 가겠어
 S:QUEST1.dat:264:3	괘..괜찮아요. 제이슨 아저씨나 많이 드리세요.	K..không cần đâu ạ. Cô cho chú Jason ăn nhiều vào.	세바스찬	
 S:QUEST1.dat:264:4	재료를 알고있나보네?	Cháu biết nguyên liệu rồi à?	다나	
 S:QUEST1.dat:264:5	후후. 그래 그럼. 참 이건 답례로 준비한거야. 고마웠어~	Hì hì. Thôi vậy. À cái này cô chuẩn bị để đáp lễ. Cảm ơn cháu~	다나	
-S:QUEST1.dat:265:0	고마워. 보답으로 네가 가진 기술을 한단계 올려주는 신성마법을 써줄께.	Cảm ơn cậu. Để đáp lễ ta sẽ dùng thánh phép nâng kỹ năng cậu lên một bậc.	헵번	
+S:QUEST1.dat:265:0	고마워. 보답으로 네가 가진 기술을 한단계 올려주는 신성마법을 써줄께.	Cảm ơn em. Để đáp lễ chị sẽ dùng thánh phép nâng kỹ năng em lên một bậc.	헵번	
 S:QUEST1.dat:265:1	이 마법은 7서클 이상의 마법사가 평생 단 한번만 쓸수 있는 마법이니 영광인줄 알라고~	Phép này pháp sư Vòng 7 trở lên cả đời chỉ dùng được một lần thôi, thấy vinh dự đi nhé~	헵번	
-S:QUEST1.dat:265:2	헉.. 그럼 너무 죄송한데...	Hả.. vậy tôi thấy áy náy quá...	세바스찬	
-S:QUEST1.dat:265:3	뭐 어차피 나한테 쓸 수 있는것도 아닌데 뭘, 자 눈을 감아.	Dù sao ta cũng chẳng dùng cho mình được, nào nhắm mắt lại.	헵번	
+S:QUEST1.dat:265:2	헉.. 그럼 너무 죄송한데...	Hả.. vậy em thấy áy náy quá...	세바스찬	
+S:QUEST1.dat:265:3	뭐 어차피 나한테 쓸 수 있는것도 아닌데 뭘, 자 눈을 감아.	Dù sao chị cũng chẳng dùng cho mình được, nào nhắm mắt lại.	헵번	
 S:QUEST1.dat:265:4	-신성마법-	-Thánh phép-	typing	39
 S:QUEST1.dat:265:5	[파워오브스킬업]	[Power of Skill Up]	typing2	39
-S:QUEST1.dat:265:6	됐다. 그럼 담에도 또 부탁해~	Xong. Lần sau lại nhờ cậu nhé~	헵번	
+S:QUEST1.dat:265:6	됐다. 그럼 담에도 또 부탁해~	Xong. Lần sau lại nhờ em nhé~	헵번	
 S:QUEST1.dat:266:0	인간...귀찮게 하지 말고 나가라...	Loài người...đừng làm phiền, ra ngoài đi...	융도르코	
 S:QUEST1.dat:266:1	이봐. 난 그저 도움이 필요하다고 해서 왔을뿐이라고.	Này. Tôi chỉ đến vì nghe nói ông cần giúp thôi.	세바스찬	
 S:QUEST1.dat:266:2	별 도움이 필요없다면 그냥 가도록 하지.	Không cần giúp thì tôi đi vậy.	세바스찬	
@@ -1667,692 +1667,692 @@ S:QUEST1.dat:274:1	네, 인간들과 다시 교류를 시작하고 싶다고 하
 S:QUEST1.dat:274:2	공화정과 귀족간의 내전이 시작되기 전에는 작게나마 교역이라도 있었지..	Trước khi nội chiến giữa phe Cộng hòa và quý tộc nổ ra, cũng từng có chút giao thương..	미키	
 S:QUEST1.dat:274:3	오랜만에 그들의 작품을 볼 수 있겠구만,	Lâu lắm mới được xem tác phẩm của họ,	미키	
 S:QUEST1.dat:274:4	참, 그동안 인간도시에서 제작된 대장장이 공구들을 보면 놀라워 할텐데...	À, thấy dụng cụ rèn làm ở thành phố loài người dạo này chắc họ sẽ ngạc nhiên lắm...	미키	
-S:QUEST1.dat:274:5	네, 그럼 저한테 주세요.	네, 그럼 저한테 주세요.	세바스찬	
-S:QUEST1.dat:274:6	안그래도 다시 되돌아가야 할 것 같거든요.	안그래도 다시 되돌아가야 할 것 같거든요.	세바스찬	
-S:QUEST1.dat:274:7	오, 그래? 그럼 이걸 챙겨줄테니 오크들에게 가져다 주라고~	오, 그래? 그럼 이걸 챙겨줄테니 오크들에게 가져다 주라고~	미키	
-S:QUEST1.dat:275:0	선물?	선물?	로카르도	
-S:QUEST1.dat:275:1	네, 인간 대장간에서 새로 만들어진 공구들이라고 했어요	네, 인간 대장간에서 새로 만들어진 공구들이라고 했어요	세바스찬	
-S:QUEST1.dat:275:2	호오.. 꽤 쓸만하겠군, 네가 중간에 잘 해준것 같아 고맙다.	호오.. 꽤 쓸만하겠군, 네가 중간에 잘 해준것 같아 고맙다.	로카르도	
-S:QUEST1.dat:275:3	이건 내 보답이니 넣어둬.	이건 내 보답이니 넣어둬.	로카르도	
-S:QUEST1.dat:276:0	아! 세바스찬님~	아! 세바스찬님~	나디아	
-S:QUEST1.dat:276:1	이..이건 반지? 설마!	이..이건 반지? 설마!	나디아	
-S:QUEST1.dat:276:2	아..제가 아니고 케산님이에요.	아..제가 아니고 케산님이에요.	세바스찬	
-S:QUEST1.dat:276:3	좋으시겠어요, 나디아님~	좋으시겠어요, 나디아님~	세바스찬	
-S:QUEST1.dat:276:4	...왜 그렇게 노려보세요?	...왜 그렇게 노려보세요?	세바스찬	
-S:QUEST1.dat:276:5	흥, 좋아요, 잠시만..	흥, 좋아요, 잠시만..	나디아	
-S:QUEST1.dat:276:6	자.. 이 편지를 케산에게 전해주세요	자.. 이 편지를 케산에게 전해주세요	나디아	
-S:QUEST1.dat:276:7	아니 두분은 바로 옆에 있으면서 왜 자꾸 나한테..	아니 두분은 바로 옆에 있으면서 왜 자꾸 나한테..	세바스찬	
-S:QUEST1.dat:276:8	아..알았아요.<EMO 255 4 3>쳇..대신 전해줄께요.	아..알았아요.<EMO 255 4 3>쳇..대신 전해줄께요.	세바스찬	
-S:QUEST1.dat:277:0	어..어서 나디아님의 편지를 이리 주게	어..어서 나디아님의 편지를 이리 주게	케산	
-S:QUEST1.dat:277:1	나참.. 다 보고 계셨으면서 직접 말하시지 왜 저한테...쩝	나참.. 다 보고 계셨으면서 직접 말하시지 왜 저한테...쩝	세바스찬	
-S:QUEST1.dat:277:2	자~읽어보세요.	자~읽어보세요.	세바스찬	
-S:QUEST1.dat:277:3	두근두근....	두근두근....	케산	
-S:QUEST1.dat:277:4	음?...	음?...	케산	
-S:QUEST1.dat:277:5	인간..어떤 방법으로 하겠느냐?	인간..어떤 방법으로 하겠느냐?	케산	
-S:QUEST1.dat:277:6	네? 뭘 어떤 방법으로 해요?	네? 뭘 어떤 방법으로 해요?	세바스찬	
-S:QUEST1.dat:277:7	결투말이다.	결투말이다.	케산	
-S:QUEST1.dat:277:8	엥? 무슨 결투요? 답답하네. 자세히 말 좀 해주세요.	엥? 무슨 결투요? 답답하네. 자세히 말 좀 해주세요.	세바스찬	
-S:QUEST1.dat:277:9	너와  나, 둘이 결투를 통해 살아남은 자가 나디아님을 차치하라고 써있........	너와  나, 둘이 결투를 통해 살아남은 자가 나디아님을 차치하라고 써있........	케산	
-S:QUEST1.dat:277:10	이놈! 어딜 가느냐!	이놈! 어딜 가느냐!	케산	
-S:QUEST1.dat:278:0	고맙다.인간. 우리 족장님이 아주 고마워하신다.	고맙다.인간. 우리 족장님이 아주 고마워하신다.	브리킷	
-S:QUEST1.dat:278:1	족장님이 인간을 보고싶다고 하니 족장님께 가보도록 해라.	족장님이 인간을 보고싶다고 하니 족장님께 가보도록 해라.	브리킷	
-S:QUEST1.dat:279:0	그래..브리킷에게 말을 전해들었네.	그래..브리킷에게 말을 전해들었네.	샤이먼	
-S:QUEST1.dat:279:1	우리 전사들의 유골을 되 찾아왔다고?	우리 전사들의 유골을 되 찾아왔다고?	샤이먼	
-S:QUEST1.dat:279:2	뭐, 당연히 해야할 일이죠	뭐, 당연히 해야할 일이죠	세바스찬	
-S:QUEST1.dat:279:3	이렇게 또 빚을 지게 되는군,	이렇게 또 빚을 지게 되는군,	샤이먼	
-S:QUEST1.dat:279:4	보답하는 의미에게 자네를 우리 오크의 명예전사로 삼겠네,	보답하는 의미에게 자네를 우리 오크의 명예전사로 삼겠네,	샤이먼	
-S:QUEST1.dat:279:5	차후에 자네 신상에 어떤 일이라도 생기면 모든 오크들이 일어나 자넬 위해 목숨이라도 버릴걸세.	차후에 자네 신상에 어떤 일이라도 생기면 모든 오크들이 일어나 자넬 위해 목숨이라도 버릴걸세.	샤이먼	
-S:QUEST1.dat:279:6	그리고 이것은 작은 정성이니 받아주도록 하게.	그리고 이것은 작은 정성이니 받아주도록 하게.	샤이먼	
-S:QUEST1.dat:280:0	고생이 많았어.	고생이 많았어.	헵번	
-S:QUEST1.dat:280:1	네 노력이 헛되지 않도록 빠른시간내에 대응 아티팩트나 마법진을 왕국 곳곳에 설치해야겠어.	네 노력이 헛되지 않도록 빠른시간내에 대응 아티팩트나 마법진을 왕국 곳곳에 설치해야겠어.	헵번	
-S:QUEST1.dat:280:2	헵번 누나도 힘내세요!	헵번 누나도 힘내세요!	세바스찬	
-S:QUEST1.dat:280:3	보답으로 생명을 되살릴 수 있는 리커버리 북을 하나 주도록 할께.	보답으로 생명을 되살릴 수 있는 리커버리 북을 하나 주도록 할께.	헵번	
-S:QUEST1.dat:280:4	앞으로도 종종 부탁해~	앞으로도 종종 부탁해~	헵번	
-S:QUEST1.dat:281:0	오. 구해오셨군요. .	오. 구해오셨군요. .	크루센	
-S:QUEST1.dat:281:1	뭐..한권 정도야 그리 어렵지 않은 일이지요.	뭐..한권 정도야 그리 어렵지 않은 일이지요.	세바스찬	
-S:QUEST1.dat:281:2	어디보자...흠.. 역시..	어디보자...흠.. 역시..	크루센	
-S:QUEST1.dat:281:3	몇장보고 바로 아실 수 있으세요?	몇장보고 바로 아실 수 있으세요?	세바스찬	
-S:QUEST1.dat:281:4	이건 오래 두고 연구할 필요조차 없군요..	이건 오래 두고 연구할 필요조차 없군요..	크루센	
-S:QUEST1.dat:281:5	그냥 의미없는 문자의 나열일뿐. 이런걸 신경이라고 부르는 자체가 우습군요.	그냥 의미없는 문자의 나열일뿐. 이런걸 신경이라고 부르는 자체가 우습군요.	크루센	
-S:QUEST1.dat:281:6	헐... 역시 사이비 종교!	헐... 역시 사이비 종교!	세바스찬	
-S:QUEST1.dat:281:7	이걸 알게된 이상. 천공신전이나 신전기사단에 알려야 할것 같은데,	이걸 알게된 이상. 천공신전이나 신전기사단에 알려야 할것 같은데,	크루센	
-S:QUEST1.dat:281:8	마침 천공신전에 있는 론다느 경비병이 저랑 약간의 친분이 있으니,	마침 천공신전에 있는 론다느 경비병이 저랑 약간의 친분이 있으니,	크루센	
-S:QUEST1.dat:281:9	그에게 가서 이 일을 전해주시길 부탁드립니다.	그에게 가서 이 일을 전해주시길 부탁드립니다.	크루센	
-S:QUEST1.dat:281:10	네, 알겠어요. 그냥 두어선 안될놈들이네요.	네, 알겠어요. 그냥 두어선 안될놈들이네요.	세바스찬	
-S:QUEST1.dat:282:0	크루센이 그런말을 전하랬단 말이지? 이런 큰일 났군..	크루센이 그런말을 전하랬단 말이지? 이런 큰일 났군..	론다느	
-S:QUEST1.dat:282:1	네, 사이비종교니 이일을 꼭 상부에 전하라고 하셨어요	네, 사이비종교니 이일을 꼭 상부에 전하라고 하셨어요	세바스찬	
-S:QUEST1.dat:282:2	그보다, 급한일이 있어.	그보다, 급한일이 있어.	론다느	
-S:QUEST1.dat:282:3	내친구가 그곳에 전도되어서 주변에서 만류함에도 불구하고 입교를 했는데, 왠지 불길한 기분이 든단 말이야.	내친구가 그곳에 전도되어서 주변에서 만류함에도 불구하고 입교를 했는데, 왠지 불길한 기분이 든단 말이야.	론다느	
-S:QUEST1.dat:282:4	헐...사이비 종교라던데..	헐...사이비 종교라던데..	세바스찬	
-S:QUEST1.dat:282:5	그러니깐 말이야.	그러니깐 말이야.	론다느	
-S:QUEST1.dat:282:6	내가 자리를 뜰 수 없으니 제메스 신전에 잠입해서 내 친구를 찾아봐주겠어?	내가 자리를 뜰 수 없으니 제메스 신전에 잠입해서 내 친구를 찾아봐주겠어?	론다느	
-S:QUEST1.dat:282:7	언제나 화분을 들고 다니면서 꽃을 키우던 친구였기 때문에 알아보기는 쉬울거야.	언제나 화분을 들고 다니면서 꽃을 키우던 친구였기 때문에 알아보기는 쉬울거야.	론다느	
-S:QUEST1.dat:282:8	얼굴에 어렸을때 다쳐서 눈 위에 깊은 상처가 있으니 그것도 참조하고..	얼굴에 어렸을때 다쳐서 눈 위에 깊은 상처가 있으니 그것도 참조하고..	론다느	
-S:QUEST1.dat:282:9	눈에 깊은 상처가 있고, 화분을 들고 다닌다고요?	눈에 깊은 상처가 있고, 화분을 들고 다닌다고요?	세바스찬	
-S:QUEST1.dat:282:10	음..독특한 취향이어서 알아보기는 쉽겠네요.	음..독특한 취향이어서 알아보기는 쉽겠네요.	세바스찬	
-S:QUEST1.dat:282:11	네, 그럼 찾아서 말을 전해드릴께요	네, 그럼 찾아서 말을 전해드릴께요	세바스찬	
-S:QUEST1.dat:283:0	이 화분은...설마...	이 화분은...설마...	세바스찬	
-S:QUEST1.dat:283:1	이런, 이 해골의 눈부분에 오래된 상처 흔적이 남아있는걸 보니	이런, 이 해골의 눈부분에 오래된 상처 흔적이 남아있는걸 보니	세바스찬	
-S:QUEST1.dat:283:2	론나느의 친구가 틀림없는것 같군...안타깝지만 그에게 알려줘야겠다..	론나느의 친구가 틀림없는것 같군...안타깝지만 그에게 알려줘야겠다..	세바스찬	
-S:QUEST1.dat:284:0	뭐라고!! 그게 사실이야?!	뭐라고!! 그게 사실이야?!	론다느	
-S:QUEST1.dat:284:1	네, 안타깝지만...친구분은 이미 유명을 달리하신 것 같네요. 유감이에요.	네, 안타깝지만...친구분은 이미 유명을 달리하신 것 같네요. 유감이에요.	세바스찬	
-S:QUEST1.dat:284:2	으드득.. 이 제메스 놈들.. 가만 두질 않겠다!	으드득.. 이 제메스 놈들.. 가만 두질 않겠다!	론다느	
-S:QUEST1.dat:284:3	상부와 신전기사단 모두에 알려 그들을 반드시 파멸시켜버리고 말겠어!	상부와 신전기사단 모두에 알려 그들을 반드시 파멸시켜버리고 말겠어!	론다느	
-S:QUEST1.dat:284:4	네, 저도 기회가 된다면 한손 보태도록 할께요!	네, 저도 기회가 된다면 한손 보태도록 할께요!	세바스찬	
-S:QUEST1.dat:284:5	그래. 이건 내가 쓰던 무기인데 일단 사례비용으로 내도록 하지.	그래. 이건 내가 쓰던 무기인데 일단 사례비용으로 내도록 하지.	론다느	
-S:QUEST1.dat:285:0	이곳엔 환생에 관련된 책은 없는것 같은데	이곳엔 환생에 관련된 책은 없는것 같은데	세바스찬	
-S:QUEST1.dat:285:1	음..도서 대출 명단이 있군.. 어라? 여기 눈에 띄는 책제목이 하나 있는데?	음..도서 대출 명단이 있군.. 어라? 여기 눈에 띄는 책제목이 하나 있는데?	세바스찬	
-S:QUEST1.dat:285:2	환생 지침서 : 루니안 대여중	환생 지침서 : 루니안 대여중	대출 목록서	
-S:QUEST1.dat:285:3	루니안이라면! 성당안에 요양중인 마법사 할아버지군. 좋아	루니안이라면! 성당안에 요양중인 마법사 할아버지군. 좋아	세바스찬	
-S:QUEST1.dat:285:4	빌려달라고 부탁 드려봐야겠다.	빌려달라고 부탁 드려봐야겠다.	세바스찬	
-S:QUEST1.dat:286:0	환생 지침서? 쿨럭쿨럭.그래.. 내가 예전에 빌려온 적이 있지..	환생 지침서? 쿨럭쿨럭.그래.. 내가 예전에 빌려온 적이 있지..	루니안	
-S:QUEST1.dat:286:1	그러고 보니 꽤 오래전에 빌려왔는데 혹시..	그러고 보니 꽤 오래전에 빌려왔는데 혹시..	루니안	
-S:QUEST1.dat:286:2	혹시...?	혹시...?	세바스찬	
-S:QUEST1.dat:286:3	무슨 연체료 같은걸 내야한다던가...	무슨 연체료 같은걸 내야한다던가...	루니안	
-S:QUEST1.dat:286:4	헐...그런게 아니라, 지금 안 보시면 제가 빌려 갈 수 있나 해서요.	헐...그런게 아니라, 지금 안 보시면 제가 빌려 갈 수 있나 해서요.	세바스찬	
-S:QUEST1.dat:286:5	크흐흠.. 그래. 물론 네가 가져가도 된다.	크흐흠.. 그래. 물론 네가 가져가도 된다.	루니안	
-S:QUEST1.dat:286:6	단지 그 책은 마법의 문자인 룬어로 되어있어 보기 쉽지 않을텐데..	단지 그 책은 마법의 문자인 룬어로 되어있어 보기 쉽지 않을텐데..	루니안	
-S:QUEST1.dat:286:7	미녀천재마법사 헵번님이 볼거여서 괜찮아요.	미녀천재마법사 헵번님이 볼거여서 괜찮아요.	세바스찬	
-S:QUEST1.dat:286:8	그래, 그럼 여기 가져가려무나.	그래, 그럼 여기 가져가려무나.	루니안	
-S:QUEST1.dat:287:0	그래~ 이 책이구나.	그래~ 이 책이구나.	헵번	
-S:QUEST1.dat:287:1	뭐라고 쓰여있어요?	뭐라고 쓰여있어요?	세바스찬	
-S:QUEST1.dat:287:2	응. 한번 읽어줄께.	응. 한번 읽어줄께.	헵번	
-S:QUEST1.dat:287:3	엔딩이후 선택을 통해 환생을 통해 1레벨로 돌아가 추가 스텟과 스킬을 받고,	엔딩이후 선택을 통해 환생을 통해 1레벨로 돌아가 추가 스텟과 스킬을 받고,	헵번	
-S:QUEST1.dat:287:4	더욱 강해진 케릭터를 키울 수 있게되며, 환생 스킬 추가와 아이템의 드랍률이 상승한다.	더욱 강해진 케릭터를 키울 수 있게되며, 환생 스킬 추가와 아이템의 드랍률이 상승한다.	헵번	
-S:QUEST1.dat:287:5	이런식으로 쓰여있네.	이런식으로 쓰여있네.	헵번	
-S:QUEST1.dat:287:6	음..엔딩이후라면 아무래도 먼 얘기네요.	음..엔딩이후라면 아무래도 먼 얘기네요.	세바스찬	
-S:QUEST1.dat:287:7	후훗. 그래. 지금은 그런것도 있구나..라는 정도만 알고 있고, 나중에 한번 생각해보도록 해봐.	후훗. 그래. 지금은 그런것도 있구나..라는 정도만 알고 있고, 나중에 한번 생각해보도록 해봐.	헵번	
-S:QUEST1.dat:288:0	역시 강력한 암흑 마나를 담은 펜던트를 가지고 있었군.	역시 강력한 암흑 마나를 담은 펜던트를 가지고 있었군.	바스틴루	
-S:QUEST1.dat:288:1	예전에도 상대해본 적이 있었는데, 이곳의 워락들은 다른 지역보다 월등하게 강한 느낌이었어요.	예전에도 상대해본 적이 있었는데, 이곳의 워락들은 다른 지역보다 월등하게 강한 느낌이었어요.	세바스찬	
-S:QUEST1.dat:288:2	그래. 아무래도 이것의 존재때문이겠지. 잠시 조사를 해보고 자네를 또 부르겠네.	그래. 아무래도 이것의 존재때문이겠지. 잠시 조사를 해보고 자네를 또 부르겠네.	바스틴루	
-S:QUEST1.dat:289:0	역시 확실한 것 같군.	역시 확실한 것 같군.	바스틴루	
-S:QUEST1.dat:289:1	자신의 부하들에게 그만한 마나펜던트와 하트오브솔저를 제공할 정도면 그곳의 성주는 캐슬나이트가 틀림이 없을 거야.	자신의 부하들에게 그만한 마나펜던트와 하트오브솔저를 제공할 정도면 그곳의 성주는 캐슬나이트가 틀림이 없을 거야.	바스틴루	
-S:QUEST1.dat:289:2	캐슬나이트라면...설마 데이거와...	캐슬나이트라면...설마 데이거와...	세바스찬	
-S:QUEST1.dat:289:3	그렇지. 과거 데이거와 서로 세력을 겨루다 패퇴하고 물러났던 그 비운의 기사지.	그렇지. 과거 데이거와 서로 세력을 겨루다 패퇴하고 물러났던 그 비운의 기사지.	바스틴루	
-S:QUEST1.dat:289:4	그가 돌아왔군...	그가 돌아왔군...	바스틴루	
-S:QUEST1.dat:290:0	그래... 고생했네.	그래... 고생했네.	바스틴루	
-S:QUEST1.dat:290:1	앞으로도 계속 워락들이 그에게 충성을 바치기는 하겠지만, 지속적으로 그들의 힘을 눌러놓을 필요가 있어.	앞으로도 계속 워락들이 그에게 충성을 바치기는 하겠지만, 지속적으로 그들의 힘을 눌러놓을 필요가 있어.	바스틴루	
-S:QUEST1.dat:290:2	네. 가끔 들려서 정찰이라도 해볼께요.	네. 가끔 들려서 정찰이라도 해볼께요.	세바스찬	
-S:QUEST1.dat:290:3	사실 던전보상이 좀 좋은 면이 있기때문이기도 하지만. 핫핫!	사실 던전보상이 좀 좋은 면이 있기때문이기도 하지만. 핫핫!	세바스찬	
-S:QUEST1.dat:290:4	이것으로 잠시 동안은 조용해 질 것 같네.	이것으로 잠시 동안은 조용해 질 것 같네.	바스틴루	
-S:QUEST1.dat:290:5	하지만 이미 시작한 이 암흑 세력의 움직임을 멈추기는 힘들겠지.	하지만 이미 시작한 이 암흑 세력의 움직임을 멈추기는 힘들겠지.	바스틴루	
-S:QUEST1.dat:290:6	강요는 하지 않겠지만...나중에 도전할 의사가 있다면, 트래져 던전으로 가서 캐슬나이트를 무찔러주게나.	강요는 하지 않겠지만...나중에 도전할 의사가 있다면, 트래져 던전으로 가서 캐슬나이트를 무찔러주게나.	바스틴루	
-S:QUEST1.dat:291:0	그래... 맨오워의 힘이 어떤가?	그래... 맨오워의 힘이 어떤가?	바스틴루	
-S:QUEST1.dat:291:1	강하긴 하지만 상대 못할 정도는 아닌 것 같아요.	강하긴 하지만 상대 못할 정도는 아닌 것 같아요.	세바스찬	
-S:QUEST1.dat:291:2	그 것들은 애초에 독무때문에 까다롭긴 하지만. 아직 힘이 좀 약한 느낌이랄까...?	그 것들은 애초에 독무때문에 까다롭긴 하지만. 아직 힘이 좀 약한 느낌이랄까...?	세바스찬	
-S:QUEST1.dat:291:3	마물들이 마계 본연의 힘을 이곳에선 30%정도 뿐이 못쓴다는걸 생각하면...	마물들이 마계 본연의 힘을 이곳에선 30%정도 뿐이 못쓴다는걸 생각하면...	바스틴루	
-S:QUEST1.dat:291:4	이곳에서 진행되는 지역의 마계화가 얼마나 무서운 일인지 알수 있을게야.	이곳에서 진행되는 지역의 마계화가 얼마나 무서운 일인지 알수 있을게야.	바스틴루	
-S:QUEST1.dat:292:0	역시 명불허전.	역시 명불허전.	바스틴루	
-S:QUEST1.dat:292:1	자네 이름이 높아지는데는 이유가 있어군. 대단하네.	자네 이름이 높아지는데는 이유가 있어군. 대단하네.	바스틴루	
-S:QUEST1.dat:292:2	뭐...강하긴 하지만 상대하기 힘든 정도는 아니에요.	뭐...강하긴 하지만 상대하기 힘든 정도는 아니에요.	세바스찬	
-S:QUEST1.dat:293:0	잘 처리 해줬군.	잘 처리 해줬군.	바스틴루	
-S:QUEST1.dat:293:1	자네가 지금 하고 있는 일은 세상에 있을 혼란의 시기를 막는,	자네가 지금 하고 있는 일은 세상에 있을 혼란의 시기를 막는,	바스틴루	
-S:QUEST1.dat:293:2	아니, 막을 수 없다면 그 시기를 최대한 늦추는 중대한 역할이자 임무야.	아니, 막을 수 없다면 그 시기를 최대한 늦추는 중대한 역할이자 임무야.	바스틴루	
-S:QUEST1.dat:293:3	이 말을 꼭 명심해 주게.	이 말을 꼭 명심해 주게.	바스틴루	
-S:QUEST1.dat:294:0	수고했네.	수고했네.	바스틴루	
-S:QUEST1.dat:294:1	언젠가 정령계에서 자네에게 고마움을 표할걸세. 자네는 대단한 일을 한거야	언젠가 정령계에서 자네에게 고마움을 표할걸세. 자네는 대단한 일을 한거야	바스틴루	
-S:QUEST1.dat:294:2	당연히 해야할 일을 해야했을 뿐인데요. 뭐..	당연히 해야할 일을 해야했을 뿐인데요. 뭐..	세바스찬	
-S:QUEST1.dat:294:3	추후에 시간이 난다면 트레져던전모드에서 그리드 매지션을 상대해보게나.	추후에 시간이 난다면 트레져던전모드에서 그리드 매지션을 상대해보게나.	바스틴루	
-S:QUEST1.dat:294:4	자네는 그를 충분히 감당해 낼 수 있을거야.	자네는 그를 충분히 감당해 낼 수 있을거야.	바스틴루	
+S:QUEST1.dat:274:5	네, 그럼 저한테 주세요.	Vâng, vậy đưa cho cháu đi.	세바스찬	
+S:QUEST1.dat:274:6	안그래도 다시 되돌아가야 할 것 같거든요.	Đằng nào cháu cũng phải quay lại đó.	세바스찬	
+S:QUEST1.dat:274:7	오, 그래? 그럼 이걸 챙겨줄테니 오크들에게 가져다 주라고~	Ồ, vậy à? Vậy chú gói cái này, mang cho bọn Orc nhé~	미키	
+S:QUEST1.dat:275:0	선물?	Quà?	로카르도	
+S:QUEST1.dat:275:1	네, 인간 대장간에서 새로 만들어진 공구들이라고 했어요	Vâng, nghe nói là dụng cụ mới làm ở lò rèn loài người	세바스찬	
+S:QUEST1.dat:275:2	호오.. 꽤 쓸만하겠군, 네가 중간에 잘 해준것 같아 고맙다.	Ồ.. chắc dùng được đây, có vẻ ngươi đã làm cầu nối tốt, cảm ơn.	로카르도	
+S:QUEST1.dat:275:3	이건 내 보답이니 넣어둬.	Đây là quà đáp lễ của ta, cầm lấy.	로카르도	
+S:QUEST1.dat:276:0	아! 세바스찬님~	A! Ngài Sebastian~	나디아	
+S:QUEST1.dat:276:1	이..이건 반지? 설마!	Đ..đây là nhẫn? Không lẽ!	나디아	
+S:QUEST1.dat:276:2	아..제가 아니고 케산님이에요.	À..không phải tôi, là ngài Kesan đấy.	세바스찬	
+S:QUEST1.dat:276:3	좋으시겠어요, 나디아님~	Cô sướng nhé, cô Nadia~	세바스찬	
+S:QUEST1.dat:276:4	...왜 그렇게 노려보세요?	...Sao cô lườm tôi thế?	세바스찬	
+S:QUEST1.dat:276:5	흥, 좋아요, 잠시만..	Hứ, được thôi, chờ chút..	나디아	
+S:QUEST1.dat:276:6	자.. 이 편지를 케산에게 전해주세요	Đây.. chuyển lá thư này cho Kesan giúp tôi	나디아	
+S:QUEST1.dat:276:7	아니 두분은 바로 옆에 있으면서 왜 자꾸 나한테..	Hai người ở ngay cạnh nhau mà sao cứ nhờ tôi..	세바스찬	
+S:QUEST1.dat:276:8	아..알았아요.<EMO 255 4 3>쳇..대신 전해줄께요.	Đ..được rồi.<EMO 255 4 3>Xì..tôi chuyển giúp.	세바스찬	
+S:QUEST1.dat:277:0	어..어서 나디아님의 편지를 이리 주게	M..mau đưa thư của cô Nadia đây	케산	
+S:QUEST1.dat:277:1	나참.. 다 보고 계셨으면서 직접 말하시지 왜 저한테...쩝	Trời.. thấy hết rồi mà không tự nói, lại nhờ tôi...chậc	세바스찬	
+S:QUEST1.dat:277:2	자~읽어보세요.	Đây~ đọc đi.	세바스찬	
+S:QUEST1.dat:277:3	두근두근....	Thình thịch....	케산	
+S:QUEST1.dat:277:4	음?...	Hửm?...	케산	
+S:QUEST1.dat:277:5	인간..어떤 방법으로 하겠느냐?	Loài người..ngươi chọn cách nào?	케산	
+S:QUEST1.dat:277:6	네? 뭘 어떤 방법으로 해요?	Dạ? Chọn cách gì cơ?	세바스찬	
+S:QUEST1.dat:277:7	결투말이다.	Quyết đấu đấy.	케산	
+S:QUEST1.dat:277:8	엥? 무슨 결투요? 답답하네. 자세히 말 좀 해주세요.	Hả? Quyết đấu gì? Bực ghê. Nói rõ đi.	세바스찬	
+S:QUEST1.dat:277:9	너와  나, 둘이 결투를 통해 살아남은 자가 나디아님을 차치하라고 써있........	Thư viết ngươi với ta quyết đấu, ai sống sót thì được cô Nadia........	케산	
+S:QUEST1.dat:277:10	이놈! 어딜 가느냐!	Thằng kia! Đi đâu đấy!	케산	
+S:QUEST1.dat:278:0	고맙다.인간. 우리 족장님이 아주 고마워하신다.	Cảm ơn.Loài người. Tộc trưởng chúng ta rất biết ơn.	브리킷	
+S:QUEST1.dat:278:1	족장님이 인간을 보고싶다고 하니 족장님께 가보도록 해라.	Tộc trưởng muốn gặp ngươi, hãy đến gặp tộc trưởng.	브리킷	
+S:QUEST1.dat:279:0	그래..브리킷에게 말을 전해들었네.	Phải..ta đã nghe Brigit kể.	샤이먼	
+S:QUEST1.dat:279:1	우리 전사들의 유골을 되 찾아왔다고?	Cậu đã lấy lại hài cốt các chiến binh của chúng ta sao?	샤이먼	
+S:QUEST1.dat:279:2	뭐, 당연히 해야할 일이죠	Thì, đó là việc nên làm thôi	세바스찬	
+S:QUEST1.dat:279:3	이렇게 또 빚을 지게 되는군,	Lại mắc nợ cậu rồi,	샤이먼	
+S:QUEST1.dat:279:4	보답하는 의미에게 자네를 우리 오크의 명예전사로 삼겠네,	để đáp lễ, ta phong cậu làm chiến binh danh dự của tộc Orc,	샤이먼	
+S:QUEST1.dat:279:5	차후에 자네 신상에 어떤 일이라도 생기면 모든 오크들이 일어나 자넬 위해 목숨이라도 버릴걸세.	sau này cậu có chuyện gì, mọi Orc sẽ đứng lên, dù bỏ mạng vì cậu cũng được.	샤이먼	
+S:QUEST1.dat:279:6	그리고 이것은 작은 정성이니 받아주도록 하게.	Còn đây là chút tấm lòng, cậu nhận lấy.	샤이먼	
+S:QUEST1.dat:280:0	고생이 많았어.	Vất vả cho em rồi.	헵번	
+S:QUEST1.dat:280:1	네 노력이 헛되지 않도록 빠른시간내에 대응 아티팩트나 마법진을 왕국 곳곳에 설치해야겠어.	Để công sức của em không uổng phí, chị phải sớm đặt cổ vật đối kháng hay ma pháp trận khắp vương quốc.	헵번	
+S:QUEST1.dat:280:2	헵번 누나도 힘내세요!	Chị Hepburn cũng cố lên nhé!	세바스찬	
+S:QUEST1.dat:280:3	보답으로 생명을 되살릴 수 있는 리커버리 북을 하나 주도록 할께.	Để đáp lễ chị cho em một Recovery Book có thể hồi sinh.	헵번	
+S:QUEST1.dat:280:4	앞으로도 종종 부탁해~	Sau này lại thường nhờ em nhé~	헵번	
+S:QUEST1.dat:281:0	오. 구해오셨군요. .	Ồ. Cậu kiếm được rồi. .	크루센	
+S:QUEST1.dat:281:1	뭐..한권 정도야 그리 어렵지 않은 일이지요.	Thì..một cuốn thôi đâu khó gì	세바스찬	
+S:QUEST1.dat:281:2	어디보자...흠.. 역시..	Để xem...hừm.. quả nhiên..	크루센	
+S:QUEST1.dat:281:3	몇장보고 바로 아실 수 있으세요?	Xem vài trang là biết ngay được sao?	세바스찬	
+S:QUEST1.dat:281:4	이건 오래 두고 연구할 필요조차 없군요..	Cái này chẳng cần để lâu mà nghiên cứu..	크루센	
+S:QUEST1.dat:281:5	그냥 의미없는 문자의 나열일뿐. 이런걸 신경이라고 부르는 자체가 우습군요.	Chỉ là chuỗi chữ vô nghĩa. Gọi thứ này là kinh thật nực cười.	크루센	
+S:QUEST1.dat:281:6	헐... 역시 사이비 종교!	Hả... đúng là tà giáo!	세바스찬	
+S:QUEST1.dat:281:7	이걸 알게된 이상. 천공신전이나 신전기사단에 알려야 할것 같은데,	Đã biết chuyện này thì phải báo cho Thần điện Thiên Không hoặc đoàn hiệp sĩ thần điện,	크루센	
+S:QUEST1.dat:281:8	마침 천공신전에 있는 론다느 경비병이 저랑 약간의 친분이 있으니,	vừa hay lính gác Rondane ở Thần điện Thiên Không có chút quen biết với tôi,	크루센	
+S:QUEST1.dat:281:9	그에게 가서 이 일을 전해주시길 부탁드립니다.	nhờ cậu đến báo chuyện này cho anh ta.	크루센	
+S:QUEST1.dat:281:10	네, 알겠어요. 그냥 두어선 안될놈들이네요.	Vâng, tôi hiểu rồi. Không thể để yên bọn này được.	세바스찬	
+S:QUEST1.dat:282:0	크루센이 그런말을 전하랬단 말이지? 이런 큰일 났군..	Krusen bảo chuyển lời đó sao? Gay to rồi..	론다느	
+S:QUEST1.dat:282:1	네, 사이비종교니 이일을 꼭 상부에 전하라고 하셨어요	Vâng, ông ấy bảo là tà giáo, nhất định phải báo lên cấp trên	세바스찬	
+S:QUEST1.dat:282:2	그보다, 급한일이 있어.	Chuyện đó để sau, tôi có việc gấp.	론다느	
+S:QUEST1.dat:282:3	내친구가 그곳에 전도되어서 주변에서 만류함에도 불구하고 입교를 했는데, 왠지 불길한 기분이 든단 말이야.	Bạn tôi bị dụ vào đó, xung quanh can ngăn mà vẫn nhập giáo, tôi thấy có điềm chẳng lành.	론다느	
+S:QUEST1.dat:282:4	헐...사이비 종교라던데..	Hả...nghe nói là tà giáo mà..	세바스찬	
+S:QUEST1.dat:282:5	그러니깐 말이야.	Chính thế.	론다느	
+S:QUEST1.dat:282:6	내가 자리를 뜰 수 없으니 제메스 신전에 잠입해서 내 친구를 찾아봐주겠어?	Tôi không rời chỗ này được, cậu lẻn vào thần điện Jemes tìm bạn tôi giúp được không?	론다느	
+S:QUEST1.dat:282:7	언제나 화분을 들고 다니면서 꽃을 키우던 친구였기 때문에 알아보기는 쉬울거야.	Cậu ta lúc nào cũng ôm chậu hoa trồng hoa nên dễ nhận ra thôi.	론다느	
+S:QUEST1.dat:282:8	얼굴에 어렸을때 다쳐서 눈 위에 깊은 상처가 있으니 그것도 참조하고..	Hồi nhỏ mặt bị thương, trên mắt có vết sẹo sâu, cũng để ý nhé..	론다느	
+S:QUEST1.dat:282:9	눈에 깊은 상처가 있고, 화분을 들고 다닌다고요?	Mắt có sẹo sâu, lại ôm chậu hoa đi khắp nơi à?	세바스찬	
+S:QUEST1.dat:282:10	음..독특한 취향이어서 알아보기는 쉽겠네요.	Ừm..sở thích độc đáo nên chắc dễ nhận ra.	세바스찬	
+S:QUEST1.dat:282:11	네, 그럼 찾아서 말을 전해드릴께요	Vâng, tìm được tôi sẽ chuyển lời	세바스찬	
+S:QUEST1.dat:283:0	이 화분은...설마...	Chậu hoa này...không lẽ...	세바스찬	
+S:QUEST1.dat:283:1	이런, 이 해골의 눈부분에 오래된 상처 흔적이 남아있는걸 보니	Trời, chỗ mắt của bộ xương này còn vết sẹo cũ	세바스찬	
+S:QUEST1.dat:283:2	론나느의 친구가 틀림없는것 같군...안타깝지만 그에게 알려줘야겠다..	chắc chắn là bạn của Rondane rồi...đáng tiếc nhưng phải báo cho anh ta..	세바스찬	
+S:QUEST1.dat:284:0	뭐라고!! 그게 사실이야?!	Gì cơ!! Thật sao?!	론다느	
+S:QUEST1.dat:284:1	네, 안타깝지만...친구분은 이미 유명을 달리하신 것 같네요. 유감이에요.	Vâng, đáng tiếc...bạn anh có vẻ đã qua đời rồi. Xin chia buồn.	세바스찬	
+S:QUEST1.dat:284:2	으드득.. 이 제메스 놈들.. 가만 두질 않겠다!	Hừ.. bọn Jemes này.. ta không tha đâu!	론다느	
+S:QUEST1.dat:284:3	상부와 신전기사단 모두에 알려 그들을 반드시 파멸시켜버리고 말겠어!	Phải báo cho cả cấp trên lẫn đoàn hiệp sĩ thần điện, nhất định huỷ diệt chúng!	론다느	
+S:QUEST1.dat:284:4	네, 저도 기회가 된다면 한손 보태도록 할께요!	Vâng, có dịp tôi cũng sẽ góp một tay!	세바스찬	
+S:QUEST1.dat:284:5	그래. 이건 내가 쓰던 무기인데 일단 사례비용으로 내도록 하지.	Ừ. Đây là vũ khí tôi từng dùng, tạm coi như tiền thù lao.	론다느	
+S:QUEST1.dat:285:0	이곳엔 환생에 관련된 책은 없는것 같은데	Ở đây có vẻ không có sách về Tái sinh	세바스찬	
+S:QUEST1.dat:285:1	음..도서 대출 명단이 있군.. 어라? 여기 눈에 띄는 책제목이 하나 있는데?	Ừm..có danh sách mượn sách.. Ơ kìa? Có một tựa sách đáng chú ý này?	세바스찬	
+S:QUEST1.dat:285:2	환생 지침서 : 루니안 대여중	Cẩm nang Tái sinh : Lunian đang mượn	대출 목록서	
+S:QUEST1.dat:285:3	루니안이라면! 성당안에 요양중인 마법사 할아버지군. 좋아	Lunian thì! Là ông pháp sư đang dưỡng bệnh trong nhà thờ. Được	세바스찬	
+S:QUEST1.dat:285:4	빌려달라고 부탁 드려봐야겠다.	phải nhờ ông ấy cho mượn mới được.	세바스찬	
+S:QUEST1.dat:286:0	환생 지침서? 쿨럭쿨럭.그래.. 내가 예전에 빌려온 적이 있지..	Cẩm nang Tái sinh? Khụ khụ. Phải.. trước đây ta có mượn..	루니안	
+S:QUEST1.dat:286:1	그러고 보니 꽤 오래전에 빌려왔는데 혹시..	Nghĩ lại thì mượn cũng lâu lắm rồi, không lẽ..	루니안	
+S:QUEST1.dat:286:2	혹시...?	Không lẽ...?	세바스찬	
+S:QUEST1.dat:286:3	무슨 연체료 같은걸 내야한다던가...	Phải nộp tiền phạt trả trễ gì đó...	루니안	
+S:QUEST1.dat:286:4	헐...그런게 아니라, 지금 안 보시면 제가 빌려 갈 수 있나 해서요.	Hả...không phải vậy, cháu muốn hỏi nếu giờ ông không đọc thì cháu mượn được không.	세바스찬	
+S:QUEST1.dat:286:5	크흐흠.. 그래. 물론 네가 가져가도 된다.	E hèm.. được. Tất nhiên cháu cầm đi cũng được.	루니안	
+S:QUEST1.dat:286:6	단지 그 책은 마법의 문자인 룬어로 되어있어 보기 쉽지 않을텐데..	Chỉ là sách đó viết bằng chữ Rune của phép thuật nên khó đọc lắm..	루니안	
+S:QUEST1.dat:286:7	미녀천재마법사 헵번님이 볼거여서 괜찮아요.	Mỹ nữ pháp sư thiên tài Hepburn sẽ đọc nên không sao ạ.	세바스찬	
+S:QUEST1.dat:286:8	그래, 그럼 여기 가져가려무나.	Được, vậy cầm đi.	루니안	
+S:QUEST1.dat:287:0	그래~ 이 책이구나.	Phải~ là cuốn này.	헵번	
+S:QUEST1.dat:287:1	뭐라고 쓰여있어요?	Trong đó viết gì vậy chị?	세바스찬	
+S:QUEST1.dat:287:2	응. 한번 읽어줄께.	Ừ. Để chị đọc cho.	헵번	
+S:QUEST1.dat:287:3	엔딩이후 선택을 통해 환생을 통해 1레벨로 돌아가 추가 스텟과 스킬을 받고,	Sau ending, chọn Tái sinh thì quay về cấp 1, nhận thêm chỉ số và kỹ năng,	헵번	
+S:QUEST1.dat:287:4	더욱 강해진 케릭터를 키울 수 있게되며, 환생 스킬 추가와 아이템의 드랍률이 상승한다.	có thể luyện nhân vật mạnh hơn, thêm kỹ năng Tái sinh và tăng tỉ lệ rơi vật phẩm.	헵번	
+S:QUEST1.dat:287:5	이런식으로 쓰여있네.	Viết như vậy đấy.	헵번	
+S:QUEST1.dat:287:6	음..엔딩이후라면 아무래도 먼 얘기네요.	Ừm..sau ending thì còn xa lắm.	세바스찬	
+S:QUEST1.dat:287:7	후훗. 그래. 지금은 그런것도 있구나..라는 정도만 알고 있고, 나중에 한번 생각해보도록 해봐.	Hì hì. Phải. Giờ chỉ cần biết có thứ đó thôi, sau này hãy nghĩ thử.	헵번	
+S:QUEST1.dat:288:0	역시 강력한 암흑 마나를 담은 펜던트를 가지고 있었군.	Quả nhiên chúng mang pendant chứa mana bóng tối mạnh.	바스틴루	
+S:QUEST1.dat:288:1	예전에도 상대해본 적이 있었는데, 이곳의 워락들은 다른 지역보다 월등하게 강한 느낌이었어요.	Trước đây tôi từng đối đầu rồi, nhưng Warlock ở đây cảm giác mạnh hơn hẳn nơi khác.	세바스찬	
+S:QUEST1.dat:288:2	그래. 아무래도 이것의 존재때문이겠지. 잠시 조사를 해보고 자네를 또 부르겠네.	Phải. Có lẽ vì thứ này. Ta điều tra một chút rồi sẽ gọi cậu.	바스틴루	
+S:QUEST1.dat:289:0	역시 확실한 것 같군.	Quả là chắc chắn rồi.	바스틴루	
+S:QUEST1.dat:289:1	자신의 부하들에게 그만한 마나펜던트와 하트오브솔저를 제공할 정도면 그곳의 성주는 캐슬나이트가 틀림이 없을 거야.	Cung cấp Mana Pendant và Heart of Soldier cỡ đó cho thuộc hạ thì thành chủ nơi đó chắc chắn là Castle Knight.	바스틴루	
+S:QUEST1.dat:289:2	캐슬나이트라면...설마 데이거와...	Castle Knight thì...không lẽ với Dager...	세바스찬	
+S:QUEST1.dat:289:3	그렇지. 과거 데이거와 서로 세력을 겨루다 패퇴하고 물러났던 그 비운의 기사지.	Đúng. Hiệp sĩ bất hạnh ngày trước tranh thế lực với Dager rồi thất bại rút lui.	바스틴루	
+S:QUEST1.dat:289:4	그가 돌아왔군...	Hắn đã trở lại...	바스틴루	
+S:QUEST1.dat:290:0	그래... 고생했네.	Phải... vất vả rồi.	바스틴루	
+S:QUEST1.dat:290:1	앞으로도 계속 워락들이 그에게 충성을 바치기는 하겠지만, 지속적으로 그들의 힘을 눌러놓을 필요가 있어.	Bọn Warlock sẽ tiếp tục trung thành với hắn, nhưng cần liên tục kìm sức mạnh của chúng.	바스틴루	
+S:QUEST1.dat:290:2	네. 가끔 들려서 정찰이라도 해볼께요.	Vâng. Thỉnh thoảng tôi sẽ ghé trinh sát.	세바스찬	
+S:QUEST1.dat:290:3	사실 던전보상이 좀 좋은 면이 있기때문이기도 하지만. 핫핫!	Thật ra cũng vì thưởng hầm ngục khá hời. Ha ha!	세바스찬	
+S:QUEST1.dat:290:4	이것으로 잠시 동안은 조용해 질 것 같네.	Thế này chắc yên được một thời gian.	바스틴루	
+S:QUEST1.dat:290:5	하지만 이미 시작한 이 암흑 세력의 움직임을 멈추기는 힘들겠지.	Nhưng động tĩnh của thế lực bóng tối đã bắt đầu thì khó dừng lại.	바스틴루	
+S:QUEST1.dat:290:6	강요는 하지 않겠지만...나중에 도전할 의사가 있다면, 트래져 던전으로 가서 캐슬나이트를 무찔러주게나.	Ta không ép...nhưng sau này nếu muốn thử sức thì vào hầm ngục kho báu đánh bại Castle Knight.	바스틴루	
+S:QUEST1.dat:291:0	그래... 맨오워의 힘이 어떤가?	Phải... sức mạnh Man-o-War thế nào?	바스틴루	
+S:QUEST1.dat:291:1	강하긴 하지만 상대 못할 정도는 아닌 것 같아요.	Mạnh thật nhưng không đến mức không đánh nổi.	세바스찬	
+S:QUEST1.dat:291:2	그 것들은 애초에 독무때문에 까다롭긴 하지만. 아직 힘이 좀 약한 느낌이랄까...?	Vốn chúng khó chơi vì sương độc. Nhưng cảm giác sức chúng vẫn còn yếu...?	세바스찬	
+S:QUEST1.dat:291:3	마물들이 마계 본연의 힘을 이곳에선 30%정도 뿐이 못쓴다는걸 생각하면...	Ma vật ở đây chỉ dùng được chừng 30% sức mạnh vốn có của ma giới, nghĩ vậy...	바스틴루	
+S:QUEST1.dat:291:4	이곳에서 진행되는 지역의 마계화가 얼마나 무서운 일인지 알수 있을게야.	sẽ thấy việc vùng này bị ma giới hoá đáng sợ thế nào.	바스틴루	
+S:QUEST1.dat:292:0	역시 명불허전.	Quả danh bất hư truyền.	바스틴루	
+S:QUEST1.dat:292:1	자네 이름이 높아지는데는 이유가 있어군. 대단하네.	Tên cậu nổi danh là có lý do. Giỏi lắm.	바스틴루	
+S:QUEST1.dat:292:2	뭐...강하긴 하지만 상대하기 힘든 정도는 아니에요.	Thì...mạnh thật nhưng không đến mức khó đối phó.	세바스찬	
+S:QUEST1.dat:293:0	잘 처리 해줬군.	Xử lý tốt lắm.	바스틴루	
+S:QUEST1.dat:293:1	자네가 지금 하고 있는 일은 세상에 있을 혼란의 시기를 막는,	Việc cậu đang làm là ngăn thời kỳ hỗn loạn sắp tới của thế gian,	바스틴루	
+S:QUEST1.dat:293:2	아니, 막을 수 없다면 그 시기를 최대한 늦추는 중대한 역할이자 임무야.	không, nếu không ngăn được thì cũng là vai trò và nhiệm vụ trọng đại làm chậm nó hết mức.	바스틴루	
+S:QUEST1.dat:293:3	이 말을 꼭 명심해 주게.	Hãy nhớ kỹ lời này.	바스틴루	
+S:QUEST1.dat:294:0	수고했네.	Vất vả rồi.	바스틴루	
+S:QUEST1.dat:294:1	언젠가 정령계에서 자네에게 고마움을 표할걸세. 자네는 대단한 일을 한거야	Sẽ có ngày tinh linh giới bày tỏ lòng biết ơn với cậu. Cậu đã làm việc lớn	바스틴루	
+S:QUEST1.dat:294:2	당연히 해야할 일을 해야했을 뿐인데요. 뭐..	Tôi chỉ làm việc nên làm thôi mà..	세바스찬	
+S:QUEST1.dat:294:3	추후에 시간이 난다면 트레져던전모드에서 그리드 매지션을 상대해보게나.	Sau này có thời gian thì ở chế độ hầm ngục kho báu thử đấu với Greed Magician.	바스틴루	
+S:QUEST1.dat:294:4	자네는 그를 충분히 감당해 낼 수 있을거야.	Cậu thừa sức đối phó hắn.	바스틴루	
 S:QUEST1.dat:295:0	수고했어.	Vất vả rồi.	바스틴루	
-S:QUEST1.dat:295:1	언제나 먼저 가는 길이 어려운 법이지.	언제나 먼저 가는 길이 어려운 법이지.	바스틴루	
-S:QUEST1.dat:295:2	자네가 해놓은 고생과 노력이 다른 모험가들에게 큰 도움이 될 거야.	자네가 해놓은 고생과 노력이 다른 모험가들에게 큰 도움이 될 거야.	바스틴루	
-S:QUEST1.dat:296:0	수고했네.	수고했네.	바스틴루	
-S:QUEST1.dat:296:1	군대에서도 자네의 이름을 칭송하는 소리가 들리기 시작했다는군.	군대에서도 자네의 이름을 칭송하는 소리가 들리기 시작했다는군.	바스틴루	
-S:QUEST1.dat:296:2	자네가 어디까지 커나갈까...지켜보는 것도 이 피폐한 삶은 작은 즐거움이 되겠어.	자네가 어디까지 커나갈까...지켜보는 것도 이 피폐한 삶은 작은 즐거움이 되겠어.	바스틴루	
-S:QUEST1.dat:296:3	핫핫핫! 한 30센티는 더 클것 같아요!	핫핫핫! 한 30센티는 더 클것 같아요!	세바스찬	
-S:QUEST1.dat:296:4	......조금전에 했던 말은 그냥 잊어주게나.	......조금전에 했던 말은 그냥 잊어주게나.	바스틴루	
-S:QUEST1.dat:297:0	어떤가.그들의 힘은?	어떤가.그들의 힘은?	바스틴루	
-S:QUEST1.dat:297:1	일반 병사가 아니었어요. 뭔가에 씌운듯 공포를 망각하고 달려들던데요.	일반 병사가 아니었어요. 뭔가에 씌운듯 공포를 망각하고 달려들던데요.	세바스찬	
-S:QUEST1.dat:297:2	이런일이...일단 내가 좀더 조사를 해봄세.	이런일이...일단 내가 좀더 조사를 해봄세.	바스틴루	
-S:QUEST1.dat:298:0	영광이 기사단이 그깟 유혹에 넘어가다니...	영광이 기사단이 그깟 유혹에 넘어가다니...	바스틴루	
-S:QUEST1.dat:298:1	이것은 그들의 수장인 과거 기사단장. 딥바벨영주라 칭하는 자가 원인이겠지.	이것은 그들의 수장인 과거 기사단장. 딥바벨영주라 칭하는 자가 원인이겠지.	바스틴루	
-S:QUEST1.dat:298:2	기사단장이 뭐가 아쉬어서 그런짓을...	기사단장이 뭐가 아쉬어서 그런짓을...	세바스찬	
-S:QUEST1.dat:298:3	열길 물속은 알다도 한길 사람속은 모른다 하지 않는가..	열길 물속은 알다도 한길 사람속은 모른다 하지 않는가..	바스틴루	
-S:QUEST1.dat:298:4	나중에 기회가 된다면, 트레져 던전에 도전해 그를 응징해주길 바라네.	나중에 기회가 된다면, 트레져 던전에 도전해 그를 응징해주길 바라네.	바스틴루	
+S:QUEST1.dat:295:1	언제나 먼저 가는 길이 어려운 법이지.	Người đi trước bao giờ cũng gian nan.	바스틴루	
+S:QUEST1.dat:295:2	자네가 해놓은 고생과 노력이 다른 모험가들에게 큰 도움이 될 거야.	Công sức và nỗ lực của cậu sẽ giúp ích nhiều cho những nhà thám hiểm khác.	바스틴루	
+S:QUEST1.dat:296:0	수고했네.	Vất vả rồi.	바스틴루	
+S:QUEST1.dat:296:1	군대에서도 자네의 이름을 칭송하는 소리가 들리기 시작했다는군.	Nghe nói trong quân đội cũng bắt đầu ca tụng tên cậu.	바스틴루	
+S:QUEST1.dat:296:2	자네가 어디까지 커나갈까...지켜보는 것도 이 피폐한 삶은 작은 즐거움이 되겠어.	Cậu sẽ lớn đến đâu...ngắm nhìn điều đó cũng là niềm vui nhỏ trong cuộc đời tàn tạ này.	바스틴루	
+S:QUEST1.dat:296:3	핫핫핫! 한 30센티는 더 클것 같아요!	Ha ha ha! Chắc tôi còn cao thêm 30 phân nữa!	세바스찬	
+S:QUEST1.dat:296:4	......조금전에 했던 말은 그냥 잊어주게나.	......Câu ta vừa nói, cậu cứ quên đi.	바스틴루	
+S:QUEST1.dat:297:0	어떤가.그들의 힘은?	Thế nào. Sức mạnh của chúng?	바스틴루	
+S:QUEST1.dat:297:1	일반 병사가 아니었어요. 뭔가에 씌운듯 공포를 망각하고 달려들던데요.	Không phải lính thường. Như bị ma nhập, quên cả sợ hãi mà lao vào.	세바스찬	
+S:QUEST1.dat:297:2	이런일이...일단 내가 좀더 조사를 해봄세.	Chuyện thế này...ta sẽ điều tra thêm.	바스틴루	
+S:QUEST1.dat:298:0	영광이 기사단이 그깟 유혹에 넘어가다니...	Đoàn hiệp sĩ vinh quang lại sa vào cám dỗ cỏn con ấy...	바스틴루	
+S:QUEST1.dat:298:1	이것은 그들의 수장인 과거 기사단장. 딥바벨영주라 칭하는 자가 원인이겠지.	Nguyên nhân hẳn là thủ lĩnh của họ, cựu đoàn trưởng hiệp sĩ tự xưng là Lãnh chúa Deep Babel.	바스틴루	
+S:QUEST1.dat:298:2	기사단장이 뭐가 아쉬어서 그런짓을...	Đoàn trưởng hiệp sĩ thì thiếu gì mà làm vậy...	세바스찬	
+S:QUEST1.dat:298:3	열길 물속은 알다도 한길 사람속은 모른다 하지 않는가..	Chẳng phải người ta nói sông sâu còn có kẻ dò, lòng người nham hiểm ai đo cho cùng sao..	바스틴루	
+S:QUEST1.dat:298:4	나중에 기회가 된다면, 트레져 던전에 도전해 그를 응징해주길 바라네.	Sau này có dịp, hãy vào hầm ngục kho báu trừng trị hắn.	바스틴루	
 S:QUEST1.dat:299:0	수고했어.	Vất vả rồi.	바스틴루	
-S:QUEST1.dat:299:1	신전기사단에서 자네에게 경의를 표한다는 메세지를 전해왔어.	신전기사단에서 자네에게 경의를 표한다는 메세지를 전해왔어.	바스틴루	
-S:QUEST1.dat:299:2	작위를 내리고 싶어한다는 하더군.	작위를 내리고 싶어한다는 하더군.	바스틴루	
-S:QUEST1.dat:299:3	오... 신전기사단이면 째째하게 남작같은건 주지 않겠죠? 적어도 백작이상은 주려나? 핫핫!	오... 신전기사단이면 째째하게 남작같은건 주지 않겠죠? 적어도 백작이상은 주려나? 핫핫!	세바스찬	
-S:QUEST1.dat:299:4	그래서 무의 길을 걷고 있는 자네에겐 작위따위는 필요하지 않을것 같아서 내가 거절했네.	그래서 무의 길을 걷고 있는 자네에겐 작위따위는 필요하지 않을것 같아서 내가 거절했네.	바스틴루	
-S:QUEST1.dat:299:5	헐... 그걸 왜 바스틴루님이 결정을 해요!	헐... 그걸 왜 바스틴루님이 결정을 해요!	세바스찬	
-S:QUEST1.dat:300:0	그 동안 참고 기다리면서 내 말을 믿고 따라준 것에 대해 고맙게 생각하네.	그 동안 참고 기다리면서 내 말을 믿고 따라준 것에 대해 고맙게 생각하네.	바스틴루	
-S:QUEST1.dat:300:1	하고 싶던 얘기는 그냥 단순한 얘기라고 하기에는 너무도 커다란 말들이지.	하고 싶던 얘기는 그냥 단순한 얘기라고 하기에는 너무도 커다란 말들이지.	바스틴루	
-S:QUEST1.dat:300:2	그게 무슨 말씀이시죠?	그게 무슨 말씀이시죠?	세바스찬	
-S:QUEST1.dat:300:3	오래 전 내가 봉인하고 지금까지 막아 왔던 많은 던전들에서 엄청난 힘들이 쏟아져 나오고 있네.	오래 전 내가 봉인하고 지금까지 막아 왔던 많은 던전들에서 엄청난 힘들이 쏟아져 나오고 있네.	바스틴루	
-S:QUEST1.dat:300:4	전에도 말했지만 더 이상은 나 혼자만의 힘으로 감당하기에는 너무도 어려 울 것 같네.	전에도 말했지만 더 이상은 나 혼자만의 힘으로 감당하기에는 너무도 어려 울 것 같네.	바스틴루	
-S:QUEST1.dat:300:5	그럼 제가 이렇게 계속 도와드리면 되잖아요.	그럼 제가 이렇게 계속 도와드리면 되잖아요.	세바스찬	
-S:QUEST1.dat:300:6	아니야.	아니야.	바스틴루	
-S:QUEST1.dat:300:7	자네가 이렇게 노력했어도 아직 악한 영주들이 사라지지 않았던 것 이상으로 그 많고 강한 암흑 던전들의 힘은 넘치고 넘칠 것이야.	자네가 이렇게 노력했어도 아직 악한 영주들이 사라지지 않았던 것 이상으로 그 많고 강한 암흑 던전들의 힘은 넘치고 넘칠 것이야.	바스틴루	
-S:QUEST1.dat:300:8	그러면 어떻게 하면 되죠?	그러면 어떻게 하면 되죠?	세바스찬	
-S:QUEST1.dat:300:9	아마 자네도 경험을 했을지 모르지만,	아마 자네도 경험을 했을지 모르지만,	바스틴루	
-S:QUEST1.dat:300:10	차원을 개방해서 모험가들이 봉인을 지킬 수 있게 만들었다네.	차원을 개방해서 모험가들이 봉인을 지킬 수 있게 만들었다네.	바스틴루	
-S:QUEST1.dat:300:11	그리고 최상위 모험가의 번호를 던전에 새겨 던전의 봉인을 유지키시는 힘의 원천이 될 것이야.	그리고 최상위 모험가의 번호를 던전에 새겨 던전의 봉인을 유지키시는 힘의 원천이 될 것이야.	바스틴루	
-S:QUEST1.dat:300:12	던전의 봉인을 유지시키는 수호자가 되면, 이후 던전을 입장하는 모험가들에게 던전 입장료도 받을 수 있겠지.	던전의 봉인을 유지시키는 수호자가 되면, 이후 던전을 입장하는 모험가들에게 던전 입장료도 받을 수 있겠지.	바스틴루	
-S:QUEST1.dat:300:13	하지만 돈 때문이 아니라 정의를 위해 싸움을 시작하기를 부탁하네.	하지만 돈 때문이 아니라 정의를 위해 싸움을 시작하기를 부탁하네.	바스틴루	
-S:QUEST1.dat:301:0	용병이 어쩐일로 나를 찾아왔어?	용병이 어쩐일로 나를 찾아왔어?	폴조	
-S:QUEST1.dat:301:1	예전에 슬래셔로서 이름이 높으셨다면서요?	예전에 슬래셔로서 이름이 높으셨다면서요?	세바스찬	
-S:QUEST1.dat:301:2	저에게 어퍼슬래셔의 길을 열어주셨으면 감사하겠어요.	저에게 어퍼슬래셔의 길을 열어주셨으면 감사하겠어요.	세바스찬	
-S:QUEST1.dat:301:3	어퍼슬래셔의 상징은 강인한 인내심!	어퍼슬래셔의 상징은 강인한 인내심!	폴조	
-S:QUEST1.dat:301:4	인내심 이라는 건 자기 자신과의 싸움이지.	인내심 이라는 건 자기 자신과의 싸움이지.	폴조	
-S:QUEST1.dat:301:5	먼저 이스턴시티길의 프로그들을 상대하면서 인내심에 대해 생각해보도록 해봐.	먼저 이스턴시티길의 프로그들을 상대하면서 인내심에 대해 생각해보도록 해봐.	폴조	
-S:QUEST1.dat:302:0	지겨웠을 텐데 보통이 아니군.	지겨웠을 텐데 보통이 아니군.	폴조	
-S:QUEST1.dat:302:1	충분히 다음 단계로 넘어갈 수 있겠어.	충분히 다음 단계로 넘어갈 수 있겠어.	폴조	
-S:QUEST1.dat:302:2	뭐~ 이 정도야 가뿐하죠.	뭐~ 이 정도야 가뿐하죠.	세바스찬	
-S:QUEST1.dat:302:3	이번에 주어지는 시험은 너의 인내심이 진짜였는지 아닌지 구분해 줄 거야.	이번에 주어지는 시험은 너의 인내심이 진짜였는지 아닌지 구분해 줄 거야.	폴조	
-S:QUEST1.dat:302:4	아니!가짜 인내심도 있나요?	아니!가짜 인내심도 있나요?	세바스찬	
-S:QUEST1.dat:302:5	그걸 알아보기 위한 테스트야.	그걸 알아보기 위한 테스트야.	폴조	
-S:QUEST1.dat:302:6	이스턴 시티길의 드루이드를 상대하고 돌아오면 테스트에 통과시켜주지.	이스턴 시티길의 드루이드를 상대하고 돌아오면 테스트에 통과시켜주지.	폴조	
-S:QUEST1.dat:303:0	인정해 주지 않을 수 없는 인내심이군.	인정해 주지 않을 수 없는 인내심이군.	폴조	
-S:QUEST1.dat:303:1	어퍼슬래셔의 자격을 충분히 갖춘 것 같아.	어퍼슬래셔의 자격을 충분히 갖춘 것 같아.	폴조	
-S:QUEST1.dat:303:2	나의 비전 스킬 비법을 전해주지.	나의 비전 스킬 비법을 전해주지.	폴조	
-S:QUEST1.dat:303:3	어퍼슬래셔가 된 것을 축하해!	어퍼슬래셔가 된 것을 축하해!	폴조	
-S:QUEST1.dat:304:0	용병이 어쩐일로 나를 찾아왔어?	용병이 어쩐일로 나를 찾아왔어?	폴조	
-S:QUEST1.dat:304:1	예전에 슬래셔로서 이름이 높으셨다면서요?	예전에 슬래셔로서 이름이 높으셨다면서요?	세바스찬	
-S:QUEST1.dat:304:2	저에게 도끼사용법을 전수해주셨으면 정말 감사드리겠어요.	저에게 도끼사용법을 전수해주셨으면 정말 감사드리겠어요.	세바스찬	
-S:QUEST1.dat:304:3	하하. 다 예전 일이지.	하하. 다 예전 일이지.	폴조	
-S:QUEST1.dat:304:4	좋아. 별로 어려운 것도 아니니 알려주도록 하지.	좋아. 별로 어려운 것도 아니니 알려주도록 하지.	폴조	
-S:QUEST1.dat:304:5	일단 간단한 준비운동겸 해서 내 부탁부터 들어줘야겠지?	일단 간단한 준비운동겸 해서 내 부탁부터 들어줘야겠지?	폴조	
-S:QUEST1.dat:304:6	공짜로 할 생각은 처음부터 없었어요.	공짜로 할 생각은 처음부터 없었어요.	세바스찬	
-S:QUEST1.dat:304:7	개념이 잡혀있군. 역시 스윙슬래셔 지망자다워.	개념이 잡혀있군. 역시 스윙슬래셔 지망자다워.	폴조	
-S:QUEST1.dat:304:8	건축업에 쓰이는 해머 대신 쓰려고 하니깐, 요 앞 이스턴시티길에서 빅푸트의 뼈를 좀 구해다줘.	건축업에 쓰이는 해머 대신 쓰려고 하니깐, 요 앞 이스턴시티길에서 빅푸트의 뼈를 좀 구해다줘.	폴조	
-S:QUEST1.dat:305:0	고맙군, 일단 도끼에 대해 이론공부부터 시작해보자고~	고맙군, 일단 도끼에 대해 이론공부부터 시작해보자고~	폴조	
-S:QUEST1.dat:305:1	도끼의 역사는 석기시대...	도끼의 역사는 석기시대...	폴조	
-S:QUEST1.dat:305:2	Zzz...zz..쿨..	Zzz...zz..쿨..	세바스찬	
+S:QUEST1.dat:299:1	신전기사단에서 자네에게 경의를 표한다는 메세지를 전해왔어.	Đoàn hiệp sĩ thần điện gửi lời bày tỏ sự kính trọng với cậu.	바스틴루	
+S:QUEST1.dat:299:2	작위를 내리고 싶어한다는 하더군.	Nghe nói họ muốn ban tước vị cho cậu.	바스틴루	
+S:QUEST1.dat:299:3	오... 신전기사단이면 째째하게 남작같은건 주지 않겠죠? 적어도 백작이상은 주려나? 핫핫!	Ồ... đoàn hiệp sĩ thần điện thì chắc không keo kiệt cho Nam tước đâu nhỉ? Ít nhất cũng Bá tước trở lên? Ha ha!	세바스찬	
+S:QUEST1.dat:299:4	그래서 무의 길을 걷고 있는 자네에겐 작위따위는 필요하지 않을것 같아서 내가 거절했네.	Nên ta nghĩ người đi con đường võ như cậu đâu cần tước vị, ta đã từ chối rồi.	바스틴루	
+S:QUEST1.dat:299:5	헐... 그걸 왜 바스틴루님이 결정을 해요!	Hả... sao ngài Bastinlu lại quyết thay tôi chứ!	세바스찬	
+S:QUEST1.dat:300:0	그 동안 참고 기다리면서 내 말을 믿고 따라준 것에 대해 고맙게 생각하네.	Cảm ơn cậu đã kiên nhẫn chờ đợi, tin và làm theo lời ta suốt thời gian qua.	바스틴루	
+S:QUEST1.dat:300:1	하고 싶던 얘기는 그냥 단순한 얘기라고 하기에는 너무도 커다란 말들이지.	Điều ta muốn nói quá lớn để coi là chuyện đơn giản.	바스틴루	
+S:QUEST1.dat:300:2	그게 무슨 말씀이시죠?	Ý ngài là sao ạ?	세바스찬	
+S:QUEST1.dat:300:3	오래 전 내가 봉인하고 지금까지 막아 왔던 많은 던전들에서 엄청난 힘들이 쏟아져 나오고 있네.	Từ nhiều hầm ngục ta đã phong ấn và chặn giữ từ lâu, những sức mạnh khủng khiếp đang tuôn ra.	바스틴루	
+S:QUEST1.dat:300:4	전에도 말했지만 더 이상은 나 혼자만의 힘으로 감당하기에는 너무도 어려 울 것 같네.	Như ta đã nói, giờ chỉ sức một mình ta thì quá khó mà gánh nổi.	바스틴루	
+S:QUEST1.dat:300:5	그럼 제가 이렇게 계속 도와드리면 되잖아요.	Vậy tôi cứ tiếp tục giúp ngài thế này là được mà.	세바스찬	
+S:QUEST1.dat:300:6	아니야.	Không.	바스틴루	
+S:QUEST1.dat:300:7	자네가 이렇게 노력했어도 아직 악한 영주들이 사라지지 않았던 것 이상으로 그 많고 강한 암흑 던전들의 힘은 넘치고 넘칠 것이야.	Dù cậu đã nỗ lực vậy mà lãnh chúa ác vẫn chưa biến mất, sức mạnh của vô số hầm ngục bóng tối hùng mạnh kia còn tràn trề hơn thế nữa.	바스틴루	
+S:QUEST1.dat:300:8	그러면 어떻게 하면 되죠?	Vậy phải làm sao ạ?	세바스찬	
+S:QUEST1.dat:300:9	아마 자네도 경험을 했을지 모르지만,	Có lẽ cậu cũng đã trải qua,	바스틴루	
+S:QUEST1.dat:300:10	차원을 개방해서 모험가들이 봉인을 지킬 수 있게 만들었다네.	ta đã mở chiều không gian để các nhà thám hiểm có thể giữ phong ấn.	바스틴루	
+S:QUEST1.dat:300:11	그리고 최상위 모험가의 번호를 던전에 새겨 던전의 봉인을 유지키시는 힘의 원천이 될 것이야.	Và số hiệu của nhà thám hiểm đứng đầu được khắc vào hầm ngục sẽ thành nguồn sức mạnh duy trì phong ấn.	바스틴루	
+S:QUEST1.dat:300:12	던전의 봉인을 유지시키는 수호자가 되면, 이후 던전을 입장하는 모험가들에게 던전 입장료도 받을 수 있겠지.	Trở thành người bảo hộ giữ phong ấn hầm ngục thì có thể thu phí vào cửa của những nhà thám hiểm vào sau.	바스틴루	
+S:QUEST1.dat:300:13	하지만 돈 때문이 아니라 정의를 위해 싸움을 시작하기를 부탁하네.	Nhưng ta mong cậu chiến đấu vì chính nghĩa chứ không phải vì tiền.	바스틴루	
+S:QUEST1.dat:301:0	용병이 어쩐일로 나를 찾아왔어?	Lính đánh thuê tìm ta có việc gì?	폴조	
+S:QUEST1.dat:301:1	예전에 슬래셔로서 이름이 높으셨다면서요?	Nghe nói ngày trước ông là Slasher nổi danh?	세바스찬	
+S:QUEST1.dat:301:2	저에게 어퍼슬래셔의 길을 열어주셨으면 감사하겠어요.	Ông mở cho tôi con đường Upper Slasher thì tôi biết ơn lắm.	세바스찬	
+S:QUEST1.dat:301:3	어퍼슬래셔의 상징은 강인한 인내심!	Biểu tượng của Upper Slasher là sự nhẫn nại kiên cường!	폴조	
+S:QUEST1.dat:301:4	인내심 이라는 건 자기 자신과의 싸움이지.	Nhẫn nại là cuộc chiến với chính mình.	폴조	
+S:QUEST1.dat:301:5	먼저 이스턴시티길의 프로그들을 상대하면서 인내심에 대해 생각해보도록 해봐.	Trước hết đánh với lũ Frog ở đường Eastern City rồi ngẫm về sự nhẫn nại.	폴조	
+S:QUEST1.dat:302:0	지겨웠을 텐데 보통이 아니군.	Chắc chán lắm, vậy mà cậu không tầm thường đâu.	폴조	
+S:QUEST1.dat:302:1	충분히 다음 단계로 넘어갈 수 있겠어.	Đủ sức lên bậc tiếp theo rồi.	폴조	
+S:QUEST1.dat:302:2	뭐~ 이 정도야 가뿐하죠.	Thì~ chừng này nhẹ tênh.	세바스찬	
+S:QUEST1.dat:302:3	이번에 주어지는 시험은 너의 인내심이 진짜였는지 아닌지 구분해 줄 거야.	Bài thử lần này sẽ phân biệt sự nhẫn nại của cậu là thật hay giả.	폴조	
+S:QUEST1.dat:302:4	아니!가짜 인내심도 있나요?	Ơ! Có cả nhẫn nại giả sao?	세바스찬	
+S:QUEST1.dat:302:5	그걸 알아보기 위한 테스트야.	Đây là bài kiểm tra để biết điều đó.	폴조	
+S:QUEST1.dat:302:6	이스턴 시티길의 드루이드를 상대하고 돌아오면 테스트에 통과시켜주지.	Đánh lũ Druid ở đường Eastern City rồi quay về thì ta cho qua.	폴조	
+S:QUEST1.dat:303:0	인정해 주지 않을 수 없는 인내심이군.	Sự nhẫn nại không thể không công nhận.	폴조	
+S:QUEST1.dat:303:1	어퍼슬래셔의 자격을 충분히 갖춘 것 같아.	Cậu đã đủ tư cách làm Upper Slasher.	폴조	
+S:QUEST1.dat:303:2	나의 비전 스킬 비법을 전해주지.	Ta truyền cho cậu bí quyết kỹ năng bí truyền.	폴조	
+S:QUEST1.dat:303:3	어퍼슬래셔가 된 것을 축하해!	Chúc mừng cậu thành Upper Slasher!	폴조	
+S:QUEST1.dat:304:0	용병이 어쩐일로 나를 찾아왔어?	Lính đánh thuê tìm ta có việc gì?	폴조	
+S:QUEST1.dat:304:1	예전에 슬래셔로서 이름이 높으셨다면서요?	Nghe nói ngày trước ông là Slasher nổi danh?	세바스찬	
+S:QUEST1.dat:304:2	저에게 도끼사용법을 전수해주셨으면 정말 감사드리겠어요.	Ông truyền cho tôi cách dùng rìu thì tôi thật biết ơn.	세바스찬	
+S:QUEST1.dat:304:3	하하. 다 예전 일이지.	Ha ha. Chuyện xưa rồi.	폴조	
+S:QUEST1.dat:304:4	좋아. 별로 어려운 것도 아니니 알려주도록 하지.	Được. Cũng chẳng khó gì, ta chỉ cho.	폴조	
+S:QUEST1.dat:304:5	일단 간단한 준비운동겸 해서 내 부탁부터 들어줘야겠지?	Trước hết khởi động chút, nghe ta nhờ một việc đã nhé?	폴조	
+S:QUEST1.dat:304:6	공짜로 할 생각은 처음부터 없었어요.	Tôi vốn chẳng định làm không công.	세바스찬	
+S:QUEST1.dat:304:7	개념이 잡혀있군. 역시 스윙슬래셔 지망자다워.	Biết điều đấy. Đúng là người muốn làm Swing Slasher.	폴조	
+S:QUEST1.dat:304:8	건축업에 쓰이는 해머 대신 쓰려고 하니깐, 요 앞 이스턴시티길에서 빅푸트의 뼈를 좀 구해다줘.	Ta định dùng thay búa làm nghề xây dựng, kiếm giúp ta xương Bigfoot ở đường Eastern City phía trước.	폴조	
+S:QUEST1.dat:305:0	고맙군, 일단 도끼에 대해 이론공부부터 시작해보자고~	Cảm ơn, trước hết học lý thuyết về rìu nào~	폴조	
+S:QUEST1.dat:305:1	도끼의 역사는 석기시대...	Lịch sử của rìu bắt đầu từ thời đồ đá...	폴조	
+S:QUEST1.dat:305:2	Zzz...zz..쿨..	Zzz...zz..khò..	세바스찬	
 S:QUEST1.dat:305:3	헐...	Hả...	폴조	
-S:QUEST1.dat:305:4	됐다. 이론은 그만두고, 실습을 해보자고.	됐다. 이론은 그만두고, 실습을 해보자고.	폴조	
-S:QUEST1.dat:305:5	요앞 이스턴 시티길에서 드루이드들을 처치하고 오면, 스윙슬래셔로서 인정을 해주지.	요앞 이스턴 시티길에서 드루이드들을 처치하고 오면, 스윙슬래셔로서 인정을 해주지.	폴조	
-S:QUEST1.dat:305:6	아 ~함..진작부터 그렇게 말씀하시지.	아 ~함..진작부터 그렇게 말씀하시지.	세바스찬	
-S:QUEST1.dat:306:0	이걸로 인내심과 정확성을 갖추었군!	이걸로 인내심과 정확성을 갖추었군!	폴조	
-S:QUEST1.dat:306:1	스윙슬래셔가 된걸 축하한다.	스윙슬래셔가 된걸 축하한다.	폴조	
-S:QUEST1.dat:307:0	연락은 받았다. 크래싱슬래셔가 되 보겠다구?	연락은 받았다. 크래싱슬래셔가 되 보겠다구?	폴조	
-S:QUEST1.dat:307:1	꿈도 야무지구나.	꿈도 야무지구나.	폴조	
-S:QUEST1.dat:307:2	헐.. 평소랑 말투가 틀리시네요?	헐.. 평소랑 말투가 틀리시네요?	세바스찬	
-S:QUEST1.dat:307:3	크래싱슬래셔로서 후배를 대할때, 고객처럼 대할수는 없지.	크래싱슬래셔로서 후배를 대할때, 고객처럼 대할수는 없지.	폴조	
-S:QUEST1.dat:307:4	일단 네 힘이 어느정도인지 알아보도록 하지.	일단 네 힘이 어느정도인지 알아보도록 하지.	폴조	
-S:QUEST1.dat:307:5	이스턴 시티 길의 데블들을 처치하면서 그것들이 가진	이스턴 시티 길의 데블들을 처치하면서 그것들이 가진	폴조	
-S:QUEST1.dat:307:6	루비광석을 좀 모아오도록.	루비광석을 좀 모아오도록.	폴조	
-S:QUEST1.dat:308:0	어때? 붉은 광석을 보니 피가 뜨거워지지 않아?	어때? 붉은 광석을 보니 피가 뜨거워지지 않아?	폴조	
-S:QUEST1.dat:308:1	자넨 제법 광기를 다스릴수 있는 힘이 엿보이는군!	자넨 제법 광기를 다스릴수 있는 힘이 엿보이는군!	폴조	
-S:QUEST1.dat:308:2	쓸만한 전사가 되겠어.	쓸만한 전사가 되겠어.	폴조	
-S:QUEST1.dat:308:3	고작 데블따위야 별거 아니죠.	고작 데블따위야 별거 아니죠.	세바스찬	
-S:QUEST1.dat:308:4	그럼 마지막 테스트를 하지.	그럼 마지막 테스트를 하지.	폴조	
-S:QUEST1.dat:308:5	이스턴 시티길에서 빅푸트들을 처치하고 오면 크래싱슬래셔의 스킬을 전수해 주지.	이스턴 시티길에서 빅푸트들을 처치하고 오면 크래싱슬래셔의 스킬을 전수해 주지.	폴조	
-S:QUEST1.dat:309:0	훌륭하군. 이제 크래싱슬래셔의 스킬을 전수해주지.	훌륭하군. 이제 크래싱슬래셔의 스킬을 전수해주지.	폴조	
-S:QUEST1.dat:309:1	하지만 이말을 명심하라고.	하지만 이말을 명심하라고.	폴조	
-S:QUEST1.dat:309:2	'강함을 스스로 제압하지 못하면 오히려 길들여 진다.	'강함을 스스로 제압하지 못하면 오히려 길들여 진다.	폴조	
-S:QUEST1.dat:309:3	그 대가는 최악의 실패로 나타날 것이다.'	그 대가는 최악의 실패로 나타날 것이다.'	폴조	
-S:QUEST1.dat:309:4	명심하도록 하죠.	명심하도록 하죠.	세바스찬	
-S:QUEST1.dat:310:0	쉿! 정숙하세요? 형제님 무슨일로 저를 찾아오셨나요?	쉿! 정숙하세요? 형제님 무슨일로 저를 찾아오셨나요?	베넬	
-S:QUEST1.dat:310:1	수녀님! 비밀인건 알고 있지만...	수녀님! 비밀인건 알고 있지만...	세바스찬	
-S:QUEST1.dat:310:2	과거에 수녀님이 어떤 분이 셨는지 알고 찾아왔어요.	과거에 수녀님이 어떤 분이 셨는지 알고 찾아왔어요.	세바스찬	
-S:QUEST1.dat:310:3	저에게 어퍼어쌔신이 되는 방법을 좀 알려주세요.	저에게 어퍼어쌔신이 되는 방법을 좀 알려주세요.	세바스찬	
-S:QUEST1.dat:310:4	아니! 어디서 그런 얘기를?	아니! 어디서 그런 얘기를?	베넬	
-S:QUEST1.dat:310:5	제 과거는 다 흘러간 시간과 함께 바람처럼 사라져 버렸답니다.	제 과거는 다 흘러간 시간과 함께 바람처럼 사라져 버렸답니다.	베넬	
-S:QUEST1.dat:310:6	잘못 찾아오신것 같군요.	잘못 찾아오신것 같군요.	베넬	
-S:QUEST1.dat:310:7	안돼요.수녀님! 전 꼭 어퍼 어쌔신이 되어야해요.	안돼요.수녀님! 전 꼭 어퍼 어쌔신이 되어야해요.	세바스찬	
-S:QUEST1.dat:310:8	이러긴 싫지만 수녀님이 거절하시면 대수녀님께 부탁을...	이러긴 싫지만 수녀님이 거절하시면 대수녀님께 부탁을...	세바스찬	
-S:QUEST1.dat:310:9	앗! 잠깐! 호호 ~ 거절이라니요?	앗! 잠깐! 호호 ~ 거절이라니요?	베넬	
-S:QUEST1.dat:310:10	아니에요.	아니에요.	베넬	
-S:QUEST1.dat:310:11	그럼 이스턴시티 길에서 프로그 10마리만 격퇴하고 오도록 해요.	그럼 이스턴시티 길에서 프로그 10마리만 격퇴하고 오도록 해요.	베넬	
-S:QUEST1.dat:310:12	그정도는 능력은 있어야 어디가서 용병이라고 말하지 않겠어요?	그정도는 능력은 있어야 어디가서 용병이라고 말하지 않겠어요?	베넬	
-S:QUEST1.dat:310:13	프로그 10마리요? (이거 쉽진 않겠는데...)	프로그 10마리요? (이거 쉽진 않겠는데...)	세바스찬	
-S:QUEST1.dat:310:14	걱정마세요! 얼른 다녀올께요.	걱정마세요! 얼른 다녀올께요.	세바스찬	
-S:QUEST1.dat:311:0	어머나. 벌써 처치하고 온건가요? (이런...이젠 어쩔수 없겠군).	어머나. 벌써 처치하고 온건가요? (이런...이젠 어쩔수 없겠군).	베넬	
-S:QUEST1.dat:311:1	음..한번의 테스트에 통과했다고 그 자격이 생겼다고 자만하지 말아요.	음..한번의 테스트에 통과했다고 그 자격이 생겼다고 자만하지 말아요.	베넬	
-S:QUEST1.dat:311:2	네..수녀님! 말씀만 하세요.	네..수녀님! 말씀만 하세요.	세바스찬	
-S:QUEST1.dat:311:3	조금 어려울지도 모르지만,	조금 어려울지도 모르지만,	베넬	
-S:QUEST1.dat:311:4	이스턴 시티길의 드루이드를 물리치고, 그 증표로 암흑의 기운을 가져오면,	이스턴 시티길의 드루이드를 물리치고, 그 증표로 암흑의 기운을 가져오면,	베넬	
-S:QUEST1.dat:311:5	어퍼슬래셔로서의 조건을 갖추었단걸 인정해주죠.	어퍼슬래셔로서의 조건을 갖추었단걸 인정해주죠.	베넬	
-S:QUEST1.dat:311:6	네!! 걱정말고 기다리세요. 쌩 ~~달려 갔다 올게요 수녀님.	네!! 걱정말고 기다리세요. 쌩 ~~달려 갔다 올게요 수녀님.	세바스찬	
-S:QUEST1.dat:312:0	오! 정말 ~ 이렇게 막힘없이 처리하다니..	오! 정말 ~ 이렇게 막힘없이 처리하다니..	베넬	
-S:QUEST1.dat:312:1	이제부터 당신을 어퍼 어쌔신으로 인정하겠어요.	이제부터 당신을 어퍼 어쌔신으로 인정하겠어요.	베넬	
-S:QUEST1.dat:312:2	앞으로 더욱 열심히 수련 하도록 해요.	앞으로 더욱 열심히 수련 하도록 해요.	베넬	
-S:QUEST1.dat:313:0	쉿! 정숙하세요? 형제님. 무슨일로 저를 찾아오셨나요?	쉿! 정숙하세요? 형제님. 무슨일로 저를 찾아오셨나요?	베넬	
-S:QUEST1.dat:313:1	수녀님! 비밀인건 알고 있지만 과거에 수녀님이 어떤 분이 셨는지 알고 찾아왔어요.	수녀님! 비밀인건 알고 있지만 과거에 수녀님이 어떤 분이 셨는지 알고 찾아왔어요.	세바스찬	
-S:QUEST1.dat:313:2	아니! 어디서 그런 얘기를?	아니! 어디서 그런 얘기를?	베넬	
-S:QUEST1.dat:313:3	제 과거는 다 흘러간 시간과 함께 바람처럼 사라져 버렸답니다.  잘못 찾아오신것 같군요.	제 과거는 다 흘러간 시간과 함께 바람처럼 사라져 버렸답니다.  잘못 찾아오신것 같군요.	베넬	
-S:QUEST1.dat:313:4	전 단지 손아귀힘을 기르는 방법이 궁금해서 찾아왔습니다. 수녀님.	전 단지 손아귀힘을 기르는 방법이 궁금해서 찾아왔습니다. 수녀님.	세바스찬	
-S:QUEST1.dat:313:5	이러긴 싫지만 수녀님이 거절하시면 대수녀님께 부탁을...	이러긴 싫지만 수녀님이 거절하시면 대수녀님께 부탁을...	세바스찬	
-S:QUEST1.dat:313:6	...!!! 앗! 잠깐..호호	...!!! 앗! 잠깐..호호	베넬	
-S:QUEST1.dat:313:7	손아귀 힘이라..중요한 질문을 하는군요.	손아귀 힘이라..중요한 질문을 하는군요.	베넬	
-S:QUEST1.dat:313:8	잡기 기술뿐 아니라 일반 무기 사용에 있어서도 그립이 가장 기본이 되지요.	잡기 기술뿐 아니라 일반 무기 사용에 있어서도 그립이 가장 기본이 되지요.	베넬	
-S:QUEST1.dat:313:9	그럼 지금 바로  이스턴 시티길로 가서, 데블 10마리를 상대로 연습을 해보고 돌아오도록 해요!	그럼 지금 바로  이스턴 시티길로 가서, 데블 10마리를 상대로 연습을 해보고 돌아오도록 해요!	베넬	
-S:QUEST1.dat:314:0	오호. 전완근이 상당히 부풀어 올랐군요!	오호. 전완근이 상당히 부풀어 올랐군요!	베넬	
-S:QUEST1.dat:314:1	조금은 효과가 있는 것 같아 다행이군요.	조금은 효과가 있는 것 같아 다행이군요.	베넬	
-S:QUEST1.dat:314:2	그렇죠? 수녀님! 막 힘이 솟구치는 느낌이 난다니까요.	그렇죠? 수녀님! 막 힘이 솟구치는 느낌이 난다니까요.	세바스찬	
-S:QUEST1.dat:314:3	하지만 잠시 펌핑 된 것에 속으면 안돼요.	하지만 잠시 펌핑 된 것에 속으면 안돼요.	베넬	
-S:QUEST1.dat:314:4	꾸준한 연습만이 해결책이 된다는 것 명심하세요.	꾸준한 연습만이 해결책이 된다는 것 명심하세요.	베넬	
-S:QUEST1.dat:314:5	그런 의미로 지금 바로 이스턴 시티길로 가서,	그런 의미로 지금 바로 이스턴 시티길로 가서,	베넬	
-S:QUEST1.dat:314:6	만다고라를 상대로 연습을 해보고 돌아와요!	만다고라를 상대로 연습을 해보고 돌아와요!	베넬	
-S:QUEST1.dat:315:0	여기서도 당신의 힘이 샘솟는게 느껴지네요.	여기서도 당신의 힘이 샘솟는게 느껴지네요.	베넬	
-S:QUEST1.dat:315:1	이제 그래플링어쌔신의 스킬 비법의 주인이 될 자격이 생겼군요.	이제 그래플링어쌔신의 스킬 비법의 주인이 될 자격이 생겼군요.	베넬	
-S:QUEST1.dat:315:2	진심으로 축하해요!	진심으로 축하해요!	베넬	
-S:QUEST1.dat:315:3	감사합니다. 수녀님! 이젠 바위도 깰 수있을것 같아요.하하하!	감사합니다. 수녀님! 이젠 바위도 깰 수있을것 같아요.하하하!	세바스찬	
-S:QUEST1.dat:316:0	쉿! 정숙하세요? 형제님 무슨일로 저를 찾아오셨나요?	쉿! 정숙하세요? 형제님 무슨일로 저를 찾아오셨나요?	베넬	
-S:QUEST1.dat:316:1	수녀님! 비밀인건 알고 있지만, 과거에 수녀님이 어떤 분이 셨는지 알고 찾아왔어요.	수녀님! 비밀인건 알고 있지만, 과거에 수녀님이 어떤 분이 셨는지 알고 찾아왔어요.	세바스찬	
-S:QUEST1.dat:316:2	저에게 파이팅 어쌔신이 되는 방법을 좀 알려주세요.	저에게 파이팅 어쌔신이 되는 방법을 좀 알려주세요.	세바스찬	
-S:QUEST1.dat:316:3	아니! 어디서 그런 얘기를?	아니! 어디서 그런 얘기를?	베넬	
-S:QUEST1.dat:316:4	제 과거는 다 흘러간 시간과 함께 바람처럼 사라져 버렸답니다.  잘못 찾아오신것 같군요.	제 과거는 다 흘러간 시간과 함께 바람처럼 사라져 버렸답니다.  잘못 찾아오신것 같군요.	베넬	
-S:QUEST1.dat:316:5	안돼요. 수녀님! 전 꼭 파이팅 어쌔신이 되어야해요.	안돼요. 수녀님! 전 꼭 파이팅 어쌔신이 되어야해요.	세바스찬	
-S:QUEST1.dat:316:6	이러긴 싫지만 수녀님이 거절하시면 대수녀님께 부탁을...	이러긴 싫지만 수녀님이 거절하시면 대수녀님께 부탁을...	세바스찬	
-S:QUEST1.dat:316:7	앗! 잠깐...휴.. 당신이 마지막이 되길 바래요.	앗! 잠깐...휴.. 당신이 마지막이 되길 바래요.	베넬	
-S:QUEST1.dat:316:8	더 이상 과거에 얽매이고 싶지 않군요.	더 이상 과거에 얽매이고 싶지 않군요.	베넬	
-S:QUEST1.dat:316:9	어쨋든 오셨으니 도움을 드리죠.	어쨋든 오셨으니 도움을 드리죠.	베넬	
-S:QUEST1.dat:316:10	파이팅어쌔신이 되겠다는 말은 곧 격투를 즐기는 자가 되겠다는 말이지요.	파이팅어쌔신이 되겠다는 말은 곧 격투를 즐기는 자가 되겠다는 말이지요.	베넬	
-S:QUEST1.dat:316:11	힘든 테스트가 될 겁니다.	힘든 테스트가 될 겁니다.	베넬	
-S:QUEST1.dat:316:12	우선 가볍게 이스턴 시티길의 만다고라를 상대하면서 그것을 증명해봐요.	우선 가볍게 이스턴 시티길의 만다고라를 상대하면서 그것을 증명해봐요.	베넬	
-S:QUEST1.dat:316:13	네, 수녀님.	네, 수녀님.	세바스찬	
-S:QUEST1.dat:317:0	이제 제법 격투를 즐길 수 있게 된 것 같군요.	이제 제법 격투를 즐길 수 있게 된 것 같군요.	베넬	
-S:QUEST1.dat:317:1	하지만 이걸로 테스트가 끝났다고 생각하면 안돼요.	하지만 이걸로 테스트가 끝났다고 생각하면 안돼요.	베넬	
-S:QUEST1.dat:317:2	네,수녀님. 저도 그런 생각 하지 않아요.	네,수녀님. 저도 그런 생각 하지 않아요.	세바스찬	
-S:QUEST1.dat:317:3	시간을 많이 투자하고 노력을 한다면 그 결과가 나타나지 않을 수 없지요.	시간을 많이 투자하고 노력을 한다면 그 결과가 나타나지 않을 수 없지요.	베넬	
-S:QUEST1.dat:317:4	그러니 그 노력을 이스턴 시티길의 드루이드를 쓰러뜨려 증명해 보아요.	그러니 그 노력을 이스턴 시티길의 드루이드를 쓰러뜨려 증명해 보아요.	베넬	
-S:QUEST1.dat:318:0	이제 믿지 않을 수 없군요.	이제 믿지 않을 수 없군요.	베넬	
-S:QUEST1.dat:318:1	자! 파이팅어쌔신이 된 것을 축하해요!	자! 파이팅어쌔신이 된 것을 축하해요!	베넬	
-S:QUEST1.dat:318:2	감사합니다 ~수녀님.	감사합니다 ~수녀님.	세바스찬	
-S:QUEST1.dat:318:3	모두 수녀님 덕분이에요.	모두 수녀님 덕분이에요.	세바스찬	
-S:QUEST1.dat:319:0	자네는 누구인가?	자네는 누구인가?	다그리파	
-S:QUEST1.dat:319:1	후작님의 높고높은 위명을 전해듣고, 저 멀리 다른 지역에서 가르침을 청하고자 왔어요.	후작님의 높고높은 위명을 전해듣고, 저 멀리 다른 지역에서 가르침을 청하고자 왔어요.	세바스찬	
-S:QUEST1.dat:319:2	허허허. 뭐 위명까지야.	허허허. 뭐 위명까지야.	다그리파	
-S:QUEST1.dat:319:3	흠흠..조언정도는 해줄수 있지.	흠흠..조언정도는 해줄수 있지.	다그리파	
-S:QUEST1.dat:319:4	그전에 성의를 좀 보여주게	그전에 성의를 좀 보여주게	다그리파	
-S:QUEST1.dat:319:5	성의라면...?	성의라면...?	세바스찬	
-S:QUEST1.dat:319:6	우리 브로니에게 줄 루비광석을 몇 개 구해다주면 좋겠군.	우리 브로니에게 줄 루비광석을 몇 개 구해다주면 좋겠군.	다그리파	
-S:QUEST1.dat:319:7	이스턴 시티길의 데블에게서 얻을 수 있을걸세.	이스턴 시티길의 데블에게서 얻을 수 있을걸세.	다그리파	
-S:QUEST1.dat:320:0	여기 루비광석을 가져왔어요.	여기 루비광석을 가져왔어요.	세바스찬	
-S:QUEST1.dat:320:1	고맙군, 그럼 몇가지 말을 해주지.	고맙군, 그럼 몇가지 말을 해주지.	다그리파	
-S:QUEST1.dat:320:2	어퍼나이트의 스킬핵심은 공격과 방어의 조화.	어퍼나이트의 스킬핵심은 공격과 방어의 조화.	다그리파	
-S:QUEST1.dat:320:3	이와 같이 조화를 따지는 나이트에게 상극은 부조화의 상징인 육식식물이라고 볼수 있지.	이와 같이 조화를 따지는 나이트에게 상극은 부조화의 상징인 육식식물이라고 볼수 있지.	다그리파	
-S:QUEST1.dat:320:4	이스턴 시티길의 만다고라를 처치하면서 조화의 의미를 되새기고 오게.	이스턴 시티길의 만다고라를 처치하면서 조화의 의미를 되새기고 오게.	다그리파	
-S:QUEST1.dat:321:0	이제 제법 조화로운 어퍼나이트의 티가 나는군.	이제 제법 조화로운 어퍼나이트의 티가 나는군.	다그리파	
-S:QUEST1.dat:321:1	지금 몇가지 스킬을 전수해주지.	지금 몇가지 스킬을 전수해주지.	다그리파	
+S:QUEST1.dat:305:4	됐다. 이론은 그만두고, 실습을 해보자고.	Thôi được. Bỏ lý thuyết, thực hành đi.	폴조	
+S:QUEST1.dat:305:5	요앞 이스턴 시티길에서 드루이드들을 처치하고 오면, 스윙슬래셔로서 인정을 해주지.	Diệt lũ Druid ở đường Eastern City phía trước rồi về, ta công nhận cậu là Swing Slasher.	폴조	
+S:QUEST1.dat:305:6	아 ~함..진작부터 그렇게 말씀하시지.	Oáp~..sao không nói vậy từ đầu.	세바스찬	
+S:QUEST1.dat:306:0	이걸로 인내심과 정확성을 갖추었군!	Thế là đủ nhẫn nại và chính xác!	폴조	
+S:QUEST1.dat:306:1	스윙슬래셔가 된걸 축하한다.	Chúc mừng cậu thành Swing Slasher.	폴조	
+S:QUEST1.dat:307:0	연락은 받았다. 크래싱슬래셔가 되 보겠다구?	Ta nhận tin rồi. Muốn thành Crashing Slasher à?	폴조	
+S:QUEST1.dat:307:1	꿈도 야무지구나.	Mơ cũng to gan đấy.	폴조	
+S:QUEST1.dat:307:2	헐.. 평소랑 말투가 틀리시네요?	Hả.. giọng ông khác hẳn mọi khi?	세바스찬	
+S:QUEST1.dat:307:3	크래싱슬래셔로서 후배를 대할때, 고객처럼 대할수는 없지.	Đối với hậu bối Crashing Slasher, ta không thể đối xử như khách hàng.	폴조	
+S:QUEST1.dat:307:4	일단 네 힘이 어느정도인지 알아보도록 하지.	Trước hết xem sức cậu đến đâu.	폴조	
+S:QUEST1.dat:307:5	이스턴 시티 길의 데블들을 처치하면서 그것들이 가진	Diệt lũ Devil ở đường Eastern City	폴조	
+S:QUEST1.dat:307:6	루비광석을 좀 모아오도록.	và gom Quặng Ruby chúng mang theo.	폴조	
+S:QUEST1.dat:308:0	어때? 붉은 광석을 보니 피가 뜨거워지지 않아?	Sao nào? Thấy quặng đỏ, máu không sôi lên à?	폴조	
+S:QUEST1.dat:308:1	자넨 제법 광기를 다스릴수 있는 힘이 엿보이는군!	Cậu có vẻ có sức khống chế được cơn cuồng nộ!	폴조	
+S:QUEST1.dat:308:2	쓸만한 전사가 되겠어.	Sẽ thành chiến binh ra trò đấy.	폴조	
+S:QUEST1.dat:308:3	고작 데블따위야 별거 아니죠.	Lũ Devil thì có gì đâu.	세바스찬	
+S:QUEST1.dat:308:4	그럼 마지막 테스트를 하지.	Vậy bài thử cuối cùng.	폴조	
+S:QUEST1.dat:308:5	이스턴 시티길에서 빅푸트들을 처치하고 오면 크래싱슬래셔의 스킬을 전수해 주지.	Diệt lũ Bigfoot ở đường Eastern City rồi về, ta truyền kỹ năng Crashing Slasher.	폴조	
+S:QUEST1.dat:309:0	훌륭하군. 이제 크래싱슬래셔의 스킬을 전수해주지.	Tuyệt lắm. Giờ ta truyền kỹ năng Crashing Slasher cho cậu.	폴조	
+S:QUEST1.dat:309:1	하지만 이말을 명심하라고.	Nhưng hãy ghi nhớ lời này.	폴조	
+S:QUEST1.dat:309:2	'강함을 스스로 제압하지 못하면 오히려 길들여 진다.	"Không tự chế ngự được sức mạnh thì sẽ bị nó thuần hoá.	폴조	
+S:QUEST1.dat:309:3	그 대가는 최악의 실패로 나타날 것이다.'	Cái giá phải trả sẽ là thất bại tồi tệ nhất."	폴조	
+S:QUEST1.dat:309:4	명심하도록 하죠.	Tôi sẽ ghi nhớ.	세바스찬	
+S:QUEST1.dat:310:0	쉿! 정숙하세요? 형제님 무슨일로 저를 찾아오셨나요?	Suỵt! Xin giữ yên lặng? Anh tìm tôi có việc gì?	베넬	
+S:QUEST1.dat:310:1	수녀님! 비밀인건 알고 있지만...	Thưa sơ! Tôi biết là bí mật nhưng...	세바스찬	
+S:QUEST1.dat:310:2	과거에 수녀님이 어떤 분이 셨는지 알고 찾아왔어요.	tôi biết sơ ngày trước là người thế nào nên mới đến.	세바스찬	
+S:QUEST1.dat:310:3	저에게 어퍼어쌔신이 되는 방법을 좀 알려주세요.	Xin chỉ cho tôi cách thành Upper Assassin.	세바스찬	
+S:QUEST1.dat:310:4	아니! 어디서 그런 얘기를?	Trời! Anh nghe chuyện đó ở đâu?	베넬	
+S:QUEST1.dat:310:5	제 과거는 다 흘러간 시간과 함께 바람처럼 사라져 버렸답니다.	Quá khứ của tôi đã tan biến như gió cùng thời gian trôi qua rồi.	베넬	
+S:QUEST1.dat:310:6	잘못 찾아오신것 같군요.	Có lẽ anh tìm nhầm người.	베넬	
+S:QUEST1.dat:310:7	안돼요.수녀님! 전 꼭 어퍼 어쌔신이 되어야해요.	Không được sơ ơi! Tôi nhất định phải thành Upper Assassin.	세바스찬	
+S:QUEST1.dat:310:8	이러긴 싫지만 수녀님이 거절하시면 대수녀님께 부탁을...	Tôi không muốn làm vậy, nhưng nếu sơ từ chối, tôi sẽ nhờ sơ bề trên...	세바스찬	
+S:QUEST1.dat:310:9	앗! 잠깐! 호호 ~ 거절이라니요?	Á! Khoan! Hô hô~ Từ chối gì chứ?	베넬	
+S:QUEST1.dat:310:10	아니에요.	Không có đâu.	베넬	
+S:QUEST1.dat:310:11	그럼 이스턴시티 길에서 프로그 10마리만 격퇴하고 오도록 해요.	Vậy anh ra đường Eastern City đánh lui 10 con Frog rồi về nhé.	베넬	
+S:QUEST1.dat:310:12	그정도는 능력은 있어야 어디가서 용병이라고 말하지 않겠어요?	Ít nhất phải có năng lực chừng đó mới dám xưng là lính đánh thuê chứ?	베넬	
+S:QUEST1.dat:310:13	프로그 10마리요? (이거 쉽진 않겠는데...)	10 con Frog ạ? (Không dễ đâu đây...)	세바스찬	
+S:QUEST1.dat:310:14	걱정마세요! 얼른 다녀올께요.	Sơ đừng lo! Tôi đi rồi về ngay.	세바스찬	
+S:QUEST1.dat:311:0	어머나. 벌써 처치하고 온건가요? (이런...이젠 어쩔수 없겠군).	Ôi chao. Đã diệt xong rồi sao? (Trời...giờ đành chịu thôi).	베넬	
+S:QUEST1.dat:311:1	음..한번의 테스트에 통과했다고 그 자격이 생겼다고 자만하지 말아요.	Ừm..đừng tự mãn rằng qua một bài thử là đủ tư cách.	베넬	
+S:QUEST1.dat:311:2	네..수녀님! 말씀만 하세요.	Vâng..thưa sơ! Sơ cứ nói.	세바스찬	
+S:QUEST1.dat:311:3	조금 어려울지도 모르지만,	Có thể hơi khó,	베넬	
+S:QUEST1.dat:311:4	이스턴 시티길의 드루이드를 물리치고, 그 증표로 암흑의 기운을 가져오면,	đánh bại lũ Druid ở đường Eastern City, mang Khí Bóng tối về làm bằng chứng,	베넬	
+S:QUEST1.dat:311:5	어퍼슬래셔로서의 조건을 갖추었단걸 인정해주죠.	thì tôi công nhận anh đủ điều kiện làm Upper Assassin.	베넬	
+S:QUEST1.dat:311:6	네!! 걱정말고 기다리세요. 쌩 ~~달려 갔다 올게요 수녀님.	Vâng!! Sơ cứ yên tâm chờ. Tôi chạy vèo~~ đi rồi về ngay.	세바스찬	
+S:QUEST1.dat:312:0	오! 정말 ~ 이렇게 막힘없이 처리하다니..	Ồ! Thật là~ xử lý trơn tru thế này..	베넬	
+S:QUEST1.dat:312:1	이제부터 당신을 어퍼 어쌔신으로 인정하겠어요.	Từ giờ tôi công nhận anh là Upper Assassin.	베넬	
+S:QUEST1.dat:312:2	앞으로 더욱 열심히 수련 하도록 해요.	Sau này hãy tu luyện chăm chỉ hơn nữa.	베넬	
+S:QUEST1.dat:313:0	쉿! 정숙하세요? 형제님. 무슨일로 저를 찾아오셨나요?	Suỵt! Xin giữ yên lặng? Anh tìm tôi có việc gì?	베넬	
+S:QUEST1.dat:313:1	수녀님! 비밀인건 알고 있지만 과거에 수녀님이 어떤 분이 셨는지 알고 찾아왔어요.	Thưa sơ! Tôi biết là bí mật nhưng tôi biết sơ ngày trước là người thế nào nên mới đến.	세바스찬	
+S:QUEST1.dat:313:2	아니! 어디서 그런 얘기를?	Trời! Anh nghe chuyện đó ở đâu?	베넬	
+S:QUEST1.dat:313:3	제 과거는 다 흘러간 시간과 함께 바람처럼 사라져 버렸답니다.  잘못 찾아오신것 같군요.	Quá khứ của tôi đã tan biến như gió cùng thời gian trôi qua rồi. Có lẽ anh tìm nhầm người.	베넬	
+S:QUEST1.dat:313:4	전 단지 손아귀힘을 기르는 방법이 궁금해서 찾아왔습니다. 수녀님.	Tôi chỉ muốn biết cách luyện sức nắm tay nên mới đến thôi ạ.	세바스찬	
+S:QUEST1.dat:313:5	이러긴 싫지만 수녀님이 거절하시면 대수녀님께 부탁을...	Tôi không muốn làm vậy, nhưng nếu sơ từ chối, tôi sẽ nhờ sơ bề trên...	세바스찬	
+S:QUEST1.dat:313:6	...!!! 앗! 잠깐..호호	...!!! Á! Khoan..hô hô	베넬	
+S:QUEST1.dat:313:7	손아귀 힘이라..중요한 질문을 하는군요.	Sức nắm tay à..anh hỏi câu quan trọng đấy.	베넬	
+S:QUEST1.dat:313:8	잡기 기술뿐 아니라 일반 무기 사용에 있어서도 그립이 가장 기본이 되지요.	Không chỉ kỹ thuật vật mà cả khi dùng vũ khí thường, cách cầm nắm vẫn là cơ bản nhất.	베넬	
+S:QUEST1.dat:313:9	그럼 지금 바로  이스턴 시티길로 가서, 데블 10마리를 상대로 연습을 해보고 돌아오도록 해요!	Vậy giờ anh ra ngay đường Eastern City, luyện tập với 10 con Devil rồi về nhé!	베넬	
+S:QUEST1.dat:314:0	오호. 전완근이 상당히 부풀어 올랐군요!	Ồ. Cơ cẳng tay phồng lên đáng kể rồi đấy!	베넬	
+S:QUEST1.dat:314:1	조금은 효과가 있는 것 같아 다행이군요.	May là có vẻ cũng có chút hiệu quả.	베넬	
+S:QUEST1.dat:314:2	그렇죠? 수녀님! 막 힘이 솟구치는 느낌이 난다니까요.	Phải không sơ! Tôi thấy sức lực trào dâng hẳn.	세바스찬	
+S:QUEST1.dat:314:3	하지만 잠시 펌핑 된 것에 속으면 안돼요.	Nhưng đừng để bị lừa bởi cơ bắp căng tạm thời.	베넬	
+S:QUEST1.dat:314:4	꾸준한 연습만이 해결책이 된다는 것 명심하세요.	Hãy nhớ chỉ có luyện tập đều đặn mới là giải pháp.	베넬	
+S:QUEST1.dat:314:5	그런 의미로 지금 바로 이스턴 시티길로 가서,	Vì vậy giờ anh ra ngay đường Eastern City,	베넬	
+S:QUEST1.dat:314:6	만다고라를 상대로 연습을 해보고 돌아와요!	luyện tập với lũ Mandragora rồi về!	베넬	
+S:QUEST1.dat:315:0	여기서도 당신의 힘이 샘솟는게 느껴지네요.	Từ đây tôi cũng cảm nhận được sức mạnh của anh đang trào dâng.	베넬	
+S:QUEST1.dat:315:1	이제 그래플링어쌔신의 스킬 비법의 주인이 될 자격이 생겼군요.	Giờ anh đã đủ tư cách làm chủ bí quyết kỹ năng Grappling Assassin.	베넬	
+S:QUEST1.dat:315:2	진심으로 축하해요!	Thật lòng chúc mừng anh!	베넬	
+S:QUEST1.dat:315:3	감사합니다. 수녀님! 이젠 바위도 깰 수있을것 같아요.하하하!	Cảm ơn sơ! Giờ tôi thấy đập vỡ được cả đá. Ha ha ha!	세바스찬	
+S:QUEST1.dat:316:0	쉿! 정숙하세요? 형제님 무슨일로 저를 찾아오셨나요?	Suỵt! Xin giữ yên lặng? Anh tìm tôi có việc gì?	베넬	
+S:QUEST1.dat:316:1	수녀님! 비밀인건 알고 있지만, 과거에 수녀님이 어떤 분이 셨는지 알고 찾아왔어요.	Thưa sơ! Tôi biết là bí mật, nhưng tôi biết sơ ngày trước là người thế nào nên mới đến.	세바스찬	
+S:QUEST1.dat:316:2	저에게 파이팅 어쌔신이 되는 방법을 좀 알려주세요.	Xin chỉ cho tôi cách thành Fighting Assassin.	세바스찬	
+S:QUEST1.dat:316:3	아니! 어디서 그런 얘기를?	Trời! Anh nghe chuyện đó ở đâu?	베넬	
+S:QUEST1.dat:316:4	제 과거는 다 흘러간 시간과 함께 바람처럼 사라져 버렸답니다.  잘못 찾아오신것 같군요.	Quá khứ của tôi đã tan biến như gió cùng thời gian trôi qua rồi. Có lẽ anh tìm nhầm người.	베넬	
+S:QUEST1.dat:316:5	안돼요. 수녀님! 전 꼭 파이팅 어쌔신이 되어야해요.	Không được sơ ơi! Tôi nhất định phải thành Fighting Assassin.	세바스찬	
+S:QUEST1.dat:316:6	이러긴 싫지만 수녀님이 거절하시면 대수녀님께 부탁을...	Tôi không muốn làm vậy, nhưng nếu sơ từ chối, tôi sẽ nhờ sơ bề trên...	세바스찬	
+S:QUEST1.dat:316:7	앗! 잠깐...휴.. 당신이 마지막이 되길 바래요.	Á! Khoan...haizz.. mong anh là người cuối cùng.	베넬	
+S:QUEST1.dat:316:8	더 이상 과거에 얽매이고 싶지 않군요.	Tôi không muốn bị quá khứ trói buộc nữa.	베넬	
+S:QUEST1.dat:316:9	어쨋든 오셨으니 도움을 드리죠.	Dù sao anh cũng đến rồi, tôi sẽ giúp.	베넬	
+S:QUEST1.dat:316:10	파이팅어쌔신이 되겠다는 말은 곧 격투를 즐기는 자가 되겠다는 말이지요.	Muốn thành Fighting Assassin nghĩa là muốn thành người tận hưởng việc chiến đấu.	베넬	
+S:QUEST1.dat:316:11	힘든 테스트가 될 겁니다.	Sẽ là bài thử khó khăn đấy.	베넬	
+S:QUEST1.dat:316:12	우선 가볍게 이스턴 시티길의 만다고라를 상대하면서 그것을 증명해봐요.	Trước hết hãy chứng minh điều đó bằng cách đánh nhẹ với lũ Mandragora ở đường Eastern City.	베넬	
+S:QUEST1.dat:316:13	네, 수녀님.	Vâng, thưa sơ.	세바스찬	
+S:QUEST1.dat:317:0	이제 제법 격투를 즐길 수 있게 된 것 같군요.	Giờ có vẻ anh đã biết tận hưởng chiến đấu rồi.	베넬	
+S:QUEST1.dat:317:1	하지만 이걸로 테스트가 끝났다고 생각하면 안돼요.	Nhưng đừng nghĩ thế là xong bài thử.	베넬	
+S:QUEST1.dat:317:2	네,수녀님. 저도 그런 생각 하지 않아요.	Vâng, thưa sơ. Tôi cũng không nghĩ vậy.	세바스찬	
+S:QUEST1.dat:317:3	시간을 많이 투자하고 노력을 한다면 그 결과가 나타나지 않을 수 없지요.	Bỏ nhiều thời gian và công sức thì không thể không có kết quả.	베넬	
+S:QUEST1.dat:317:4	그러니 그 노력을 이스턴 시티길의 드루이드를 쓰러뜨려 증명해 보아요.	Vậy hãy chứng minh công sức ấy bằng cách hạ lũ Druid ở đường Eastern City.	베넬	
+S:QUEST1.dat:318:0	이제 믿지 않을 수 없군요.	Giờ thì không thể không tin rồi.	베넬	
+S:QUEST1.dat:318:1	자! 파이팅어쌔신이 된 것을 축하해요!	Nào! Chúc mừng anh thành Fighting Assassin!	베넬	
+S:QUEST1.dat:318:2	감사합니다 ~수녀님.	Cảm ơn sơ~	세바스찬	
+S:QUEST1.dat:318:3	모두 수녀님 덕분이에요.	Tất cả là nhờ sơ cả.	세바스찬	
+S:QUEST1.dat:319:0	자네는 누구인가?	Cậu là ai?	다그리파	
+S:QUEST1.dat:319:1	후작님의 높고높은 위명을 전해듣고, 저 멀리 다른 지역에서 가르침을 청하고자 왔어요.	Nghe danh tiếng lẫy lừng của Hầu tước, tôi từ vùng xa xôi đến xin chỉ giáo.	세바스찬	
+S:QUEST1.dat:319:2	허허허. 뭐 위명까지야.	Ha ha ha. Danh tiếng gì chứ.	다그리파	
+S:QUEST1.dat:319:3	흠흠..조언정도는 해줄수 있지.	E hèm..lời khuyên thì ta cho được.	다그리파	
+S:QUEST1.dat:319:4	그전에 성의를 좀 보여주게	Trước đó cậu tỏ chút thành ý đã	다그리파	
+S:QUEST1.dat:319:5	성의라면...?	Thành ý là...?	세바스찬	
+S:QUEST1.dat:319:6	우리 브로니에게 줄 루비광석을 몇 개 구해다주면 좋겠군.	Kiếm giúp ta vài viên Quặng Ruby để tặng Brony nhà ta.	다그리파	
+S:QUEST1.dat:319:7	이스턴 시티길의 데블에게서 얻을 수 있을걸세.	Lấy được từ lũ Devil ở đường Eastern City.	다그리파	
+S:QUEST1.dat:320:0	여기 루비광석을 가져왔어요.	Tôi mang Quặng Ruby đến đây.	세바스찬	
+S:QUEST1.dat:320:1	고맙군, 그럼 몇가지 말을 해주지.	Cảm ơn, vậy ta nói cho cậu vài điều.	다그리파	
+S:QUEST1.dat:320:2	어퍼나이트의 스킬핵심은 공격과 방어의 조화.	Cốt lõi kỹ năng của Upper Knight là hài hoà giữa công và thủ.	다그리파	
+S:QUEST1.dat:320:3	이와 같이 조화를 따지는 나이트에게 상극은 부조화의 상징인 육식식물이라고 볼수 있지.	Với Knight coi trọng hài hoà như vậy, khắc tinh có thể nói là cây ăn thịt, biểu tượng của bất hoà.	다그리파	
+S:QUEST1.dat:320:4	이스턴 시티길의 만다고라를 처치하면서 조화의 의미를 되새기고 오게.	Hãy diệt lũ Mandragora ở đường Eastern City mà ngẫm lại ý nghĩa của hài hoà.	다그리파	
+S:QUEST1.dat:321:0	이제 제법 조화로운 어퍼나이트의 티가 나는군.	Giờ cậu đã khá ra dáng Upper Knight hài hoà rồi.	다그리파	
+S:QUEST1.dat:321:1	지금 몇가지 스킬을 전수해주지.	Giờ ta truyền cho vài kỹ năng.	다그리파	
 S:QUEST1.dat:321:2	감사합니다!	Cảm ơn anh!	세바스찬	
-S:QUEST1.dat:321:3	현재에 머물지말고 계속 정진해서	현재에 머물지말고 계속 정진해서	다그리파	
-S:QUEST1.dat:321:4	명예로운 기사의 이름인 그랜드나이트에 다가가길 바라네.	명예로운 기사의 이름인 그랜드나이트에 다가가길 바라네.	다그리파	
-S:QUEST1.dat:322:0	노블나이트라…	노블나이트라…	다그리파	
-S:QUEST1.dat:322:1	세이버를 자유자재로 구사하며 전장을 날뛰던 친구가 떠오르는군.	세이버를 자유자재로 구사하며 전장을 날뛰던 친구가 떠오르는군.	다그리파	
-S:QUEST1.dat:322:2	혹시 제가 노블나이트의 스킬을 배울 수 있을까요?	혹시 제가 노블나이트의 스킬을 배울 수 있을까요?	세바스찬	
-S:QUEST1.dat:322:3	친구가 먼길을 떠나며,	친구가 먼길을 떠나며,	다그리파	
-S:QUEST1.dat:322:4	후계를 이을만한 자에게 전해달라며, 알려준 스킬이 있긴하지.	후계를 이을만한 자에게 전해달라며, 알려준 스킬이 있긴하지.	다그리파	
-S:QUEST1.dat:322:5	앗! 제가 바로 후계를 이을 그 사람이에요!	앗! 제가 바로 후계를 이을 그 사람이에요!	세바스찬	
-S:QUEST1.dat:322:6	그럴까?	그럴까?	다그리파	
-S:QUEST1.dat:322:7	그렇다면 먼저 이스턴시티길의 프로그들을 상대해봐라.	그렇다면 먼저 이스턴시티길의 프로그들을 상대해봐라.	다그리파	
-S:QUEST1.dat:322:8	네 자질을 보고 판단하기로 하지.	네 자질을 보고 판단하기로 하지.	다그리파	
-S:QUEST1.dat:323:0	제법이군.	제법이군.	다그리파	
-S:QUEST1.dat:323:1	순간이긴 하지만, 노블나이트의 모습이 엿보였어.	순간이긴 하지만, 노블나이트의 모습이 엿보였어.	다그리파	
-S:QUEST1.dat:323:2	그럼 마지막으로 한번 더 테스트해보기로 하지.	그럼 마지막으로 한번 더 테스트해보기로 하지.	다그리파	
-S:QUEST1.dat:323:3	최선을 다 할께요.	최선을 다 할께요.	세바스찬	
-S:QUEST1.dat:323:4	자세가 되었군.	자세가 되었군.	다그리파	
-S:QUEST1.dat:323:5	이스턴 시티길의 드루이드들을 10마리 처리하고 오면	이스턴 시티길의 드루이드들을 10마리 처리하고 오면	다그리파	
-S:QUEST1.dat:323:6	노블나이트의 스킬을 전수해 주지.	노블나이트의 스킬을 전수해 주지.	다그리파	
-S:QUEST1.dat:324:0	훌륭하군.	훌륭하군.	다그리파	
-S:QUEST1.dat:324:1	그럼 노블나이트의 스킬을 전수해주지.	그럼 노블나이트의 스킬을 전수해주지.	다그리파	
-S:QUEST1.dat:324:2	부디 그들의 명예에 먹칠을 하는 일이 없길 바란다.	부디 그들의 명예에 먹칠을 하는 일이 없길 바란다.	다그리파	
-S:QUEST1.dat:325:0	수퍼나이트라..	수퍼나이트라..	다그리파	
-S:QUEST1.dat:325:1	그들의 스킬비법은 마법과 물리공격의 결합.	그들의 스킬비법은 마법과 물리공격의 결합.	다그리파	
-S:QUEST1.dat:325:2	다양한 신체강화 마법을 사용하는 만큼 최강의 전투효율을 자랑하지.	다양한 신체강화 마법을 사용하는 만큼 최강의 전투효율을 자랑하지.	다그리파	
-S:QUEST1.dat:325:3	하지만 그만큼 익히기가 어려워, 중간에 포기하는 자가 많지.	하지만 그만큼 익히기가 어려워, 중간에 포기하는 자가 많지.	다그리파	
-S:QUEST1.dat:325:4	어떤 어려움도 극복할 자신이 있어요.	어떤 어려움도 극복할 자신이 있어요.	세바스찬	
-S:QUEST1.dat:325:5	가르침을 내려주세요.	가르침을 내려주세요.	세바스찬	
-S:QUEST1.dat:325:6	그렇다면 먼저 네 자질이 어느정도인지 알아보도록 하지.	그렇다면 먼저 네 자질이 어느정도인지 알아보도록 하지.	다그리파	
-S:QUEST1.dat:325:7	이스턴 시티 길의 데블들을 상대해보고 와보도록.	이스턴 시티 길의 데블들을 상대해보고 와보도록.	다그리파	
-S:QUEST1.dat:326:0	제법 수퍼나이트로서의 자질이 보이는군.	제법 수퍼나이트로서의 자질이 보이는군.	다그리파	
-S:QUEST1.dat:326:1	마나도 충만해보이고 말이야.	마나도 충만해보이고 말이야.	다그리파	
-S:QUEST1.dat:326:2	원래 주변에서는 마법사를 해도 될만큼 마나가 충만하다고 난리였었죠.	원래 주변에서는 마법사를 해도 될만큼 마나가 충만하다고 난리였었죠.	세바스찬	
-S:QUEST1.dat:326:3	그렇다면 그 마나 다루는 솜씨 한번 볼까?	그렇다면 그 마나 다루는 솜씨 한번 볼까?	다그리파	
-S:QUEST1.dat:326:4	이스턴 시티길의 빅푸트들을 처리하고 오면	이스턴 시티길의 빅푸트들을 처리하고 오면	다그리파	
-S:QUEST1.dat:326:5	수퍼나이트의 스킬을 알려주도록 하지.	수퍼나이트의 스킬을 알려주도록 하지.	다그리파	
-S:QUEST1.dat:327:0	오랜만에 수퍼나이트의 스킬을 구사하는 자가 제국에 이름을 떨치겠군.	오랜만에 수퍼나이트의 스킬을 구사하는 자가 제국에 이름을 떨치겠군.	다그리파	
-S:QUEST1.dat:327:1	앞으로도 검과 마법에 매진해	앞으로도 검과 마법에 매진해	다그리파	
-S:QUEST1.dat:327:2	궁극의 마법기사인 수퍼가디언에 다다르길 바란다.	궁극의 마법기사인 수퍼가디언에 다다르길 바란다.	다그리파	
-S:QUEST1.dat:328:0	할아버지가 전설의 매지션 루니안님 이신가요?	할아버지가 전설의 매지션 루니안님 이신가요?	세바스찬	
-S:QUEST1.dat:328:1	파이어매지션의 길을 알고 싶어서 찾아왔어요.	파이어매지션의 길을 알고 싶어서 찾아왔어요.	세바스찬	
-S:QUEST1.dat:328:2	후후.전설의 매지션이라...오랜만에 들어보는 호칭이군.	후후.전설의 매지션이라...오랜만에 들어보는 호칭이군.	루니안	
-S:QUEST1.dat:328:3	파이어매지션이라..	파이어매지션이라..	루니안	
-S:QUEST1.dat:328:4	그들의 마법 방식은 일반적인 마나컨트롤 이상의 화염에 친화적인 컨트롤을 요구한다네.	그들의 마법 방식은 일반적인 마나컨트롤 이상의 화염에 친화적인 컨트롤을 요구한다네.	루니안	
-S:QUEST1.dat:328:5	그걸 위해서는 불꽃심장이 필요하지.	그걸 위해서는 불꽃심장이 필요하지.	루니안	
-S:QUEST1.dat:328:6	불꽃심장이요? 그건 어디서 구할 수 있나요?	불꽃심장이요? 그건 어디서 구할 수 있나요?	세바스찬	
-S:QUEST1.dat:328:7	글쎄..그렇게 중요한걸 그냥 알려줄 수 없지 않겠나?	글쎄..그렇게 중요한걸 그냥 알려줄 수 없지 않겠나?	루니안	
-S:QUEST1.dat:328:8	일단 자네의 자질을 한 번 테스트 해 봐야겠네.	일단 자네의 자질을 한 번 테스트 해 봐야겠네.	루니안	
-S:QUEST1.dat:328:9	이스턴시티길에 가서 빅푸트를 퇴치해 보게나.	이스턴시티길에 가서 빅푸트를 퇴치해 보게나.	루니안	
-S:QUEST1.dat:329:0	예상밖의 능력을 갖고있군.	예상밖의 능력을 갖고있군.	루니안	
-S:QUEST1.dat:329:1	사실은 불꽃 심장은 나의 분신과 같은 거라네.	사실은 불꽃 심장은 나의 분신과 같은 거라네.	루니안	
-S:QUEST1.dat:329:2	이건  넘겨주기 힘들것 같군.	이건  넘겨주기 힘들것 같군.	루니안	
-S:QUEST1.dat:329:3	안돼요! 할아버지..아니, 어르신!	안돼요! 할아버지..아니, 어르신!	세바스찬	
-S:QUEST1.dat:329:4	저에게 꼭 필요한 물건입니다. 부탁 드릴께요	저에게 꼭 필요한 물건입니다. 부탁 드릴께요	세바스찬	
-S:QUEST1.dat:329:5	흐음....	흐음....	루니안	
-S:QUEST1.dat:329:6	정 그렇다면 이걸 가질 자격이 있는지 제대로 평가해보기로 하지.	정 그렇다면 이걸 가질 자격이 있는지 제대로 평가해보기로 하지.	루니안	
-S:QUEST1.dat:329:7	이스턴 시티길의 드루이드를 상대해 보도록 하게.	이스턴 시티길의 드루이드를 상대해 보도록 하게.	루니안	
-S:QUEST1.dat:330:0	자네에겐 이걸 가질 충분한 자격이 있군.	자네에겐 이걸 가질 충분한 자격이 있군.	루니안	
-S:QUEST1.dat:330:1	이 정도면 나도 맘 편히 불꽃심장을 넘겨 줄 수 있겠어.	이 정도면 나도 맘 편히 불꽃심장을 넘겨 줄 수 있겠어.	루니안	
-S:QUEST1.dat:330:2	이리오게, 자네의 마나서클에 직접 불꽃심장을 넣어주지.	이리오게, 자네의 마나서클에 직접 불꽃심장을 넣어주지.	루니안	
-S:QUEST1.dat:330:3	감사합니다. 루니안님!	감사합니다. 루니안님!	세바스찬	
-S:QUEST1.dat:331:0	퍼스트아이스라구?	퍼스트아이스라구?	루니안	
-S:QUEST1.dat:331:1	아이스매지션으로 첫발을 내딛으려고 하는 모양군.	아이스매지션으로 첫발을 내딛으려고 하는 모양군.	루니안	
-S:QUEST1.dat:331:2	따뜻함을 버린다는 건 정말 쉬운 일이 아니네.	따뜻함을 버린다는 건 정말 쉬운 일이 아니네.	루니안	
-S:QUEST1.dat:331:3	경이로운 마법사 -바스틴루- 역시 쉽지 않다고 말했다네.	경이로운 마법사 -바스틴루- 역시 쉽지 않다고 말했다네.	루니안	
-S:QUEST1.dat:331:4	하지만 전 완벽한 아이스매지션이 되고 싶어요.	하지만 전 완벽한 아이스매지션이 되고 싶어요.	세바스찬	
-S:QUEST1.dat:331:5	그렇다면 방법을 알려주겠네.	그렇다면 방법을 알려주겠네.	루니안	
-S:QUEST1.dat:331:6	강철심장을 가질 수 있다면 조금은 쉽게 가능해질 수 있지.	강철심장을 가질 수 있다면 조금은 쉽게 가능해질 수 있지.	루니안	
-S:QUEST1.dat:331:7	네가 그걸 가질 만한 인물인지 알아봐야겠구만.	네가 그걸 가질 만한 인물인지 알아봐야겠구만.	루니안	
-S:QUEST1.dat:331:8	우선 이스턴시티길에서 데블들에게 루비광석 10개를 구해와 보게.	우선 이스턴시티길에서 데블들에게 루비광석 10개를 구해와 보게.	루니안	
-S:QUEST1.dat:332:0	여기 루비광석 10개요.	여기 루비광석 10개요.	세바스찬	
-S:QUEST1.dat:332:1	이제 강철 심장은 제게 넘겨 주시는 거죠?	이제 강철 심장은 제게 넘겨 주시는 거죠?	세바스찬	
-S:QUEST1.dat:332:2	뭐? 강철심장을 원한다구?	뭐? 강철심장을 원한다구?	루니안	
-S:QUEST1.dat:332:3	그게 어떻게 구한물건인데.	그게 어떻게 구한물건인데.	루니안	
-S:QUEST1.dat:332:4	그냥은 못 넘겨주네.	그냥은 못 넘겨주네.	루니안	
-S:QUEST1.dat:332:5	이스턴 시티길의 만다고라들의 줄기를 구해온다면 모를까?	이스턴 시티길의 만다고라들의 줄기를 구해온다면 모를까?	루니안	
-S:QUEST1.dat:332:6	만다고라 줄기요?.	만다고라 줄기요?.	세바스찬	
-S:QUEST1.dat:332:7	휴~ 잠깐 기다리세요!	휴~ 잠깐 기다리세요!	세바스찬	
-S:QUEST1.dat:333:0	좋아.내 직접 강철심장을 너의 마나 서클홀에 심어주도록 하지!	좋아.내 직접 강철심장을 너의 마나 서클홀에 심어주도록 하지!	루니안	
-S:QUEST1.dat:333:1	이제 새로운 스킬과 함께 어떠한 온기까지 얼려 버릴 수 있는 강한 아이스매지션이 되길 바라네!	이제 새로운 스킬과 함께 어떠한 온기까지 얼려 버릴 수 있는 강한 아이스매지션이 되길 바라네!	루니안	
-S:QUEST1.dat:333:2	감사합니다. 루니안님!	감사합니다. 루니안님!	세바스찬	
-S:QUEST1.dat:334:0	썬더매지션? 정말 어렵고도 두려운 결정을 했군.	썬더매지션? 정말 어렵고도 두려운 결정을 했군.	루니안	
-S:QUEST1.dat:334:1	썬더매지션이 되는 순간 썬더어택을 당하게 되는데 너무도 고통스럽기 때문에 견디지 못하고 죽는 경우가 많다네.	썬더매지션이 되는 순간 썬더어택을 당하게 되는데 너무도 고통스럽기 때문에 견디지 못하고 죽는 경우가 많다네.	루니안	
-S:QUEST1.dat:334:2	그래서 썬더매지션이 많지 않은 거야.	그래서 썬더매지션이 많지 않은 거야.	루니안	
-S:QUEST1.dat:334:3	분명히 그걸 극복할 수있는 방법이 있지 않을까요?	분명히 그걸 극복할 수있는 방법이 있지 않을까요?	세바스찬	
-S:QUEST1.dat:334:4	그래. 맞아! 조금 기억이 나는구만.	그래. 맞아! 조금 기억이 나는구만.	루니안	
-S:QUEST1.dat:334:5	썬더매지션이 많지 않지만 방법이 없는 건 아니라네.	썬더매지션이 많지 않지만 방법이 없는 건 아니라네.	루니안	
-S:QUEST1.dat:334:6	이스턴 시티길에서 만다고라를 처치하고, 그 줄기를 몇개 구해준다면 기억을 더듬어 보도록 하겠네.	이스턴 시티길에서 만다고라를 처치하고, 그 줄기를 몇개 구해준다면 기억을 더듬어 보도록 하겠네.	루니안	
-S:QUEST1.dat:335:0	전에 마법사 바스틴루의 서적 중 수퍼스톰카운트 라는 책을 본적이 있는데.	전에 마법사 바스틴루의 서적 중 수퍼스톰카운트 라는 책을 본적이 있는데.	루니안	
-S:QUEST1.dat:335:1	극복할 수 있는 방법에 대해 나와 있던 것 같아.	극복할 수 있는 방법에 대해 나와 있던 것 같아.	루니안	
-S:QUEST1.dat:335:2	정말이세요? 그 책 어떻게 구할 수없을까요?	정말이세요? 그 책 어떻게 구할 수없을까요?	세바스찬	
-S:QUEST1.dat:335:3	그 책을? 그게 낡은 책이긴 해도 나오기만 하면 다들 웃돈을 주고 가져가기 바쁘다네.	그 책을? 그게 낡은 책이긴 해도 나오기만 하면 다들 웃돈을 주고 가져가기 바쁘다네.	루니안	
-S:QUEST1.dat:335:4	하지만 자네랑 안면도 있고 하니 모른 척 할 수는 없겠구만.	하지만 자네랑 안면도 있고 하니 모른 척 할 수는 없겠구만.	루니안	
-S:QUEST1.dat:335:5	이스턴 시티길의 드루이드 몇마리만 퇴치하고 와 보게.	이스턴 시티길의 드루이드 몇마리만 퇴치하고 와 보게.	루니안	
-S:QUEST1.dat:335:6	나도 그 동안 무슨 수를 써서라도, 그 책을 구해 놓을 테니까.	나도 그 동안 무슨 수를 써서라도, 그 책을 구해 놓을 테니까.	루니안	
-S:QUEST1.dat:336:0	보글링 퇴치에 성공했군?	보글링 퇴치에 성공했군?	루니안	
-S:QUEST1.dat:336:1	더 이상 무슨 테스트가 필요하겠어.	더 이상 무슨 테스트가 필요하겠어.	루니안	
-S:QUEST1.dat:336:2	여기 약속한 책이 있네. 이 자리에서 내가 직접 책에 있는 썬더어택 방어법을 운용해줄테니, 마음놓고 전직하도록 하게.	여기 약속한 책이 있네. 이 자리에서 내가 직접 책에 있는 썬더어택 방어법을 운용해줄테니, 마음놓고 전직하도록 하게.	루니안	
-S:QUEST1.dat:336:3	우와!! 정말 구하셨군요! 감사합니다.	우와!! 정말 구하셨군요! 감사합니다.	세바스찬	
-S:QUEST1.dat:336:4	새로 배운 스킬을 이용해서 최고의 썬더매지션이 되도록 하게나. 축하하네.	새로 배운 스킬을 이용해서 최고의 썬더매지션이 되도록 하게나. 축하하네.	루니안	
-S:QUEST1.dat:337:0	그랜드슬래셔라...	그랜드슬래셔라...	드비쉬	
-S:QUEST1.dat:337:1	아직 나도 이제 막 슬래셔의 한계를 벗어난 정도지만, 조언정도는 해줄 수 있지.	아직 나도 이제 막 슬래셔의 한계를 벗어난 정도지만, 조언정도는 해줄 수 있지.	드비쉬	
-S:QUEST1.dat:337:2	부디 도움을 부탁드려요.	부디 도움을 부탁드려요.	세바스찬	
-S:QUEST1.dat:337:3	그전에 부탁 하나만 하지.	그전에 부탁 하나만 하지.	드비쉬	
-S:QUEST1.dat:337:4	나라가 어수선한 시기를 틈타, 군을 탈영한 놈들이	나라가 어수선한 시기를 틈타, 군을 탈영한 놈들이	드비쉬	
-S:QUEST1.dat:337:5	고원지대에서 민간인들을 괴롭히고 있다네.	고원지대에서 민간인들을 괴롭히고 있다네.	드비쉬	
-S:QUEST1.dat:337:6	자네가 좀 도와줄 수 있겠는가?	자네가 좀 도와줄 수 있겠는가?	드비쉬	
-S:QUEST1.dat:337:7	그런건 맡겨만 주세요.	그런건 맡겨만 주세요.	세바스찬	
-S:QUEST1.dat:338:0	고맙군, 많은 도움이 되었어.	고맙군, 많은 도움이 되었어.	드비쉬	
-S:QUEST1.dat:338:1	그렇다면 조언을...	그렇다면 조언을...	세바스찬	
-S:QUEST1.dat:338:2	아, 그전에 하나만 더 부탁하지.	아, 그전에 하나만 더 부탁하지.	드비쉬	
-S:QUEST1.dat:338:3	아무한테나 스킬을 전수할 수 는 없는 노릇이니,	아무한테나 스킬을 전수할 수 는 없는 노릇이니,	드비쉬	
-S:QUEST1.dat:338:4	딥데저트 던전에서 네펜데스를 처치함으로써 자네가 정의의 검을 들고 있다는것을 증명해주게.	딥데저트 던전에서 네펜데스를 처치함으로써 자네가 정의의 검을 들고 있다는것을 증명해주게.	드비쉬	
-S:QUEST1.dat:338:5	아까랑 말씀이 틀리신데요.	아까랑 말씀이 틀리신데요.	세바스찬	
-S:QUEST1.dat:338:6	다녀오면 조언정도가 아니라, 내가 최근에 깨달은 각성스킬을 전수해주지.	다녀오면 조언정도가 아니라, 내가 최근에 깨달은 각성스킬을 전수해주지.	드비쉬	
-S:QUEST1.dat:338:7	맡겨만 주시죠!	맡겨만 주시죠!	세바스찬	
-S:QUEST1.dat:339:0	잘 참고 따라주었네. 역시 어퍼슬래셔의 인내심은 누구도 따를 수 없지.	잘 참고 따라주었네. 역시 어퍼슬래셔의 인내심은 누구도 따를 수 없지.	드비쉬	
-S:QUEST1.dat:339:1	아, 이제는 그랜드 슬래셔로군.	아, 이제는 그랜드 슬래셔로군.	드비쉬	
-S:QUEST1.dat:339:2	약속한대로 스킬을 전수하도록 하지	약속한대로 스킬을 전수하도록 하지	드비쉬	
-S:QUEST1.dat:340:0	스윙 워리어라...	스윙 워리어라...	드비쉬	
-S:QUEST1.dat:340:1	나는 스윙 워리어는 아니지만, 그들의 스킬 중 몇가지는 알고있긴 하지.	나는 스윙 워리어는 아니지만, 그들의 스킬 중 몇가지는 알고있긴 하지.	드비쉬	
-S:QUEST1.dat:340:2	바로 그거에요. 부디 제게 그 스킬들을 가르쳐 주세요.	바로 그거에요. 부디 제게 그 스킬들을 가르쳐 주세요.	세바스찬	
-S:QUEST1.dat:340:3	어려운건 아닌데, 그전에 간단한 부탁이 있어	어려운건 아닌데, 그전에 간단한 부탁이 있어	드비쉬	
-S:QUEST1.dat:340:4	고원지대에 저주받은 언데드인 구울들이 돌아다닌다는데, 그 도끼로 좀 정리해줬으면 하는데.	고원지대에 저주받은 언데드인 구울들이 돌아다닌다는데, 그 도끼로 좀 정리해줬으면 하는데.	드비쉬	
-S:QUEST1.dat:340:5	구울이라.. 알겠어요. 다녀오도록 하죠.	구울이라.. 알겠어요. 다녀오도록 하죠.	세바스찬	
-S:QUEST1.dat:341:0	경비대장이 고맙다는 말을 전해달라는군.	경비대장이 고맙다는 말을 전해달라는군.	드비쉬	
-S:QUEST1.dat:341:1	그런 말 말고요, 스윙 워리어의 스킬비법은...	그런 말 말고요, 스윙 워리어의 스킬비법은...	세바스찬	
-S:QUEST1.dat:341:2	아, 그래. 알려줘야지.	아, 그래. 알려줘야지.	드비쉬	
-S:QUEST1.dat:341:3	그런데 마침 딥데저트 던전의 마기가 너무 짙어, 신경이 쓰여서 스킬이 잘 생각이 안나는군.	그런데 마침 딥데저트 던전의 마기가 너무 짙어, 신경이 쓰여서 스킬이 잘 생각이 안나는군.	드비쉬	
-S:QUEST1.dat:341:4	그곳의 네펜데스 좀 제거해주면 바로 생각 날것도 같은데.	그곳의 네펜데스 좀 제거해주면 바로 생각 날것도 같은데.	드비쉬	
-S:QUEST1.dat:341:5	휴...딥데저트 던전의 네펜데스요? 네네..	휴...딥데저트 던전의 네펜데스요? 네네..	세바스찬	
-S:QUEST1.dat:342:0	역시 도끼를 사용하는 만큼 시원시원한 일처리군.	역시 도끼를 사용하는 만큼 시원시원한 일처리군.	드비쉬	
-S:QUEST1.dat:342:1	지금 스윙 워리어의 스킬비법을 전수해주겠네.	지금 스윙 워리어의 스킬비법을 전수해주겠네.	드비쉬	
-S:QUEST1.dat:342:2	도끼의 극에 오른것을 축하나네.	도끼의 극에 오른것을 축하나네.	드비쉬	
-S:QUEST1.dat:343:0	한눈에 봐도, 곧 폭주해 버릴것 같은 슬래셔로군. 크래싱슬래셔의 스킬을 습득한 대가야.	한눈에 봐도, 곧 폭주해 버릴것 같은 슬래셔로군. 크래싱슬래셔의 스킬을 습득한 대가야.	드비쉬	
-S:QUEST1.dat:343:1	조언이나 도움을 주실 수 있으신가요?	조언이나 도움을 주실 수 있으신가요?	세바스찬	
-S:QUEST1.dat:343:2	일단 서부사막에 가서 데저트데블들이 가지고 있는 데블아이를 구해오도록 해.	일단 서부사막에 가서 데저트데블들이 가지고 있는 데블아이를 구해오도록 해.	드비쉬	
-S:QUEST1.dat:343:3	마로써 마를 제압하는 버서커에게 잠시나마 효과가 있는 약을 만들 수 있는 재료지.	마로써 마를 제압하는 버서커에게 잠시나마 효과가 있는 약을 만들 수 있는 재료지.	드비쉬	
-S:QUEST1.dat:344:0	이젠 쉽게 폭주 할 위험이 없겠군.	이젠 쉽게 폭주 할 위험이 없겠군.	드비쉬	
-S:QUEST1.dat:344:1	감사합니다.	감사합니다.	세바스찬	
-S:QUEST1.dat:344:2	조금은 편해진것 같아요.	조금은 편해진것 같아요.	세바스찬	
-S:QUEST1.dat:344:3	스킬 전수에 앞서 딥데저트 던전에 가서, 마계식물인 네펜데스를 처치하면서, 체액을 몸에 흠뻑 적시고 오게.	스킬 전수에 앞서 딥데저트 던전에 가서, 마계식물인 네펜데스를 처치하면서, 체액을 몸에 흠뻑 적시고 오게.	드비쉬	
-S:QUEST1.dat:344:4	스킬을 습득하는 동안 마기의 침투를 막아줄테니	스킬을 습득하는 동안 마기의 침투를 막아줄테니	드비쉬	
-S:QUEST1.dat:345:0	고생이 많았네.	고생이 많았네.	드비쉬	
-S:QUEST1.dat:345:1	자, 이제 스킬을 전수받고 나면, 더 이상의 고통은 없을거야.	자, 이제 스킬을 전수받고 나면, 더 이상의 고통은 없을거야.	드비쉬	
-S:QUEST1.dat:345:2	크래싱버서커로 완전히 각성한 것을 축하나네.	크래싱버서커로 완전히 각성한 것을 축하나네.	드비쉬	
-S:QUEST1.dat:346:0	천한것!!무례하구나 어느 안전이라고 그렇게 고개를 꼿꼿이 들고 쳐다보는거냐!	천한것!!무례하구나 어느 안전이라고 그렇게 고개를 꼿꼿이 들고 쳐다보는거냐!	백작부인	
-S:QUEST1.dat:346:1	천한것!	천한것!	백작부인	
-S:QUEST1.dat:346:2	(흠...이런... 뭔가 어렵겠는데...)아름다우신 백작부인 안녕하세요? 미천한 제가 감히 백작부인을 몰라뵈었습니다.	(흠...이런... 뭔가 어렵겠는데...)아름다우신 백작부인 안녕하세요? 미천한 제가 감히 백작부인을 몰라뵈었습니다.	세바스찬	
-S:QUEST1.dat:346:3	루이시티에서 가장 아름다우신 분을 뵙게 되어 영광입니다.	루이시티에서 가장 아름다우신 분을 뵙게 되어 영광입니다.	세바스찬	
-S:QUEST1.dat:346:4	오? 호호호호... 천하고 무례하긴 하지만 보는 눈이 꽤 정확하구나.	오? 호호호호... 천하고 무례하긴 하지만 보는 눈이 꽤 정확하구나.	백작부인	
-S:QUEST1.dat:346:5	그래. 나에게 무슨 용건이 있어 찾아온 것이냐?	그래. 나에게 무슨 용건이 있어 찾아온 것이냐?	백작부인	
-S:QUEST1.dat:346:6	루이시티에서 가장 아름다우신 분을 뵙게 되어 영광입니다.	루이시티에서 가장 아름다우신 분을 뵙게 되어 영광입니다.	세바스찬	
-S:QUEST1.dat:346:7	백작부인의 미모만큼이나 뛰어난 능력으로 저를 그랜드 어쌔신으로 성장시켜주실 수 있다는 이야기를 듣고 이렇게 찾아왔습니다.	백작부인의 미모만큼이나 뛰어난 능력으로 저를 그랜드 어쌔신으로 성장시켜주실 수 있다는 이야기를 듣고 이렇게 찾아왔습니다.	세바스찬	
-S:QUEST1.dat:346:8	궁극교본을 이용한 수련 방법을 알려 달라는 말이군.	궁극교본을 이용한 수련 방법을 알려 달라는 말이군.	백작부인	
-S:QUEST1.dat:346:9	호호호 마침 잘 되었군. 그렇지 않아도 요즘 새로 나온 루이티나 드레스제작을 위해 옷감이 필요한데..호호호	호호호 마침 잘 되었군. 그렇지 않아도 요즘 새로 나온 루이티나 드레스제작을 위해 옷감이 필요한데..호호호	백작부인	
-S:QUEST1.dat:346:10	루이시티 서쪽 집시주술사에게서 집시의 옷감을 한 10개만 가져오도록 해봐.호호호	루이시티 서쪽 집시주술사에게서 집시의 옷감을 한 10개만 가져오도록 해봐.호호호	백작부인	
-S:QUEST1.dat:346:11	네! 백작부인의 미모에 걸맞는 아름다운 것으로 구해드리겠습니다.	네! 백작부인의 미모에 걸맞는 아름다운 것으로 구해드리겠습니다.	세바스찬	
-S:QUEST1.dat:347:0	오호!! 이게 그 유명한 집시들의 수제 옷감이로군. 천한것들이 이런 기술이 다 있구나. 호호호호 ~	오호!! 이게 그 유명한 집시들의 수제 옷감이로군. 천한것들이 이런 기술이 다 있구나. 호호호호 ~	백작부인	
-S:QUEST1.dat:347:1	자 ~ 여기 궁극의 교본을 한번 보게 해주지.	자 ~ 여기 궁극의 교본을 한번 보게 해주지.	백작부인	
-S:QUEST1.dat:347:2	앗! 백작부인님. 정말 감사합니다.	앗! 백작부인님. 정말 감사합니다.	세바스찬	
-S:QUEST1.dat:347:3	그럼 수련방법은 언제 알려주실건가요?	그럼 수련방법은 언제 알려주실건가요?	세바스찬	
-S:QUEST1.dat:347:4	오? 이런. 수련방법까지 알려줘야지?	오? 이런. 수련방법까지 알려줘야지?	백작부인	
-S:QUEST1.dat:347:5	사실 부탁할게 하나 더 있는데...저 멀리 이스턴 시티의 최신유행 패션도 놓칠 수가 없어서 말이지 ~	사실 부탁할게 하나 더 있는데...저 멀리 이스턴 시티의 최신유행 패션도 놓칠 수가 없어서 말이지 ~	백작부인	
-S:QUEST1.dat:347:6	딥데저트 던전의 네펜데스가 갖고있는 옷감재료도 10개 부탁해. 호호호 ~	딥데저트 던전의 네펜데스가 갖고있는 옷감재료도 10개 부탁해. 호호호 ~	백작부인	
-S:QUEST1.dat:347:7	네? 또 옷감이요?	네? 또 옷감이요?	세바스찬	
-S:QUEST1.dat:347:8	네. 분부 받들지요.	네. 분부 받들지요.	세바스찬	
-S:QUEST1.dat:348:0	그래~바로 이거야. 이 화려한 빛깔~호호호	그래~바로 이거야. 이 화려한 빛깔~호호호	백작부인	
-S:QUEST1.dat:348:1	근데 넌 여기서 뭐하느냐? 어서 가보지 않고?	근데 넌 여기서 뭐하느냐? 어서 가보지 않고?	백작부인	
-S:QUEST1.dat:348:2	아니, 아직 이 궁극교본의 수련방법을 알려주지 않으셨잖아요?	아니, 아직 이 궁극교본의 수련방법을 알려주지 않으셨잖아요?	세바스찬	
-S:QUEST1.dat:348:3	아~ 그런건 없어. 그 궁극교본을 아까 봄으로써, 이미 넌 그랜드 어쌔신의 자격을 갖춘거지.	아~ 그런건 없어. 그 궁극교본을 아까 봄으로써, 이미 넌 그랜드 어쌔신의 자격을 갖춘거지.	백작부인	
-S:QUEST1.dat:348:4	내가 그냥 부탁 하나 더 한건데 몰랐단 말이냐? 역시...	내가 그냥 부탁 하나 더 한건데 몰랐단 말이냐? 역시...	백작부인	
-S:QUEST1.dat:348:5	음~잊지 말고, 그렇게 꾸준히 수련하고 실력을 쌓아 갈 수 있도록 하거라.	음~잊지 말고, 그렇게 꾸준히 수련하고 실력을 쌓아 갈 수 있도록 하거라.	백작부인	
-S:QUEST1.dat:348:6	그럼  난 재단사가 기다려서 이만!	그럼  난 재단사가 기다려서 이만!	백작부인	
-S:QUEST1.dat:349:0	백작부인 이신가요? 전 세바스찬이라는 용병입니다	백작부인 이신가요? 전 세바스찬이라는 용병입니다	세바스찬	
-S:QUEST1.dat:349:1	제가 그래플러가 되고 싶어서...	제가 그래플러가 되고 싶어서...	세바스찬	
-S:QUEST1.dat:349:2	뭐야? 천한것!!  무례하다!	뭐야? 천한것!!  무례하다!	백작부인	
-S:QUEST1.dat:349:3	(헐...)<EMO 255 4 3> 루이시티에서 가장 아름다우신 분을 뵙게 되어 영광입니다.	(헐...)<EMO 255 4 3> 루이시티에서 가장 아름다우신 분을 뵙게 되어 영광입니다.	세바스찬	
-S:QUEST1.dat:349:4	미천한 저에게 그래플링을 전수해 주실 수 없으신가요?	미천한 저에게 그래플링을 전수해 주실 수 없으신가요?	세바스찬	
-S:QUEST1.dat:349:5	오? 호호호 ~ 한 단계 위의 그래플링을 배우고 싶다고?	오? 호호호 ~ 한 단계 위의 그래플링을 배우고 싶다고?	백작부인	
-S:QUEST1.dat:349:6	그건 수련밖에 없지.	그건 수련밖에 없지.	백작부인	
-S:QUEST1.dat:349:7	당장 고원지대로 가서, 구울 20마리를 상대로 연습을 하고 와봐! 쉽지 않을거다 ~ 호호호 ~	당장 고원지대로 가서, 구울 20마리를 상대로 연습을 하고 와봐! 쉽지 않을거다 ~ 호호호 ~	백작부인	
-S:QUEST1.dat:350:0	이런? 천한 게 힘은 좀 쓰나보구나!	이런? 천한 게 힘은 좀 쓰나보구나!	백작부인	
-S:QUEST1.dat:350:1	그렇다고 한번에 나의 비법을 내어줄 순없지!	그렇다고 한번에 나의 비법을 내어줄 순없지!	백작부인	
-S:QUEST1.dat:350:2	어떤 분부라도 처리할 테니 내려주세요 백작부인!!아..아름다우신 백작부인	어떤 분부라도 처리할 테니 내려주세요 백작부인!!아..아름다우신 백작부인	세바스찬	
-S:QUEST1.dat:350:3	오? 호호호~ 그~래?	오? 호호호~ 그~래?	백작부인	
-S:QUEST1.dat:350:4	그럼, 딥데저트던전으로 가서 영혼결정 10개를 구해온다면 내어주지!	그럼, 딥데저트던전으로 가서 영혼결정 10개를 구해온다면 내어주지!	백작부인	
-S:QUEST1.dat:351:0	오호!! 영혼결정을 구해왔구나. 이거면 나의 장신구로 손색이 없겠구나.호호호	오호!! 영혼결정을 구해왔구나. 이거면 나의 장신구로 손색이 없겠구나.호호호	백작부인	
-S:QUEST1.dat:351:1	자 ~ 이 책을 빌려줄테니 그래플링의 최고수가 되어 보거라!!	자 ~ 이 책을 빌려줄테니 그래플링의 최고수가 되어 보거라!!	백작부인	
-S:QUEST1.dat:352:0	뭬야? 천한 신분으로 울트라파이터가 되려고 왔단 말이냐?	뭬야? 천한 신분으로 울트라파이터가 되려고 왔단 말이냐?	백작부인	
-S:QUEST1.dat:352:1	흠!! 어디 믿는 구석이라도 있나보군!	흠!! 어디 믿는 구석이라도 있나보군!	백작부인	
-S:QUEST1.dat:352:2	아 ..그런건 아니구요. 사실은..	아 ..그런건 아니구요. 사실은..	세바스찬	
-S:QUEST1.dat:352:3	닥쳐! 네 사정따윈 궁금하지 않다.	닥쳐! 네 사정따윈 궁금하지 않다.	백작부인	
-S:QUEST1.dat:352:4	일단 온거니, 점검이나 해보는 의미에서 서부사막으로 가서 데저트 데블을 처리하고,	일단 온거니, 점검이나 해보는 의미에서 서부사막으로 가서 데저트 데블을 처리하고,	백작부인	
-S:QUEST1.dat:352:5	그 증거로 데몬아이 10개만 갖구 와 보거라.	그 증거로 데몬아이 10개만 갖구 와 보거라.	백작부인	
-S:QUEST1.dat:353:0	보기보다 힘 좀 쓰나보군.	보기보다 힘 좀 쓰나보군.	백작부인	
-S:QUEST1.dat:353:1	데몬아이는 목걸이 재료로 쓸 예정이니, 흠집 안나게 저기 잘 모셔다 놓거라.	데몬아이는 목걸이 재료로 쓸 예정이니, 흠집 안나게 저기 잘 모셔다 놓거라.	백작부인	
-S:QUEST1.dat:353:2	거기서 꾸물대지 말고 힘이 남아돌면 딥샌드던전에 가서 영혼결정 10개만 구해오너라!	거기서 꾸물대지 말고 힘이 남아돌면 딥샌드던전에 가서 영혼결정 10개만 구해오너라!	백작부인	
-S:QUEST1.dat:353:3	헉.. 바로 가라구요?	헉.. 바로 가라구요?	세바스찬	
-S:QUEST1.dat:353:4	저 잠시 숨 좀 돌리고 가면 안될까요?	저 잠시 숨 좀 돌리고 가면 안될까요?	세바스찬	
-S:QUEST1.dat:353:5	왜 포기하려나 보군?	왜 포기하려나 보군?	백작부인	
-S:QUEST1.dat:353:6	그럼 방 하나 내어줄테니 푹 쉬던지.	그럼 방 하나 내어줄테니 푹 쉬던지.	백작부인	
-S:QUEST1.dat:353:7	아…아니에요 백작부인.	아…아니에요 백작부인.	세바스찬	
-S:QUEST1.dat:353:8	얼른 다녀 오겠습니다.	얼른 다녀 오겠습니다.	세바스찬	
-S:QUEST1.dat:354:0	흠! 이 정도면 최종테스트도 무난하게 통과 했다고 할 수 있겠구나.	흠! 이 정도면 최종테스트도 무난하게 통과 했다고 할 수 있겠구나.	백작부인	
-S:QUEST1.dat:354:1	이왕 이길로 들어섰으니 열심히 노력해서 더욱 멋진 울트라파이터가 되도록 하거라.	이왕 이길로 들어섰으니 열심히 노력해서 더욱 멋진 울트라파이터가 되도록 하거라.	백작부인	
-S:QUEST1.dat:354:2	네 백작부인. 감사합니다.	네 백작부인. 감사합니다.	세바스찬	
-S:QUEST1.dat:354:3	생각보다 마음이 따뜻하신 분이신것 같네요.	생각보다 마음이 따뜻하신 분이신것 같네요.	세바스찬	
-S:QUEST1.dat:354:4	다음엔 멋진 파이터가 되어 찾아뵙겠습니다.	다음엔 멋진 파이터가 되어 찾아뵙겠습니다.	세바스찬	
-S:QUEST1.dat:355:0	호~ 요근래 본 후기지수 가운데 가장 뛰어난 인재로군.	호~ 요근래 본 후기지수 가운데 가장 뛰어난 인재로군.	코드리	
-S:QUEST1.dat:355:1	눈앞에 벽이 있는데, 넘어가기가 힘이 드네요.	눈앞에 벽이 있는데, 넘어가기가 힘이 드네요.	세바스찬	
-S:QUEST1.dat:355:2	부디 조언을 부탁드려요.	부디 조언을 부탁드려요.	세바스찬	
-S:QUEST1.dat:355:3	조언정도야 어려운게 아니지.	조언정도야 어려운게 아니지.	코드리	
-S:QUEST1.dat:355:4	하지만 그만큼의 성의를 보여주길 원하네.	하지만 그만큼의 성의를 보여주길 원하네.	코드리	
-S:QUEST1.dat:355:5	나라가 어수선한 시기를 틈타, 군을 탈영한 놈들이 고원지대에서 민간인들을 괴롭히고 있다네	나라가 어수선한 시기를 틈타, 군을 탈영한 놈들이 고원지대에서 민간인들을 괴롭히고 있다네	코드리	
-S:QUEST1.dat:355:6	자네가 좀 도와줄 수 있겠는가?	자네가 좀 도와줄 수 있겠는가?	코드리	
-S:QUEST1.dat:356:0	수고했네.	수고했네.	코드리	
-S:QUEST1.dat:356:1	답례하고 하긴 뭐하지만, 몇가지를 말해주지.	답례하고 하긴 뭐하지만, 몇가지를 말해주지.	코드리	
-S:QUEST1.dat:356:2	어퍼나이트라면 누구나 알고있는 공격과 방어의 조화로움. 이것을 단지 육신에서만 구현하지 말고, 정신과의 조화를 추구하..	어퍼나이트라면 누구나 알고있는 공격과 방어의 조화로움. 이것을 단지 육신에서만 구현하지 말고, 정신과의 조화를 추구하..	코드리	
-S:QUEST1.dat:356:3	오호라..먼가 떠오르는게 있는 표정이군?	오호라..먼가 떠오르는게 있는 표정이군?	코드리	
-S:QUEST1.dat:356:4	그 말씀을 들으니 뭔가 아른아른 손에 잡힐듯 하네요.	그 말씀을 들으니 뭔가 아른아른 손에 잡힐듯 하네요.	세바스찬	
-S:QUEST1.dat:356:5	그럴땐 무념무상으로 검에 육신을 넘겨주는게 좋을거야.	그럴땐 무념무상으로 검에 육신을 넘겨주는게 좋을거야.	코드리	
-S:QUEST1.dat:356:6	마침 딥데저트 던전에 네펜데스들이 출몰한다고 하니,	마침 딥데저트 던전에 네펜데스들이 출몰한다고 하니,	코드리	
-S:QUEST1.dat:356:7	몬스터 퇴치도 할겸, 검이 가는대로 마음놓고 활개치고 오게나.	몬스터 퇴치도 할겸, 검이 가는대로 마음놓고 활개치고 오게나.	코드리	
-S:QUEST1.dat:357:0	축하하네. 눈을 보아하니 가로막던 벽을 넘어섰군.	축하하네. 눈을 보아하니 가로막던 벽을 넘어섰군.	코드리	
-S:QUEST1.dat:357:1	조언을 주셔서 정말 감사해요.	조언을 주셔서 정말 감사해요.	세바스찬	
-S:QUEST1.dat:357:2	크게 깨달은 바가 있네요.	크게 깨달은 바가 있네요.	세바스찬	
-S:QUEST1.dat:357:3	허허. 축하선물이라하긴 뭣하지만, 그랜드나이트의 스킬을 몇가지 알려주지.	허허. 축하선물이라하긴 뭣하지만, 그랜드나이트의 스킬을 몇가지 알려주지.	코드리	
-S:QUEST1.dat:357:4	앞으로도 이 세계의 조화를 위해 힘써주게나.	앞으로도 이 세계의 조화를 위해 힘써주게나.	코드리	
-S:QUEST1.dat:358:0	허~ 노블나이트는 오랜만에 보는군.	허~ 노블나이트는 오랜만에 보는군.	코드리	
-S:QUEST1.dat:358:1	게다가 곧 한계를 뛰어넘을듯한 이 기세는... 대단하군.	게다가 곧 한계를 뛰어넘을듯한 이 기세는... 대단하군.	코드리	
-S:QUEST1.dat:358:2	그 한계를 넘어가기가 어렵네요.	그 한계를 넘어가기가 어렵네요.	세바스찬	
-S:QUEST1.dat:358:3	역대 최강 나이트시라면서요? 뭔가 힌트같은건 주실 수 있으신가요?	역대 최강 나이트시라면서요? 뭔가 힌트같은건 주실 수 있으신가요?	세바스찬	
-S:QUEST1.dat:358:4	조언 정도야 어려운건 아닌데, 나도 부탁 좀 하지.	조언 정도야 어려운건 아닌데, 나도 부탁 좀 하지.	드비쉬	
-S:QUEST1.dat:358:5	고원지대에 저주받은 언데드인 구울들이 돌아다닌다는데,	고원지대에 저주받은 언데드인 구울들이 돌아다닌다는데,	드비쉬	
-S:QUEST1.dat:358:6	노블나이트의 그 가공한 공격력 좀 보여주고 오게나.	노블나이트의 그 가공한 공격력 좀 보여주고 오게나.	드비쉬	
-S:QUEST1.dat:358:7	구울이라.. 알겠어요. 다녀오도록 하죠.	구울이라.. 알겠어요. 다녀오도록 하죠.	세바스찬	
-S:QUEST1.dat:359:0	그것이 숙련된 노블나이트의 스키드 공격법이로군.	그것이 숙련된 노블나이트의 스키드 공격법이로군.	코드리	
-S:QUEST1.dat:359:1	오늘 내 눈이 큰 호강을 했네.	오늘 내 눈이 큰 호강을 했네.	코드리	
-S:QUEST1.dat:359:2	그렇다면 조언을 주실 수 있으신가요?	그렇다면 조언을 주실 수 있으신가요?	세바스찬	
-S:QUEST1.dat:359:3	조언이 아니라. 내 예전부터 보관해오던 노블 블레이더의 비전스킬 비급을 가지고 있긴하지.	조언이 아니라. 내 예전부터 보관해오던 노블 블레이더의 비전스킬 비급을 가지고 있긴하지.	코드리	
-S:QUEST1.dat:359:4	기초 스킬을 습득하지 못해 내가 배우지는 못했지만 말이야.	기초 스킬을 습득하지 못해 내가 배우지는 못했지만 말이야.	코드리	
-S:QUEST1.dat:359:5	오 ~ 바로 그거에요!	오 ~ 바로 그거에요!	세바스찬	
-S:QUEST1.dat:359:6	제발 저에겐 그 스킬을 알려주셨으면 감사하겠어요.	제발 저에겐 그 스킬을 알려주셨으면 감사하겠어요.	세바스찬	
-S:QUEST1.dat:359:7	아무한테나 스킬을 전수할 수 는 없는 노릇이니,	아무한테나 스킬을 전수할 수 는 없는 노릇이니,	코드리	
-S:QUEST1.dat:359:8	딥데저트 던전에서 네펜데스를 처치함으로써	딥데저트 던전에서 네펜데스를 처치함으로써	코드리	
-S:QUEST1.dat:359:9	자네가 정의의 검을 들고 있다는것을 증명해주게.	자네가 정의의 검을 들고 있다는것을 증명해주게.	코드리	
-S:QUEST1.dat:360:0	의심의 여지가 없군.	의심의 여지가 없군.	코드리	
-S:QUEST1.dat:360:1	자, 그럼 노블 블레이더의 스킬을 전수하도록 하지.	자, 그럼 노블 블레이더의 스킬을 전수하도록 하지.	코드리	
-S:QUEST1.dat:360:2	노블 블레이더가 된것을 축하하네.	노블 블레이더가 된것을 축하하네.	코드리	
-S:QUEST1.dat:361:0	수퍼나이트라니, 게다가 곧 각성이 가까울 정도의 대단한 실력이로군.	수퍼나이트라니, 게다가 곧 각성이 가까울 정도의 대단한 실력이로군.	코드리	
-S:QUEST1.dat:361:1	네. 각성을 하고자 도움을 청하러 왔어요.	네. 각성을 하고자 도움을 청하러 왔어요.	세바스찬	
-S:QUEST1.dat:361:2	조언정도야 어려운게 아니지.	조언정도야 어려운게 아니지.	코드리	
-S:QUEST1.dat:361:3	하지만 그만큼의 성의를 보여주길 원하네.	하지만 그만큼의 성의를 보여주길 원하네.	코드리	
-S:QUEST1.dat:361:4	나라가 어수선한 시기를 틈타, 군을 탈영한 놈들이 고원지대에서 민간인들을 괴롭히고 있다네	나라가 어수선한 시기를 틈타, 군을 탈영한 놈들이 고원지대에서 민간인들을 괴롭히고 있다네	코드리	
-S:QUEST1.dat:361:5	자네가 좀 도와줄 수 있겠는가?	자네가 좀 도와줄 수 있겠는가?	코드리	
-S:QUEST1.dat:362:0	역시 수퍼나이트의 마법력은 명불허전이군.	역시 수퍼나이트의 마법력은 명불허전이군.	코드리	
-S:QUEST1.dat:362:1	그럼 이제 도움을 좀 주실건가요?	그럼 이제 도움을 좀 주실건가요?	세바스찬	
-S:QUEST1.dat:362:2	도움정도가 아니라, 예전부터 내려오던 수퍼가디언의 스킬을 몇가지 알려줄 수 도 있지.	도움정도가 아니라, 예전부터 내려오던 수퍼가디언의 스킬을 몇가지 알려줄 수 도 있지.	코드리	
+S:QUEST1.dat:321:3	현재에 머물지말고 계속 정진해서	Đừng dừng lại ở hiện tại, hãy tiếp tục tinh tiến	다그리파	
+S:QUEST1.dat:321:4	명예로운 기사의 이름인 그랜드나이트에 다가가길 바라네.	để tiến gần tới Grand Knight, danh hiệu hiệp sĩ vinh dự.	다그리파	
+S:QUEST1.dat:322:0	노블나이트라…	Noble Knight à...	다그리파	
+S:QUEST1.dat:322:1	세이버를 자유자재로 구사하며 전장을 날뛰던 친구가 떠오르는군.	Khiến ta nhớ người bạn từng múa Saber tự tại tung hoành chiến trường.	다그리파	
+S:QUEST1.dat:322:2	혹시 제가 노블나이트의 스킬을 배울 수 있을까요?	Liệu tôi có học được kỹ năng Noble Knight không?	세바스찬	
+S:QUEST1.dat:322:3	친구가 먼길을 떠나며,	Khi bạn ta đi xa,	다그리파	
+S:QUEST1.dat:322:4	후계를 이을만한 자에게 전해달라며, 알려준 스킬이 있긴하지.	đã dặn truyền lại cho người xứng đáng kế thừa, có một kỹ năng như vậy.	다그리파	
+S:QUEST1.dat:322:5	앗! 제가 바로 후계를 이을 그 사람이에요!	A! Tôi chính là người kế thừa đó!	세바스찬	
+S:QUEST1.dat:322:6	그럴까?	Thật không?	다그리파	
+S:QUEST1.dat:322:7	그렇다면 먼저 이스턴시티길의 프로그들을 상대해봐라.	Vậy trước hết đấu với lũ Frog ở đường Eastern City đi.	다그리파	
+S:QUEST1.dat:322:8	네 자질을 보고 판단하기로 하지.	Ta sẽ xem tư chất của ngươi mà quyết định.	다그리파	
+S:QUEST1.dat:323:0	제법이군.	Khá lắm.	다그리파	
+S:QUEST1.dat:323:1	순간이긴 하지만, 노블나이트의 모습이 엿보였어.	Tuy chỉ thoáng qua, nhưng ta đã thấy bóng dáng Noble Knight.	다그리파	
+S:QUEST1.dat:323:2	그럼 마지막으로 한번 더 테스트해보기로 하지.	Vậy thử lần cuối nữa.	다그리파	
+S:QUEST1.dat:323:3	최선을 다 할께요.	Tôi sẽ cố hết sức.	세바스찬	
+S:QUEST1.dat:323:4	자세가 되었군.	Tư thế được đấy.	다그리파	
+S:QUEST1.dat:323:5	이스턴 시티길의 드루이드들을 10마리 처리하고 오면	Xử lý 10 tên Druid ở đường Eastern City rồi về	다그리파	
+S:QUEST1.dat:323:6	노블나이트의 스킬을 전수해 주지.	ta sẽ truyền kỹ năng Noble Knight.	다그리파	
+S:QUEST1.dat:324:0	훌륭하군.	Tuyệt lắm.	다그리파	
+S:QUEST1.dat:324:1	그럼 노블나이트의 스킬을 전수해주지.	Vậy ta truyền kỹ năng Noble Knight cho cậu.	다그리파	
+S:QUEST1.dat:324:2	부디 그들의 명예에 먹칠을 하는 일이 없길 바란다.	Mong cậu đừng làm hoen ố danh dự của họ.	다그리파	
+S:QUEST1.dat:325:0	수퍼나이트라..	Super Knight à..	다그리파	
+S:QUEST1.dat:325:1	그들의 스킬비법은 마법과 물리공격의 결합.	Bí quyết kỹ năng của họ là kết hợp phép thuật và Công vật lý.	다그리파	
+S:QUEST1.dat:325:2	다양한 신체강화 마법을 사용하는 만큼 최강의 전투효율을 자랑하지.	Dùng đủ loại phép cường hoá cơ thể nên tự hào có hiệu suất chiến đấu mạnh nhất.	다그리파	
+S:QUEST1.dat:325:3	하지만 그만큼 익히기가 어려워, 중간에 포기하는 자가 많지.	Nhưng vì vậy mà khó học, nhiều người bỏ cuộc giữa chừng.	다그리파	
+S:QUEST1.dat:325:4	어떤 어려움도 극복할 자신이 있어요.	Khó khăn nào tôi cũng tự tin vượt qua.	세바스찬	
+S:QUEST1.dat:325:5	가르침을 내려주세요.	Xin ngài chỉ dạy.	세바스찬	
+S:QUEST1.dat:325:6	그렇다면 먼저 네 자질이 어느정도인지 알아보도록 하지.	Vậy trước hết xem tư chất của cậu đến đâu.	다그리파	
+S:QUEST1.dat:325:7	이스턴 시티 길의 데블들을 상대해보고 와보도록.	Đấu với lũ Devil ở đường Eastern City rồi về.	다그리파	
+S:QUEST1.dat:326:0	제법 수퍼나이트로서의 자질이 보이는군.	Có vẻ cậu có tư chất của Super Knight đấy.	다그리파	
+S:QUEST1.dat:326:1	마나도 충만해보이고 말이야.	Mana cũng có vẻ dồi dào.	다그리파	
+S:QUEST1.dat:326:2	원래 주변에서는 마법사를 해도 될만큼 마나가 충만하다고 난리였었죠.	Vốn mọi người xung quanh còn ầm lên bảo mana tôi dồi dào đến mức làm pháp sư cũng được.	세바스찬	
+S:QUEST1.dat:326:3	그렇다면 그 마나 다루는 솜씨 한번 볼까?	Vậy xem tài điều khiển mana của cậu nào?	다그리파	
+S:QUEST1.dat:326:4	이스턴 시티길의 빅푸트들을 처리하고 오면	Xử lý lũ Bigfoot ở đường Eastern City rồi về	다그리파	
+S:QUEST1.dat:326:5	수퍼나이트의 스킬을 알려주도록 하지.	ta sẽ chỉ kỹ năng Super Knight.	다그리파	
+S:QUEST1.dat:327:0	오랜만에 수퍼나이트의 스킬을 구사하는 자가 제국에 이름을 떨치겠군.	Lâu lắm mới có người dùng kỹ năng Super Knight vang danh đế quốc.	다그리파	
+S:QUEST1.dat:327:1	앞으로도 검과 마법에 매진해	Sau này hãy dốc lòng vào kiếm và phép	다그리파	
+S:QUEST1.dat:327:2	궁극의 마법기사인 수퍼가디언에 다다르길 바란다.	mong cậu đạt tới Super Guardian, ma pháp kỵ sĩ tối thượng.	다그리파	
+S:QUEST1.dat:328:0	할아버지가 전설의 매지션 루니안님 이신가요?	Ông là Magician huyền thoại Lunian ạ?	세바스찬	
+S:QUEST1.dat:328:1	파이어매지션의 길을 알고 싶어서 찾아왔어요.	Cháu đến vì muốn biết con đường Fire Magician.	세바스찬	
+S:QUEST1.dat:328:2	후후.전설의 매지션이라...오랜만에 들어보는 호칭이군.	Hừ hừ. Magician huyền thoại à...lâu lắm mới nghe danh xưng đó.	루니안	
+S:QUEST1.dat:328:3	파이어매지션이라..	Fire Magician à..	루니안	
+S:QUEST1.dat:328:4	그들의 마법 방식은 일반적인 마나컨트롤 이상의 화염에 친화적인 컨트롤을 요구한다네.	Lối phép của họ đòi hỏi khả năng điều khiển thân hoà với lửa hơn mức điều khiển mana thông thường.	루니안	
+S:QUEST1.dat:328:5	그걸 위해서는 불꽃심장이 필요하지.	Để vậy cần có Trái tim lửa.	루니안	
+S:QUEST1.dat:328:6	불꽃심장이요? 그건 어디서 구할 수 있나요?	Trái tim lửa ạ? Kiếm ở đâu được ạ?	세바스찬	
+S:QUEST1.dat:328:7	글쎄..그렇게 중요한걸 그냥 알려줄 수 없지 않겠나?	Để xem..thứ quan trọng vậy đâu thể cứ thế mà nói?	루니안	
+S:QUEST1.dat:328:8	일단 자네의 자질을 한 번 테스트 해 봐야겠네.	Trước hết ta phải thử tư chất của cậu đã.	루니안	
+S:QUEST1.dat:328:9	이스턴시티길에 가서 빅푸트를 퇴치해 보게나.	Ra đường Eastern City diệt lũ Bigfoot đi.	루니안	
+S:QUEST1.dat:329:0	예상밖의 능력을 갖고있군.	Năng lực ngoài dự đoán đấy.	루니안	
+S:QUEST1.dat:329:1	사실은 불꽃 심장은 나의 분신과 같은 거라네.	Thật ra Trái tim lửa như phân thân của ta vậy.	루니안	
+S:QUEST1.dat:329:2	이건  넘겨주기 힘들것 같군.	Cái này khó mà trao đi được.	루니안	
+S:QUEST1.dat:329:3	안돼요! 할아버지..아니, 어르신!	Không được ạ! Ông..à không, thưa cụ!	세바스찬	
+S:QUEST1.dat:329:4	저에게 꼭 필요한 물건입니다. 부탁 드릴께요	Cháu thật sự cần nó. Cháu xin cụ	세바스찬	
+S:QUEST1.dat:329:5	흐음....	Hừm....	루니안	
+S:QUEST1.dat:329:6	정 그렇다면 이걸 가질 자격이 있는지 제대로 평가해보기로 하지.	Nếu đã vậy thì ta sẽ đánh giá kỹ xem cậu có xứng đáng có nó không.	루니안	
+S:QUEST1.dat:329:7	이스턴 시티길의 드루이드를 상대해 보도록 하게.	Đấu với lũ Druid ở đường Eastern City đi.	루니안	
+S:QUEST1.dat:330:0	자네에겐 이걸 가질 충분한 자격이 있군.	Cậu thừa tư cách có được nó.	루니안	
+S:QUEST1.dat:330:1	이 정도면 나도 맘 편히 불꽃심장을 넘겨 줄 수 있겠어.	Thế này thì ta có thể yên lòng trao Trái tim lửa rồi.	루니안	
+S:QUEST1.dat:330:2	이리오게, 자네의 마나서클에 직접 불꽃심장을 넣어주지.	Lại đây, ta sẽ tự tay đặt Trái tim lửa vào vòng mana của cậu.	루니안	
+S:QUEST1.dat:330:3	감사합니다. 루니안님!	Cháu cảm ơn cụ Lunian!	세바스찬	
+S:QUEST1.dat:331:0	퍼스트아이스라구?	First Ice à?	루니안	
+S:QUEST1.dat:331:1	아이스매지션으로 첫발을 내딛으려고 하는 모양군.	Có vẻ cậu định bước bước đầu tiên làm Ice Magician.	루니안	
+S:QUEST1.dat:331:2	따뜻함을 버린다는 건 정말 쉬운 일이 아니네.	Vứt bỏ sự ấm áp thật chẳng dễ chút nào.	루니안	
+S:QUEST1.dat:331:3	경이로운 마법사 -바스틴루- 역시 쉽지 않다고 말했다네.	Đến pháp sư kỳ tài -Bastinlu- cũng nói là không dễ.	루니안	
+S:QUEST1.dat:331:4	하지만 전 완벽한 아이스매지션이 되고 싶어요.	Nhưng cháu muốn thành Ice Magician hoàn hảo.	세바스찬	
+S:QUEST1.dat:331:5	그렇다면 방법을 알려주겠네.	Vậy ta sẽ chỉ cách.	루니안	
+S:QUEST1.dat:331:6	강철심장을 가질 수 있다면 조금은 쉽게 가능해질 수 있지.	Nếu có được Trái tim thép thì sẽ dễ hơn phần nào.	루니안	
+S:QUEST1.dat:331:7	네가 그걸 가질 만한 인물인지 알아봐야겠구만.	Phải xem cậu có phải người xứng đáng có nó không.	루니안	
+S:QUEST1.dat:331:8	우선 이스턴시티길에서 데블들에게 루비광석 10개를 구해와 보게.	Trước hết đến đường Eastern City kiếm từ lũ Devil 10 viên Quặng Ruby về.	루니안	
+S:QUEST1.dat:332:0	여기 루비광석 10개요.	Đây là 10 viên Quặng Ruby ạ.	세바스찬	
+S:QUEST1.dat:332:1	이제 강철 심장은 제게 넘겨 주시는 거죠?	Giờ cụ trao Trái tim thép cho cháu chứ ạ?	세바스찬	
+S:QUEST1.dat:332:2	뭐? 강철심장을 원한다구?	Gì? Muốn Trái tim thép à?	루니안	
+S:QUEST1.dat:332:3	그게 어떻게 구한물건인데.	Biết ta phải khổ thế nào mới kiếm được không.	루니안	
+S:QUEST1.dat:332:4	그냥은 못 넘겨주네.	Không cho không được.	루니안	
+S:QUEST1.dat:332:5	이스턴 시티길의 만다고라들의 줄기를 구해온다면 모를까?	Trừ khi cậu kiếm về thân Mandragora ở đường Eastern City?	루니안	
+S:QUEST1.dat:332:6	만다고라 줄기요?.	Thân Mandragora ạ?.	세바스찬	
+S:QUEST1.dat:332:7	휴~ 잠깐 기다리세요!	Haizz~ cụ chờ chút ạ!	세바스찬	
+S:QUEST1.dat:333:0	좋아.내 직접 강철심장을 너의 마나 서클홀에 심어주도록 하지!	Tốt. Ta sẽ tự tay cấy Trái tim thép vào lỗ vòng mana của cậu!	루니안	
+S:QUEST1.dat:333:1	이제 새로운 스킬과 함께 어떠한 온기까지 얼려 버릴 수 있는 강한 아이스매지션이 되길 바라네!	Mong cậu cùng kỹ năng mới thành Ice Magician mạnh mẽ, đóng băng được mọi hơi ấm!	루니안	
+S:QUEST1.dat:333:2	감사합니다. 루니안님!	Cháu cảm ơn cụ Lunian!	세바스찬	
+S:QUEST1.dat:334:0	썬더매지션? 정말 어렵고도 두려운 결정을 했군.	Thunder Magician? Cậu đã chọn một quyết định thật khó khăn và đáng sợ.	루니안	
+S:QUEST1.dat:334:1	썬더매지션이 되는 순간 썬더어택을 당하게 되는데 너무도 고통스럽기 때문에 견디지 못하고 죽는 경우가 많다네.	Lúc thành Thunder Magician sẽ bị Thunder Attack đánh trúng, đau đớn đến mức nhiều người không chịu nổi mà chết.	루니안	
+S:QUEST1.dat:334:2	그래서 썬더매지션이 많지 않은 거야.	Vì thế mới ít Thunder Magician.	루니안	
+S:QUEST1.dat:334:3	분명히 그걸 극복할 수있는 방법이 있지 않을까요?	Chắc chắn phải có cách vượt qua chứ ạ?	세바스찬	
+S:QUEST1.dat:334:4	그래. 맞아! 조금 기억이 나는구만.	Phải. Đúng rồi! Ta nhớ ra chút chút.	루니안	
+S:QUEST1.dat:334:5	썬더매지션이 많지 않지만 방법이 없는 건 아니라네.	Thunder Magician tuy ít nhưng không phải là không có cách.	루니안	
+S:QUEST1.dat:334:6	이스턴 시티길에서 만다고라를 처치하고, 그 줄기를 몇개 구해준다면 기억을 더듬어 보도록 하겠네.	Diệt lũ Mandragora ở đường Eastern City, kiếm cho ta vài cái thân thì ta sẽ cố nhớ lại.	루니안	
+S:QUEST1.dat:335:0	전에 마법사 바스틴루의 서적 중 수퍼스톰카운트 라는 책을 본적이 있는데.	Trước đây ta từng đọc một cuốn trong sách của pháp sư Bastinlu tên là Super Storm Count.	루니안	
+S:QUEST1.dat:335:1	극복할 수 있는 방법에 대해 나와 있던 것 같아.	Hình như trong đó có viết cách vượt qua.	루니안	
+S:QUEST1.dat:335:2	정말이세요? 그 책 어떻게 구할 수없을까요?	Thật sao cụ? Có cách nào kiếm cuốn đó không ạ?	세바스찬	
+S:QUEST1.dat:335:3	그 책을? 그게 낡은 책이긴 해도 나오기만 하면 다들 웃돈을 주고 가져가기 바쁘다네.	Cuốn đó à? Sách cũ nhưng hễ xuất hiện là ai cũng tranh nhau trả thêm tiền để lấy.	루니안	
+S:QUEST1.dat:335:4	하지만 자네랑 안면도 있고 하니 모른 척 할 수는 없겠구만.	Nhưng cũng quen biết cậu rồi, ta chẳng thể làm ngơ.	루니안	
+S:QUEST1.dat:335:5	이스턴 시티길의 드루이드 몇마리만 퇴치하고 와 보게.	Diệt vài tên Druid ở đường Eastern City rồi về đi.	루니안	
+S:QUEST1.dat:335:6	나도 그 동안 무슨 수를 써서라도, 그 책을 구해 놓을 테니까.	Trong lúc đó ta sẽ tìm mọi cách kiếm cuốn sách ấy.	루니안	
+S:QUEST1.dat:336:0	보글링 퇴치에 성공했군?	Diệt Druid thành công rồi à?	루니안	
+S:QUEST1.dat:336:1	더 이상 무슨 테스트가 필요하겠어.	Còn cần thử gì nữa đâu.	루니안	
+S:QUEST1.dat:336:2	여기 약속한 책이 있네. 이 자리에서 내가 직접 책에 있는 썬더어택 방어법을 운용해줄테니, 마음놓고 전직하도록 하게.	Đây là cuốn sách đã hứa. Ta sẽ tự vận dụng cách phòng Thunder Attack trong sách ngay tại đây, cứ yên tâm Chuyển nghề.	루니안	
+S:QUEST1.dat:336:3	우와!! 정말 구하셨군요! 감사합니다.	Oa!! Cụ kiếm được thật rồi! Cháu cảm ơn cụ.	세바스찬	
+S:QUEST1.dat:336:4	새로 배운 스킬을 이용해서 최고의 썬더매지션이 되도록 하게나. 축하하네.	Hãy dùng kỹ năng mới học để thành Thunder Magician giỏi nhất. Chúc mừng cậu.	루니안	
+S:QUEST1.dat:337:0	그랜드슬래셔라...	Grand Slasher à...	드비쉬	
+S:QUEST1.dat:337:1	아직 나도 이제 막 슬래셔의 한계를 벗어난 정도지만, 조언정도는 해줄 수 있지.	Ta cũng chỉ vừa thoát khỏi giới hạn Slasher, nhưng lời khuyên thì cho được.	드비쉬	
+S:QUEST1.dat:337:2	부디 도움을 부탁드려요.	Mong ngài giúp đỡ.	세바스찬	
+S:QUEST1.dat:337:3	그전에 부탁 하나만 하지.	Trước đó nhờ cậu một việc đã.	드비쉬	
+S:QUEST1.dat:337:4	나라가 어수선한 시기를 틈타, 군을 탈영한 놈들이	Nhân lúc đất nước rối ren, bọn đào ngũ khỏi quân đội	드비쉬	
+S:QUEST1.dat:337:5	고원지대에서 민간인들을 괴롭히고 있다네.	đang quấy nhiễu dân thường ở vùng cao nguyên.	드비쉬	
+S:QUEST1.dat:337:6	자네가 좀 도와줄 수 있겠는가?	Cậu giúp được chứ?	드비쉬	
+S:QUEST1.dat:337:7	그런건 맡겨만 주세요.	Việc đó cứ giao cho tôi.	세바스찬	
+S:QUEST1.dat:338:0	고맙군, 많은 도움이 되었어.	Cảm ơn, giúp ích nhiều lắm.	드비쉬	
+S:QUEST1.dat:338:1	그렇다면 조언을...	Vậy lời khuyên...	세바스찬	
+S:QUEST1.dat:338:2	아, 그전에 하나만 더 부탁하지.	À, trước đó nhờ thêm một việc nữa.	드비쉬	
+S:QUEST1.dat:338:3	아무한테나 스킬을 전수할 수 는 없는 노릇이니,	Đâu thể truyền kỹ năng cho bất kỳ ai,	드비쉬	
+S:QUEST1.dat:338:4	딥데저트 던전에서 네펜데스를 처치함으로써 자네가 정의의 검을 들고 있다는것을 증명해주게.	hãy diệt lũ Nepenthes ở Deep Desert Dungeon để chứng minh cậu cầm thanh kiếm chính nghĩa.	드비쉬	
+S:QUEST1.dat:338:5	아까랑 말씀이 틀리신데요.	Lời ngài khác lúc nãy rồi.	세바스찬	
+S:QUEST1.dat:338:6	다녀오면 조언정도가 아니라, 내가 최근에 깨달은 각성스킬을 전수해주지.	Về đây thì không chỉ là lời khuyên, ta sẽ truyền kỹ năng Thức tỉnh ta vừa lĩnh ngộ gần đây.	드비쉬	
+S:QUEST1.dat:338:7	맡겨만 주시죠!	Cứ giao cho tôi!	세바스찬	
+S:QUEST1.dat:339:0	잘 참고 따라주었네. 역시 어퍼슬래셔의 인내심은 누구도 따를 수 없지.	Cậu đã kiên nhẫn làm theo. Quả nhiên sự nhẫn nại của Upper Slasher không ai bì kịp.	드비쉬	
+S:QUEST1.dat:339:1	아, 이제는 그랜드 슬래셔로군.	À, giờ là Grand Slasher rồi.	드비쉬	
+S:QUEST1.dat:339:2	약속한대로 스킬을 전수하도록 하지	Như đã hứa ta truyền kỹ năng cho cậu	드비쉬	
+S:QUEST1.dat:340:0	스윙 워리어라...	Swing Warrior à...	드비쉬	
+S:QUEST1.dat:340:1	나는 스윙 워리어는 아니지만, 그들의 스킬 중 몇가지는 알고있긴 하지.	Ta không phải Swing Warrior, nhưng cũng biết vài kỹ năng của họ.	드비쉬	
+S:QUEST1.dat:340:2	바로 그거에요. 부디 제게 그 스킬들을 가르쳐 주세요.	Chính là nó. Xin ngài dạy tôi những kỹ năng ấy.	세바스찬	
+S:QUEST1.dat:340:3	어려운건 아닌데, 그전에 간단한 부탁이 있어	Không khó gì, nhưng trước đó có việc nhỏ cần nhờ	드비쉬	
+S:QUEST1.dat:340:4	고원지대에 저주받은 언데드인 구울들이 돌아다닌다는데, 그 도끼로 좀 정리해줬으면 하는데.	Nghe nói lũ Ghoul, bất tử bị nguyền rủa, đang lảng vảng ở cao nguyên, ta muốn cậu dùng cây rìu đó dọn giúp.	드비쉬	
+S:QUEST1.dat:340:5	구울이라.. 알겠어요. 다녀오도록 하죠.	Ghoul à.. Tôi hiểu rồi. Tôi đi đây.	세바스찬	
+S:QUEST1.dat:341:0	경비대장이 고맙다는 말을 전해달라는군.	Đội trưởng lính gác nhờ ta chuyển lời cảm ơn.	드비쉬	
+S:QUEST1.dat:341:1	그런 말 말고요, 스윙 워리어의 스킬비법은...	Khỏi nói câu đó, bí quyết kỹ năng Swing Warrior thì...	세바스찬	
+S:QUEST1.dat:341:2	아, 그래. 알려줘야지.	À, phải. Phải chỉ chứ.	드비쉬	
+S:QUEST1.dat:341:3	그런데 마침 딥데저트 던전의 마기가 너무 짙어, 신경이 쓰여서 스킬이 잘 생각이 안나는군.	Nhưng ma khí ở Deep Desert Dungeon đặc quá, ta lo nên chẳng nhớ ra kỹ năng.	드비쉬	
+S:QUEST1.dat:341:4	그곳의 네펜데스 좀 제거해주면 바로 생각 날것도 같은데.	Diệt giúp lũ Nepenthes ở đó chắc ta sẽ nhớ ra ngay.	드비쉬	
+S:QUEST1.dat:341:5	휴...딥데저트 던전의 네펜데스요? 네네..	Haizz...Nepenthes ở Deep Desert Dungeon à? Vâng vâng..	세바스찬	
+S:QUEST1.dat:342:0	역시 도끼를 사용하는 만큼 시원시원한 일처리군.	Đúng là dùng rìu nên làm việc dứt khoát thật.	드비쉬	
+S:QUEST1.dat:342:1	지금 스윙 워리어의 스킬비법을 전수해주겠네.	Giờ ta truyền bí quyết kỹ năng Swing Warrior cho cậu.	드비쉬	
+S:QUEST1.dat:342:2	도끼의 극에 오른것을 축하나네.	Chúc mừng cậu đạt đỉnh cao của rìu.	드비쉬	
+S:QUEST1.dat:343:0	한눈에 봐도, 곧 폭주해 버릴것 같은 슬래셔로군. 크래싱슬래셔의 스킬을 습득한 대가야.	Nhìn qua đã thấy là Slasher sắp mất kiểm soát. Cái giá của việc học kỹ năng Crashing Slasher đấy.	드비쉬	
+S:QUEST1.dat:343:1	조언이나 도움을 주실 수 있으신가요?	Ngài có thể cho lời khuyên hay giúp tôi không?	세바스찬	
+S:QUEST1.dat:343:2	일단 서부사막에 가서 데저트데블들이 가지고 있는 데블아이를 구해오도록 해.	Trước hết đến Sa mạc phía Tây kiếm Devil Eye mà lũ Desert Devil mang theo.	드비쉬	
+S:QUEST1.dat:343:3	마로써 마를 제압하는 버서커에게 잠시나마 효과가 있는 약을 만들 수 있는 재료지.	Là nguyên liệu làm thuốc có hiệu quả tạm thời với Berserker, kẻ lấy ma chế ma.	드비쉬	
+S:QUEST1.dat:344:0	이젠 쉽게 폭주 할 위험이 없겠군.	Giờ không dễ mất kiểm soát nữa rồi.	드비쉬	
+S:QUEST1.dat:344:1	감사합니다.	Cảm ơn ngài.	세바스찬	
+S:QUEST1.dat:344:2	조금은 편해진것 같아요.	Tôi thấy dễ chịu hơn chút rồi.	세바스찬	
+S:QUEST1.dat:344:3	스킬 전수에 앞서 딥데저트 던전에 가서, 마계식물인 네펜데스를 처치하면서, 체액을 몸에 흠뻑 적시고 오게.	Trước khi truyền kỹ năng, đến Deep Desert Dungeon diệt Nepenthes, cây ma giới, cho dịch của chúng thấm đẫm người rồi về.	드비쉬	
+S:QUEST1.dat:344:4	스킬을 습득하는 동안 마기의 침투를 막아줄테니	Nó sẽ ngăn ma khí xâm nhập trong lúc học kỹ năng	드비쉬	
+S:QUEST1.dat:345:0	고생이 많았네.	Vất vả cho cậu rồi.	드비쉬	
+S:QUEST1.dat:345:1	자, 이제 스킬을 전수받고 나면, 더 이상의 고통은 없을거야.	Nào, học xong kỹ năng thì sẽ không còn đau đớn nữa.	드비쉬	
+S:QUEST1.dat:345:2	크래싱버서커로 완전히 각성한 것을 축하나네.	Chúc mừng cậu đã Thức tỉnh hoàn toàn thành Crashing Berserker.	드비쉬	
+S:QUEST1.dat:346:0	천한것!!무례하구나 어느 안전이라고 그렇게 고개를 꼿꼿이 들고 쳐다보는거냐!	Đồ hạ tiện!! Vô lễ thật, trước mặt ai mà dám ngẩng cao đầu nhìn thế hả!	백작부인	
+S:QUEST1.dat:346:1	천한것!	Đồ hạ tiện!	백작부인	
+S:QUEST1.dat:346:2	(흠...이런... 뭔가 어렵겠는데...)아름다우신 백작부인 안녕하세요? 미천한 제가 감히 백작부인을 몰라뵈었습니다.	(Hừm...trời... có vẻ khó đây...)Kính chào Bá tước phu nhân xinh đẹp? Kẻ hèn mọn này đã không nhận ra phu nhân.	세바스찬	
+S:QUEST1.dat:346:3	루이시티에서 가장 아름다우신 분을 뵙게 되어 영광입니다.	Thật vinh hạnh được gặp người đẹp nhất Lui City.	세바스찬	
+S:QUEST1.dat:346:4	오? 호호호호... 천하고 무례하긴 하지만 보는 눈이 꽤 정확하구나.	Ồ? Hô hô hô hô... Hạ tiện vô lễ nhưng mắt nhìn chuẩn đấy.	백작부인	
+S:QUEST1.dat:346:5	그래. 나에게 무슨 용건이 있어 찾아온 것이냐?	Được. Ngươi đến tìm ta có việc gì?	백작부인	
+S:QUEST1.dat:346:6	루이시티에서 가장 아름다우신 분을 뵙게 되어 영광입니다.	Thật vinh hạnh được gặp người đẹp nhất Lui City.	세바스찬	
+S:QUEST1.dat:346:7	백작부인의 미모만큼이나 뛰어난 능력으로 저를 그랜드 어쌔신으로 성장시켜주실 수 있다는 이야기를 듣고 이렇게 찾아왔습니다.	Nghe nói phu nhân tài giỏi như nhan sắc, có thể giúp tôi thành Grand Assassin nên tôi mới đến.	세바스찬	
+S:QUEST1.dat:346:8	궁극교본을 이용한 수련 방법을 알려 달라는 말이군.	Là muốn ta chỉ cách tu luyện bằng Giáo trình tối thượng sao.	백작부인	
+S:QUEST1.dat:346:9	호호호 마침 잘 되었군. 그렇지 않아도 요즘 새로 나온 루이티나 드레스제작을 위해 옷감이 필요한데..호호호	Hô hô hô vừa hay. Dạo này ta đang cần vải để may chiếc váy Luitina mới ra..hô hô hô	백작부인	
+S:QUEST1.dat:346:10	루이시티 서쪽 집시주술사에게서 집시의 옷감을 한 10개만 가져오도록 해봐.호호호	Đến chỗ thầy pháp Gypsy ở phía Tây Lui City lấy về chừng 10 tấm Vải áo Gypsy.hô hô hô	백작부인	
+S:QUEST1.dat:346:11	네! 백작부인의 미모에 걸맞는 아름다운 것으로 구해드리겠습니다.	Vâng! Tôi sẽ kiếm thứ đẹp xứng với nhan sắc phu nhân.	세바스찬	
+S:QUEST1.dat:347:0	오호!! 이게 그 유명한 집시들의 수제 옷감이로군. 천한것들이 이런 기술이 다 있구나. 호호호호 ~	Ồ!! Đây là vải thủ công nổi tiếng của bọn Gypsy. Hạ tiện mà cũng có tay nghề này. Hô hô hô hô~	백작부인	
+S:QUEST1.dat:347:1	자 ~ 여기 궁극의 교본을 한번 보게 해주지.	Nào~ ta cho ngươi xem Giáo trình tối thượng.	백작부인	
+S:QUEST1.dat:347:2	앗! 백작부인님. 정말 감사합니다.	A! Thưa phu nhân. Thật cảm ơn phu nhân.	세바스찬	
+S:QUEST1.dat:347:3	그럼 수련방법은 언제 알려주실건가요?	Vậy khi nào phu nhân chỉ cách tu luyện ạ?	세바스찬	
+S:QUEST1.dat:347:4	오? 이런. 수련방법까지 알려줘야지?	Ồ? Trời. Phải chỉ cả cách tu luyện nữa à?	백작부인	
+S:QUEST1.dat:347:5	사실 부탁할게 하나 더 있는데...저 멀리 이스턴 시티의 최신유행 패션도 놓칠 수가 없어서 말이지 ~	Thật ra ta còn một việc nữa muốn nhờ...thời trang thịnh hành tận Eastern City xa xôi ta cũng chẳng thể bỏ lỡ~	백작부인	
+S:QUEST1.dat:347:6	딥데저트 던전의 네펜데스가 갖고있는 옷감재료도 10개 부탁해. 호호호 ~	Nhờ ngươi lấy cả 10 nguyên liệu vải mà lũ Nepenthes ở Deep Desert Dungeon mang theo. Hô hô hô~	백작부인	
+S:QUEST1.dat:347:7	네? 또 옷감이요?	Dạ? Lại vải nữa ạ?	세바스찬	
+S:QUEST1.dat:347:8	네. 분부 받들지요.	Vâng. Xin tuân lệnh.	세바스찬	
+S:QUEST1.dat:348:0	그래~바로 이거야. 이 화려한 빛깔~호호호	Phải~ chính là nó. Màu sắc lộng lẫy này~hô hô hô	백작부인	
+S:QUEST1.dat:348:1	근데 넌 여기서 뭐하느냐? 어서 가보지 않고?	Mà ngươi còn đứng đây làm gì? Sao chưa đi?	백작부인	
+S:QUEST1.dat:348:2	아니, 아직 이 궁극교본의 수련방법을 알려주지 않으셨잖아요?	Ơ, phu nhân vẫn chưa chỉ cách tu luyện theo Giáo trình tối thượng mà?	세바스찬	
+S:QUEST1.dat:348:3	아~ 그런건 없어. 그 궁극교본을 아까 봄으로써, 이미 넌 그랜드 어쌔신의 자격을 갖춘거지.	À~ làm gì có. Lúc nãy xem Giáo trình tối thượng rồi là ngươi đã đủ tư cách làm Grand Assassin.	백작부인	
+S:QUEST1.dat:348:4	내가 그냥 부탁 하나 더 한건데 몰랐단 말이냐? 역시...	Ta chỉ nhờ thêm một việc thôi, ngươi không biết sao? Đúng là...	백작부인	
+S:QUEST1.dat:348:5	음~잊지 말고, 그렇게 꾸준히 수련하고 실력을 쌓아 갈 수 있도록 하거라.	Ừm~ đừng quên, cứ chăm chỉ tu luyện và tích luỹ thực lực như thế.	백작부인	
+S:QUEST1.dat:348:6	그럼  난 재단사가 기다려서 이만!	Thôi thợ may đang chờ, ta đi đây!	백작부인	
+S:QUEST1.dat:349:0	백작부인 이신가요? 전 세바스찬이라는 용병입니다	Có phải Bá tước phu nhân không ạ? Tôi là lính đánh thuê tên Sebastian	세바스찬	
+S:QUEST1.dat:349:1	제가 그래플러가 되고 싶어서...	Tôi muốn thành Grappler nên...	세바스찬	
+S:QUEST1.dat:349:2	뭐야? 천한것!!  무례하다!	Gì? Đồ hạ tiện!! Vô lễ!	백작부인	
+S:QUEST1.dat:349:3	(헐...)<EMO 255 4 3> 루이시티에서 가장 아름다우신 분을 뵙게 되어 영광입니다.	(Hả...)<EMO 255 4 3> Thật vinh hạnh được gặp người đẹp nhất Lui City.	세바스찬	
+S:QUEST1.dat:349:4	미천한 저에게 그래플링을 전수해 주실 수 없으신가요?	Phu nhân có thể truyền thuật vật cho kẻ hèn mọn này không ạ?	세바스찬	
+S:QUEST1.dat:349:5	오? 호호호 ~ 한 단계 위의 그래플링을 배우고 싶다고?	Ồ? Hô hô hô~ muốn học thuật vật cao hơn một bậc à?	백작부인	
+S:QUEST1.dat:349:6	그건 수련밖에 없지.	Cái đó chỉ có tu luyện thôi.	백작부인	
+S:QUEST1.dat:349:7	당장 고원지대로 가서, 구울 20마리를 상대로 연습을 하고 와봐! 쉽지 않을거다 ~ 호호호 ~	Đến ngay cao nguyên luyện tập với 20 con Ghoul rồi về! Không dễ đâu~ hô hô hô~	백작부인	
+S:QUEST1.dat:350:0	이런? 천한 게 힘은 좀 쓰나보구나!	Ơ kìa? Đồ hạ tiện mà cũng có sức đấy!	백작부인	
+S:QUEST1.dat:350:1	그렇다고 한번에 나의 비법을 내어줄 순없지!	Nhưng không thể vì thế mà trao ngay bí quyết của ta!	백작부인	
+S:QUEST1.dat:350:2	어떤 분부라도 처리할 테니 내려주세요 백작부인!!아..아름다우신 백작부인	Phu nhân sai việc gì tôi cũng làm, xin cứ phân phó!!À..Bá tước phu nhân xinh đẹp	세바스찬	
+S:QUEST1.dat:350:3	오? 호호호~ 그~래?	Ồ? Hô hô hô~ Thế~ à?	백작부인	
+S:QUEST1.dat:350:4	그럼, 딥데저트던전으로 가서 영혼결정 10개를 구해온다면 내어주지!	Vậy đến Deep Desert Dungeon kiếm về 10 Tinh thể linh hồn thì ta cho!	백작부인	
+S:QUEST1.dat:351:0	오호!! 영혼결정을 구해왔구나. 이거면 나의 장신구로 손색이 없겠구나.호호호	Ồ!! Kiếm được Tinh thể linh hồn rồi à. Cái này làm trang sức cho ta thì chẳng kém gì.hô hô hô	백작부인	
+S:QUEST1.dat:351:1	자 ~ 이 책을 빌려줄테니 그래플링의 최고수가 되어 보거라!!	Nào~ ta cho mượn cuốn sách này, trở thành cao thủ thuật vật đi!!	백작부인	
+S:QUEST1.dat:352:0	뭬야? 천한 신분으로 울트라파이터가 되려고 왔단 말이냐?	Cái gì? Thân phận hạ tiện mà đến để thành Ultra Fighter sao?	백작부인	
+S:QUEST1.dat:352:1	흠!! 어디 믿는 구석이라도 있나보군!	Hừm!! Chắc có chỗ dựa gì đây!	백작부인	
+S:QUEST1.dat:352:2	아 ..그런건 아니구요. 사실은..	À ..không phải vậy ạ. Thật ra là..	세바스찬	
+S:QUEST1.dat:352:3	닥쳐! 네 사정따윈 궁금하지 않다.	Câm miệng! Ta chẳng quan tâm chuyện của ngươi.	백작부인	
+S:QUEST1.dat:352:4	일단 온거니, 점검이나 해보는 의미에서 서부사막으로 가서 데저트 데블을 처리하고,	Đã đến thì coi như kiểm tra, đến Sa mạc phía Tây xử lý lũ Desert Devil,	백작부인	
+S:QUEST1.dat:352:5	그 증거로 데몬아이 10개만 갖구 와 보거라.	mang về 10 Demon Eye làm bằng chứng.	백작부인	
+S:QUEST1.dat:353:0	보기보다 힘 좀 쓰나보군.	Có vẻ sức ngươi khá hơn vẻ ngoài.	백작부인	
+S:QUEST1.dat:353:1	데몬아이는 목걸이 재료로 쓸 예정이니, 흠집 안나게 저기 잘 모셔다 놓거라.	Demon Eye ta định làm nguyên liệu dây chuyền, đặt cẩn thận đằng kia, đừng để trầy.	백작부인	
+S:QUEST1.dat:353:2	거기서 꾸물대지 말고 힘이 남아돌면 딥샌드던전에 가서 영혼결정 10개만 구해오너라!	Đừng lề mề ở đó, còn dư sức thì đến hầm ngục Deep Sand kiếm về 10 Tinh thể linh hồn!	백작부인	
+S:QUEST1.dat:353:3	헉.. 바로 가라구요?	Hả.. đi ngay sao ạ?	세바스찬	
+S:QUEST1.dat:353:4	저 잠시 숨 좀 돌리고 가면 안될까요?	Cho tôi nghỉ lấy hơi một chút rồi đi được không ạ?	세바스찬	
+S:QUEST1.dat:353:5	왜 포기하려나 보군?	Sao, định bỏ cuộc à?	백작부인	
+S:QUEST1.dat:353:6	그럼 방 하나 내어줄테니 푹 쉬던지.	Vậy ta cho một phòng mà nghỉ cho khoẻ.	백작부인	
+S:QUEST1.dat:353:7	아…아니에요 백작부인.	K...không ạ thưa Bá tước phu nhân.	세바스찬	
+S:QUEST1.dat:353:8	얼른 다녀 오겠습니다.	Tôi đi rồi về ngay.	세바스찬	
+S:QUEST1.dat:354:0	흠! 이 정도면 최종테스트도 무난하게 통과 했다고 할 수 있겠구나.	Hừm! Thế này coi như qua bài thử cuối cùng suôn sẻ rồi.	백작부인	
+S:QUEST1.dat:354:1	이왕 이길로 들어섰으니 열심히 노력해서 더욱 멋진 울트라파이터가 되도록 하거라.	Đã bước vào con đường này thì cố gắng thành Ultra Fighter xuất sắc hơn nữa.	백작부인	
+S:QUEST1.dat:354:2	네 백작부인. 감사합니다.	Vâng thưa Bá tước phu nhân. Cảm ơn phu nhân.	세바스찬	
+S:QUEST1.dat:354:3	생각보다 마음이 따뜻하신 분이신것 같네요.	Có vẻ phu nhân ấm áp hơn tôi nghĩ.	세바스찬	
+S:QUEST1.dat:354:4	다음엔 멋진 파이터가 되어 찾아뵙겠습니다.	Lần sau tôi sẽ thành một võ sĩ giỏi rồi đến thăm.	세바스찬	
+S:QUEST1.dat:355:0	호~ 요근래 본 후기지수 가운데 가장 뛰어난 인재로군.	Ồ~ nhân tài xuất sắc nhất trong lớp hậu bối ta gặp gần đây.	코드리	
+S:QUEST1.dat:355:1	눈앞에 벽이 있는데, 넘어가기가 힘이 드네요.	Trước mắt có bức tường mà tôi khó vượt qua.	세바스찬	
+S:QUEST1.dat:355:2	부디 조언을 부탁드려요.	Xin ngài cho lời khuyên.	세바스찬	
+S:QUEST1.dat:355:3	조언정도야 어려운게 아니지.	Lời khuyên thì có khó gì.	코드리	
+S:QUEST1.dat:355:4	하지만 그만큼의 성의를 보여주길 원하네.	Nhưng ta muốn cậu tỏ thành ý tương xứng.	코드리	
+S:QUEST1.dat:355:5	나라가 어수선한 시기를 틈타, 군을 탈영한 놈들이 고원지대에서 민간인들을 괴롭히고 있다네	Nhân lúc đất nước rối ren, bọn đào ngũ khỏi quân đội đang quấy nhiễu dân thường ở vùng cao nguyên	코드리	
+S:QUEST1.dat:355:6	자네가 좀 도와줄 수 있겠는가?	Cậu giúp được chứ?	코드리	
+S:QUEST1.dat:356:0	수고했네.	Vất vả rồi.	코드리	
+S:QUEST1.dat:356:1	답례하고 하긴 뭐하지만, 몇가지를 말해주지.	Gọi là đáp lễ thì hơi kỳ, nhưng ta nói cho cậu vài điều.	코드리	
+S:QUEST1.dat:356:2	어퍼나이트라면 누구나 알고있는 공격과 방어의 조화로움. 이것을 단지 육신에서만 구현하지 말고, 정신과의 조화를 추구하..	Sự hài hoà giữa công và thủ mà Upper Knight nào cũng biết. Đừng chỉ thực hiện nó ở thể xác, hãy theo đuổi sự hài hoà với tinh thần..	코드리	
+S:QUEST1.dat:356:3	오호라..먼가 떠오르는게 있는 표정이군?	Ồ..vẻ mặt như vừa ngộ ra gì đó?	코드리	
+S:QUEST1.dat:356:4	그 말씀을 들으니 뭔가 아른아른 손에 잡힐듯 하네요.	Nghe ngài nói tôi thấy như mơ hồ sắp nắm được gì đó.	세바스찬	
+S:QUEST1.dat:356:5	그럴땐 무념무상으로 검에 육신을 넘겨주는게 좋을거야.	Lúc đó nên vô niệm vô tưởng, giao thân xác cho thanh kiếm.	코드리	
+S:QUEST1.dat:356:6	마침 딥데저트 던전에 네펜데스들이 출몰한다고 하니,	Vừa hay nghe nói lũ Nepenthes xuất hiện ở Deep Desert Dungeon,	코드리	
+S:QUEST1.dat:356:7	몬스터 퇴치도 할겸, 검이 가는대로 마음놓고 활개치고 오게나.	tiện diệt quái vật, cứ để kiếm dẫn đường mà tung hoành.	코드리	
+S:QUEST1.dat:357:0	축하하네. 눈을 보아하니 가로막던 벽을 넘어섰군.	Chúc mừng cậu. Nhìn ánh mắt là biết đã vượt bức tường chắn lối rồi.	코드리	
+S:QUEST1.dat:357:1	조언을 주셔서 정말 감사해요.	Cảm ơn ngài đã cho lời khuyên.	세바스찬	
+S:QUEST1.dat:357:2	크게 깨달은 바가 있네요.	Tôi đã ngộ ra nhiều điều.	세바스찬	
+S:QUEST1.dat:357:3	허허. 축하선물이라하긴 뭣하지만, 그랜드나이트의 스킬을 몇가지 알려주지.	Ha ha. Gọi là quà mừng thì hơi kỳ, nhưng ta chỉ cậu vài kỹ năng Grand Knight.	코드리	
+S:QUEST1.dat:357:4	앞으로도 이 세계의 조화를 위해 힘써주게나.	Sau này hãy dốc sức vì sự hài hoà của thế giới này.	코드리	
+S:QUEST1.dat:358:0	허~ 노블나이트는 오랜만에 보는군.	Ồ~ lâu lắm mới thấy Noble Knight.	코드리	
+S:QUEST1.dat:358:1	게다가 곧 한계를 뛰어넘을듯한 이 기세는... 대단하군.	Lại thêm khí thế như sắp vượt giới hạn... đáng nể thật.	코드리	
+S:QUEST1.dat:358:2	그 한계를 넘어가기가 어렵네요.	Vượt qua giới hạn đó khó quá.	세바스찬	
+S:QUEST1.dat:358:3	역대 최강 나이트시라면서요? 뭔가 힌트같은건 주실 수 있으신가요?	Nghe nói ngài là Knight mạnh nhất mọi thời? Ngài có thể gợi ý gì không?	세바스찬	
+S:QUEST1.dat:358:4	조언 정도야 어려운건 아닌데, 나도 부탁 좀 하지.	Lời khuyên thì không khó, nhưng ta cũng nhờ một việc.	드비쉬	
+S:QUEST1.dat:358:5	고원지대에 저주받은 언데드인 구울들이 돌아다닌다는데,	Nghe nói lũ Ghoul, bất tử bị nguyền rủa, đang lảng vảng ở cao nguyên,	드비쉬	
+S:QUEST1.dat:358:6	노블나이트의 그 가공한 공격력 좀 보여주고 오게나.	cho ta xem sức công kinh người của Noble Knight đi.	드비쉬	
+S:QUEST1.dat:358:7	구울이라.. 알겠어요. 다녀오도록 하죠.	Ghoul à.. Tôi hiểu rồi. Tôi đi đây.	세바스찬	
+S:QUEST1.dat:359:0	그것이 숙련된 노블나이트의 스키드 공격법이로군.	Đó là lối đánh skid của Noble Knight thuần thục.	코드리	
+S:QUEST1.dat:359:1	오늘 내 눈이 큰 호강을 했네.	Hôm nay mắt ta được dịp mãn nhãn rồi.	코드리	
+S:QUEST1.dat:359:2	그렇다면 조언을 주실 수 있으신가요?	Vậy ngài có thể cho lời khuyên chứ?	세바스찬	
+S:QUEST1.dat:359:3	조언이 아니라. 내 예전부터 보관해오던 노블 블레이더의 비전스킬 비급을 가지고 있긴하지.	Không phải lời khuyên. Ta có cuốn bí kíp kỹ năng bí truyền của Noble Blader cất giữ từ lâu.	코드리	
+S:QUEST1.dat:359:4	기초 스킬을 습득하지 못해 내가 배우지는 못했지만 말이야.	Dù không học được kỹ năng cơ bản nên ta chẳng học nổi.	코드리	
+S:QUEST1.dat:359:5	오 ~ 바로 그거에요!	Ồ~ chính nó!	세바스찬	
+S:QUEST1.dat:359:6	제발 저에겐 그 스킬을 알려주셨으면 감사하겠어요.	Xin ngài chỉ kỹ năng đó cho tôi.	세바스찬	
+S:QUEST1.dat:359:7	아무한테나 스킬을 전수할 수 는 없는 노릇이니,	Đâu thể truyền kỹ năng cho bất kỳ ai,	코드리	
+S:QUEST1.dat:359:8	딥데저트 던전에서 네펜데스를 처치함으로써	Hãy diệt lũ Nepenthes ở Deep Desert Dungeon	코드리	
+S:QUEST1.dat:359:9	자네가 정의의 검을 들고 있다는것을 증명해주게.	để chứng minh cậu cầm thanh kiếm chính nghĩa.	코드리	
+S:QUEST1.dat:360:0	의심의 여지가 없군.	Không còn gì để nghi ngờ.	코드리	
+S:QUEST1.dat:360:1	자, 그럼 노블 블레이더의 스킬을 전수하도록 하지.	Nào, ta truyền kỹ năng Noble Blader cho cậu.	코드리	
+S:QUEST1.dat:360:2	노블 블레이더가 된것을 축하하네.	Chúc mừng cậu thành Noble Blader.	코드리	
+S:QUEST1.dat:361:0	수퍼나이트라니, 게다가 곧 각성이 가까울 정도의 대단한 실력이로군.	Super Knight à, lại còn thực lực gần Thức tỉnh, giỏi lắm.	코드리	
+S:QUEST1.dat:361:1	네. 각성을 하고자 도움을 청하러 왔어요.	Vâng. Tôi đến xin giúp đỡ để Thức tỉnh.	세바스찬	
+S:QUEST1.dat:361:2	조언정도야 어려운게 아니지.	Lời khuyên thì có khó gì.	코드리	
+S:QUEST1.dat:361:3	하지만 그만큼의 성의를 보여주길 원하네.	Nhưng ta muốn cậu tỏ thành ý tương xứng.	코드리	
+S:QUEST1.dat:361:4	나라가 어수선한 시기를 틈타, 군을 탈영한 놈들이 고원지대에서 민간인들을 괴롭히고 있다네	Nhân lúc đất nước rối ren, bọn đào ngũ khỏi quân đội đang quấy nhiễu dân thường ở vùng cao nguyên	코드리	
+S:QUEST1.dat:361:5	자네가 좀 도와줄 수 있겠는가?	Cậu giúp được chứ?	코드리	
+S:QUEST1.dat:362:0	역시 수퍼나이트의 마법력은 명불허전이군.	Quả nhiên ma lực của Super Knight danh bất hư truyền.	코드리	
+S:QUEST1.dat:362:1	그럼 이제 도움을 좀 주실건가요?	Vậy giờ ngài giúp tôi chứ ạ?	세바스찬	
+S:QUEST1.dat:362:2	도움정도가 아니라, 예전부터 내려오던 수퍼가디언의 스킬을 몇가지 알려줄 수 도 있지.	Không chỉ giúp, ta còn chỉ được vài kỹ năng Super Guardian lưu truyền từ xưa.	코드리	
 S:QUEST1.dat:362:3	헉!	Hả!	세바스찬	
-S:QUEST1.dat:362:4	그런데 마침 딥데저트 던전의 마기가 너무 짙어, 신경이 쓰여서 스킬이 잘 생각이 안나는군.	그런데 마침 딥데저트 던전의 마기가 너무 짙어, 신경이 쓰여서 스킬이 잘 생각이 안나는군.	코드리	
-S:QUEST1.dat:362:5	그곳의 네펜데스를 좀 제거해주면 바로 생각 날것도 같은데.	그곳의 네펜데스를 좀 제거해주면 바로 생각 날것도 같은데.	코드리	
-S:QUEST1.dat:362:6	약속 꼭 지키셔야해요!	약속 꼭 지키셔야해요!	세바스찬	
-S:QUEST1.dat:363:0	역시 대단하군.	역시 대단하군.	코드리	
-S:QUEST1.dat:363:1	약속대로 수퍼가디안의 스킬을 전수해주지. 힘이 커진만큼 책임감도 커진다는 것을 명심하게나.	약속대로 수퍼가디안의 스킬을 전수해주지. 힘이 커진만큼 책임감도 커진다는 것을 명심하게나.	코드리	
-S:QUEST1.dat:363:2	자. 수퍼가디안이 된것을 축하하네.	자. 수퍼가디안이 된것을 축하하네.	코드리	
-S:QUEST1.dat:364:0	파이어위자드가 되고 싶어서 온 거야?	파이어위자드가 되고 싶어서 온 거야?	제이슨	
-S:QUEST1.dat:364:1	아무나 파이어 위자드 되는줄 아나보군.	아무나 파이어 위자드 되는줄 아나보군.	제이슨	
-S:QUEST1.dat:364:2	무슨 말씀이세요?	무슨 말씀이세요?	세바스찬	
-S:QUEST1.dat:364:3	전 충분히 자격이 있다고 생각해요.	전 충분히 자격이 있다고 생각해요.	세바스찬	
-S:QUEST1.dat:364:4	흥! 네가 그럴 자격이 있다고 생각한다면, 고원지대로 가서 맨드레이크를 잡고, 그놈들 가지 10개만 구해와 봐.	흥! 네가 그럴 자격이 있다고 생각한다면, 고원지대로 가서 맨드레이크를 잡고, 그놈들 가지 10개만 구해와 봐.	제이슨	
-S:QUEST1.dat:364:5	알았어요.	알았어요.	세바스찬	
-S:QUEST1.dat:365:0	정말 구해오다니... 놀랍군.	정말 구해오다니... 놀랍군.	제이슨	
-S:QUEST1.dat:365:1	그렇다면 마나플레임을 넘겨주실 수 있으신거죠?	그렇다면 마나플레임을 넘겨주실 수 있으신거죠?	세바스찬	
-S:QUEST1.dat:365:2	뭐? 마나플레임? 이번에는 정말 그냥 넘겨 줄 수 없겠어.	뭐? 마나플레임? 이번에는 정말 그냥 넘겨 줄 수 없겠어.	세바스찬	
-S:QUEST1.dat:365:3	마나플레임은 희귀하다 못해 진귀한 물건이거든.	마나플레임은 희귀하다 못해 진귀한 물건이거든.	세바스찬	
-S:QUEST1.dat:365:4	뭐, 딥데저트던전에 가서 영혼결정 10개를 구해준다면 생각이 달라지겠지만 말이야.	뭐, 딥데저트던전에 가서 영혼결정 10개를 구해준다면 생각이 달라지겠지만 말이야.	세바스찬	
-S:QUEST1.dat:365:5	네! 꼭 구해올게요.	네! 꼭 구해올게요.	세바스찬	
-S:QUEST1.dat:365:6	대신 약속 꼭 지키셔야 해요.	대신 약속 꼭 지키셔야 해요.	세바스찬	
-S:QUEST1.dat:366:0	여기 영혼결정 10개요.	여기 영혼결정 10개요.	세바스찬	
-S:QUEST1.dat:366:1	얼굴을 보아 하니 생각보다 고생을 많이 한 것 같군.고생한 보람이 있어야지?	얼굴을 보아 하니 생각보다 고생을 많이 한 것 같군.고생한 보람이 있어야지?	제이슨	
-S:QUEST1.dat:366:2	자~ 나도 맘 편히 마나플레임을 넘겨 줄 수 있겠어.	자~ 나도 맘 편히 마나플레임을 넘겨 줄 수 있겠어.	제이슨	
-S:QUEST1.dat:366:3	그걸 몸에 품고 마나를 운용하면 파이어위자드가 될수 있지!	그걸 몸에 품고 마나를 운용하면 파이어위자드가 될수 있지!	제이슨	
-S:QUEST1.dat:366:4	야호!!! 난 이제 파이어위자드! 세바스찬님이시다!	야호!!! 난 이제 파이어위자드! 세바스찬님이시다!	세바스찬	
-S:QUEST1.dat:367:0	퍼스트블리자드라구?	퍼스트블리자드라구?	제이슨	
-S:QUEST1.dat:367:1	그건 단순한 얼음 덩어리가 아니고, 영혼까지 얼릴것 같은 냉기를 가지고 있다고.	그건 단순한 얼음 덩어리가 아니고, 영혼까지 얼릴것 같은 냉기를 가지고 있다고.	제이슨	
-S:QUEST1.dat:367:2	알고 있어요.	알고 있어요.	세바스찬	
-S:QUEST1.dat:367:3	방법이 없을까요	방법이 없을까요	세바스찬	
-S:QUEST1.dat:367:4	음... 불가능 한 건 아니야.	음... 불가능 한 건 아니야.	제이슨	
-S:QUEST1.dat:367:5	서부 사막으로 가서 데저트데블에게 데블아이 10개만 구해와봐.	서부 사막으로 가서 데저트데블에게 데블아이 10개만 구해와봐.	제이슨	
-S:QUEST1.dat:367:6	나머지 얘긴 구해오면 하도록 하지.	나머지 얘긴 구해오면 하도록 하지.	제이슨	
-S:QUEST1.dat:368:0	수고했어. 그럼 얘길 계속 이어할까?	수고했어. 그럼 얘길 계속 이어할까?	제이슨	
-S:QUEST1.dat:368:1	전해오는 얘기로는 냉혈심장만 있다면 퍼스트 블리자드를 얻을 수 있다고 하던군.	전해오는 얘기로는 냉혈심장만 있다면 퍼스트 블리자드를 얻을 수 있다고 하던군.	제이슨	
+S:QUEST1.dat:362:4	그런데 마침 딥데저트 던전의 마기가 너무 짙어, 신경이 쓰여서 스킬이 잘 생각이 안나는군.	Nhưng ma khí ở Deep Desert Dungeon đặc quá, ta lo nên chẳng nhớ ra kỹ năng.	코드리	
+S:QUEST1.dat:362:5	그곳의 네펜데스를 좀 제거해주면 바로 생각 날것도 같은데.	Diệt giúp lũ Nepenthes ở đó chắc ta sẽ nhớ ra ngay.	코드리	
+S:QUEST1.dat:362:6	약속 꼭 지키셔야해요!	Ngài nhất định phải giữ lời đấy!	세바스찬	
+S:QUEST1.dat:363:0	역시 대단하군.	Quả là giỏi.	코드리	
+S:QUEST1.dat:363:1	약속대로 수퍼가디안의 스킬을 전수해주지. 힘이 커진만큼 책임감도 커진다는 것을 명심하게나.	Như đã hứa ta truyền kỹ năng Super Guardian. Hãy nhớ sức mạnh càng lớn trách nhiệm càng lớn.	코드리	
+S:QUEST1.dat:363:2	자. 수퍼가디안이 된것을 축하하네.	Nào. Chúc mừng cậu thành Super Guardian.	코드리	
+S:QUEST1.dat:364:0	파이어위자드가 되고 싶어서 온 거야?	Đến vì muốn thành Fire Wizard à?	제이슨	
+S:QUEST1.dat:364:1	아무나 파이어 위자드 되는줄 아나보군.	Tưởng ai cũng thành Fire Wizard được chắc.	제이슨	
+S:QUEST1.dat:364:2	무슨 말씀이세요?	Ông nói vậy là sao?	세바스찬	
+S:QUEST1.dat:364:3	전 충분히 자격이 있다고 생각해요.	Tôi nghĩ mình thừa tư cách.	세바스찬	
+S:QUEST1.dat:364:4	흥! 네가 그럴 자격이 있다고 생각한다면, 고원지대로 가서 맨드레이크를 잡고, 그놈들 가지 10개만 구해와 봐.	Hừ! Nếu nghĩ mình đủ tư cách thì đến cao nguyên bắt Mandrake, kiếm về 10 cành của chúng xem.	제이슨	
+S:QUEST1.dat:364:5	알았어요.	Biết rồi.	세바스찬	
+S:QUEST1.dat:365:0	정말 구해오다니... 놀랍군.	Kiếm về thật... đáng nể đấy.	제이슨	
+S:QUEST1.dat:365:1	그렇다면 마나플레임을 넘겨주실 수 있으신거죠?	Vậy ông trao Mana Flame cho tôi được chứ?	세바스찬	
+S:QUEST1.dat:365:2	뭐? 마나플레임? 이번에는 정말 그냥 넘겨 줄 수 없겠어.	Gì? Mana Flame? Lần này thì thật sự không thể cứ thế mà đưa.	세바스찬	
+S:QUEST1.dat:365:3	마나플레임은 희귀하다 못해 진귀한 물건이거든.	Mana Flame không chỉ hiếm mà còn là vật quý.	세바스찬	
+S:QUEST1.dat:365:4	뭐, 딥데저트던전에 가서 영혼결정 10개를 구해준다면 생각이 달라지겠지만 말이야.	Thôi, đến Deep Desert Dungeon kiếm về 10 Tinh thể linh hồn thì có khi ta đổi ý.	세바스찬	
+S:QUEST1.dat:365:5	네! 꼭 구해올게요.	Vâng! Nhất định tôi kiếm về.	세바스찬	
+S:QUEST1.dat:365:6	대신 약속 꼭 지키셔야 해요.	Nhưng ông nhất định phải giữ lời đấy.	세바스찬	
+S:QUEST1.dat:366:0	여기 영혼결정 10개요.	Đây là 10 Tinh thể linh hồn.	세바스찬	
+S:QUEST1.dat:366:1	얼굴을 보아 하니 생각보다 고생을 많이 한 것 같군.고생한 보람이 있어야지?	Nhìn mặt là biết vất vả hơn ta nghĩ.Vất vả thì phải có thành quả chứ?	제이슨	
+S:QUEST1.dat:366:2	자~ 나도 맘 편히 마나플레임을 넘겨 줄 수 있겠어.	Nào~ giờ ta yên tâm trao Mana Flame được rồi.	제이슨	
+S:QUEST1.dat:366:3	그걸 몸에 품고 마나를 운용하면 파이어위자드가 될수 있지!	Mang nó trong người mà vận mana thì sẽ thành Fire Wizard!	제이슨	
+S:QUEST1.dat:366:4	야호!!! 난 이제 파이어위자드! 세바스찬님이시다!	Yahoo!!! Giờ ta là Fire Wizard! Ngài Sebastian đây!	세바스찬	
+S:QUEST1.dat:367:0	퍼스트블리자드라구?	First Blizzard à?	제이슨	
+S:QUEST1.dat:367:1	그건 단순한 얼음 덩어리가 아니고, 영혼까지 얼릴것 같은 냉기를 가지고 있다고.	Đó không đơn giản là cục băng, nó mang hàn khí như đóng băng cả linh hồn đấy.	제이슨	
+S:QUEST1.dat:367:2	알고 있어요.	Tôi biết.	세바스찬	
+S:QUEST1.dat:367:3	방법이 없을까요	Không có cách nào sao	세바스찬	
+S:QUEST1.dat:367:4	음... 불가능 한 건 아니야.	Ừm... không phải không thể.	제이슨	
+S:QUEST1.dat:367:5	서부 사막으로 가서 데저트데블에게 데블아이 10개만 구해와봐.	Đến Sa mạc phía Tây kiếm 10 Devil Eye từ lũ Desert Devil xem.	제이슨	
+S:QUEST1.dat:367:6	나머지 얘긴 구해오면 하도록 하지.	Phần còn lại kiếm về rồi ta kể.	제이슨	
+S:QUEST1.dat:368:0	수고했어. 그럼 얘길 계속 이어할까?	Vất vả rồi. Vậy kể tiếp nhé?	제이슨	
+S:QUEST1.dat:368:1	전해오는 얘기로는 냉혈심장만 있다면 퍼스트 블리자드를 얻을 수 있다고 하던군.	Tương truyền chỉ cần có Trái tim máu lạnh là có được First Blizzard.	제이슨	
 S:QUEST1.dat:368:2	네?	Dạ?	세바스찬	
-S:QUEST1.dat:368:3	그럼 냉혈심장은 어디서 구할 수있어요? 혹시??	그럼 냉혈심장은 어디서 구할 수있어요? 혹시??	세바스찬	
-S:QUEST1.dat:368:4	앗?어떻게 눈치 챈 거지?	앗?어떻게 눈치 챈 거지?	제이슨	
-S:QUEST1.dat:368:5	안돼! 이걸 구하느라 얼마나 고생을 했는데.	안돼! 이걸 구하느라 얼마나 고생을 했는데.	제이슨	
-S:QUEST1.dat:368:6	쉽게 넘겨 줄 수는 없지.	쉽게 넘겨 줄 수는 없지.	제이슨	
-S:QUEST1.dat:368:7	딥데저트 던전에서 지옥의 망자 20마리를 처치해준다면 생각이 바뀌겠지만 말이야.	딥데저트 던전에서 지옥의 망자 20마리를 처치해준다면 생각이 바뀌겠지만 말이야.	제이슨	
-S:QUEST1.dat:368:8	지옥의 망자를 20마리씩이나요? 흐음	지옥의 망자를 20마리씩이나요? 흐음	세바스찬	
-S:QUEST1.dat:368:9	어렵지만 노력해 볼게요.	어렵지만 노력해 볼게요.	세바스찬	
-S:QUEST1.dat:369:0	좋아. 약속을 지키지.	좋아. 약속을 지키지.	제이슨	
-S:QUEST1.dat:369:1	이 냉혈심장을 마나서클 가운데 위치시킨후, 마나를 역회전으로 가속시키면 퍼스트 블리자드가 생성되지.	이 냉혈심장을 마나서클 가운데 위치시킨후, 마나를 역회전으로 가속시키면 퍼스트 블리자드가 생성되지.	제이슨	
-S:QUEST1.dat:369:2	그 순간 마나를 흡수하면 아이스위자드로 각성할 수 있다고 전해지고 있어.	그 순간 마나를 흡수하면 아이스위자드로 각성할 수 있다고 전해지고 있어.	제이슨	
-S:QUEST1.dat:369:3	좋아요.	좋아요.	세바스찬	
-S:QUEST1.dat:369:4	마나 역회전, 가속, 역회전이라.	마나 역회전, 가속, 역회전이라.	세바스찬	
-S:QUEST1.dat:369:5	합!	합!	세바스찬	
-S:QUEST1.dat:369:6	아이스 위자드의 각성순간을 눈앞에서 보게되다니...축하하네!	아이스 위자드의 각성순간을 눈앞에서 보게되다니...축하하네!	제이슨	
-S:QUEST1.dat:370:0	썬더위자드?	썬더위자드?	제이슨	
-S:QUEST1.dat:370:1	썬더 매지션 전직때 겪은 고통의 상처를 잊기도 전에 또 더 큰 고통을 받겠다니.	썬더 매지션 전직때 겪은 고통의 상처를 잊기도 전에 또 더 큰 고통을 받겠다니.	제이슨	
-S:QUEST1.dat:370:2	네 의지도 보통이 아니구나.야.	네 의지도 보통이 아니구나.야.	제이슨	
-S:QUEST1.dat:370:3	아하하! 그 정도 고통쯤이야!	아하하! 그 정도 고통쯤이야!	세바스찬	
-S:QUEST1.dat:370:4	사실 루이안님이 썬더 어택을 방어해주셔서, 무사히 전직하긴 했었죠.	사실 루이안님이 썬더 어택을 방어해주셔서, 무사히 전직하긴 했었죠.	세바스찬	
-S:QUEST1.dat:370:5	하지만! 최고의 썬더 위자드가 될 수 있다면 못할 게 없죠.	하지만! 최고의 썬더 위자드가 될 수 있다면 못할 게 없죠.	세바스찬	
-S:QUEST1.dat:370:6	니 의지도 보통이 아니긴 한데, 일단 테스트를 거쳐야 하는건 알고 있지?	니 의지도 보통이 아니긴 한데, 일단 테스트를 거쳐야 하는건 알고 있지?	제이슨	
-S:QUEST1.dat:370:7	루이시티 서쪽에 가서 못된 행실을 일삼고 있는	루이시티 서쪽에 가서 못된 행실을 일삼고 있는	제이슨	
-S:QUEST1.dat:370:8	집시주술사 10명을 퇴치하고 오거라.	집시주술사 10명을 퇴치하고 오거라.	제이슨	
-S:QUEST1.dat:371:0	가볍게 일차 관문을 통과했군.	가볍게 일차 관문을 통과했군.	제이슨	
-S:QUEST1.dat:371:1	음...수퍼스톰카운트를 구한다면 고통 없이 썬더위자드가  될 수 있다고 하더군.	음...수퍼스톰카운트를 구한다면 고통 없이 썬더위자드가  될 수 있다고 하더군.	제이슨	
-S:QUEST1.dat:371:2	수퍼 스톰카운트는 어디서 구하나요?	수퍼 스톰카운트는 어디서 구하나요?	세바스찬	
-S:QUEST1.dat:371:3	혹시 ..대신 구해주실 순 없을까요?	혹시 ..대신 구해주실 순 없을까요?	세바스찬	
-S:QUEST1.dat:371:4	수퍼스톰카운트?	수퍼스톰카운트?	제이슨	
-S:QUEST1.dat:371:5	그건 정말 구하기 힘든 책인데.	그건 정말 구하기 힘든 책인데.	제이슨	
-S:QUEST1.dat:371:6	나도 본적은 없고 대마법사 바스틴루에게 가보면 구할 수 있을 지도 모르긴 한데...	나도 본적은 없고 대마법사 바스틴루에게 가보면 구할 수 있을 지도 모르긴 한데...	제이슨	
-S:QUEST1.dat:371:7	아 ~ 정말이요? 제발 부탁 드려요.	아 ~ 정말이요? 제발 부탁 드려요.	세바스찬	
-S:QUEST1.dat:371:8	대신 제가 어떤 부탁이라도 들어드릴께요.	대신 제가 어떤 부탁이라도 들어드릴께요.	세바스찬	
-S:QUEST1.dat:371:9	음 그래? 그럼 마침 옷감이 다 떨어지긴 했어.	음 그래? 그럼 마침 옷감이 다 떨어지긴 했어.	제이슨	
-S:QUEST1.dat:371:10	좋아! 그럼 딥데저트 던전에서 옷감재료 20개를 구해주면, 나도 힘들겠지만 움직여보지.	좋아! 그럼 딥데저트 던전에서 옷감재료 20개를 구해주면, 나도 힘들겠지만 움직여보지.	제이슨	
-S:QUEST1.dat:372:0	마침 필요한 때 제대로 갖고 왔군.	마침 필요한 때 제대로 갖고 왔군.	제이슨	
-S:QUEST1.dat:372:1	자,이거 받아.	자,이거 받아.	제이슨	
-S:QUEST1.dat:372:2	우와!! 이게 말로만 듣던 그 수퍼 스톰 카운트군요.	우와!! 이게 말로만 듣던 그 수퍼 스톰 카운트군요.	세바스찬	
-S:QUEST1.dat:372:3	어디보자..여기 있는 마나운용법대로 마나를 운용해보면...	어디보자..여기 있는 마나운용법대로 마나를 운용해보면...	세바스찬	
-S:QUEST1.dat:372:4	썬더위자드라는 자격에 도달한 걸 진심으로 축하해.	썬더위자드라는 자격에 도달한 걸 진심으로 축하해.	제이슨	
-S:QUEST1.dat:372:5	앞으로 더 노력해서, 최고의 썬더매지션이 될 수 있도록 해.	앞으로 더 노력해서, 최고의 썬더매지션이 될 수 있도록 해.	제이슨	
-S:QUEST1.dat:373:0	현상포고에 기재된 내용을 완료하고 왔어요.	현상포고에 기재된 내용을 완료하고 왔어요.	세바스찬	
-S:QUEST1.dat:373:1	구울 냄새가 아주~	구울 냄새가 아주~	세바스찬	
-S:QUEST1.dat:373:2	하핫!	하핫!	랜달프	
-S:QUEST1.dat:373:3	원래 구울이 냄새가 심하긴 하지.	원래 구울이 냄새가 심하긴 하지.	랜달프	
-S:QUEST1.dat:373:4	그나저나 아주 잘 해줬다.	그나저나 아주 잘 해줬다.	랜달프	
-S:QUEST1.dat:373:5	이건 보상이니 잘 받아둬라.	이건 보상이니 잘 받아둬라.	랜달프	
-S:QUEST1.dat:374:0	랜달프 아저씨.	랜달프 아저씨.	세바스찬	
-S:QUEST1.dat:374:1	싱글벙글 하는걸 보니 현상금 퀘스트라도 완료했나보군.	싱글벙글 하는걸 보니 현상금 퀘스트라도 완료했나보군.	랜달프	
-S:QUEST1.dat:374:2	자, 사막의 눈물 받으세요.	자, 사막의 눈물 받으세요.	세바스찬	
-S:QUEST1.dat:374:3	실라페들을 처치했나보군. 나날이 실력이 일취월장 하는데!	실라페들을 처치했나보군. 나날이 실력이 일취월장 하는데!	랜달프	
-S:QUEST1.dat:374:4	좋아. 보상을 주지!	좋아. 보상을 주지!	랜달프	
-S:QUEST1.dat:375:0	딥 샌드던전의 스파이더를 처치하고 왔어요!	딥 샌드던전의 스파이더를 처치하고 왔어요!	세바스찬	
-S:QUEST1.dat:375:1	흠.. 좋아 이제 좀 실력이 오른것 같군.	흠.. 좋아 이제 좀 실력이 오른것 같군.	랜달프	
-S:QUEST1.dat:375:2	앞으로도 방심하지말고 정진해라.	앞으로도 방심하지말고 정진해라.	랜달프	
-S:QUEST1.dat:375:3	물론이죠! 그러니 어서 보상이나 주세요!	물론이죠! 그러니 어서 보상이나 주세요!	세바스찬	
-S:QUEST1.dat:375:4	...에휴...	...에휴...	랜달프	
-S:QUEST1.dat:376:0	헉헉..깊은악마의 동굴을 싹 쓸어버리고 왔어요!	헉헉..깊은악마의 동굴을 싹 쓸어버리고 왔어요!	세바스찬	
-S:QUEST1.dat:376:1	에구구...	에구구...	세바스찬	
-S:QUEST1.dat:376:2	좋아! 세바스찬 수고많았어!	좋아! 세바스찬 수고많았어!	랜달프	
-S:QUEST1.dat:376:3	역시 세르게이가 좋아할만 하다니까!	역시 세르게이가 좋아할만 하다니까!	랜달프	
-S:QUEST1.dat:376:4	다른소리 말고 어서 보상이나 주세요!	다른소리 말고 어서 보상이나 주세요!	세바스찬	
-S:QUEST1.dat:376:5	자. 여기 받아!	자. 여기 받아!	랜달프	
-S:QUEST1.dat:376:6	그리고 다음 현상퀘스트도 잘 부탁해!	그리고 다음 현상퀘스트도 잘 부탁해!	랜달프	
-S:QUEST1.dat:377:0	자~ 이걸 받으세요.	자~ 이걸 받으세요.	세바스찬	
-S:QUEST1.dat:377:1	바질리스크의 뼈라.	바질리스크의 뼈라.	랜달프	
-S:QUEST1.dat:377:2	놀랍군, 많이 컸다. 세바스찬~	놀랍군, 많이 컸다. 세바스찬~	랜달프	
-S:QUEST1.dat:377:3	좋아. 보상을 주지!	좋아. 보상을 주지!	랜달프	
-S:QUEST1.dat:378:0	고스튤라 라도 상대하고 온거야?	고스튤라 라도 상대하고 온거야?	랜달프	
-S:QUEST1.dat:378:1	어라. 어떻게 아신거지?	어라. 어떻게 아신거지?	세바스찬	
-S:QUEST1.dat:378:2	온몸에 고스튤라 파편이 그득하고만..이제 제법 노련한 용병의 분위기를 풍기는데?	온몸에 고스튤라 파편이 그득하고만..이제 제법 노련한 용병의 분위기를 풍기는데?	랜달프	
-S:QUEST1.dat:378:3	자, 보상을 해줘야겠지?	자, 보상을 해줘야겠지?	랜달프	
-S:QUEST1.dat:379:0	드레이크 목에 걸려있던 현상금을 받으러 왔어요.	드레이크 목에 걸려있던 현상금을 받으러 왔어요.	세바스찬	
-S:QUEST1.dat:379:1	호..제법 까다로웠을텐데, 대단하군.	호..제법 까다로웠을텐데, 대단하군.	랜달프	
-S:QUEST1.dat:379:2	어째 성장속도가 다른 용병과 꽤 틀린게, 넌 좀 크게 될 놈인것 같다.	어째 성장속도가 다른 용병과 꽤 틀린게, 넌 좀 크게 될 놈인것 같다.	랜달프	
-S:QUEST1.dat:379:3	당연하죠! 핫핫핫!	당연하죠! 핫핫핫!	세바스찬	
-S:QUEST1.dat:379:4	...잠깐 내눈이 잘못되었나보군.	...잠깐 내눈이 잘못되었나보군.	랜달프	
-S:QUEST1.dat:379:5	자. 하여간 보상을 줘야겠지?	자. 하여간 보상을 줘야겠지?	랜달프	
-S:QUEST1.dat:380:0	인간. 나에게 무슨 볼일이라도 있나?	인간. 나에게 무슨 볼일이라도 있나?	리르케	
-S:QUEST1.dat:380:1	이곳에서 던전 포상금을 받으려면 당신에게 가라고 하길래요.	이곳에서 던전 포상금을 받으려면 당신에게 가라고 하길래요.	세바스찬	
-S:QUEST1.dat:380:2	뭐? 역시 내가 인정한 인간답군. 대단해.	뭐? 역시 내가 인정한 인간답군. 대단해.	리르케	
-S:QUEST1.dat:380:3	자! 이걸 받아!	자! 이걸 받아!	리르케	
-S:QUEST1.dat:381:0	어디서 고약한 마운틴 트롤 냄새가...	어디서 고약한 마운틴 트롤 냄새가...	리르케	
-S:QUEST1.dat:381:1	혹시 그놈들과 어울리다 온거야?	혹시 그놈들과 어울리다 온거야?	리르케	
-S:QUEST1.dat:381:2	어울리긴 어울렸죠. 현상포고에 따라 그놈들을 처리하고 왔어요.	어울리긴 어울렸죠. 현상포고에 따라 그놈들을 처리하고 왔어요.	세바스찬	
-S:QUEST1.dat:381:3	캬~ 대단하다. 인간.	캬~ 대단하다. 인간.	리르케	
-S:QUEST1.dat:381:4	혹시 계속 우리 마을에서 살고 싶으면 말해라. 내 여동생을 자네에게 소개시켜 주겠다. 처남.	혹시 계속 우리 마을에서 살고 싶으면 말해라. 내 여동생을 자네에게 소개시켜 주겠다. 처남.	리르케	
-S:QUEST1.dat:381:5	헐... 감사하지만 마음만 받겠어요.	헐... 감사하지만 마음만 받겠어요.	세바스찬	
-S:QUEST1.dat:381:6	부끄러워 하긴!	부끄러워 하긴!	리르케	
-S:QUEST1.dat:381:7	자, 이건 던전 보상품이고, 내일쯤해서 여동생과 결혼식을 준비하도록 하지!	자, 이건 던전 보상품이고, 내일쯤해서 여동생과 결혼식을 준비하도록 하지!	리르케	
-S:QUEST1.dat:381:8	그걸 왜 당신 혼자 결정하는 거야!	그걸 왜 당신 혼자 결정하는 거야!	세바스찬	
-S:QUEST1.dat:382:0	오르츠크에서도 활약이 대단하다고 들었어.	오르츠크에서도 활약이 대단하다고 들었어.	랜달프	
-S:QUEST1.dat:382:1	역시 넌 내가 키운 놈들중 최고야.	역시 넌 내가 키운 놈들중 최고야.	랜달프	
-S:QUEST1.dat:382:2	누가 누굴 키워요!	누가 누굴 키워요!	세바스찬	
-S:QUEST1.dat:382:3	그렇게 말하면 섭섭하지.	그렇게 말하면 섭섭하지.	랜달프	
-S:QUEST1.dat:382:4	자! 여기 보상받고 어서 가봐!	자! 여기 보상받고 어서 가봐!	랜달프	
+S:QUEST1.dat:368:3	그럼 냉혈심장은 어디서 구할 수있어요? 혹시??	Vậy Trái tim máu lạnh kiếm ở đâu ạ? Không lẽ??	세바스찬	
+S:QUEST1.dat:368:4	앗?어떻게 눈치 챈 거지?	Hả? Sao cậu đoán ra?	제이슨	
+S:QUEST1.dat:368:5	안돼! 이걸 구하느라 얼마나 고생을 했는데.	Không được! Ta khổ lắm mới kiếm được nó.	제이슨	
+S:QUEST1.dat:368:6	쉽게 넘겨 줄 수는 없지.	Không dễ gì đưa cho đâu.	제이슨	
+S:QUEST1.dat:368:7	딥데저트 던전에서 지옥의 망자 20마리를 처치해준다면 생각이 바뀌겠지만 말이야.	Trừ khi cậu diệt giúp 20 Vong nhân địa ngục ở Deep Desert Dungeon thì ta đổi ý.	제이슨	
+S:QUEST1.dat:368:8	지옥의 망자를 20마리씩이나요? 흐음	Tận 20 Vong nhân địa ngục sao? Hừm	세바스찬	
+S:QUEST1.dat:368:9	어렵지만 노력해 볼게요.	Khó đấy nhưng tôi sẽ cố.	세바스찬	
+S:QUEST1.dat:369:0	좋아. 약속을 지키지.	Tốt. Ta giữ lời.	제이슨	
+S:QUEST1.dat:369:1	이 냉혈심장을 마나서클 가운데 위치시킨후, 마나를 역회전으로 가속시키면 퍼스트 블리자드가 생성되지.	Đặt Trái tim máu lạnh này vào giữa vòng mana, rồi tăng tốc mana quay ngược thì First Blizzard sẽ hình thành.	제이슨	
+S:QUEST1.dat:369:2	그 순간 마나를 흡수하면 아이스위자드로 각성할 수 있다고 전해지고 있어.	Tương truyền đúng lúc đó hấp thụ mana thì sẽ Thức tỉnh thành Ice Wizard.	제이슨	
+S:QUEST1.dat:369:3	좋아요.	Được.	세바스찬	
+S:QUEST1.dat:369:4	마나 역회전, 가속, 역회전이라.	Mana quay ngược, tăng tốc, quay ngược.	세바스찬	
+S:QUEST1.dat:369:5	합!	Hự!	세바스찬	
+S:QUEST1.dat:369:6	아이스 위자드의 각성순간을 눈앞에서 보게되다니...축하하네!	Được tận mắt thấy khoảnh khắc Thức tỉnh của Ice Wizard...chúc mừng cậu!	제이슨	
+S:QUEST1.dat:370:0	썬더위자드?	Thunder Wizard?	제이슨	
+S:QUEST1.dat:370:1	썬더 매지션 전직때 겪은 고통의 상처를 잊기도 전에 또 더 큰 고통을 받겠다니.	Vết thương đau đớn khi Chuyển nghề Thunder Magician còn chưa quên đã muốn chịu đau đớn lớn hơn.	제이슨	
+S:QUEST1.dat:370:2	네 의지도 보통이 아니구나.야.	Ý chí cậu cũng chẳng tầm thường.	제이슨	
+S:QUEST1.dat:370:3	아하하! 그 정도 고통쯤이야!	A ha ha! Chút đau đớn đó thì nhằm gì!	세바스찬	
+S:QUEST1.dat:370:4	사실 루이안님이 썬더 어택을 방어해주셔서, 무사히 전직하긴 했었죠.	Thật ra nhờ cụ Lunian chặn Thunder Attack nên tôi mới Chuyển nghề an toàn.	세바스찬	
+S:QUEST1.dat:370:5	하지만! 최고의 썬더 위자드가 될 수 있다면 못할 게 없죠.	Nhưng! Nếu thành Thunder Wizard giỏi nhất thì việc gì tôi cũng làm.	세바스찬	
+S:QUEST1.dat:370:6	니 의지도 보통이 아니긴 한데, 일단 테스트를 거쳐야 하는건 알고 있지?	Ý chí cậu không tầm thường thật, nhưng phải qua bài thử trước, biết chứ?	제이슨	
+S:QUEST1.dat:370:7	루이시티 서쪽에 가서 못된 행실을 일삼고 있는	Đến phía Tây Lui City diệt 10 tên thầy pháp Gypsy	제이슨	
+S:QUEST1.dat:370:8	집시주술사 10명을 퇴치하고 오거라.	chuyên làm điều xấu rồi về.	제이슨	
+S:QUEST1.dat:371:0	가볍게 일차 관문을 통과했군.	Qua cửa ải đầu nhẹ nhàng nhỉ.	제이슨	
+S:QUEST1.dat:371:1	음...수퍼스톰카운트를 구한다면 고통 없이 썬더위자드가  될 수 있다고 하더군.	Ừm...nghe nói kiếm được Super Storm Count thì có thể thành Thunder Wizard mà không đau đớn.	제이슨	
+S:QUEST1.dat:371:2	수퍼 스톰카운트는 어디서 구하나요?	Super Storm Count kiếm ở đâu ạ?	세바스찬	
+S:QUEST1.dat:371:3	혹시 ..대신 구해주실 순 없을까요?	Không biết ..ông kiếm giúp tôi được không?	세바스찬	
+S:QUEST1.dat:371:4	수퍼스톰카운트?	Super Storm Count?	제이슨	
+S:QUEST1.dat:371:5	그건 정말 구하기 힘든 책인데.	Đó là cuốn sách rất khó kiếm.	제이슨	
+S:QUEST1.dat:371:6	나도 본적은 없고 대마법사 바스틴루에게 가보면 구할 수 있을 지도 모르긴 한데...	Ta cũng chưa thấy bao giờ, đến chỗ Đại pháp sư Bastinlu có khi kiếm được...	제이슨	
+S:QUEST1.dat:371:7	아 ~ 정말이요? 제발 부탁 드려요.	A~ thật ạ? Xin ông giúp tôi.	세바스찬	
+S:QUEST1.dat:371:8	대신 제가 어떤 부탁이라도 들어드릴께요.	Đổi lại ông nhờ gì tôi cũng làm.	세바스찬	
+S:QUEST1.dat:371:9	음 그래? 그럼 마침 옷감이 다 떨어지긴 했어.	Ừm, vậy à? Đúng lúc ta cũng vừa hết vải.	제이슨	
+S:QUEST1.dat:371:10	좋아! 그럼 딥데저트 던전에서 옷감재료 20개를 구해주면, 나도 힘들겠지만 움직여보지.	Được! Cậu kiếm giúp 20 nguyên liệu vải ở Deep Desert Dungeon thì dù vất vả ta cũng sẽ ra tay.	제이슨	
+S:QUEST1.dat:372:0	마침 필요한 때 제대로 갖고 왔군.	Đúng lúc cần thì cậu mang tới đủ cả.	제이슨	
+S:QUEST1.dat:372:1	자,이거 받아.	Đây, cầm lấy.	제이슨	
+S:QUEST1.dat:372:2	우와!! 이게 말로만 듣던 그 수퍼 스톰 카운트군요.	Oa!! Đây là Super Storm Count chỉ nghe người ta kể thôi đây mà.	세바스찬	
+S:QUEST1.dat:372:3	어디보자..여기 있는 마나운용법대로 마나를 운용해보면...	Để xem nào.. vận mana theo cách vận mana ghi ở đây thì...	세바스찬	
+S:QUEST1.dat:372:4	썬더위자드라는 자격에 도달한 걸 진심으로 축하해.	Thật lòng chúc mừng cậu đã đạt tư cách Thunder Wizard.	제이슨	
+S:QUEST1.dat:372:5	앞으로 더 노력해서, 최고의 썬더매지션이 될 수 있도록 해.	Từ nay hãy cố gắng hơn nữa để trở thành Thunder Magician giỏi nhất nhé.	제이슨	
+S:QUEST1.dat:373:0	현상포고에 기재된 내용을 완료하고 왔어요.	Cháu đã làm xong việc ghi trên cáo thị treo thưởng rồi.	세바스찬	
+S:QUEST1.dat:373:1	구울 냄새가 아주~	Mùi Ghoul thật là~	세바스찬	
+S:QUEST1.dat:373:2	하핫!	Ha ha!	랜달프	
+S:QUEST1.dat:373:3	원래 구울이 냄새가 심하긴 하지.	Ghoul vốn hôi lắm mà.	랜달프	
+S:QUEST1.dat:373:4	그나저나 아주 잘 해줬다.	Mà cháu làm tốt lắm.	랜달프	
+S:QUEST1.dat:373:5	이건 보상이니 잘 받아둬라.	Đây là phần thưởng, cầm lấy.	랜달프	
+S:QUEST1.dat:374:0	랜달프 아저씨.	Chú Randalph.	세바스찬	
+S:QUEST1.dat:374:1	싱글벙글 하는걸 보니 현상금 퀘스트라도 완료했나보군.	Thấy cười tủm tỉm thế kia chắc là xong nhiệm vụ treo thưởng rồi.	랜달프	
+S:QUEST1.dat:374:2	자, 사막의 눈물 받으세요.	Đây, chú nhận Nước mắt Sa mạc đi.	세바스찬	
+S:QUEST1.dat:374:3	실라페들을 처치했나보군. 나날이 실력이 일취월장 하는데!	Diệt được lũ Sylape rồi à. Ngày càng tiến bộ vượt bậc đấy!	랜달프	
+S:QUEST1.dat:374:4	좋아. 보상을 주지!	Tốt. Ta trao thưởng đây!	랜달프	
+S:QUEST1.dat:375:0	딥 샌드던전의 스파이더를 처치하고 왔어요!	Cháu đã diệt Spider ở hầm ngục Deep Sand về rồi!	세바스찬	
+S:QUEST1.dat:375:1	흠.. 좋아 이제 좀 실력이 오른것 같군.	Hừm.. tốt, có vẻ giờ cháu đã lên tay rồi.	랜달프	
+S:QUEST1.dat:375:2	앞으로도 방심하지말고 정진해라.	Sau này cũng đừng chủ quan, cứ thế mà rèn luyện.	랜달프	
+S:QUEST1.dat:375:3	물론이죠! 그러니 어서 보상이나 주세요!	Tất nhiên rồi! Nên chú mau đưa thưởng đây!	세바스찬	
+S:QUEST1.dat:375:4	...에휴...	...Haizz...	랜달프	
+S:QUEST1.dat:376:0	헉헉..깊은악마의 동굴을 싹 쓸어버리고 왔어요!	Hộc hộc.. Cháu đã quét sạch Hang Ác Quỷ Sâu về rồi!	세바스찬	
+S:QUEST1.dat:376:1	에구구...	Ối giời...	세바스찬	
+S:QUEST1.dat:376:2	좋아! 세바스찬 수고많았어!	Tốt lắm! Sebastian vất vả rồi!	랜달프	
+S:QUEST1.dat:376:3	역시 세르게이가 좋아할만 하다니까!	Bảo sao Sergei quý cháu thế!	랜달프	
+S:QUEST1.dat:376:4	다른소리 말고 어서 보상이나 주세요!	Chú đừng nói chuyện khác, mau đưa thưởng đây!	세바스찬	
+S:QUEST1.dat:376:5	자. 여기 받아!	Đây. Cầm lấy!	랜달프	
+S:QUEST1.dat:376:6	그리고 다음 현상퀘스트도 잘 부탁해!	Lần treo thưởng sau cũng nhờ cháu nhé!	랜달프	
+S:QUEST1.dat:377:0	자~ 이걸 받으세요.	Đây~ chú nhận cái này đi.	세바스찬	
+S:QUEST1.dat:377:1	바질리스크의 뼈라.	Xương Basilisk à.	랜달프	
+S:QUEST1.dat:377:2	놀랍군, 많이 컸다. 세바스찬~	Giỏi thật, cháu lớn nhiều rồi đấy. Sebastian~	랜달프	
+S:QUEST1.dat:377:3	좋아. 보상을 주지!	Tốt. Ta trao thưởng đây!	랜달프	
+S:QUEST1.dat:378:0	고스튤라 라도 상대하고 온거야?	Cháu đã đấu với cả Ghostula à?	랜달프	
+S:QUEST1.dat:378:1	어라. 어떻게 아신거지?	Ơ. Sao chú biết hay vậy?	세바스찬	
+S:QUEST1.dat:378:2	온몸에 고스튤라 파편이 그득하고만..이제 제법 노련한 용병의 분위기를 풍기는데?	Mảnh Ghostula dính đầy người kia kìa.. giờ cũng ra dáng lính đánh thuê lão luyện rồi đấy?	랜달프	
+S:QUEST1.dat:378:3	자, 보상을 해줘야겠지?	Nào, phải trao thưởng thôi nhỉ?	랜달프	
+S:QUEST1.dat:379:0	드레이크 목에 걸려있던 현상금을 받으러 왔어요.	Cháu đến nhận tiền thưởng treo trên đầu Drake đây.	세바스찬	
+S:QUEST1.dat:379:1	호..제법 까다로웠을텐데, 대단하군.	Hô.. hẳn là khó nhằn lắm, giỏi thật.	랜달프	
+S:QUEST1.dat:379:2	어째 성장속도가 다른 용병과 꽤 틀린게, 넌 좀 크게 될 놈인것 같다.	Tốc độ trưởng thành của cháu khác hẳn lính đánh thuê khác, có vẻ cháu sẽ làm nên chuyện lớn đấy.	랜달프	
+S:QUEST1.dat:379:3	당연하죠! 핫핫핫!	Đương nhiên rồi! Ha ha ha!	세바스찬	
+S:QUEST1.dat:379:4	...잠깐 내눈이 잘못되었나보군.	...Khoan, chắc mắt ta có vấn đề rồi.	랜달프	
+S:QUEST1.dat:379:5	자. 하여간 보상을 줘야겠지?	Thôi. Dù sao cũng phải trao thưởng nhỉ?	랜달프	
+S:QUEST1.dat:380:0	인간. 나에게 무슨 볼일이라도 있나?	Con người. Có việc gì với ta?	리르케	
+S:QUEST1.dat:380:1	이곳에서 던전 포상금을 받으려면 당신에게 가라고 하길래요.	Người ta bảo muốn nhận thưởng hầm ngục ở đây thì phải tìm ông.	세바스찬	
+S:QUEST1.dat:380:2	뭐? 역시 내가 인정한 인간답군. 대단해.	Gì? Quả là con người mà ta công nhận. Giỏi lắm.	리르케	
+S:QUEST1.dat:380:3	자! 이걸 받아!	Đây! Nhận lấy cái này!	리르케	
+S:QUEST1.dat:381:0	어디서 고약한 마운틴 트롤 냄새가...	Ở đâu ra mùi Mountain Troll hôi thối thế này...	리르케	
+S:QUEST1.dat:381:1	혹시 그놈들과 어울리다 온거야?	Ngươi vừa đi chơi với bọn chúng về à?	리르케	
+S:QUEST1.dat:381:2	어울리긴 어울렸죠. 현상포고에 따라 그놈들을 처리하고 왔어요.	Chơi thì có chơi đấy. Theo cáo thị treo thưởng, tôi đã xử lý bọn chúng về rồi.	세바스찬	
+S:QUEST1.dat:381:3	캬~ 대단하다. 인간.	Chà~ giỏi lắm. Con người.	리르케	
+S:QUEST1.dat:381:4	혹시 계속 우리 마을에서 살고 싶으면 말해라. 내 여동생을 자네에게 소개시켜 주겠다. 처남.	Nếu muốn sống mãi ở làng ta thì cứ nói. Ta sẽ giới thiệu em gái ta cho ngươi. Em rể à.	리르케	
+S:QUEST1.dat:381:5	헐... 감사하지만 마음만 받겠어요.	Hả... Cảm ơn ông, nhưng tôi xin nhận tấm lòng thôi.	세바스찬	
+S:QUEST1.dat:381:6	부끄러워 하긴!	Còn ngại cái gì!	리르케	
+S:QUEST1.dat:381:7	자, 이건 던전 보상품이고, 내일쯤해서 여동생과 결혼식을 준비하도록 하지!	Đây, đây là phần thưởng hầm ngục, tầm mai ta sẽ lo chuẩn bị đám cưới với em gái ta!	리르케	
+S:QUEST1.dat:381:8	그걸 왜 당신 혼자 결정하는 거야!	Sao ông lại tự quyết một mình thế hả!	세바스찬	
+S:QUEST1.dat:382:0	오르츠크에서도 활약이 대단하다고 들었어.	Ta nghe nói cháu ở Ortsk cũng làm nên chuyện lớn lắm.	랜달프	
+S:QUEST1.dat:382:1	역시 넌 내가 키운 놈들중 최고야.	Đúng là trong đám ta nuôi dạy, cháu là đứa giỏi nhất.	랜달프	
+S:QUEST1.dat:382:2	누가 누굴 키워요!	Ai nuôi dạy ai chứ!	세바스찬	
+S:QUEST1.dat:382:3	그렇게 말하면 섭섭하지.	Nói vậy thì ta buồn đấy.	랜달프	
+S:QUEST1.dat:382:4	자! 여기 보상받고 어서 가봐!	Nào! Nhận thưởng rồi đi mau!	랜달프	
