@@ -81,6 +81,18 @@ Cách hoạt động: build thay `new String(byte[])` ở 16 điểm đọc text
 phép so sánh literal như `DownMent.equals("금액확인")` vẫn đúng sau khi sửa). Bộ nhớ:
 `ui.txt` nạp một lần; file dữ liệu cache 2 file một lúc.
 
+## Việt hoá (`i18n/vi/`)
+
+Bản dịch nằm riêng trong `i18n/vi/*.txt`, build áp lên text sinh ra (bước 3f,
+`tools/i18n.py`, báo cáo `build/reports/i18n_*.txt`; `LANG_DIR=none ./build.sh` = bản gốc):
+- file dữ liệu: `khóa=bản dịch` (cùng khóa với `text/<file>.txt`);
+- `ui.txt`: `nguyên văn<TAB>bản dịch` (khớp theo chữ gốc, không phụ thuộc id).
+Build từ chối nếu mất mã điều khiển (`/C`, `/N`, `/P`…) hoặc lựa chọn popup/tên kỹ năng > 9 ký tự.
+
+Đã dịch: UI trong code (198), tên NPC/thú cưng/bản đồ/cây/vật phẩm, kỹ năng, kỹ năng thú
+cưng, tên + gợi ý nhiệm vụ, hộp chọn, hướng dẫn, chữ cut-scene. **Chưa dịch: thoại NPC
+(`talk_*.txt`)** và ảnh có chữ Hàn.
+
 ## Giao diện mới đa màn hình (lớp `Ui*`)
 
 Mọi khung cũ cố định 176x202/240x320 (menu chính, hộp thoại NPC, hộp chọn, cài đặt,

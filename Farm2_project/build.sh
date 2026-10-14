@@ -53,6 +53,12 @@ mkdir -p "$W/encres"; cp -r "$W/res/text" "$W/res/enc" "$W/encres/"
 echo "== 3d. text layer check: port's Enc.txt == Enc.str for every game string (unedited .txt)"
 java -cp "$W/cls:$W/encres:$W/tools" TextCheck "$W/textvec.txt"
 
+echo "== 3f. translation (i18n/\${LANG_DIR:-vi}: key=text overlays, ui.txt by original text; checks codes/limits)"
+if [ "${LANG_DIR:-vi}" != "none" ]; then
+  python3 -I "$P/tools/i18n.py" "$W/res/text" "$P/i18n/${LANG_DIR:-vi}" "$W/i18n.txt"
+  cp "$W/i18n.txt" "$P/build/reports/i18n_$NAME.txt" 2>/dev/null || true
+fi
+
 echo "== 3e. save files of the original handset (imported into RMS on first run; Farm-Save-Seed: 0 disables)"
 mkdir -p "$W/res/save"; : > "$W/res/save/index.txt"
 for f in FSave0.dat FSave1.dat FSave2.dat Option.dat; do

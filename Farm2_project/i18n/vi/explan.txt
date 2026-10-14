@@ -1,0 +1,15 @@
+0=[The Farm là gì]@Game mô phỏng kinh doanh: bạn điều hành nông trại để giành lấy thành công và tình yêu.
+1=[Cách chơi] - Điều khiển@<Phím hướng, 2468> - Di chuyển@<OK, 5> - Trồng trọt, trò chuyện@<Menu, Hủy> - Bảng thông tin@<Gọi> - Lưu game
+2=[Cách chơi] - Trồng trọt (1)@Để trồng cây, hãy dùng cuốc và cào làm đất để có thể gieo hạt. Sau khi gieo, phải tưới nước cho đến khi hạt lớn thành cây.
+3=[Cách chơi] - Trồng trọt (2)@Cây được chăm sóc đều đặn sẽ cho thu hoạch. Bạn có thể bán ở cửa hàng để kiếm tiền, hoặc ăn để hồi thể lực và tâm trạng.
+4=[Cách chơi] - Mua bán@Bạn có thể mua hạt giống từ thương nhân ghé trước nhà hoặc người bán hạt ở cửa hàng trong làng, và bán nông sản, cá kiếm được.
+5=[Cách chơi] - Thời tiết@Có 5 kiểu thời tiết: nắng, râm, nhiều mây, mưa, tuyết. Mỗi kiểu ảnh hưởng tới tốc độ lớn, chỉ số chết và lượng nước của cây. Thời tiết thay đổi theo mùa và có thể tác động bằng thú cưng.
+6=[Cách chơi] - Câu cá@Khi học kỹ năng câu cá, bạn có thể dùng nông sản làm mồi để câu ở từng nông trại.@Dùng phím hướng giữ cá trong vùng để bắt được cá.
+7=[Cách chơi] - Nhiệm vụ@The Farm 2 có rất nhiều nhiệm vụ đang chờ bạn. Giúp dân làng những yêu cầu "hơi quá đáng" (?) để nhận nhiều phần thưởng. Nhiệm vụ mang phong cách hài hước, vô lý.
+8=[Cách chơi] - Nhiệm vụ phụ@Khi trên đầu NPC có dấu chấm than, hãy bắt chuyện để nhận yêu cầu. Làm xong sẽ được thưởng. Có thể bỏ cuộc, nhưng NPC sẽ phật ý.
+9=[Cách chơi] - Mini game@Làm nhiệm vụ của từng làng sẽ mở khoá các mini game.
+10=[Cách chơi] - Hội thi@Mỗi làng có một hội thi ẩn. Gặp đúng NPC, đúng ngày, trước giờ quy định và đủ điều kiện rồi trò chuyện để tham gia.
+11=[Cách chơi] - Rương báu@Khi câu cá có tỉ lệ nhận được rương báu. Nhiều phần thưởng đang chờ, hãy tìm thử nhé.
+12=[Cách chơi] - Thiện cảm@Trò chuyện, làm nhiệm vụ và nhiệm vụ phụ để tăng thiện cảm với NPC. Phần thưởng nhiệm vụ phụ thay đổi theo thiện cảm, và bạn có thể chinh phục các NPC nữ để kết hôn.
+13=[Cách chơi] - Cánh hoa@Cho biết bạn đang ở giai đoạn chinh phục nào với NPC có thể theo đuổi. Gom đủ cánh hoa mới có cảnh tình cảm và kết hôn.
+14=[Cách chơi]@Nếu chơi khi đang chuyển vùng quốc tế (roaming), dữ liệu game có thể bị xoá, xin lưu ý.@@Liên hệ: 1588-7155

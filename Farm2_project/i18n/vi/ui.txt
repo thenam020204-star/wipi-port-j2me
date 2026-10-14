@@ -1,0 +1,199 @@
+# ui.txt translation: original<TAB>Vietnamese (matched by the original text, not the id)
+로이	Roy
+편지	Thư
+퀘스트 완료	Hoàn thành nhiệm vụ
+왔는가? 	Đến rồi à? Ta đang cần 
+오빵 왔어~~? 내가 	Anh tới rồi~? Em cần 
+마침 부를려고 했는데 잘 왔다. 	Đang định gọi thì cậu tới. Tôi cần 
+어~안녕? 부탁이 있는데.. 	Ơ~ chào? Nhờ chút nhé.. cho mình xin 
+(불끈불끈) 하하하 잘 왔어! 	(Gồng gồng) Hahaha đến đúng lúc! Cần 
+백만하나.. 백만스물하나..!왔나?	Một triệu lẻ một.. một triệu hai mốt..! Tới rồi à? Cần 
+헛차헛차! 엇! 안녕~! 내가 	Hự hự! Ơ! Chào~! Tớ cần 
+어! 왔냐? 잘 왔어! 	Ơ! Tới rồi à? Hay quá! Cần 
+왔구나! 마침 	Đến rồi à! Đúng lúc đang thiếu 
+/C0이(가) /C1	/C0 x /C1
+개/C0	 cái/C0
+마리/C0	 con/C0
+/C1우유/C0가 /C1	/C1Sữa/C0 x /C1
+/C1계란/C0이 /C1	/C1Trứng/C0 x /C1
+/C1양털/C0이 /C1	/C1Lông cừu/C0 x /C1
+가 필요한데 좀 가져다 주겠나?	, mang giúp ta được không?
+ 필요행~ 좀 가져다줘~!	 ~ mang cho em đi mà~!
+ 필요한데 좀 가져다 주게 친구~	, mang giúp nhé bạn~
+만 가져다 줄 수 있어?	 được không?
+가 필요하니 가지고 와바~	, mang tới đây nhé~
+가 필요하니 좀 가져다 주게~	, mang giúp ta nhé~
+가 필요한데 좀 가져다 줄래?	, mang giúp tớ được không?
+가 필요하니 좀 가져다줘~	, mang giúp nhé~
+가 부족해~ 좀 가지고 와바~	 ~ mang tới giúp đi~
+오~~ 수고했네! 내가 보답으로 	Ồ~ vất vả rồi! Để đáp lễ ta tặng cậu 
+오빵 짱짱 고마워!! 내가 	Anh đỉnh quá, cảm ơn nhiều!! Em tặng anh 
+어랏! 가져왔네~ 고마워 내가 	Ơ kìa! Mang tới rồi~ Cảm ơn, tớ tặng 
+고마워!! 내가 엄마 몰래 모은 	Cảm ơn!! Thứ tớ giấu mẹ để dành: 
+(불끈불끈) 하하하 고마워!! 내가 상으로 	(Gồng gồng) Hahaha cảm ơn!! Phần thưởng là 
+백만스물둘! 가져왔구나! 여기 	Một triệu hai hai! Mang tới rồi! Đây, 
+헛차! 엇! 가져왔네! 보답으로 	Hự! Ơ! Mang tới rồi! Đáp lễ đây: 
+어! 고마워!! 내가 보답으로 	Ơ! Cảm ơn!! Để đáp lễ tớ tặng 
+휴~ 늦지 않게 가져와서 다행이다! 내가 	Phù~ May mà mang tới kịp! Tớ tặng 
+씨앗/C0을 	 (hạt)/C0 
+ 씨앗 획득	 (hạt) - đã nhận
+> /C1꽃잎/C0을 	> /C1Cánh hoa/C0 
+> 꽃잎 획득	> Đã nhận cánh hoa
+팜/C0을 	 xu/C0 
+팜 획득	 xu - đã nhận
+주겠네~	nhé~
+줄께요~	nè~
+줄게~	nhé~
+줄게~ 정말 고마워~	tặng cậu~ cảm ơn nhiều lắm~
+주지~하하하!	đây~ hahaha!
+보답으로 가져가게~	cầm lấy mà dùng~
+준비했지~	ta chuẩn bị sẵn rồi~
+줄게~!	nhé~!
+금액확인	Xem tiền
+낚시하기	Câu cá
+개간하기	Khai hoang
+씨뿌리기	Gieo hạt
+치우기	Dọn dẹp
+수확하기	Thu hoạch
+물주기	Tưới nước
+경작하기	Xới đất
+우유짜기	Vắt sữa
+먹이주기	Cho ăn
+계란줍기	Nhặt trứng
+양털깍기	Xén lông
+안내판	Bảng tin
+이번엔 /C1	Lần này phải trả /C1
+팜/C0을 갚아야 하네..	 xu/C0 rồi..
+물뜨기	Múc nước
+잠자기	Đi ngủ
+두꺼비 획득	Nhận được Con cóc
+ 획득	 - đã nhận
+모여!	Tập hợp!
+놀아~	Đi chơi~
+히로인 꽃잎 5장 세트 획득!	Nhận bộ 5 cánh hoa nữ chính!
+씨앗을 가질 수 없습니다.	Không thể mang thêm hạt giống.
+ 씨앗 획득!	 (hạt) - đã nhận!
+> 꽃잎 획득!	> Đã nhận cánh hoa!
+팜 획득!	 xu - đã nhận!
+당기세요	Kéo đi!
+문이 잠겼습니다	Cửa đã khóa
+올려!	Giơ lên!
+내려!	Hạ xuống!
+올리지 마!	Đừng giơ!
+내리지 마!	Đừng hạ!
+올리고	Giơ lên
+내리고	Hạ xuống
+올리지 말고	Đừng giơ
+내리지 말고	Đừng hạ
+가만히 있고	Đứng yên
+저장하기	Lưu game
+불러오기	Tải game
+환경설정	Cài đặt
+게임방법	Hướng dẫn
+메인메뉴	Menu chính
+봄	Xuân
+여름	Hạ
+가을	Thu
+겨울	Đông
+냄새나는 미꾸라지	Chạch hôi
+뜨거운 빙어	Cá băng nóng
+깡마른 붕어	Cá diếc gầy
+정력 뱀장어	Lươn cường lực
+구렛나루 잉어	Cá chép râu
+작은 멸치	Cá cơm nhỏ
+구린 새우	Tôm thối
+살찐 가오리	Cá đuối béo
+반짝이는 참치	Cá ngừ lấp lánh
+식충 상어	Cá mập háu ăn
+면도한 메기	Cá trê cạo râu
+역한 쏘가리	Cá rô hôi
+맛간 망둥어	Cá bống ôi
+사나운 아귀	Cá vây chân dữ
+실성한 가물치	Cá lóc điên
+행운 작물 뽑기	Bốc cây may mắn
+장난감 지도	Bản đồ đồ chơi
+잭의 보물지도	Bản đồ kho báu của Jack
+진주 목걸이	Dây chuyền ngọc trai
+진짜 보물지도	Bản đồ kho báu thật
+우유	Sữa
+계란	Trứng
+양털	Lông cừu
+Press Any Key	Nhấn phím bất kỳ
+저장된 데이터가 없습니다.	Không có dữ liệu đã lưu.
+저장된 점수 파일에 문제가 있습니다.	Tệp điểm đã lưu bị lỗi.
+기존 최고 점수	Điểm cao nhất cũ
+점	 điểm
+현재 점수	Điểm hiện tại
+기록 갱신!	Kỷ lục mới!
+아무키나 누르세요.	Nhấn phím bất kỳ.
+낚시하는 개발자	Nhà phát triển đi câu
+만팜	0.000 xu
+,000팜	.000 xu
+자~돌려보라구!	Nào~ quay thử xem!
+니 실력을 볼까?	Để xem tay nghề cậu nào?
+자~하나가 멈췄고~	Nào~ một cái đã dừng~
+오~아직까지는 진행좋아~	Ồ~ tới giờ vẫn ổn~
+이미 김샜군~	Hết hy vọng rồi~
+헉!! 대박이다!!	Hả!! Trúng lớn rồi!!
+캬~하나가 아쉽군~	Chà~ tiếc một cái~
+골고루 뽑기도 어렵지.	Bốc đều cũng khó ghê.
+3000팜 획득!	Nhận 3000 xu!
+자~ 어디한번 잘 해 보라고~	Nào~ cố gắng xem nào~
+틀렸잖아?	Sai rồi kìa?
+오~ 잘하는데?	Ồ~ giỏi đấy?
+1200팜 획득	Nhận 1200 xu
+와(과) 	 và 
+이군~	 à~
+자~ 이제 시작한다~	Nào~ bắt đầu thôi~
+팻을 선택하세요.	Chọn thú cưng.
+자~경기가 시작합니다!!	Nào~ cuộc đua bắt đầu!!
+출발!	Xuất phát!
+선두는 	Dẫn đầu là 
+골인~~!!!!!자~~1등은?	Về đích~~!!!! Hạng 1 là?
+입니다!	!
+축하합니다~!~!	Chúc mừng~!~!
+아쉽네요~!	Tiếc quá~!
+2000팜 획득	Nhận 2000 xu
+버릴 수 없습니다	Không thể bỏ
+돈이 부족합니다.	Không đủ tiền.
+바구니가 가득 찼습니다.	Giỏ đã đầy.
+작물을 선택하세요	Hãy chọn nông sản
+이미 보유중 입니다.	Đã có rồi.
+보유 팻이 가득 찼습니다	Đã đầy thú cưng
+같은 팻이 있습니다	Đã có thú cưng này
+씨앗이 가득 찼습니다	Hạt giống đã đầy
+팜	xu
+평야 지역	Đồng bằng
+해안 지역	Ven biển
+산간 지역	Vùng núi
+전 지역	Mọi vùng
+년 	 năm 
+일	 ngày
+시 	h
+분	p
+-비어있음-	-Trống-
+-새로하기-	-Chơi mới-
+씨앗이 가득찼습니다.	Hạt giống đã đầy.
+저장 할 수 없습니다	Không thể lưu
+저장 실패	Lưu thất bại
+번 슬롯 저장 완료	 - đã lưu
+저장된 파일이 없습니다	Không có tệp lưu
+불러오기 실패	Tải thất bại
+잘못된 저장파일 입니다.	Tệp lưu không hợp lệ.
+불러오기 완료	Đã tải xong
+젖소를 구매하였습니다.	Đã mua bò sữa.
+닭을 구매하였습니다.	Đã mua gà.
+양을 구매하였습니다.	Đã mua cừu.
+고마워~~	Cảm ơn~~
+그래~ 그럴 줄 알았지~	Ừ~ biết ngay mà~
+FP 하락	FP giảm
+개	 cái
+가방이 가득찼습니다.	Túi đã đầy.
+빈센트가 	Vincent đã lấy 
+팜을 가져감.	 xu.
+마을주민들	Dân làng
+결혼식 하객들	Khách dự cưới
+브로콜리왕의 편지	Thư của Vua Bông Cải
+ㅈㅅ;	Xin lỗi;
+씨앗이 가득차서 보상이 없습니다.	Hạt giống đầy nên không nhận được thưởng.
+팻이 가득차 보상이 없습니다	Thú cưng đầy nên không nhận được thưởng

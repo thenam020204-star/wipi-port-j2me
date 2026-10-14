@@ -1,0 +1,14 @@
+anim.txt: 17 translated
+crop.txt: 57 translated
+explan.txt: 15 translated
+item.txt: 15 translated
+map_name.txt: 31 translated
+npc_name.txt: 62 translated
+pet_name.txt: 24 translated
+petskill.txt: 33 translated
+popup.txt: 132 translated
+popup1.txt: 162 translated
+qexplan.txt: 170 translated
+quest.txt: 49 translated
+skill.txt: 24 translated
+ui.txt: 198 translated
