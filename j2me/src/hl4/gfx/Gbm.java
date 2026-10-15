@@ -18,6 +18,7 @@ public final class Gbm {
     public short[] palBase;
     public short[] pal;
     public final byte[] data;
+    public int palFlag;          // the original's +0x1c byte: 'palette changed' (1 after DM_SetChagePalBlendEx)
     public final int pixOff;
 
     public Gbm(byte[] file, int off, int size) {

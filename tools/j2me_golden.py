@@ -35,6 +35,279 @@ def gen_des(res, out):
     print('des.txt', len(lines), 'files')
 
 
+def fnv_ints(v):
+    return fnv_bytes(struct.pack('<%di' % len(v), *v))
+
+
+def _bl(b):
+    return [len(b)] + list(b)
+
+
+def dump_map(b):
+    import mapdata
+    d = mapdata.parse(b)
+    v = [len(d['ab'])]
+    for a, c in d['ab']:
+        v += [a, c]
+    v += _bl(d['strs'][0]) + _bl(d['strs'][1]) + [d['unk0'], d['W'], d['H']]
+    v += _bl(d['objidx']) + _bl(d['spr']) + list(d['layerA']) + list(d['layerB'])
+    for lst in d['objs']:
+        v.append(len(lst))
+        for r in lst:
+            v += list(r)
+    v += _bl(d['summon']) + [len(d['mons'])]
+    for r in d['mons']:
+        v += list(r)
+    v.append(d['end'])
+    sp = mapdata.monster_spawns(b, d)
+    v.append(len(sp))
+    for r in sp:
+        v += list(r)
+    return v
+
+
+def dump_exd(b):
+    import exd
+    m = exd.parse(b)
+    v = list(m['hdr']) + list(m['idx']) + [m['n'], m['end']]
+    for ent in m['slots']:
+        if ent is None:
+            v.append(-1)
+            continue
+        v.append(len(ent))
+        for eid, nB, cells in ent:
+            v += [eid, nB, len(cells)]
+            for c in cells:
+                v.append(c[1])
+                v += list(struct.unpack_from('<16i', c, 4))
+    return v
+
+
+def dump_ai(b):
+    import ai_data
+    m = ai_data.parse(b)
+    v = [m['kind']]
+    for k in ('trig', 'act'):
+        t = m[k]
+        v += [t['n']] + t['cnt'] + t['size'] + t['pos'] + _bl(t['script'])
+    v.append(len(m['strs']))
+    for x in m['strs']:
+        v += _bl(x)
+    v.append(m['end'])
+    return v
+
+
+def dump_scn(b):
+    import scn
+    m = scn.parse(b)
+    h = m['hdr']
+    v = list(h['w']) + [h['b3'], h['b4'], h['b5']] + list(h['mon']) + [h['bgm'], h['tod'], h['fgi']]
+    for k in ('events', 'second', 'strings'):
+        v.append(len(m[k]))
+        for x in m[k]:
+            v += _bl(x)
+    v.append(m['end'])
+    return v
+
+
+def dump_mrg(b):
+    import mrgtext
+    out, end = mrgtext.parse(b)
+    v = [len(out)]
+    for x in out:
+        v += _bl(x)
+    return v
+
+
+def dump_linked(b):
+    import linkedtext
+    size, offs, out = linkedtext.parse(b)
+    v = [size, len(offs)] + list(offs)
+    for x in out:
+        v += _bl(x)
+    return v
+
+
+def dump_pal(b):
+    import pal
+    pairs = pal.parse(b)
+    v = [len(pairs)]
+    for o, n in pairs:
+        v += [struct.unpack('<i', struct.pack('<I', o))[0], struct.unpack('<i', struct.pack('<I', n))[0]]
+    return v
+
+
+def gen_parse(res, out):
+    import hl4des
+    import linkedtext
+    import mrgtext
+    kinds = [('map', 'MAP/M/', dump_map, False), ('exd', 'H4/EXD/', dump_exd, False), ('ai', 'E/AI', dump_ai, False),
+             ('scn', 'MAP/SC/', dump_scn, True), ('pal', 'H4/PAL/', dump_pal, False)]
+    lines = []
+    for kind, pre, fn, des in kinds:
+        for root, _, fs in sorted(os.walk(res)):
+            for f in sorted(fs):
+                rel = os.path.relpath(os.path.join(root, f), res).replace(os.sep, '/')
+                if not rel.startswith(pre) or (kind == 'ai' and not rel.startswith('E/AI')):
+                    continue
+                b = open(os.path.join(res, rel), 'rb').read()
+                if des:
+                    b = hl4des.decrypt(b)
+                lines.append('%s %s %08x' % (kind, rel, fnv_ints(fn(b))))
+    for root, _, fs in sorted(os.walk(res)):
+        for f in sorted(fs):
+            rel = os.path.relpath(os.path.join(root, f), res).replace(os.sep, '/')
+            b = open(os.path.join(res, rel), 'rb').read()
+            if mrgtext.is_mrgtext(b):
+                lines.append('mrg %s %08x' % (rel, fnv_ints(dump_mrg(b))))
+            elif linkedtext.is_linkedtext(b):
+                lines.append('linked %s %08x' % (rel, fnv_ints(dump_linked(b))))
+    open(os.path.join(out, 'parse.txt'), 'w').write('\n'.join(lines) + '\n')
+    print('parse.txt', len(lines), 'files')
+
+
+def _gen_cif_small(rng, mode):
+    """tools/sprite.py _gen_cif with image indices < 100 (the Java port draws from bounded image arrays)."""
+    out = bytearray([0, 0])
+    nan = rng.randint(1, 3); out[1] = nan
+    shortsz = 5 if mode == 2 else 4
+    for _ in range(nan):
+        nd = rng.choice([1, 2, 3, 4, 5]); out.append(nd)
+        nfr = rng.randint(1, 3)
+        for _ in range(nd):
+            out.append(nfr)
+            for _ in range(nfr):
+                npart = rng.randint(1, 6); out.append(npart)
+                for _ in range(npart):
+                    if rng.random() < 0.05:
+                        out += bytes([0x7f]) + bytes(rng.randrange(256) for _ in range(shortsz - 1)); continue
+                    islong = rng.random() < 0.5
+                    b0 = (0x80 if islong else 0) | (rng.randint(0, 3) << 5) | rng.choice([0, 1, 2, 3, 4, 5, 6, 7, 8, 0, 1, 2, 5, 7, 31])
+                    part = bytearray([b0, rng.randrange(100) if rng.random() < 0.3 else rng.randint(0, 5)])
+                    part += bytes(rng.randrange(256) for _ in range(shortsz - 2))
+                    if islong:
+                        part += bytes([rng.choice([10, 10, 10, 5, 20, 0, rng.randrange(256)]), rng.choice([10, 10, 10, 5, 20, rng.randrange(256)]),
+                                       rng.choice([0, 0, 0x2d, 0x5a, 0x87, rng.randrange(256)]), rng.choice([0xff, 0xff, rng.randrange(256)]),
+                                       rng.choice([rng.randrange(256), rng.randrange(4), (rng.randrange(1, 64) << 2) | rng.randrange(4)])])
+                    out += part
+    return bytes(out)
+
+
+POOL = 12
+SET_BASE = 0x10000
+
+
+def pool_attr(k, idx):
+    return 1 + (k * 7 + idx * 13) % 60, 1 + (k * 11 + idx * 5) % 60, 1 if (k + idx) % 3 == 0 else 0
+
+
+def gen_sprite(res, out):
+    import random
+    import cif as cifmod
+    import sprite
+    EV = {'DM_RestorePalette': 1, 'DM_SetChagePalBlendEx': 2, 'DM_DrawImg': 3, 'DM_DrawImgEx': 4, 'DM_DrawImgRotate': 5,
+          'DM_DrawImgRotateEx': 6, 'MenuOptions_particle': 7}
+
+    def ident(ptr):
+        k = round(ptr / SET_BASE) - 1
+        return k * 256 + ((ptr - (k + 1) * SET_BASE) >> 5)
+
+    def ser(events, fno):
+        v = []
+        for e in events:
+            c = EV[e[0]]
+            if c == 1:
+                v += [1, ident(e[1])]
+            elif c == 2:
+                v += [2, ident(e[1])] + list(e[2:])
+            elif c == 7:
+                v += [7]
+            else:
+                v += [c] + list(e[2:6]) + [ident(e[6])] + list(e[7:])
+        return v + [fno]
+
+    def sid(ptr):
+        return -1 if ptr == 0 else round(ptr / SET_BASE) - 1
+
+    lines = []
+    files = []
+    rng = random.Random(4242)
+    # (a) real CIFs, (b) synthetic CIFs written next to the goldens
+    synd = os.path.join(out, 'syncif')
+    os.makedirs(synd, exist_ok=True)
+    for root, _, fs in sorted(os.walk(res)):
+        for f in sorted(fs):
+            if f.endswith('_CIF'):
+                p = os.path.join(root, f)
+                files.append((os.path.relpath(p, res).replace(os.sep, '/'), open(p, 'rb').read(), None))
+    for i in range(60):
+        mode = rng.choice([0x11, 0x11, 2])
+        data = _gen_cif_small(rng, mode)
+        open(os.path.join(synd, 'S%03d' % i), 'wb').write(data)
+        files.append(('@syn/S%03d' % i, data, mode))
+    ncalls = 0
+    for rel, data, fixed in files:
+        mode = fixed
+        if mode is None:
+            for cand in (0x11, 2):
+                try:
+                    if cifmod.parse(data, cand)['end'] == len(data):
+                        mode = cand
+                        break
+                except Exception:
+                    pass
+        m = cifmod.parse(data, mode)
+        assert m['end'] == len(data), rel
+        variants = 3 if fixed is None else 2
+        for variant in range(variants):
+            env = sprite.Env()
+            env.data, env.mode, env.anims, env.n_anim = data, mode, m['anims'], len(m['anims'])
+            for k in range(POOL):
+                for idx in range(0, 128):
+                    env.img[(k + 1) * SET_BASE + idx * 32] = pool_attr(k, idx)
+            nset = rng.randint(1, 32)
+            env.n_sets = nset
+            for i in range(32):
+                if i < nset and rng.random() < 0.8:
+                    env.sets[i] = (rng.randrange(POOL) + 1) * SET_BASE
+                    env.orig[i] = env.sets[i] if rng.random() < 0.8 else (rng.randrange(POOL) + 1) * SET_BASE
+                elif i < nset and rng.random() < 0.5:
+                    env.orig[i] = (rng.randrange(POOL) + 1) * SET_BASE
+            env.ctrl_pal = (rng.randrange(-300, 300), rng.randrange(-300, 300), rng.randrange(-300, 300), rng.randrange(256), rng.randrange(256))
+            env.f68, env.f6d, env.f6e, env.f6f = rng.choice([0, 0, 1, 1, 2]), rng.choice([0, 1]), rng.choice([0, 0, 1]), rng.randrange(256)
+            env.lcd = [rng.randrange(256) for _ in range(12)]
+            env.lcd[9] = rng.choice([0, 1, 1, 2])
+            if variant == 0 and fixed is None:
+                env.lcd[9] = 0; env.f68 = env.f6e = 0
+            env.extra_effect = rng.choice([0, 0, (rng.randrange(POOL) + 1) * SET_BASE])
+            env.particle = rng.choice([0, 1])
+            lines.append('ENV %s %d %d %s %s %s %d %d %d %d %s %d %d' % (
+                rel, mode, nset, ' '.join(str(sid(v)) for v in env.sets), ' '.join(str(sid(v)) for v in env.orig),
+                ' '.join(str(v) for v in env.ctrl_pal), env.f68, env.f6d, env.f6e, env.f6f,
+                ' '.join(str(v) for v in env.lcd), sid(env.extra_effect), env.particle))
+            calls = []
+            if fixed is None:
+                for a, dirs in enumerate(env.anims):
+                    for d in range(len(dirs) + 1):
+                        for f in range(len(dirs[min(d, len(dirs) - 1)])):
+                            p6 = d if d < len(dirs) else 3
+                            calls.append((a, 2, 3, p6, f, rng.randint(0, 240), rng.randint(0, 320), rng.choice([0, 1]),
+                                          0xffffffff, rng.choice([0xffffffff, 0xffffffff, 2])))
+            else:
+                for _ in range(40):
+                    calls.append(sprite._rand_call(rng, env))
+                    calls[-1] = (rng.randrange(env.n_anim),) + calls[-1][1:]
+            for c in calls:
+                anim, p4, p5, p6, fno, X, Y, p10, p11, p12 = c
+                ev, nf = sprite.draw_npc(env, 0x1234, anim, p4, p5, p6, fno, X, Y, p10, p11, p12)
+                s32 = lambda v: v - (1 << 32) if v & 0x80000000 else v
+                lines.append('CALL %d %d %d %d %d %d %d %d %d %d %08x' % (anim, p4, p5, p6, fno, X, Y, p10, s32(p11), s32(p12),
+                                                                           fnv_ints(ser(ev, nf))))
+                ncalls += 1
+    open(os.path.join(out, 'sprite.txt'), 'w').write('\n'.join(lines) + '\n')
+    print('sprite.txt', ncalls, 'calls')
+
+
 def gen_blit(res, out, every=7):
     """Cases of the DM_DrawImg self-test (tools/dm_blit.py) sampled every `every`-th case; expected = CRC-32 of the 240x400 frame (BG 0x1234)."""
     import zlib
@@ -96,5 +369,9 @@ if __name__ == '__main__':
     os.makedirs(out, exist_ok=True)
     if kind == 'des':
         gen_des(res, out)
+    elif kind == 'sprite':
+        gen_sprite(res, out)
+    elif kind == 'parse':
+        gen_parse(res, out)
     elif kind == 'blit':
         gen_blit(res, out, int(sys.argv[4]) if len(sys.argv) > 4 else 7)

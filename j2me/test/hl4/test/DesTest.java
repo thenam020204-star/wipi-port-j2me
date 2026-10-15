@@ -9,6 +9,17 @@ import java.io.FileReader;
 
 /** args: <res dir> <golden file>.  golden lines: "<relative path> <fnv1a32 of the decrypted bytes hex>" */
 public class DesTest {
+    public static byte[] readFileBytes(File f) throws Exception {
+        byte[] raw = new byte[(int) f.length()];
+        FileInputStream in = new FileInputStream(f);
+        int got = 0;
+        while (got < raw.length) {
+            got += in.read(raw, got, raw.length - got);
+        }
+        in.close();
+        return raw;
+    }
+
     public static void main(String[] a) throws Exception {
         String res = a[0];
         BufferedReader r = new BufferedReader(new FileReader(a[1]));
