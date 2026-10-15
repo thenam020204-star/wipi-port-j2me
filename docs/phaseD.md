@@ -47,7 +47,7 @@ Bản hiện tại: 20 lớp, 0 reject, 1 warn (cấp phát trong `paint` của 
 | `Blit` (`DM_DrawImg`) | 253.726 ca (1/7 của 1.776.085 ca tự kiểm; ảnh tổng hợp + thật; CRC-32 khung 240×400) | 0 lệch |
 | `MapData`, `Exd`, `AiData`, `Scn`, `Pal`, `Text` | 816 file thật (97 map, 117 EXD, 43 AI, 345 scn, 196 PAL, 6 MrgText, 12 LinkedText); băm toàn bộ cấu trúc | 0 lệch |
 | `Sprite` (`SPR_drawSpriteNPC`) | 59.907 lời gọi: 148 CIF thật + 60 CIF tổng hợp, trạng thái ngẫu nhiên; băm chuỗi lời gọi DM_* + số khung mới | 0 lệch |
-| `Fx` | bảng trộn, HSB (≈50 nghìn mẫu), 6000 ca palette, 3900 ca tint theo giờ, 3999 ca `DrawImgEx`, 4000 ca vẽ co giãn (CRC-32 khung) | 0 lệch |
+| `Fx` | bảng trộn; HSB (≈4.100 + 23.000 lưới và 40.000 mẫu LCG); 6000 ca `setPalBlendEx`; 1500 `loadBlend` + 1219 `mergeBlend` (tint theo giờ); 3895 ca `DrawImgEx` và 4000 ca vẽ co giãn (CRC-32 khung 240×400) | 0 lệch |
 | `HnfFont` | 2350 âm tiết + 82 ký tự Latin, băm mọi dòng glyph | 0 lệch |
 Các bài kiểm cũng chạy lại trên lớp **đã preverify** (SpriteTest, FxTest) — cùng kết quả. Golden được cache ở `work/golden/` (xoá để sinh lại).
 
