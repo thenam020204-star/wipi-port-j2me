@@ -64,5 +64,13 @@ Chú thích đọc kết quả:
   `NpcUi_probabilityLoad`, `LoadPartQuestData`, `Guardian_loadBasicData`, `GMenu_randomBoxData`, `Item_RepaySet`, `EVENT`/`NAME_DAT`.
   Khung F1 đã CONFIRMED; việc còn lại là chuyển từng loader sang Java rồi kiểm bằng **golden dump** (cấu trúc sau khi nạp: Java vs. loader gốc),
   vì các loader này cấp phát động (`MC_knlCalloc`) hoặc dựa vào trạng thái game (`MP_getHero`).
-- Công thức `FR/*` (bytecode): đọc bởi `FR_CalcItem` @0x7... và nhóm `FR_*`; sẽ chuyển cùng bộ ước lượng + kiểm vi sai với `FR_CalcItem` gốc.
-- Container cảnh `_scn` (`SCENE_Change`) và VM `IT_*`: Phase E.
+- Công thức `FR/*` (bytecode): đọc bởi nhóm `FR_*` (`FR_Load` @0x70100, `FR_GetNumberInStackItem` @0x701ec, …); sẽ chuyển cùng bộ ước lượng + kiểm vi sai với `FR_CalcItem` gốc.
+- VM `IT_*`/`EVT_*` diễn giải thân script: Phase E.
+
+## 6. Container cảnh `MAP/SC/{e,n}####_scn` — CONFIRMED, kiểm vi sai 345/345 (`tools/scn.py`)
+DES. Đường dẫn: `/MAP/SC/e%04d_scn` (@0xd7798) khi `(u8)(class+1) < 3`, ngược lại `/MAP/SC/n%04d_scn` (@0xd77b0) (183 file `e`, 162 file `n`; phép so dấu byte đọc từ decompiler — INFERRED).
+Header 12 byte (`SCENE_Change` @0x6f0bc): `[0..2]` = độ rộng trường độ dài (1 = u8, 2 = u16le) của ba phần sau; `[3]`→`_map+0x44`, `[4]`→`_map[0x288]`, `[5]`→`_map[0x79]`,
+`[6],[7],[8]`→ ba short `_map+0x48/0x4a/0x4c` (loại quái dùng ở `Map_SetMapData`), `[9]` = BGM (s8, −1 = không đổi), `[10]` = lớp thời gian trong ngày (`_lcdEff[10]`, `_map[0x68]`), `[11]` = FGI (s8).
+Sau đó 3 phần `{ u8 N ; N × độ dài ; N thân }`: kịch bản sự kiện (`interpreter+0x00`), bảng kịch bản thứ hai (`+0x14`, ý nghĩa UNKNOWN: Phase E), bảng chuỗi (`+0x30`).
+Byte đầu của phần 1 (`file[12]`) = số sự kiện (`_event[8]`). Thân script là luồng byte của VM `IT_*` — giữ nguyên byte.
+Kiểm: `tools/scn.py selftest` gọi `IT_Initialize` gốc và so bảng offset, thân và chuỗi của `interpreter`: 345 file, 0 lệch (`docs/phaseC_scn_selftest.txt`); 293 file còn ≤ 7 byte `00` đệm DES cuối file.

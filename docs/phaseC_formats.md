@@ -18,6 +18,10 @@ với chính hàm gốc chạy trong emulator đối chứng (`tools/and_emu.py`
 | Palette hoán đổi `H4/PAL` | `tools/pal.py` | `selftest`: 196 file × ảnh thật và tổng hợp (1.568 ca) so với `DM_ChangePalette` | **0 lệch** (`docs/phaseC_pal.md`) |
 | Map `MAP/M` (+ TILE, OBJ) | `tools/mapdata.py` | `selftest`: 97 map so với `Map_SetMapData` gốc (stub hàm tạo đối tượng) | **0 lệch** (`docs/phaseC_map.md`) |
 | Thuộc tính sprite `H4/EXD` | `tools/exd.py` | `selftest`: 117 file, 1.321 cell so với `SPR_loadAttackProperty` | **0 lệch** (`docs/phaseC_exd.md`) |
+| Khung bảng F1 + bố cục loader đo được (E, HDAT, ITM, NPC) | `tools/framing.py`, `tools/tables.py` | 70 file đúng khung F1; bố cục 20 loader đo từ loader gốc | CONFIRMED (`docs/phaseC_tables.md`) |
+| Script AI `E/AI###` | `tools/ai_data.py` | `selftest`: 43 file so với `EnemyAIParsing_LoadData` | **0 lệch** (`docs/phaseC_tables.md` §3) |
+| Container cảnh `MAP/SC/*_scn` | `tools/scn.py` | `selftest`: 345 file so với `IT_Initialize` | **0 lệch** (`docs/phaseC_scn_selftest.txt`) |
+| Âm thanh SMAF `.mmf` → MIDI/WAV | `tools/smaf.py` | 42 file MMF; ADPCM == ffmpeg 22/22; MIDI == bộ chuyển tham chiếu | xem `docs/phaseC_audio.md` |
 | Phân loại DES/thô | `tools/and_resmap.py` → `docs/resmap_and2011.tsv` | theo nơi gọi `UM_LoadResDes` / `UM_LoadRes` | CONFIRMED |
 
 ## 1. Nạp tài nguyên (CONFIRMED)
