@@ -1,0 +1,65 @@
+function	loader	path_strings
+Boss_dataLoad_d	UM_LoadResDes	/E/_BSDAT_%d
+Boss_dataLoad_g	UM_LoadRes	/E/_BGDAT
+DM_ChangeGbmPalette	UM_LoadRes	
+DM_LoadResGbm565	UM_LoadRes	
+DM_LoadResGbm666	UM_LoadRes	
+DM_LoadResGbmBlending	UM_LoadRes	
+EnemyAIParsing_LoadData	UM_LoadRes	/E/AI%03d
+Event_LoadTextData	UM_LoadRes	NPC/NAME_DAT
+FR_Load	UM_LoadResDes	/FR/_FR_BA | /FR/_FR_PL | /FR/_FR_EN | /FR/_FR_SU | /FR/_FR_SK
+GMenu_SystemKey	UM_LoadRes	./Hero4OptSave | /tdf/_tdf_HELP
+GMenu_randomBoxData	UM_LoadResDes	/ITM/DAT/_ITM_CASH_RANOMBOX
+GameMenuFrame_initGamsMenuState	UM_LoadRes	/GMenu/_NPCUI_TXT
+Guardian_loadBasicData	UM_LoadRes	/ITM/BASIC_SM_DAT
+HERO_loadArmsSkillInfo	UM_LoadResDes	/HDAT/_H_SA
+HERO_loadParticleInfo	UM_LoadRes	/HDAT/_H_PDAT
+HERO_loadSkillInfo	UM_LoadResDes	/HDAT/_H_S%03d
+HERO_load_basic_stat	UM_LoadResDes	/HDAT/_H_BH
+HF_loadEng	UM_LoadRes	/FT/_FT_ENGL5X11
+HF_loadHangle	UM_LoadRes	/FT/_FT_KOR10X11
+HF_loadHangleCodeTable	UM_LoadRes	/FT/_FT_HANCODE
+HF_loadHangleIndoTable	UM_LoadRes	/FT/_FT_HANINFO
+HF_loadHangleType844	UM_LoadRes	/FT/_FT_TYPE844
+Item_RepaySet	UM_LoadResDes	
+Item_dataPreLoad	UM_LoadResDes	/ITM/DAT/_ITM_OPTION
+Item_getID	UM_LoadResDes	/ITM/DAT/_ITM_%02d_DAT
+Item_getSizeID	UM_LoadResDes	/ITM/DAT/_ITM_%02d_DAT
+Item_loadSetOptData	UM_LoadResDes	/ITM/DAT/_ITM_SET_OPTION
+Item_skinDataLoad_Ui	UM_LoadResDes	/ITM/DAT/_ITM_0_SD
+LoadPartQuestData	UM_LoadResDes	/NPC/_QUEST_%d_DAT
+LogoFrame_UseInfoTxt	UM_LoadRes	/tdf/_tdf_UseInfo_TXT
+MD5_LoadData	UM_LoadRes	
+MONSTER_dataLoad_d	UM_LoadResDes	/E/_ESDAT_%d
+MONSTER_dataLoad_g	UM_LoadRes	/E/_EGDAT
+MainGameFrame_initGameOver	UM_LoadRes	/GMenu/_GMENU_TXT
+MainGameFrame_initQuickSave	UM_LoadRes	/GMenu/_GMENU_TXT
+MainMenuFrame_Initialize	UM_LoadRes	/tdf/_tdf_MENU_TXT | /tdf/_tdf_HELP
+Map_LoadMapData	UM_LoadRes	
+MrgText_load	UM_LoadRes	
+NPC_dataLoad	UM_LoadRes	/NPC/_NPCG_DAT
+NpcUiArmsShop_dataLoad	UM_LoadResDes	/NPC/NPCUI_ARMSSHOP_DAT_%d
+NpcUiCombine_dataLoad	UM_LoadResDes	/NPC/_NPCUI_COMBINE_DAT_%d
+NpcUiGuardianShop_dataLoad	UM_LoadResDes	
+NpcUiShop_dataLoad	UM_LoadResDes	/NPC/_NPCUI_SHOP_DAT_%d
+NpcUi_Initialize	UM_LoadRes	/GMenu/_NPCUI_TXT | /GMenu/_GMENU_SUB_TXT | /GMenu/_GMENU_TXT | /ITM/_ITM_ICN
+NpcUi_probabilityLoad	UM_LoadResDes	/NPC/PROBABILITY_DAT
+SCENE_Change	UM_LoadResDes	/MAP/SC/e%04d_scn | /MAP/SC/n%04d_scn
+SM_CreateClip	UM_LoadRes	audio/OGG | -file res/%s
+SM_PlayResEx	SM_CreateClip	/SND/EFF_%02d.ogg
+SM_SoundPlay_Base	SM_CreateClip	
+SPR_load	UM_LoadRes	
+SPR_loadAttackProperty	UM_LoadRes	
+SUMMON_loadSummonData_D	UM_LoadResDes	/HDAT/_H_BS
+SUMMON_loadSummonData_G	UM_LoadRes	/HDAT/_H_SG
+SUMMON_loadSummonData_initD	UM_LoadResDes	/HDAT/_H_BS
+SUMMON_loadSummonSkillInfo	UM_LoadResDes	/HDAT/_H_SS
+Touch_Initialize	UM_LoadRes	TOUCH/CIMG/NS
+UM_load	UM_LoadRes	%s%s%s%d
+changePalette	UM_LoadRes	/H4/PAL/_H_%03d_PAL
+loadGMenuImage	UM_LoadRes	/GMenu/_GMENU_ONLY_BM | /GMenu/_GMENU_TXT | /GMenu/_GMENU_SUB_TXT
+loadGameCommonImage	UM_LoadRes	/NPC/_EVENT_POP_TXT | /H4/PAL/_H_%03d_PAL | /CM/_CM_NUM | /CM/_CM_INGAMEUI | /CM/_CM_SCRIPT | /ITM/_ITM_ICN
+loadParticleSet	UM_LoadRes	
+loadSkillData	UM_LoadResDes	/HDAT/_H_S%03d
+openGbmMerger	UM_LoadRes	
+setPalImages	UM_LoadRes	

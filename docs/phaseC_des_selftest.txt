@@ -1,0 +1,3 @@
+tables: {'MAT_IP': True, 'MAT_IP_1': True, 'MAT_EXP': True, 'MAT_PERMU': True, 'MAT_PC_1': True, 'MAT_PC_2': True, 'MAT_SBOX(patched)': True, 'MAT_SBOX diffs vs FIPS': [(58, 2)], 'SHIFTS': True, 'key': True}
+key schedule == original KEY4REAL: True
+files checked 408 mismatches 0
