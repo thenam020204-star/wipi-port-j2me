@@ -123,14 +123,20 @@ Chưa làm / UNKNOWN (chi tiết `docs/phaseC_tables.md` §5): bố cục từng
 ý nghĩa tên của các trường (offset cấu trúc chưa gán tên); `DM_Draw*RGB`/mosaic/Lenz; vẽ ô bản đồ (INFERRED, kiểm khi dựng bộ vẽ map); `ITM/_ITM_EMPTY`, `DAT/_DAT_DES` (không có nơi gọi).
 Quyết định cho Phase F: âm thanh — MIDI (từ MMF, 1 tick = 1 ms) hay WAV (từ OGG của bản 2011 / ADPCM của MMF) tuỳ giới hạn thiết bị; mặc định đề xuất: MIDI cho BGM + WAV 8 kHz cho hiệu ứng.
 
+## Phase D — tiến độ (dự án Java ME)
+Chi tiết: `docs/phaseD.md`, kết quả kiểm: `docs/phaseD_selftest.txt`. Dự án `j2me/` (ECJ `-1.3 -target 1.1` + stub CLDC 1.1/MIDP 2.0 + preverify ProGuard), bộ quét `tools/j2me_scan.py` (reject API ngoài profile, float, mảng lớn).
+Đã chuyển sang Java và kiểm bằng golden vector sinh từ mô hình Python đã khớp hàm gốc: DES (409 file), `DM_DrawImg` (253.726 ca), parser map/EXD/AI/scn/PAL/text (816 file),
+`SPR_drawSpriteNPC` (59.907 lời gọi), `DM_DrawImgEx`/co giãn/palette/HSB/tint (≈17 nghìn dòng golden), glyph HNF (2432 ký tự) — **0 lệch**, cả trên lớp đã preverify.
+MIDlet khung chạy được trong MicroEmulator 2.0.4 (240×320, JAR+JAD, ảnh `TITLE_BM` từ JAR). Chưa chạy KVM/thiết bị thật.
+
 ## Trạng thái (Definition of Done)
 | Hạng mục | Trạng thái | Bằng chứng |
 |---|---|---|
 | Đã phân tích | Phase A xong; Phase B: symbol, call graph (sống/chết), màn hình, loop, input/phím, frame, RNG, audio, save (chuỗi gọi + container), xác thực, bảng chuyển frame xong; còn pipeline vẽ. Phase C: DES, GBM, font, text, CIF, blit, sprite, fx, PAL, map, EXD, MMF, AI, _scn đã kiểm vi sai; bảng dữ liệu đã có khung + bố cục đo (phần còn lại: `docs/phaseC_tables.md` §5) | `docs/manifest_*.tsv`, `docs/binlayout_output.txt`, `docs/phaseB_*.md`, `docs/*_and2011.tsv` |
-| Đã triển khai | chưa | — |
-| Đã build | chưa | — |
-| Chạy emulator | chưa | — |
-| Đối chiếu bản gốc | chưa | — |
+| Đã triển khai | một phần: lõi dữ liệu + đồ hoạ (Phase D); logic game chưa | `j2me/src`, `docs/phaseD.md` |
+| Đã build | JAR/JAD preverify (lõi + khung demo), quét 0 reject | `tools/j2me_build.py`, `work/build/hl4.sha256` (cục bộ) |
+| Chạy emulator | MicroEmulator 2.0.4: khung demo chạy; golden của từng module chạy trên JVM máy tính | `docs/phaseD_selftest.txt` |
+| Đối chiếu bản gốc | từng module Java == mô hình Python == hàm gốc ARM (differential Phase C + golden Phase D); chưa có golden trace toàn game | `docs/phaseC_*`, `docs/phaseD_selftest.txt` |
 | Chạy thiết bị thật | chưa xác minh | — |
 
 ## Việc tiếp theo
@@ -138,5 +144,6 @@ Quyết định cho Phase F: âm thanh — MIDI (từ MMF, 1 tick = 1 ms) hay WA
    đối chiếu `kickass` mẫu với thư viện MIDAS của KTF/LGT 2010.
 2. Emulator đối chứng: ARM interpreter + HLE cho 105 import có tên (tham khảo runtime LGT của project cũ). Ghi golden trace cho Phase F,
    gồm đo nhịp khung và kiểm chứng dãy RNG.
+2b. Phase D (đã xong phần nền): tiếp theo Phase E — bảng phím + nhịp khung (`timerCB`), vẽ bản đồ, bố cục chữ, loader `Item_*/NpcUi*/FR_*` + VM `IT_*`/`EVT_*`, chiến đấu/AI, save; golden trace bằng emulator ARM.
 3. Phase C (phần còn lại): bố cục loader `Item_*`/`NpcUi*`/`FR_*` (golden dump khi chuyển sang Java). Phase D: dựng project Java ME (CLDC 1.1/MIDP 2.0, preverify) và bộ golden-trace; Phase E: logic game (vẽ map, VM `_scn`, chiến đấu).
 4. Ghép tên AND2011 → KTF vẫn giữ để đối chiếu (`docs/xmatch_strings_ktf_so.tsv`).

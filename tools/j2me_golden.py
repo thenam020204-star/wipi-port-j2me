@@ -409,6 +409,23 @@ def gen_fx(res, out):
     print('fx.txt', len(L), 'lines')
 
 
+def gen_font(res, out):
+    import hf_font
+    f = hf_font.Fonts(res)
+    v = []
+    for lead in range(0xb0, 0xc9):
+        for trail in range(0xa1, 0xff):
+            code = f.johab(lead, trail)
+            v.append(code)
+            v += f.compose(code)
+    for font in (0, 1):
+        for ch in range(32, 127):
+            v += f.eng_glyph(font, ch) if font in f.eng else []
+            v.append(f.eng_width(font, ch))
+    open(os.path.join(out, 'font.txt'), 'w').write('%08x %d\n' % (fnv_ints(v), len(v)))
+    print('font.txt', len(v), 'ints')
+
+
 def gen_blit(res, out, every=7):
     """Cases of the DM_DrawImg self-test (tools/dm_blit.py) sampled every `every`-th case; expected = CRC-32 of the 240x400 frame (BG 0x1234)."""
     import zlib
@@ -470,6 +487,8 @@ if __name__ == '__main__':
     os.makedirs(out, exist_ok=True)
     if kind == 'des':
         gen_des(res, out)
+    elif kind == 'font':
+        gen_font(res, out)
     elif kind == 'fx':
         gen_fx(res, out)
     elif kind == 'sprite':

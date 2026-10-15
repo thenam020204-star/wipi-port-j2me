@@ -16,8 +16,8 @@ os.makedirs(gold, exist_ok=True)
 cls = B.compile_main()
 B.scan(cls)
 tc = B.compile_tests()
-env = dict(os.environ, JAVA_TOOL_OPTIONS='')
-cp = cls + os.pathsep + tc
+env = dict(os.environ, JAVA_TOOL_OPTIONS='', LC_ALL='C.UTF-8')    # UTF-8 locale: the JVM must open the Korean-named resource directory
+cp = cls + os.pathsep + tc + os.pathsep + res
 out = []
 
 
@@ -44,5 +44,7 @@ gen('sprite')
 rc |= java('hl4.test.SpriteTest', res, gold)
 gen('fx')
 rc |= java('hl4.test.FxTest', gold)
+gen('font')
+rc |= java('hl4.test.FontTest', res, gold)
 open(os.path.join(ROOT, 'docs', 'phaseD_selftest.txt'), 'w').write('\n'.join(o.replace('Picked up JAVA_TOOL_OPTIONS: \n', '') for o in out) + '\n')
 sys.exit(rc)

@@ -2,3 +2,11 @@ DesTest files 409 mismatches 0
 Picked up JAVA_TOOL_OPTIONS:
 BlitTest cases 253726 mismatches 0
 Picked up JAVA_TOOL_OPTIONS:
+ParseTest files 816 mismatches 0
+Picked up JAVA_TOOL_OPTIONS:
+SpriteTest calls 59907 mismatches 0
+Picked up JAVA_TOOL_OPTIONS:
+FxTest lines 16617 mismatches 0
+Picked up JAVA_TOOL_OPTIONS:
+FontTest ints 30195 mismatches 0
+Picked up JAVA_TOOL_OPTIONS:
