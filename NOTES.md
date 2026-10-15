@@ -81,7 +81,8 @@ Chi tiết + địa chỉ: `docs/phaseB_display.md`, `docs/phaseB_flows.md`.
 - Game loop = `timerCB` @0xa7994: KeyPressed → KeyReleased → TouchNotify → Process → Render → EndProcess → SM_PlayResEx → FlushLcd → reset phím → hẹn lại.
   Timer one-shot đặt lại sau khi vẽ; trễ mặc định 1 ms (lúc tải màn 10 ms). Logic chạy theo khung.
 - Input bắt cạnh: mỗi sự kiện nhấn/nhả tạo đúng một lần gọi handler ở tick kế tiếp, rồi bị reset. Không tự lặp phím. Bảng phím: `phaseB_flows.md` §4.
-- Frame: 9 slot con trỏ `nBASE_*`, gán qua `MainFrame_ElementAt`; `MainFrame_changeFrame` gán `mainFrame+0x38`.
+- Frame: 9 slot con trỏ `nBASE_*`, gán qua `MainFrame_ElementAt`. Chuyển cảnh qua màn tải (`LoadFrame_setState`, kéo dài ≥ 11 tick, có tiêu thụ RNG để chọn mẹo);
+  bảng `_nextFrame` 1 = Logo, 2 = Title, 3 = MainMenu, 4/6 = MainGame, 7 = NpcUi. Chuyển trực tiếp: `MainFrame_changeFrame` (`mainFrame+0x38`).
 - RNG: BSD `random()` TYPE_3, không bao giờ seed lại ⇒ dãy số tất định từ khi khởi động.
 - Âm thanh: một kênh. Hiệu ứng ngắt BGM; BGM phát lại từ đầu sau 30 khung. Bản 2011 chỉ phát **OGG**; các file MMF cùng chỉ số vẫn nằm trong jar.
 - Save: `SaveGameData_Net` tuần tự hoá → DES → MIDAS SD. Mọi file logic `./Hero4Game_N`, `./Hero4Slot_N`, … nằm trong một file `kickass`,
@@ -94,12 +95,12 @@ Chi tiết + địa chỉ: `docs/phaseB_display.md`, `docs/phaseB_flows.md`.
 ### Chưa biết
 - Nhịp khung thực trên máy. Chức năng phím `*` (`_game+3`).
 - File `kickass` mẫu không khớp layout MIDAS v2 (header chỉ có `./Hero4Sms`, dữ liệu ở 0x285…).
-- Bảng chuyển frame. Định dạng nội dung save. Pipeline vẽ chi tiết (GBM/sprite).
+- Định dạng nội dung save. Pipeline vẽ chi tiết (GBM/sprite).
 
 ## Trạng thái (Definition of Done)
 | Hạng mục | Trạng thái | Bằng chứng |
 |---|---|---|
-| Đã phân tích | Phase A xong; Phase B: symbol, call graph (sống/chết), màn hình, loop, input/phím, frame, RNG, audio, save (chuỗi gọi + container), xác thực xong; còn bảng chuyển frame và pipeline vẽ | `docs/manifest_*.tsv`, `docs/binlayout_output.txt`, `docs/phaseB_*.md`, `docs/*_and2011.tsv` |
+| Đã phân tích | Phase A xong; Phase B: symbol, call graph (sống/chết), màn hình, loop, input/phím, frame, RNG, audio, save (chuỗi gọi + container), xác thực, bảng chuyển frame xong; còn pipeline vẽ | `docs/manifest_*.tsv`, `docs/binlayout_output.txt`, `docs/phaseB_*.md`, `docs/*_and2011.tsv` |
 | Đã triển khai | chưa | — |
 | Đã build | chưa | — |
 | Chạy emulator | chưa | — |
@@ -107,7 +108,7 @@ Chi tiết + địa chỉ: `docs/phaseB_display.md`, `docs/phaseB_flows.md`.
 | Chạy thiết bị thật | chưa xác minh | — |
 
 ## Việc tiếp theo
-1. Phase B (phần còn lại): bảng chuyển frame (các lần gọi `MainFrame_ElementAt`, `_nextFrame`); pipeline vẽ `DM_*`/`SPR_*`;
+1. Phase B (phần còn lại): pipeline vẽ `DM_*`/`SPR_*`;
    đối chiếu `kickass` mẫu với thư viện MIDAS của KTF/LGT 2010.
 2. Emulator đối chứng: ARM interpreter + HLE cho 105 import có tên (tham khảo runtime LGT của project cũ). Ghi golden trace cho Phase F,
    gồm đo nhịp khung và kiểm chứng dãy RNG.

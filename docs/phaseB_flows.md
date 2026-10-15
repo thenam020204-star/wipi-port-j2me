@@ -81,7 +81,27 @@ Hàm "getter" lá (`MainFrame_Get→mainFrame`, `MP_getHero→_pool`, `MP_getBag
 - `MainFrame_changeFrame(n)` gán `mainFrame+0x38 = n`. `MainFrame_EndProcess` gọi `nBASE_EndProcess()` rồi `changeFrame(0)`.
 - Mỗi frame (`Logo/Title/MainMenu/Load/MainGame/GameMenu/TS`) có bộ `_ShowNotify/_HideNotify/_Process/_Render/_KeyPressed/_KeyReleased/_EndProcess`.
   Menu con dùng bảng con trỏ: `gMenuPaint/gMenuKey` (8), `mMenuPaint/mMenuKey/mMenuProc` (7), `NpcUiPaint/NpcUiKey/NpcUiProc` (11).
-- Việc tiếp theo: bảng chuyển frame (ai gọi `MainFrame_ElementAt` với bộ hàm nào; `_nextFrame`).
+- Gán bộ hàm: `{Logo,Title,MainMenu,Load,MainGame,GameMenu,NpcUi}Frame_SetElementFunc` → `MainFrame_ElementAt` (7 nơi gọi).
+- **Chuyển cảnh qua màn tải** (CONFIRMED): `LoadFrame_setState(target, next)` @0x87d68:
+  - gán `_nowLoading = 1`, `_loadCnt = 0`, `_curLoadTarget = target` (giá trị cũ chuyển sang `_prevLoadTarget`), `_nextFrame = next`;
+  - `MyTimer_setFrameRateLoad` (trễ 10 ms);
+  - nạp `/tdf/_tdf_TIP` rồi chọn một mẹo bằng **`UM_Rand(0, n−1)`** — có tiêu thụ RNG;
+  - cuối cùng `LoadFrame_SetElementFunc`.
+- `LoadFrame_Finalize` @0x878fc: `_loadCnt++`. Khi `_loadCnt > 10` (tức **≥ 11 tick**) thì chọn frame theo `_nextFrame` (bảng nhảy 0x87938), gán `_nowLoading = 0`, rồi `MenuOptions_setSpeed`.
+
+| `_nextFrame` | Frame | Gọi |
+|---|---|---|
+| 1 | Logo | `LogoFrame_Initialize` + `LogoFrame_SetElementFunc` |
+| 2 | Title | `TitleFrame_Initialize` + `TitleFrame_SetElementFunc` |
+| 3 | MainMenu | `MainMenuFrame_Initialize` + `MainMenuFrame_SetElementFunc` |
+| 4, 6 | MainGame | `MainGameFrame_SetElementFunc` |
+| 5 | (không đổi) | — |
+| 7 | NpcUi | `NpcUi_SetElementFunc` |
+
+- Ai gọi `LoadFrame_setState`: `MainFrame_Initialize` (`(3, 1)` → Logo), `LogoFrame_Finalize`, `TitleFrame_Finalize`, `MainMenuFrame_initMenuState`,
+  `GameMenuFrame_returnMainMenu`, `Event_Next_Scene`, `Event_ToWorldmap`.
+- Chuyển frame không qua màn tải: `MainFrame_changeFrame(n)`, rồi `*_EndProcess` đọc lại bằng `MainFrame_getChangeFrame`
+  (`MainGameFrame/GameMenuFrame/MainMenuFrame/NpcUi/TitleFrame`). Ví dụ CLR trong lúc chơi → `changeFrame(1)` → menu game.
 
 ## 6. RNG (CONFIRMED)
 - `UM_Random` @0xc8f2c = additive feedback kiểu BSD `random()` TYPE_3: `*fptr += *rptr; kết quả = *fptr >> 1`, 31 word, cách nhau 3.
