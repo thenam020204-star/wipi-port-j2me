@@ -113,14 +113,20 @@ Chi tiết: `docs/phaseC_formats.md`. Mọi định dạng dưới đây đượ
 | Map `MAP/M` | 97/97 map khớp (hai lớp, chuỗi, 16.358 đối tượng, 930 mục quái); `docs/phaseC_map.md` |
 | Thuộc tính sprite `H4/EXD` | 117/117 file khớp (1.321 cell); `docs/phaseC_exd.md` |
 | Hình học `DM_DrawImg` (neo, lật/xoay, cắt biên; 9 mode của `DM_DrawScreen565`) | 1.776.085 ca khớp từng byte của khung 240×400 + 907.137 ca kế hoạch cắt; chi tiết `docs/phaseC_blit.md` |
+| Âm thanh SMAF (`SND/*.mmf`) → MIDI/WAV | 42 file MMF phân tích đúng; ADPCM == ffmpeg 22/22; MIDI == bộ chuyển tham chiếu (trừ 646 CC7 do tham chiếu gán sai kênh); `docs/phaseC_audio.md` (cách đóng gói: quyết định ở Phase F) |
+| Khung bảng F1 (E, HDAT, ITM, NPC) + bố cục 20 loader đo từ loader gốc | 70 file đúng khung; xem `docs/phaseC_tables.md`, `docs/phaseC_tables_layout.txt` (đệm DES ≤ 7 byte `00` CONFIRMED) |
+| Script AI `E/AI###` | 43/43 file khớp `EnemyAIParsing_LoadData` gốc; `docs/phaseC_tables.md` §3 |
+| Container cảnh `MAP/SC/*_scn` | 345/345 file khớp `IT_Initialize` gốc; `docs/phaseC_tables.md` §6 |
 Công cụ phụ trợ: Ghidra 11.3.2 (tải vào `work/tools/`, không commit) cho mã giả C của 2344 hàm (`work/ghidra/decomp_and2011.c`, base 0x10000). Mã giả chỉ để đọc; **disassembly thắng** (đã gặp một chỗ Ghidra gộp nhầm hai nhánh góc xoay).
-Chưa làm: tác động pixel của `DM_DrawImgEx`/`Rotate`/`SetChagePalBlendEx`, `_PAL` và các biến thể blending, `_EXD`, map/tile/object, script `_scn`,
-bảng `_DAT`, AI `E/AI%03d`, `NPC/NAME_DAT`, chuyển MMF → MIDI/WAV.
+Chưa làm / UNKNOWN (chi tiết `docs/phaseC_tables.md` §5): bố cục từng trường của các loader `Item_*`/`Arms_*`, `NpcUi*`, `LoadPartQuestData`, `Guardian_loadBasicData`
+(khung F1 đã CONFIRMED; sẽ kiểm bằng golden dump khi chuyển loader sang Java ở Phase E); bytecode công thức `FR/*`; VM `IT_*`/`EVT_*` diễn giải thân `_scn`;
+ý nghĩa tên của các trường (offset cấu trúc chưa gán tên); `DM_Draw*RGB`/mosaic/Lenz; vẽ ô bản đồ (INFERRED, kiểm khi dựng bộ vẽ map); `ITM/_ITM_EMPTY`, `DAT/_DAT_DES` (không có nơi gọi).
+Quyết định cho Phase F: âm thanh — MIDI (từ MMF, 1 tick = 1 ms) hay WAV (từ OGG của bản 2011 / ADPCM của MMF) tuỳ giới hạn thiết bị; mặc định đề xuất: MIDI cho BGM + WAV 8 kHz cho hiệu ứng.
 
 ## Trạng thái (Definition of Done)
 | Hạng mục | Trạng thái | Bằng chứng |
 |---|---|---|
-| Đã phân tích | Phase A xong; Phase B: symbol, call graph (sống/chết), màn hình, loop, input/phím, frame, RNG, audio, save (chuỗi gọi + container), xác thực, bảng chuyển frame xong; còn pipeline vẽ. Phase C: DES, GBM, font, text, chỉ mục CIF đã kiểm vi sai | `docs/manifest_*.tsv`, `docs/binlayout_output.txt`, `docs/phaseB_*.md`, `docs/*_and2011.tsv` |
+| Đã phân tích | Phase A xong; Phase B: symbol, call graph (sống/chết), màn hình, loop, input/phím, frame, RNG, audio, save (chuỗi gọi + container), xác thực, bảng chuyển frame xong; còn pipeline vẽ. Phase C: DES, GBM, font, text, CIF, blit, sprite, fx, PAL, map, EXD, MMF, AI, _scn đã kiểm vi sai; bảng dữ liệu đã có khung + bố cục đo (phần còn lại: `docs/phaseC_tables.md` §5) | `docs/manifest_*.tsv`, `docs/binlayout_output.txt`, `docs/phaseB_*.md`, `docs/*_and2011.tsv` |
 | Đã triển khai | chưa | — |
 | Đã build | chưa | — |
 | Chạy emulator | chưa | — |
@@ -132,5 +138,5 @@ bảng `_DAT`, AI `E/AI%03d`, `NPC/NAME_DAT`, chuyển MMF → MIDI/WAV.
    đối chiếu `kickass` mẫu với thư viện MIDAS của KTF/LGT 2010.
 2. Emulator đối chứng: ARM interpreter + HLE cho 105 import có tên (tham khảo runtime LGT của project cũ). Ghi golden trace cho Phase F,
    gồm đo nhịp khung và kiểm chứng dãy RNG.
-3. Phase C: giải mã tài nguyên (DES `MX_desDecrypt`; định dạng `_BM _CIF _PAL _EXD _scn _DAT`); script chuyển MMF → MIDI/WAV.
+3. Phase C (phần còn lại): bố cục loader `Item_*`/`NpcUi*`/`FR_*` (golden dump khi chuyển sang Java). Phase D: dựng project Java ME (CLDC 1.1/MIDP 2.0, preverify) và bộ golden-trace; Phase E: logic game (vẽ map, VM `_scn`, chiến đấu).
 4. Ghép tên AND2011 → KTF vẫn giữ để đối chiếu (`docs/xmatch_strings_ktf_so.tsv`).
