@@ -19,30 +19,54 @@ import zlib
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from and_hle import Harness
+from and_emu import HEAP_BASE, HEAP_SIZE
+
+CLOCK_BASE_MS = 1303268400000        # 2011-04-20T03:00:00Z (= 12:00 KST); epoch milliseconds (MX_knlTime = ms / 1000, CONFIRMED 0x2701c)
 
 IMPL = {
-    'clock': 'MC_knlCurrentTime = virtual ms, advanced by tick_ms (default 50) per tick',
+    'clock': 'MC_knlCurrentTime = CLOCK_BASE_MS + virtual ms, advanced by tick_ms (default 50) per tick',
     'timers': 'MC_knlDefTimer/SetTimer only record the callback; the runner calls timerCB itself once per tick',
-    'props': 'PHONEMODEL="LG-LU9400"? no: "HL4-REF"; PHONENUMBER fixed 01000000000',
+    'props': 'PHONEMODEL="HL4-REF" (not LG-LU9400, so the 9400 timer path is off); PHONENUMBER fixed; TIMEZONE="GMT+09:00" '
+             '(format read at 0x26c28-0x26ca0: "GMT" sign hh ":" mm)',
     'fs': 'MC_fs* backed by an in-memory dict (save files); not persisted',
     'audio': 'MC_mda* no-ops (clip handles are fake integers)',
+    'orientation': 'AND2011 defaults _menuOptions+4 = 1 (OptionInit 0xbd624) = 320x240 landscape game rotated onto the 240x400 '
+                   'frame (touch_setUiChange 0x35d50, nTouchRotate=1).  The port targets 240x320 portrait (approved parameter): '
+                   'the reference forces _menuOptions+4 = 0 right after OptionInit returns (portrait path 0x35e18, the legacy '
+                   'layout), so game area = 240x320 + 80 rows of virtual pad that are never part of a hash.',
+    'logo_h': 'until TitleFrame_Initialize the stock game area is 240x400 (Logo/notice screens laid out for 400 rows); the reference pokes '
+              '_lcdG+0x58 = 320 after startClet so the J2ME target (240x320 throughout) sees the same layout',
+    'prims': 'MC_grpFillRect(f,x,y,w,h,pgc) fills w x h; MC_grpDrawRect(f,x,y,w,h,pgc) outlines the INCLUSIVE extent x..x+w, y..y+h '
+             '(the game passes w-1,h-1 and pairs it with an inner fill of w-2, so the pair is consistent); MC_grpDrawLine = Bresenham, '
+             'both ends inclusive; foreground pixel = pgc context index 1; clipping to the frame buffer only',
+    'touch': 'only touch_drawVirtualPad is stubbed (it draws below the 240x320 game area).  The TOUCH sprite layer (TOUCH/CIF skins) '
+             'draws dialog/menu backgrounds inside the game area and stays active; pointer input is simply never generated',
+    'frame': 'platform frame 240x400; hashes cover only the game area (_lcdG+0x54 x +0x58 of the offscreen buffer _lcdG+0x10)',
+    'heap': 'MC_knlAlloc/Calloc zero-filled; MC_knlFree recycles same-size blocks (pointer values are not observable)',
 }
 
-PROPS = {'PHONEMODEL': b'HL4-REF', 'PHONENUMBER': b'01000000000', 'MIN': b'01000000000'}
+PROPS = {'PHONEMODEL': b'HL4-REF', 'PHONENUMBER': b'01000000000', 'MIN': b'01000000000', 'TIMEZONE': b'GMT+09:00'}
 
 
 class Game(Harness):
-    def __init__(self, binp, resdir, tick_ms=50, strict=True):
+    def __init__(self, binp, resdir, tick_ms=50, raise_on_missing=False, portrait=True, no_touch=False):
         super().__init__(binp, resdir)
         self.tick_ms = tick_ms
-        self.now = 1000
-        self.strict = strict
+        self.now = CLOCK_BASE_MS
+        self.raise_on_missing = raise_on_missing
+        self.portrait = portrait
+        self.no_touch = no_touch
+        self.stubbed = []
+        self.rng_calls = 0
+        self.blocks = {}
+        self.freelist = {}
         self.missing = {}
         self.files = {}
         self.fds = {}
         self.timers = {}
         self.ticks = 0
         self.flushes = 0
+        self.ctx = {}
         self.last_flush = None
         self._imports()
 
@@ -87,6 +111,11 @@ class Game(Harness):
         im['dlet_set_property'] = lambda e, a: 0
         im['wipic_event_handler'] = lambda e, a: 0
         im['MC_grpFlushLcd'] = self._flush
+        # WIPI-C 2D primitives (platform behaviour, INFERRED - see IMPL['prims'])
+        im['MC_grpSetContext'] = self._setctx
+        im['MC_grpFillRect'] = self._fillrect
+        im['MC_grpDrawRect'] = self._drawrect
+        im['MC_grpDrawLine'] = self._drawline
         im['MC_knlExit'] = lambda e, a: self._die('MC_knlExit')
         im['MC_knlGetCurProgramID'] = lambda e, a: 0
         im['LGTC_knlGetProgramExecName'] = lambda e, a: 0
@@ -98,8 +127,31 @@ class Game(Harness):
         im['MC_fsWrite'] = lambda e, a: self._fswrite(a)
         im['MC_fsSeek'] = lambda e, a: self._fsseek(a)
         im['MC_fsRemove'] = lambda e, a: 0
-        if self.strict:
-            self._fallback_missing()
+        self._heap_imports()
+        self._fallback_missing()
+
+    def _heap_imports(self):
+        def alloc(e, a):
+            n = (a[0] + 7) & ~7
+            fl = self.freelist.get(n)
+            if fl:
+                p = fl.pop()
+                e.write(p, b'\0' * n)
+            else:
+                if e.heap_ptr + n >= HEAP_BASE + HEAP_SIZE:
+                    raise MemoryError('reference heap exhausted (%d bytes live)' % sum(self.blocks.values()))
+                p = e.alloc(n)
+            self.blocks[p] = n
+            return p
+
+        def free(e, a):
+            n = self.blocks.pop(a[0], None)
+            if n is not None:
+                self.freelist.setdefault(n, []).append(a[0])
+            return 0
+        self.imports['MC_knlCalloc'] = alloc
+        self.imports['MC_knlAlloc'] = alloc
+        self.imports['MC_knlFree'] = free
 
     def _fallback_missing(self):
         """Any import without an HLE entry returns 0 and is counted (so a trace can say what it did not model)."""
@@ -107,10 +159,73 @@ class Game(Harness):
             if name not in self.imports:
                 def mk(n):
                     def f(e, a):
+                        if self.raise_on_missing:
+                            raise RuntimeError('unmodelled import ' + n)
                         self.missing[n] = self.missing.get(n, 0) + 1
                         return 0
                     return f
                 self.imports[name] = mk(name)
+
+    # --- WIPI-C primitives -------------------------------------------------------------------------------
+    # MC_grpSetContext(pgc, idx, value): idx 1 = foreground pixel, 2 = background pixel (the game passes exactly these, 0x50ce4/0x50cb0).
+    # The platform clips only to the frame buffer; the game's own clip rectangle (OutR) is NOT known to the platform.
+    def _setctx(self, e, a):
+        self.ctx.setdefault(a[0], {})[a[1]] = a[2] & 0xffff
+        return 0
+
+    def _fg(self, pgc):
+        return self.ctx.get(pgc, {}).get(1, 0)
+
+    def _fillrect(self, e, a):
+        frame, x, y, w, h = a[0], a[1], a[2], a[3], a[4]
+        pgc = self.arg(5)
+        s32 = lambda v: v - (1 << 32) if v & 0x80000000 else v
+        x, y, w, h = s32(x), s32(y), s32(w), s32(h)
+        self.fill(frame, x, y, x + w, y + h, self._fg(pgc))
+        return 0
+
+    def fill(self, frame, x0, y0, x1, y1, px):
+        ptr, fw, fh = self.frames.get(frame, self.frames[self.screen])
+        x0, y0, x1, y1 = max(x0, 0), max(y0, 0), min(x1, fw), min(y1, fh)
+        if x1 <= x0 or y1 <= y0:
+            return
+        row = struct.pack('<H', px) * (x1 - x0)
+        for yy in range(y0, y1):
+            self.write(ptr + (yy * fw + x0) * 2, row)
+
+    def _drawrect(self, e, a):
+        frame, x, y, w, h = a[0], a[1], a[2], a[3], a[4]
+        pgc = self.arg(5)
+        s32 = lambda v: v - (1 << 32) if v & 0x80000000 else v
+        x, y, w, h = s32(x), s32(y), s32(w), s32(h)
+        if w < 0 or h < 0:
+            return 0
+        px = self._fg(pgc)
+        self.fill(frame, x, y, x + w + 1, y + 1, px)          # top
+        self.fill(frame, x, y + h, x + w + 1, y + h + 1, px)  # bottom
+        self.fill(frame, x, y, x + 1, y + h + 1, px)          # left
+        self.fill(frame, x + w, y, x + w + 1, y + h + 1, px)  # right
+        return 0
+
+    def _drawline(self, e, a):
+        frame, x0, y0, x1, y1 = a[0], a[1], a[2], a[3], a[4]
+        pgc = self.arg(5)
+        s32 = lambda v: v - (1 << 32) if v & 0x80000000 else v
+        x0, y0, x1, y1 = s32(x0), s32(y0), s32(x1), s32(y1)
+        px = self._fg(pgc)
+        dx, dy = abs(x1 - x0), -abs(y1 - y0)
+        sx, sy = (1 if x0 < x1 else -1), (1 if y0 < y1 else -1)
+        err = dx + dy
+        while True:
+            self.fill(frame, x0, y0, x0 + 1, y0 + 1, px)
+            if x0 == x1 and y0 == y1:
+                break
+            e2 = 2 * err
+            if e2 >= dy:
+                err += dy; x0 += sx
+            if e2 <= dx:
+                err += dx; y0 += sy
+        return 0
 
     def _flush(self, e, a):
         self.last_flush = list(a[:6])
@@ -161,15 +276,66 @@ class Game(Harness):
         return 0
 
     # --- lifecycle -------------------------------------------------------------------------------------
-    def start(self, game_h=320):
-        """init + startClet.  game_h: height of the game area.  The stock binary lays the Logo screens out for the full 400-row
-        frame and only switches to 240x320 (+ 80-row virtual pad) in TitleFrame_Initialize (0xc8bfc); the J2ME target is 240x320
-        throughout, so the reference is poked to the same height (_lcdG+0x58) before the first tick."""
+    def start(self, logo_h=320):
+        """init + startClet, with the reference configuration of IMPL (portrait hook, RNG counter, logo-phase game height)."""
+        from unicorn import UC_HOOK_CODE
+        a, sz, th = self.elf.fbyname['OptionInit']
+        # OptionInit is a leaf: its final `bx lr` is the last 4-byte instruction before the literal pool
+        ret = self._leaf_ret('OptionInit')
+        opt = self.objaddr('_menuOptions')
+        rng = self.elf.fbyname['UM_Random'][0]
+
+        def portrait(uc, addr, size, _):
+            if self.portrait:
+                self.write(opt + 4, b'\x00')
+
+        def count(uc, addr, size, _):
+            self.rng_calls += 1
+        self.uc.hook_add(UC_HOOK_CODE, portrait, begin=ret, end=ret)
+        self.uc.hook_add(UC_HOOK_CODE, count, begin=rng, end=rng)
+        self.stub_touch_draw(only=('touch_drawVirtualPad',) if not self.no_touch else None)
         self.call('init')
         self.call('startClet')
-        if game_h:
-            self.write(self.objaddr('_lcdG') + 0x58, struct.pack('<i', game_h))
+        if logo_h:
+            self.write(self.objaddr('_lcdG') + 0x58, struct.pack('<i', logo_h))
         return self
+
+    def stub_touch_draw(self, only=None):
+        """Neutralise touch drawing: `only` = exact names (default config: the virtual pad, which is drawn below the game area),
+        or None = every Touch_draw*/touch_draw*/draw_local routine (no_touch=True, diagnostic only: the TOUCH sprite layer also draws
+        the dialog/menu skins of the AND2011 UI, so the product keeps it).  Input-state bookkeeping keeps running."""
+        import re
+        from unicorn import UC_HOOK_CODE
+        from unicorn.arm_const import UC_ARM_REG_LR, UC_ARM_REG_PC, UC_ARM_REG_R0
+        rx = re.compile(r'^(Touch_draw|touch_draw|draw_local)')
+
+        def ret(uc, addr, size, _):
+            uc.reg_write(UC_ARM_REG_R0, 0)
+            uc.reg_write(UC_ARM_REG_PC, uc.reg_read(UC_ARM_REG_LR))
+        for n, (a, sz, th) in self.elf.fbyname.items():
+            if (n in only) if only is not None else rx.match(n):
+                self.uc.hook_add(UC_HOOK_CODE, ret, begin=a, end=a)
+                self.stubbed.append(n)
+
+    def _leaf_ret(self, name):
+        """address of the last `bx lr` of a leaf function (found by decoding, not guessed)."""
+        a, sz, th = self.elf.fbyname[name]
+        code = self.read(a, sz)
+        last = None
+        for i in range(0, sz - 3, 4):
+            if struct.unpack_from('<I', code, i)[0] == 0xe12fff1e:
+                last = a + i
+        assert last is not None
+        return last
+
+    def game_area(self):
+        """(w, h, pixels) of the game area: the offscreen buffer _lcdG+0x10 cropped to _lcdG+0x54 x _lcdG+0x58."""
+        L = self.objaddr('_lcdG')
+        hnd = struct.unpack('<I', self.read(L + 0x10, 4))[0]
+        w, h = struct.unpack('<ii', self.read(L + 0x54, 8))
+        ptr, fw, fh = self.frames[hnd]
+        rows = [self.read(ptr + y * fw * 2, w * 2) for y in range(h)]
+        return w, h, struct.unpack('<%dH' % (w * h), b''.join(rows))
 
     # --- function coverage (slow: one Python callback per basic block) ----------------------------------
     def enable_cover(self):
@@ -202,9 +368,7 @@ class Game(Harness):
         self.ticks += 1
 
     def frame(self):
-        """Frame handed to the last MC_grpFlushLcd (what the player would see); falls back to the screen buffer."""
-        hnd = self.last_flush[1] if self.last_flush and self.last_flush[1] in self.frames else self.screen
-        return self.frame_pixels(hnd)
+        return self.game_area()
 
     def png(self, path):
         w, h, px = self.frame()
