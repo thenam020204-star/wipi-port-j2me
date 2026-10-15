@@ -12,6 +12,7 @@ với chính hàm gốc chạy trong emulator đối chứng (`tools/and_emu.py`
 | Text MrgText (`s8 count`, `{u16be len, bytes}`) | `tools/mrgtext.py` | 6 file, so với `MrgText_load` gốc | **0 lệch** |
 | Text LinkedText (`u16 size, u16 count, u16 off[]`) | `tools/linkedtext.py` | 12 file, mọi chỉ số, so với `getLinkedText` gốc | **0 lệch** |
 | Chỉ mục sprite CIF | `tools/cif.py` | 148 file, so bảng offset khung với `SPR_loadSprite` gốc | **0 lệch** (`docs/phaseC_cif_selftest.txt`) |
+| Hình học `DM_DrawImg` | `tools/dm_blit.py` | `selftest`: so cả khung 240×400, 1.776.085 ca; kế hoạch cắt 907.137 ca | **0 lệch** (`docs/phaseC_blit.md`) |
 | Phân loại DES/thô | `tools/and_resmap.py` → `docs/resmap_and2011.tsv` | theo nơi gọi `UM_LoadResDes` / `UM_LoadRes` | CONFIRMED |
 
 ## 1. Nạp tài nguyên (CONFIRMED)

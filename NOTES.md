@@ -107,7 +107,9 @@ Chi tiết: `docs/phaseC_formats.md`. Mọi định dạng dưới đây đượ
 | Font HNF + ghép âm tiết Hàn | 2350 âm tiết + 82 ASCII khớp từng pixel |
 | Text MrgText / LinkedText | 6 + 12 file khớp |
 | Chỉ mục sprite CIF | 148/148 file khớp cấu trúc |
-Chưa làm: ngữ nghĩa mảnh CIF / vẽ sprite, `_PAL` và các biến thể blending, `_EXD`, map/tile/object, script `_scn`,
+| Hình học `DM_DrawImg` (neo, lật/xoay, cắt biên; 9 mode của `DM_DrawScreen565`) | 1.776.085 ca khớp từng byte của khung 240×400 + 907.137 ca kế hoạch cắt; chi tiết `docs/phaseC_blit.md` |
+Công cụ phụ trợ: Ghidra 11.3.2 (tải vào `work/tools/`, không commit) cho mã giả C của 2344 hàm (`work/ghidra/decomp_and2011.c`, base 0x10000). Mã giả chỉ để đọc; **disassembly thắng** (đã gặp một chỗ Ghidra gộp nhầm hai nhánh góc xoay).
+Chưa làm: ngữ nghĩa mảnh CIF / vẽ sprite (đang làm), `_PAL` và các biến thể blending, `_EXD`, map/tile/object, script `_scn`,
 bảng `_DAT`, AI `E/AI%03d`, `NPC/NAME_DAT`, chuyển MMF → MIDI/WAV.
 
 ## Trạng thái (Definition of Done)
