@@ -8,6 +8,7 @@ với chính hàm gốc chạy trong emulator đối chứng (`tools/and_emu.py`
 |---|---|---|---|
 | Mã hoá tài nguyên/save (DES biến thể) | `tools/hl4des.py` | `selftest`: 408 file nhóm DES, giải mã + mã hoá, so với `MX_desDecrypt`/`MX_desEncrypt` gốc | **0 lệch** (`work/cache/des_selftest.txt`) |
 | Ảnh GBM (container + 4/8 bpp) | `tools/gbm.py` | `selftest`: 452 file, 4067 ảnh vẽ qua `DM_LoadMergeGbm565` + `DM_DrawImg` gốc; thêm 2 ảnh lớn (`tdf/TITLE_BM` 320×320, `ITM/_ITM_ICN` 533×13) | **0 lệch** |
+| Font HNF + ghép âm tiết Hàn 8×4×4 | `tools/hf_font.py` | `selftest`: 2350 âm tiết KS X 1001 + 82 ký tự ASCII, mỗi ký tự vẽ qua `HF_DrawText` gốc | **0 lệch** (`docs/phaseC_font_selftest.txt`) |
 | Phân loại DES/thô | `tools/and_resmap.py` → `docs/resmap_and2011.tsv` | theo nơi gọi `UM_LoadResDes` / `UM_LoadRes` | CONFIRMED |
 
 ## 1. Nạp tài nguyên (CONFIRMED)
@@ -43,6 +44,21 @@ Mọi thứ khác (ảnh, sprite, map, font, text, AI, palette, âm thanh) nạp
   (con trỏ do `DM_Initialize` gán). Phần lật/xoay/Ex/blend chưa kiểm vi sai (việc tiếp theo).
 - Nạp đơn (`DM_LoadResGbm565` @0x53d54) có cùng layout body nhưng không có container.
 
-## 4. Còn lại (chưa phân tích)
+## 4. Font HNF (CONFIRMED, `tools/hf_font.py`)
+- Header: `'HNF'`, `u8 kind` (0 Hàn / 1 Latin), `u8 rowbits` (16 ⇒ 2 byte/hàng, 8 ⇒ 1), `u8 h`; font Hàn thêm `u8 8, 4, 4` (số bộ).
+- `_FT_KOR10X11`: 160 phụ âm đầu (8 bộ × 20) + 88 nguyên âm (4 × 22) + 112 phụ âm cuối (4 × 28), mỗi glyph 22 byte.
+  Mỗi hàng 2 byte: **byte 1 = 8 pixel trái, byte 0 = 8 pixel phải**, MSB = pixel trái nhất.
+- Ghép âm tiết:
+  - `code = HANINFO[(lead−0xB0)·94 + (trail−0xA1)]` (u16 big-endian, Johab);
+  - `cho = HANCODE[(code>>10)&31]`, `jung = HANCODE[31 + ((code>>5)&31)]`, `jong = HANCODE[62 + (code&31)]`;
+  - các bộ glyph: `choSet = ChoInfo[22·hasJong + jung]`, `jungSet = JungInfo[20·hasJong + cho]`, `jongSet = JongInfo[jung]`;
+  - ghép = copy glyph phụ âm đầu, rồi OR glyph nguyên âm (nếu `jung ≠ 0`) và glyph phụ âm cuối (nếu có).
+- Latin: `_FT_ENGL5X11` (font lớn, h = 11) và `_FT_ENGS7X7` (font nhỏ, h = 8), 95 glyph `' '..'~'`, 1 byte/hàng, MSB trái.
+  Độ rộng = 5 px (`\` = 7 px ở font lớn; `\` vẽ glyph ô 4).
+- Glyph được vẽ với gốc tại đúng `(x, y)` truyền vào `HF_DrawText`.
+- Chưa kiểm vi sai: font nhỏ `ENGS7X7`, jamo rời `0xA4xx`, các mã đặc biệt `0xA3BF`/`0xA5xx`, mã màu, xuống dòng `;`,
+  khoảng trắng 4 px, neo/căn giữa (`HF_DrawTextAnchorH2Color`) → làm cùng engine chữ ở Phase E.
+
+## 5. Còn lại (chưa phân tích)
 `_PAL` (196), `_CIF` (148), `_EXD` (117), `_scn` (345, DES), `_DAT` (26), `_TXT` (8), `MAP/M/_MAP_M_%03d`, `TILE/`, `OBJ/`, `FT/` (font),
 `E/AI%03d` (AI script), `SND/*_MMF` (SMAF) → MIDI/WAV.
