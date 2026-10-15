@@ -308,6 +308,107 @@ def gen_sprite(res, out):
     print('sprite.txt', ncalls, 'calls')
 
 
+def _bg_pixel(i):
+    return (i * 40503 + 12345) & 0xffff
+
+
+def gen_fx(res, out):
+    import random
+    import dm_fx
+    import dm_blit
+    import gbm
+    import zlib
+    rng = random.Random(99)
+    table = dm_fx.build_table()
+    L = ['table %08x' % fnv_bytes(table)]
+    v = []
+    for r in range(0, 256, 17):
+        for g in range(0, 256, 17):
+            for b in range(0, 256, 17):
+                v += list(dm_fx.rgb_to_hsb(r, g, b))
+    lcg = 12345
+    for _ in range(20000):
+        t = []
+        for _ in range(3):
+            lcg = (lcg * 1103515245 + 12345) & 0x7fffffff
+            t.append((lcg >> 8) % 256)
+        v += list(dm_fx.rgb_to_hsb(*t))
+    L.append('hsb1 %08x' % fnv_ints(v))
+    v = []
+    for H in range(0, 361, 7):
+        for S in range(0, 101, 5):
+            for B in range(0, 101, 5):
+                v += list(dm_fx.hsb_to_rgb(H, S, B))
+    for _ in range(20000):
+        t = []
+        for m in (361, 101, 101):
+            lcg = (lcg * 1103515245 + 12345) & 0x7fffffff
+            t.append((lcg >> 8) % m)
+        v += list(dm_fx.hsb_to_rgb(*t))
+    L.append('hsb2 %08x' % fnv_ints(v))
+
+    def rand_pal():
+        n = rng.choice([2, 4, 16, 17, 64, 256])
+        return [dm_fx.SKIP if rng.random() < 0.12 else rng.randrange(65536) for _ in range(n)]
+
+    def pal_hash(pal, flag):
+        return fnv_ints(list(pal) + [flag])
+    modes = list(range(16)) + [0x10, 0x14, 0x15]
+    for _ in range(6000):
+        pal = rand_pal()
+        flag = rng.choice([0, 0, 0, 1])
+        p2, p3, p4 = [rng.choice([0, 0, rng.randrange(-400, 400), rng.randrange(-40, 140)]) for _ in range(3)]
+        mode = rng.choice(modes)
+        alpha = rng.choice([0, 1, 100, 127, 200, 247, 248, 255, rng.randrange(256)])
+        np_, nf = dm_fx.set_pal_blend(pal, flag, p2, p3, p4, mode, alpha, table)
+        L.append('setpal %d %d %d %d %d %d %d %s %08x' % (flag, p2, p3, p4, mode, alpha, len(pal), ' '.join(map(str, pal)), pal_hash(np_, nf)))
+    for _ in range(1500):
+        pal = rand_pal()
+        slot = rng.choice([-1, 0, 1, 2, 3, 4, 5, 6, 7, 12])
+        L.append('loadblend %d %d %s %08x' % (slot, len(pal), ' '.join(map(str, pal)), fnv_ints(dm_fx.gbm_load_blend(pal, slot, table))))
+        if slot in (-1, 0, 1, 2, 3, 4, 5, 6):
+            L.append('mergeblend %d %d %s %08x' % (slot, len(pal), ' '.join(map(str, pal)), fnv_ints(dm_fx.gbm_merge_blend(pal, slot, table))))
+    FW, FH = 240, 400
+    bg = b''.join(struct.pack('<H', _bg_pixel(i)) for i in range(FW * FH))
+    for kind in ('ex', 'scaled'):
+        for _ in range(4000):
+            w, hh = rng.randint(1, 16), rng.randint(1, 16)
+            t = rng.choice([0x0b, 0x0c])
+            body = dm_fx._rand_body(rng, w, hh, t)
+            iw, ih, rows = gbm.decode(body)
+            clip = rng.choice([(0, 0, FW, FH), (20, 30, 100, 90), (0, 0, 8, 8)])
+            if kind == 'ex':
+                flip, rot = rng.choice([(0, 0), (0, 90), (0, 180), (0, 270), (1, 0), (2, 0), (3, 0), (1, 90), (1, 270), (2, 90), (3, 90), (3, 180), (3, 270)])
+                scx = scy = 0
+            else:
+                flip, rot = rng.choice([(0, 0), (0, 90), (0, 180), (0, 270), (1, 0), (1, 90), (1, 180), (1, 270), (2, 0), (2, 90),
+                                        (2, 180), (2, 270), (3, 0), (3, 90), (0, 45)])
+                scx, scy = rng.choice([100, 200, 50, 30, 80, 120, rng.randint(1, 300)]), rng.choice([100, 200, 60, 120, 80, rng.randint(1, 300)])
+            alpha = rng.choice([1, 7, 8, 9, 100, 127, 128, 200, 247, 248, 254, 255, rng.randrange(1, 256)] + ([0] if kind == 'ex' else []))
+            effect = rng.randrange(17)
+            anchor = rng.choice([0, 0x12, 0x10, 0x04, 0x22, 0x06])
+            sx = rng.choice([0, 0, 0, 1]) if w > 2 else 0
+            sy = rng.choice([0, 0, 1]) if hh > 2 else 0
+            ww, hs = w - sx, hh - sy
+            x = rng.randint(clip[0] - 10, clip[2] + 3)
+            y = rng.randint(clip[1] - 10, clip[3] + 3)
+            ex_variant = kind == 'ex' or rng.random() < 0.5
+            fb = bytearray(bg)
+            if kind == 'ex':
+                pl = dm_blit.plan(x, y, ww, hs, sx, sy, flip, rot, anchor, clip, ex=True)
+                if pl is not None and (pl[2] <= 0 or pl[3] <= 0):
+                    continue
+                dm_fx.draw_ex(fb, FW, FH, clip, rows, x, y, ww, hs, sx, sy, flip, rot, alpha, effect, anchor, table)
+            else:
+                dm_fx.raster_scaled(fb, FW, clip, dm_fx.Img(body), x, y, ww, hs, sx, sy, dm_fx.rot_mode(flip, rot), scx, scy, anchor,
+                                    alpha if ex_variant else None, effect, table)
+            L.append('%s %s %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %08x' % (
+                'draw' + kind, body.hex(), clip[0], clip[1], clip[2], clip[3], flip, rot, alpha, effect, anchor, x, y, sx, sy, ww, hs,
+                scx, scy, 1 if ex_variant else 0, zlib.crc32(bytes(fb)) & 0xffffffff))
+    open(os.path.join(out, 'fx.txt'), 'w').write('\n'.join(L) + '\n')
+    print('fx.txt', len(L), 'lines')
+
+
 def gen_blit(res, out, every=7):
     """Cases of the DM_DrawImg self-test (tools/dm_blit.py) sampled every `every`-th case; expected = CRC-32 of the 240x400 frame (BG 0x1234)."""
     import zlib
@@ -369,6 +470,8 @@ if __name__ == '__main__':
     os.makedirs(out, exist_ok=True)
     if kind == 'des':
         gen_des(res, out)
+    elif kind == 'fx':
+        gen_fx(res, out)
     elif kind == 'sprite':
         gen_sprite(res, out)
     elif kind == 'parse':

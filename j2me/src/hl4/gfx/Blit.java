@@ -15,7 +15,7 @@ public final class Blit {
     // plan result (X, Y, W, H, SX, SY, mode); single-threaded use only
     private static final int[] P = new int[7];
     // 6 coefficients of the dest->source mapping, see raster()
-    private static final int[] M = new int[6];
+    static final int[] M = new int[6];
 
     /** DM_CalcAnchorGbm @0x4d29c; returns x in out[0], y in out[1]. */
     private static void anchor(int x, int y, int w, int h, int rot, int anchor, int[] out) {
@@ -254,11 +254,11 @@ public final class Blit {
     }
 
     // DM_DrawScreen565 mode -> (flip, rot)
-    private static final int[] MODE_FLIP = {0, 1, 2, 3, 0, 0, 0, 1, 1};
-    private static final int[] MODE_ROT = {0, 0, 0, 0, 90, 180, 270, 90, 270};
+    static final int[] MODE_FLIP = {0, 1, 2, 3, 0, 0, 0, 1, 1};
+    static final int[] MODE_ROT = {0, 0, 0, 0, 90, 180, 270, 90, 270};
 
     /** dest-local (px, py) -> source (u, v), as affine functions of (px, py); w/h are the source sub-rectangle size. */
-    private static void mapping(int flip, int rot, int w, int h) {
+    static void mapping(int flip, int rot, int w, int h) {
         boolean fx;
         boolean fy;
         int r;
@@ -361,6 +361,20 @@ public final class Blit {
             }
         }
     }
+
+    static int planX() { return P[0]; }
+
+    static int planY() { return P[1]; }
+
+    static int planW() { return P[2]; }
+
+    static int planH() { return P[3]; }
+
+    static int planSX() { return P[4]; }
+
+    static int planSY() { return P[5]; }
+
+    static int planMode() { return P[6]; }
 
     /** DM_DrawImg(frame, x, y, w, h, img, srcx, srcy, flip, rot, anchor) using the frame's clip rectangle. */
     public static void drawImg(Frame f, int x, int y, int w, int h, Gbm img, int sx, int sy, int flip, int rot, int anc) {
