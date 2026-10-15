@@ -42,3 +42,49 @@ type ET_DYN machine EM_ARM entry 0x220c4 flags 0x4000002
   .strtab          SHT_STRTAB     addr=0x000000 off=0xee558 size=0x0e372
   .symtab: 3341 symbols, 2388 defined functions
   .rel.dyn: {23: 1689, 21: 1} (2=R_ARM_ABS32, 23=R_ARM_RELATIVE, 21/22=GLOB_DAT/JUMP_SLOT)
+== AND2011 binary.mod (source of truth) work/orig/android/영웅서기4.apk!/res/raw/jarfile.mp3!/binary.mod
+type ET_DYN machine EM_ARM entry 0x220c4 flags 0x4000002
+  .hash            SHT_HASH       addr=0x0000b4 off=0x000b4 size=0x04f3c
+  .dynsym          SHT_DYNSYM     addr=0x004ff0 off=0x04ff0 size=0x0bc80
+  .dynstr          SHT_STRTAB     addr=0x010c70 off=0x10c70 size=0x0d739
+  .rel.dyn         SHT_REL        addr=0x01e3ac off=0x1e3ac size=0x034d0
+  .rel.plt         SHT_REL        addr=0x02187c off=0x2187c size=0x00348
+  .plt             SHT_PROGBITS   addr=0x021bc4 off=0x21bc4 size=0x00500
+  .text            SHT_PROGBITS   addr=0x0220c4 off=0x220c4 size=0xb0cb0
+  .rodata          SHT_PROGBITS   addr=0x0d2d78 off=0xd2d78 size=0x06d60
+  .ARM.extab       SHT_PROGBITS   addr=0x0d9ad8 off=0xd9ad8 size=0x000b4
+  .ARM.exidx       SHT_ARM_EXIDX  addr=0x0d9b8c off=0xd9b8c size=0x04aa0
+  .data.rel.ro     SHT_PROGBITS   addr=0x0df62c off=0xde62c size=0x00aa4
+  .dynamic         SHT_DYNAMIC    addr=0x0e00d0 off=0xdf0d0 size=0x000d8
+  .got             SHT_PROGBITS   addr=0x0e01a8 off=0xdf1a8 size=0x00a44
+  .data            SHT_PROGBITS   addr=0x0e0bec off=0xdfbec size=0x0144c
+  .bss             SHT_NOBITS     addr=0x0e2038 off=0xe1038 size=0x6c168
+  .comment         SHT_PROGBITS   addr=0x000000 off=0xe1038 size=0x00048
+  .ARM.attributes  SHT_ARM_ATTRIBUTES addr=0x000000 off=0xe1080 size=0x00019
+  .shstrtab        SHT_STRTAB     addr=0x000000 off=0xe1099 size=0x000a6
+  .symtab          SHT_SYMTAB     addr=0x000000 off=0xe1488 size=0x0d0d0
+  .strtab          SHT_STRTAB     addr=0x000000 off=0xee558 size=0x0e372
+  .symtab: 3341 symbols, 2388 defined functions
+  .rel.dyn: {23: 1689, 21: 1} (2=R_ARM_ABS32, 23=R_ARM_RELATIVE, 21/22=GLOB_DAT/JUMP_SLOT)
+== AND2011 binary.mod vs libbinary.so
+sizes 1034522 / 1034442 ; sha256 995b59cc75796ebe / c31276b0d6578c8d
+  .hash            identical
+  .dynsym          identical
+  .dynstr          identical
+  .rel.dyn         identical
+  .rel.plt         identical
+  .plt             identical
+  .text            identical
+  .rodata          identical
+  .ARM.extab       identical
+  .ARM.exidx       identical
+  .data.rel.ro     identical
+  .dynamic         identical
+  .got             identical
+  .data            identical
+  .comment         identical
+  .ARM.attributes  identical
+  .shstrtab        identical
+  .symtab          identical
+  .strtab          identical
+  binary.mod bytes after ELF end: 80 ; prefix identical to .so: True

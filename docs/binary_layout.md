@@ -1,5 +1,16 @@
 # Layout nhị phân — 영웅서기4 (KTF / LGT / Android)
 
+> **Từ 2026-10-15: nguồn sự thật = AND2011 `jarfile.mp3!/binary.mod`** (xem §0). KTF/LGT 2010 chỉ để đối chiếu.
+
+## 0. AND2011 `binary.mod` (nguồn sự thật)
+CONFIRMED (`docs/binlayout_output.txt`, `tools/binlayout.py` tham số thứ 4):
+- ELF32 ARM DYN, GCC 4.2.1, toàn ARM mode; **mọi section giống hệt** `lib/armeabi/libbinary.so`. File dài hơn 80 byte:
+  trailer `RAPT` (AID `00035956`, thư viện `kernel dlet wipic`) — cùng loại với section `.raptor` của LGT 2010.
+- sha256 `995b59cc75796ebeb96c5a3f47e25b7b02884c27af9fe91928fb23f9d1164096`, ngày trong jar 2011-04-18 11:38:42.
+- Quy ước địa chỉ cho toàn dự án: **vaddr ELF của AND2011** (vd. `timerCB` @0xa7994). GOT base 0xe01a8.
+- Hàm/biến/call graph/import: `docs/symbols_and2011.tsv`, `objects_and2011.tsv`, `callgraph_and2011.tsv`, `imports_and2011.tsv`, `fptrs_and2011.tsv`.
+- Màn hình: `docs/phaseB_display.md`. Luồng: `docs/phaseB_flows.md`.
+
 Tái lập: `python3 -I tools/binlayout.py <ktf client.bin> <lgt binary.mod> <android libbinary.so>` → `docs/binlayout_output.txt`.
 Nhãn: **CONFIRMED** (có offset/trace), **INFERRED** (nêu căn cứ), **UNKNOWN**.
 

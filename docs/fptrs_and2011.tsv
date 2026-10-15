@@ -1,0 +1,174 @@
+section	slot_vaddr	object	function
+.data	0xe0bec	cfunc	startClet
+.data	0xe0bf0	cfunc+0x4	pauseClet
+.data	0xe0bf4	cfunc+0x8	resumeClet
+.data	0xe0bf8	cfunc+0xc	destroyClet
+.data	0xe0bfc	cfunc+0x10	paintClet
+.data	0xe0c00	cfunc+0x14	handleCletEvent
+.data	0xe0c08	_export_table+0x4	init
+.data	0xe183c	gMenuPaint	GMenu_PaintMainMenu
+.data	0xe1840	gMenuPaint+0x4	GMenu_PaintStatus
+.data	0xe1844	gMenuPaint+0x8	GMenu_PaintInventory
+.data	0xe1848	gMenuPaint+0xc	GMenu_PaintEquipMent
+.data	0xe184c	gMenuPaint+0x10	GMenu_PaintSkill
+.data	0xe1850	gMenuPaint+0x14	GMenu_PaintArmsGuardian
+.data	0xe1854	gMenuPaint+0x18	GMenu_PaintQuest
+.data	0xe1858	gMenuPaint+0x1c	GMenu_PaintSystem
+.data	0xe185c	gMenuKey	GMenu_MainKey
+.data	0xe1860	gMenuKey+0x4	GMenu_StatusKey
+.data	0xe1864	gMenuKey+0x8	GMenu_InventoryKey
+.data	0xe1868	gMenuKey+0xc	GMenu_EquipMentKey
+.data	0xe186c	gMenuKey+0x10	GMenu_SkillKey
+.data	0xe1870	gMenuKey+0x14	GMenu_ArmsGuardianKey
+.data	0xe1874	gMenuKey+0x18	GMenu_QuestKey
+.data	0xe1878	gMenuKey+0x1c	GMenu_SystemKey
+.data	0xe18fc	mMenuProc	NpcUiNullProc
+.data	0xe1900	mMenuProc+0x4	NpcUiNetProc
+.data	0xe1904	mMenuProc+0x8	NpcUiNetProc
+.data	0xe1908	mMenuProc+0xc	NpcUiNullProc
+.data	0xe190c	mMenuProc+0x10	NpcUiNullProc
+.data	0xe1910	mMenuProc+0x14	NpcUiNullProc
+.data	0xe1914	mMenuProc+0x18	NpcUiNullProc
+.data	0xe1918	mMenuPaint	MMenu_PaintMain
+.data	0xe191c	mMenuPaint+0x4	MMenu_PaintStoryMode
+.data	0xe1920	mMenuPaint+0x8	MMenu_PaintNetwork
+.data	0xe1924	mMenuPaint+0xc	MMenu_PaintOption
+.data	0xe1928	mMenuPaint+0x10	MMenu_PaintHelp
+.data	0xe192c	mMenuPaint+0x14	MMenu_PaintSupport
+.data	0xe1930	mMenuPaint+0x18	MMenu_PaintExit
+.data	0xe1934	mMenuKey	MMenu_MainKey
+.data	0xe1938	mMenuKey+0x4	MMenu_StoryModeKey
+.data	0xe193c	mMenuKey+0x8	MMenu_NetworkKey
+.data	0xe1940	mMenuKey+0xc	MMenu_OptionKey
+.data	0xe1944	mMenuKey+0x10	MMenu_HelpKey
+.data	0xe1948	mMenuKey+0x14	MMenu_SupportKey
+.data	0xe194c	mMenuKey+0x18	MMenu_ExitKey
+.data	0xe19b0	NpcUiProc	NpcUiShopProc
+.data	0xe19b4	NpcUiProc+0x4	NpcUiNullProc
+.data	0xe19b8	NpcUiProc+0x8	NpcUiNullProc
+.data	0xe19bc	NpcUiProc+0xc	NpcUiNullProc
+.data	0xe19c0	NpcUiProc+0x10	NpcUiNullProc
+.data	0xe19c4	NpcUiProc+0x14	NpcUiNullProc
+.data	0xe19c8	NpcUiProc+0x18	NpcUiNullProc
+.data	0xe19cc	NpcUiProc+0x1c	NpcUiNullProc
+.data	0xe19d0	NpcUiProc+0x20	NpcUiNullProc
+.data	0xe19d4	NpcUiProc+0x24	NpcUiNullProc
+.data	0xe19d8	NpcUiProc+0x28	NpcUiNetProc
+.data	0xe19dc	NpcUiPaint	NpcUiShop_Paint
+.data	0xe19e0	NpcUiPaint+0x4	NpcUiSmith_Paint
+.data	0xe19e4	NpcUiPaint+0x8	NpcUiCombine_Paint
+.data	0xe19e8	NpcUiPaint+0xc	NpcUiEnchant_Paint
+.data	0xe19ec	NpcUiPaint+0x10	NpcUiRefine_Paint
+.data	0xe19f0	NpcUiPaint+0x14	NpcUiADVRefine_Paint
+.data	0xe19f4	NpcUiPaint+0x18	NpcUiCompound_Paint
+.data	0xe19f8	NpcUiPaint+0x1c	NpcUiArmsShop_Paint
+.data	0xe19fc	NpcUiPaint+0x20	NpcUiGuardianShop_Paint
+.data	0xe1a00	NpcUiPaint+0x24	NpcUiWorldMap_Paint
+.data	0xe1a04	NpcUiPaint+0x28	NpcUiNet_Paint
+.data	0xe1a08	NpcUiKey	NpcUiShop_Key
+.data	0xe1a0c	NpcUiKey+0x4	NpcUiSmith_Key
+.data	0xe1a10	NpcUiKey+0x8	NpcUiCombine_Key
+.data	0xe1a14	NpcUiKey+0xc	NpcUiEnchant_Key
+.data	0xe1a18	NpcUiKey+0x10	NpcUiRefine_Key
+.data	0xe1a1c	NpcUiKey+0x14	NpcUiADVRefine_Key
+.data	0xe1a20	NpcUiKey+0x18	NpcUiCompound_Key
+.data	0xe1a24	NpcUiKey+0x1c	NpcUiArmsShop_Key
+.data	0xe1a28	NpcUiKey+0x20	NpcUiGuardianShop_Key
+.data	0xe1a2c	NpcUiKey+0x24	NpcUiWorldMap_Key
+.data	0xe1a30	NpcUiKey+0x28	NpcUiNet_Key
+.got	0xe0358		MainFrame_Null
+.got	0xe0360		TS_KeyPressed
+.got	0xe0368		_midas_funcOnBillcomSocketWriteCBerror
+.got	0xe037c		MainMenuFrame_KeyPressed
+.got	0xe038c		Popup_CONFIRM
+.got	0xe0390		GameMenuFrame_KeyReleased
+.got	0xe03c0		LogoFrame_KeyPressed
+.got	0xe03d0		TS_KeyReleased
+.got	0xe0410		SM_CallBack
+.got	0xe041c		timerCB
+.got	0xe042c		EVT_OnInitEvent
+.got	0xe044c		_midas_funcOnBillcomSocketReadCB
+.got	0xe048c		GameMenuFrame_Process
+.got	0xe04ac		DM_DrawMosaic565Ex
+.got	0xe04cc		MainGameFrame_HideNotify
+.got	0xe04e0		_midas_funcLibConnectTimerCB
+.got	0xe04e4		_midas_funcOnBillcomSocketConnect
+.got	0xe0500		LogoFrame_HideNotify
+.got	0xe0504		auth_NETLIBCB
+.got	0xe0508		DM_DrawRotate565
+.got	0xe0520		Evt_OnMessageBox
+.got	0xe0524		LoadFrame_HideNotify
+.got	0xe0528		netConnectCB
+.got	0xe053c		DM_DrawRotate565Ex
+.got	0xe0544		EVT_OnCondition
+.got	0xe0558		MainGameFrame_TouchPressed
+.got	0xe0564		TitleFrame_KeyReleased
+.got	0xe0574		MainFrame_NullKey
+.got	0xe0584		EVT_OnFunction
+.got	0xe05c8		DM_ByteToIntPixel16
+.got	0xe062c		TitleFrame_HideNotify
+.got	0xe0664		DM_IntToBytePixel32
+.got	0xe066c		_midas_funcDspCrossRoadOnConnect
+.got	0xe0680		LogoFrame_endProcess
+.got	0xe06b0		LoadFrame_Render
+.got	0xe06c8		DM_ByteToIntPixel32
+.got	0xe06d0		TitleFrame_Process
+.got	0xe06dc		MainGameFrame_TouchReleased
+.got	0xe06e4		MainMenuFrame_ShowNotify
+.got	0xe0710		LogoFrame_Render
+.got	0xe0728		MainGameFrame_KeyPressed
+.got	0xe074c		GameMenuFrame_HideNotify
+.got	0xe0758		GameMenuFrame_Render
+.got	0xe0770		MainGameFrame_KeyReleased
+.got	0xe0780		_midas_funcOnBillcomSocketWriteCB
+.got	0xe07a8		EVT_OnEvent
+.got	0xe07bc		TS_EndProcess
+.got	0xe07c8		MainMenuFrame_endProcess
+.got	0xe07d4		TitleFrame_KeyPressed
+.got	0xe07ec		MainGameFrame_Process
+.got	0xe07f0		MainGameFrame_EndProcess
+.got	0xe07fc		TS_ShowNotify
+.got	0xe080c		GameMenuFrame_KeyPressed
+.got	0xe081c		NpcUi_Process
+.got	0xe0824		_midas_funcBillcomResetTickTimerCB
+.got	0xe082c		_midas_internalLibOnHostAddr
+.got	0xe0868		TitleFrame_endProcess
+.got	0xe087c		MainGameFrame_Render
+.got	0xe0880		MainMenuFrame_Process
+.got	0xe0884		TPopup_state
+.got	0xe0894		LogoFrame_ShowNotify
+.got	0xe08a8		_midas_internalBillcomFuncSets
+.got	0xe08c0		DM_IntToBytePixelDef
+.got	0xe08c8		LogoFrame_Process
+.got	0xe08e0		_midas_funcDspCrossRoadLibCb
+.got	0xe0900		DM_DrawScreen565Ex
+.got	0xe0924		NpcUi_EndProcess
+.got	0xe0928		internal9400TimerCB
+.got	0xe0934		TS_Process
+.got	0xe0998		netLibCB
+.got	0xe09a4		_midas_funcLibDspCB_OnError
+.got	0xe09ac		LogoFrame_KeyReleased
+.got	0xe09b8		_midas_funcBillcomSocketConnectCB_direct_to_CP
+.got	0xe09cc		DM_LoadResGbm565
+.got	0xe09dc		TS_HideNotify
+.got	0xe09e8		LoadFrame_endProcess
+.got	0xe09fc		MainMenuFrame_HideNotify
+.got	0xe0a28		DM_IntToBytePixel16
+.got	0xe0a44		LoadFrame_Process
+.got	0xe0a54		MainMenuFrame_Render
+.got	0xe0a80		DM_ByteToIntPixelDef
+.got	0xe0a90		MainMenuFrame_KeyReleased
+.got	0xe0aa4		TS_Render
+.got	0xe0ab8		NpcUi_Render
+.got	0xe0ac4		DM_DrawScreen565
+.got	0xe0ac8		MainGameFrame_ShowNotify
+.got	0xe0ae8		_midas_funcNetConnectCB
+.got	0xe0af8		TitleFrame_ShowNotify
+.got	0xe0afc		NpcUi_KeyPressed
+.got	0xe0b20		GameMenuFrame_ShowNotify
+.got	0xe0b28		_midas_funcCallLibCB
+.got	0xe0b38		GameMenuFrame_EndProcess
+.got	0xe0b40		LoadFrame_ShowNotify
+.got	0xe0bc4		android_c_trampoline
+.got	0xe0bd4		TitleFrame_Render
+.got	0xe0bdc		DM_LoadMergeGbm565

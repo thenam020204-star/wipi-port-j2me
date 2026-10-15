@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Reproducible layout analysis of the three native binaries.
 
-Usage: python3 -I tools/binlayout.py <ktf client.bin> <lgt binary.mod> <android libbinary.so>
+Usage: python3 -I tools/binlayout.py <ktf client.bin> <lgt binary.mod> <android libbinary.so> [<AND2011 binary.mod>]
 
 KTF client.bin is NOT an ELF. Its first 0x70 bytes are a self-relocating Thumb
 loader; everything printed for KTF is derived by re-executing that loader's
@@ -67,7 +67,29 @@ def elf(path, label):
                 print('  %s: %s (2=R_ARM_ABS32, 23=R_ARM_RELATIVE, 21/22=GLOB_DAT/JUMP_SLOT)' % (rs, dict(c)))
 
 
+def same_code(a, b):
+    """AND2011: binary.mod (code the WIPI player runs) vs lib/armeabi/libbinary.so."""
+    import hashlib
+    print('== AND2011 binary.mod vs libbinary.so')
+    da, db = open(a, 'rb').read(), open(b, 'rb').read()
+    print('sizes %d / %d ; sha256 %s / %s' % (len(da), len(db), hashlib.sha256(da).hexdigest()[:16],
+                                             hashlib.sha256(db).hexdigest()[:16]))
+    with open(a, 'rb') as fa, open(b, 'rb') as fb:
+        ea, eb = ELFFile(fa), ELFFile(fb)
+        for s in ea.iter_sections():
+            if not s.name or s['sh_type'] == 'SHT_NOBITS':
+                continue
+            t = eb.get_section_by_name(s.name)
+            print('  %-16s %s' % (s.name, 'identical' if t is not None and s.data() == t.data() else 'DIFFERENT'))
+        end = max(s['sh_offset'] + s['sh_size'] for s in ea.iter_sections() if s['sh_type'] != 'SHT_NOBITS')
+        end = max(end, ea['e_shoff'] + ea['e_shnum'] * ea['e_shentsize'])
+        print('  binary.mod bytes after ELF end: %d ; prefix identical to .so: %s' % (len(da) - end, da[:len(db)] == db))
+
+
 if __name__ == '__main__':
     ktf(sys.argv[1])
     elf(sys.argv[2], 'LGT binary.mod')
     elf(sys.argv[3], 'Android libbinary.so')
+    if len(sys.argv) > 4:
+        elf(sys.argv[4], 'AND2011 binary.mod (source of truth)')
+        same_code(sys.argv[4], sys.argv[3])

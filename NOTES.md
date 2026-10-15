@@ -10,7 +10,27 @@ Chi tiết layout: `docs/binary_layout.md`. Manifest/hash: `docs/manifest_*.tsv`
 | Độ phân giải nội bộ | 240×320 | CONFIRMED `__adf__` `DisplaySize:240*320` |
 | JAR / heap | JAR không giới hạn (dự kiến ~3 MB), heap ≥ 2 MB | người dùng chọn; BSS KTF 387872 B + tài nguyên |
 | Thiết bị | lớp S60v3 / S40 đời cao, 240×320 | INFERRED |
-| Nguồn sự thật | KTF `client.bin387872`; LGT `binary.mod` + Android `libbinary.so` để đối chiếu | người dùng chọn |
+| Nguồn sự thật | **AND2011** `영웅서기4.apk!/res/raw/jarfile.mp3!/binary.mod` (sha256 `995b59cc…`) + tài nguyên `res/` của jar đó; KTF/LGT 2010 chỉ đối chiếu | người dùng: "bản nào mới nhất và đầy đủ thì port bản đó" (2026-10-15) |
+
+## Quyết định nguồn: AND2011 (2026-10-15)
+| Bản | Ngày build binary | Ver/ID | Ghi chú |
+|---|---|---|---|
+| KTF `client.bin387872` | 2009-12-29 | 01.00.03, AID 010100D4 | raw Thumb, không symbol |
+| LGT `binary.mod` | 2010-01-18 | 01.00.01, AID 0002D74B | ELF EXEC, không symbol |
+| **AND2011 `binary.mod`** | **2011-04-18** | 01.00.00, `android.lgt.wipi.App00035956` | ELF DYN, 2388 hàm có tên |
+
+CONFIRMED:
+- APK chỉ là launcher: `classes.dex` ghi `jarfile` ra `…/files/00035956.jar` rồi phát `android.intent.action.LAUNCH_WIPI` (trình chạy WIPI của LG U+). Mã chạy thật là `binary.mod`.
+- `binary.mod` giống hệt `lib/armeabi/libbinary.so` ở mọi section; thêm trailer `RAPT` 80 byte.
+- Độ đầy đủ: so với LGT 2010 chỉ thiếu `CM/TITLE_BM`, `CM/TITLE_CIF`. So với KTF chỉ thiếu `client.bin` và 5 file cảnh:
+  `e0183`/`n0162` = màn debug/QA (nhảy level, "사운드 테스트", lối tắt boss cuối); `e0184` gần rỗng; `n0163` = bản trùng thoại của `e0163`
+  (AND2011/LGT đều có `e0163`); `e0185` UNKNOWN.
+- Có thêm: 91 file (OGG song song MMF, biến thể `GRADE_*`, `kickbert`), UI cảm ứng (`Touch_*`), `&SKIP`. 128 file dữ liệu khác KTF.
+
+## Phạm vi port (mặc định, chưa phải quyết định không thể đảo)
+- Chỉ port đường phím. **Không port UI cảm ứng** (bàn phím ảo, `Touch_*`). Đây là thay đổi hành vi có chủ đích vì máy đích J2ME dùng bàn phím.
+- Âm thanh lấy từ nguồn MMF (SMAF) như bản WIPI. OGG không dùng được trên J2ME.
+- Bỏ mạng/xác thực/thanh toán (`clsidAuth*`, `_midas_*`, `MC_net*`) để chạy offline. Mỗi điểm cắt sẽ ghi lại tại đây.
 
 ## Đầu vào & bất biến
 - Bản gốc chỉ đọc; mọi giải nén nằm trong `work/` (gitignored — không commit/phân phối lại tài nguyên gốc).
@@ -51,19 +71,30 @@ Chi tiết layout: `docs/binary_layout.md`. Manifest/hash: `docs/manifest_*.tsv`
 - Toolchain J2ME có sẵn trong `HL4_project/tools/` (cldcapi11, midpapi20, ecj, ProGuard=preverify, microemulator) — dùng làm **công cụ** ở Phase D.
 - Emulator đối chứng cho golden trace (Phase F): interpreter ARM của project cũ (`hl4j`, RunHeadless) hoặc `wie` — chỉ để đối chứng, không làm runtime.
 
+## Phase B — tiến độ (AND2011)
+### Đã biết (CONFIRMED) — chi tiết: `docs/phaseB_display.md`, `docs/phaseB_flows.md`
+- Vùng game = **240×320** khi frame 240×400 (keysize 80 @0xc8c48). Phần dư là bàn phím ảo. Bố cục tính theo `_lcdG+0x54/0x58`. Màu RGB565.
+- Điểm vào: `init` → `wipic_event_handler(cfunc)`; `cfunc = {startClet, pauseClet, resumeClet, destroyClet, paintClet(rỗng), handleCletEvent}`.
+- Game loop = `timerCB` @0xa7994: KeyPressed → KeyReleased → TouchNotify → Process → Render → EndProcess → SM_PlayResEx → FlushLcd → hẹn lại.
+- Timer one-shot đặt lại sau khi vẽ; trễ mặc định 1 ms (lúc tải màn 10 ms). Logic chạy theo khung, tốc độ phụ thuộc máy.
+- Input: 0x1f6/0x1f7 = phím nhấn/nhả, được chốt vào `mainFrame+0x30/0x34` và xử lý ở tick kế tiếp.
+- Float chỉ ở 6 hàm (khởi tạo bảng, sqrt/sin, HSB→RGB).
+### Chưa biết
+- Nhịp khung thực trên máy (cần để tái hiện tốc độ). Bảng keycode. Chi tiết render/audio/save. Điểm cắt mạng an toàn.
+
 ## Trạng thái (Definition of Done)
 | Hạng mục | Trạng thái | Bằng chứng |
 |---|---|---|
-| Đã phân tích | Phase A xong (inventory + layout) | `docs/manifest_*.tsv`, `docs/binlayout_output.txt`, `docs/binary_layout.md` |
+| Đã phân tích | Phase A xong; Phase B: symbol/call graph/màn hình/loop/input xong, còn render/audio/save | `docs/manifest_*.tsv`, `docs/binlayout_output.txt`, `docs/phaseB_*.md`, `docs/*_and2011.tsv` |
 | Đã triển khai | chưa | — |
 | Đã build | chưa | — |
 | Chạy emulator | chưa | — |
 | Đối chiếu bản gốc | chưa | — |
 | Chạy thiết bị thật | chưa xác minh | — |
 
-## Việc tiếp theo (Phase B)
-1. Phân tích hàm KTF: tìm prologue Thumb (`push {…,lr}`), duyệt BL, dựng danh sách hàm + call graph (`tools/ktf_funcs.py`).
-2. Lan truyền tên `.so` → KTF: neo bằng chuỗi (đã có 155), rồi khớp theo call graph (callee/caller đã biết, hằng số, kích thước) — mỗi tên có điểm tin cậy HIGH/MEDIUM/LOW; lưu `docs/symbols_ktf.tsv` (img+X ↔ tên ↔ bằng chứng).
-3. Giải bảng interface WIPI KTF (descriptor img+0x881a8, `WIPIC_knlInterface`…) để liệt kê API được gọi.
-4. Xác định game loop / timer / input / render / audio / save trên KTF (neo: `nFPS_Render`, `SCENE_Change`, `loadTitleImage`, `kickass`).
-5. Xác minh float trên KTF (tìm các hàm tương ứng 6 hàm float của `.so`).
+## Việc tiếp theo
+1. Phase B: bảng keycode, máy trạng thái Frame (`MainFrame_*` và các frame đăng ký qua GOT), render pipeline `DM_*`,
+   audio `SM_*`/`MC_mda*`, save `MX_sd*`/`MC_fs*` (đối chiếu file `kickass` thật), RNG (`UM_RandSeed`), điểm cắt mạng.
+2. Emulator đối chứng: ARM interpreter + HLE cho 105 import có tên (tham khảo runtime LGT của project cũ). Ghi golden trace cho Phase F.
+3. Phase C: giải mã tài nguyên (DES theo hàm `Decode`/`Encode` của game; định dạng `_BM _CIF _PAL _EXD _scn _DAT`).
+4. Ghép tên AND2011 → KTF vẫn giữ để đối chiếu (`docs/xmatch_strings_ktf_so.tsv`).

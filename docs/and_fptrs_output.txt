@@ -1,0 +1,11 @@
+data fptr slots 77 GOT fptr slots 96
+cfunc                          6  startClet pauseClet resumeClet destroyClet paintClet handleCletEvent
+_export_table                  1  init
+gMenuPaint                     8  GMenu_PaintMainMenu GMenu_PaintStatus GMenu_PaintInventory GMenu_PaintEquipMent GMenu_PaintSkill GMenu_PaintArmsGuardian GMenu_PaintQuest GMenu_PaintSystem
+gMenuKey                       8  GMenu_MainKey GMenu_StatusKey GMenu_InventoryKey GMenu_EquipMentKey GMenu_SkillKey GMenu_ArmsGuardianKey GMenu_QuestKey GMenu_SystemKey
+mMenuProc                      7  NpcUiNullProc NpcUiNetProc NpcUiNetProc NpcUiNullProc NpcUiNullProc NpcUiNullProc NpcUiNullProc
+mMenuPaint                     7  MMenu_PaintMain MMenu_PaintStoryMode MMenu_PaintNetwork MMenu_PaintOption MMenu_PaintHelp MMenu_PaintSupport MMenu_PaintExit
+mMenuKey                       7  MMenu_MainKey MMenu_StoryModeKey MMenu_NetworkKey MMenu_OptionKey MMenu_HelpKey MMenu_SupportKey MMenu_ExitKey
+NpcUiProc                     11  NpcUiShopProc NpcUiNullProc NpcUiNullProc NpcUiNullProc NpcUiNullProc NpcUiNullProc NpcUiNullProc NpcUiNullProc NpcUiNullProc NpcUiNullProc NpcUiNetProc
+NpcUiPaint                    11  NpcUiShop_Paint NpcUiSmith_Paint NpcUiCombine_Paint NpcUiEnchant_Paint NpcUiRefine_Paint NpcUiADVRefine_Paint NpcUiCompound_Paint NpcUiArmsShop_Paint NpcUiGuardianShop_Paint NpcUiWorldMap_Paint NpcUiNet_Paint
+NpcUiKey                      11  NpcUiShop_Key NpcUiSmith_Key NpcUiCombine_Key NpcUiEnchant_Key NpcUiRefine_Key NpcUiADVRefine_Key NpcUiCompound_Key NpcUiArmsShop_Key NpcUiGuardianShop_Key NpcUiWorldMap_Key NpcUiNet_Key
