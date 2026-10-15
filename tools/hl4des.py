@@ -144,7 +144,7 @@ def verify_tables(e):
 # Resource paths loaded through UM_LoadResDes (CONFIRMED by call sites, docs/resmap_and2011.tsv)
 DES_PATTERNS = [r'^E/_BSDAT_\d+$', r'^E/_ESDAT_\d+$', r'^FR/_FR_(BA|PL|EN|SU|SK)$', r'^HDAT/_H_S\d{3}$',
                 r'^HDAT/_H_(SA|BH|BS|SS)$', r'^ITM/DAT/', r'^NPC/_QUEST_\d+_DAT$', r'^NPC/NPCUI_ARMSSHOP_DAT_\d+$',
-                r'^NPC/_NPCUI_(COMBINE|SHOP|GUARDIANSHOP)_DAT_\d+$', r'^NPC/PROBABILITY_DAT$', r'^MAP/SC/[en]\d{4}_scn$']
+                r'^NPC/_NPCUI_(COMBINE|SHOP|GUARDIANSHOP)_DAT_\d+$', r'^NPC/PROBABILITY_DAT$', r'^NPC/NPCUI_GUARDIANSHOP_DAT$', r'^MAP/SC/[en]\d{4}_scn$']
 
 
 def is_des_resource(rel):

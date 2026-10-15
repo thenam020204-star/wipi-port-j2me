@@ -28,6 +28,7 @@ class Tracer:
         self.dst = None
         self.ev = []
         self.reads = []
+        self.keep_reads = False      # when set, every event gets a 6th element: sorted tuple of the file offsets read since the last store
         self._hooks = []
 
     def watch_src(self, addr, n):
@@ -44,7 +45,10 @@ class Tracer:
         if self.dst and self.dst[0] <= address < self.dst[0] + self.dst[1]:
             lo = min(self.reads) if self.reads else None
             hi = max(self.reads) if self.reads else None
-            self.ev.append((address - self.dst[0], size, value & ((1 << (8 * size)) - 1), lo, hi))
+            e = (address - self.dst[0], size, value & ((1 << (8 * size)) - 1), lo, hi)
+            if self.keep_reads:
+                e += (tuple(sorted(set(self.reads))),)
+            self.ev.append(e)
             self.reads = []
 
     def run(self, fn):
@@ -62,7 +66,8 @@ class Tracer:
 def summarize(ev):
     """Collapse events to one line per distinct destination range (last write wins), printing the source file range."""
     last = {}
-    for d, sz, v, lo, hi in ev:
+    for e in ev:
+        d, sz, v, lo, hi = e[:5]
         last[(d, sz)] = (v, lo, hi)
     return sorted(last.items())
 
