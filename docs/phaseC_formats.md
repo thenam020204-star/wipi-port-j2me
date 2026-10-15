@@ -13,6 +13,7 @@ với chính hàm gốc chạy trong emulator đối chứng (`tools/and_emu.py`
 | Text LinkedText (`u16 size, u16 count, u16 off[]`) | `tools/linkedtext.py` | 12 file, mọi chỉ số, so với `getLinkedText` gốc | **0 lệch** |
 | Chỉ mục sprite CIF | `tools/cif.py` | 148 file, so bảng offset khung với `SPR_loadSprite` gốc | **0 lệch** (`docs/phaseC_cif_selftest.txt`) |
 | Hình học `DM_DrawImg` | `tools/dm_blit.py` | `selftest`: so cả khung 240×400, 1.776.085 ca; kế hoạch cắt 907.137 ca | **0 lệch** (`docs/phaseC_blit.md`) |
+| Ghép sprite (mảnh CIF → lời gọi `DM_*`) | `tools/sprite.py` | `selftest`: 14.400 ca ngẫu nhiên (phủ 100% code của `SPR_drawSpriteNPC`) + 55.107 ca vẽ trên 148 CIF thật | **0 lệch** (`docs/phaseC_sprite.md`) |
 | Phân loại DES/thô | `tools/and_resmap.py` → `docs/resmap_and2011.tsv` | theo nơi gọi `UM_LoadResDes` / `UM_LoadRes` | CONFIRMED |
 
 ## 1. Nạp tài nguyên (CONFIRMED)
@@ -71,12 +72,12 @@ Mọi thứ khác (ảnh, sprite, map, font, text, AI, palette, âm thanh) nạp
 - Còn lại: `NPC/NAME_DAT` (`Event_LoadTextData`) có định dạng khác, chưa phân tích.
 
 ## 6. Sprite CIF (CONFIRMED cấu trúc, `tools/cif.py`)
-- `s8 n0`, `n0` byte (UNKNOWN), `u8 nAnim`. Mỗi anim: `s8 nDir`; mỗi hướng: `u8 nFrames`; mỗi khung: `s8 nParts` + các mảnh.
+- `s8 n0` (= **số set ảnh**, lưu ở `spr+0x38`, CONFIRMED @0xc1f4c), `n0` byte (bộ nạp bỏ qua; UNKNOWN), `u8 nAnim`. Mỗi anim: `s8 nDir`; mỗi hướng: `u8 nFrames`; mỗi khung: `s8 nParts` + các mảnh.
 - Kích thước mảnh phụ thuộc **mode do hàm nạp truyền vào**:
   - mode 2 (`HERO_spriteLoad` @0x7e564): 10 byte nếu `b0 & 0x80`, ngược lại 5 byte;
   - mode khác (0x11, ví dụ `loadSimpleSprite`): 9 hoặc 4 byte.
 - Bản gốc lưu, cho mỗi (anim, hướng), một mảng offset tới byte `nParts` của từng khung.
-- Ý nghĩa các trường trong mảnh (toạ độ, chỉ số ảnh, lật…) nằm ở `SPR_drawSpriteNPC` (4128 byte): **chưa phân tích**, việc tiếp theo.
+- Ý nghĩa các trường trong mảnh (set, chỉ số ảnh, toạ độ, lớp lật, tỉ lệ, góc, alpha, hiệu ứng) và luật vẽ: **đã kiểm vi sai**, xem `docs/phaseC_sprite.md`.
 
 ## 7. Còn lại (chưa phân tích)
 `_PAL` (196), `_CIF` (148), `_EXD` (117), `_scn` (345, DES), `_DAT` (26), `_TXT` (8), `MAP/M/_MAP_M_%03d`, `TILE/`, `OBJ/`, `FT/` (font),

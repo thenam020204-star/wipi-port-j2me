@@ -1,0 +1,2 @@
+random-CIF cases 14400 mismatches 0 instruction coverage 1029 / 1032 (uncovered are literal-pool words: ['0xc107c', '0xc1080', '0xc1084'] )
+real-CIF files 148 draw cases 55107 mismatches 0
