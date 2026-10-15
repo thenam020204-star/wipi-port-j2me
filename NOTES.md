@@ -97,10 +97,23 @@ Chi tiết + địa chỉ: `docs/phaseB_display.md`, `docs/phaseB_flows.md`.
 - File `kickass` mẫu không khớp layout MIDAS v2 (header chỉ có `./Hero4Sms`, dữ liệu ở 0x285…).
 - Định dạng nội dung save. Pipeline vẽ chi tiết (GBM/sprite).
 
+## Phase C — tiến độ (AND2011)
+Chi tiết: `docs/phaseC_formats.md`. Mọi định dạng dưới đây được **kiểm vi sai với chính hàm gốc** chạy trong emulator đối chứng
+(`tools/and_emu.py` + `tools/and_hle.py`, Unicorn — chỉ là công cụ kiểm thử).
+| Định dạng | Kết quả |
+|---|---|
+| DES biến thể (S1[3][10] = 2, nhánh giải mã bỏ `swap32bit`) | 408/408 file khớp (giải mã + mã hoá) |
+| Ảnh GBM (container, 4/8 bpp, khoá màu 0xF81F) | 4069/4069 ảnh khớp từng pixel |
+| Font HNF + ghép âm tiết Hàn | 2350 âm tiết + 82 ASCII khớp từng pixel |
+| Text MrgText / LinkedText | 6 + 12 file khớp |
+| Chỉ mục sprite CIF | 148/148 file khớp cấu trúc |
+Chưa làm: ngữ nghĩa mảnh CIF / vẽ sprite, `_PAL` và các biến thể blending, `_EXD`, map/tile/object, script `_scn`,
+bảng `_DAT`, AI `E/AI%03d`, `NPC/NAME_DAT`, chuyển MMF → MIDI/WAV.
+
 ## Trạng thái (Definition of Done)
 | Hạng mục | Trạng thái | Bằng chứng |
 |---|---|---|
-| Đã phân tích | Phase A xong; Phase B: symbol, call graph (sống/chết), màn hình, loop, input/phím, frame, RNG, audio, save (chuỗi gọi + container), xác thực, bảng chuyển frame xong; còn pipeline vẽ | `docs/manifest_*.tsv`, `docs/binlayout_output.txt`, `docs/phaseB_*.md`, `docs/*_and2011.tsv` |
+| Đã phân tích | Phase A xong; Phase B: symbol, call graph (sống/chết), màn hình, loop, input/phím, frame, RNG, audio, save (chuỗi gọi + container), xác thực, bảng chuyển frame xong; còn pipeline vẽ. Phase C: DES, GBM, font, text, chỉ mục CIF đã kiểm vi sai | `docs/manifest_*.tsv`, `docs/binlayout_output.txt`, `docs/phaseB_*.md`, `docs/*_and2011.tsv` |
 | Đã triển khai | chưa | — |
 | Đã build | chưa | — |
 | Chạy emulator | chưa | — |

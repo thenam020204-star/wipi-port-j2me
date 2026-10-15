@@ -1,0 +1,13 @@
+linkedtext files 12 mismatches 0
+   GMenu/_GMENU_SUB_TXT 17
+   GMenu/_GMENU_TXT 111
+   GMenu/_NPCUI_TXT 85
+   NPC/_EVENT_POP_TXT 11
+   TOUCH/txm02_t_kt 31
+   TOUCH/txm02_t_lgt 31
+   TOUCH/txm02_t_skt 31
+   tdf/_tdf_FREE_LGT_TXT 3
+   tdf/_tdf_FREE_TXT 3
+   tdf/_tdf_HELP 27
+   tdf/_tdf_MENU_TXT 28
+   tdf/_tdf_UseInfo_TXT 5

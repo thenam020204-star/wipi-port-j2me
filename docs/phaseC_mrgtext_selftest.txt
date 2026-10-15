@@ -1,0 +1,7 @@
+mrgtext files 6 mismatches 0
+   ITM/_ITM_SD0 69
+   ITM/_ITM_SD1 78
+   ITM/_ITM_SD2 54
+   tdf/_tdf_OPT 22
+   tdf/_tdf_SMENU 6
+   tdf/_tdf_TIP 40

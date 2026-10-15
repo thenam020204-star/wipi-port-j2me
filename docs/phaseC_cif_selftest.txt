@@ -1,0 +1,1 @@
+CIF files 148 structure mismatches 0 modes used {17: 140, 2: 8}
