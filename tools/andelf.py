@@ -47,6 +47,20 @@ class AndElf:
                 self.gotsym[r['r_offset']] = dyn.get_symbol(r['r_info_sym']).name
         self.cs = capstone.Cs(capstone.CS_ARCH_ARM, capstone.CS_MODE_ARM)
         self.cs.detail = True
+        self.getters = {}
+        self._find_getters()
+
+    def _find_getters(self):
+        """Leaf functions <=32 bytes ending 'bx lr' with r0 = a known global address
+        (e.g. MainFrame_Get -> mainFrame). Calls to them then set r0 in annotate()."""
+        for a, sz, n, t in self.funcs:
+            if t or not 0 < sz <= 32:
+                continue
+            ann = self.annotate(n, _final_regs=True)
+            regs, last = ann
+            if last is not None and last.mnemonic == 'bx' and last.op_str == 'lr' \
+                    and regs.get('r0', ('',))[0] == 'addr' and isinstance(regs['r0'][1], int):
+                self.getters[a] = regs['r0'][1]
 
     # --- address helpers -------------------------------------------------
     def off(self, va):
@@ -110,8 +124,8 @@ class AndElf:
         o = self.off(a)
         return list(self.cs.disasm(self.data[o:o + sz], a))
 
-    def annotate(self, fname):
-        """Yield (insn, note) with resolved constants."""
+    def annotate(self, fname, _final_regs=False):
+        """Return [(insn, note)] with resolved constants."""
         ins = self.insns(fname)
         targets = set()
         for i in ins:
@@ -120,6 +134,8 @@ class AndElf:
         regs = {}
         out = []
         for i in ins:
+            if _final_regs and i.mnemonic == 'bx' and i.op_str == 'lr':
+                return dict(regs), i
             if i.address in targets:
                 regs = {k: v for k, v in regs.items() if v[0] == 'got'}  # GCC keeps GOT base in a callee-saved reg
             note = ''
@@ -180,6 +196,9 @@ class AndElf:
                     note = '-> %s' % (self.name(t) or hex(t))
                     for r in ('r0', 'r1', 'r2', 'r3', 'r12', 'lr'):
                         regs.pop(r, None)
+                    if t in self.getters:
+                        regs['r0'] = ('addr', self.getters[t])
+                        note += ' (r0=%#x %s)' % (self.getters[t], self.name(self.getters[t]) or '')
                 elif m == 'b' and i.op_str.startswith('#'):
                     t = int(i.op_str[1:], 16)
                     nm = self.name(t)
@@ -190,6 +209,8 @@ class AndElf:
             except Exception as ex:  # keep going; annotation only
                 note = 'annot-err %s' % ex
             out.append((i, note))
+        if _final_regs:
+            return regs, None
         return out
 
     def dump(self, fname, limit=None):

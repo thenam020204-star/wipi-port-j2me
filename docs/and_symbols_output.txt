@@ -1,5 +1,5 @@
 functions 2388 zero-size 0 objects 633
-edges 6900 BL to non-function-start 0 []
-imports 105 unused imports ['MC_netGetHostAddr', 'wipic_event_handler', 'MC_netSetWriteCB', 'MC_mdaClipSetVolume', 'MC_knlUnsetTimer', 'MC_netSetReadCB']
+edges 7487 (incl. tail-call branches 775) BL to non-function-start 0 [] B out of function to non-start 0 []
+functions with no caller (roots, before fptr tables) 509
+imports 105 unused imports []
 functions with indirect calls 27 total 31
-top modules [('HERO', 156), ('MONSTER', 148), ('Map', 129), ('CHAR', 113), ('midas', 108), ('DM', 93), ('Event', 81), ('GMenu', 78), ('MX', 74), ('Item', 58), ('MainGameFrame', 50), ('Touch', 49), ('SUMMON', 48), ('UM', 48), ('Boss', 36), ('NPC', 36), ('SPR', 35), ('Hero', 29), ('HF', 28), ('IT', 26), ('imeLocal', 25), ('MMenu', 25), ('MP', 20), ('MainFrame', 20), ('NpcUi', 20), ('MainMenuFrame', 19), ('OBJ', 19), ('ItemBag', 18), ('NpcUiNet', 18), ('PopupBox', 16), ('EnemyAIParsing', 16), ('TargetEffect', 15), ('LinkedList', 15), ('SM', 15), ('BattleProc', 15), ('GameMenuFrame', 14), ('DropItem', 14), ('MAPOBJ', 14), ('CUSTOM', 13), ('Eff', 12)]

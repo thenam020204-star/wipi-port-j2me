@@ -299,20 +299,20 @@
   00089110  str      r1, [r5, #0x18]              ; mem 0x101184 mainFrame+0x18
   00089114  str      r2, [r5, #0x40]              ; mem 0x1011ac mainFrame+0x40
   00089118  str      r2, [r5, #0x3c]              ; mem 0x1011a8 mainFrame+0x3c
-  0008911c  bl       #0x889f8                     ; -> MainFrame_Get
+  0008911c  bl       #0x889f8                     ; -> MainFrame_Get (r0=0x10116c mainFrame)
   00089120  ldr      r2, [pc, #0x68]              ; lit=0x7dc
   00089124  ldr      r4, [r6, r2]                 ; GOT[0xe0984] -> 0xedbe4 _lcdG
   00089128  ldr      r3, [r4, #0x54]              ; mem 0xedc38 _lcdG+0x54
   0008912c  add      r3, r3, r3, lsr #31          
   00089130  asr      r3, r3, #1                   
   00089134  sub      r3, r3, #0x58                
-  00089138  str      r3, [r0, #0x44]              
-  0008913c  bl       #0x889f8                     ; -> MainFrame_Get
+  00089138  str      r3, [r0, #0x44]              ; mem 0x1011b0 mainFrame+0x44
+  0008913c  bl       #0x889f8                     ; -> MainFrame_Get (r0=0x10116c mainFrame)
   00089140  ldr      r3, [r4, #0x58]              ; mem 0xedc3c _lcdG+0x58
   00089144  add      r3, r3, r3, lsr #31          
   00089148  asr      r3, r3, #1                   
   0008914c  sub      r3, r3, #0x50                
-  00089150  str      r3, [r0, #0x48]              
+  00089150  str      r3, [r0, #0x48]              ; mem 0x1011b4 mainFrame+0x48
   00089154  bl       #0x89010                     ; -> MainFrame_certification
   00089158  cmp      r0, #0                       
   0008915c  ldr      r0, [pc, #0x30]              ; lit=0xffff5500
@@ -654,12 +654,12 @@
   00035ff4  bl       #0x21e54                     ; -> MC_grpCreateOffScreenFrameBuffer@plt
   00035ff8  str      r0, [r6, #0x14]              
   00035ffc  b        #0x35e88                     
-  00036000  bl       #0x9dab4                     ; -> MP_getHero
-  00036004  ldr      r4, [r0, #8]                 
-  00036008  bl       #0x9dab4                     ; -> MP_getHero
+  00036000  bl       #0x9dab4                     ; -> MP_getHero (r0=0x1017b0 _pool)
+  00036004  ldr      r4, [r0, #8]                 ; mem 0x1017b8 _pool+0x8
+  00036008  bl       #0x9dab4                     ; -> MP_getHero (r0=0x1017b0 _pool)
   0003600c  ldr      ip, [r7, #0x54]              
   00036010  ldr      lr, [r7, #0x58]              
-  00036014  ldr      r1, [r0, #0xc]               
+  00036014  ldr      r1, [r0, #0xc]               ; mem 0x1017bc _pool+0xc
   00036018  add      r3, ip, ip, lsr #31          
   0003601c  add      r2, lr, lr, lsr #31          
   00036020  sub      r4, r4, r3, asr #1           

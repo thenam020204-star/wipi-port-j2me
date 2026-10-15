@@ -72,20 +72,34 @@ CONFIRMED:
 - Emulator đối chứng cho golden trace (Phase F): interpreter ARM của project cũ (`hl4j`, RunHeadless) hoặc `wie` — chỉ để đối chứng, không làm runtime.
 
 ## Phase B — tiến độ (AND2011)
-### Đã biết (CONFIRMED) — chi tiết: `docs/phaseB_display.md`, `docs/phaseB_flows.md`
-- Vùng game = **240×320** khi frame 240×400 (keysize 80 @0xc8c48). Phần dư là bàn phím ảo. Bố cục tính theo `_lcdG+0x54/0x58`. Màu RGB565.
+Chi tiết + địa chỉ: `docs/phaseB_display.md`, `docs/phaseB_flows.md`.
+### Đã biết (CONFIRMED)
+- Vùng game = **240×320** khi frame là 240×400 (keysize 80 @0xc8c48); phần dư là bàn phím ảo. Bố cục tính theo `_lcdG+0x54/0x58`. Màu RGB565.
 - Điểm vào: `init` → `wipic_event_handler(cfunc)`; `cfunc = {startClet, pauseClet, resumeClet, destroyClet, paintClet(rỗng), handleCletEvent}`.
-- Game loop = `timerCB` @0xa7994: KeyPressed → KeyReleased → TouchNotify → Process → Render → EndProcess → SM_PlayResEx → FlushLcd → hẹn lại.
-- Timer one-shot đặt lại sau khi vẽ; trễ mặc định 1 ms (lúc tải màn 10 ms). Logic chạy theo khung, tốc độ phụ thuộc máy.
-- Input: 0x1f6/0x1f7 = phím nhấn/nhả, được chốt vào `mainFrame+0x30/0x34` và xử lý ở tick kế tiếp.
-- Float chỉ ở 6 hàm (khởi tạo bảng, sqrt/sin, HSB→RGB).
+- Khởi động không kết nối mạng: `clsidAuth → auth_startApp → gamerating_close → onStartApp`, rồi `status = 1`.
+  Màn mật khẩu/hết hạn (mốc 2011-04-25) chỉ chạy khi `status == 5`; giá trị 5 chỉ được ghi bởi hàm chết ⇒ không bao giờ kích hoạt.
+- Game loop = `timerCB` @0xa7994: KeyPressed → KeyReleased → TouchNotify → Process → Render → EndProcess → SM_PlayResEx → FlushLcd → reset phím → hẹn lại.
+  Timer one-shot đặt lại sau khi vẽ; trễ mặc định 1 ms (lúc tải màn 10 ms). Logic chạy theo khung.
+- Input bắt cạnh: mỗi sự kiện nhấn/nhả tạo đúng một lần gọi handler ở tick kế tiếp, rồi bị reset. Không tự lặp phím. Bảng phím: `phaseB_flows.md` §4.
+- Frame: 9 slot con trỏ `nBASE_*`, gán qua `MainFrame_ElementAt`; `MainFrame_changeFrame` gán `mainFrame+0x38`.
+- RNG: BSD `random()` TYPE_3, không bao giờ seed lại ⇒ dãy số tất định từ khi khởi động.
+- Âm thanh: một kênh. Hiệu ứng ngắt BGM; BGM phát lại từ đầu sau 30 khung. Bản 2011 chỉ phát **OGG**; các file MMF cùng chỉ số vẫn nằm trong jar.
+- Save: `SaveGameData_Net` tuần tự hoá → DES → MIDAS SD. Mọi file logic `./Hero4Game_N`, `./Hero4Slot_N`, … nằm trong một file `kickass`,
+  header v2 = `FF 56 30 00` + 40 mục × {name[16], u16 cap, u16 size}.
+- Call graph 7487 cạnh (gồm tail-call). 1942 hàm sống / 446 hàm chết (`docs/reach_and2011.txt`).
+- Float còn sống: `make_Lenz_array`, `MGHEO_sqrt`, `DM_ConvertHSBtoRGB`.
+### Thay đổi hành vi đã dự kiến (sẽ ghi lại khi triển khai)
+- Âm thanh lấy từ MMF thay vì OGG 2011 (J2ME không phát được OGG) ⇒ âm sắc có thể khác.
+- Không port cảm ứng/pad ảo; chặn NpcUi chế độ 11 (mạng/cửa hàng) và các gói mạng; `PHONENUMBER` cố định cho `CERTIDATA`.
 ### Chưa biết
-- Nhịp khung thực trên máy (cần để tái hiện tốc độ). Bảng keycode. Chi tiết render/audio/save. Điểm cắt mạng an toàn.
+- Nhịp khung thực trên máy. Chức năng phím `*` (`_game+3`).
+- File `kickass` mẫu không khớp layout MIDAS v2 (header chỉ có `./Hero4Sms`, dữ liệu ở 0x285…).
+- Bảng chuyển frame. Định dạng nội dung save. Pipeline vẽ chi tiết (GBM/sprite).
 
 ## Trạng thái (Definition of Done)
 | Hạng mục | Trạng thái | Bằng chứng |
 |---|---|---|
-| Đã phân tích | Phase A xong; Phase B: symbol/call graph/màn hình/loop/input xong, còn render/audio/save | `docs/manifest_*.tsv`, `docs/binlayout_output.txt`, `docs/phaseB_*.md`, `docs/*_and2011.tsv` |
+| Đã phân tích | Phase A xong; Phase B: symbol, call graph (sống/chết), màn hình, loop, input/phím, frame, RNG, audio, save (chuỗi gọi + container), xác thực xong; còn bảng chuyển frame và pipeline vẽ | `docs/manifest_*.tsv`, `docs/binlayout_output.txt`, `docs/phaseB_*.md`, `docs/*_and2011.tsv` |
 | Đã triển khai | chưa | — |
 | Đã build | chưa | — |
 | Chạy emulator | chưa | — |
@@ -93,8 +107,9 @@ CONFIRMED:
 | Chạy thiết bị thật | chưa xác minh | — |
 
 ## Việc tiếp theo
-1. Phase B: bảng keycode, máy trạng thái Frame (`MainFrame_*` và các frame đăng ký qua GOT), render pipeline `DM_*`,
-   audio `SM_*`/`MC_mda*`, save `MX_sd*`/`MC_fs*` (đối chiếu file `kickass` thật), RNG (`UM_RandSeed`), điểm cắt mạng.
-2. Emulator đối chứng: ARM interpreter + HLE cho 105 import có tên (tham khảo runtime LGT của project cũ). Ghi golden trace cho Phase F.
-3. Phase C: giải mã tài nguyên (DES theo hàm `Decode`/`Encode` của game; định dạng `_BM _CIF _PAL _EXD _scn _DAT`).
+1. Phase B (phần còn lại): bảng chuyển frame (các lần gọi `MainFrame_ElementAt`, `_nextFrame`); pipeline vẽ `DM_*`/`SPR_*`;
+   đối chiếu `kickass` mẫu với thư viện MIDAS của KTF/LGT 2010.
+2. Emulator đối chứng: ARM interpreter + HLE cho 105 import có tên (tham khảo runtime LGT của project cũ). Ghi golden trace cho Phase F,
+   gồm đo nhịp khung và kiểm chứng dãy RNG.
+3. Phase C: giải mã tài nguyên (DES `MX_desDecrypt`; định dạng `_BM _CIF _PAL _EXD _scn _DAT`); script chuyển MMF → MIDI/WAV.
 4. Ghép tên AND2011 → KTF vẫn giữ để đối chiếu (`docs/xmatch_strings_ktf_so.tsv`).
