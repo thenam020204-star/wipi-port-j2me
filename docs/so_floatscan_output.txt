@@ -1,0 +1,19 @@
+functions 2388 {'arm': 2388}
+__aeabi_d2f          1  make_Lenz_array
+__aeabi_d2iz         2  make_Lenz_array make_Warp_array
+__aeabi_dadd         5  MGHEO_sqrt _sin _sqrt make_Lenz_array make_Warp_array
+__aeabi_dcmpeq       3  DM_ConvertHSBtoRGB MGHEO_sqrt _sqrt
+__aeabi_dcmpge       1  make_Warp_array
+__aeabi_dcmpgt       1  _sin
+__aeabi_dcmplt       1  _sin
+__aeabi_ddiv         4  MGHEO_sqrt _sin _sqrt make_Warp_array
+__aeabi_dmul         4  MGHEO_sqrt _sin _sqrt make_Warp_array
+__aeabi_dsub         2  _sin make_Warp_array
+__aeabi_f2d          1  make_Lenz_array
+__aeabi_fcmpge       1  make_Lenz_array
+__aeabi_fdiv         1  make_Lenz_array
+__aeabi_fmul         1  make_Lenz_array
+__aeabi_i2d          3  DM_ConvertHSBtoRGB make_Lenz_array make_Warp_array
+__aeabi_i2f          1  make_Lenz_array
+--- import usage counts
+LGTC_knlGetProgramExecName:1 MC_fsClose:5 MC_fsFileAttribute:5 MC_fsOpen:5 MC_fsRead:4 MC_fsRemove:1 MC_fsSeek:7 MC_fsWrite:4 MC_grpCreateImage:1 MC_grpCreateOffScreenFrameBuffer:3 MC_grpDestroyImage:2 MC_grpDestroyOffScreenFrameBuffer:3 MC_grpDrawArc:1 MC_grpDrawImage:2 MC_grpDrawLine:1 MC_grpDrawRect:2 MC_grpFillArc:2 MC_grpFillRect:8 MC_grpFlushLcd:3 MC_grpGetContext:1 MC_grpGetDisplayInfo:1 MC_grpGetImageProperty:2 MC_grpGetPixelFromRGB:22 MC_grpGetRGBFromPixel:12 MC_grpGetScreenFrameBuffer:4 MC_grpInitContext:5 MC_grpSetContext:7 MC_knlAlloc:4 MC_knlCalloc:60 MC_knlCurrentTime:26 MC_knlDefTimer:3 MC_knlExit:3 MC_knlFree:78 MC_knlGetCurProgramID:1 MC_knlGetFreeMemory:5 MC_knlGetResource:4 MC_knlGetResourceID:1 MC_knlGetSystemProperty:13 MC_knlGetTotalMemory:1 MC_knlPrintk:8 MC_knlSetTimer:8 MC_knlSprintk:104 MC_mdaClipAllocPlayer:2 MC_mdaClipClearData:1 MC_mdaClipCreate:1 MC_mdaClipFree:1 MC_mdaClipPutData:1 MC_mdaPlay:1 MC_mdaSetMuteState:2 MC_mdaStop:1 MC_mdaVibrator:1 MC_miscBackLight:1 MC_netBillSocket:2 MC_netClose:1 MC_netConnect:1 MC_netSocketClose:1 MC_netSocketConnect:2 MC_netSocketRead:1 MC_phnCallPlace:1 MC_utilHtonl:1 MC_utilHtons:4 MC_utilNtohl:1 __aeabi_d2f:1 __aeabi_d2iz:2 __aeabi_dadd:5 __aeabi_dcmpeq:3 __aeabi_dcmpge:1 __aeabi_dcmpgt:1 __aeabi_dcmplt:1 __aeabi_ddiv:4 __aeabi_dmul:4 __aeabi_dsub:2 __aeabi_f2d:1 __aeabi_fcmpge:1 __aeabi_fdiv:1 __aeabi_fmul:1 __aeabi_i2d:3 __aeabi_i2f:1 __aeabi_idiv:60 __aeabi_idivmod:29 __aeabi_ldivmod:4 __aeabi_uidivmod:1 dlet_set_property:1 dlib_memcmp:1 dlib_memcpy:109 dlib_memmove:1 dlib_memset:156 dlib_strcmp:13 dlib_strcpy:13 dlib_strlen:83 dlib_strncmp:1 dlib_strncpy:2 dlib_strstr:2 memcpy:57 memmove:1 memset:41 wipic_get_frame_height:19 wipic_get_frame_pointer:15 wipic_get_frame_width:20

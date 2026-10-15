@@ -1,0 +1,253 @@
+ktf_lit_site	ktf_str	so_functions	string
+0x02a78	0x806b4	Boss_spriteEtcLoad,HERO_spriteLoad,MONSTER_spriteLoad,SUMMON_loadSummonSprite	/H4/EXD/_H_%03d_EXD
+0x02bd4	0x806c8	Boss_dataLoad_g	/E/_BGDAT
+0x02e84	0x806d4	Boss_dataLoad_d	/E/_BSDAT_%d
+0x0a4cc	0x81000	DM_ProcFrameBufMirror,DM_ProcFrameBufRGB	====> frameBuf is NULL\n
+0x0a878	0x81000	DM_ProcFrameBufMirror,DM_ProcFrameBufRGB	====> frameBuf is NULL\n
+0x19a54	0x81018	GetLoadResBinary	real size %d \n
+0x1c0a0	0x81040	DropItem_drawInfo,Event_PopupRepay_B,GMenu_drawItemInfo,GMenu_itemName,NpcUiCompound_Paint,pickUp_DropitemName	%s %s
+0x1ec94	0x81068	EnemyAIParsing_LoadData	/E/AI%03d
+0x2032c	0x81498	Event_PopupRepay_B	%s %d %s
+0x20330	0x814a4	Event_PopupRepay_B	%s;%s;%s
+0x20338	0x81040	DropItem_drawInfo,Event_PopupRepay_B,GMenu_drawItemInfo,GMenu_itemName,NpcUiCompound_Paint,pickUp_DropitemName	%s %s
+0x20344	0x814b0	Event_PopupRepay_B	%s;%s
+0x20348	0x814b8	Event_PopupRepay_B	%s %d
+0x20acc	0x814c0	Event_LoadTextData	NPC/NAME_DAT
+0x20ba0	0x814d0	Event_Load_Faceimage	NPC/FACE_0_CIF
+0x20ba4	0x814e0	Event_Load_Faceimage	NPC/FACE_0_BM
+0x214b0	0x814f0	Event_Draw_ScriptWindow	=%s 
+0x21f90	0x814f8	Event_Draw_SubTitle	VALUE
+0x22a04	0x81518	SCENE_Change	/MAP/SC/e%04d_scn
+0x22a14	0x8152c	SCENE_Change	/MAP/SC/n%04d_scn
+0x236c8	0x8138c	EVENT_worldmap	$1-1-%
+0x23c9c	0x81540	Event_Get_QuestStatusList,GMenu_PaintQuest	/ITM/DAT/_ITM_Q_REPAY_%d
+0x249f8	0x8155c	EVT_OnFunction	/ITM/DAT/_ITM_REPAY_%d
+0x26870	0x817a4	FR_Load	/FR/_FR_PL
+0x26878	0x817b0	FR_Load	/FR/_FR_EN
+0x26880	0x817bc	FR_Load	/FR/_FR_SU
+0x26888	0x817c8	FR_Load	/FR/_FR_SK
+0x26adc	0x8292c	HERO_loadSkillInfo,loadSkillData	/HDAT/_H_S%03d
+0x278c0	0x81b34	GMenu_viewAbility	|%d
+0x278c4	0x81b3c	GMenu_viewAbility	}%d
+0x278c8	0x81b44	GMenu_viewAbility	^%d
+0x27be8	0x8293c	GameMenuFrame_initGamsMenuState,NpcUi_Initialize	/GMenu/_NPCUI_TXT
+0x27fcc	0x82950	GMenu_ItemDisassembly	가 생성되었습니다
+0x27fd0	0x82964	GMenu_ItemDisassembly,UM_getMakeResName	%s%d%s
+0x27fd4	0x8296c	GMenu_ItemDisassembly	아이템 분해후 돈;
+0x27fdc	0x82980	GMenu_ItemDisassembly	아이템 분해후 오브가 1개 생성되었습니다
+0x27fe4	0x829a8	GMenu_ItemDisassembly	개 생성되었습니다
+0x27fe8	0x829bc	GMenu_ItemDisassembly	아이템 분해후;
+0x27fec	0x829cc	GMenu_ItemDisassembly	%s%s이(가) %d%s
+0x27ff0	0x829dc	GMenu_ItemDisassembly	아이템 분해후 제련석이;
+0x27ff4	0x829f4	GMenu_ItemDisassembly	아이템 분해후 포션이;
+0x284e4	0x81040	DropItem_drawInfo,Event_PopupRepay_B,GMenu_drawItemInfo,GMenu_itemName,NpcUiCompound_Paint,pickUp_DropitemName	%s %s
+0x28620	0x82a0c	GMenu_drawSocket	SOCKET
+0x2877c	0x82a14	GMenu_randomBoxData	/ITM/DAT/_ITM_CASH_RANOMBOX
+0x28b5c	0x82a34	GMenu_drawAblityInfo	|%s %s%d
+0x28ed8	0x82a48	GMenu_drawItemInfo	%d%s+%d
+0x28eec	0x82a50	GMenu_drawItemInfo	LV%s%d
+0x28ef8	0x81040	DropItem_drawInfo,Event_PopupRepay_B,GMenu_drawItemInfo,GMenu_itemName,NpcUiCompound_Paint,pickUp_DropitemName	%s %s
+0x28efc	0x82a58	GMenu_drawItemInfo	ATK
+0x28f04	0x82a5c	GMenu_drawItemInfo	M.DEF
+0x29240	0x82a64	GMenu_itemName	네트워크전용
+0x294e4	0x81040	DropItem_drawInfo,Event_PopupRepay_B,GMenu_drawItemInfo,GMenu_itemName,NpcUiCompound_Paint,pickUp_DropitemName	%s %s
+0x294e8	0x82a90	GMenu_drawItemInfo	P.DEF
+0x294f0	0x82a98	GMenu_InventroyInfo,GMenu_drawItemInfo	%d/10 강화
+0x29500	0x82aa4	GMenu_drawItemInfo	RES
+0x29620	0x82aa8	GMenu_drawMoney	CASH
+0x2ba94	0x82ab0	LoadPartQuestData	/NPC/_QUEST_%d_DAT
+0x2c260	0x82ae4	GMenu_SystemKey,MainMenuFrame_Initialize	/tdf/_tdf_HELP
+0x2d1b8	0x82b10	GMenu_PaintGuardian,NpcUiGuardianShop_Paint	LV %d
+0x2d678	0x82b10	GMenu_PaintGuardian,NpcUiGuardianShop_Paint	LV %d
+0x2d67c	0x82b18	GMenu_PaintGuardian,NpcUiGuardianShop_Paint	|Guardian Point
+0x2e070	0x82b28	GMenu_PaintArms,GMenu_PaintEquipMent,GMenu_drawInvenMain_Base	{%s
+0x2e3ac	0x82b2c	GMenu_PaintArmsGuardian,GMenu_PaintSkill	Arms
+0x2e3b0	0x82b34	GMenu_PaintArmsGuardian,NpcUiGuardianShop_Paint	Guardian
+0x2e8ec	0x82b40	GMenu_PaintSkill	Skill
+0x2e904	0x82b48	GMenu_PaintSkill	Defend
+0x2ed0c	0x82b64	GMenu_PaintSkill	{%4d
+0x2ed10	0x82b6c	GMenu_PaintSkill	|SkillPoint
+0x2ed18	0x82b78	GMenu_PaintSkill	Attack
+0x2ed1c	0x82b80	GMenu_PaintSkill	Guns
+0x2ed20	0x82b88	GMenu_PaintSkill	Magic
+0x2f054	0x82b2c	GMenu_PaintArmsGuardian,GMenu_PaintSkill	Arms
+0x2f058	0x82ba4	GMenu_PaintSkill	Summon
+0x2f3c8	0x82bac	GMenu_PaintEquipMent	Equipment
+0x2f77c	0x82b28	GMenu_PaintArms,GMenu_PaintEquipMent,GMenu_drawInvenMain_Base	{%s
+0x2fddc	0x82a98	GMenu_InventroyInfo,GMenu_drawItemInfo	%d/10 강화
+0x301c8	0x82bb8	GMenu_DrawStatue	Status
+0x301e4	0x82bc0	GMenu_DrawStatue	인간
+0x301f0	0x8276c	GMenu_PaintQuest,NpcUiGuardianShop_Paint	%d/%d
+0x3076c	0x82bd0	GMenu_DrawStatue	선주
+0x30c14	0x82bfc	GMenu_PaintQuest	Quest
+0x30c30	0x82c04	GMenu_PaintQuest	메인
+0x30c34	0x82c0c	GMenu_PaintQuest	서브
+0x30fd8	0x82773	GMenu_PaintQuest	목적
+0x30ff0	0x82c0c	GMenu_PaintQuest	서브
+0x31004	0x81540	Event_Get_QuestStatusList,GMenu_PaintQuest	/ITM/DAT/_ITM_Q_REPAY_%d
+0x31008	0x82c04	GMenu_PaintQuest	메인
+0x31150	0x82c1c	GMenu_PaintMainMenu	Menu
+0x3116c	0x82c24	GMenu_PaintMainMenu	----
+0x314bc	0x81504	drawPopup_skt	아니오
+0x314c0	0x82c2c	imeLocal_button_init	확인
+0x314c4	0x82c34	drawPopup_skt	WAIT
+0x31828	0x827a0	GMenu_PaintSystem	System
+0x31b3c	0x82c4c	GMenu_drawInvenMain_Base,NpcUiSmith_baseForm	|소지금
+0x31e8c	0x82b28	GMenu_PaintArms,GMenu_PaintEquipMent,GMenu_drawInvenMain_Base	{%s
+0x31e98	0x82c58	GMenu_drawInvenMain_Base	&%d
+0x32180	0x827be	GMenu_drawInvenMain	전체
+0x3219c	0x82824	GMenu_drawInvenMain	{%d/%d
+0x328cc	0x8282c	GMenu_drawWorldMap	성지/드림랜드
+0x33b4c	0x82d48	HF_loadEng	/FT/_FT_ENGS7X7
+0x33ca4	0x82d58	HF_loadHangle	/FT/_FT_KOR10X11
+0x33d10	0x82d6c	HF_loadHangleType844	/FT/_FT_TYPE844
+0x33d5c	0x82d7c	HF_loadHangleIndoTable	/FT/_FT_HANINFO
+0x33da0	0x82d8c	HF_loadHangleCodeTable	/FT/_FT_HANCODE
+0x343ec	0x8292c	HERO_loadSkillInfo,loadSkillData	/HDAT/_H_S%03d
+0x3451c	0x83240	HERO_loadArmsSkillInfo	/HDAT/_H_SA
+0x34a50	0x806b4	Boss_spriteEtcLoad,HERO_spriteLoad,MONSTER_spriteLoad,SUMMON_loadSummonSprite	/H4/EXD/_H_%03d_EXD
+0x34b84	0x8324c	HERO_loadParticleInfo	/HDAT/_H_PDAT
+0x34ce0	0x8325c	HERO_loadParticleData	/HDAT/_H_PS%03d
+0x3d99c	0x833b0	Item_getID,Item_getSizeID	/ITM/DAT/_ITM_%02d_DAT
+0x3dc20	0x833c8	Item_loadSetOptData	/ITM/DAT/_ITM_SET_OPTION
+0x3dd34	0x833e4	Item_dataPreLoad	/ITM/DAT/_ITM_OPTION
+0x3e5b4	0x833fc	GMenu_drawItemInfo,Item_getIconName,NpcUiNet_drawCashPopup,NpcUiNet_serverWait	%s%s
+0x3ff18	0x83404	Guardian_loadBasicData	/ITM/BASIC_SM_DAT
+0x40ef0	0x83484	LoadFrame_Process	/CM/_CM_EFICN
+0x41494	0x83494	LoadFrame_setState	/tdf/_tdf_TIP
+0x41758	0x83568	LogoFrame_Render	{인증 오류!!
+0x42494	0x83578	MainFrame_certification,NpcUi_ProcRecvPacket_AUTHORIZATION,_midas_funcDspCrossRoadMakePacket,auth_NETLIBCB,internalAuthCB	PHONENUMBER
+0x4249c	0x83584	MainFrame_certification	CERTIDATA
+0x429f0	0x83590	MainGameFrame_initGameOver,MainGameFrame_initQuickSave,NpcUi_Initialize,loadGMenuImage	/GMenu/_GMENU_TXT
+0x42b14	0x83590	MainGameFrame_initGameOver,MainGameFrame_initQuickSave,NpcUi_Initialize,loadGMenuImage	/GMenu/_GMENU_TXT
+0x42dec	0x835c8	MainGameFrame_drawGameOver	GAME OVER
+0x432c8	0x835d4	MainGameFrame_drawSkillSlotIcon	%2d
+0x440dc	0x835e8	MainGameFrame_drawGameBottomUI2	%02d
+0x456e0	0x83610	PickUpItem_addInfo	%s(%d/%d)
+0x45744	0x81040	DropItem_drawInfo,Event_PopupRepay_B,GMenu_drawItemInfo,GMenu_itemName,NpcUiCompound_Paint,pickUp_DropitemName	%s %s
+0x45954	0x8361c	ItemBag_pickUp	슬롯부족
+0x45c40	0x82ae4	GMenu_SystemKey,MainMenuFrame_Initialize	/tdf/_tdf_HELP
+0x461f4	0x840b8	MMenu_PaintMain,TitleFrame_Render	ELECTRONIC ARTS KOREA LLC
+0x4633c	0x840d4	MMenu_drawSlotBox	|LV {%d
+0x46344	0x840e0	MMenu_drawSlotBox	|----
+0x4666c	0x840e8	MMenu_drawSlotInfo	|Level {%d
+0x46670	0x840f4	MMenu_drawSlotInfo	%s/%s
+0x4667c	0x840fc	MMenu_drawSlotInfo	|play time {%02d:%02d:%02d
+0x47978	0x82c2c	imeLocal_button_init	확인
+0x49050	0x84134	Map_LoadMap	/MAP/M/_MAP_M_%03d
+0x49114	0x84148	Map_OBJIMG	/OBJ/%03d/_OBJ_%03d
+0x491f8	0x8415c	Map_Load_Tile_image	/TILE/_TILE_%03d
+0x52bf0	0x82ae4	GMenu_SystemKey,MainMenuFrame_Initialize	/tdf/_tdf_HELP
+0x552ac	0x846d0	CUSTOM_onStartClet,MX_imeCall,ModeChangeCheck,auth_NETLIBCB,internalAuthCB	PHONEMODEL
+0x55d0c	0x84700	_midas_funcBillcomSocketConnectCB_direct_to_CP,_midas_funcOnBillcomHostAddr	%s:%d
+0x561a0	0x83578	MainFrame_certification,NpcUi_ProcRecvPacket_AUTHORIZATION,_midas_funcDspCrossRoadMakePacket,auth_NETLIBCB,internalAuthCB	PHONENUMBER
+0x56210	0x84738	_midas_funcDspCrossRoadOnConnect,auth_netCONNECTcb	210.222.18.28
+0x5654c	0x84748	internalAuthCB	BuildNo
+0x56734	0x8477c	internalAuthCB	PASSWD
+0x5674c	0x84784	imeLocal_button_init	완료
+0x56750	0x83578	MainFrame_certification,NpcUi_ProcRecvPacket_AUTHORIZATION,_midas_funcDspCrossRoadMakePacket,auth_NETLIBCB,internalAuthCB	PHONENUMBER
+0x58584	0x848a0	MONSTER_dataLoad_d	/E/_ESDAT_%d
+0x58668	0x806b4	Boss_spriteEtcLoad,HERO_spriteLoad,MONSTER_spriteLoad,SUMMON_loadSummonSprite	/H4/EXD/_H_%03d_EXD
+0x5bfd0	0x849a0	MONSTER_teleportOut	액션 수행중 실패~!!!!  \n
+0x5e3d4	0x849bc	sendAlivePacket	[SEND PROTOCL] MAJOR_SYSTEM_MESSAGE / MINOR_KEEP_ALIVE_MSG\n
+0x5e42c	0x849f8	netErrorDisconnect,netLibCB,openConnect	서버와 접속이 종료되었습니다
+0x5e478	0x84a18	netConnectCB	210.222.18.31
+0x5e57c	0x849f8	netErrorDisconnect,netLibCB,openConnect	서버와 접속이 종료되었습니다
+0x5e784	0x84a28	NPC_dataLoad	/NPC/_NPCG_DAT
+0x5fe04	0x84a3c	NpcUi_probabilityLoad	/NPC/PROBABILITY_DAT
+0x602b0	0x84a54	NpcUiArmsShop_dataLoad	/NPC/NPCUI_ARMSSHOP_DAT_%d
+0x60380	0x84a70	NpcUiShop_dataLoad	/NPC/_NPCUI_SHOP_DAT_%d
+0x61350	0x84a88	NpcUiShop_Paint	판매하기
+0x61354	0x84a94	NpcUiArmsShop_Paint,NpcUiShop_Paint	구매하기
+0x61618	0x8293c	GameMenuFrame_initGamsMenuState,NpcUi_Initialize	/GMenu/_NPCUI_TXT
+0x6161c	0x84aa0	NpcUi_Initialize,loadGMenuImage	/GMenu/_GMENU_SUB_TXT
+0x61620	0x83590	MainGameFrame_initGameOver,MainGameFrame_initQuickSave,NpcUi_Initialize,loadGMenuImage	/GMenu/_GMENU_TXT
+0x61628	0x84ab8	NpcUi_Initialize,loadGameCommonImage	/ITM/_ITM_ICN
+0x617a0	0x84ac8	NpcUiArmsShop_Paint,NpcUiShop_Paint	Buy
+0x617c0	0x84a94	NpcUiArmsShop_Paint,NpcUiShop_Paint	구매하기
+0x61d38	0x84acc	NpcUiGuardianShop_dataLoad	/NPC/NPCUI_GUARDIANSHOP_DAT
+0x62400	0x82b34	GMenu_PaintArmsGuardian,NpcUiGuardianShop_Paint	Guardian
+0x62410	0x82b18	GMenu_PaintGuardian,NpcUiGuardianShop_Paint	|Guardian Point
+0x627bc	0x82b10	GMenu_PaintGuardian,NpcUiGuardianShop_Paint	LV %d
+0x62bfc	0x82c4c	GMenu_drawInvenMain_Base,NpcUiSmith_baseForm	|소지금
+0x62c00	0x84ae8	NpcUiRefine_Paint,NpcUiSmith_baseForm	제련
+0x62c04	0x84af0	NpcUiCompound_Paint,NpcUiSmith_baseForm	합성
+0x62c10	0x84af8	NpcUiSmith_baseForm	소모비용
+0x62cf4	0x84f00	NpcUiSmith_Paint	Smithy
+0x62f7c	0x84b04	NpcUiCombine_dataLoad	/NPC/_NPCUI_COMBINE_DAT_%d
+0x63388	0x84b20	NpcUiCombine_Paint,NpcUiSmith_Paint	Combine
+0x633a4	0x84b2c	NpcUiCombine_Paint	%s = %s%d/&%d
+0x63644	0x84b40	NpcUiCombine_Paint	|------
+0x6365c	0x82c4c	GMenu_drawInvenMain_Base,NpcUiSmith_baseForm	|소지금
+0x639c8	0x84b50	NpcUiCombine_Paint	필요아이템
+0x639d8	0x840e0	MMenu_drawSlotBox	|----
+0x63e9c	0x84b64	NpcUiEnchant_Paint,NpcUiSmith_Paint	Enchant
+0x63eb0	0x84b6c	NpcUiEnchant_Paint	부여
+0x642fc	0x84b74	NpcUiRefine_Paint	AVD.Refine
+0x64324	0x82c4c	GMenu_drawInvenMain_Base,NpcUiSmith_baseForm	|소지금
+0x64330	0x84ae8	NpcUiRefine_Paint,NpcUiSmith_baseForm	제련
+0x64628	0x84bb4	NpcUiRefine_Paint	{--
+0x64970	0x84bb8	NpcUiCompound_Paint,NpcUiSmith_Paint	Compound
+0x64980	0x84ff8	NpcUiCompound_Paint	성능
+0x64994	0x81040	DropItem_drawInfo,Event_PopupRepay_B,GMenu_drawItemInfo,GMenu_itemName,NpcUiCompound_Paint,pickUp_DropitemName	%s %s
+0x64998	0x82c4c	GMenu_drawInvenMain_Base,NpcUiSmith_baseForm	|소지금
+0x6499c	0x84af0	NpcUiCompound_Paint,NpcUiSmith_baseForm	합성
+0x64d10	0x82c4c	GMenu_drawInvenMain_Base,NpcUiSmith_baseForm	|소지금
+0x64e0c	0x84bc4	NpcUiNet_drawCashShop	가방%d
+0x64e10	0x84bcc	NpcUiNet_drawCashShop	Cash
+0x64fc4	0x833fc	GMenu_drawItemInfo,Item_getIconName,NpcUiNet_drawCashPopup,NpcUiNet_serverWait	%s%s
+0x685b8	0x83578	MainFrame_certification,NpcUi_ProcRecvPacket_AUTHORIZATION,_midas_funcDspCrossRoadMakePacket,auth_NETLIBCB,internalAuthCB	PHONENUMBER
+0x687a4	0x84bd4	NpcUiNet_drawNotice	Notice
+0x68a88	0x84be8	NpcUiNet_Paint	Item
+0x6ac4c	0x85ae0	PopupBox_pointString	%c%d
+0x6ade0	0x85ae8	loadHIMG	/H4/%03d/_HIMG_%03d_%03d
+0x6afb8	0x85b04	loadGameTypeCommImg	/CM/_ARMS_SKICN
+0x6afc0	0x85b14	loadGameTypeCommImg	/CM/_GUARDIAN_SKICN
+0x6aff0	0x85b28	loadCommonMenuImage	/GMenu/_GMENU_COMM_BM
+0x6b028	0x85b40	loadTitleImage	/tdf/TITLE_BM
+0x6b07c	0x85b50	loadLogoImage	/l/_LOGO
+0x6b084	0x85b5c	loadLogoImage	/CM/GRADE_BM
+0x6b0e0	0x85b7c	loadGMenuImage	/GMenu/_GMENU_ONLY_BM
+0x6b0e8	0x83590	MainGameFrame_initGameOver,MainGameFrame_initQuickSave,NpcUi_Initialize,loadGMenuImage	/GMenu/_GMENU_TXT
+0x6b0f0	0x84aa0	NpcUi_Initialize,loadGMenuImage	/GMenu/_GMENU_SUB_TXT
+0x6b120	0x85b94	loadShadowImage	/CM/_CM_SHADOW
+0x6b410	0x85ba4	loadEvtEffectCif	/MAP/EFFECT/_EVT_EFF_%d_CIF
+0x6b418	0x85bc0	loadEvtEffectCif	/MAP/EFFECT/_EVT_EFF_BM
+0x6b4a0	0x85bd8	loadMenuCharSpr	/CM/_MMENU_CHAR_%d_CIF
+0x6b4a4	0x85bf0	loadMenuCharSpr	/CM/_MMENU_CHAR_%d_BM
+0x6b4f0	0x85c08	loadMenuImage	/CM/_MMENU_BM
+0x6b540	0x85c18	loadCommonImage	/CM/_CM_IMGCM
+0x6b54c	0x85c28	loadCommonImage	/CM/_CM_CMEFFSPR
+0x6b550	0x85c3c	loadCommonImage	/CM/_CM_CMEFF
+0x6b594	0x85c4c	loadIMOImage	/CM/_CM_EMOSPR
+0x6b598	0x85c5c	loadIMOImage	/CM/_CM_EMO
+0x6bb8c	0x85c68	changePalette,loadGameCommonImage	/H4/PAL/_H_%03d_PAL
+0x6bcb0	0x85c7c	loadGameCommonImage	/NPC/_EVENT_POP_TXT
+0x6bcb8	0x85c68	changePalette,loadGameCommonImage	/H4/PAL/_H_%03d_PAL
+0x6bcbc	0x85c90	loadGameCommonImage	/CM/_CM_NUM
+0x6bccc	0x85c9c	loadGameCommonImage	/CM/_CM_INGAMEUI
+0x6bcd4	0x85cb0	loadGameCommonImage	/CM/_CM_SCRIPT
+0x6bcdc	0x84ab8	NpcUi_Initialize,loadGameCommonImage	/ITM/_ITM_ICN
+0x6bf0c	0x85dd8	SaveDataInit	J@IWO8N7L0E7E
+0x6c040	0x85de8	LoadGameRead_2,SaveFileRemove,SaveGameWrite	%s_%d
+0x6c13c	0x85de8	LoadGameRead_2,SaveFileRemove,SaveGameWrite	%s_%d
+0x6c19c	0x85de8	LoadGameRead_2,SaveFileRemove,SaveGameWrite	%s_%d
+0x6d994	0x85e5c	SprObject_create	/OBJ/SPR/_OBJ_SPR_%03d_CIF
+0x6d998	0x85e78	SprObject_create	/OBJ/SPR/_OBJ_SPR_%03d_BM
+0x6fc0c	0x85ec8	SUMMON_loadSummonData_D,SUMMON_loadSummonData_initD	/HDAT/_H_BS
+0x6fc98	0x85ec8	SUMMON_loadSummonData_D,SUMMON_loadSummonData_initD	/HDAT/_H_BS
+0x6fd68	0x85ed4	SUMMON_loadSummonData_G	/HDAT/_H_SG
+0x6fe0c	0x806b4	Boss_spriteEtcLoad,HERO_spriteLoad,MONSTER_spriteLoad,SUMMON_loadSummonSprite	/H4/EXD/_H_%03d_EXD
+0x745dc	0x840b8	MMenu_PaintMain,TitleFrame_Render	ELECTRONIC ARTS KOREA LLC
+0x755cc	0x8615c	UM_ITOA	0123456789abcdef
+0x75aa0	0x86170	UM_getMakeResName	%s%d%d0%d%s
+0x75aa4	0x8617c	UM_getMakeResName	%s%d%d%d%s
+0x75aa8	0x86188	UM_getMakeResName	%s%d0%d%s
+0x75aac	0x86194	UM_getMakeResName	%s%d%d%s
+0x75ab0	0x82964	GMenu_ItemDisassembly,UM_getMakeResName	%s%d%s
+0x75c50	0x861a0	UM_getPhoneVibe	ANNUN_SILENT
+0x75cd0	0x861b0	MX_sdIsExist,MX_sdReset,MX_sdSaveData,_midas_funcDspCrossRoadLibCb,_midas_funcDspCrossRoadMakePacket,_midas_funcDspCrossRoadSendUploadQuery,_midas_funcSdOpen	kickass
+0x76254	0x861b0	MX_sdIsExist,MX_sdReset,MX_sdSaveData,_midas_funcDspCrossRoadLibCb,_midas_funcDspCrossRoadMakePacket,_midas_funcDspCrossRoadSendUploadQuery,_midas_funcSdOpen	kickass
+0x76348	0x861b0	MX_sdIsExist,MX_sdReset,MX_sdSaveData,_midas_funcDspCrossRoadLibCb,_midas_funcDspCrossRoadMakePacket,_midas_funcDspCrossRoadSendUploadQuery,_midas_funcSdOpen	kickass
+0x76490	0x861b0	MX_sdIsExist,MX_sdReset,MX_sdSaveData,_midas_funcDspCrossRoadLibCb,_midas_funcDspCrossRoadMakePacket,_midas_funcDspCrossRoadSendUploadQuery,_midas_funcSdOpen	kickass
+0x76880	0x861d4	nFPS_Render	&U:%d F:%d T:%d S:%d

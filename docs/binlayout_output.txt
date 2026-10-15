@@ -1,0 +1,44 @@
+== KTF work/orig/ktf/010100D4.jar!/client.bin387872 size 566408
+reloc header @file 0x70: 1060 entries (table 0x74..0x1104)
+image start (r0) @file 0x1104, image length 0x89384
+reloc targets image-relative 0x0..0x88bb0, all < image: True
+image header: ptrtab=[0x88bb4,0x89384) bss=[0x89384,0xe7ea4) desc=0x881a8
+  ptrtab entries 500 ; ptrtab_end == image length: True ; bss_start == ptrtab_end: True
+  bss size 387872 (0x5eb20)  [filename suffix check at file 0x48: cmp r1,r3]
+  first ptrtab words ['0x0', '0x0', '0x0', '0xe7e20']
+  descriptor @0x881a8: ['0x88188', '0x861fc', '0x1', '0x0'] name=b'WIPI_exe'
+== LGT binary.mod work/orig/lgt/0002D74B.jar!/binary.mod
+type ET_EXEC machine EM_ARM entry 0x77504 flags 0x206
+  .text            SHT_PROGBITS   addr=0x001000 off=0x00034 size=0x7c142
+  .rel.text        SHT_REL        addr=0x000000 off=0x7c178 size=0x177f8
+  .data            SHT_PROGBITS   addr=0x1400000 off=0x93970 size=0x010ac
+  .rel.data        SHT_REL        addr=0x000000 off=0x94a1c size=0x00798
+  .bss             SHT_NOBITS     addr=0x1500000 off=0x951b4 size=0x67778
+  .shstrtab        SHT_STRTAB     addr=0x000000 off=0xfc92c size=0x00063
+  .raptor          SHT_NULL       addr=0x000000 off=0xfc990 size=0x0004c
+  .rel.text: {2: 12030, 15: 1} (2=R_ARM_ABS32, 23=R_ARM_RELATIVE, 21/22=GLOB_DAT/JUMP_SLOT)
+  .rel.data: {2: 159, 1: 84} (2=R_ARM_ABS32, 23=R_ARM_RELATIVE, 21/22=GLOB_DAT/JUMP_SLOT)
+== Android libbinary.so work/orig/android/영웅서기4.apk!/lib/armeabi/libbinary.so
+type ET_DYN machine EM_ARM entry 0x220c4 flags 0x4000002
+  .hash            SHT_HASH       addr=0x0000b4 off=0x000b4 size=0x04f3c
+  .dynsym          SHT_DYNSYM     addr=0x004ff0 off=0x04ff0 size=0x0bc80
+  .dynstr          SHT_STRTAB     addr=0x010c70 off=0x10c70 size=0x0d739
+  .rel.dyn         SHT_REL        addr=0x01e3ac off=0x1e3ac size=0x034d0
+  .rel.plt         SHT_REL        addr=0x02187c off=0x2187c size=0x00348
+  .plt             SHT_PROGBITS   addr=0x021bc4 off=0x21bc4 size=0x00500
+  .text            SHT_PROGBITS   addr=0x0220c4 off=0x220c4 size=0xb0cb0
+  .rodata          SHT_PROGBITS   addr=0x0d2d78 off=0xd2d78 size=0x06d60
+  .ARM.extab       SHT_PROGBITS   addr=0x0d9ad8 off=0xd9ad8 size=0x000b4
+  .ARM.exidx       SHT_ARM_EXIDX  addr=0x0d9b8c off=0xd9b8c size=0x04aa0
+  .data.rel.ro     SHT_PROGBITS   addr=0x0df62c off=0xde62c size=0x00aa4
+  .dynamic         SHT_DYNAMIC    addr=0x0e00d0 off=0xdf0d0 size=0x000d8
+  .got             SHT_PROGBITS   addr=0x0e01a8 off=0xdf1a8 size=0x00a44
+  .data            SHT_PROGBITS   addr=0x0e0bec off=0xdfbec size=0x0144c
+  .bss             SHT_NOBITS     addr=0x0e2038 off=0xe1038 size=0x6c168
+  .comment         SHT_PROGBITS   addr=0x000000 off=0xe1038 size=0x00048
+  .ARM.attributes  SHT_ARM_ATTRIBUTES addr=0x000000 off=0xe1080 size=0x00019
+  .shstrtab        SHT_STRTAB     addr=0x000000 off=0xe1099 size=0x000a6
+  .symtab          SHT_SYMTAB     addr=0x000000 off=0xe1488 size=0x0d0d0
+  .strtab          SHT_STRTAB     addr=0x000000 off=0xee558 size=0x0e372
+  .symtab: 3341 symbols, 2388 defined functions
+  .rel.dyn: {23: 1689, 21: 1} (2=R_ARM_ABS32, 23=R_ARM_RELATIVE, 21/22=GLOB_DAT/JUMP_SLOT)
