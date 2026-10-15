@@ -137,50 +137,50 @@
   000561c0  ldr      r3, [pc, #0x1d0]             ; lit=0x7c0
   000561c4  ldr      r2, [pc, #0x1d0]             ; lit=0x824
   000561c8  ldr      r1, [pc, #0x1d0]             ; lit=0xffff7504
-  000561cc  ldr      r3, [fp, r3]                 
-  000561d0  ldr      r2, [fp, r2]                 
-  000561d4  add      r1, fp, r1                   
+  000561cc  ldr      r3, [fp, r3]                 ; GOT[0xe0968] -> 0xfa288 DM_LoadResGbm
+  000561d0  ldr      r2, [fp, r2]                 ; GOT[0xe09cc] -> 0x53d54 DM_LoadResGbm565
+  000561d4  add      r1, fp, r1                   ; GOTOFF 0xd76ac C.10.17603
   000561d8  str      r3, [sp, #0x34]              
   000561dc  ldr      r3, [pc, #0x1c0]             ; lit=0x928
   000561e0  str      r2, [sp, #0x30]              
   000561e4  ldr      r2, [pc, #0x1bc]             ; lit=0xa34
-  000561e8  ldr      r3, [fp, r3]                 
+  000561e8  ldr      r3, [fp, r3]                 ; GOT[0xe0ad0] -> 0xfa298 DM_LoadMergeGbm
   000561ec  mov      ip, #0xf800                  
-  000561f0  ldr      r2, [fp, r2]                 
+  000561f0  ldr      r2, [fp, r2]                 ; GOT[0xe0bdc] -> 0x51234 DM_LoadMergeGbm565
   000561f4  str      r3, [sp, #0x2c]              
   000561f8  ldr      r3, [pc, #0x1ac]             ; lit=0x91c
   000561fc  str      r2, [sp, #0x28]              
   00056200  ldr      r2, [pc, #0x1a8]             ; lit=0x7c8
-  00056204  ldr      r3, [fp, r3]                 
+  00056204  ldr      r3, [fp, r3]                 ; GOT[0xe0ac4] -> 0x3de54 DM_DrawScreen565
   00056208  sub      r4, r4, #0xc                 
-  0005620c  ldr      r2, [fp, r2]                 
+  0005620c  ldr      r2, [fp, r2]                 ; GOT[0xe0970] -> 0xfa28c DM_DrawScreen
   00056210  str      r3, [sp, #0x24]              
   00056214  ldr      r3, [pc, #0x198]             ; lit=0x758
   00056218  str      r2, [sp, #0x20]              
   0005621c  ldr      r2, [pc, #0x194]             ; lit=0x250
-  00056220  ldr      r3, [fp, r3]                 
+  00056220  ldr      r3, [fp, r3]                 ; GOT[0xe0900] -> 0x3fdec DM_DrawScreen565Ex
   00056224  add      ip, ip, #0x1f                
-  00056228  ldr      r2, [fp, r2]                 
+  00056228  ldr      r2, [fp, r2]                 ; GOT[0xe03f8] -> 0xf143c DM_DrawScreenEx
   0005622c  str      r3, [sp, #0x1c]              
   00056230  ldr      r3, [pc, #0x184]             ; lit=0x360
   00056234  str      r2, [sp, #0x18]              
   00056238  ldr      r2, [pc, #0x180]             ; lit=0x844
-  0005623c  ldr      r3, [fp, r3]                 
+  0005623c  ldr      r3, [fp, r3]                 ; GOT[0xe0508] -> 0x49d20 DM_DrawRotate565
   00056240  add      r5, sp, #0x50                
-  00056244  ldr      sb, [fp, r2]                 
+  00056244  ldr      sb, [fp, r2]                 ; GOT[0xe09ec] -> 0xfa290 DM_DrawRotate
   00056248  str      r3, [sp, #0x14]              
   0005624c  ldr      r3, [pc, #0x170]             ; lit=0x394
   00056250  ldr      r2, [pc, #0x170]             ; lit=0x2b4
   00056254  mov      r0, r5                       
-  00056258  ldr      sl, [fp, r3]                 
+  00056258  ldr      sl, [fp, r3]                 ; GOT[0xe053c] -> 0x4a308 DM_DrawRotate565Ex
   0005625c  ldr      r3, [pc, #0x168]             ; lit=0x304
-  00056260  ldr      r8, [fp, r2]                 
+  00056260  ldr      r8, [fp, r2]                 ; GOT[0xe045c] -> 0xf1440 DM_DrawRotateEx
   00056264  ldr      r2, [pc, #0x164]             ; lit=0x7a0
-  00056268  ldr      r7, [fp, r3]                 
+  00056268  ldr      r7, [fp, r3]                 ; GOT[0xe04ac] -> 0x3f87c DM_DrawMosaic565Ex
   0005626c  ldr      r3, [pc, #0x160]             ; lit=0x604
-  00056270  ldr      r6, [fp, r2]                 
+  00056270  ldr      r6, [fp, r2]                 ; GOT[0xe0948] -> 0xfa284 DM_DrawMosaicEx
   00056274  mov      r2, #0x10                    
-  00056278  ldr      lr, [fp, r3]                 
+  00056278  ldr      lr, [fp, r3]                 ; GOT[0xe07ac] -> 0xf6280 SKIP_COL
   0005627c  ldr      fp, [sp, #0x30]              
   00056280  ldr      r3, [sp, #0x34]              
   00056284  str      fp, [r3]                     
@@ -194,12 +194,12 @@
   000562a4  ldr      fp, [sp, #0x1c]              
   000562a8  str      fp, [r3]                     
   000562ac  ldr      r3, [sp, #0x14]              
-  000562b0  str      ip, [lr]                     
-  000562b4  str      sl, [r8]                     
-  000562b8  str      r3, [sb]                     
+  000562b0  str      ip, [lr]                     ; mem 0xf6280 SKIP_COL
+  000562b4  str      sl, [r8]                     ; mem 0xf1440 DM_DrawRotateEx
+  000562b8  str      r3, [sb]                     ; mem 0xfa290 DM_DrawRotate
   000562bc  mov      r3, #1                       
   000562c0  strb     r3, [r4, #0x92]              
-  000562c4  str      r7, [r6]                     
+  000562c4  str      r7, [r6]                     ; mem 0xfa284 DM_DrawMosaicEx
   000562c8  bl       #0x21c20                     ; -> memcpy@plt
   000562cc  mov      r0, r5                       
   000562d0  mov      r1, #0x10                    
@@ -380,8 +380,8 @@
   000c8c14  str      r3, [r1]                     ; mem 0xf13f0 m_TouchDirectKeySize
   000c8c18  ldr      r3, [pc, #0x50]              ; lit=0x498
   000c8c1c  mov      r0, #1                       
-  000c8c20  ldr      r2, [r7, r3]                 
-  000c8c24  ldrb     r1, [r2, #4]                 
+  000c8c20  ldr      r2, [r7, r3]                 ; GOT[0xe0640] -> 0x14cd60 _menuOptions
+  000c8c24  ldrb     r1, [r2, #4]                 ; mem 0x14cd64 _menuOptions+0x4
   000c8c28  bl       #0x35c14                     ; -> touch_setUiChange
   000c8c2c  mov      r0, #1                       
   000c8c30  add      sp, sp, #4                   
@@ -389,8 +389,8 @@
   000c8c38  b        #0x33ff4                     ; tail-> touch_setTouchGroup
   000c8c3c  ldr      r3, [pc, #0x28]              ; lit=0x8a4
   000c8c40  mov      r2, #0x50                    
-  000c8c44  ldr      r1, [r7, r3]                 
-  000c8c48  str      r2, [r1]                     
+  000c8c44  ldr      r1, [r7, r3]                 ; GOT[0xe0a4c] -> 0xf13f0 m_TouchDirectKeySize
+  000c8c48  str      r2, [r1]                     ; mem 0xf13f0 m_TouchDirectKeySize
   000c8c4c  b        #0xc8c18                     
   000c8c50  andeq    r7, r1, r4, lsr r6           
   000c8c54  andeq    r0, r0, r8, ror r2           
@@ -430,35 +430,35 @@
   00035c74  ldr      r2, [pc, #0x41c]             ; lit=0x814
   00035c78  mov      r0, r7                       
   00035c7c  ldr      r3, [r4, #0x58]              
-  00035c80  ldr      ip, [r5, r2]                 
+  00035c80  ldr      ip, [r5, r2]                 ; GOT[0xe09bc] -> 0xf13ec nTouchRotate
   00035c84  mov      r1, r7                       
   00035c88  ldr      r2, [r4, #0x54]              
-  00035c8c  str      r7, [ip]                     
+  00035c8c  str      r7, [ip]                     ; mem 0xf13ec nTouchRotate
   00035c90  bl       #0x4d378                     ; -> DM_SetCliptoGBM
   00035c94  ldr      r7, [r5, r8]                 
   00035c98  ldr      r3, [pc, #0x3fc]             ; lit=0x9cc
   00035c9c  mov      r0, #0                       
   00035ca0  ldr      r2, [r7, #0x68]              
-  00035ca4  ldr      r4, [r5, r3]                 
+  00035ca4  ldr      r4, [r5, r3]                 ; GOT[0xe0b74] -> 0xf13fc m_TouchShow
   00035ca8  mov      ip, #1                       
   00035cac  mov      r3, r2                       
   00035cb0  mov      r1, r0                       
-  00035cb4  strb     ip, [r4]                     
+  00035cb4  strb     ip, [r4]                     ; mem 0xf13fc m_TouchShow
   00035cb8  bl       #0x4d378                     ; -> DM_SetCliptoGBM
   00035cbc  bl       #0x360cc                     ; -> Touch_Stand_Initialize
   00035cc0  bl       #0xc9ff8                     ; -> UM_SetMenuXY
   00035cc4  ldr      r3, [pc, #0x3d4]             ; lit=0x390
-  00035cc8  ldr      r6, [r5, r3]                 
-  00035ccc  ldr      r2, [r6, #0x340]             
+  00035cc8  ldr      r6, [r5, r3]                 ; GOT[0xe0538] -> 0x1013b8 _map
+  00035ccc  ldr      r2, [r6, #0x340]             ; mem 0x1016f8 _map+0x340
   00035cd0  cmp      r2, #0                       
   00035cd4  beq      #0x35cfc                     
-  00035cd8  ldr      r3, [r6, #0x2ac]             
+  00035cd8  ldr      r3, [r6, #0x2ac]             ; mem 0x101664 _map+0x2ac
   00035cdc  cmp      r3, #0                       
   00035ce0  beq      #0x35cfc                     
-  00035ce4  ldr      r3, [r6, #0x2a4]             
+  00035ce4  ldr      r3, [r6, #0x2a4]             ; mem 0x10165c _map+0x2a4
   00035ce8  cmp      r3, #0                       
   00035cec  beq      #0x35cfc                     
-  00035cf0  ldr      r3, [r6, #0x2c0]             
+  00035cf0  ldr      r3, [r6, #0x2c0]             ; mem 0x101678 _map+0x2c0
   00035cf4  cmp      r3, #0                       
   00035cf8  bne      #0x36000                     
   00035cfc  ldr      r3, [r5, r8]                 
@@ -478,34 +478,34 @@
   00035d34  cmp      r7, #1                       
   00035d38  bne      #0x35d2c                     
   00035d3c  ldr      r3, [pc, #0x348]             ; lit=0x498
-  00035d40  ldr      r2, [r5, r3]                 
-  00035d44  ldrsb    r6, [r2, #4]                 
+  00035d40  ldr      r2, [r5, r3]                 ; GOT[0xe0640] -> 0x14cd60 _menuOptions
+  00035d44  ldrsb    r6, [r2, #4]                 ; mem 0x14cd64 _menuOptions+0x4
   00035d48  cmp      r6, #0                       
   00035d4c  beq      #0x35e18                     
   00035d50  ldr      r3, [pc, #0x338]             ; lit=0x8a4
   00035d54  ldr      r8, [pc, #0x338]             ; lit=0x7dc
   00035d58  cmp      r1, #0                       
-  00035d5c  ldr      r1, [r5, r3]                 
-  00035d60  ldr      r4, [r5, r8]                 
-  00035d64  ldr      r3, [r1]                     
-  00035d68  ldr      r2, [r4, #0x68]              
-  00035d6c  ldr      r0, [r4, #0x64]              
+  00035d5c  ldr      r1, [r5, r3]                 ; GOT[0xe0a4c] -> 0xf13f0 m_TouchDirectKeySize
+  00035d60  ldr      r4, [r5, r8]                 ; GOT[0xe0984] -> 0xedbe4 _lcdG
+  00035d64  ldr      r3, [r1]                     ; mem 0xf13f0 m_TouchDirectKeySize
+  00035d68  ldr      r2, [r4, #0x68]              ; mem 0xedc4c _lcdG+0x68
+  00035d6c  ldr      r0, [r4, #0x64]              ; mem 0xedc48 _lcdG+0x64
   00035d70  rsb      r2, r3, r2                   
-  00035d74  str      r0, [r4, #0x58]              
-  00035d78  str      r2, [r4, #0x54]              
+  00035d74  str      r0, [r4, #0x58]              ; mem 0xedc3c _lcdG+0x58
+  00035d78  str      r2, [r4, #0x54]              ; mem 0xedc38 _lcdG+0x54
   00035d7c  bne      #0x35f4c                     
   00035d80  ldr      r3, [pc, #0x310]             ; lit=0x814
-  00035d84  ldr      r2, [r5, r3]                 
-  00035d88  str      r7, [r2]                     
+  00035d84  ldr      r2, [r5, r3]                 ; GOT[0xe09bc] -> 0xf13ec nTouchRotate
+  00035d88  str      r7, [r2]                     ; mem 0xf13ec nTouchRotate
   00035d8c  ldr      r3, [pc, #0x308]             ; lit=0x9cc
   00035d90  ldr      r8, [r5, r8]                 
   00035d94  mov      sl, #0                       
-  00035d98  ldr      ip, [r5, r3]                 
+  00035d98  ldr      ip, [r5, r3]                 ; GOT[0xe0b74] -> 0xf13fc m_TouchShow
   00035d9c  mov      r0, sl                       
   00035da0  mov      r1, sl                       
   00035da4  ldr      r2, [r8, #0x54]              
   00035da8  ldr      r3, [r8, #0x58]              
-  00035dac  strb     sl, [ip]                     
+  00035dac  strb     sl, [ip]                     ; mem 0xf13fc m_TouchShow
   00035db0  bl       #0x4d378                     ; -> DM_SetCliptoGBM
   00035db4  bl       #0x360cc                     ; -> Touch_Stand_Initialize
   00035db8  bl       #0xc9ff8                     ; -> UM_SetMenuXY
@@ -521,8 +521,8 @@
   00035de0  str      ip, [sp, #8]                 
   00035de4  bl       #0x5504c                     ; -> DM_FillRectRGB
   00035de8  ldr      r3, [pc, #0x2b4]             ; lit=0x3e0
-  00035dec  ldr      r2, [r5, r3]                 
-  00035df0  ldr      r0, [r2]                     
+  00035dec  ldr      r2, [r5, r3]                 ; GOT[0xe0588] -> 0x14db24 _imgTitleBg
+  00035df0  ldr      r0, [r2]                     ; mem 0x14db24 _imgTitleBg
   00035df4  cmp      r0, sl                       
   00035df8  bne      #0x35eb0                     
   00035dfc  ldr      r3, [r8, #0x58]              
@@ -535,39 +535,39 @@
   00035e18  ldr      r3, [pc, #0x270]             ; lit=0x8a4
   00035e1c  ldr      r8, [pc, #0x270]             ; lit=0x7dc
   00035e20  cmp      r1, #0                       
-  00035e24  ldr      r1, [r5, r3]                 
-  00035e28  ldr      r4, [r5, r8]                 
-  00035e2c  ldr      r3, [r1]                     
-  00035e30  ldr      r2, [r4, #0x68]              
-  00035e34  ldr      r0, [r4, #0x64]              
+  00035e24  ldr      r1, [r5, r3]                 ; GOT[0xe0a4c] -> 0xf13f0 m_TouchDirectKeySize
+  00035e28  ldr      r4, [r5, r8]                 ; GOT[0xe0984] -> 0xedbe4 _lcdG
+  00035e2c  ldr      r3, [r1]                     ; mem 0xf13f0 m_TouchDirectKeySize
+  00035e30  ldr      r2, [r4, #0x68]              ; mem 0xedc4c _lcdG+0x68
+  00035e34  ldr      r0, [r4, #0x64]              ; mem 0xedc48 _lcdG+0x64
   00035e38  rsb      r2, r3, r2                   
-  00035e3c  str      r2, [r4, #0x58]              
-  00035e40  str      r0, [r4, #0x54]              
+  00035e3c  str      r2, [r4, #0x58]              ; mem 0xedc3c _lcdG+0x58
+  00035e40  str      r0, [r4, #0x54]              ; mem 0xedc38 _lcdG+0x54
   00035e44  bne      #0x35f10                     
   00035e48  ldr      r3, [pc, #0x248]             ; lit=0x814
-  00035e4c  ldr      r2, [r5, r3]                 
-  00035e50  str      r6, [r2]                     
+  00035e4c  ldr      r2, [r5, r3]                 ; GOT[0xe09bc] -> 0xf13ec nTouchRotate
+  00035e50  str      r6, [r2]                     ; mem 0xf13ec nTouchRotate
   00035e54  b        #0x35d8c                     
   00035e58  ldr      r3, [pc, #0x230]             ; lit=0x8a4
   00035e5c  ldr      r8, [pc, #0x230]             ; lit=0x7dc
   00035e60  cmp      r0, #0                       
-  00035e64  ldr      r1, [r5, r3]                 
-  00035e68  ldr      r6, [r5, r8]                 
-  00035e6c  ldr      r3, [r1]                     
-  00035e70  ldr      r2, [r6, #0x68]              
-  00035e74  ldr      r0, [r6, #0x64]              
+  00035e64  ldr      r1, [r5, r3]                 ; GOT[0xe0a4c] -> 0xf13f0 m_TouchDirectKeySize
+  00035e68  ldr      r6, [r5, r8]                 ; GOT[0xe0984] -> 0xedbe4 _lcdG
+  00035e6c  ldr      r3, [r1]                     ; mem 0xf13f0 m_TouchDirectKeySize
+  00035e70  ldr      r2, [r6, #0x68]              ; mem 0xedc4c _lcdG+0x68
+  00035e74  ldr      r0, [r6, #0x64]              ; mem 0xedc48 _lcdG+0x64
   00035e78  rsb      r2, r3, r2                   
-  00035e7c  str      r2, [r6, #0x54]              
-  00035e80  str      r0, [r6, #0x58]              
+  00035e7c  str      r2, [r6, #0x54]              ; mem 0xedc38 _lcdG+0x54
+  00035e80  str      r0, [r6, #0x58]              ; mem 0xedc3c _lcdG+0x58
   00035e84  bne      #0x35fc4                     
   00035e88  ldr      r2, [pc, #0x208]             ; lit=0x814
   00035e8c  mov      ip, #1                       
   00035e90  mov      r0, r7                       
-  00035e94  ldr      r4, [r5, r2]                 
+  00035e94  ldr      r4, [r5, r2]                 ; GOT[0xe09bc] -> 0xf13ec nTouchRotate
   00035e98  ldr      r3, [r6, #0x68]              
   00035e9c  mov      r1, r7                       
   00035ea0  ldr      r2, [r6, #0x64]              
-  00035ea4  str      ip, [r4]                     
+  00035ea4  str      ip, [r4]                     ; mem 0xf13ec nTouchRotate
   00035ea8  bl       #0x4d378                     ; -> DM_SetCliptoGBM
   00035eac  b        #0x35c94                     
   00035eb0  mov      r1, sl                       
