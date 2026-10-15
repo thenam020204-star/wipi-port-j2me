@@ -108,6 +108,10 @@ Chi tiết: `docs/phaseC_formats.md`. Mọi định dạng dưới đây đượ
 | Text MrgText / LinkedText | 6 + 12 file khớp |
 | Chỉ mục sprite CIF | 148/148 file khớp cấu trúc |
 | Ghép sprite (mảnh CIF → chuỗi lời gọi DM_*) | 14.400 ca ngẫu nhiên (phủ 100% code `SPR_drawSpriteNPC`) + 55.107 ca trên 148 CIF thật khớp; chi tiết `docs/phaseC_sprite.md` |
+| Pha màu/blend/co giãn/palette/nạp ảnh theo giờ (`dm_fx`) | 960.498 ca kế hoạch cắt + 5.433 ca toàn khung + 40.000 ca HSB + 4.000 ca palette + 4.413 ca nạp ảnh khớp; `docs/phaseC_fx.md` |
+| Palette `H4/PAL` | 196 file / 1.568 ca khớp; `docs/phaseC_pal.md` |
+| Map `MAP/M` | 97/97 map khớp (hai lớp, chuỗi, 16.358 đối tượng, 930 mục quái); `docs/phaseC_map.md` |
+| Thuộc tính sprite `H4/EXD` | 117/117 file khớp (1.321 cell); `docs/phaseC_exd.md` |
 | Hình học `DM_DrawImg` (neo, lật/xoay, cắt biên; 9 mode của `DM_DrawScreen565`) | 1.776.085 ca khớp từng byte của khung 240×400 + 907.137 ca kế hoạch cắt; chi tiết `docs/phaseC_blit.md` |
 Công cụ phụ trợ: Ghidra 11.3.2 (tải vào `work/tools/`, không commit) cho mã giả C của 2344 hàm (`work/ghidra/decomp_and2011.c`, base 0x10000). Mã giả chỉ để đọc; **disassembly thắng** (đã gặp một chỗ Ghidra gộp nhầm hai nhánh góc xoay).
 Chưa làm: tác động pixel của `DM_DrawImgEx`/`Rotate`/`SetChagePalBlendEx`, `_PAL` và các biến thể blending, `_EXD`, map/tile/object, script `_scn`,

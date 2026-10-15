@@ -109,7 +109,15 @@ def _mode(flip, rot):
     return 0, 0, 'A'
 
 
-def plan(x, y, w, h, sx, sy, flip, rot, anchor, clip):
+def _mode_ex(flip, rot):
+    """DM_DrawImgEx 0x4ee60 dispatch: identical to _mode() except flip == 3, where rot is NOT ignored
+    (flip 3 = rotate 180, composed with rot): rot 0 -> mode 3, 90 -> 6, 180 -> 0, 270 -> 4, other -> 0."""
+    if flip == 3:
+        return {0: (3, 0, 'A'), 90: (6, 0, 'C'), 180: (0, 0, 'A'), 270: (4, 0, 'B')}.get(rot, (0, 0, 'A'))
+    return _mode(flip, rot)
+
+
+def plan(x, y, w, h, sx, sy, flip, rot, anchor, clip, ex=False):
     """Transliteration of DM_DrawImg 0x4f760..0x4fd10 up to the call of DM_DrawScreen.
     Returns None (nothing drawn) or (X, Y, W, H, SX, SY, mode): the arguments handed to DM_DrawScreen565
     (W/H/SX/SY are in SOURCE orientation, mode selects the transform). Every quirk of the original
@@ -117,7 +125,7 @@ def plan(x, y, w, h, sx, sy, flip, rot, anchor, clip):
     if w <= 0 or h <= 0:
         return None
     x, y = calc_anchor(x, y, w, h, rot, anchor)
-    m, r4, path = _mode(flip, rot)
+    m, r4, path = (_mode_ex if ex else _mode)(flip, rot)
     L, T, R, B = clip
     sx0, sy0 = sx, sy
     if path == 'A':

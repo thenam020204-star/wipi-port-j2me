@@ -1,0 +1,1 @@
+EXD files 117 mismatches 0 (cells compared 1321 ) files read past their end by the original: [('_H_099_EXD', 1), ('_H_102_EXD', 1)] , files with trailing bytes the original never reads: [('_H_084_EXD', 51), ('_H_095_EXD', 4)]

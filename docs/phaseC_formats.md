@@ -14,6 +14,10 @@ với chính hàm gốc chạy trong emulator đối chứng (`tools/and_emu.py`
 | Chỉ mục sprite CIF | `tools/cif.py` | 148 file, so bảng offset khung với `SPR_loadSprite` gốc | **0 lệch** (`docs/phaseC_cif_selftest.txt`) |
 | Hình học `DM_DrawImg` | `tools/dm_blit.py` | `selftest`: so cả khung 240×400, 1.776.085 ca; kế hoạch cắt 907.137 ca | **0 lệch** (`docs/phaseC_blit.md`) |
 | Ghép sprite (mảnh CIF → lời gọi `DM_*`) | `tools/sprite.py` | `selftest`: 14.400 ca ngẫu nhiên (phủ 100% code của `SPR_drawSpriteNPC`) + 55.107 ca vẽ trên 148 CIF thật | **0 lệch** (`docs/phaseC_sprite.md`) |
+| Pha màu `DM_DrawImgEx`, co giãn `DM_DrawImgRotate(Ex)`, bảng trộn, palette (HSB/tint), nạp ảnh theo giờ | `tools/dm_fx.py` | `selftest`: 960.498 ca kế hoạch cắt, 2.933 + 2.500 ca toàn khung, 40.000 ca HSB, 4.000 ca palette, 2.493 + 1.920 ca nạp ảnh | **0 lệch** (`docs/phaseC_fx.md`) |
+| Palette hoán đổi `H4/PAL` | `tools/pal.py` | `selftest`: 196 file × ảnh thật và tổng hợp (1.568 ca) so với `DM_ChangePalette` | **0 lệch** (`docs/phaseC_pal.md`) |
+| Map `MAP/M` (+ TILE, OBJ) | `tools/mapdata.py` | `selftest`: 97 map so với `Map_SetMapData` gốc (stub hàm tạo đối tượng) | **0 lệch** (`docs/phaseC_map.md`) |
+| Thuộc tính sprite `H4/EXD` | `tools/exd.py` | `selftest`: 117 file, 1.321 cell so với `SPR_loadAttackProperty` | **0 lệch** (`docs/phaseC_exd.md`) |
 | Phân loại DES/thô | `tools/and_resmap.py` → `docs/resmap_and2011.tsv` | theo nơi gọi `UM_LoadResDes` / `UM_LoadRes` | CONFIRMED |
 
 ## 1. Nạp tài nguyên (CONFIRMED)

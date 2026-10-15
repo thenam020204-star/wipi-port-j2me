@@ -1,0 +1,1 @@
+PAL files 196 cases 1568 palette entries actually swapped 4849 mismatches 0

@@ -1,0 +1,8 @@
+DM_LoadResGbmBlending cases 2493 (files 278 ) mismatches 0
+DM_LoadResGbmMergeBlending cases 1920 mismatches 0
+HSB conversion cases 40000 mismatches 0
+palette cases 4000 mismatches 0
+scaled-draw full-frame cases 2500 mismatches 0
+DM_DrawImgEx clip-plan cases 960498 mismatches 0
+BlendingTable32Bit (16x32x32) equal to model: True
+DM_DrawImgEx full-frame cases 2933 mismatches 0
