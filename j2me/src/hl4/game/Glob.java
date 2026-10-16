@@ -53,12 +53,11 @@ public final class Glob {
             // a map is loaded: keep the hero inside the camera window and redraw the whole picture at once (the first frame of the load screen)
             byte[] m = G.map;
             Obj h = Pool.hero;
-            if (hl4.sys.Bytes.s32(h.m, 8) - (gameW >> 1) < 0) {
-                hl4.sys.Bytes.w32(m, 156, 0);
-            }
-            if (hl4.sys.Bytes.s32(h.m, 0xc) - (gameH >> 1) < 0) {
-                hl4.sys.Bytes.w32(m, 160, 0);
-            }
+            // 0x36000..0x36044: camera = hero - half the game area, clamped at 0 (the stores are unconditional; the pseudo-C drops them)
+            int cx = hl4.sys.Bytes.s32(h.m, 8) - gameW / 2;
+            int cy = hl4.sys.Bytes.s32(h.m, 0xc) - gameH / 2;
+            hl4.sys.Bytes.w32(m, 156, cx < 0 ? 0 : cx);
+            hl4.sys.Bytes.w32(m, 160, cy < 0 ? 0 : cy);
             if (hl4.sys.Bytes.s32(m, 132) < gameW + hl4.sys.Bytes.s32(m, 156)) {
                 hl4.sys.Bytes.w32(m, 156, hl4.sys.Bytes.s32(m, 132) - gameW);
             }

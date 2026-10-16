@@ -44,6 +44,7 @@ public class GameTraceTest {
         Hashtable script = new Hashtable();
         Hashtable pressOnly = new Hashtable();
         Hashtable releaseOnly = new Hashtable();
+        Hashtable warps = new Hashtable();
         String ppm = null;
         String stateTicks = null;
         String stateOut = null;
@@ -77,7 +78,9 @@ public class GameTraceTest {
             int c = a[i].indexOf(':');
             Integer tk = new Integer(Integer.parseInt(a[i].substring(0, c)));
             String kv = a[i].substring(c + 1);
-            if (kv.startsWith("p")) {
+            if (kv.startsWith("w")) {
+                warps.put(tk, kv.substring(1));
+            } else if (kv.startsWith("p")) {
                 pressOnly.put(tk, Integer.decode(kv.substring(1)));
             } else if (kv.startsWith("r")) {
                 releaseOnly.put(tk, Integer.decode(kv.substring(1)));
@@ -111,6 +114,15 @@ public class GameTraceTest {
         java.io.PrintStream so = stateOut == null ? null : new java.io.PrintStream(new java.io.FileOutputStream(stateOut));
         int bad = 0;
         for (int t = start + 1; t < end && t < nref; t++) {
+            String wp = (String) warps.get(new Integer(t));
+            if (wp != null) {
+                java.util.StringTokenizer qt = new java.util.StringTokenizer(wp, "/");
+                int[] q = new int[4];
+                for (int qi = 0; qi < 4; qi++) {
+                    q[qi] = Integer.parseInt(qt.nextToken());
+                }
+                hl4.game.Event.moveNextScene(q[0], q[1], q[2], q[3], -1);
+            }
             Integer k = (Integer) script.get(new Integer(t));
             if (k != null) {
                 Engine.onKey(true, k.intValue());

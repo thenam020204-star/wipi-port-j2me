@@ -486,12 +486,14 @@ if __name__ == '__main__':
 
 
 def parse_script(tokens):
-    """Scenario tokens 'tick:key' (tap = press+release in that tick), 'tick:pKEY' (press only), 'tick:rKEY' (release only) -> {tick: [press, release]}"""
+    """Scenario tokens 'tick:key' (tap = press+release in that tick), 'tick:pKEY' (press only), 'tick:rKEY' (release only), 'tick:wSCENE/X/Y/W' (warp via Event_moveNextScene) -> {tick: [press, release, warp]}"""
     sc = {}
     for kv in tokens:
         t, k = kv.split(':')
-        e = sc.setdefault(int(t), [None, None])
-        if k[:1] == 'p':
+        e = sc.setdefault(int(t), [None, None, None])
+        if k[:1] == 'w':
+            e[2] = [int(x) for x in k[1:].split('/')]      # warp: Event_moveNextScene(scene, tileX, tileY, weather) before the tick (test hook)
+        elif k[:1] == 'p':
             e[0] = int(k[1:], 0)
         elif k[:1] == 'r':
             e[1] = int(k[1:], 0)
@@ -505,4 +507,6 @@ def tick_script(g, sc, i):
     if e is None:
         g.tick()
     else:
+        if e[2] is not None:
+            g.call('Event_moveNextSceneWithWeatherTime', e[2][0], e[2][1], e[2][2], e[2][3], 0xffffffff)
         g.tick(press=e[0], release=e[1])
