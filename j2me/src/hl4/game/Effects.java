@@ -39,4 +39,13 @@ public final class Effects {
         m[0x58] = 0;
         m[0x54] = 0;
     }
+
+    /** CHAR_setEffAfterMapMove(c) @0xdb650: re-creates the status-effect sprites of an active buff after a map change (none active at game start) */
+    public static void setEffAfterMapMove(Char c) {
+        for (int i = 0; i < 4; i++) {
+            if (c.m[0x10c + 8 * i] == 1) {
+                throw new IllegalStateException("CHAR_setEffAfterMapMove: active buff: later");
+            }
+        }
+    }
 }

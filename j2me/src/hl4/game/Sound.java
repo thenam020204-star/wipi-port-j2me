@@ -20,6 +20,17 @@ public final class Sound {
         G.map[0x69] = 10;
     }
 
+    /** SM_PlayEffSound(id): sound effect request (Phase F) */
+    public static void playEff(int id) {
+    }
+
+    /** loadBGMSound(id) / freeBGMSound (Phase F) */
+    public static void loadBgm(int id) {
+    }
+
+    public static void freeBgm() {
+    }
+
     /** SM_StopSound */
     public static void stop() {
     }

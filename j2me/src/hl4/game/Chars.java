@@ -343,4 +343,25 @@ public final class Chars {
         }
         removeCommonEffect(c, 7, 0x28);
     }
+
+    /** Eff_deleteEffectInList(c) @0x4a17c: drops the character's own effect objects */
+    public static void deleteEffectInList(Char c) {
+        for (Obj p = c.effects.head; p != null; ) {
+            Obj nx = p.next;
+            c.effects.remove(p);
+            p = nx;
+        }
+        if (c.targetEffects.head != null) {
+            throw new IllegalStateException("Eff_deleteEffectInList: target effects: later");
+        }
+    }
+
+    /** Eff_deleteEffectInObjList(c) @0x4a040: removes target-effect objects (type 6) that belong to c from the object list */
+    public static void deleteEffectInObjList(Char c) {
+        for (Obj p = G.objList.head; p != null; p = p.next) {
+            if (Obj.structType(p) == 6) {
+                throw new IllegalStateException("Eff_deleteEffectInObjList: later");
+            }
+        }
+    }
 }

@@ -44,6 +44,26 @@ public final class Sprite {
         f6f = 0;
     }
 
+    /** SPR_copyRes(src, this) @0xcfe9c: shares the loaded data, copies the control-palette fields, clears +0x6c..0x6f */
+    public void copyFrom(Sprite o) {
+        cif = o.cif;
+        props = o.props;
+        nSets = o.nSets;
+        for (int i = 0; i < sets.length; i++) {
+            sets[i] = o.sets[i];
+            orig[i] = o.orig[i];
+        }
+        c60 = o.c60;
+        c62 = o.c62;
+        c64 = o.c64;
+        c67 = o.c67;
+        c66 = o.c66;
+        f68 = o.f68;
+        f6d = 0;
+        f6e = 0;
+        f6f = 0;
+    }
+
     /** SPR_loadSprite(spr, path, mode): index parsed from the CIF file; nSets = first byte (spr+0x38). */
     public Sprite(byte[] cifData, int mode) {
         cif = new Cif(cifData, mode);
@@ -74,6 +94,34 @@ public final class Sprite {
 
     // global render state read by the function
     public static final int[] lcdEff = new int[12];     // _lcdEff bytes
+    /** DM_initLCDEffect @0x5d39c */
+    public static void lcdEffInit() {
+        lcdEff[9] = 0;
+        lcdEff[4] = 0;
+        lcdEff[5] = 0;
+        lcdEff[6] = 0;
+        lcdEff[0] = 0;
+        lcdEff[1] = 0;
+        lcdEff[2] = 0;
+        lcdEff[3] = 0;
+        lcdEff[7] = 0;
+        lcdEff[8] = 0;
+    }
+
+    /** DM_SetLCDEffect(r, g, b, p4, p5, p6) @0x5d3d8 */
+    public static void lcdEffSet(int p1, int p2, int p3, int p4, int p5, int p6) {
+        lcdEff[7] = p4 & 0xff;
+        lcdEff[0] = p1 & 0xff;
+        lcdEff[1] = (p1 >> 8) & 0xff;
+        lcdEff[9] = p6 & 0xff;
+        lcdEff[2] = p2 & 0xff;
+        lcdEff[3] = (p2 >> 8) & 0xff;
+        lcdEff[4] = p3 & 0xff;
+        lcdEff[5] = (p3 >> 8) & 0xff;
+        lcdEff[6] = p5 & 0xff;
+        lcdEff[8] = 1;
+    }
+
     public static Gbm[] extraEffect;                    // _imgSKextraEffect (an image set)
 
     private static int s8(int v) {

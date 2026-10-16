@@ -24,6 +24,8 @@ public class Obj {
     public final byte[] m;
     public Obj prev;
     public Obj next;
+    /** event record index (the original keeps a pointer to _event+10+10k at +0x20 of map objects / +0x1b0 of NPCs), -1 = none */
+    public int evRef = -1;
 
     public Obj(int size, int type, int idx) {
         m = new byte[size];

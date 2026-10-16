@@ -65,6 +65,21 @@ public final class Tab {
     /** C.4.16225 @0xd97f0 */
     public static final byte[] FOLDER_IMG2 = {(byte) 94, (byte) 63, (byte) 51, (byte) 42, (byte) 0, (byte) 0, (byte) -1, (byte) 3};
 
+    /** C.20.18376 @0xd87f0 */
+    public static final byte[] HERO_SKIP_0 = {(byte) 5, (byte) 24, (byte) 25, (byte) 33, (byte) 35, (byte) 36, (byte) 39, (byte) 40, (byte) 7};
+
+    /** C.21.18377 @0xd87de */
+    public static final byte[] HERO_SKIP_1 = {(byte) 5, (byte) 14, (byte) 15, (byte) 16, (byte) 25, (byte) 26, (byte) 27, (byte) 28, (byte) 29, (byte) 30, (byte) 31, (byte) 32, (byte) 33, (byte) 35, (byte) 36, (byte) 39, (byte) 40, (byte) 7};
+
+    /** C.22.18378 @0xd87d9 */
+    public static final byte[] HERO_SKIP_2 = {(byte) 5, (byte) 30, (byte) 31, (byte) 33, (byte) 7};
+
+    /** C.23.18379 @0xd87cc */
+    public static final byte[] HERO_SKIP_3 = {(byte) 5, (byte) 16, (byte) 17, (byte) 18, (byte) 19, (byte) 20, (byte) 21, (byte) 22, (byte) 24, (byte) 27, (byte) 29, (byte) 30, (byte) 7};
+
+    /** CAMERA_RANGE @0xe1950 */
+    public static final byte[] CAMERA_RANGE = {(byte) 50, (byte) 50, (byte) 40, (byte) 40};
+
     /** um_sin @0xe1cb8 */
     public static final int[] UM_SIN = {0, 174, 348, 523, 697, 871, 1045, 1218, 1391, 1564, 1736, 1908, 2079, 2249, 2419, 2588, 2756, 2923, 3090, 3255, 3420, 3583, 3746, 3907, 4067, 4226, 4383, 4539, 4694, 4848, 4999, 5150, 5299, 5446, 5591, 5735, 5877, 6018, 6156, 6293, 6427, 6560, 6691, 6819, 6946, 7071, 7193, 7313, 7431, 7547, 7660, 7771, 7880, 7986, 8090, 8191, 8290, 8386, 8480, 8571, 8660, 8746, 8829, 8910, 8987, 9063, 9135, 9205, 9271, 9335, 9396, 9455, 9510, 9563, 9612, 9659, 9702, 9743, 9781, 9816, 9848, 9876, 9902, 9925, 9945, 9961, 9975, 9986, 9993, 9998, 10000};
 

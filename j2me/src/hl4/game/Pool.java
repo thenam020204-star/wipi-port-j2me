@@ -62,7 +62,7 @@ public final class Pool {
         for (int i = 0; i < 100; i++) {
             pools[EFFECT][i] = new Obj(SZ_EFFECT, EFFECT, i);
             pools[TARGET_EFFECT][i] = new Obj(SZ_TEFFECT, TARGET_EFFECT, i);
-            pools[SPROBJ][i] = new Obj(SZ_SPROBJ, SPROBJ, i);
+            pools[SPROBJ][i] = new SObj(SZ_SPROBJ, SPROBJ, i);
         }
         pools[MAPOBJ] = new Obj[900];
         for (int i = 0; i < 900; i++) {
@@ -162,6 +162,22 @@ public final class Pool {
 
     /** MP_return @0xadc4c: resets the object to the free state of its type */
     public static void ret(Obj o) {
-        throw new IllegalStateException("MP_return type " + Obj.structType(o) + ": later");
+        switch (Obj.structType(o)) {
+            case MONSTER: {
+                Char c = (Char) o;
+                Chars.deleteEffectInList(c);
+                Chars.deleteEffectInObjList(c);
+                c.effects.release();
+                c.targetEffects.release();
+                c.spr.set();
+                o.objSet(1);
+                o.m[Obj.EVENT] = (byte) 0xff;
+                o.m[Obj.RELEASE] = 0;
+                hl4.sys.Bytes.w16(o.m, Obj.MAPIDX, 0xffff);
+                break;
+            }
+            default:
+                throw new IllegalStateException("MP_return type " + Obj.structType(o) + ": later");
+        }
     }
 }

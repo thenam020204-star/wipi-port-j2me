@@ -13,6 +13,11 @@ public final class Event {
 
     public static final byte[] e = G.event;
 
+    /** offset of the 10-byte event record k in _event (Event_getInfo = _event + 10) */
+    public static int rec(int k) {
+        return 10 + 10 * k;
+    }
+
     /** Event_isEvent @0x695f8: a cut scene is running (_event[0x1fe]) or the game is over (_game[0] == 2) */
     public static boolean isEvent() {
         return G.event[0x1fe] != 0 || G.game[0] == 2;
@@ -47,16 +52,190 @@ public final class Event {
             Bytes.w32(e, 0x20c, 0);
             return 0;
         }
-        throw new IllegalStateException("Event_ScreenEnd: later");
+        screenEnd();
+        return 1;
+    }
+
+    /** Event_ScreenEnd @0x68ef8 */
+    public static void screenEnd() {
+        if (e[0x5ee] != (byte) 0xff) {
+            int u = (e[0x5ee] - 4) & 0xff;
+            if (u < 4) {
+                e[0x5ec] = 1;
+                Bytes.w32(e, 0x600, 100);
+            } else {
+                e[0x5ec] = 1;
+                Bytes.w32(e, 0x600, 0xff);
+            }
+            return;
+        }
+        e[0x5ec] = 0;
+        Bytes.w32(e, 0x600, 0);
+    }
+
+    private static int div(int a, int b) {
+        return b == 0 ? 0 : a / b;
+    }
+
+    /** Event_Screen @0x68f54: one tick of the screen fade; true while it goes on */
+    public static boolean screen() {
+        int c = Bytes.s32(e, 0x600);
+        int a5ee = e[0x5ee] & 0xff;
+        int a5ef = e[0x5ef] & 0xff;
+        int steps = e[0x5ed] & 0xff;
+        boolean toEnd = false;
+        if (a5ee == 0xff) {
+            if (a5ef != 0xff) {
+                int d;
+                if (((a5ef - 4) & 0xff) < 4) {
+                    d = steps == 0 ? 100 : div(100, steps);
+                } else {
+                    d = steps == 0 ? 0xff : div(0xff, steps);
+                }
+                c -= d;
+            }
+            if (c < 0) {
+                c = 0;
+            }
+        } else {
+            if (((a5ee - 4) & 0xff) < 4) {
+                if (a5ef == 0xff) {
+                    c += div(100, steps);
+                }
+            } else if (a5ef == 0xff) {
+                c += div(0xff, steps);
+            }
+            if (c > 0xff) {
+                c = 0xff;
+                Bytes.w32(e, 0x600, c);
+                Bytes.w32(e, 0x20c, Bytes.s32(e, 0x20c) + 1);
+                if (Bytes.s32(e, 0x20c) < Bytes.s32(e, 0x210)) {
+                    return true;
+                }
+                toEnd = true;
+            }
+        }
+        Bytes.w32(e, 0x600, c);
+        if (!toEnd) {
+            Bytes.w32(e, 0x20c, Bytes.s32(e, 0x20c) + 1);
+            if (Bytes.s32(e, 0x20c) < Bytes.s32(e, 0x210)) {
+                return true;
+            }
+        }
+        screenEnd();
+        return false;
+    }
+
+    /** Event_Delay(p1) @0x68e88 */
+    public static boolean delay(boolean frames) {
+        if (frames) {
+            if (e[0x943] <= 0) {
+                return false;
+            }
+            e[0x943]--;
+            return true;
+        }
+        if (Bytes.s32(e, 0x210) <= Bytes.s32(e, 0x20c)) {
+            return false;
+        }
+        Bytes.w32(e, 0x20c, Bytes.s32(e, 0x20c) + 1);
+        return true;
+    }
+
+    /** EVENT_TickMovie @0x6cc8c: the running command's per-tick work; true = the command is still running */
+    public static boolean tickMovie() {
+        switch (Bytes.s32(e, 0x200)) {
+            case 2:
+            case 10:
+            case 0xd:
+            case 0xe:
+                Maps.initDrawFlag();
+                break;
+            case 8:
+                return Npcs.anyEventMove() || e[0x5eb] != 0;
+            case 0x24:
+                return screen();
+            case 0x2b:
+            case 0x2c:
+                return Cam.cameraMove(true);
+            case 0x2d:
+                return delay(true);
+            case 0x2e:
+            case 0x2f:
+            case 0x30:
+            case 0x32:
+            case 0x3c:
+                throw new IllegalStateException("EVENT_TickMovie cmd " + Bytes.s32(e, 0x200) + ": later");
+            default:
+                break;
+        }
+        Bytes.w32(e, 0x200, -1);
+        return false;
+    }
+
+    private static void resetScriptSlots() {
+        for (int k = 0; k < 4; k++) {
+            initScriptData(k);
+        }
+        e[0x504] = (byte) 0xff;
+        Bytes.fill(e, 0x510, 0xff, 4);
+        Bytes.fill(e, 0x505, 0, 5);
+        e[0x505] = (byte) 0xff;
+        Bytes.fill(e, 0x50a, 0, 3);
+        Bytes.fill(e, 0x50d, 0, 3);
+    }
+
+    /** EVENT_Tick @0x6d4c0: advances the running cut scene; true while it is running */
+    public static boolean tick() {
+        if (e[0x206] != 0) {
+            if (e[0x209] - 1 == e[0x208]) {
+                resetScriptSlots();
+            }
+            if (e[0x208] != e[0x209]) {
+                return true;
+            }
+        }
+        if (tickMovie()) {
+            return true;
+        }
+        if (e[0x950] != 0) {
+            throw new IllegalStateException("EVENT_worlmapTick: later");
+        }
+        if (It.tick()) {
+            return true;
+        }
+        if (e[0x206] != 0 && G.map[0x6a] != G.map[0x69] && G.map[0x69] != -1) {
+            Sound.freeBgm();
+            Sound.loadBgm(G.map[0x69]);
+            G.map[0x6b] = 1;
+        }
+        return end();
+    }
+
+    /** EVENT_CheckEvent(idx) @0x5d63c */
+    public static boolean checkEvent(int idx) {
+        if (idx < 0 || !It.checkEvent(idx)) {
+            return false;
+        }
+        Obj h = Pool.hero;
+        HeroCtl.moveStop(h);
+        h.m[0x166] = 0;
+        Bytes.w32(h.m, 0x158, 0);
+        Bytes.w32(h.m, 0x15c, 0);
+        h.m[0x167] = 0;
+        return tick();
+    }
+
+    /** EVENT_onLoad @0x5d6b0 */
+    public static boolean onLoad() {
+        e[0x948] = 5;
+        return checkEvent(0);
     }
 
     public static void setQuestStatus(int step, int status) {
         throw new IllegalStateException("Event_Set_QuestStatus: later");
     }
 
-    public static void onLoad() {
-        throw new IllegalStateException("EVENT_onLoad: later");
-    }
 
     /** Event_initInfo(k) @0x68824: 10-byte records at +0xa (the scene's script object table) */
     public static void initInfo(int k) {
@@ -158,6 +337,41 @@ public final class Event {
         e[0x504] = (byte) 0xff;
         Bytes.fill(e, 0x510, 0xff, 4);
         e[0x945] = 0;
-        throw new IllegalStateException("EVENT_End + IT_RegisterFunc_*: later");
+        end();
+        e[0x505] = (byte) 0xff;
+    }
+
+    /** EVENT_End @0x6d388: resets the script state and snaps the camera onto the hero; true while the camera is still moving */
+    public static boolean end() {
+        MainGameFrame.initMonsterInfo(null, 0, 0);
+        G.map[0x369] = (byte) 0xff;
+        G.map[0x374] = 0;
+        Bytes.w32(e, 0x94c, -1);
+        Bytes.w32(e, 0x200, -1);
+        e[0x950] = 0;
+        e[0x1fe] = 0;
+        Obj h = Pool.hero;
+        Bytes.w32(h.m, 0xd18, -1);
+        Bytes.w32(h.m, 0xd1c, -1);
+        e[0x1ff] = 0;
+        initSkip();
+        Bytes.w16(e, 0x93a, 0xff);
+        e[0x60e] = 0;
+        e[0x943] = 0;
+        e[0x60d] = 0;
+        e[0x608] = 0;
+        for (int k = 0; k < 4; k++) {
+            initScriptData(k);
+            releaseFaceimage(k);
+        }
+        Bytes.fill(e, 0x510, 0xff, 4);
+        Bytes.fill(e, 0x505, 0, 5);
+        e[0x505] = (byte) 0xff;
+        Bytes.fill(e, 0x50a, 0, 3);
+        Bytes.fill(e, 0x50d, 0, 3);
+        h.m[0xa31] = 0;
+        Cam.setCameraMove(h.x(), h.y(), -1, -1);
+        Cam.mapMove();
+        return Cam.cameraMove(true);
     }
 }

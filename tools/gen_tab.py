@@ -27,6 +27,11 @@ SPEC = [
     ('C.40.18591', 'HP_FILE', 1, True),
     ('C.3.16224', 'FOLDER_IMG', 1, True),
     ('C.4.16225', 'FOLDER_IMG2', 1, True),
+    ('C.20.18376', 'HERO_SKIP_0', 1, True),
+    ('C.21.18377', 'HERO_SKIP_1', 1, True),
+    ('C.22.18378', 'HERO_SKIP_2', 1, True),
+    ('C.23.18379', 'HERO_SKIP_3', 1, True),
+    ('CAMERA_RANGE', 'CAMERA_RANGE', 1, True),
     ('um_sin', 'UM_SIN', 4, True),
     ('um_cos', 'UM_COS', 4, True),
 ]

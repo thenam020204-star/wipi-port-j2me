@@ -4,6 +4,9 @@ import hl4.data.MapData;
 import hl4.gfx.Frame;
 import hl4.gfx.Fx;
 import hl4.gfx.Gbm;
+import hl4.gfx.Img;
+import hl4.gfx.Sprite;
+import hl4.sys.Rng;
 import hl4.sys.Bytes;
 import hl4.sys.Res;
 
@@ -77,7 +80,7 @@ public final class Maps {
         m[0x2de] = 0;
         m[0x2dc] = 0;
         m[0x2df] = 0;
-        Bytes.fill(m, 0x641, 0, 0x1b);
+        Bytes.fill(m, 0x289, 0, 0x1b);
         layerB = null;
         layerA = null;
         tiles[0] = null;
@@ -152,8 +155,8 @@ public final class Maps {
         MapData d = MapData.parse(file);
         data = d;
         m[0x270] = (byte) d.tilesetA.length;
-        Bytes.fill(m, 0x629, 0xff, 3);
-        Bytes.fill(m, 0x62c, 0xff, 3);
+        Bytes.fill(m, 0x271, 0xff, 3);
+        Bytes.fill(m, 0x274, 0xff, 3);
         for (int i = 0; i < d.tilesetA.length && i < 3; i++) {
             m[0x271 + i] = (byte) d.tilesetA[i];
             m[0x274 + i] = (byte) d.tilesetB[i];
@@ -193,14 +196,240 @@ public final class Maps {
             objIdxCreate(d.objImg[i]);
         }
         for (int i = 0; i < d.sprIds.length; i++) {
-            throw new IllegalStateException("SprObject_create: later");
+            SObj b = sprObjectCreate(d.sprIds[i], timeReturn(m[0x68]));
+            addSprBodyList(b);
         }
         layerA = d.layerA;
         layerB = d.layerB;
         if (layerB.length > 0) {
             m[0x350] = (byte) (layerB[0] & 8);
         }
-        throw new IllegalStateException("Map_addMapObject / monsters: later");
+        for (int layer = 0; layer < 4; layer++) {
+            addMapObjects(d.objs[layer], layer);
+        }
+        m[0x367] = (byte) 0xff;
+        m[0x365] = (byte) 0xff;
+        m[0x366] = (byte) 0xff;
+        for (int i = 0; i < d.summon.length; i++) {
+            int idx = (byte) d.summon[i];
+            if (idx < 3) {
+                int type = Bytes.s16(m, idx * 2 + 0x48);
+                m[0x364] = (byte) idx;
+                if (getSummonBody() == null) {
+                    Monsters.addBody(type, 1);
+                }
+            }
+        }
+        m[0x37c] = 0;
+        m[0x377] = 0;
+        m[0x358] = 0;
+        m[0x376] = 0;
+        spawnMonsters(d.mons);
+    }
+
+    /** Map_getSummonBody @0xa0dbc: always none */
+    public static Char getSummonBody() {
+        return null;
+    }
+
+    /** _map+8/0xc/0x10: the three monster template bodies of the map */
+    public static final Char[] monBodies = new Char[3];
+
+    /** Map_addMobBodyList(body) @0xa0d3c */
+    public static void addMobBodyList(Char b) {
+        int i;
+        if (monBodies[0] == null) {
+            i = 0;
+        } else if (monBodies[1] == null) {
+            i = 1;
+        } else if (monBodies[2] == null) {
+            i = 2;
+        } else {
+            return;
+        }
+        monBodies[i] = b;
+        b.m[0x40d] = (byte) i;
+        m[m[0x364] + 0x365] = (byte) i;
+    }
+
+    /** Map_mobBody(type, idx) @0xab2b0 */
+    public static Char mobBody(int type, int idx) {
+        for (int i = 0; i < 3; i++) {
+            Char b = monBodies[i];
+            if (b != null && Bytes.s16(b.m, 0x160) == type && b.m[0x40d] == idx) {
+                return b;
+            }
+        }
+        return null;
+    }
+
+    /** the monster placement walk of Map_SetMapData @0xab8a4 (entries are (slot, x, y) triples; a slot >= 3 consumes one byte only) */
+    private static void spawnMonsters(int[] raw) {
+        int n = raw.length / 3;
+        if (n <= 0) {
+            return;
+        }
+        int i = 0;
+        int p = 0;
+        while (i != n && p < raw.length) {
+            int idx = (byte) raw[p];
+            int q = p + 1;
+            if (idx >= 3) {
+                i++;
+                p = q;
+                continue;
+            }
+            Char body = mobBody(Bytes.s16(m, idx * 2 + 0x48), idx);
+            if (body == null) {
+                i++;
+                p = p + 3;
+                continue;
+            }
+            body.m[0x40d] = (byte) idx;
+            int iv;
+            boolean skip = false;
+            if (!Monsters.isBoss(body) || (i & 0xffff) != 0) {
+                iv = (short) i;
+                if (m[0x358] != 0 && iv > 0) {
+                    if (m[0x376] != 0 && body.m[0x30c] == ':') {
+                        throw new IllegalStateException("Map_SetMapData: boss escort clones: later");
+                    }
+                    skip = true;
+                }
+            } else {
+                m[0x358] = 1;
+                iv = 0;
+            }
+            if (skip) {
+                i++;
+                p = q;
+                continue;
+            }
+            int x = (byte) raw[p + 1] * 0x10 + 8;
+            int y = ((byte) raw[p + 2] + 1) * 0x10;
+            Monsters.clone(body, iv, x, y, 0);
+            q = p + 3;
+            if (body.m[0x30c] != '7') {
+                i++;
+                p = q;
+                continue;
+            }
+            i++;
+            m[0x376] = 1;
+            p = q;
+        }
+    }
+
+    // ---- sprite bodies, map objects -------------------------------------------------------------------------------------------------------
+    /** _map+0x14..0x3b: the 10 sprite-object bodies (templates the placed sprite objects are copied from) */
+    public static final SObj[] sprBodies = new SObj[10];
+
+    /** Map_addSprBodyList @0xa0c5c */
+    public static void addSprBodyList(SObj b) {
+        for (int i = 0; i < 10; i++) {
+            if (sprBodies[i] == null) {
+                sprBodies[i] = b;
+                return;
+            }
+        }
+    }
+
+    /** Map_getSprBody(id) @0xa0cac */
+    public static SObj getSprBody(int id) {
+        if (id == -1) {
+            return null;
+        }
+        for (int i = 0; i < 10; i++) {
+            SObj b = sprBodies[i];
+            if (b != null && b.m[0x9d] == id) {
+                return b;
+            }
+        }
+        return null;
+    }
+
+    private static String n3(int v) {
+        return v < 10 ? "00" + v : (v < 100 ? "0" + v : String.valueOf(v));
+    }
+
+    /** SprObject_create(id, slot) @0xcfbb4: takes a pool slot and loads the CIF and the image sets of OBJ/SPR id */
+    public static SObj sprObjectCreate(int id, int slot) {
+        SObj o = (SObj) Pool.getNew(Pool.SPROBJ);
+        if (o == null) {
+            return null;
+        }
+        o.m[0x9d] = (byte) id;
+        if (id != -1) {
+            o.spr = new Sprite(Res.load("/OBJ/SPR/_OBJ_SPR_" + n3(id) + "_CIF"), 0x10);
+            for (int i = 0; i < o.spr.nSets; i++) {
+                o.spr.setImages(i, Img.loadSprSet("/OBJ/SPR/_OBJ_SPR_" + n3(i) + "_BM", 0xffff, slot));
+            }
+        }
+        return o;
+    }
+
+    /** SprObject_copy(body, flags, x, y, layer) @0xcfab4 */
+    public static SObj sprObjectCopy(SObj body, int flags, int x, int y, int layer) {
+        if (body == null) {
+            return null;
+        }
+        SObj o = (SObj) Pool.getNew(Pool.SPROBJ);
+        if (o == null) {
+            return null;
+        }
+        o.spr.copyFrom(body.spr);
+        sprObjInit(o, x, y, body.m[0x9d], layer);
+        o.m[0x9e] = (byte) flags;
+        Bytes.w32(o.m, 0x9f, Bytes.s32(body.m, 0x9f));
+        if (((layer - 2) & 0xff) < 2) {
+            int mf = o.spr.maxFrame(0, 0);
+            Bytes.w32(o.m, 0x8c, Rng.rand(0, (byte) mf));
+        }
+        if (layer == 2) {
+            G.objList.addObject(o);
+        }
+        return o;
+    }
+
+    /** MAPOBJ_createAndCopy @0xace8c: one placed map object of a layer (0 more-bottom, 1 bottom, 2 middle, 3 top) */
+    public static void mapObjCreateAndCopy(int b0, int b1, int b2, int b3, int x, int y, int layer) {
+        Obj o = Pool.getNew(Pool.MAPOBJ);
+        if (o == null) {
+            return;
+        }
+        mapObjInit(o, x, y, b3, b0, b1, b2);
+        if (layer == 0) {
+            G.moreBottomObjectList.addObject(o);
+        } else if (layer == 1) {
+            G.bottomObjectList.addObject(o);
+        } else if (layer == 2) {
+            G.objList.addObject(o);
+        } else if (layer == 3) {
+            G.topObjectList.addObject(o);
+        }
+        o.m[0x19] = (byte) 0xff;
+        o.m[0x2a] = (byte) layer;
+        o.m[0x20] = 0;
+    }
+
+    /** Map_addMapObject(count, pos, layer) @0xab2e8 over the parsed records (b0, b1, b2, b3, x, y) */
+    public static void addMapObjects(int[] recs, int layer) {
+        for (int i = 0; i + 5 < recs.length; i += 6) {
+            int b0 = recs[i];
+            int b1 = recs[i + 1];
+            int b2 = recs[i + 2];
+            int b3 = recs[i + 3];
+            int x = recs[i + 4];
+            int y = recs[i + 5];
+            if ((b0 & 0x80) != 0) {
+                SObj body = getSprBody(b3);
+                if (body != null) {
+                    sprObjectCopy(body, (byte) b0, x, y, layer);
+                }
+            } else {
+                mapObjCreateAndCopy(b0, b1, b2, b3, x, y, layer);
+            }
+        }
     }
 
     /** Map_objIdxCreate: appends an object-image id (the count lives in _map+0x2b4 as a short) */
@@ -298,9 +527,172 @@ public final class Maps {
         }
     }
 
+    // ---- event objects -------------------------------------------------------------------------------------------------------------------
+
+    /** Map_objectImgIdx(id) @0xa0ff8: position of the object-image id in the load list, -1 = not loaded */
+    public static int objectImgIdx(int id) {
+        for (int i = 0; i < nObj; i++) {
+            if ((objIds[i] & 0xff) == (id & 0xff)) {
+                return i;
+            }
+        }
+        return -1;
+    }
+
+    /** MAPOBJ_getImgIdx(o) @0xac394: object-image id of a map object (its own +0x27 or its event record's +5) */
+    public static int mapObjImgId(Obj o) {
+        if (o.evRef < 0) {
+            return o.m[0x27];
+        }
+        return Event.e[Event.rec(o.evRef) + 5];
+    }
+
+    /** Tile_create(rec, evIdx) @0xc829c */
+    public static void tileCreate(int k, int evIdx) {
+        Obj t = Pool.getNew(Pool.TILE);
+        if (t == null) {
+            return;
+        }
+        int r = Event.rec(k);
+        t.evRef = -1;
+        Bytes.w32(t.m, 8, Bytes.s16(Event.e, r));
+        Bytes.w32(t.m, 0xc, Bytes.s16(Event.e, r + 2));
+        G.tileList.addObject(t);
+        t.m[Obj.EVENT] = (byte) evIdx;
+    }
+
+    /** MAPOBJ_create(rec, layer, evIdx) @0x9cfac: a map object placed by an event record */
+    public static void mapObjCreate(int k, int layer, int evIdx) {
+        Obj o = Pool.getNew(Pool.MAPOBJ);
+        if (o == null) {
+            return;
+        }
+        int r = Event.rec(k);
+        mapObjInit(o, Bytes.s16(Event.e, r) + 8, Bytes.s16(Event.e, r + 2) + 0x10, Event.e[r + 5] & 0xff, 0, 0, 0);
+        o.m[0x0a] = 8;
+        o.m[0x29] = 0x10;
+        o.m[0] = 0;
+        o.m[1] = 0;
+        if (layer == 0) {
+            G.moreBottomObjectList.addObject(o);
+        } else if (layer == 1) {
+            G.bottomObjectList.addObject(o);
+        } else if (layer == 2) {
+            G.objList.addObject(o);
+        } else if (layer == 3) {
+            G.topObjectList.addObject(o);
+        }
+        int imgId = o.m[0x27] & 0xff;      // evRef is still unset here: MAPOBJ_getImgIdx reads +0x27
+        if (objectImgIdx(imgId) < 0) {
+            objIdxCreate(Event.e[r + 5] & 0xff);
+            loadObjectImageBase(nObj - 1);
+        }
+        o.evRef = k;
+        o.m[0x2a] = (byte) layer;
+        o.m[Obj.EVENT] = (byte) evIdx;
+    }
+
+    /** Map_addEventObject(rec k, evIdx) @0x93cec */
+    public static void addEventObject(int k, int evIdx) {
+        byte[] e = Event.e;
+        int r = Event.rec(k);
+        if ((e[r + 5] & 0xff) == 0xff) {
+            return;
+        }
+        int sw = e[r + 8] & 0xff;
+        int type;
+        if (sw == 0xff || e[sw + 0x624] == 0) {
+            type = e[r + 4] & 0xff;
+        } else {
+            int t = e[r + 4] & 0xff;
+            if (t != 5) {
+                if (t > 5) {
+                    Bytes.w16(e, r, -0x10);
+                    Bytes.w16(e, r + 2, -0x10);
+                }
+                return;
+            }
+            e[r + 5] = 0x2a;
+            type = 5;
+        }
+        if (type == 0) {
+            tileCreate(k, evIdx);
+        } else if (type >= 1 && type <= 4) {
+            mapObjCreate(k, type - 1, evIdx);
+        } else {
+            Npcs.create(k, evIdx);
+        }
+    }
+
+    /** Map_Draw_Create_Minimap_Tile @0xa6348 (HUD minimap image; built when the HUD is ported) */
+    public static void createMinimapTile() {
+        minimapPending = true;
+    }
+
+    public static boolean minimapPending;
+
+    /** Map_changeEvtObjectImage(type, k, img) @0xaaba0 */
+    public static void changeEvtObjectImage(int type, int k, int img) {
+        throw new IllegalStateException("Map_changeEvtObjectImage: later");
+    }
+
+    // ---- map load / initialisation -------------------------------------------------------------------------------------------------------
+
+    /** Map_Finalize: frees the map (the Java objects are dropped; pool slots are returned later with MP_return) */
+    public static void finalizeMap() {
+        throw new IllegalStateException("Map_Finalize: later");
+    }
+
+    /** LinkedList_initAll @0x9728c */
+    public static void linkedListInitAll() {
+        G.objList.init();
+        G.netItemList.init();
+        tempInitAll();
+    }
+
+    /** LinkedList_tempInitAll @0x97224: the per-map lists are emptied (objList is kept: it holds the hero) */
+    public static void tempInitAll() {
+        G.topObjectList.init();
+        G.bottomObjectList.init();
+        G.moreBottomObjectList.init();
+        G.dropedItem.init();
+        G.tileList.init();
+        G.npcList.release();
+        G.monsterList.release();
+        G.targetEffectList.release();
+    }
+
     /** Map_Initialize @0xac110: loads the scene's map, images and puts the hero on it */
     public static void initialize() {
         Char hero = Pool.hero;
-        throw new IllegalStateException("Map_Initialize: LinkedList_tempInitAll/Map_Initialize body (this class): later");
+        tempInitAll();
+        variableInit();
+        if (vStrip == null) {
+            vStrip = new Frame(0x10, Glob.gameH);
+            hStrip = new Frame(Glob.gameW, 0x10);
+        }
+        Gfx.fillRectRGB(vStrip, 0, 0, 0x10, Glob.gameH, 0xd, 0xd, 0xf);
+        Gfx.fillRectRGB(hStrip, 0, 0, Glob.gameW, 0x10, 0xd, 0xd, 0xf);
+        m[0x78] = (byte) timeReturn(m[0x68]);
+        bgReturn(Bytes.s16(m, 0x44));
+        Chars.setDirection(hero, m[0x2d8]);
+        Bytes.w32(hero.m, 8, s32(0x268));
+        Bytes.w32(hero.m, 0xc, s32(0x26c));
+        loadMap();
+        imageLoad();
+        position();
+        m[0x96] = (byte) (Glob.gameW < s32(0x84) ? 1 : 0);
+        m[0x97] = (byte) (Glob.gameH < s32(0x88) ? 1 : 0);
+        HeroCtl.moveStop(hero);
+        HeroCtl.setMotion(hero, 0, hero.m[0x168]);
+        hero.m[0x171] = (byte) 0xff;
+        G.objList.addObject(hero);
+        if (hero.m[0x189] == 1 && hero.m[0x1ec] >= 0) {
+            G.objList.addObject(Pool.summon);
+        }
+        Sprite.lcdEffInit();
+        if (m[0x68] == 2) {
+            Sprite.lcdEffSet(0, 0, 0, 0x10, 0xff, 0);
+        }
     }
 }

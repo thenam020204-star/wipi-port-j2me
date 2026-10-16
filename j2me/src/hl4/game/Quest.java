@@ -85,4 +85,25 @@ public final class Quest {
         }
         return 0;
     }
+
+    /** Event_Get_SwitchQuest(i) @0x6941c (signed byte at _event+0x724+i) */
+    public static int getSwitchQuest(int i) {
+        return G.event[(i & 0xff) + 0x724];
+    }
+
+    /** Event_Get_SwitchDefault(i) @0x69450 */
+    public static int getSwitchDefault(int i) {
+        return G.event[(i & 0xff) + 0x624];
+    }
+
+    /** Event_Set_SwitchDefault(i, v) @0x6947c */
+    public static void setSwitchDefault(int i, int v) {
+        G.event[(i & 0xff) + 0x624] = (byte) v;
+    }
+
+    /** Event_Set_SwitchQuest(i, v) @0x694a8 */
+    public static void setSwitchQuest(int i, int v) {
+        G.event[(i & 0xff) + 0x724] = (byte) v;
+        G.event[0x7f8] = 0;
+    }
 }
