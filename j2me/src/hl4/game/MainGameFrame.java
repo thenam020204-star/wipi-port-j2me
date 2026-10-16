@@ -112,7 +112,7 @@ public final class MainGameFrame implements FrameHandler {
     }
 
     /** MainGameFrame_Render / MainGameFrame_drawGame @0x9c2ec (the in-game picture, game state 0) */
-    private void drawGame() {
+    public static void drawGame() {
         byte[] g = G.game;
         if (g[0] != 0) {
             throw new IllegalStateException("MainGameFrame_Render for game state != 0: later");

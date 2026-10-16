@@ -50,7 +50,25 @@ public final class Glob {
                 Gfx.fillRectRGB(Gfx.scr, 0, 0, gameW, gameH, 0xb, 0xb, 0xb);
                 return;
             }
-            throw new IllegalStateException("touch_setUiChange(0) with a loaded map: later");
+            // a map is loaded: keep the hero inside the camera window and redraw the whole picture at once (the first frame of the load screen)
+            byte[] m = G.map;
+            Obj h = Pool.hero;
+            if (hl4.sys.Bytes.s32(h.m, 8) - (gameW >> 1) < 0) {
+                hl4.sys.Bytes.w32(m, 156, 0);
+            }
+            if (hl4.sys.Bytes.s32(h.m, 0xc) - (gameH >> 1) < 0) {
+                hl4.sys.Bytes.w32(m, 160, 0);
+            }
+            if (hl4.sys.Bytes.s32(m, 132) < gameW + hl4.sys.Bytes.s32(m, 156)) {
+                hl4.sys.Bytes.w32(m, 156, hl4.sys.Bytes.s32(m, 132) - gameW);
+            }
+            if (hl4.sys.Bytes.s32(m, 136) < gameH + hl4.sys.Bytes.s32(m, 160)) {
+                hl4.sys.Bytes.w32(m, 160, hl4.sys.Bytes.s32(m, 136) - gameH);
+            }
+            Maps.initDrawFlag();
+            Gfx.setClip(0, 0, 400, 400);            // touch_setUiChange sets the clip to the square (_lcdG+104 = 400) here: the scaled draws (DM_DrawRotate565Ex) then wrap past the right edge into the next row
+            MainGameFrame.drawGame();
+            return;
         }
         if (mode != 1) {
             throw new IllegalStateException("touch_setUiChange(" + mode + "): later");

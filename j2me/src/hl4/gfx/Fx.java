@@ -270,7 +270,7 @@ public final class Fx {
             }
             for (int px = 0; px < bw; px++) {
                 int dx = ax + px;
-                if (dx < L || dx >= R || dx < 0 || dx >= f.w) {
+                if (dx < L || dx >= R || dx < 0) {
                     continue;
                 }
                 int col;
@@ -296,7 +296,10 @@ public final class Fx {
                 }
                 int s = colorRaw(img, sx, sy, row, col);
                 if (s >= 0 && s != SKIP) {
-                    int o = dy * f.w + dx;
+                    int o = dy * f.w + dx;             // DM_DrawRotate565(Ex) clips only against the clip rectangle: a clip wider than the frame wraps into the next row
+                    if (o >= f.px.length) {
+                        continue;
+                    }
                     f.px[o] = (short) (ex ? blendPixel(s, f.px[o] & 0xffff, alpha, effect) : s);
                 }
             }

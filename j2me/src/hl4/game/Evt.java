@@ -342,6 +342,21 @@ public final class Evt {
                 }
                 return true;
             }
+            case 0x25: {
+                t.get(b, 4);
+                LoadFrame.nowLoading = true;
+                e[0x944] = 0;
+                Event.moveNextScene(b[0], b[1], b[2], b[3], -1);
+                return true;
+            }
+            case 0x26: {
+                t.get(b, 4);
+                e[0x944] = 1;
+                Event.setScreen(0, 1);
+                Bytes.w32(e, 0x600, 0xff);
+                Event.moveNextScene(b[0], b[1], b[2], b[3], -1);
+                return true;
+            }
             case 0x37: {
                 int c = t.getByte();
                 if (c == 1) {

@@ -398,6 +398,45 @@ public final class Event {
         return Cam.cameraMove(true);
     }
 
+    /**
+     * Event_moveNextScene(p1 scene, p2 tile x, p3 tile y, p4 weather/time, p5) @0x5c724: requests a scene change (_event+0x60f).  p1 0xff = stay, 0xfe = back to the
+     * previous scene and position, 0xfd = story save + load frame (not ported).
+     */
+    public static void moveNextScene(int p1, int p2, int p3, int p4, int p5) {
+        byte[] m = G.map;
+        if (p1 < 0) {
+            p1 = (short) (p1 + 0x100);
+        }
+        e[0x60f] = 1;
+        int w = p4;
+        if (p1 != 0xff) {
+            if (p1 == 0xfe) {
+                Bytes.w32(m, 0x26c, Bytes.s32(m, 0x2cc));
+                Bytes.w32(m, 0x268, Bytes.s32(m, 0x2c8));
+                Bytes.w32(m, 0x2d4, Bytes.s32(m, 0x2d0));
+                w = 1;
+            } else if (p1 == 0xfd) {
+                throw new IllegalStateException("Event_moveNextScene 0xfd (MainGameData_saveStory): later");
+            } else {
+                Bytes.w32(m, 0x2c8, Pool.hero.x());
+                Bytes.w32(m, 0x2cc, Pool.hero.y());
+                Bytes.w32(m, 0x2d0, Bytes.s32(m, 0x2d4));
+                Bytes.w32(m, 0x2d4, p1);
+                Bytes.w32(m, 0x26c, p3 * 0x10 + 8);                     // Map_Set_Hero_Tile_Position
+                Bytes.w32(m, 0x268, p2 * 0x10 + 8);
+                Particles.curCount = 0;                                  // destroyAllParticles
+            }
+        }
+        m[0x2d8] = (byte) w;
+        e[0x609] = 0;
+        m[0x2d9] = (byte) p5;
+        byte[] h = Pool.hero.m;
+        if (h[0x1ed] != 0) {
+            Bytes.w32(h, 8, p2 * 0x10 + 8);
+            Bytes.w32(h, 0xc, p3 * 0x10 + 8);
+        }
+    }
+
     /** Event_nextScene @0x689a4: a scene change is pending (_event+0x60f) */
     public static int nextScene() {
         return e[0x60f];
