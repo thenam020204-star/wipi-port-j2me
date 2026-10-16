@@ -9,7 +9,7 @@ public class Main extends MIDlet {
 
     protected void startApp() {
         if (canvas == null) {
-            canvas = new GameCanvas();
+            canvas = new GameCanvas(this);
             Display.getDisplay(this).setCurrent(canvas);
         }
         canvas.resume();
@@ -25,5 +25,11 @@ public class Main extends MIDlet {
         if (canvas != null) {
             canvas.stop();
         }
+    }
+
+    /** MC_knlExit */
+    void quit() {
+        destroyApp(true);
+        notifyDestroyed();
     }
 }

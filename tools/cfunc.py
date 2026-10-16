@@ -13,7 +13,7 @@ DECL = re.compile(r'^\s+(undefined\d?|u?int|u?short|u?char|byte|bool|code|longlo
 
 
 def compact(body):
-    out, skipping, inl = [], False, None
+    out, skipping, inl, grp = [], False, None, False
     for ln in body.split('\n'):
         if inl is not None:                # inlined Touch_setState/TF_setFrame body: print one line, drop the rest of the block
             if ln == inl + '}':
@@ -26,6 +26,14 @@ def compact(body):
             continue
         if skipping:                       # continuation of a touch_Addrect(...) statement
             skipping = ';' not in ln
+            continue
+        if re.match(r'^\s*\w+ = m_TouchDirectKeySize;$', ln):    # inlined touch_setTouchGroup(): hit-rectangle setup, dropped up to its end label
+            out.append(ln.split('=')[0] + '/* inlined touch_setTouchGroup(): pointer hit rectangles omitted */')
+            grp = True
+            continue
+        if grp:
+            if ln.startswith('LAB_00044378:') or ln.startswith('LAB_00044360:') and False:
+                grp = False
             continue
         if ln.strip().startswith('touch_Addrect(') or ln.strip() == 'touch_rectClear();':
             skipping = ';' not in ln
@@ -40,6 +48,10 @@ def compact(body):
     while i < len(out):                    # drop empty switch arms ("case N:" immediately followed by "break;")
         if re.match(r'^\s*case [^:]*:$', out[i]) and i + 1 < len(out) and out[i + 1].strip() == 'break;':
             i += 2
+            continue
+        m = re.match(r'^\s*(\w+(?:\[[^\]]*\])?) = (\w+);$', out[i + 1]) if i + 2 < len(out) else None
+        if re.match(r'^\s*case [^:]*:$', out[i]) and m and out[i + 2].strip() == 'break;' and re.match(r'^b[A-Z]\w+$', m.group(2)):
+            i += 3                         # "case N: x = bVar5; break;" (jump-table filler that stores an unmodified local back)
             continue
         res.append(out[i])
         i += 1

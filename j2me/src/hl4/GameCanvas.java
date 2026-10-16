@@ -1,9 +1,8 @@
 package hl4;
 
-import hl4.gfx.Blit;
+import hl4.game.Engine;
+import hl4.game.Gfx;
 import hl4.gfx.Frame;
-import hl4.gfx.Gbm;
-import hl4.sys.Res;
 
 import javax.microedition.lcdui.Canvas;
 import javax.microedition.lcdui.Graphics;
@@ -18,20 +17,17 @@ public class GameCanvas extends Canvas implements Runnable {
     public static final int H = 320;
     private static final int BAND = 32;
 
-    private final Frame frame = new Frame(W, H);
+    private Frame frame;
     private final int[] rgb = new int[W * BAND];
     private Thread thread;
     private volatile boolean running;
     private volatile boolean paused;
-    private int tickCount;
-    private Gbm demo;
+    private boolean started;
+    private Main midlet;
 
-    public GameCanvas() {
+    public GameCanvas(Main m) {
+        midlet = m;
         setFullScreenMode(true);
-        byte[] f = Res.load("/tdf/TITLE_BM");
-        if (f != null) {
-            demo = Gbm.loadMerged(f)[0];
-        }
     }
 
     void resume() {
@@ -53,28 +49,34 @@ public class GameCanvas extends Canvas implements Runnable {
 
     public void run() {
         while (running) {
+            long t0 = System.currentTimeMillis();
             if (!paused) {
                 tick();
                 repaint();
                 serviceRepaints();
             }
+            // the original re-arms its timer 'frameDelay' ms after painting (fps[] table: 30 ms at the default speed); the processing time of
+            // the reference device is unknown (UNKNOWN) - 15 ms is assumed, tuned in Phase F
+            long wait = Engine.frameDelay + 15 - (System.currentTimeMillis() - t0);
             try {
-                Thread.sleep(40);
+                Thread.sleep(wait < 1 ? 1 : wait);
             } catch (InterruptedException e) {
                 // ignore
+            }
+            if (Engine.exit) {
+                running = false;
+                midlet.quit();
             }
         }
     }
 
     private void tick() {
-        tickCount++;
-        short[] px = frame.px;
-        for (int i = 0; i < px.length; i++) {
-            px[i] = 0;
+        if (!started) {
+            Engine.startApp();
+            frame = Gfx.scr;
+            started = true;
         }
-        if (demo != null) {
-            Blit.drawImg(frame, 0, 0, demo.w, demo.h, demo, 0, 0, 0, 0, 0);
-        }
+        Engine.tick();
     }
 
     protected void paint(Graphics g) {
@@ -84,6 +86,9 @@ public class GameCanvas extends Canvas implements Runnable {
         g.fillRect(0, 0, sw, sh);
         int ox = (sw - W) / 2;
         int oy = (sh - H) / 2;
+        if (frame == null) {
+            return;
+        }
         short[] px = frame.px;
         // clip to the device screen ourselves (some MIDP stacks do not clip drawRGB); a screen smaller than 240x320 shows the top-left part
         int sx0 = ox < 0 ? -ox : 0;
@@ -114,10 +119,60 @@ public class GameCanvas extends Canvas implements Runnable {
         }
     }
 
+    /** MIDP key code -> the WIPI key code the game logic uses (docs/phaseB_flows.md section 4); 0 = unmapped. */
+    private int map(int keyCode) {
+        if (keyCode >= KEY_NUM0 && keyCode <= KEY_NUM9) {
+            return '0' + (keyCode - KEY_NUM0);
+        }
+        if (keyCode == KEY_STAR) {
+            return '*';
+        }
+        if (keyCode == KEY_POUND) {
+            return '#';
+        }
+        int a = 0;
+        try {
+            a = getGameAction(keyCode);
+        } catch (IllegalArgumentException e) {
+            a = 0;
+        }
+        switch (a) {
+            case UP:
+                return -1;
+            case DOWN:
+                return -2;
+            case LEFT:
+                return -3;
+            case RIGHT:
+                return -4;
+            case FIRE:
+                return -5;
+            default:
+                break;
+        }
+        if (keyCode == -6) {
+            return -6;
+        }
+        if (keyCode == -7) {
+            return -7;
+        }
+        if (keyCode == -8) {
+            return -16;
+        }
+        return 0;
+    }
+
     protected void keyPressed(int keyCode) {
-        // Phase E: key mapping (docs/phaseB_flows.md section 4)
+        int k = map(keyCode);
+        if (k != 0 && started) {
+            Engine.onKey(true, k);
+        }
     }
 
     protected void keyReleased(int keyCode) {
+        int k = map(keyCode);
+        if (k != 0 && started) {
+            Engine.onKey(false, k);
+        }
     }
 }
