@@ -1,6 +1,7 @@
 package hl4.game;
 
 import hl4.gfx.SprProps;
+import hl4.gfx.Sprite;
 import hl4.sys.Bytes;
 
 /**
@@ -257,6 +258,166 @@ public final class HeroProc {
         }
     }
 
+    // ---- event zones / regeneration ------------------------------------------------------------------------------------------------------
+
+    private static final int[] zoneBuf = new int[4];
+
+    /** Map_Check_Collision_Hero_Eventzone @0xa59c8: index of the event-zone record (types 1, 3, 5, 6) the hero rectangle, shifted by its pending move, overlaps most; -1 when none */
+    public static int eventZoneCollision(int p1, int p2, int p3, int p4, byte[] m, int ox, int oy) {
+        byte[] e = G.event;
+        int cnt = e[8];
+        if (cnt < 1) {
+            return -1;
+        }
+        int vx = Bytes.s32(m, ox);
+        int vy = Bytes.s32(m, oy);
+        if (vx != 0 && vy == 0) {
+            p1 += vx;
+        } else if (vx == 0 && vy != 0) {
+            p2 += vy;
+        }
+        int[] z = zoneBuf;
+        z[0] = 0;
+        z[1] = 0;
+        z[2] = 0;
+        z[3] = 0;
+        int n = 0;
+        int tw = M[0x7e];
+        int th = M[0x7f];
+        for (int k = 1; k < cnt; k++) {
+            int r = Event.rec(k);
+            int t = e[r + 7];
+            if (t != 1 && t != 3 && t != 5 && t != 6) {
+                continue;
+            }
+            int w = t == 5 ? tw * 3 : tw;
+            int hh = t == 6 ? th * 3 : th;
+            int a = Um.collision(p1, p2, p3, p4, Bytes.s16(e, r), Bytes.s16(e, r + 2), w, hh, OUT);
+            if (a < 0 && n < 2) {
+                z[n] = a;
+                z[n + 2] = k;
+                n++;
+            }
+        }
+        if (n == 1) {
+            return z[2];
+        }
+        if (n != 2) {
+            return -1;
+        }
+        int a0 = z[0] < 0 ? -z[0] : z[0];
+        int a1 = z[1] < 0 ? -z[1] : z[1];
+        if (a0 != a1 && a0 <= a1) {
+            return z[3];
+        }
+        return z[2];
+    }
+
+    /** Map_Check_Hero_Eventzone_Move @0xa5f20: the pending move is cut by every solid event-zone record (flag +4 set, type != 7) */
+    public static void eventZoneMove(int p1, int p2, int p3, int p4, byte[] m, int ox, int oy) {
+        byte[] e = G.event;
+        int cnt = e[8];
+        for (int k = 1; k < cnt; k++) {
+            int r = Event.rec(k);
+            if (e[r + 4] == 0 || e[r + 7] == 7) {
+                continue;
+            }
+            moveTwoRect(p1, p2, p3, p4, Bytes.s16(e, r), Bytes.s16(e, r + 2), M[0x7e], M[0x7f], m, ox, oy);
+        }
+    }
+
+    /** Map_Check_CollisionZone_Move_hero @0xa2c6c: the hero variant of the tile-collision move cut (slope tiles); only entered with a pending move on a map with collision tilesets */
+    public static void zoneMoveHero(int p1, int p2, int p3, int p4, byte[] m, int ox, int oy) {
+        if (Bytes.s32(m, ox) == 0 && Bytes.s32(m, oy) == 0) {
+            return;
+        }
+        if (M[0x270] < 1) {
+            return;
+        }
+        throw new IllegalStateException("Map_Check_CollisionZone_Move_hero / ..._n_Rect_MoveFlag_hero (hero tile collision with a pending move): later");
+    }
+
+    /** the hero's per-tick timers once the cut scene is over: buff/status countdowns (CHAR_buffProcess @0xdbe3c), drug timers (Hero_processUseDrug @0x492d0), HP/SP regeneration, skill and item cool-downs */
+    private static void regen(Char h) {
+        byte[] m = h.m;
+        for (int i = 0; i < 3; i++) {
+            int o = i * 8;
+            if (m[0xf4 + o] == 1) {
+                int v = Bytes.s16(m, 0xfa + o) - 1;
+                Bytes.w16(m, 0xfa + o, v);
+                if (v < 0) {
+                    throw new IllegalStateException("CHAR_removeBuff (buff expiry): later");
+                }
+            }
+        }
+        for (int i = 0; i < 4; i++) {
+            int o = i * 8;
+            if (m[0x10c + o] == 1) {
+                int v = Bytes.s16(m, 0x112 + o) - 1;
+                Bytes.w16(m, 0x112 + o, v);
+                if (v < 0) {
+                    throw new IllegalStateException("CHAR_removeEtcStatus (status expiry): later");
+                }
+            }
+        }
+        for (int o = 0xa3a; o <= 0xa3e; o += 2) {
+            if (Bytes.s16(m, o) > 0) {
+                Bytes.w16(m, o, Bytes.s16(m, o) - 1);
+            }
+        }
+        if (m[0x166] == 0) {
+            if (m[0xd0a] > 0x50) {
+                addSp(h, Bytes.s16(m, 0x1ba));
+                Chars.addHp(h, Bytes.s16(m, 0xd0));
+                m[0xd0a] = 0;
+            }
+            m[0xd0a]++;
+        } else {
+            m[0xd0a] = 0;
+        }
+        if (G.globalFrame % 20 == 0) {
+            addSp(h, Bytes.s16(m, 0x1be));
+            Chars.addHp(h, Bytes.s16(m, 0xca));
+            if (Bytes.s32(m, 0xd30) < 1) {
+                Bytes.w32(m, 0xd30, 0);
+            } else {
+                Chars.addHp(h, Bytes.s32(m, 0xd2c));
+                Bytes.w32(m, 0xd30, Bytes.s32(m, 0xd30) - Bytes.s32(m, 0xd2c));
+            }
+        }
+        if (Bytes.s16(m, 0xc6) > 0) {
+            throw new IllegalStateException("HERO_process: instant heal effect (CHAR_addCommonEffect): later");
+        }
+        if (Bytes.s16(m, 0x1c4) > 0) {
+            addSp(h, Bytes.s16(m, 0x1c4));
+            Bytes.w16(m, 0x1c4, 0);
+        }
+        for (int i = 0; i < 16; i++) {
+            int o = i * 0x28;
+            if (m[0x2b8 + o] > 0 && Bytes.s16(m, 0x2ba + o) < Bytes.s16(m, 0x29e + o)) {
+                Bytes.w16(m, 0x2ba + o, Bytes.s16(m, 0x2ba + o) + 1);
+            }
+        }
+        for (int i = 0; i < 2; i++) {
+            for (int j = 0; j < 6; j++) {
+                int b = 0x1f4 + i + j * 2;
+                if (m[b] > 1) {
+                    Obj it = Items.itemSearch(8, m[b + 0xc]);
+                    if (it != null && Bytes.s16(it.m, 0x26a) < Bytes.s16(it.m, 0x268)) {
+                        Bytes.w16(it.m, 0x26a, Bytes.s16(it.m, 0x26a) + 1);
+                    }
+                }
+            }
+        }
+    }
+
+    /** HERO_addSp(h, n) @0x86a2c */
+    public static void addSp(Char h, int n) {
+        int v = n + Bytes.s32(h.m, 0x218);
+        int max = Bytes.s32(h.m, 0x21c);
+        Bytes.w32(h.m, 0x218, max < v ? max : v);
+    }
+
     // ---- HERO_touchProcess ---------------------------------------------------------------------------------------------------------------
 
     /** HERO_touchProcess(h) @0x8c784: the touch-screen steering; with no touch target and no touch destination (+0xd18/+0xd1c = -1) it does nothing */
@@ -349,11 +510,18 @@ public final class HeroProc {
                 throw new IllegalStateException("HERO_HG/SK/SM_process: later");
         }
         Chars.preProcessTargetEffects(h);
+        int zx = Bytes.s32(m, 0x28) + h.x();
+        int zy = Bytes.s32(m, 0x2c) + h.y();
+        int zw = Bytes.s32(m, 0x30);
+        int zh = Bytes.s32(m, 0x34);
         if (G.event[0x1fe] == 0) {
-            throw new IllegalStateException("Map_Check_Collision_Hero_Eventzone / EVENT_CheckEvent: later");
+            int idx = eventZoneCollision(zx, zy, zw, zh, m, 0x158, 0x15c);
+            Bytes.w32(G.event, 4, idx);
+            Event.checkEvent(idx);
         }
         if (!Event.isEvent()) {
-            throw new IllegalStateException("Map_Check_CollisionZone_Move_hero / Map_Check_Hero_Eventzone_Move: later");
+            zoneMoveHero(zx, zy, zw, zh, m, 0x158, 0x15c);
+            eventZoneMove(zx, zy, zw, zh, m, 0x158, 0x15c);
         }
         if (Bytes.s32(m, 0x158) == 0 && Bytes.s32(m, 0x15c) == 0 && m[0x167] != 0 && m[0x167] != 2
                 && (Bytes.s32(m, 0xd18) >= 0 || Bytes.s32(m, 0xd1c) >= 0)) {
@@ -368,7 +536,7 @@ public final class HeroProc {
             HeroCtl.moveStop(h);
         }
         if (!Event.isEvent()) {
-            throw new IllegalStateException("CHAR_buffProcess / Hero_processUseDrug / regeneration: later");
+            regen(h);
         }
         G.globalFrame++;
         if (G.globalFrame > 9999) {
@@ -390,6 +558,184 @@ public final class HeroProc {
         if (m[0x8c] > h.spr.maxFrame(m[0x167], d)) {
             m[0x8c] = 0;
         }
+    }
+
+    /** HERO_endProcess outside events: frame stepping, skill end, class end-process, vibration, queued moves */
+    private static void endPlay(Char h, int dir) {
+        byte[] m = h.m;
+        Sprite sp = h.spr;
+        int d = (byte) dir;
+        if (m[0x166] == 4) {
+            if (!sp.isEndFrame(5, 0, m[0x8c])) {
+                m[0x8c]++;
+            }
+        } else {
+            if (sp.isEndFrame(m[0x167], d, m[0x8c]) && m[0x166] == 3) {
+                throw new IllegalStateException("Hero_end_skilluse: later");
+            }
+            switch (m[0x16b]) {
+                case 0:
+                    hkEndProcess(h, d);
+                    break;
+                default:
+                    throw new IllegalStateException("HERO_HG/SK/SM_endprocess: later");
+            }
+        }
+        if (m[0x167] < 8) {
+            m[0xd0c] = (byte) 0xff;
+            m[0x211] = 0;
+        }
+        if (m[0xa2e] == 1) {
+            m[0xa2e] = 0;
+            m[0xa2d] = 0;                       // SM_Vibrator(1, 150) when the vibration option is on: no effect on the state
+        }
+        if (m[0xa2f] > 0) {
+            m[0xa2f] = 0;                       // SM_Vibrator: likewise
+        }
+        if (m[0x285] != 0) {
+            throw new IllegalStateException("HERO_set_move (queued move +0x285): later");
+        }
+        m[0x285] = 0;
+        if (m[0x289] != 0) {
+            throw new IllegalStateException("HERO_setTeleportMove: later");
+        }
+        m[0x289] = 0;
+        int c = Bytes.u16(m, 0xd10);
+        if (c != 0 && c < 0x8000) {
+            Bytes.w16(m, 0xd10, c - 1);
+        }
+    }
+
+    /** HERO_HK_endprocess @0x81374: the end of a motion step of the first class (fighter) */
+    private static void hkEndProcess(Char h, int dir) {
+        byte[] m = h.m;
+        Sprite sp = h.spr;
+        if (!sp.isEndFrame(m[0x167], dir, m[0x8c])) {
+            int c = m[0xd0c];
+            boolean air = c == 5 ? m[0x20e] > 1 : (c == 10 || c == 2);
+            if (air && m[0x20f] != 0 && m[0x8c] == 1) {
+                m[0x210] = 0x1e;
+            }
+            int s = m[0x166] & 0xff;
+            if (s - 0xe > 1 || s < 0xe) {
+                m[0x8c]++;
+            }
+            return;
+        }
+        if (m[0xd0c] == 0) {
+            int c = m[0x20e];
+            boolean add = false;
+            if (c == 1) {
+                add = true;
+            } else if (c == 2 && m[0x2b8] < 5) {
+                add = true;
+            } else if (c == 3 && m[0x2b8] >= 5) {
+                add = true;
+            }
+            if (add) {
+                Bytes.w16(m, 0x2ba, 0);
+                Bytes.w16(m, 0x2ba, Bytes.s16(m, 0x2ba) + (short) Bytes.s16(m, 0x1cc) * (short) Bytes.s16(m, 0x29e) / 100);
+            }
+        }
+        switch (m[0x167]) {
+            case 1:
+            case 3:
+                HeroCtl.setStatusAir(h, 0);
+                m[0x20e] = 0;
+                m[0x168] = (byte) dir;
+                m[0x166] = 1;
+                m[0x174] = (byte) 0xff;
+                m[0x167] = 1;
+                m[0x8c] = 0;
+                sp.f6c = 0;
+                m[0x229] = 0;
+                m[0x226] = 0;
+                m[0x227] = 0;
+                m[0x228] = 0;
+                return;
+            case 4:
+            case 0x12:
+            case 0x1a:
+                HeroCtl.setStandMotion(h, 0, 0, dir);
+                return;
+            case 6:
+                HeroCtl.setStandMotion(h, 0, 1, dir);
+                return;
+            case 8:
+                HeroCtl.setStandMotion(h, 1, 0, dir);
+                return;
+            case 10:
+                if (m[0xd0c] == 3) {
+                    m[0x167] = 8;
+                    m[0x168] = (byte) inverseDirection(m[0x168]);
+                    m[0x20e] = 0;
+                    m[0x174] = (byte) 0xff;
+                    m[0x8c] = 0;
+                    m[0x166] = 0;
+                    return;
+                }
+                if (m[0xd0c] == 6) {
+                    startCombo(m, 0x18);
+                    return;
+                }
+                break;
+            case 0x17:
+                if (m[0xd0c] == 6) {
+                    startCombo(m, 0x18);
+                    return;
+                }
+                break;
+            case 0x18:
+            case 0x19:
+                if (m[0xd0c] == 6) {
+                    startCombo(m, 0x1a);
+                    return;
+                }
+                break;
+            case 0x15:
+                if (m[0xd0c] == 4) {
+                    m[0x8c] = 0;
+                }
+                return;
+            default:
+                break;
+        }
+        if (m[0xa31] != 0) {
+            HeroCtl.setMotion(h, m[0x167], dir);
+            return;
+        }
+        if (m[0x22b] != 0) {
+            m[0x22b] = 0;
+            m[0x168] = m[0x22a];
+            dir = m[0x22a];
+        }
+        HeroCtl.setStandMotion(h, 0, 0, dir);
+    }
+
+    private static void startCombo(byte[] m, int motion) {
+        m[0x167] = (byte) motion;
+        m[0x20e]++;
+        m[0x174] = 6;
+        m[0x8c] = 0;
+        m[0x166] = 3;
+        m[0xd0c] = 6;
+    }
+
+    /** HERO_get_inverseDirection @0x8662c */
+    private static int inverseDirection(int d) {
+        if (d == 0) {
+            return 1;
+        }
+        if (d == 1) {
+            return 0;
+        }
+        if (d == 2) {
+            return 3;
+        }
+        if (d == 3) {
+            return 2;
+        }
+        return d;
     }
 
     /** HERO_endProcess(h) @0x8e808 */
@@ -414,7 +760,8 @@ public final class HeroProc {
         }
         Chars.endProcessTargetEffects(h);
         if (!Event.isEvent()) {
-            throw new IllegalStateException("HERO_endProcess outside events (Hero_end_skilluse / HK..SM_endprocess): later");
+            endPlay(h, dir);
+            return;
         }
         if (G.event[0x5eb] == 0) {
             int d = (byte) dir;

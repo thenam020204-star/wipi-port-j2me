@@ -108,8 +108,31 @@ public final class EventDraw {
 
     /** Event_Draw_SubTitle(frame) @0x6a4a4 */
     public static void subTitle(Frame f) {
-        if (G.event[0x608] != 0) {
-            throw new IllegalStateException("Event_Draw_SubTitle: later");
+        byte[] e = G.event;
+        if (e[0x608] == 0) {
+            return;
+        }
+        byte[] t = It.getString(e[0x60b]);
+        if (t == null) {
+            return;
+        }
+        if (t.length == 5 && t[0] == 'V' && t[1] == 'A' && t[2] == 'L' && t[3] == 'U' && t[4] == 'E') {
+            e[0x608] = 0;
+            return;
+        }
+        if (e[0x60c] != -1) {
+            int half = e[0x60e] / 2;
+            int step = half == 0 ? 0 : (byte) (200 / half);
+            Gfx.fillRectAlpha(f, 0, (Glob.gameH >> 1) - 0xb, Glob.gameW, 0x14, e[0x60d] * step, 0xb, 0xb, 0xb);
+        }
+        Hf.setColor(0xff, 0xff, 0xff);
+        Hf.drawAnchorH2(f, Glob.gameW >> 1, (Glob.gameH >> 1) - 6, Glob.gameW, 0, t, 0, 0, t.length, 1);
+        if (e[0x60a] == 0) {
+            e[0x608] = (byte) (e[0x60d] - 1) > 0 ? (byte) 1 : 0;
+            e[0x60d]--;
+        } else {
+            e[0x60a] = (byte) (e[0x60d] + 1) < e[0x60e] / 2 ? (byte) 1 : 0;
+            e[0x60d]++;
         }
     }
 

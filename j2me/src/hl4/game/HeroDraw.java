@@ -72,6 +72,15 @@ public final class HeroDraw {
         return h.m[0x189] == 1 && (h.m[0x167] & 0xff) - 8 >= 0 && (h.m[0x167] & 0xff) - 8 < 2;
     }
 
+    /** the play-mode body draw (SPR_drawSprite, or SPR_drawSpriteSK for the class with +0x16b == 2) */
+    private static void drawPlay(Char h, Sprite s, int dir, int ox, int oy) {
+        byte[] m = h.m;
+        if (m[0x16b] == 2) {
+            throw new IllegalStateException("SPR_drawSpriteSK (class 2 hero body): later");
+        }
+        m[0x8c] = (byte) s.drawSprite(hl4.gfx.GfxOut.I, Gfx.scr, m[0x167], (byte) dir, m[0x8c], Bytes.s32(m, 8) + ox, Bytes.s32(m, 0xc) + oy, 0, -1);
+    }
+
     /** Hero_draw(hero, ox, oy) */
     public static void draw(Char h, int ox, int oy) {
         byte[] m = h.m;
@@ -140,25 +149,27 @@ public final class HeroDraw {
                 s.setControlPal(0xff, 0xff, 0xff, m[0x288] & 0xff, 0);
             }
             if (!ev) {
-                throw new IllegalStateException("Hero_draw (play mode): later");
+                drawPlay(h, s, dir, ox, oy);
+            } else {
+                if (G.map[0x68] == 2) {
+                    s.setControlPal(0, 0, 0, 0xff, 0x10);
+                }
+                int dbg = m[0x172];
+                m[0x8c] = (byte) s.drawNpc(hl4.gfx.GfxOut.I, Gfx.scr, m[0x167], dbg <= 4 ? 2 : 0, dbg <= 4 ? 3 : 1, (byte) dir, m[0x8c], Bytes.s32(m, 8) + ox,
+                        Bytes.s32(m, 0xc) + oy, 0, 0, 0);
             }
-            if (G.map[0x68] == 2) {
-                s.setControlPal(0, 0, 0, 0xff, 0x10);
-            }
-            int dbg = m[0x172];
-            m[0x8c] = (byte) s.drawNpc(hl4.gfx.GfxOut.I, Gfx.scr, m[0x167], dbg <= 4 ? 2 : 0, dbg <= 4 ? 3 : 1, (byte) dir, m[0x8c], Bytes.s32(m, 8) + ox,
-                    Bytes.s32(m, 0xc) + oy, 0, 0, 0);
             s.f68 = 0;
         } else if ((a44 & 1) != 0) {
             if (!ev) {
-                throw new IllegalStateException("Hero_draw (blink, play mode): later");
+                drawPlay(h, s, dir, ox, oy);
+            } else {
+                if (G.map[0x68] == 2) {
+                    s.setControlPal(0, 0, 0, 0xff, 0x10);
+                }
+                int dbg = m[0x172];
+                m[0x8c] = (byte) s.drawNpc(hl4.gfx.GfxOut.I, Gfx.scr, m[0x167], dbg <= 4 ? 2 : 0, dbg <= 4 ? 3 : 1, (byte) dir, m[0x8c], Bytes.s32(m, 8) + ox,
+                        Bytes.s32(m, 0xc) + oy, 0, 0, -1);
             }
-            if (G.map[0x68] == 2) {
-                s.setControlPal(0, 0, 0, 0xff, 0x10);
-            }
-            int dbg = m[0x172];
-            m[0x8c] = (byte) s.drawNpc(hl4.gfx.GfxOut.I, Gfx.scr, m[0x167], dbg <= 4 ? 2 : 0, dbg <= 4 ? 3 : 1, (byte) dir, m[0x8c], Bytes.s32(m, 8) + ox,
-                    Bytes.s32(m, 0xc) + oy, 0, 0, -1);
         }
         if (Opt.particle()) {
             particleProcess();

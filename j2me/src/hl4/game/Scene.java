@@ -94,6 +94,20 @@ public final class Scene {
         }
     }
 
+    /** the current scene's title (global at 0x111641, 27 bytes) */
+    public static final byte[] name = new byte[0x1b];
+
+    /** Scene_getName @0x6a43c: copies the scene title string (IT string +_map[0x288]) */
+    public static void getName() {
+        byte[] t = It.getString(m[0x288]);
+        for (int i = 0; i < name.length; i++) {
+            name[i] = 0;
+        }
+        if (t != null) {
+            Bytes.copy(t, 0, name, 0, t.length < name.length ? t.length : name.length);
+        }
+    }
+
     /** SCENE_End @0x6dbd8: leaves the current scene */
     public static int end() {
         if (Event.isEvent()) {

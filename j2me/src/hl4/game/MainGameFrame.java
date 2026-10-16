@@ -85,7 +85,9 @@ public final class MainGameFrame implements FrameHandler {
                 Cam.mapMove();
             }
             if (e[0x609] != 0 && e[0x1fe] == 0) {
-                throw new IllegalStateException("Event_Set_SubTitle / Scene_getName (map title): later");
+                Event.setSubTitle(G.map[0x288], 0, 0x10);
+                e[0x609] = 0;
+                Scene.getName();
             }
             int c = Bytes.s16(G.map, 0x356);
             if (c <= 0) {
@@ -134,9 +136,7 @@ public final class MainGameFrame implements FrameHandler {
         ObjDraw.drawMiddle();
         MapFx.fallRandDraw(Gfx.scr);
         MapFx.screenEffect();
-        if (!Event.isEvent()) {
-            throw new IllegalStateException("MainGameFrame_drawBottomBar (HUD): later");
-        }
+        Hud.drawBottomBar();
         if (g[6] != 0 && infoMonster != null && !Event.isEvent()) {
             throw new IllegalStateException("MainGameFrame_drawMonsterInfo: later");
         }
