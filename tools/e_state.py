@@ -91,6 +91,8 @@ def mask_for(name):
         r += [(0x20, 0x94)]
     if base in ('effect', 'teffect'):
         r += [(0x20, 0x48)]
+    if base == 'teffect':
+        r += [(0x48, 0x4c), (0x54, 0x58)]          # sprite / attack-property table pointers (TEff.spr, TEff.hitTable)
     if base == 'hero':
         r += [(0x1f0, 0x1f4), (0xa50, 0xad0)]   # particle-info pointer; the embedded particle SPR struct (HERO_Copy_Sprite_ImageInfo: image pointers; Java Particles keep their own Sprite)
     if base == 'summon':
@@ -102,7 +104,7 @@ def mask_for(name):
         r += [(0x340, 0x344)]                    # pointer (loaded effect sprite)
         r += [(0x8, 0x44), (0x278, 0x288), (0x2a4, 0x2c8), (0x35c, 0x364)]
     if name == '_game':
-        r += [(0x68, 0x118)]
+        r += [(0x68, 0x118), (8, 12)]            # +8: pointer to the monster of the info bar (MainGameFrame.infoMonster)
     return r
 
 
