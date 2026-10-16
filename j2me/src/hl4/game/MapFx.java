@@ -112,6 +112,25 @@ public final class MapFx {
         }
     }
 
+    /** Map_extraScreenEffect @0x93eec: the event's whole-screen fade, _map+0x34e = kind (0/2 dark, 1/3 white), +0x34f = alpha (0xff = opaque) */
+    public static void extraScreenEffect() {
+        byte[] m = G.map;
+        if (!Opt.particle() && m[0x34f] != 0) {
+            m[0x34f] = (byte) 0xff;
+        }
+        int kind = m[0x34e];
+        if (kind < 0 || kind > 3) {
+            return;
+        }
+        int c = (kind & 1) == 0 ? 0xb : 0xff;
+        int a = m[0x34f] & 0xff;
+        if (a == 0xff) {
+            Gfx.fillRectRGB(Gfx.scr, 0, 0, Glob.gameW, Glob.gameH, c, c, c);
+        } else {
+            Gfx.fillRectAlpha(Gfx.scr, 0, 0, Glob.gameW, Glob.gameH, a, c, c, c);
+        }
+    }
+
     /** Map_setEffect(id) @0xa0b6c: toggles (an already set effect is cleared). */
     public static void setEffect(int id) {
         byte[] m = G.map;

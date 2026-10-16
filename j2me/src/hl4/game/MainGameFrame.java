@@ -108,7 +108,41 @@ public final class MainGameFrame implements FrameHandler {
         if (testNoRender) {
             return;
         }
-        throw new IllegalStateException("MainGameFrame_Render: later");
+        drawGame();
+    }
+
+    /** MainGameFrame_Render / MainGameFrame_drawGame @0x9c2ec (the in-game picture, game state 0) */
+    private void drawGame() {
+        byte[] g = G.game;
+        if (g[0] != 0) {
+            throw new IllegalStateException("MainGameFrame_Render for game state != 0: later");
+        }
+        byte[] m = G.map;
+        MapDraw.drawTile(Gfx.back);
+        if (!G.tileList.isEmpty()) {
+            throw new IllegalStateException("Map_drawTileList / Tile_draw: later");
+        }
+        m[0x94] = 0;
+        MapObjDraw.drawBottom(Gfx.back);
+        MapDraw.copyToScreen();
+        Gfx.setClip(0, 0, Glob.gameW, Glob.gameH);
+        if (!G.dropedItem.isEmpty()) {
+            throw new IllegalStateException("DropItem_drawItems: later");
+        }
+        ObjDraw.drawBottomMonster();
+        MapFx.extraScreenEffect();
+        ObjDraw.drawMiddle();
+        MapFx.fallRandDraw(Gfx.scr);
+        MapFx.screenEffect();
+        if (!Event.isEvent()) {
+            throw new IllegalStateException("MainGameFrame_drawBottomBar (HUD): later");
+        }
+        if (g[6] != 0 && infoMonster != null && !Event.isEvent()) {
+            throw new IllegalStateException("MainGameFrame_drawMonsterInfo: later");
+        }
+        EventDraw.draw(Gfx.scr);
+        EventDraw.subTitle(Gfx.scr);
+        EventDraw.skipFade(Gfx.scr);
     }
 
     /** MainGameFrame_EndProcess @0x9d3a0 */

@@ -17,6 +17,9 @@ import java.util.Hashtable;
  */
 public class GameTraceTest {
     static final int BACK_FROM = 522;
+    static boolean backOnly;
+    static String rawTicks;
+    static String rawDir;
 
     public static void main(String[] a) throws Exception {
         String[] ref = new String[100000];
@@ -48,6 +51,15 @@ public class GameTraceTest {
             }
             if (a[i].equals("--norender")) {
                 hl4.game.MainGameFrame.testNoRender = true;
+                continue;
+            }
+            if (a[i].equals("--raw")) {
+                rawTicks = "," + a[++i] + ",";
+                rawDir = a[++i];
+                continue;
+            }
+            if (a[i].equals("--backonly")) {
+                backOnly = true;
                 continue;
             }
             if (a[i].equals("--state")) {
@@ -98,6 +110,10 @@ public class GameTraceTest {
                 // the background buffer is compared from the first in-game render on (before that it still holds whatever the menus drew)
                 mine += " " + (t >= BACK_FROM ? TraceTest.hex8(Fnv.shorts(Gfx.back.px, Gfx.back.px.length)) : rp[3]);
             }
+            if (rawTicks != null && rawTicks.indexOf("," + t + ",") >= 0) {
+                writeRaw(rawDir + "/js" + t + ".raw", Gfx.scr.px);
+                writeRaw(rawDir + "/jb" + t + ".raw", Gfx.back.px);
+            }
             if (so != null && stateTicks.indexOf("," + t + ",") >= 0) {
                 StateDump.write(so, t);
             }
@@ -106,6 +122,11 @@ public class GameTraceTest {
                 // no picture yet: only the RNG call count is compared
                 String[] mp = mine.split(" ");
                 same = mp[2].equals(rp[2]) || t >= 534;   // from 534 on the original draws the rain effect (RNG)
+            }
+            if (backOnly) {
+                // picture work in progress: only the background buffer hash is compared
+                String[] mp = mine.split(" ");
+                same = mp.length > 3 && rp.length > 3 && mp[3].equals(rp[3]);
             }
             if (!same) {
                 System.out.println("DIVERGE at tick " + t + ": java " + mine + " ref " + ref[t]);
@@ -121,5 +142,16 @@ public class GameTraceTest {
         }
         System.out.println("GameTraceTest " + (bad == 0 ? "ok" : "DIVERGED") + " ticks " + (start + 1) + ".." + end);
         System.exit(bad == 0 ? 0 : 1);
+    }
+
+    static void writeRaw(String path, short[] px) throws Exception {
+        java.io.FileOutputStream o = new java.io.FileOutputStream(path);
+        byte[] b = new byte[px.length * 2];
+        for (int i = 0; i < px.length; i++) {
+            b[2 * i] = (byte) px[i];
+            b[2 * i + 1] = (byte) (px[i] >> 8);
+        }
+        o.write(b);
+        o.close();
     }
 }

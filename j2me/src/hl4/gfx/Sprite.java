@@ -44,6 +44,16 @@ public final class Sprite {
         f6f = 0;
     }
 
+    /** SPR_set_control_pal(spr, a, b, c, p4, p5) @0xbfd94 */
+    public void setControlPal(int a, int b, int c, int p4, int p5) {
+        f68 = 1;
+        c67 = p5 & 0xff;
+        c60 = (short) a;
+        c62 = (short) b;
+        c64 = (short) c;
+        c66 = p4 & 0xff;
+    }
+
     /** SPR_copyRes(src, this) @0xcfe9c: shares the loaded data, copies the control-palette fields, clears +0x6c..0x6f */
     public void copyFrom(Sprite o) {
         cif = o.cif;

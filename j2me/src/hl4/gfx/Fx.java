@@ -315,6 +315,44 @@ public final class Fx {
         scaled(f, img, x, y, w, h, sx, sy, rotMode(flip, rot), scx, scy, anchor, true, alpha, effect);
     }
 
+    /**
+     * DM_DrawEffectClip(frame, x, y, w, h, img, srcx, srcy, mirror, rot, scaleA, scaleB, effect, alpha, anchor) @0x4ff3c (CONFIRMED in the disassembly):
+     * mirror code 8 -> flip 1, 0xc -> flip 3, 4 -> flip 2, anything else -> 0; effect 0x11 -> 7.  Scales 100/100: rot 0 with effect 0 and alpha 0xff is the
+     * plain blit (DM_DrawImageClip for mirror 0x10, DM_DrawImageClipMirror otherwise), rot 0 with effect 0 and another alpha, or effect 1..16: DM_DrawImgEx;
+     * rot 90/180/270: DM_DrawImgEx; other rot / effect > 16: nothing.  Other scales: rot 0/90/180/270 -> DM_DrawImgRotateEx(scaleA, scaleB), else nothing.
+     */
+    public static void drawEffectClip(Frame f, int x, int y, int w, int h, Gbm img, int sx, int sy, int mirror, int rot, int scA, int scB, int effect,
+                                      int alpha, int anchor) {
+        int flip = mirror == 8 ? 1 : (mirror == 0xc ? 3 : (mirror == 4 ? 2 : 0));
+        if (effect == 0x11) {
+            effect = 7;
+        }
+        alpha &= 0xff;
+        effect &= 0xff;
+        boolean rotOk = rot == 0xb4 || rot == 0x5a || rot == 0x10e;
+        if (scA != 100 || scB != 100) {
+            if (rot == 0 || rotOk) {
+                drawImgRotateEx(f, x, y, w, h, img, sx, sy, flip, rot, scA, scB, effect, alpha, anchor);
+            }
+            return;
+        }
+        if (rot != 0) {
+            if (rotOk) {
+                drawImgEx(f, x, y, w, h, img, sx, sy, flip, rot, alpha, effect, anchor);
+            }
+            return;
+        }
+        if (effect == 0) {
+            if (alpha == 0xff) {
+                Blit.drawImg(f, x, y, w, h, img, sx, sy, mirror == 0x10 ? 0 : flip, 0, anchor);
+            } else {
+                drawImgEx(f, x, y, w, h, img, sx, sy, flip, 0, alpha, effect, anchor);
+            }
+        } else if (effect <= 0x10) {
+            drawImgEx(f, x, y, w, h, img, sx, sy, flip, 0, alpha, effect, anchor);
+        }
+    }
+
     // ----------------------------------------------------------------------------- HSB
     /** DM_ConvertRGBtoHSB @0x4dc6c: r,g,b 0..255 -> {H 0..360, S 0..100, B 0..100}. */
     public static void rgbToHsb(int r, int g, int b, int[] out) {
