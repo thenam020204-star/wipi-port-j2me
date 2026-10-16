@@ -26,10 +26,20 @@ public final class Sound {
 
     /** loadBGMSound(id) / freeBGMSound (Phase F) */
     public static void loadBgm(int id) {
+        if ((id & 0xff) < 0x15) {
+            bgmId = id & 0xff;
+            bgmLoaded = true;
+        }
     }
 
+    /** freeBGMSound @0xcc0e8: stops the music and asks for it to be (re)started */
     public static void freeBgm() {
+        bgmLoaded = false;
+        G.map[0x6b] = 1;
     }
+
+    public static boolean bgmLoaded;
+    public static int bgmId;
 
     /** SM_StopSound */
     public static void stop() {

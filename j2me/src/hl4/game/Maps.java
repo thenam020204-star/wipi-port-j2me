@@ -177,7 +177,7 @@ public final class Maps {
         if (pw < sw) {
             w32(0xac, (sw - pw) / 2);
         }
-        m[0x92] = (byte) (sw < pw ? 1 : 0);
+        m[0x96] = (byte) (sw < pw ? 1 : 0);
         int fix = 0;
         if (ph < sh) {
             fix = (sh - ph) - ((sh - ph) >> 31);

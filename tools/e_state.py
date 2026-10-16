@@ -67,6 +67,30 @@ def dump(g):
     return out
 
 
+def mask_for(name):
+    """byte ranges that hold ORIGINAL pointers (a Java port keeps references elsewhere), so they are not compared"""
+    import re
+    base = re.sub(r'\d+$', '', name)
+    r = []
+    if base in ('hero', 'summon', 'monster', 'npc', 'mapobj', 'item', 'arms', 'sprobj', 'effect', 'teffect', 'drop', 'tile'):
+        r += [(0, 8), (0x10, 0x14)]
+    if base in ('hero', 'summon', 'monster', 'npc'):
+        r += [(0x20, 0x94), (0x130, 0x13c + 12)]
+    if base == 'npc':
+        r += [(0x1b0, 0x1b4)]
+    if base == 'mapobj':
+        r += [(0x20, 0x24)]
+    if base == 'sprobj':
+        r += [(0x20, 0x94)]
+    if base in ('effect', 'teffect'):
+        r += [(0x20, 0x48)]
+    if name == '_map':
+        r += [(0x8, 0x44), (0x278, 0x288), (0x2a4, 0x2c8), (0x35c, 0x364)]
+    if name == '_game':
+        r += [(0x68, 0x118)]
+    return r
+
+
 def main():
     if sys.argv[1] == 'dump':
         from ref_game import Game
@@ -103,7 +127,10 @@ def main():
                 continue
             if a == b:
                 continue
-            diffs = [i for i in range(min(len(a), len(b))) if a[i] != b[i]]
+            mk = mask_for(k[1])
+            diffs = [i for i in range(min(len(a), len(b))) if a[i] != b[i] and not any(lo <= i < hi for lo, hi in mk)]
+            if not diffs:
+                continue
             runs = []
             for i in diffs:
                 if runs and i == runs[-1][1] + 1:
