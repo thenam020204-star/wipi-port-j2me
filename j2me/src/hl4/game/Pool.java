@@ -170,6 +170,7 @@ public final class Pool {
                 c.effects.release();
                 c.targetEffects.release();
                 c.spr.set();
+                hl4.sys.Bytes.fill(c.m, 0x20, 0, 0x74);
                 o.objSet(1);
                 o.m[Obj.EVENT] = (byte) 0xff;
                 o.m[Obj.RELEASE] = 0;
@@ -197,6 +198,7 @@ public final class Pool {
                 SObj so = (SObj) o;
                 o.objSet(1);
                 so.spr.set();
+                hl4.sys.Bytes.fill(so.m, 0x20, 0, 0x74);
                 Maps.sprObjInit(o, 0, 0, 0xff, 0xff);
                 hl4.sys.Bytes.w32(o.m, 0x94, 0);
                 hl4.sys.Bytes.w32(o.m, 0x98, 0);

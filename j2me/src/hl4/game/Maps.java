@@ -685,6 +685,7 @@ public final class Maps {
         if (n != null) {
             if (Bytes.s16(n.m, 0x160) != img) {
                 n.spr.set();
+                Bytes.fill(n.m, 0x20, 0, 0x74);
                 Npcs.load(n, img);
                 int r = Event.rec(n.evRef);
                 Npcs.init(n, n.m[0x16c], Bytes.s16(e, r) + 8, Bytes.s16(e, r + 2) + 8);
@@ -723,6 +724,7 @@ public final class Maps {
             if (b != null) {
                 b.objSet(1);
                 b.spr.set();
+                Bytes.fill(b.m, 0x20, 0, 0x74);
                 sprObjInit(b, 0, 0, 0xff, 0xff);
                 Bytes.w32(b.m, 0x94, 0);
                 Bytes.w32(b.m, 0x98, 0);

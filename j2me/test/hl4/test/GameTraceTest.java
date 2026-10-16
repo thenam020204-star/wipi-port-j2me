@@ -18,6 +18,7 @@ import java.util.Hashtable;
 public class GameTraceTest {
     static final int BACK_FROM = 522;
     static boolean backOnly;
+    static boolean cont;
     static String rawTicks;
     static String rawDir;
 
@@ -56,6 +57,10 @@ public class GameTraceTest {
             if (a[i].equals("--raw")) {
                 rawTicks = "," + a[++i] + ",";
                 rawDir = a[++i];
+                continue;
+            }
+            if (a[i].equals("--cont")) {
+                cont = true;
                 continue;
             }
             if (a[i].equals("--backonly")) {
@@ -134,7 +139,9 @@ public class GameTraceTest {
                     TraceTest.writePpm(ppm + "/java_" + t + ".ppm");
                 }
                 bad++;
-                break;
+                if (!cont) {
+                    break;
+                }
             }
         }
         if (so != null) {

@@ -272,6 +272,113 @@ public final class Event {
         e[b + 0x10] = 0;
     }
 
+    /**
+     * Event_Set_Heromove_2(steps, dir, speed) @0x6c000 (script command 0x19): target = hero + steps tiles in the direction (dir -1: keep facing), speed in +0x5e8.
+     * The command word +0x94c: below 4 the hero starts the walk motion now (facing the current direction); 4 = keep the facing, above 4: minus 5 (the hero
+     * is left in the walk state: +0x173 = 1).
+     */
+    public static void setHeromove2(int p1, int p2, int p3) {
+        Char h = Pool.hero;
+        byte[] hm = h.m;
+        int hx = h.x();
+        Bytes.w32(e, 0x5e0, hx + p1 * Um.vecX(p2) * 0x10);
+        int hy = h.y();
+        e[0x5e9] = (byte) p2;
+        Bytes.w32(e, 0x5e4, hy + p1 * Um.vecY(p2) * 0x10);
+        if (p2 == -1) {
+            e[0x5e9] = (byte) Chars.getDirection(h);
+        }
+        e[0x5e8] = (byte) p3;
+        hm[0x173] = 0;
+        int w = Bytes.s32(e, 0x94c);
+        if (w < 4) {
+            byte dir = hm[0x168];
+            hm[0x167] = 1;
+            hm[0x8c] = 0;
+            hm[0xa40] = dir;
+            if (hm[0x22b] == 0 && hm[0x168] != hm[0x22a]) {
+                hm[0x22a] = hm[0x168];
+            }
+            if (!HeroCtl.isSkipDir(h, hm[0x167])) {
+                hm[0x168] = dir;
+            } else {
+                if (hm[0x22b] == 0) {
+                    hm[0x22b] = 1;
+                }
+                hm[0x168] = 0;
+            }
+            return;
+        }
+        if (w == 4) {
+            w = hm[0x168];
+        } else {
+            w -= 5;
+        }
+        Bytes.w32(e, 0x94c, w);
+        hm[0x173] = 1;
+    }
+
+    /** Event_Heromove @0x69d6c: one tick of the scripted walk; 1 while it goes on, 0 when it is over (or no walk is armed) */
+    public static int heromove() {
+        int c = e[0x5e8];
+        Char h = Pool.hero;
+        if (e[0x5e8] == 0) {
+            return 0;
+        }
+        boolean done = false;
+        if (e[0x5e8] == -1) {
+            Bytes.w32(h.m, 0xc, Bytes.s32(e, 0x5e4));
+            Bytes.w32(h.m, 8, Bytes.s32(e, 0x5e0));
+            HeroCtl.setDirection(h, e[0x5e9]);
+            done = true;
+        } else {
+            HeroCtl.setMove(h, c, e[0x5e9]);
+            HeroCtl.setDirection(h, e[0x5e9]);
+            int ty = Bytes.s32(e, 0x5e4);
+            int tx = Bytes.s32(e, 0x5e0);
+            switch (e[0x5e9]) {
+                case 0:
+                    if (ty >= h.y()) {
+                        Bytes.w32(h.m, 0xc, ty);
+                        done = true;
+                    }
+                    break;
+                case 1:
+                    if (h.y() >= ty) {
+                        Bytes.w32(h.m, 0xc, ty);
+                        done = true;
+                    }
+                    break;
+                case 2:
+                    if (h.x() <= tx) {
+                        Bytes.w32(h.m, 8, tx);
+                        done = true;
+                    }
+                    break;
+                case 3:
+                    if (tx <= h.x()) {
+                        Bytes.w32(h.m, 8, tx);
+                        done = true;
+                    }
+                    break;
+                default:
+                    break;
+            }
+        }
+        Maps.initDrawFlag();
+        if (!done) {
+            return 1;
+        }
+        e[0x5eb] = 0;
+        if (h.m[0x173] == 0) {
+            heroStop();
+        }
+        setCameraType(0xff);
+        h.m[0x168] = (byte) Bytes.s32(e, 0x94c);
+        Bytes.w32(e, 0x94c, -1);
+        return 0;
+    }
+
     /** Event_Init_HeromoveValue @0x68c78 */
     public static void initHeromoveValue() {
         Bytes.w32(e, 0x5e4, -1);

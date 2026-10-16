@@ -165,8 +165,10 @@ public final class HeroDraw {
         }
         drawEffectList(h);
         if (m[0x171] != -1) {
-            Imgs.imo.f68 = 0;
-            throw new IllegalStateException("Hero_draw emoticon: later");
+            Imgs.imo.f68 = 0;                                       // SPR_set_restore_pal
+            Sprite im = Imgs.imo;
+            im.f6c = im.drawSprite(hl4.gfx.GfxOut.I, Gfx.scr, m[0x171], 0, im.f6c, ox + Bytes.s32(m, 8), Bytes.s32(m, 0xc) - 0x20 + oy, 0, 0);
+            im.repeatFrame(m[0x171], 0);
         }
         if (m[0x16e] == 7 && m[0x210] <= 4) {
             throw new IllegalStateException("Hero_draw tile property 7 effect: later");

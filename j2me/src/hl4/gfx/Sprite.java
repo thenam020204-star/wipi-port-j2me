@@ -110,8 +110,13 @@ public final class Sprite {
 
     /** SPR_repeatFrame(spr, 0, 0) @0xc005c: next frame; past the last frame of animation 0 / direction 0 the counter restarts (SPR_initFrame) */
     public void repeatFrame() {
+        repeatFrame(0, 0);
+    }
+
+    /** SPR_repeatFrame(spr, anim, dir) @0xd005c: the max-frame lookup uses the caller's anim / dir */
+    public void repeatFrame(int anim, int dir) {
         f6c = (f6c + 1) & 0xff;
-        if ((byte) f6c > maxFrame(0, 0)) {
+        if ((byte) f6c > maxFrame(anim, dir)) {
             f6c = 0;
         }
     }

@@ -384,10 +384,10 @@ public final class HeroProc {
 
     // ---- HERO_endProcess -----------------------------------------------------------------------------------------------------------------
 
-    private static void advanceFrame(Char h) {
+    private static void advanceFrame(Char h, int d) {
         byte[] m = h.m;
         m[0x8c]++;
-        if (m[0x8c] > h.spr.maxFrame(m[0x167], m[0x168])) {
+        if (m[0x8c] > h.spr.maxFrame(m[0x167], d)) {
             m[0x8c] = 0;
         }
     }
@@ -420,18 +420,21 @@ public final class HeroProc {
             int d = (byte) dir;
             if (m[0xa31] != 0) {
                 if (!h.spr.isEndFrame(m[0x167], d, m[0x8c]) || (m[0xa31] & 0xff) == 0xff) {
-                    advanceFrame(h);
+                    advanceFrame(h, d);
                     return;
                 }
                 m[0xa31]--;
                 if (m[0xa31] != 0) {
-                    advanceFrame(h);
+                    advanceFrame(h, d);
                     return;
                 }
             }
             m[0x8c] = (byte) h.spr.maxFrame(m[0x167], d);
             return;
         }
-        throw new IllegalStateException("Event_Heromove: later");
+        Event.heromove();
+        if (m[0x173] == 0) {
+            advanceFrame(h, (byte) dir);
+        }
     }
 }

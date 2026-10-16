@@ -357,6 +357,70 @@ public final class Evt {
                 Event.moveNextScene(b[0], b[1], b[2], b[3], -1);
                 return true;
             }
+            case 0xb:
+                t.get(b, 2);
+                return true;
+            case 0xe:
+                t.get(b, 4);
+                return false;
+            case 0x10: {
+                t.get(b, 3);
+                hero.m[0x172] = b[1];
+                HeroCtl.setFrameControl((Char) hero, b[0], b[1], b[2]);
+                return true;
+            }
+            case 0x11:
+                Chars.setVisible(hero, t.getByte());
+                return true;
+            case 0x12:
+                t.getByte();
+                return true;
+            case 0x14: {
+                int c = t.getByte();
+                Chars.addHp(hero, -(c * Bytes.s32(hero.m, 0xa8) / 100));
+                return true;
+            }
+            case 0x1a: {
+                int c = t.getByte();
+                Chars.addHp(hero, c * Bytes.s32(hero.m, 0xa8) / 100);
+                return true;
+            }
+            case 0x15:
+                HeroCtl.setDirection(hero, t.getByte());
+                return true;
+            case 0x18: {
+                int c = t.getByte();
+                t.getByte();
+                hero.m[0x171] = (byte) c;
+                return true;
+            }
+            case 0x1e: {
+                int a = t.getByte();
+                int v = t.getByte();
+                Quest.setSwitchQuest(a < 0 ? a + 0x100 : a, v);
+                It.changed = true;
+                return true;
+            }
+            case 0x2a:
+                t.getByte();
+                t.getByte();
+                return false;
+            case 0x13: {
+                int c = t.getByte();
+                Bytes.w16(Pool.hero.m, 0xd0e, c == 1 ? 1 : 0);          // HERO_setEventCostume
+                HeroLoad.reLoad();
+                return true;
+            }
+            case 0x19: {
+                t.get(b, 4);
+                Bytes.w32(e, 0x94c, b[3]);
+                if (e[0x206] != 0) {
+                    b[2] = (byte) 0xff;
+                }
+                e[0x5eb] = 1;
+                Event.setHeromove2(b[1], b[0], b[2]);
+                return false;
+            }
             case 0x37: {
                 int c = t.getByte();
                 if (c == 1) {

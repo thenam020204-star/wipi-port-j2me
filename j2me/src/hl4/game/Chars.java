@@ -240,6 +240,7 @@ public final class Chars {
     public static void set(Char c) {
         c.objSet(1);
         c.spr.set();
+        Bytes.fill(c.m, 0x20, 0, 0x74);          // the SPR struct lives at +0x20: SPR_set clears its frame counter (+0x8c) too
         init(c, 0, 0, 0, 0, 0, 0, 0);
     }
 
@@ -256,6 +257,7 @@ public final class Chars {
         c.m[0x16c] = (byte) 0xff;
         c.m[0x167] = (byte) 0xff;
         c.spr.set();
+        Bytes.fill(c.m, 0x20, 0, 0x74);          // SPR_destroy: memset of the SPR struct (frame counter +0x8c included)
         c.m[0x165] = 0;
         c.m[0x164] = 0;
         c.objSet(1);
