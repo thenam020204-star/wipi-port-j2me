@@ -28,6 +28,31 @@ public final class EventDraw {
         }
     }
 
+    /** Event_Draw_Popup @0x6ab24 (modes other than 2): the panel (touch frame 0x39) and, once the counter passed 2, the text centred in 130 / 150 pixels */
+    private static void drawPopup(Frame f) {
+        byte[] e = G.event;
+        int lines = Bytes.s32(e, 0x598);
+        Touch.setFrame(0x39);
+        if (e[0x58c] == -1) {
+            throw new IllegalStateException("Event_Draw_Popup: item popup text: later");
+        }
+        int x = Glob.gameW >> 1;
+        if (e[0x516] == 2) {
+            throw new IllegalStateException("Event_drawSubQuestPopup: later");
+        }
+        if (lines < 2) {
+            x -= Bytes.s32(e, 0x59c) / 2;
+        } else {
+            x -= 0x41;
+        }
+        int y = (Glob.gameH >> 1) + lines * -7;
+        Touch.draw(f);                                          // Event_drawActivePopup: the panel
+        if ((byte) Bytes.s32(e, 0x20c) > 2) {
+            Hf.setColor(0xff, 0xff, 0xff);
+            Hf.drawAnchorH2(f, x, y + 2, 0x82, 0, Event.popupText, 0, 0, 1000, 0);
+        }
+    }
+
     /** Event_Draw_Event(frame) */
     public static void draw(Frame f) {
         byte[] e = G.event;
@@ -42,7 +67,7 @@ public final class EventDraw {
         }
         screen(f, 0);
         if (e[0x514] != 0 && Bytes.s32(e, 0x598) > 0) {
-            throw new IllegalStateException("Event_Draw_Popup: later");
+            drawPopup(f);
         }
         if (Popup.evtBox[0x2c] != 0 && e[0x1fe] != 0 && e[0x1ff] != 0) {
             throw new IllegalStateException("Event_Draw_Alert_Popup: later");

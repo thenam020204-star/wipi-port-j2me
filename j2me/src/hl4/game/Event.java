@@ -187,7 +187,7 @@ public final class Event {
                 Dialog.scriptWindowOpen(e[0x505] & 0xff);
                 return true;
             case 0x32:
-                throw new IllegalStateException("Event_Popup (EVENT_TickMovie cmd 50): later");
+                return popupTick();
             default:
                 break;
         }
@@ -254,8 +254,22 @@ public final class Event {
         return checkEvent(0);
     }
 
+    /** Event_Set_QuestStatus(step, status) @0x694e0 */
     public static void setQuestStatus(int step, int status) {
-        throw new IllegalStateException("Event_Set_QuestStatus: later");
+        if (step < 0) {
+            step += 0x100;
+        }
+        e[step + 0x824] = (byte) status;
+    }
+
+    /** Event_Set_SubTitle(x, y, type) @0x68d40 */
+    public static void setSubTitle(int p1, int p2, int p3) {
+        e[0x60e] = (byte) p3;
+        e[0x60a] = 1;
+        e[0x60b] = (byte) p1;
+        e[0x60c] = (byte) p2;
+        e[0x60d] = 0;
+        e[0x608] = 1;
     }
 
 
@@ -377,6 +391,77 @@ public final class Event {
         h.m[0x168] = (byte) Bytes.s32(e, 0x94c);
         Bytes.w32(e, 0x94c, -1);
         return 0;
+    }
+
+    /** the text of the popup being shown (the original keeps a pointer at _event+0x590 into the script's string table) */
+    public static byte[] popupText;
+
+    /**
+     * Event_PopupReset(mode) @0x6c4d4: starts a message popup of script string _event[0x58c] (-1 = the item-gain popup: Event_PopupRepay, not ported yet).
+     * +0x594 text length, +0x598 line count (1 when the text fits in 150 pixels: then +0x59c is its width, else the count for 130 pixels), +0x20c / +0x210 the
+     * appearance counter and its limit; the popup panel is the touch frame 0x39.
+     */
+    public static void popupReset(int mode) {
+        e[0x514] = 1;
+        e[0x515] = 0;
+        e[0x516] = (byte) mode;
+        if (e[0x58c] == -1) {
+            throw new IllegalStateException("Event_PopupRepay (item popup): later");
+        }
+        byte[] str = It.getString(e[0x58c] & 0xff);
+        popupText = str;
+        int len = 0;
+        if (str != null) {
+            len = str.length - 1;
+            Bytes.w32(e, 0x594, len);
+        } else {
+            len = Bytes.s32(e, 0x594);
+        }
+        int lines = str == null ? 0 : hl4.gfx.Hf.lineCount(str, 0, len, 0x96, 1);
+        if (lines < 2) {
+            Bytes.w32(e, 0x598, 1);
+            Bytes.w32(e, 0x59c, str == null ? 0 : hl4.gfx.Hf.width(str, len, 1));
+        } else {
+            Bytes.w32(e, 0x598, hl4.gfx.Hf.lineCount(str, 0, len, 0x82, 1));
+        }
+        Bytes.w32(e, 0x20c, 0);
+        Bytes.w32(e, 0x210, 3);
+        if (e[0x516] == 2) {
+            throw new IllegalStateException("Event_initScroll (sub-quest popup): later");
+        }
+        Touch.setFrame(0x39);
+    }
+
+    /** Event_Init_Popupdata @0x69760 */
+    public static void initPopupdata() {
+        e[0x5a0] = (byte) 0xff;
+        e[0x514] = 0;
+        e[0x515] = 0;
+        e[0x58c] = 0;
+        popupText = null;
+        Bytes.w32(e, 0x590, 0);
+        Bytes.w32(e, 0x594, 0);
+        Bytes.w32(e, 0x598, 0);
+        Bytes.w32(e, 0x59c, 0);
+        e[0x516] = 0;
+        e[0x5a8] = 0;
+        Bytes.fill(e, 0x517, 0, 100);
+        Touch.setFrame(Touch.NONE);                   // MS_TOUCH_EVENT_AREA (= 0x65 at run time)
+    }
+
+    /** Event_Popup @0x697e0 (state 0x32 of EVENT_TickMovie): the counter runs up to its limit; a close request ends the popup */
+    public static boolean popupTick() {
+        if (e[0x515] != 0) {
+            initPopupdata();
+            Bytes.w32(e, 0x200, -1);
+            return false;
+        }
+        int c = Bytes.s32(e, 0x20c) + 1;
+        Bytes.w32(e, 0x20c, c);
+        if (Bytes.s32(e, 0x210) < c) {
+            Bytes.w32(e, 0x20c, Bytes.s32(e, 0x210));
+        }
+        return true;
     }
 
     /** Event_Init_HeromoveValue @0x68c78 */
@@ -595,7 +680,8 @@ public final class Event {
         int st = Bytes.s32(e, 0x200);
         if (key == 0x23) {
             if (st == 0x32) {
-                throw new IllegalStateException("Event_Key popup branch (state 0x32): later");
+                popupKey(key);
+                return;
             }
             if (st == 0x3c || st == 0x2f) {
                 return;
@@ -612,7 +698,8 @@ public final class Event {
             e[0x608] = 0;
         }
         if (st == 0x32) {
-            throw new IllegalStateException("Event_Key popup branch (state 0x32): later");
+            popupKey(key);
+            return;
         }
         if ((st == 0x30 || st == 0x2e) && (key == -5 || key == 0x35)) {
             int k = e[0x205];
@@ -629,6 +716,19 @@ public final class Event {
                 }
             } else {
                 e[p + 0x23f] = 1;
+            }
+        }
+    }
+
+    /** Event_Key, state 0x32 (LAB_00069cc4): OK on a fully shown popup closes it (the touch frame 0x65 is selected whenever OK is pressed) */
+    private static void popupKey(int key) {
+        if (key == -5 || key == 0x35) {
+            Touch.setFrame(0x65);
+            if (Bytes.s32(e, 0x20c) == Bytes.s32(e, 0x210)) {
+                e[0x515] = 1;
+                if (G.game[0x5d] > 0) {
+                    throw new IllegalStateException("Event_Key popup: repay pop (Event_Init_RepayPop / GameMenuFrame): later");
+                }
             }
         }
     }

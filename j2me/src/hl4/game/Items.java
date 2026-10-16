@@ -31,6 +31,20 @@ public final class Items {
         return p + 2;
     }
 
+    /** Item_getItemCnt(type, idx) @0x9361c: how many of the item the bag holds (-1 when type or idx is -1) */
+    public static int getItemCnt(int type, int idx) {
+        if (type == -1 || idx == -1) {
+            return -1;
+        }
+        int n = 0;
+        for (Obj p = G.itemBag.head; p != null; p = p.next) {
+            if (getType(p) == type && getIdx(p) == idx) {
+                n += getCnt(p);
+            }
+        }
+        return n;
+    }
+
     public static boolean isCountable(int type) {
         return ((type - 8) & 0xff) < 6;
     }

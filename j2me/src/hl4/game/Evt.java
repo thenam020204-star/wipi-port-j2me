@@ -421,6 +421,26 @@ public final class Evt {
                 Event.setHeromove2(b[1], b[0], b[2]);
                 return false;
             }
+            case 0x1f: {
+                t.get(b, 2);
+                Event.setQuestStatus(b[0], b[1]);
+                Quest.getStatusList(b[0]);
+                It.changed = true;
+                if (e[0x58c] == -1) {
+                    Bytes.w32(e, 0x200, 0x32);
+                    return false;
+                }
+                return true;
+            }
+            case 0x32: {
+                if (e[0x206] != 0) {
+                    Event.initSkip();
+                }
+                e[0x58c] = (byte) t.getByte();
+                Event.popupReset(1);
+                Maps.initDrawFlag();
+                return false;
+            }
             case 0x37: {
                 int c = t.getByte();
                 if (c == 1) {

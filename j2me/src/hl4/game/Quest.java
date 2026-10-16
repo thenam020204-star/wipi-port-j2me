@@ -86,6 +86,134 @@ public final class Quest {
         return 0;
     }
 
+    /**
+     * Event_Get_QuestStatusList(step) @0x6d8b4 (script command 0x1f): a quest step that just became 2 (active) is loaded into the next record of the quest
+     * list (LoadPartQuestData), its sub-steps are marked active, the list is sorted, and the item / monster counters of the new record are brought up to date;
+     * steps that became 5 / 6 (done / failed) leave the list.
+     */
+    public static void getStatusList(int step) {
+        byte[] q = G.questMenu;
+        byte[] e = G.event;
+        step &= 0xff;
+        int st = e[step + 0x824] & 0xff;
+        if (st == 2) {
+            int idx = q[0x210c];
+            q[idx * REC + 0x118] = (byte) step;
+            loadPart(idx, (byte) (idx + 1));
+            int sub = q[idx * REC + 1] & 0xff;
+            if ((sub & 0x80) == 0) {
+                for (int k = step; k < step + sub + 1; k++) {
+                    e[k + 0x824] = 2;
+                }
+            }
+            sort();
+            q[0x210c]++;
+            int b = (q[0x210c] - 1) * REC;
+            int type = q[b + 0x101] & 0xff;
+            if (type < 0xd) {
+                int c = q[b + 0x102];
+                check(type, c, Items.getItemCnt(type, c));
+            }
+        } else if (st - 5 >= 0 && st - 5 < 2 && q[0x210c] > 0) {
+            if (st == 5) {
+                throw new IllegalStateException("Event_Get_QuestStatusList: reward of a finished quest (Item_RepaySet / Remove_item): later");
+            }
+            for (int k = 0; k < q[0x210c]; k++) {
+                int b = k * REC;
+                if ((q[b + 1] & 0x80) == 0 && (q[b + 0x118] & 0xff) == step) {
+                    throw new IllegalStateException("Event_Get_QuestStatusList: quest removal (DelObject): later");
+                }
+            }
+        }
+    }
+
+    /** LoadPartQuestData(first, end) @0x76648: records first..end-1 of the quest list from /NPC/_QUEST_<class/2>_DAT, keyed by their step id (+0x118) */
+    private static void loadPart(int first, int end) {
+        byte[] q = G.questMenu;
+        int cls = Pool.hero.m[0x16b] / 2;
+        byte[] d = hl4.sys.Res.loadDes("/NPC/_QUEST_" + cls + "_DAT");
+        if (d == null) {
+            return;
+        }
+        for (int k = first; k < end; k++) {
+            int b = k * REC;
+            int id = q[b + 0x118] & 0xff;
+            q[b + 2] = (byte) id;
+            int rec = (short) (id - cls * 100);
+            int off = Items.getOffset(d, rec);
+            Bytes.fill(q, b + 3, 0, 0x1b);
+            Bytes.fill(q, b + 0x1e, 0, 200);
+            Bytes.fill(q, b + 0xe6, 0, 0x1b);
+            q[b] = d[off];
+            q[b + 1] = d[off + 1];
+            int l1 = d[off + 2];
+            int pos = off + 3 + l1;
+            System.arraycopy(d, off + 3, q, b + 3, l1);
+            int l2 = d[pos];
+            pos++;
+            System.arraycopy(d, pos, q, b + 0x1e, l2);
+            pos += l2;
+            int l3 = d[pos];
+            pos++;
+            System.arraycopy(d, pos, q, b + 0xe6, l3);
+            pos += l3;
+            q[b + 0x101] = d[pos];
+            q[b + 0x102] = d[pos + 1];
+            int sub = q[b + 1];
+            if (0 < sub + 1) {
+                int p2 = pos + 2;
+                int m = 1;
+                int j = 0;
+                int iv;
+                do {
+                    iv = m;
+                    q[b + j + 0x103] = d[p2];
+                    q[b + j + 0x10d] = d[p2 + 1];
+                    try {
+                        p2 = Items.getOffset(d, (short) (((id - cls * 100) & 0xffff) + iv));
+                        p2 = p2 + 3 + d[p2 + 2];
+                        p2 = p2 + 1 + d[p2];
+                        p2 = p2 + 3 + d[p2];
+                    } catch (ArrayIndexOutOfBoundsException x) {
+                        break;                              // the last pass of the original reads past the table (its result is not used)
+                    }
+                    m = iv + 1;
+                    j = iv;
+                } while (iv < sub + 1);
+            }
+        }
+    }
+
+    /** sortQuestList @0x71c78: exchange sort of the records by their step id (+2, signed) */
+    private static void sort() {
+        byte[] q = G.questMenu;
+        int count = q[0x210c];
+        if (count == 0) {
+            return;
+        }
+        byte[] tmp = new byte[REC];
+        int i = 0;
+        int outer = 0;
+        while (outer < count - 1) {
+            int next = outer + 1;
+            if (next < count) {
+                int p = outer * REC;
+                int inner = next;
+                do {
+                    if (q[p + REC + 2] < q[i + 2]) {
+                        System.arraycopy(q, i, tmp, 0, REC);
+                        System.arraycopy(q, p + REC, q, i, REC);
+                        System.arraycopy(tmp, 0, q, p + REC, REC);
+                    }
+                    p += REC;
+                    inner++;
+                } while (inner < count);
+            }
+            i += REC;
+            outer = next;
+        }
+    }
+
     /** Event_Get_SwitchQuest(i) @0x6941c (signed byte at _event+0x724+i) */
     public static int getSwitchQuest(int i) {
         return G.event[(i & 0xff) + 0x724];
