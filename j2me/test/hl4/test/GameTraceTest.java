@@ -16,14 +16,20 @@ import java.util.Hashtable;
  * of that tick; ticks startTick+1.. are compared against the original (frame hash + RNG call count).
  */
 public class GameTraceTest {
+    static final int BACK_FROM = 522;
+
     public static void main(String[] a) throws Exception {
         String[] ref = new String[100000];
         int nref = 0;
         String snap = null;
+        String[] seeds = new String[16];
+        int nseeds = 0;
         BufferedReader r = new BufferedReader(new FileReader(a[0]));
         String line;
         while ((line = r.readLine()) != null) {
-            if (line.startsWith("# snap")) {
+            if (line.startsWith("# seed ")) {
+                seeds[nseeds++] = line;
+            } else if (line.startsWith("# snap")) {
                 snap = line;
             } else if (!line.startsWith("#")) {
                 ref[nref++] = line;
@@ -61,6 +67,15 @@ public class GameTraceTest {
         Engine.startApp();
         Rng.restore(w, fi, ri, calls);
         Clock.setVirtual(1303268400000L + (long) (start + 1) * 50);
+        // test seeding standing in for the title + story menu (E4): state the original holds at the snapshot tick that the game code reads
+        for (int i = 0; i < nseeds; i++) {
+            String[] q = seeds[i].split(" ");
+            byte[] dst = q[2].equals("_gameMenu") ? hl4.game.G.gameMenu : (q[2].equals("_slotInfo") ? hl4.game.G.slotInfo : hl4.game.G.map);
+            int off = Integer.parseInt(q[3]);
+            for (int k = 0; k + 1 < q[4].length(); k += 2) {
+                dst[off + k / 2] = (byte) Integer.parseInt(q[4].substring(k, k + 2), 16);
+            }
+        }
         GameStart.newGame(0);
         java.io.PrintStream so = stateOut == null ? null : new java.io.PrintStream(new java.io.FileOutputStream(stateOut));
         int bad = 0;
@@ -74,6 +89,11 @@ public class GameTraceTest {
             Engine.tick();
             int h = Fnv.shorts(Gfx.scr.px, Gfx.scr.px.length);
             String mine = t + " " + TraceTest.hex8(h) + " " + Rng.calls;
+            String[] rp = ref[t].split(" ");
+            if (rp.length > 3) {
+                // the background buffer is compared from the first in-game render on (before that it still holds whatever the menus drew)
+                mine += " " + (t >= BACK_FROM ? TraceTest.hex8(Fnv.shorts(Gfx.back.px, Gfx.back.px.length)) : rp[3]);
+            }
             if (so != null && stateTicks.indexOf("," + t + ",") >= 0) {
                 StateDump.write(so, t);
             }

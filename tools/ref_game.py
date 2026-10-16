@@ -413,6 +413,15 @@ class Game(Harness):
         rows = [self.read(ptr + y * fw * 2, w * 2) for y in range(h)]
         return w, h, struct.unpack('<%dH' % (w * h), b''.join(rows))
 
+    def back_area(self):
+        """(w, h, pixels) of the prepared background buffer _lcdG+0x14 (what DM_CopyOffScreen copies into the game buffer)"""
+        L = self.objaddr('_lcdG')
+        hnd = struct.unpack('<I', self.read(L + 0x14, 4))[0]
+        w, h = struct.unpack('<ii', self.read(L + 0x54, 8))
+        ptr, fw, fh = self.frames[hnd]
+        rows = [self.read(ptr + y * fw * 2, w * 2) for y in range(h)]
+        return w, h, struct.unpack('<%dH' % (w * h), b''.join(rows))
+
     # --- function coverage (slow: one Python callback per basic block) ----------------------------------
     def enable_cover(self):
         from unicorn import UC_HOOK_BLOCK

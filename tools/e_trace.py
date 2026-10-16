@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Per-tick golden trace of the ORIGINAL game (tools/ref_game.py): FNV-1a of the game-area RGB565 bytes + number of UM_Random calls.
+"""Per-tick golden trace of the ORIGINAL game (tools/ref_game.py): FNV-1a of the game-area RGB565 bytes + number of UM_Random calls + FNV-1a of the background buffer _lcdG+0x14 (4th column; 0 while it does not exist).
 Usage: python3 tools/e_trace.py <binary.mod> <res dir> <out.txt> <ticks> [tick:key ...]
 Scenario keys are WIPI key codes delivered as press+release in that tick (-5 = OK, -1/-2 up/down, 0x31 = '1' ...).
 Header lines start with '#': the reference configuration (ref_game.IMPL) so a trace states what it depended on."""
@@ -17,6 +17,11 @@ def fnv(b):
     for c in b:
         h = ((h ^ c) * 0x01000193) & 0xffffffff
     return h
+
+
+# state the Java golden run cannot derive because it starts at GameStart.newGame instead of replaying title + story menu (E4): recorded here from the original
+# at the snapshot tick and seeded into the Java engine by hl4.test.GameTraceTest (test seeding only; labelled in NOTES.md)
+SEEDS = [('_gameMenu', 0, 36), ('_slotInfo', 0, 48), ('_map', 0x69, 3), ('_map', 0x2e8, 0x78)]
 
 
 def main():
@@ -37,11 +42,18 @@ def main():
             fp, rp = struct.unpack('<II', g.read(g.objaddr('_fptr'), 4) + g.read(g.objaddr('_rptr'), 4))
             fp = struct.unpack('<I', g.read(g.objaddr('_fptr'), 4))[0]
             rp = struct.unpack('<I', g.read(g.objaddr('_rptr'), 4))[0]
+            for nm, off, ln in SEEDS:
+                lines.append('# seed %s %d %s' % (nm, off, g.read(g.objaddr(nm) + off, ln).hex()))
             lines.append('# snap %d calls %d f %d r %d %s' % (i, g.rng_calls, (fp - tb) // 4 - 1, (rp - tb) // 4 - 1, ' '.join('%08x' % w for w in words[1:])))
         k = script.get(i)
         g.tick(press=k, release=k) if k is not None else g.tick()
         w, h, px = g.frame()
-        lines.append('%d %08x %d' % (i, fnv(struct.pack('<%dH' % len(px), *px)), g.rng_calls))
+        try:
+            bpx = g.back_area()[2]
+            bh = fnv(struct.pack('<%dH' % len(bpx), *bpx))
+        except Exception:
+            bh = 0
+        lines.append('%d %08x %d %08x' % (i, fnv(struct.pack('<%dH' % len(px), *px)), g.rng_calls, bh))
     lines.append('# missing imports: %r' % g.missing)
     open(out, 'w').write('\n'.join(lines) + '\n')
 

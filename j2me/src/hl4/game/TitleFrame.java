@@ -83,8 +83,7 @@ public final class TitleFrame implements FrameHandler {
             return;
         }
         LoadFrame.setState(5, 3);
-        MapFx.fallOn = false;
-        MapFx.fallType = 0xff;
+        MapFx.fallOff();
         MapFx.deleteEffectSprites();
         LogoFrame.releaseText();
     }

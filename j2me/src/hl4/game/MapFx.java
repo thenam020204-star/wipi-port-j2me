@@ -5,6 +5,7 @@ import hl4.gfx.GfxOut;
 import hl4.gfx.Img;
 import hl4.gfx.Gbm;
 import hl4.gfx.Sprite;
+import hl4.sys.Bytes;
 import hl4.sys.Rng;
 
 /**
@@ -12,31 +13,42 @@ import hl4.sys.Rng;
  * _map+0x351 / +0x352, five 16-byte objects at _map+0x2e8) - shared by the title screen and the map.
  */
 public final class MapFx {
-    // screen effect
-    public static int scrType = -1;      // _map[0x348] (0xff = none)
-    public static int scrCur;            // s16 _map+0x34a
-    public static int scrMax;            // s16 _map+0x34c
-    // fall effect
-    public static boolean fallOn;        // _map[0x351]
-    public static int fallType = -1;     // _map[0x352] (event FGI id, 0xff = none)
-    public static int effectId = -1;     // _map[0x353]
-    public static int fallCount;         // _map[0x354]: number of effect sprites loaded
-    public static int cursor;            // _map+0x338
-    public static int rainIdx;           // _map[0x33d]
-    private static final boolean[] active = new boolean[5];
-    private static final int[] ox = new int[5];
-    private static final int[] oy = new int[5];
-    private static final int[] of = new int[5];
-    private static final int[] ot = new int[5];
+    // All state lives in _map at the original offsets (G.map):
+    //   screen effect: +0x348 type (0xff = none), s16 +0x34a current, s16 +0x34c max
+    //   fall effect:   +0x351 on, +0x352 FGI id (0xff = none), +0x353 effect id, +0x354 sprite count, +0x338 next object (s32), +0x33d rain index,
+    //                  five 16-byte objects at +0x2e8: +0 active, +4 x (s32), +8 y (s32), +0xd frame, +0xf type
+    private static final int OBJ = 0x2e8;
+
+    private static int scrType() {
+        return G.map[0x348] & 0xff;
+    }
+
+    private static int scrCur() {
+        return Bytes.s16(G.map, 0x34a);
+    }
+
+    private static int scrMax() {
+        return Bytes.s16(G.map, 0x34c);
+    }
+
+    private static void setScrCur(int v) {
+        Bytes.w16(G.map, 0x34a, v);
+    }
+
+    /** the title screen's end: the effect is switched off without touching its sprites */
+    public static void fallOff() {
+        G.map[0x351] = 0;
+        G.map[0x352] = (byte) 0xff;
+    }
 
     private MapFx() {
     }
 
     /** Map_setScreenEffect(type, cur, max) */
     public static void setScreenEffect(int type, int cur, int max) {
-        scrMax = (short) max;
-        scrCur = (short) cur;
-        scrType = type & 0xff;
+        Bytes.w16(G.map, 0x34c, max);
+        Bytes.w16(G.map, 0x34a, cur);
+        G.map[0x348] = (byte) type;
     }
 
     /** Map_screenEffectCheck(type): true while the effect of that type is still running (5: fade-out of white). */
@@ -44,11 +56,11 @@ public final class MapFx {
         switch (type) {
             case 2:
             case 4:
-                return scrMax <= scrCur;
+                return scrMax() <= scrCur();
             case 3:
-                return scrCur < 1;
+                return scrCur() < 1;
             case 5:
-                return 0 < scrCur;
+                return 0 < scrCur();
             default:
                 return true;
         }
@@ -59,40 +71,40 @@ public final class MapFx {
         Frame f = Gfx.scr;
         int w = Glob.gameW;
         int h = Glob.gameH;
-        switch (scrType) {
+        switch (scrType()) {
             case 0:
             case 1:
                 throw new IllegalStateException("Map_screenLoseEye: later");
             case 2:
-                if (scrCur < scrMax) {
-                    Gfx.fillRectAlpha(f, 0, 0, w, h, scrCur * 0xff / scrMax, 0xb, 0xb, 0xb);
-                    scrCur += 10;
+                if (scrCur() < scrMax()) {
+                    Gfx.fillRectAlpha(f, 0, 0, w, h, scrCur() * 0xff / scrMax(), 0xb, 0xb, 0xb);
+                    setScrCur(scrCur() + 10);
                 }
                 break;
             case 3:
-                if (scrCur > 0) {
-                    Gfx.fillRectAlpha(f, 0, 0, w, h, scrCur * 0xff / scrMax, 0xb, 0xb, 0xb);
-                    scrCur -= 10;
+                if (scrCur() > 0) {
+                    Gfx.fillRectAlpha(f, 0, 0, w, h, scrCur() * 0xff / scrMax(), 0xb, 0xb, 0xb);
+                    setScrCur(scrCur() - 10);
                 }
                 break;
             case 4:
-                if (scrCur >= 0) {
-                    Gfx.fillRectAlpha(f, 0, 0, w, h, (scrCur * 0xff / 100) & 0xff, 0xb, 0xb, 0xb);
+                if (scrCur() >= 0) {
+                    Gfx.fillRectAlpha(f, 0, 0, w, h, (scrCur() * 0xff / 100) & 0xff, 0xb, 0xb, 0xb);
                 }
-                if (scrCur < scrMax) {
-                    scrCur += 5;
+                if (scrCur() < scrMax()) {
+                    setScrCur(scrCur() + 5);
                 }
                 break;
             case 5:
-                if (scrCur > 0) {
-                    Gfx.fillRectAlpha(f, 0, 0, w, h, scrCur * 0xff / scrMax, 0xff, 0xff, 0xff);
-                    scrCur -= 5;
+                if (scrCur() > 0) {
+                    Gfx.fillRectAlpha(f, 0, 0, w, h, scrCur() * 0xff / scrMax(), 0xff, 0xff, 0xff);
+                    setScrCur(scrCur() - 5);
                 }
                 break;
             case 6:
-                if (scrCur > 0) {
+                if (scrCur() > 0) {
                     Gfx.fillRectAlpha(f, 0, 0, w, h, 0xff, 0xb, 0xb, 0xb);
-                    scrCur -= 1;
+                    setScrCur(scrCur() - 1);
                 }
                 break;
             default:
@@ -102,51 +114,56 @@ public final class MapFx {
 
     /** Map_setEffect(id) @0xa0b6c: toggles (an already set effect is cleared). */
     public static void setEffect(int id) {
-        boolean was = effectId != -1;
-        effectId = id & 0xff;
+        byte[] m = G.map;
+        boolean was = m[0x353] != -1;
+        m[0x353] = (byte) id;
         if (was) {
-            effectId = -1;
+            m[0x353] = (byte) 0xff;
         }
     }
 
     /** Map_fallRandInit @0xa33b0: places the next object at a random spot. */
     public static void fallRandInit() {
-        int c = cursor;
-        ox[c] = Rng.rand(0x1e, Glob.gameW - 0x1e);
-        oy[c] = Rng.rand(0x14, Glob.gameH - 0x32);
-        ot[c] = 1;
-        of[c] = 0;
-        active[c] = true;
-        cursor = c + 1;
+        byte[] m = G.map;
+        int c = Bytes.s32(m, 0x338);
+        int o = OBJ + c * 0x10;
+        Bytes.w32(m, o + 4, Rng.rand(0x1e, Glob.gameW - 0x1e));
+        Bytes.w32(m, o + 8, Rng.rand(0x14, Glob.gameH - 0x32));
+        m[o + 0xf] = 1;
+        m[o + 0xd] = 0;
+        m[o] = 1;
+        Bytes.w32(m, 0x338, Bytes.s32(m, 0x338) + 1);
     }
 
     /** Map_SetRain(slot) @0xa3438 */
     private static void setRain(int i) {
-        ox[i] = Rng.rand(0x1e, Glob.gameW - 10);
-        oy[i] = Rng.rand(0x14, Glob.gameH - 10);
-        ot[i] = 1;
-        of[i] = 0;
-        active[i] = true;
+        byte[] m = G.map;
+        int o = OBJ + i * 0x10;
+        Bytes.w32(m, o + 4, Rng.rand(0x1e, Glob.gameW - 10));
+        m[o + 0xf] = 1;
+        Bytes.w32(m, o + 8, Rng.rand(0x14, Glob.gameH - 10));
+        m[o + 0xd] = 0;
+        m[o] = 1;
     }
 
     /** Event_setFGI(id) @0x6dc24 for the scene-effect ids (< 8); -1 clears; >= 8 = ending art (not ported). */
     public static void setFGI(int id) {
         final int[] cif = {0, 2, 4, 5, 255, 6, 8, 9};
         final int[] cnt = {2, 2, 1, 1, 0, 2, 1, 1};
+        byte[] m = G.map;
         if (id == -1) {
-            fallOn = false;
-            fallType = 0xff;
+            fallOff();
             deleteEffectSprites();
         } else if (id < 8) {
-            if (id != 7 && id != 4 && fallType != id) {
+            if (id != 7 && id != 4 && (m[0x352] & 0xff) != (id & 0xff)) {
                 deleteEffectSprites();
-                fallOn = true;
-                fallType = id;
+                m[0x351] = 1;
+                m[0x352] = (byte) id;
                 setEffect(id);
                 fallRandInit();
-                if (fallOn) {
-                    fallCount = cnt[id];
-                    for (int k = 0; k < fallCount; k++) {
+                if (m[0x351] != 0) {
+                    m[0x354] = (byte) cnt[id];
+                    for (int k = 0; k < (m[0x354] & 0xff); k++) {
                         Imgs.loadEvtEffect(cif[id], k);
                     }
                 }
@@ -158,45 +175,48 @@ public final class MapFx {
 
     /** deleteEvtEffectCif */
     public static void deleteEffectSprites() {
-        fallOn = false;
-        fallType = 0xff;
-        Imgs.deleteEvtEffects();
-        for (int i = 0; i < 5; i++) {
-            active[i] = false;
-        }
+        fallOff();
+        Imgs.deleteEvtEffects();                 // the five object records keep their state (deleteEvtEffectCif @0xccf6c only clears +0x351/+0x352 and the sprites)
     }
 
     /** Map_fallRandDraw(frame) @0xa34b0 (types < 8, not 4/7: five falling sprites; 4/7 draw nothing). */
     public static void fallRandDraw(Frame f) {
-        if (!fallOn) {
+        byte[] m = G.map;
+        if (m[0x351] == 0) {
             return;
         }
-        if (fallType == 7 || fallType == 4) {
+        int type = m[0x352] & 0xff;
+        if (type == 7 || type == 4) {
             return;
         }
-        if (fallType < 8) {
-            cursor++;
-            if (cursor == 6) {
-                cursor = 0;
-                if (!active[rainIdx]) {
-                    setRain(rainIdx);
-                    rainIdx++;
-                    if (rainIdx > 4) {
-                        rainIdx = 0;
+        if (type < 8) {
+            int cur = Bytes.s32(m, 0x338) + 1;
+            Bytes.w32(m, 0x338, cur);
+            if (cur == 6) {
+                Bytes.w32(m, 0x338, 0);
+                int ri = m[0x33d] & 0xff;
+                if (m[OBJ + ri * 0x10] == 0) {
+                    setRain(ri);
+                    ri++;
+                    m[0x33d] = (byte) ri;
+                    if (ri > 4) {
+                        m[0x33d] = 0;
                     }
                 }
             }
             Sprite s = Imgs.evtEffect[0];
             for (int i = 0; i < 5; i++) {
-                if (active[i] && s != null && of[i] < s.maxFrame(0, 0) - 1) {
-                    of[i] = s.drawSprite(GfxOut.I, f, 0, 0, of[i], ox[i], oy[i], 0, 0);
+                int o = OBJ + i * 0x10;
+                if (m[o] != 0 && s != null && (m[o + 0xd] & 0xff) < s.maxFrame(0, 0) - 1) {
+                    m[o + 0xd] = (byte) s.drawSprite(GfxOut.I, f, 0, 0, m[o + 0xd] & 0xff, Bytes.s32(m, o + 4), Bytes.s32(m, o + 8), 0, 0);
                 }
             }
             for (int i = 0; i < 5; i++) {
-                if (active[i]) {
-                    of[i] = (of[i] + 1) & 0xff;
-                    if (s != null && of[i] >= s.maxFrame(0, 0)) {
-                        active[i] = false;
+                int o = OBJ + i * 0x10;
+                if (m[o] != 0) {
+                    m[o + 0xd] = (byte) (m[o + 0xd] + 1);
+                    if (s != null && (m[o + 0xd] & 0xff) >= s.maxFrame(0, 0)) {
+                        m[o] = 0;
                     }
                 }
             }
