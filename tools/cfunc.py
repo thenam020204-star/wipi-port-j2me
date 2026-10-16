@@ -14,7 +14,8 @@ DECL = re.compile(r'^\s+(undefined\d?|u?int|u?short|u?char|byte|bool|code|longlo
 
 def compact(body):
     out, skipping, inl, grp = [], False, None, False
-    for ln in body.split('\n'):
+    lines = body.split('\n')
+    for li, ln in enumerate(lines):
         if inl is not None:                # inlined Touch_setState/TF_setFrame body: print one line, drop the rest of the block
             if ln == inl + '}':
                 inl = None
@@ -27,7 +28,7 @@ def compact(body):
         if skipping:                       # continuation of a touch_Addrect(...) statement
             skipping = ';' not in ln
             continue
-        if re.match(r'^\s*\w+ = m_TouchDirectKeySize;$', ln):    # inlined touch_setTouchGroup(): hit-rectangle setup, dropped up to its end label
+        if re.match(r'^\s*\w+ = m_TouchDirectKeySize;$', ln) and any(l.startswith('LAB_00044378:') for l in lines[li:li + 400]):    # inlined touch_setTouchGroup(): hit-rectangle setup, dropped up to its end label
             out.append(ln.split('=')[0] + '/* inlined touch_setTouchGroup(): pointer hit rectangles omitted */')
             grp = True
             continue
