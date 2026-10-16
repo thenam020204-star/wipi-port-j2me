@@ -80,6 +80,7 @@ public final class Sprite {
     public Sprite(byte[] cifData, int mode) {
         cif = new Cif(cifData, mode);
         nSets = cifData[0];
+        f6f = 0xff;                             // SPR_loadNewSprite @0xc1f4c: +0x6f = -1
     }
 
     /** SPR_freeSpriteImage: drops every image set (the sprite structure stays loaded) */
