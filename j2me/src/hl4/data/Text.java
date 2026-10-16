@@ -44,4 +44,17 @@ public final class Text {
         System.arraycopy(b, o, r, 0, e - o);
         return r;
     }
+
+    /** All strings of a LinkedText file as separate NUL-padded arrays (the text engine may read a byte past the end of a string). */
+    public static byte[][] linkedAll(byte[] b) {
+        int n = linkedCount(b);
+        byte[][] out = new byte[n][];
+        for (int i = 0; i < n; i++) {
+            byte[] s = linked(b, i);
+            byte[] p = new byte[s.length + 8];
+            System.arraycopy(s, 0, p, 0, s.length);
+            out[i] = p;
+        }
+        return out;
+    }
 }

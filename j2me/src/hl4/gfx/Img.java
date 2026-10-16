@@ -40,4 +40,19 @@ public final class Img {
             Blit.drawImg(f, x, y, img.aux, img.h, img, 0, 0, 0, 0, anchor);
         }
     }
+
+    /** DM_DrawImageMirror(frame, x, y, imageStruct, 0x10, anchor): the same plain draw (mirror code 0x10 = none). */
+    public static void drawPlain(Frame f, int x, int y, Gbm img, int anchor) {
+        draw(f, x, y, img, anchor);
+    }
+
+    /**
+     * DM_DrawEffectClip(frame, x, y, w, h, img, 0, 0, mirror 0xc, rot 0, 100, 100, effect 0, alpha 0xff, anchor) -> DM_DrawImageClipMirror:
+     * a plain DM_DrawImg of the struct's +0 width/height with flip 3 (the alpha byte 0xff is -1 = 'no alpha').
+     */
+    public static void drawFlip3(Frame f, int x, int y, Gbm img, int anchor) {
+        if (img != null) {
+            Blit.drawImg(f, x, y, img.w, img.h, img, 0, 0, 3, 0, anchor);
+        }
+    }
 }

@@ -17,6 +17,9 @@ public final class Imgs {
     public static Gbm[] titleBg;
     public static Gbm[] gmenuComm;
     public static Gbm[] ending;
+    public static Gbm[] mmenu;
+    /** _MMenuChSpr[0..3]: main-menu character sprites (/CM/_MMENU_CHAR_n_CIF + _BM) */
+    public static final Sprite[] mmenuChar = new Sprite[4];
     /** _sprEvtEffect[]: event/title effect sprites (MAP/EFFECT/_EVT_EFF_n_CIF) */
     public static final Sprite[] evtEffect = new Sprite[5];
 
@@ -72,6 +75,24 @@ public final class Imgs {
     public static void deleteEvtEffects() {
         for (int i = 0; i < evtEffect.length; i++) {
             evtEffect[i] = null;
+        }
+    }
+
+    /** loadMenuImage @0xcd304 */
+    public static void loadMenu() {
+        mmenu = Img.loadAll("/CM/_MMENU_BM", -1);
+        for (int i = 0; i < 4; i++) {
+            Sprite s = new Sprite(hl4.sys.Res.load("/CM/_MMENU_CHAR_" + i + "_CIF"), 0x11);
+            s.setImages(0, Img.loadAll("/CM/_MMENU_CHAR_" + i + "_BM", -1));
+            mmenuChar[i] = s;
+        }
+    }
+
+    /** deleteMenuImage */
+    public static void deleteMenu() {
+        mmenu = null;
+        for (int i = 0; i < 4; i++) {
+            mmenuChar[i] = null;
         }
     }
 }

@@ -9,7 +9,7 @@ import hl4.gfx.Gbm;
 public final class TitleFrame implements FrameHandler {
     public static final TitleFrame I = new TitleFrame();
 
-    private static boolean pressAnyKey;
+    public static boolean pressAnyKey;
     private static int frameCnt;               // _frameCnt (signed byte, wraps to 0 after 10)
     private static boolean smsShow;            // _bSmsShow
 

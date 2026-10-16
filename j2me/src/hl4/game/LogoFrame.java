@@ -31,15 +31,7 @@ public final class LogoFrame implements FrameHandler {
     /** LogoFrame_UseInfoTxt: load the notice text once */
     private static void loadUseInfo() {
         if (useInfo == null) {
-            byte[] b = Res.load("/tdf/_tdf_UseInfo_TXT");
-            int n = hl4.data.Text.linkedCount(b);
-            useInfo = new byte[n][];
-            for (int i = 0; i < n; i++) {
-                byte[] s = hl4.data.Text.linked(b, i);
-                byte[] p = new byte[s.length + 8];
-                System.arraycopy(s, 0, p, 0, s.length);
-                useInfo[i] = p;
-            }
+            useInfo = hl4.data.Text.linkedAll(Res.load("/tdf/_tdf_UseInfo_TXT"));
         }
     }
 

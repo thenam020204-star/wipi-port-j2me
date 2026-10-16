@@ -79,6 +79,10 @@ public final class LoadFrame implements FrameHandler {
                 loadCnt = 10;
                 Touch.setFrame(0x3a);
                 break;
+            case 5:
+                Imgs.loadMenu();
+                loadCnt = 10;
+                break;
             default:
                 throw new IllegalStateException("load target " + curTarget + ": later");
         }
@@ -89,6 +93,10 @@ public final class LoadFrame implements FrameHandler {
         switch (prevTarget) {
             case 3:
                 Imgs.deleteLogo();
+                break;
+            case 5:
+                MainMenuFrame.finalizeFrame();
+                Imgs.deleteMenu();
                 break;
             default:
                 break;
@@ -133,6 +141,10 @@ public final class LoadFrame implements FrameHandler {
             case 2:
                 TitleFrame.initialize();
                 Engine.setFrame(TitleFrame.I);
+                break;
+            case 3:
+                MainMenuFrame.initialize();
+                Engine.setFrame(MainMenuFrame.I);
                 break;
             default:
                 throw new IllegalStateException("next frame " + nextFrame + ": later");

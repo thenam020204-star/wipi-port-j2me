@@ -17,6 +17,8 @@ public final class Glob {
     /** _gameMenu[0x21]: SMS/consent answer (-1 undecided, 0 refused, 1 agreed); _gameMenu[0x22] */
     public static int smsAgree = -1;
     public static int smsFlag2;
+    /** -2 = real behaviour (read ./Hero4Sms); otherwise the answer the trace reference pretends to have stored */
+    public static int presetConsent = -2;
 
     private Glob() {
     }
@@ -54,6 +56,11 @@ public final class Glob {
 
     /** Load_smsAgree @0xceda0: ./Hero4Sms holds the consent answer (absent: undecided). */
     public static void loadSmsAgree() {
+        if (presetConsent != -2) {            // test hook (tools/ref_game.py consent stub)
+            smsAgree = presetConsent;
+            smsFlag2 = 0;
+            return;
+        }
         byte[] b = hl4.sys.Store.load("./Hero4Sms");
         if (b == null) {
             smsFlag2 = 0;

@@ -37,6 +37,7 @@ public class TraceTest {
             script.put(new Integer(Integer.parseInt(a[i].substring(0, c))), new Integer(Integer.decode(a[i].substring(c + 1)).intValue()));
         }
         Clock.setVirtual(1303268400000L);
+        hl4.game.Glob.presetConsent = 1;            // tools/ref_game.py consent=1
         Engine.startApp();
         int bad = 0;
         for (int t = 0; t < ticks && t < nref; t++) {

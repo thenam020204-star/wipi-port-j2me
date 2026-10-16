@@ -36,7 +36,14 @@ def compact(body):
             continue
         ln = re.sub(r'\bundefined[1248]?\b', 'int', ln)
         out.append(ln)
-    return '\n'.join(out)
+    res, i = [], 0
+    while i < len(out):                    # drop empty switch arms ("case N:" immediately followed by "break;")
+        if re.match(r'^\s*case [^:]*:$', out[i]) and i + 1 < len(out) and out[i + 1].strip() == 'break;':
+            i += 2
+            continue
+        res.append(out[i])
+        i += 1
+    return '\n'.join(res)
 
 
 names = [a for a in sys.argv[1:] if not a.startswith('-')]

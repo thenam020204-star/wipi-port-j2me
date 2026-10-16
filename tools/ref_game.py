@@ -41,6 +41,7 @@ IMPL = {
              'both ends inclusive; foreground pixel = pgc context index 1; clipping to the frame buffer only',
     'touch': 'only touch_drawVirtualPad is stubbed (it draws below the 240x320 game area).  The TOUCH sprite layer (TOUCH/CIF skins) '
              'draws dialog/menu backgrounds inside the game area and stays active; pointer input is simply never generated',
+    'consent': 'Load_smsAgree is stubbed to "agreed" (_gameMenu[0x21]=1): the real answer path waits for the carrier server forever offline; the port stores the answer and continues',
     'frame': 'platform frame 240x400; hashes cover only the game area (_lcdG+0x54 x +0x58 of the offscreen buffer _lcdG+0x10)',
     'heap': 'MC_knlAlloc/Calloc zero-filled; MC_knlFree recycles same-size blocks (pointer values are not observable)',
 }
@@ -49,12 +50,13 @@ PROPS = {'PHONEMODEL': b'HL4-REF', 'PHONENUMBER': b'01000000000', 'MIN': b'01000
 
 
 class Game(Harness):
-    def __init__(self, binp, resdir, tick_ms=50, raise_on_missing=False, portrait=True, no_touch=False):
+    def __init__(self, binp, resdir, tick_ms=50, raise_on_missing=False, portrait=True, no_touch=False, consent=1):
         super().__init__(binp, resdir)
         self.tick_ms = tick_ms
         self.now = CLOCK_BASE_MS
         self.raise_on_missing = raise_on_missing
         self.portrait = portrait
+        self.consent = consent
         self.no_touch = no_touch
         self.stubbed = []
         self.rng_calls = 0
@@ -294,6 +296,8 @@ class Game(Harness):
         self.uc.hook_add(UC_HOOK_CODE, portrait, begin=ret, end=ret)
         self.uc.hook_add(UC_HOOK_CODE, count, begin=rng, end=rng)
         self.stub_touch_draw(only=('touch_drawVirtualPad',) if not self.no_touch else None)
+        if self.consent is not None:
+            self.stub_consent()
         self.call('init')
         self.call('startClet')
         if logo_h:
@@ -302,6 +306,19 @@ class Game(Harness):
             self.call('Touch_Stand_Initialize')     # centre/size of the touch skin layer and menu positions follow the poked height
             self.call('UM_SetMenuXY')
         return self
+
+    def stub_consent(self):
+        """Load_smsAgree (@0xceda0) is replaced by 'answer already stored': _gameMenu[0x21] = consent (1 = agreed), [0x22] = 0.
+        The real answer path (NpcUi 5/10 'server response pending...') needs the carrier server and never completes offline."""
+        from unicorn import UC_HOOK_CODE
+        from unicorn.arm_const import UC_ARM_REG_LR, UC_ARM_REG_PC
+        a = self.elf.fbyname['Load_smsAgree'][0]
+        gm = self.objaddr('_gameMenu')
+
+        def cb(uc, addr, size, _):
+            self.write(gm + 0x21, bytes([self.consent & 0xff, 0]))
+            uc.reg_write(UC_ARM_REG_PC, uc.reg_read(UC_ARM_REG_LR))
+        self.uc.hook_add(UC_HOOK_CODE, cb, begin=a, end=a)
 
     def stub_touch_draw(self, only=None):
         """Neutralise touch drawing: `only` = exact names (default config: the virtual pad, which is drawn below the game area),
