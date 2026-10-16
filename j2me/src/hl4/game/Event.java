@@ -28,7 +28,7 @@ public final class Event {
         e[0x5ef] = e[0x5ee];
         int[] sc = Tab.SCREEN_COLOR;
         if (p1 == -1) {
-            Bytes.w32(e, 0x600, (e[0x5ee] & 0xff) <= 3 ? 0xff : 100);
+            Bytes.w32(e, 0x600, e[0x5ee] <= 3 ? 0xff : 100);          // signed compare (0x5919c): -1 gives 0xff
             int idx = e[0x5ee];
             if (idx != -1) {
                 Bytes.w32(e, 0x5f4, sc[idx * 3 + 1]);

@@ -665,14 +665,88 @@ public final class Maps {
 
     public static boolean minimapPending;
 
+    /** MAPOBJ_get(layer, evIdx) @0x9c400: layer 0 moreBottom, 1 bottom, 2 objList, 3 top */
+    static Obj mapObjGet(int layer, int k) {
+        LList l = layer == 0 ? G.moreBottomObjectList : layer == 1 ? G.bottomObjectList : layer == 2 ? G.objList : layer == 3 ? G.topObjectList : null;
+        if (l == null) {
+            return null;
+        }
+        for (Obj o = l.head; o != null; o = o.next) {
+            if (o.m[Obj.EVENT] == k) {
+                return o;
+            }
+        }
+        return null;
+    }
+
+    /** MAPOBJ_setImage(o, id) @0x9c598: 0xff hides the object, otherwise the id goes to +0x27 (no record) or the record's +5 */
+    static void mapObjSetImage(Obj o, int id) {
+        if (id == 0xff) {
+            o.m[Obj.VISIBLE] = 0;
+        } else if (o.evRef < 0) {
+            o.m[0x27] = (byte) id;
+        } else {
+            Event.e[Event.rec(o.evRef) + 5] = (byte) id;
+        }
+    }
+
+    /**
+     * Map_changeEvtObjectImage, map-object branch (0x9aca4): the object's image slot gets the new id; when the new image is not loaded yet it is loaded
+     * into that slot (DM_ReleaseResGbm + Map_OBJIMG + DM_LoadResGbmBlending).  An already loaded id is only written into the slot's id entry.
+     */
+    static void changeMapObjImage(int layer, int k, int img) {
+        Obj o = mapObjGet(layer, k);
+        if (o == null) {
+            throw new IllegalStateException("Map_changeEvtObjectImage: no map object (null dereference in the original)");
+        }
+        int cur = (short) (mapObjImgIdFromPtr(o));
+        int slot = (short) objectImgIdx(cur);
+        int v = img & 0xff;
+        if (slot != -1) {
+            if (img == -1) {
+                v = 0xff;
+            } else if (objectImgIdx(img) == -1) {
+                objImgs[slot] = null;
+                int keep = objIds[slot];
+                objIds[slot] = img & 0xff;
+                loadObjectImageBase(slot);
+                objIds[slot] = keep;
+            }
+            if ((byte) slot >= 0 && (byte) slot < nObj) {
+                objIds[(byte) slot] = v;
+            }
+        }
+        mapObjSetImage(o, v);
+    }
+
+    /** the image id as read by Map_changeEvtObjectImage: record +5 when +0x20 is set, else +0x27 (both unsigned) */
+    private static int mapObjImgIdFromPtr(Obj o) {
+        return o.evRef < 0 ? o.m[0x27] & 0xff : Event.e[Event.rec(o.evRef) + 5] & 0xff;
+    }
+
     /**
      * Map_changeEvtObjectImage(type, k, img) @0x9aba0 (event record type: 0 tile, 1..4 map object layers, others NPC): only the NPC branch is ported so far.
      * img -1 hides the NPC; an existing NPC of another kind is reloaded (SPR_destroy, NPC_load, NPC_init at its record position) and shown; without an NPC
      * one is created from the record (kind = img) and turned to the record's direction (+9).
      */
     public static void changeEvtObjectImage(int type, int k, int img) {
-        if (type >= 0 && type <= 4) {
-            throw new IllegalStateException("Map_changeEvtObjectImage(" + type + "," + k + "," + img + "): later");
+        if (type == 0) {
+            // Tile_get(k) + Tile_setImage: -1 / 0xff hide the tile; any other id is written through the tile's +0x20 record pointer, which
+            // Tile_init leaves null (never reached by the shipped scripts)
+            for (Obj t = G.tileList.head; t != null; t = t.next) {
+                if (t.m[Obj.EVENT] == k) {
+                    if (img != -1 && img != 0xff) {
+                        throw new IllegalStateException("Tile_setImage(" + img + "): write through the null +0x20 pointer");
+                    }
+                    t.m[Obj.VISIBLE] = 0;
+                    return;
+                }
+            }
+            return;
+        }
+        if (type >= 1 && type <= 4) {
+            changeMapObjImage(type - 1, k, img);
+            return;
         }
         Char n = Evt.npcEvt(k);
         if (img == -1) {

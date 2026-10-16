@@ -255,6 +255,14 @@ public final class Evt {
                 Sound.freeBgm();
                 return true;
             }
+            case 0x22: {
+                // 0x5e050: group (1-based) -> new monster type; the group's slot is _map[0x365 + group]
+                int g = (byte) (t.getByte() - 1);
+                int nt = t.getByte() & 0xff;
+                Monsters.changeEnemy(g, m[g + 0x365], nt);
+                Bytes.w16(m, g * 2 + 0x48, (byte) nt);
+                return true;
+            }
             case 0x23: {
                 int c = t.getByte();
                 MapFx.setFGI(c);

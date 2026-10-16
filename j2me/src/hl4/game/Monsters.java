@@ -82,6 +82,7 @@ public final class Monsters {
     /** CHAR_copy(dst, src) @0x495dc */
     public static void charCopy(Char d, Char s) {
         d.spr.copyFrom(s.spr);
+        Bytes.copy(s.m, 0x20, d.m, 0x20, 0x28);            // SPR_copyRes: SPR+0..+0x27 (anchor, move rect, hit rect)
         d.effects.init();
         d.targetEffects.init();
         d.m[0x16b] = s.m[0x16b];
@@ -287,6 +288,137 @@ public final class Monsters {
         return Coll.isRectMoveable(o, Bytes.s32(o.m, 0x148), Bytes.s32(o.m, 0x14c), Bytes.s32(o.m, 0x150), Bytes.s32(o.m, 0x154), true, true);
     }
 
+    private static String n3(int v) {
+        String t = String.valueOf(v);
+        return v < 10 ? "00" + t : (v < 100 ? "0" + t : t);
+    }
+
+    /** offset of record k in a table of (s16 length, data) records (the skip loop of MONSTER_dataLoad_g/_d) */
+    private static int skipRecords(byte[] d, int k) {
+        int off = 0;
+        for (int i = 0; i < k; i++) {
+            off += 2 + Bytes.s16(d, off);
+        }
+        return off;
+    }
+
+    /** MONSTER_loadRes(o, type) @0xa03ac */
+    public static void loadRes(Char o, int type) {
+        if (type < 200) {
+            dataLoadG(o, type);
+            dataLoadD(o, type);
+        } else {
+            throw new IllegalStateException("Boss_dataLoad_d: later");
+        }
+        spriteLoad(o);
+        imageLoad(o);
+    }
+
+    /** MONSTER_dataLoad_g(o, type) @0xa01f4: graphics record of /E/_EGDAT */
+    static void dataLoadG(Char o, int type) {
+        byte[] d = hl4.sys.Res.load("/E/_EGDAT");
+        byte[] m = o.m;
+        int b = type < 1 ? 0 : skipRecords(d, type);
+        Bytes.w16(m, 0x160, type);
+        Bytes.w16(m, 0x162, d[b + 2]);
+        m[0x16b] = d[b + 4];
+        for (int i = 0; i < 6; i++) {
+            m[0x19c + i] = d[b + 5 + i];
+            m[0x1a2 + i] = d[b + 11 + i];
+        }
+        m[0x1a8] = d[b + 17];
+        m[0x1a9] = d[b + 18];
+        m[0x1aa] = d[b + 19];
+        m[0x1b7] = d[b + 20];
+        m[0x1ac] = d[b + 21];
+        m[0x1ad] = d[b + 22];
+        m[0x1ae] = d[b + 23];
+        m[0x1af] = d[b + 24];
+        m[0x1b0] = d[b + 25];
+        m[0x1b1] = d[b + 26];
+        m[0x1b3] = d[b + 27];
+        m[0x1b4] = d[b + 28];
+        m[0x1b5] = d[b + 29];
+    }
+
+    /** MONSTER_dataLoad_d(o, type) @0x9fda0: stats record of /E/_ESDAT_<_game[1]> (DES) */
+    static void dataLoadD(Char o, int type) {
+        byte[] d = hl4.sys.Res.loadDes("/E/_ESDAT_" + G.game[1]);
+        byte[] m = o.m;
+        int r = type < 1 ? 0 : skipRecords(d, type);
+        int len = d[r + 3];
+        for (int i = 0; i < 0xf; i++) {
+            m[0x95 + i] = 0;
+        }
+        System.arraycopy(d, r + 4, m, 0x95, len);
+        int b = r + 4 + len;
+        m[0x1b8] = d[b];
+        m[0x94] = d[b + 1];
+        int hp = Bytes.s32(d, b + 2);
+        Bytes.w32(m, 0x178, hp);
+        Bytes.w32(m, 0xa8, hp);
+        w16x2(m, 0x196, 0xca, d[b + 6]);
+        w16x2(m, 0x198, 0xd0, d[b + 7]);
+        for (int i = 0; i < 3; i++) {
+            m[0x1be + i] = d[b + 8 + 5 * i];
+            Bytes.w16(m, 0x1c2 + 2 * i, Bytes.s16(d, b + 9 + 5 * i));
+            m[0x1ca + i] = d[b + 0xb + 5 * i];
+            m[0x1ce + i] = d[b + 0xc + 5 * i];
+        }
+        w16x2(m, 0x17c, 0xe6, Bytes.s16(d, b + 0x17));
+        w16x2(m, 0x17e, 0xec, Bytes.s16(d, b + 0x19));
+        w16x2(m, 0x180, 0xd4, Bytes.s16(d, b + 0x1b));
+        w16x2(m, 0x182, 0xe0, Bytes.s16(d, b + 0x1d));
+        w16x2(m, 0x184, 0xd8, Bytes.s16(d, b + 0x1f));
+        w16x2(m, 0x186, 0xe4, d[b + 0x21]);
+        w16x2(m, 0x188, 0xea, d[b + 0x22]);
+        w16x2(m, 0x18a, 0xc2, d[b + 0x23]);
+        w16x2(m, 0x18c, 0xb6, d[b + 0x24]);
+        w16x2(m, 0x18e, 0xae, d[b + 0x25]);
+        w16x2(m, 0x190, 0xba, d[b + 0x26]);
+        w16x2(m, 0x192, 0xb2, d[b + 0x27]);
+        w16x2(m, 0x194, 0xdc, d[b + 0x28]);
+        m[0x1d2] = d[b + 0x29];
+        for (int i = 0; i < 6; i++) {
+            Bytes.w16(m, 0x1d4 + 2 * i, Bytes.s16(d, b + 0x2a + 2 * i));
+        }
+        m[0x1e0] = d[b + 0x36];
+        m[0x1e1] = d[b + 0x37];
+        m[0x1e2] = d[b + 0x38];
+        m[0x1e3] = d[b + 0x39];
+        m[0x1e5] = d[b + 0x3a];
+        m[0x1e4] = d[b + 0x3b];
+        m[0x1e6] = d[b + 0x3c];
+        m[0x1e7] = d[b + 0x3e];
+        Bytes.w16(m, 0x1ea, Bytes.s16(d, b + 0x3f));
+        m[0x1ec] = d[b + 0x41];
+        m[0x1ed] = d[b + 0x42];
+    }
+
+    private static void w16x2(byte[] m, int a, int b, int v) {
+        Bytes.w16(m, a, v);
+        Bytes.w16(m, b, v);
+    }
+
+    /** MONSTER_spriteLoad @0x9f954: /H4/CIF/_H_<+0x162>_CIF (mode 3; 2 for a boss with +0x30b > 8) and its EXD */
+    static void spriteLoad(Char o) {
+        int sid = Bytes.s16(o.m, 0x162);
+        int mode = isBoss(o) && o.m[0x30b] > 8 ? 2 : 3;
+        o.spr = new hl4.gfx.Sprite(hl4.sys.Res.load("/H4/CIF/_H_" + n3(sid) + "_CIF"), mode);
+        o.spr.props = hl4.gfx.SprProps.parse(hl4.sys.Res.load("/H4/EXD/_H_" + n3(sid) + "_EXD"));
+        o.spr.props.store(o.m, 0x20);          // SPR_loadAttackProperty: anchor and the two rectangles into SPR+0..+0x24
+    }
+
+    /** MONSTER_imageLoad @0x9f8fc: image sets 0..5 (+0x19c ids, +0x1a2 palettes) */
+    static void imageLoad(Char o) {
+        for (int i = 0; i < 6; i++) {
+            int id = o.m[0x19c + i];
+            if (id > -1) {
+                Npcs.loadMonsterImage(o.spr, i, id, o.m[0x1a2 + i] & 0xff);
+            }
+        }
+    }
+
     /** MONSTER_addBody(type, mode) @0xb0408: a template monster of a map (mode 1: only registered in the map's body list) */
     public static Char addBody(int type, int mode) {
         if (type == -1) {
@@ -299,7 +431,7 @@ public final class Monsters {
         if ((type & 0xff) == 0xff) {
             Bytes.w16(o.m, 0x160, 0xff);
         } else {
-            throw new IllegalStateException("MONSTER_loadRes: later");
+            loadRes(o, type);
         }
         if (mode == 0) {
             init(o, 0, 0, 0);
@@ -311,6 +443,89 @@ public final class Monsters {
         }
         init(o, 0, 0, 0);
         return o;
+    }
+
+    /** MONSTER_release_ai @0x9fa18 = EnemyAIParsing_Finalize: frees the script state (the struct bytes are left as they are) */
+    public static void releaseAi(Char o) {
+        o.ai = null;
+    }
+
+    /** SPR_destroy(o+0x20) @0xc1734 */
+    static void sprDestroy(Char o) {
+        o.spr.set();
+        Bytes.fill(o.m, 0x20, 0, 0x74);
+    }
+
+    /** MONSTER_CloneEtc(o, body, idx) @0x9fcc0: re-clones a live monster from a (re)loaded body at its spawn point (+0x1ba/+0x1bc) */
+    static void cloneEtc(Char o, Char body, int idx) {
+        int x = Bytes.s16(o.m, 0x1ba);
+        int y = Bytes.s16(o.m, 0x1bc);
+        charCopy(o, body);
+        Bytes.copy(body.m, 0x94, o.m, 0x94, 0x18);
+        Bytes.copy(body.m, 0x178, o.m, 0x178, 0x24);
+        Bytes.copy(body.m, 0xac, o.m, 0xac, 0x48);
+        Bytes.copy(body.m, 0x19c, o.m, 0x19c, 0x54);
+        Bytes.copy(body.m, 0x1f0, o.m, 0x1f0, 0x1c);
+        if (isBoss(o)) {
+            o.m[0x30b] = body.m[0x30b];
+            o.m[0x30c] = body.m[0x30c];
+            o.m[0x94] = body.m[0x94];
+        }
+        o.m[0x323] = 0;
+        o.m[0x40d] = body.m[0x40d];
+        init(o, (byte) idx, x, y);
+        EnemyAi.dataLoad(o, o.m[0x1b8]);
+    }
+
+    /** MONSTER_changeEnemy(group, slot, type) @0xa04d0: the group's body is reloaded as 'type' (0xff: removed) and its live monsters re-cloned */
+    public static void changeEnemy(int group, int slot, int type) {
+        Char body = Maps.monBodies[slot];
+        if (body == null) {
+            return;
+        }
+        for (Obj p = G.objList.head; p != null; ) {
+            Obj nx = p.next;
+            int st = Obj.structType(p);
+            if (st == 3) {
+                Chars.deleteEffectInList((Char) p);
+                Chars.deleteEffectInObjList((Char) p);
+            } else if (st == 2) {
+                Chars.deleteEffectInList(Pool.hero);
+                Chars.deleteEffectInObjList(Pool.hero);
+            }
+            p = nx;
+        }
+        body = Maps.monBodies[slot];
+        if (type == 0xff) {
+            sprDestroy(body);
+            Maps.monBodies[slot].m[0x40c] = 1;
+        } else if (Bytes.s16(body.m, 0x160) != type || body.m[0x40c] == 1) {
+            sprDestroy(body);
+            loadRes(body, type);
+            Maps.monBodies[slot].m[0x40c] = 0;
+        }
+        for (Obj p = G.objList.head; p != null; p = p.next) {
+            if (Obj.structType(p) != 3) {
+                continue;
+            }
+            Char o = (Char) p;
+            if (o.m[0x40d] != group) {
+                continue;
+            }
+            if (type == 0xff) {
+                if (Bytes.s16(o.m, 0x160) != 0xff) {
+                    Bytes.w16(o.m, 0x160, type);
+                    o.m[0x164] = 1;
+                    releaseAi(o);
+                    Chars.resetPosition(o, -Bytes.s32(o.m, 0x30), -Bytes.s32(o.m, 0x34));
+                }
+            } else {
+                if (o.m[0x30c] == 0x38) {
+                    Bytes.w32(G.map, 0x378, Bytes.s32(o.m, 0xa4));
+                }
+                cloneEtc(o, Maps.monBodies[slot], o.m[0x16c]);
+            }
+        }
     }
 
     /** MONSTER_Clone(body, idx, x, y, releaseType) @0xafadc */
@@ -349,7 +564,7 @@ public final class Monsters {
             return null;
         }
         if ((G.map[o.m[0x40d] * 2 + 0x48]) != -1) {
-            throw new IllegalStateException("MONSTER_dataLoad_ai: later");
+            EnemyAi.dataLoad(o, o.m[0x1b8]);
         }
         G.monsterList.add(o);
         G.objList.addObject(o);

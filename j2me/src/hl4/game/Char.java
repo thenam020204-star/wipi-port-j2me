@@ -12,6 +12,8 @@ public class Char extends Obj {
     /** hero: the attack-property record of the current motion (+0x22c/+0x230) and the cells of the current frame's entry (+0x238) */
     public hl4.gfx.SprProps.Entry[] hitTable;
     public hl4.gfx.SprProps.Cell[] hitCells;
+    /** monster: the AI script state behind the heap pointers of +0x214..+0x264 (EnemyAIParsing_LoadData) */
+    public EnemyAi ai;
 
     public Char(int size, int type, int idx) {
         super(size, type, idx);
