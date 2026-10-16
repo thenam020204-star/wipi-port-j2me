@@ -1,0 +1,6 @@
+NPC_setLoop	1473	12
+NPC_setNextMotionDirection	1473	17
+SPR_isEndFrame	1473	30
+Event_Draw_Narration	1476	190
+Event_Init_Narration	1520	4
+NPC_setLoopNextMotionDirection	1642	1
