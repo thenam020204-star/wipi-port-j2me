@@ -1,0 +1,1 @@
+_slotInfo+0xc  Rw32:1                               1 fn  MMenu_drawSlot

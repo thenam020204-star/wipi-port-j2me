@@ -71,6 +71,7 @@ class Game(Harness):
         self.ctx = {}
         self.last_flush = None
         self._imports()
+        self._softfloat()
 
     # --- imports ---------------------------------------------------------------------------------------
     def _imports(self):
@@ -131,6 +132,61 @@ class Game(Harness):
         im['MC_fsRemove'] = lambda e, a: 0
         self._heap_imports()
         self._fallback_missing()
+
+
+    # --- ARM EABI soft-float helpers (libgcc): IEEE-754 binary32/binary64, round-to-nearest-even -------------
+    # Doubles travel in (r0=low, r1=high) / (r2, r3); floats in r0.  Python floats are binary64; binary32 results are rounded through
+    # struct 'f' (+,-,*,/ of two binary32 values computed in binary64 and rounded once is exact: 53 >= 2*24+2).
+    def _softfloat(self):
+        import math
+        D = lambda lo, hi: struct.unpack('<d', struct.pack('<II', lo & 0xffffffff, hi & 0xffffffff))[0]
+        F = lambda w: struct.unpack('<f', struct.pack('<I', w & 0xffffffff))[0]
+
+        def pd(v):
+            lo, hi = struct.unpack('<II', struct.pack('<d', v))
+            return (lo, hi)
+
+        def pf(v):
+            try:
+                return struct.unpack('<I', struct.pack('<f', v))[0]
+            except OverflowError:
+                return 0xff800000 if v < 0 else 0x7f800000
+
+        def div(a, b):
+            if b == 0.0:
+                if a == 0.0 or a != a:
+                    return math.nan
+                neg = (math.copysign(1.0, a) < 0) != (math.copysign(1.0, b) < 0)
+                return -math.inf if neg else math.inf
+            return a / b
+
+        def s32(v):
+            return v - (1 << 32) if v & 0x80000000 else v
+
+        def d2iz(v):
+            if v != v:
+                return 0
+            v = int(v) if abs(v) != math.inf else (1 << 40) * (1 if v > 0 else -1)
+            return max(-(1 << 31), min((1 << 31) - 1, v)) & 0xffffffff
+        im = self.imports
+        im['__aeabi_i2d'] = lambda e, a: pd(float(s32(a[0])))
+        im['__aeabi_i2f'] = lambda e, a: pf(float(s32(a[0])))
+        im['__aeabi_f2d'] = lambda e, a: pd(F(a[0]))
+        im['__aeabi_d2f'] = lambda e, a: pf(D(a[0], a[1]))
+        im['__aeabi_d2iz'] = lambda e, a: d2iz(D(a[0], a[1]))
+        im['__aeabi_f2iz'] = lambda e, a: d2iz(F(a[0]))
+        im['__aeabi_dadd'] = lambda e, a: pd(D(a[0], a[1]) + D(a[2], a[3]))
+        im['__aeabi_dsub'] = lambda e, a: pd(D(a[0], a[1]) - D(a[2], a[3]))
+        im['__aeabi_dmul'] = lambda e, a: pd(D(a[0], a[1]) * D(a[2], a[3]))
+        im['__aeabi_ddiv'] = lambda e, a: pd(div(D(a[0], a[1]), D(a[2], a[3])))
+        im['__aeabi_fadd'] = lambda e, a: pf(F(a[0]) + F(a[1]))
+        im['__aeabi_fsub'] = lambda e, a: pf(F(a[0]) - F(a[1]))
+        im['__aeabi_fmul'] = lambda e, a: pf(F(a[0]) * F(a[1]))
+        im['__aeabi_fdiv'] = lambda e, a: pf(div(F(a[0]), F(a[1])))
+        for n, f in (('eq', lambda x, y: x == y), ('lt', lambda x, y: x < y), ('le', lambda x, y: x <= y),
+                     ('ge', lambda x, y: x >= y), ('gt', lambda x, y: x > y)):
+            im['__aeabi_dcmp' + n] = (lambda f: lambda e, a: 1 if f(D(a[0], a[1]), D(a[2], a[3])) else 0)(f)
+            im['__aeabi_fcmp' + n] = (lambda f: lambda e, a: 1 if f(F(a[0]), F(a[1])) else 0)(f)
 
     def _heap_imports(self):
         def alloc(e, a):

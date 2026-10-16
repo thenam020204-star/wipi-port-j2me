@@ -1,0 +1,15 @@
+_lcdG+0x0  Rw32:6 Ww32:2                        2 fn  timerCB touch_drawCustomFillRect
+_lcdG+0x4  Rw32:3 Ww32:1                        3 fn  DM_Initialize MainFrame_ShowNotify timerCB
+_lcdG+0x8  Ww32:1                               1 fn  DM_Initialize
+_lcdG+0xc  Rw32:1 Ww32:1                        2 fn  DM_Initialize DM_ScreenPartCopy
+_lcdG+0x10  Rw32:194 Ww32:2                     88 fn  ArrowMvoe_draw ArrowMvoe_drawUpDown ArrowMvoe_draw_LR Arrow_drawUpDown
+_lcdG+0x14  Rw32:9 Ww32:1                        8 fn  DM_CopyOffScreen DM_CopyScreen DM_Initialize MMenu_PaintMain
+_lcdG+0x54  Rw32:76 Ww32:5                      52 fn  DM_CopyFrameBufRotate DM_Initialize DropItem_checkBalloonPos Event_Draw_Popup
+_lcdG+0x58  Rw32:69 Ww32:5                      43 fn  DM_Initialize Event_Draw_Popup Event_Draw_Screen Event_Draw_ScriptWindow
+_lcdG+0x64  Rw32:8                               5 fn  DM_Initialize MainFrame_ShowNotify timerCB touch_setTouchGroup
+_lcdG+0x68  Rw32:13                              6 fn  DM_Initialize MainFrame_ShowNotify TitleFrame_Initialize onHandleEvent
+_lcdG+0x70  Ru8:5                                5 fn  DM_ByteToIntPixelDef DM_Initialize DM_IntToBytePixelDef HF_Initialize
+_lcdG+0x74  Rw32:1                               1 fn  DM_ProcFrameBufRGB
+_lcdG+0x78  Rw32:1                               1 fn  DM_ProcFrameBufRGB
+_lcdG+0x7c  Rw32:1                               1 fn  DM_ProcFrameBufRGB
+_lcdG+0x92  Ru8:11                              11 fn  DM_BlendPixelAtTime DM_ChangeGbmPalette DM_ChangeHSB DM_ChangePalette

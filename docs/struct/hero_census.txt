@@ -1,0 +1,374 @@
+0x0000  Rw32:1 Ww32:1                       2 fn  CHAR_getHeroHittedRect SUMMON_preProcess
+0x0004  Ww32:1                              1 fn  CHAR_getHeroHittedRect
+0x0008  Rw32:62 Ww32:13                    43 fn  CHAR_drawEffectList CHAR_getHeroHittedRect CHAR_getX CHAR_setPosition EVT_OnFunction
+0x000c  Rw32:64 Ww32:12                    45 fn  CHAR_drawEffectList CHAR_getHeroHittedRect CHAR_getY CHAR_isDiagnal CHAR_setPosition
+0x0019  Ww8:2                               2 fn  CHAR_init HERO_init
+0x0020  Rw32:19                             9 fn  CHAR_drawEffectList CHAR_getTopPivotX HERO_attackMonster HERO_check_skilluse HERO_check_skilluseHG
+0x0024  Rw32:19                             9 fn  CHAR_drawEffectList CHAR_getTopPivotY HERO_attackMonster HERO_check_skilluse HERO_check_skilluseHG
+0x0028  Rw32:6 Ww32:1                       6 fn  CHAR_getMoveRectX HERO_Copy_Sprite_ImageInfo HERO_TeleportAttackSK HERO_process HERO_setTeleportMove
+0x002c  Rw32:7 Ww32:1                       7 fn  CHAR_getMoveRectY CHAR_init HERO_Copy_Sprite_ImageInfo HERO_TeleportAttackSK HERO_process
+0x0030  Rw32:8 Ww32:1                       6 fn  CHAR_getMoveRectW HERO_Copy_Sprite_ImageInfo HERO_TeleportAttackSK HERO_process HERO_setTeleportMove
+0x0034  Rw32:7 Ww32:1                       7 fn  CHAR_getMoveRectH CHAR_init HERO_Copy_Sprite_ImageInfo HERO_TeleportAttackSK HERO_process
+0x0038  Rw32:1                              1 fn  CHAR_getHittedRectX
+0x003c  Rw32:1                              1 fn  CHAR_getHittedRectY
+0x0040  Rw32:1                              1 fn  CHAR_getHittedRectW
+0x0044  Rw32:1                              1 fn  CHAR_getHittedRectH
+0x0048  Rw32:1                              1 fn  HERO_Copy_Sprite_ImageInfo
+0x004c  Rw32:1                              1 fn  HERO_Copy_Sprite_ImageInfo
+0x0050  Rw32:1                              1 fn  HERO_Copy_Sprite_ImageInfo
+0x0054  Rw32:1                              1 fn  HERO_Copy_Sprite_ImageInfo
+0x008c  Rs8:3 Ru8:3 Ww8:5                  11 fn  GameMenuFrame_Finalize GameMenuFrame_Initialize HERO_check_attack_frameHG HERO_check_skilluse HERO_check_skilluseHG
+0x0094  Rs8:7 Ru8:3 Ww8:4                   8 fn  GMenu_DrawStatue GMenu_UseCash HERO_add_curExp HERO_getCurLevel HERO_getLevel
+0x00a4  Rw32:10 Ww32:6                     10 fn  CHAR_AddHp CHAR_heroAddHp HERO_getCurHp HERO_process HERO_setHpMax
+0x00a8  Rw32:5 Ww32:3                       7 fn  CHAR_AddHp HERO_add_HpMax HERO_getMaxHp HERO_setHpMax HERO_set_HeroStatus
+0x00ac  Ww16:2                              2 fn  HERO_set_HeroStatusPassive SUMMON_setStatusPassive
+0x00b0  Ru16:1 Ww16:2                       3 fn  GMenu_viewAbility HERO_set_HeroStatusPassive SUMMON_setStatusPassive
+0x00b2  Ww16:1                              1 fn  HERO_set_HeroStatus
+0x00b4  Ww16:2                              2 fn  HERO_set_HeroStatusPassive SUMMON_setStatusPassive
+0x00b8  Ww16:2                              2 fn  HERO_set_HeroStatusPassive SUMMON_setStatusPassive
+0x00ba  Ru16:2 Ww16:1                       3 fn  GMenu_viewAbility HERO_backupRealStat HERO_set_HeroStatus
+0x00bc  Ww16:2                              2 fn  HERO_set_HeroStatusPassive SUMMON_setStatusPassive
+0x00be  Ww16:2                              2 fn  HERO_set_HeroStatusPassive SUMMON_setStatusPassive
+0x00c0  Ww16:2                              2 fn  HERO_set_HeroStatusPassive SUMMON_setStatusPassive
+0x00c2  Ru16:1 Ww16:1                       2 fn  GMenu_viewAbility HERO_set_HeroStatus
+0x00c4  Ww16:2                              2 fn  HERO_set_HeroStatusPassive SUMMON_setStatusPassive
+0x00c6  Rs16:1 Ww16:3                       3 fn  HERO_attackMonster HERO_init SUMMON_preProcess
+0x00c8  Ww16:2                              2 fn  HERO_set_HeroStatusPassive SUMMON_setStatusPassive
+0x00ca  Rs16:1 Ww16:1                       2 fn  HERO_set_HeroStatus SUMMON_preProcess
+0x00cc  Ww8:2                               2 fn  HERO_set_HeroStatusPassive SUMMON_setStatusPassive
+0x00ce  Ww16:2                              2 fn  HERO_set_HeroStatusPassive SUMMON_setStatusPassive
+0x00d0  Rs16:1 Ww16:1                       2 fn  HERO_set_HeroStatus SUMMON_preProcess
+0x00d2  Ww8:2                               2 fn  HERO_set_HeroStatusPassive SUMMON_setStatusPassive
+0x00d4  Ww16:1                              1 fn  HERO_set_HeroStatus
+0x00d6  Ww16:2                              2 fn  HERO_set_HeroStatusPassive SUMMON_setStatusPassive
+0x00d8  Ru16:1 Ww16:1                       2 fn  GMenu_viewAbility HERO_set_HeroStatus
+0x00da  Ww16:2                              2 fn  HERO_set_HeroStatusPassive SUMMON_setStatusPassive
+0x00dc  Ru16:1 Ww16:1                       2 fn  GMenu_viewAbility HERO_set_HeroStatus
+0x00de  Ww16:2                              2 fn  HERO_set_HeroStatusPassive SUMMON_setStatusPassive
+0x00e0  Ru16:1 Ww16:1                       2 fn  GMenu_viewAbility HERO_set_HeroStatus
+0x00e2  Ww16:2                              2 fn  HERO_set_HeroStatusPassive SUMMON_setStatusPassive
+0x00e4  Ww16:1                              1 fn  HERO_set_HeroStatus
+0x00e6  Ww16:1                              1 fn  HERO_set_HeroStatus
+0x00e8  Ww16:2                              2 fn  HERO_set_HeroStatusPassive SUMMON_setStatusPassive
+0x00ea  Ww16:1                              1 fn  HERO_set_HeroStatus
+0x00ec  Ww16:1                              1 fn  HERO_set_HeroStatus
+0x00ee  Ww16:2                              2 fn  HERO_set_HeroStatusPassive SUMMON_setStatusPassive
+0x00f0  Ww32:2                              1 fn  HERO_attackMonster
+0x00f4  Ru8:3 Ww8:1                         4 fn  CHAR_buffProcess CHAR_initBuff CHAR_isAnyBuff MainGameFrame_drawGameBottomUI2
+0x00f5  Ww8:1                               1 fn  CHAR_initBuff
+0x00f6  Ww8:1                               1 fn  CHAR_initBuff
+0x00f8  Ww16:1                              1 fn  CHAR_initBuff
+0x00fa  Rs16:1 Ww16:1                       2 fn  CHAR_initBuff CHAR_removeBuff
+0x00fc  Ru8:2 Ww8:1                         3 fn  CHAR_initBuff CHAR_isAnyBuff HERO_set_HeroStatusBuffPassive
+0x00fd  Rs8:1 Ww8:1                         2 fn  CHAR_initBuff HERO_set_HeroStatusBuffPassive
+0x00fe  Rs8:1 Ww8:1                         2 fn  CHAR_initBuff HERO_set_HeroStatusBuffPassive
+0x0100  Ww16:1                              1 fn  CHAR_initBuff
+0x0102  Ww16:1                              1 fn  CHAR_initBuff
+0x0104  Ru8:1                               1 fn  CHAR_isAnyBuff
+0x010c  Ru8:7 Ww8:1                         8 fn  CHAR_buffProcess CHAR_initBuff CHAR_isAdrenalinBuff CHAR_isConcentrationBuff CHAR_isHideBuff
+0x010d  Ww8:1                               1 fn  CHAR_initBuff
+0x010e  Ru8:5 Ww8:1                         6 fn  CHAR_initBuff CHAR_isAdrenalinBuff CHAR_isConcentrationBuff CHAR_isHideBuff CHAR_isSiegeBuff
+0x0110  Ww16:1                              1 fn  CHAR_initBuff
+0x0114  Ru8:5 Ww8:1                         6 fn  CHAR_initBuff CHAR_isAnyBadStatus CHAR_isBleedBuff CHAR_isPoisonBuff CHAR_isReflectBuff
+0x0115  Ww8:1                               1 fn  CHAR_initBuff
+0x0116  Ru8:6 Ww8:1                         7 fn  CHAR_buffProcess CHAR_initBuff CHAR_isBleedBuff CHAR_isPoisonBuff CHAR_isReflectBuff
+0x0118  Ww16:1                              1 fn  CHAR_initBuff
+0x011c  Ru8:2                               2 fn  CHAR_isFiredBuff CHAR_isIcedBuff
+0x011e  Ru8:3                               3 fn  CHAR_isFiredBuff CHAR_isIcedBuff CHAR_setEffAfterMapMove
+0x0124  Ru8:1                               1 fn  CHAR_isStunBuff
+0x0126  Ru8:2                               2 fn  CHAR_isStunBuff CHAR_setEffAfterMapMove
+0x012c  Rs8:3 Ru8:1 Ww8:2                   3 fn  CHAR_initBuff CHAR_removeBuff HERO_set_HeroStatusBuffPassive
+0x013c  Rw32:5                              5 fn  CHAR_checkSameEffectToList CHAR_endProcessTargetEffectList CHAR_preProcessTargetEffectList CHAR_removeBuffEffect CHAR_removeTargetEffect
+0x0148  Ww32:2                              2 fn  CHAR_resetPosition CHAR_setPosition
+0x014c  Ww32:2                              2 fn  CHAR_resetPosition CHAR_setPosition
+0x0150  Rw32:1 Ww32:2                       3 fn  Boss_checkColHero CHAR_resetPosition CHAR_setPosition
+0x0154  Rw32:1 Ww32:2                       3 fn  Boss_checkColHero CHAR_resetPosition CHAR_setPosition
+0x0158  Rw32:5 Ww32:4                       6 fn  HERO_check_move_stop HERO_move_stop HERO_process HERO_serch_move_area HERO_set_move
+0x015c  Rw32:5 Ww32:4                       6 fn  HERO_check_move_stop HERO_move_stop HERO_process HERO_serch_move_area HERO_set_move
+0x0164  Ru8:1 Ww8:1                         1 fn  CHAR_destroy
+0x0165  Ru8:1 Ww8:1                         1 fn  CHAR_destroy
+0x0166  Rs8:14 Ru8:5 Ww8:26                32 fn  CHAR_buffProcess CHAR_getMainState CHAR_heroMotionDie CHAR_init CHAR_setMainState
+0x0167  Rs8:41 Ru8:27 Ww8:11               45 fn  CHAR_buffProcess CHAR_destroy CHAR_getMotion CHAR_init CHAR_process
+0x0168  Rs8:62 Ru8:24 Ww8:10               63 fn  CHAR_getDirection CHAR_getInverseDirection CHAR_init CHAR_process CHAR_setDirection
+0x0169  Rs8:2 Ww8:8                         7 fn  CHAR_process CHAR_setNextMotionDirection HERO_end_skilluseHK HERO_touchProcess MainGameFrame_GamePlayKeyPressed
+0x016a  Ru8:1 Ww8:4                         4 fn  CHAR_process CHAR_setDirection CHAR_setNextMotionDirection SUMMON_walk
+0x016b  Rs8:61 Ru8:22 Ww8:6                55 fn  BattleProc_setSkillEff_Etc CHAR_copy CHAR_destroy CHAR_init CHAR_isFireEnchantBuff
+0x016c  Ww8:2                               2 fn  CHAR_destroy CHAR_init
+0x016d  Ru8:2 Ww8:2                         2 fn  CHAR_setBlendType HERO_setDamaged
+0x016e  Rs8:4 Ww8:3                         6 fn  HERO_init HERO_process Hero_draw SUMMON_checkAndMove SUMMON_draw
+0x016f  Rs8:2 Ww8:1                         3 fn  CHAR_getMoveX CHAR_getMoveY CHAR_init
+0x0170  Ru8:5 Ww8:2                         7 fn  HERO_Key_Release HERO_Key_press HERO_check_extra_frame HERO_endProcess HERO_process
+0x0171  Rs8:3 Ww8:2                         3 fn  EVT_OnFunction Hero_draw Map_Initialize
+0x0172  Rs8:2 Ru8:2 Ww8:2                   6 fn  CHAR_actionDir CHAR_convertDir CHAR_getDebugDir CHAR_setNextMotionDirection EVT_OnFunction
+0x0173  Ru8:2 Ww8:2                         3 fn  Event_Heromove Event_Set_Heromove_2 HERO_endProcess
+0x0174  Rs8:5 Ww8:16                        9 fn  HERO_check_skilluseHG HERO_check_skilluseHK HERO_check_skilluseSK HERO_end_skilluseHG HERO_end_skilluseHK
+0x0175  Ru8:1 Ww8:1                         1 fn  MONSTER_attackHero
+0x0176  Ww8:3                               1 fn  HERO_attackMonster
+0x0177  Ru8:2 Ww8:2                         2 fn  Hero_draw SUMMON_draw
+0x0178  Rw32:6 Ww32:5                       5 fn  HERO_add_curExp HERO_getCurExp HERO_init LoadGameData_Net SUMMON_getHitProperty
+0x017c  Rw32:1 Ww32:4                       5 fn  HERO_getMaxExp HERO_init HERO_set_HeroStatus HERO_set_nextExp LoadGameData_Net
+0x0180  Ru16:1                              1 fn  SUMMON_attackPreProcessProperty
+0x0184  Rw32:4                              3 fn  MONSTER_dropItem MainGameFrame_GamePlayProcess SUMMON_attackPreProcessProperty
+0x0189  Rs8:17 Ru8:2                       16 fn  GMenu_DrawStatue HERO_check_skilluse HERO_isStatusMoveDodge HERO_isStatusMoveTeleport HERO_set_HeroStatus
+0x018a  Ru8:4                               3 fn  GMenu_UseCash HERO_getTotalAttributePoint HERO_set_HeroStatusPassive
+0x018b  Ru8:4                               3 fn  GMenu_UseCash HERO_getTotalAttributePoint HERO_set_HeroStatusPassive
+0x018c  Ru8:4                               3 fn  GMenu_UseCash HERO_getTotalAttributePoint HERO_set_HeroStatusPassive
+0x018d  Ru8:4                               3 fn  GMenu_UseCash HERO_getTotalAttributePoint HERO_set_HeroStatusPassive
+0x018e  Rs8:1                               1 fn  HERO_set_HeroStatusPassive
+0x018f  Rs8:1                               1 fn  HERO_set_HeroStatusPassive
+0x0190  Ru8:1                               1 fn  HERO_set_HeroStatusPassive
+0x0191  Ru8:1                               1 fn  HERO_set_HeroStatusPassive
+0x0192  Rs8:1                               1 fn  HERO_set_HeroStatusPassive
+0x0193  Rs8:1                               1 fn  HERO_set_HeroStatusPassive
+0x0194  Rs8:1                               1 fn  HERO_set_HeroStatusPassive
+0x0195  Rs8:1                               1 fn  HERO_set_HeroStatusPassive
+0x0196  Rs8:1                               1 fn  HERO_set_HeroStatusPassive
+0x0197  Rs8:1                               1 fn  HERO_set_HeroStatusPassive
+0x0198  Rs8:1                               1 fn  HERO_set_HeroStatusPassive
+0x0199  Rs8:1                               1 fn  HERO_set_HeroStatusPassive
+0x019a  Rs8:1                               1 fn  HERO_set_HeroStatusPassive
+0x019b  Rs8:1                               1 fn  HERO_set_HeroStatusPassive
+0x019c  Rs8:1                               1 fn  HERO_set_HeroStatusPassive
+0x019d  Rs8:1                               1 fn  HERO_set_HeroStatusPassive
+0x019e  Rs8:1                               1 fn  HERO_set_HeroStatusPassive
+0x019f  Rs8:1                               1 fn  HERO_set_HeroStatusPassive
+0x01a0  Rs8:1                               1 fn  HERO_set_HeroStatusPassive
+0x01a1  Rs8:1                               1 fn  HERO_set_HeroStatusPassive
+0x01a2  Rs8:1                               1 fn  HERO_set_HeroStatusPassive
+0x01a3  Rs8:1                               1 fn  HERO_set_HeroStatusPassive
+0x01a4  Rs8:1                               1 fn  HERO_set_HeroStatusPassive
+0x01a5  Rs8:1                               1 fn  HERO_set_HeroStatusPassive
+0x01a6  Rs8:1                               1 fn  HERO_set_HeroStatusPassive
+0x01a7  Rs8:1                               1 fn  HERO_set_HeroStatusPassive
+0x01a8  Rs8:1                               1 fn  HERO_set_HeroStatusPassive
+0x01ac  Ru8:6 Ww8:5                         7 fn  GMenu_UseCash HERO_addAttribute HERO_getTotalAttributePoint HERO_init HERO_set_HeroStatusPassive
+0x01ad  Ru8:6 Ww8:5                         7 fn  GMenu_UseCash HERO_addAttribute HERO_getTotalAttributePoint HERO_init HERO_set_HeroStatusPassive
+0x01ae  Ru8:6 Ww8:5                         7 fn  GMenu_UseCash HERO_addAttribute HERO_getTotalAttributePoint HERO_init HERO_set_HeroStatusPassive
+0x01af  Ru8:8 Ww8:5                         8 fn  GMenu_DrawStatue GMenu_UseCash HERO_addAttribute HERO_getTotalAttributePoint HERO_init
+0x01cc  Rw32:4 Ww32:2                       4 fn  SUMMON_addSp SUMMON_initSkillPoint SUMMON_preProcess SUMMON_walkPreProcess
+0x01d0  Rw32:1 Ww32:1                       2 fn  SUMMON_addSp SUMMON_initSkillPoint
+0x01ec  Rs8:42 Ru8:2 Ww8:3                 17 fn  HERO_check_attack_frameSM HERO_check_skilluse HERO_check_skilluseSK HERO_check_skilluseSM HERO_init
+0x01ed  Ru8:17 Ww8:4                       13 fn  Event_moveNextSceneWithWeatherTime GMenu_GuardianKey HERO_check_skilluse HERO_check_skilluseSK HERO_check_skilluseSM
+0x01f0  Rw32:3 Ww32:1                       3 fn  HERO_extra_set_particles HERO_loadParticleData HERO_loadParticleInfo
+0x01f2  Ww8:1                               1 fn  SUMMON_loadSummonData_D
+0x01f3  Rs8:1 Ww8:1                         2 fn  HERO_endProcess SUMMON_loadSummonData_D
+0x01f4  Ww8:1                               1 fn  SUMMON_loadSummonData_D
+0x01f5  Ww8:1                               1 fn  SUMMON_loadSummonData_D
+0x01f7  Rs8:1 Ww8:1                         2 fn  SUMMON_loadSummonData_D SUMMON_setStatusPassive
+0x01f8  Ru8:1 Ww8:1                         2 fn  SUMMON_loadSummonData_D SUMMON_setStatusPassive
+0x01f9  Ru8:1                               1 fn  SUMMON_setStatusPassive
+0x01fa  Rs8:1                               1 fn  SUMMON_setStatusPassive
+0x01fb  Rs8:1 Ww8:1                         2 fn  SUMMON_loadSummonData_D SUMMON_setStatusPassive
+0x01fc  Rs8:1 Ww8:1                         2 fn  SUMMON_loadSummonData_D SUMMON_setStatusPassive
+0x01fd  Rs8:1 Ww8:1                         2 fn  SUMMON_loadSummonData_D SUMMON_setStatusPassive
+0x01fe  Rs8:1                               1 fn  SUMMON_setStatusPassive
+0x01ff  Rs8:1                               1 fn  SUMMON_setStatusPassive
+0x0200  Rs8:1                               1 fn  SUMMON_setStatusPassive
+0x0201  Rs8:1                               1 fn  SUMMON_setStatusPassive
+0x0202  Rs8:1                               1 fn  SUMMON_setStatusPassive
+0x0203  Rs8:1 Ww8:1                         2 fn  SUMMON_loadSummonData_D SUMMON_setStatusPassive
+0x0204  Rs8:1 Ww8:2                         3 fn  HERO_init SUMMON_loadSummonData_D SUMMON_setStatusPassive
+0x0205  Rs8:1 Ww8:1                         2 fn  SUMMON_loadSummonData_D SUMMON_setStatusPassive
+0x0206  Rs8:1 Ww8:1                         2 fn  SUMMON_loadSummonData_D SUMMON_setStatusPassive
+0x0207  Rs8:1 Ww8:1                         2 fn  SUMMON_loadSummonData_D SUMMON_setStatusPassive
+0x0208  Rs8:1 Ww8:1                         2 fn  SUMMON_loadSummonData_D SUMMON_setStatusPassive
+0x0209  Rs8:1                               1 fn  SUMMON_setStatusPassive
+0x020a  Rs8:1 Ww8:1                         2 fn  SUMMON_loadSummonData_D SUMMON_setStatusPassive
+0x020b  Rs8:1 Ww8:1                         2 fn  SUMMON_loadSummonData_D SUMMON_setStatusPassive
+0x020c  Rs8:1 Ru8:18 Ww8:3                  7 fn  HERO_Key_Release HERO_Key_press HERO_init MainGameFrame_drawGameBottomUI_Rotate_Touch SUMMON_loadSummonData_D
+0x020d  Rs8:2 Ww8:10                        9 fn  HERO_check_skilluseHG HERO_check_skilluseHK HERO_check_skilluseSK HERO_endProcess HERO_setAttackMotion
+0x020e  Rs8:14 Ru8:11 Ww8:8                14 fn  HERO_HK_endprocess HERO_check_skilluse HERO_check_skilluseHG HERO_check_skilluseHK HERO_check_skilluseSK
+0x020f  Rs8:1 Ru8:9 Ww8:1                   6 fn  HERO_isStatusAir HERO_process HERO_setStatusAir MONSTER_distanceWithHero SUMMON_setStatusPassive
+0x0210  Rs8:3 Ru8:1 Ww8:5                   6 fn  HERO_end_skilluseHK HERO_process HERO_setStatusAir Hero_draw SUMMON_loadSummonData_D
+0x0211  Ru8:1 Ww8:1                         2 fn  HERO_isStatusMovePiercing HERO_setStatusMovePiercing
+0x0214  Ru8:1 Ww8:8                         6 fn  HERO_check_skilluseHG HERO_check_skilluseHK HERO_end_skilluseHK HERO_init HERO_initMotionAtDamaged
+0x0215  Ru8:2 Ww8:2                         2 fn  HERO_end_skilluseHK SUMMON_setStatusPassive
+0x0216  Rs8:9 Ru8:3 Ww8:9                  14 fn  GMenu_ArmsKey HERO_armsAttackNearFirstMonster HERO_attackMonster HERO_canUseArmsBullet HERO_changeArms
+0x0217  Rs8:1 Ru8:1 Ww8:3                   5 fn  HERO_init HERO_isTetany HERO_process HERO_setTetany SUMMON_setStatusPassive
+0x0218  Rw32:12 Ww32:7                     10 fn  CHAR_heroAddSp HERO_addSp HERO_check_skilluseHG HERO_check_skilluseHK HERO_getCurSp
+0x021c  Rw32:3 Ww32:3                       6 fn  HERO_addSp HERO_add_SpMax HERO_getMaxSp HERO_init HERO_setSpMax
+0x0222  Rs16:1                              1 fn  Hero_getSkillPoint
+0x0226  Ww8:3                               3 fn  HERO_Human_key_press HERO_Sunju_key_press HERO_init
+0x0227  Ww8:3                               3 fn  HERO_Human_key_press HERO_Sunju_key_press HERO_init
+0x0228  Ww8:3                               3 fn  HERO_Human_key_press HERO_Sunju_key_press HERO_init
+0x0229  Ww8:3                               3 fn  HERO_Human_key_press HERO_Sunju_key_press HERO_init
+0x022a  Rs8:5 Ru8:2 Ww8:1                   6 fn  HERO_Human_key_press HERO_Sunju_key_press HERO_init HERO_setStandMotion HERO_set_direction
+0x022b  Ru8:2 Ww8:4                         3 fn  HERO_Human_key_press HERO_Sunju_key_press HERO_set_direction
+0x022c  Rw32:2                              2 fn  HERO_check_attack_frame HERO_check_extra_frame
+0x022e  Ww16:1                              1 fn  SUMMON_setStatusPassive
+0x0232  Ww16:1                              1 fn  SUMMON_setStatusPassive
+0x0234  Ru16:2                              2 fn  HERO_check_attack_frame HERO_check_extra_frame
+0x0238  Rw32:1                              1 fn  HERO_check_extra_frame
+0x023d  Ru8:4                               4 fn  HERO_check_attack_frameHG HERO_check_attack_frameHK HERO_check_attack_frameSK HERO_check_attack_frameSM
+0x0248  Rw32:1                              1 fn  HERO_check_attack_frameSM
+0x024c  Rw32:1                              1 fn  HERO_check_attack_frameSM
+0x0254  Ru8:1 Ww8:1                         2 fn  SUMMON_loadSummonData_initD SUMMON_setUsedTotalExp
+0x0259  Ru8:3 Ww8:1                         3 fn  SUMMON_loadSummonData_initD SUMMON_preProcess SUMMON_setUsedTotalExp
+0x025e  Ru8:1 Ww8:1                         2 fn  SUMMON_loadSummonData_initD SUMMON_setUsedTotalExp
+0x0263  Ru8:3 Ww8:1                         3 fn  SUMMON_loadSummonData_initD SUMMON_preProcess SUMMON_setUsedTotalExp
+0x0274  Rw32:2 Ww32:3                       2 fn  SUMMON_initSkillPoint SUMMON_preProcess
+0x0278  Rw32:2 Ww32:1                       2 fn  SUMMON_initSkillPoint SUMMON_preProcess
+0x027c  Ww32:1                              1 fn  SUMMON_initSkillPoint
+0x0280  Ww32:1 Ww8:2                        2 fn  HERO_check_extra_frame SUMMON_initSkillPoint
+0x0281  Ww8:1                               1 fn  HERO_check_extra_frame
+0x0282  Ww8:1                               1 fn  HERO_check_extra_frame
+0x0283  Ru8:2 Ww8:2                         2 fn  HERO_attackMonsterProcess HERO_check_extra_frame
+0x0284  Rs8:1 Ww8:2                         2 fn  HERO_attackMonsterProcess HERO_check_extra_frame
+0x0285  Ru8:1 Ww8:2                         2 fn  HERO_check_extra_frame HERO_endProcess
+0x0286  Ww8:1                               1 fn  HERO_check_extra_frame
+0x0287  Ru8:1 Ww8:2                         2 fn  HERO_check_extra_frame Hero_draw
+0x0288  Ru8:1 Ww8:1                         2 fn  HERO_check_extra_frame Hero_draw
+0x0289  Ru8:1 Ww8:2                         2 fn  HERO_check_extra_frame HERO_endProcess
+0x028a  Ww8:1                               1 fn  HERO_check_extra_frame
+0x028b  Ww8:1                               1 fn  HERO_check_extra_frame
+0x028c  Ru8:1 Ww8:2                         2 fn  HERO_check_extra_frame HERO_process
+0x028d  Rs8:1 Ww8:1                         2 fn  HERO_check_extra_frame HERO_process
+0x0294  Rs8:1                               1 fn  GMenu_usabilitySkill
+0x0295  Rw32:1                              1 fn  HERO_process
+0x0299  Rw32:1                              1 fn  HERO_process
+0x029c  Rs16:1 Rw32:2 Ww32:3                3 fn  HERO_set_HeroStatus SUMMON_initSkillPoint SUMMON_preProcess
+0x02a0  Rw32:2 Ww32:1                       2 fn  SUMMON_initSkillPoint SUMMON_preProcess
+0x02a4  Ww32:1                              1 fn  SUMMON_initSkillPoint
+0x02a8  Ww32:1                              1 fn  SUMMON_initSkillPoint
+0x02ad  Rw32:1                              1 fn  HERO_process
+0x02b1  Rw32:1                              1 fn  HERO_process
+0x02b8  Rs8:4 Ru8:1 Ww8:5                   6 fn  GMenu_UseCash HERO_getTotalSkillPoint HERO_init HERO_set_HeroStatus LoadGameData_Net
+0x02b9  Ww8:3                               2 fn  GMenu_UseCash HERO_init
+0x02c8  Ww32:1                              1 fn  SUMMON_setUsedTotalExp
+0x02cd  Rs8:1                               1 fn  HERO_endProcess
+0x02cf  Rs8:2                               1 fn  HERO_endProcess
+0x02d0  Rs8:1                               1 fn  HERO_check_AutoTarget
+0x02d8  Rw32:2                              1 fn  HERO_check_AutoTarget
+0x02dc  Rw32:2                              1 fn  HERO_check_AutoTarget
+0x02e0  Rs8:3 Ru8:1 Ww8:1                   5 fn  HERO_check_skilluseHK HERO_end_skilluseHK HERO_getTotalSkillPoint HERO_init SaveGameData_Net
+0x02e1  Ww8:1                               1 fn  HERO_init
+0x02e6  Ww8:1                               1 fn  SUMMON_initSkillPoint
+0x0302  Ww8:1                               1 fn  SUMMON_initSkillPoint
+0x0327  Ww8:2                               1 fn  HERO_attackMonster
+0x0329  Ww8:2                               1 fn  HERO_attackMonster
+0x032a  Ru8:2 Ww8:1                         2 fn  HERO_attackMonster SUMMON_attackMonster
+0x032b  Ww8:1                               1 fn  HERO_attackMonster
+0x032c  Ww8:1                               1 fn  HERO_attackMonster
+0x0352  Ww8:1                               1 fn  HERO_check_skilluseSM
+0x0353  Rs16:1 Ww16:1                       1 fn  HERO_process
+0x0357  Rs16:1                              1 fn  HERO_process
+0x035d  Rs16:1                              1 fn  HERO_process
+0x0375  Rs8:1                               1 fn  HERO_endProcess
+0x037c  Ww8:1                               1 fn  HERO_end_skilluseHG
+0x0380  Rs8:2                               1 fn  HERO_check_attack_frameSM
+0x03a8  Rs8:4                               3 fn  HERO_check_attack_frameSM HERO_check_skilluseHK HERO_end_skilluseHK
+0x03aa  Rs8:1                               1 fn  SUMMON_setUsedTotalExp
+0x03c6  Rs8:1                               1 fn  SUMMON_setUsedTotalExp
+0x03d0  Rs8:1                               1 fn  HERO_check_skilluseHK
+0x03d8  Rs8:6                               3 fn  HERO_check_skilluseSK HERO_check_skilluseSM SUMMON_walkPreProcess
+0x03d9  Ru8:1 Ww8:1                         1 fn  HERO_check_skilluseSK
+0x03e0  Rw32:7                              2 fn  HERO_check_skilluseSK HERO_check_skilluseSM
+0x03e2  Rs8:1                               1 fn  SUMMON_setUsedTotalExp
+0x03e4  Rw32:7                              2 fn  HERO_check_skilluseSK HERO_check_skilluseSM
+0x03e9  Ww32:1                              1 fn  HERO_process
+0x03ed  Rs8:1                               1 fn  HERO_endProcess
+0x03f0  Rw32:2                              2 fn  HERO_attackMonster SUMMON_attackMonster
+0x03f1  Rs8:1                               1 fn  HERO_endProcess
+0x03f3  Rs8:1                               1 fn  HERO_process
+0x03f4  Ru8:1                               1 fn  HERO_process
+0x03f5  Rs8:7 Ru8:1                         1 fn  HERO_process
+0x03f8  Rw32:2                              2 fn  HERO_check_skilluseSK HERO_check_skilluseSM
+0x03fb  Rs8:1                               1 fn  HERO_process
+0x03fc  Rw32:2                              2 fn  HERO_check_skilluseSK HERO_check_skilluseSM
+0x041c  Rs8:2                               1 fn  HERO_check_attack_frameSM
+0x0420  Rs8:2                               1 fn  HERO_check_attack_frameSM
+0x0470  Rs8:1                               1 fn  SUMMON_setStatus
+0x04a1  Ww8:1                               1 fn  HERO_process
+0x0514  Ww32:1                              1 fn  loadSkillData
+0x053e  Ww8:1                               1 fn  HERO_check_skilluseSM
+0x0540  Ru8:1                               1 fn  HERO_check_skilluseSK
+0x0545  Rs8:1                               1 fn  HERO_process
+0x054c  Ww8:2                               1 fn  HERO_check_skilluseSK
+0x0554  Ww32:1                              1 fn  loadSkillData
+0x0594  Ww32:1                              1 fn  loadSkillData
+0x05c4  Rs8:1                               1 fn  SUMMON_walkPreProcess
+0x05c5  Ru8:3                               2 fn  HERO_check_skilluseSK HERO_check_skilluseSM
+0x05d4  Ww32:1                              1 fn  loadSkillData
+0x05e5  Ww8:1                               1 fn  HERO_check_skilluseSK
+0x05e6  Rs8:2 Ru8:1 Ww8:1                   2 fn  HERO_check_skilluseSK HERO_check_skilluseSM
+0x0620  Ww16:1                              1 fn  SUMMON_loadSummonData_G
+0x0622  Rs16:1 Ww16:1                       2 fn  SUMMON_loadSummonData_G SUMMON_loadSummonImage
+0x062c  Rs8:1 Ww8:1                         2 fn  SUMMON_endProcess SUMMON_walkCount
+0x062d  Ww8:1                               1 fn  SUMMON_walkCount
+0x062e  Ru8:1                               1 fn  SUMMON_walkCount
+0x062f  Ww8:2                               1 fn  SUMMON_endProcess
+0x0634  Rw32:7 Ww32:3                       5 fn  SUMMON_attackPreProcessProperty SUMMON_distanceWithHero SUMMON_isNearMonster SUMMON_preProcess SUMMON_walkPreProcess
+0x0638  Ww8:4                               3 fn  SUMMON_endProcess SUMMON_isNearMonster SUMMON_preProcess
+0x0639  Rs8:2 Ru8:4 Ww8:3                   2 fn  SUMMON_attackPreProcessProperty SUMMON_walkPreProcess
+0x06b8  Rs8:1                               1 fn  HERO_check_skilluseSK
+0x07a8  Ru8:1                               1 fn  HERO_check_skilluseSK
+0x07d0  Ru8:1                               1 fn  HERO_check_skilluseSK
+0x0a28  Rw32:9 Ww32:8                      11 fn  HERO_add_curMoney HERO_getCurMoney HERO_init HERO_minus_curMoney Hero_addMoney
+0x0a2c  Ru8:2 Ww8:1                         3 fn  HERO_init HERO_setDamaged MONSTER_attackHero
+0x0a2d  Ru8:4 Ww8:1                         3 fn  HERO_attackMonster HERO_attackMonsterProcess SUMMON_attackMonsterProcess
+0x0a2e  Rs8:1                               1 fn  HERO_endProcess
+0x0a2f  Rs8:2 Ru8:9 Ww8:10                  8 fn  HERO_addTargetEffectFireWall HERO_addTargetEffectIceSword HERO_check_attack_frameHG HERO_check_attack_frameHK HERO_check_attack_frameSK
+0x0a30  Ru8:1 Ww8:8                         6 fn  HERO_check_skilluseHG HERO_check_skilluseHK HERO_end_skilluseHK HERO_init HERO_initMotionAtDamaged
+0x0a31  Rs8:1 Ru8:1 Ww8:5                   4 fn  EVENT_End HERO_endProcess HERO_init Map_Finalize
+0x0a34  Ww32:1                              1 fn  Hero_draw
+0x0a3a  Rs16:1                              1 fn  Hero_getUseDrug
+0x0a3c  Rs16:1                              1 fn  Hero_getIncPower
+0x0a3e  Rs16:1                              1 fn  Hero_getIncDefence
+0x0a40  Ww8:1                               1 fn  HERO_set_direction
+0x0a41  Rs8:5 Ru8:3 Ww8:4                  10 fn  HERO_Human_key_press HERO_Human_key_release HERO_Key_Release HERO_Key_press HERO_Sunju_key_press
+0x0a42  Rs8:1 Ru8:1 Ww8:2                   3 fn  HERO_init HERO_process HERO_setDamaged
+0x0a43  Ru8:1 Ww8:1                         1 fn  HERO_process
+0x0a44  Rs8:3 Ru8:2 Ww8:2                   6 fn  HERO_check_pierce HERO_init HERO_process Hero_draw MONSTER_distanceWithHero
+0x0a45  Ww8:1                               1 fn  HERO_init
+0x0a46  Ru8:5                               3 fn  Hero_draw MONSTER_draw Map_drawMidddleObject
+0x0a48  Rw32:1 Ww32:3                       1 fn  MONSTER_knockHeroBack
+0x0a4c  Rw32:1 Ww32:3                       1 fn  MONSTER_knockHeroBack
+0x0b94  Ww8:1                               1 fn  HERO_endProcess
+0x0b95  Ww8:1                               1 fn  HERO_endProcess
+0x0b98  Ww8:1                               1 fn  HERO_end_skilluseHG
+0x0ba9  Rs8:1                               1 fn  HERO_endProcess
+0x0cbd  Ww8:1                               1 fn  HERO_process
+0x0ccf  Ru8:1 Ww8:1                         1 fn  HERO_process
+0x0cd1  Ru8:1                               1 fn  HERO_process
+0x0d0a  Ww8:1                               1 fn  HERO_initMotionAtDamaged
+0x0d0c  Rs8:39 Ru8:27 Ww8:11               24 fn  HERO_HG_endprocess HERO_HK_endprocess HERO_SK_endprocess HERO_SK_process HERO_addTargetEffectIceBolt
+0x0d0e  Ru8:6 Ww8:3                         8 fn  GMenu_MainKey GMenu_PaintMainMenu GMenu_moveMenuKey HERO_setEventCostume MP_getFolderImg
+0x0d12  Ru8:3 Ww8:2                         3 fn  HERO_attackMonsterProcess HERO_isBasicTargetEff SUMMON_attackMonsterProcess
+0x0d13  Rs8:6 Ww8:8                         8 fn  BattleProc_setSkillEff_Etc CHAR_removeBuff CHAR_setEffAfterMapMove HERO_SK_process HERO_init
+0x0d14  Rs8:2                               1 fn  HERO_attackMonster
+0x0d15  Rs8:2 Ru8:1 Ww8:5                   4 fn  HERO_Human_key_press HERO_Sunju_key_press HERO_endProcess MainGameFrame_TouchPressed
+0x0d16  Rs8:3 Ww8:1                         4 fn  EnemyAIParsing_Process EnemyAIParsing_isTriggerEqual HERO_setStandMotion MONSTER_distanceWithHero
+0x0d17  Rs8:2 Ww8:2                         4 fn  CHAR_addEtcStatus CHAR_removeEtcStatus EnemyAIParsing_Process EnemyAIParsing_isTriggerEqual
+0x0d18  Rw32:10 Ww32:9                      6 fn  EVENT_End GameMenuFrame_Finalize HERO_init HERO_process HERO_touchProcess
+0x0d1c  Rw32:10 Ww32:9                      6 fn  EVENT_End GameMenuFrame_Finalize HERO_init HERO_process HERO_touchProcess
+0x0d20  Rw32:3 Ww32:5                       4 fn  HERO_init HERO_touchProcess MainGameFrame_TouchPressed onHandleEvent
+0x0d24  Ru8:1 Rw32:2 Ww8:7                  5 fn  HERO_Human_key_release HERO_Sunju_key_release HERO_init HERO_touchProcess MainGameFrame_TouchPressed
+0x0d28  Rs8:2                               2 fn  HERO_Human_key_release HERO_Sunju_key_release
+0x0d2c  Ww32:2                              2 fn  HERO_check_skilluse HERO_init
+0x0d30  Ww32:2                              2 fn  HERO_check_skilluse HERO_init
+0x0d34  Ru8:3 Ww8:1                         3 fn  HERO_SK_process HERO_SM_process HERO_check_skilluseSM
+0x0d35  Ru8:2 Ww8:4                         6 fn  GMenu_GuardianKey HERO_SK_process HERO_SM_process HERO_check_skilluseSK HERO_check_skilluseSM
+0x0d36  Ru8:1 Ww8:2                         2 fn  HERO_check_skilluse HERO_check_skilluseSM
+0x0d37  Ru8:1                               1 fn  HERO_HG_process
+0x0d38  Ru8:2 Ww8:1                         3 fn  GameMenuFrame_Initialize HERO_set_HeroStatus HERO_set_HeroStatusPassive
+0x0d39  Rs8:4 Ww8:4                         6 fn  GMenu_EquipMentKey GMenu_InventoryKey_base GMenu_drawItemInfo GameMenuFrame_Finalize GameMenuFrame_Initialize
+0x0d3a  Ru8:1 Ww8:2                         2 fn  HERO_init HERO_set_HeroStatusItemPassive
+0x0d3b  Ru8:4 Ww8:2                         3 fn  GMenu_viewAbility HERO_backupEquip HERO_backupEquipBack
+0x0d4e  Ru8:1 Ww8:1                         2 fn  GameMenuFrame_Finalize GameMenuFrame_Initialize
+0x0e73  Rs8:1 Ww8:1                         1 fn  HERO_endProcess
+0x0e74  Rs8:3                               2 fn  HERO_attackMonsterProcess HERO_end_skilluseHG
+0x0e94  Rw32:1                              1 fn  HERO_end_skilluseHG
+0x0e98  Rw32:1                              1 fn  HERO_end_skilluseHG
+0x0ef8  Rs8:1 Ww8:1                         2 fn  HERO_check_skilluseSK HERO_check_skilluseSM
+0x0f20  Ww8:1                               1 fn  HERO_check_skilluseSK
+0x0f21  Ww8:2                               2 fn  HERO_check_skilluseSK HERO_check_skilluseSM
+0x0f22  Ru8:1 Ww8:1                         1 fn  HERO_check_skilluseSK
+0x0f90  Rs8:1                               1 fn  HERO_attackMonsterProcess
+0x0f97  Rs8:1 Ru8:1 Ww8:2                   1 fn  HERO_process
+0x0fa5  Rw32:1                              1 fn  HERO_process
+0x0fa9  Rw32:1                              1 fn  HERO_process
+0x0fb9  Rw32:2                              1 fn  HERO_process
+0x0fbd  Rw32:2 Ww32:1                       1 fn  HERO_process
+0x10e4  Rs8:3 Ru8:1 Ww8:2                   2 fn  HERO_check_skilluseSK HERO_check_skilluseSM
+0x10eb  Ww8:2                               1 fn  HERO_check_skilluseSK
+0x10ec  Ww8:2                               1 fn  HERO_check_skilluseSK

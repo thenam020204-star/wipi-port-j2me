@@ -1,0 +1,33 @@
+_game+0x0  Rs8:8 Ru8:3 Ww8:5                   15 fn  MainGameFrame_EndProcess MainGameFrame_GameOver MainGameFrame_Initialize MainGameFrame_KeyPressed
+_game+0x1  Rs8:13 Ru8:1 Ww8:1                  12 fn  Boss_dataLoad_d EVENT_ending EVT_OnFunction Event_Get_QuestStatusList
+_game+0x2  Rs8:1 Ww8:1                          2 fn  MainGameFrame_Initialize MainGameFrame_MapChangeInitialize
+_game+0x3  Ru8:1                                1 fn  MainGameFrame_GamePlayKeyPressed
+_game+0x6  Ru8:1                                1 fn  MainGameFrame_drawMonsterInfo
+_game+0x8  Rw32:2                               2 fn  MainGameFrame_drawMonsterInfo MainGameFrame_initMonsterInfo
+_game+0x14  Rw32:1 Ww32:1                        1 fn  IncDecGaugeList_endProcess
+_game+0x1c  Ru8:1                                1 fn  IncDecGaugeList_endProcess
+_game+0x1e  Ru8:2 Ww8:1                          3 fn  IncDecGaugeList_draw IncDecGaugeList_endProcess IncDecGauge_init
+_game+0x40  Ru8:1                                1 fn  BT_isKilled
+_game+0x45  Rs8:1                                1 fn  BT_isKilled
+_game+0x46  Rs8:2 Ww8:1                          2 fn  MainGameFrame_MapChangeInitialize MainGameFrame_drawInfo
+_game+0x48  Rw32:3                               3 fn  PickUpItem_addInfo PickUpItem_drawItems PickUpItem_endProcess
+_game+0x50  Rw32:2                               2 fn  PickUpItem_addInfo PickUpItem_drawItems
+_game+0x54  Ww8:1                                1 fn  MainGameFrame_Initialize
+_game+0x55  Rs8:1 Ww8:1                          2 fn  MainGameFrame_Initialize MainGameFrame_drawPoint
+_game+0x56  Rs8:1 Ww8:1                          2 fn  MainGameFrame_GameOver MainGameFrame_GameOverKeyPressed
+_game+0x5a  Rs8:1 Ru8:1 Ww8:2                    2 fn  MainGameFrame_drawGameOver MainGameFrame_initGameOver
+_game+0x5b  Ww8:2                                2 fn  MainGameFrame_GameOver MainGameFrame_initGameOver
+_game+0x5d  Rs8:6 Ww8:1                          4 fn  Event_Key GMenu_InvenSubKey GMenu_PaintInventory Item_tempInvenInit
+_game+0x5e  Ww8:1                                1 fn  Item_tempInvenInit
+_game+0x5f  Ww8:1                                1 fn  Item_tempInvenInit
+_game+0x60  Ww8:1                                1 fn  Item_tempInvenInit
+_game+0x61  Ww8:1                                1 fn  Item_tempInvenInit
+_game+0x62  Ww8:1                                1 fn  Item_tempInvenInit
+_game+0x63  Ww8:1                                1 fn  Item_tempInvenInit
+_game+0x64  Ww8:1                                1 fn  Item_tempInvenInit
+_game+0x65  Ww8:1                                1 fn  Item_tempInvenInit
+_game+0x66  Ww8:1                                1 fn  Item_tempInvenInit
+_game+0x114  Rw32:1                               1 fn  Item_loadOptionData
+_game+0x118  Rw32:1                               1 fn  Map_save
+_game+0x11c  Rw32:1                               1 fn  Map_save
+_game+0x120  Ru8:1 Ww8:6                          7 fn  GameMenuFrame_Finalize GameMenuFrame_Initialize MainGameFrame_Initialize MainMenuFrame_Initialize

@@ -1,0 +1,30 @@
+_npcUi+0x0  Ww8:3                                3 fn  NpcUi_Initialize NpcUi_ProcRecvPacket_SHOP NpcUi_setUiMode
+_npcUi+0x1  Rs8:6 Ww8:2                          8 fn  GMenu_InventoryKey_base NpcUiArmsShop_Key NpcUiCombine_Key NpcUiEnchant_Paint
+_npcUi+0x2  Rs8:9 Ru8:1 Ww8:2                    8 fn  NpcUiEnchant_Paint NpcUiGuardianShop_Paint NpcUiNet_RoamingPopup NpcUiNet_cashPopup
+_npcUi+0xcb  Rs8:2 Ww8:5                          7 fn  GMenu_PopupSet NpcUiEnchant_Paint NpcUiNet_cashPopup NpcUiNet_waitPopup
+_npcUi+0xcc  Rw32:1                               1 fn  NpcUiNet_drawCashPopup
+_npcUi+0xd0  Rw32:1                               1 fn  NpcUiNet_drawCashPopup
+_npcUi+0xd4  Ru8:1 Ww8:2                          3 fn  NpcUi_Initialize NpcUi_ProcRecvPacket_AUTHORIZATION NpcUi_release
+_npcUi+0xd6  Rs8:6 Ru8:1 Ww8:1                    7 fn  GMenu_InventoryKey_base NPCUI_setState NpcUiRefine_Paint NpcUi_EndProcess
+_npcUi+0xd7  Rs8:9 Ru8:18 Ww8:4                  17 fn  Event_PopupReset NpcUiArmsShop_Key NpcUiArmsShop_Paint NpcUiCombine_Key
+_npcUi+0xd9  Ww8:3                                3 fn  NpcUi_ProcRecvPacket_SHOP NpcUi_setUiMode openConnect
+_npcUi+0xdb  Rs8:1 Ru8:2 Ww8:2                    4 fn  NpcUiNet_connectNo NpcUi_InitStatus NpcUi_Initialize NpcUi_ProcRecvPacket_AUTHORIZATION
+_npcUi+0xdc  Ww8:1                                1 fn  NpcUiEnchantSlot_Init
+_npcUi+0xdd  Ww8:1                                1 fn  NpcUiEnchantSlot_Init
+_npcUi+0xde  Ww8:1                                1 fn  NpcUiEnchantSlot_Init
+_npcUi+0xdf  Rs8:1 Ru8:3 Ww8:1                    5 fn  GMenu_InventoryKey_base NpcUiCompound_Key NpcUiEnchantSlot_Init NpcUiEnchant_Key
+_npcUi+0xe0  Rw32:4 Ww32:1                        2 fn  GMenu_ItemDisassembly NpcUiEnchantSlot_Init
+_npcUi+0xe4  Ww32:1                               1 fn  NpcUiEnchantSlot_Init
+_npcUi+0xe8  Ww32:1                               1 fn  NpcUiEnchantSlot_Init
+_npcUi+0xf0  Rw32:3 Ww32:1                        4 fn  NpcUiCombineItemInit NpcUiCombine_Key NpcUiCombine_dataLoad NpcUi_release
+_npcUi+0xf4  Rw32:2 Ww32:4                        5 fn  NpcUiCombineCheck NpcUiCombineItemInit NpcUiCombine_Key NpcUiCombine_dataLoad
+_npcUi+0xf8  Rs8:1 Ru8:1                          2 fn  NpcUiCombineCheck NpcUiCombine_Paint
+_npcUi+0x108  Ww8:1                                1 fn  NpcUiCombine_dataLoad
+_npcUi+0x114  Rw32:1 Ww32:1                        2 fn  NpcUiShop_equipLvLoad NpcUiShop_setSellItem
+_npcUi+0x118  Ww8:1                                1 fn  NpcUiShop_dataLoad
+_npcUi+0x119  Ww8:1                                1 fn  NpcUiShop_dataLoad
+_npcUi+0x130  Ww8:2                                2 fn  NpcUiArmsShop_Key NpcUi_ProcRecvPacket_SINGLE_MAN
+_npcUi+0x131  Ww8:1                                1 fn  NpcUi_ProcRecvPacket_SINGLE_MAN
+_npcUi+0x133  Ru8:1 Ww8:1                          1 fn  NpcUi_ProcRecvPacket_SHOP
+_npcUi+0x3c8  Ww32:1                               1 fn  NpcUi_ProcRecvPacket_SHOP
+_npcUi+0x3cd  Ru8:1 Ww8:1                          2 fn  NpcUiNet_drawNetStore NpcUi_ProcRecvPacket_SINGLE_MAN

@@ -59,11 +59,21 @@ def compact(body):
     return '\n'.join(res)
 
 
+def shorten(t):
+    """Terser reading form: typed loads s8()/u8()/s16()/u16()/i32(); ints stores S(addr) = v (store width: check tools/stores.py); param_N -> pN."""
+    t = re.sub(r'\((?:int|uint|short|ushort|byte|char)\)\*\((char|byte|short|ushort|int|uint) \*\)\(([^()]*(?:\([^()]*\)[^()]*)*)\)', lambda m: {'char': 's8', 'byte': 'u8', 'short': 's16', 'ushort': 'u16', 'int': 'i32', 'uint': 'i32'}[m.group(1)] + '(' + m.group(2) + ')', t)
+    t = re.sub(r'\*\((char|byte|short|ushort|int|uint) \*\)\(([^()]*(?:\([^()]*\)[^()]*)*)\) =', lambda m: 'S(' + m.group(2) + ') =', t)
+    t = re.sub(r'\*\((char|byte|short|ushort|int|uint) \*\)\(([^()]*(?:\([^()]*\)[^()]*)*)\)', lambda m: {'char': 's8', 'byte': 'u8', 'short': 's16', 'ushort': 'u16', 'int': 'i32', 'uint': 'i32'}[m.group(1)] + '(' + m.group(2) + ')', t)
+    t = re.sub(r'\bparam_(\d+)\b', r'p\1', t)
+    return t
+
+
 names = [a for a in sys.argv[1:] if not a.startswith('-')]
 full = '--full' in sys.argv
 for n in names:
     if n in idx:
         b = idx[n].rstrip()
-        print('// ==== ' + (b if full else compact(b)))
+        r = b if full else compact(b)
+        print('// ==== ' + (r if '-l' in sys.argv else shorten(r)))
     else:
         print('// ==== %s: not found' % n)

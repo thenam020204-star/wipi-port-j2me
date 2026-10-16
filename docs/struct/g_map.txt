@@ -1,0 +1,86 @@
+_map+0x0  Rw32:4 Ww32:1                        3 fn  Map_getBoss Map_releaseBoss Map_removeBossInList
+_map+0x4  Rw32:1 Ww32:1                        1 fn  Map_releaseBoss
+_map+0x8  Rw32:1                               1 fn  Map_addMobBodyList
+_map+0xc  Rw32:1                               1 fn  Map_addMobBodyList
+_map+0x10  Rw32:1                               1 fn  Map_addMobBodyList
+_map+0x3c  Rw32:3 Ww32:1                        3 fn  DM_Initialize Map_Initialize onDestroyApp
+_map+0x40  Rw32:1 Ww32:1                        2 fn  DM_Initialize Map_Initialize
+_map+0x44  Rs16:5 Ru16:1                        6 fn  MainGameFrame_drawGame Map_Initialize Map_LoadMap Map_isBlackBejewer
+_map+0x46  Rs8:1 Ww8:1                          2 fn  Map_Get_BGI Map_Set_BGI
+_map+0x68  Rs8:10 Ww8:1                        10 fn  Event_Load_Faceimage Hero_draw Hero_loadImage MainMenuFrame_Initialize
+_map+0x69  Rs8:4 Ru8:2 Ww8:1                    5 fn  EVENT_Tick GMenu_MainKey GMenu_SystemKey Map_Get_BGM
+_map+0x6a  Rs8:1 Ww8:1                          2 fn  EVENT_Tick Map_Set_BGM
+_map+0x6b  Ru8:1 Ww8:1                          2 fn  Map_getBgmPlay Map_setBgmPlay
+_map+0x6c  Rw32:1 Ww32:1                        2 fn  Map_BG_Return Map_Draw_Tile
+_map+0x70  Rw32:1 Ww32:1                        2 fn  Map_BG_Return Map_Draw_Tile
+_map+0x74  Rw32:1 Ww32:1                        2 fn  Map_BG_Return Map_Draw_Tile
+_map+0x78  Rs8:6 Ww8:1                          6 fn  DM_ChangeGbmPalette Map_ImageLoad Map_Initialize Map_Load_Object_Image_Base
+_map+0x79  Rs8:2 Ru8:1                          3 fn  MainGameFrame_MapChangeInitialize Map_Get_SceneBattleType Map_getMapType
+_map+0x7a  Rs8:6 Ww8:1                          6 fn  EVT_OnInitEvent Event_Change_CollisionProperty Event_Change_Tile Map_Check_Position_MapIndex
+_map+0x7b  Rs8:2 Ww8:1                          3 fn  EVT_OnInitEvent Event_Change_AllTile Map_variableInit
+_map+0x7e  Rs8:12 Ru8:2 Ww8:1                  13 fn  Event_ObjectPosition Event_Set_Heromove Map_Check_CollisionZone_n_Rect Map_Check_CollisionZone_n_Rect_MoveFlag
+_map+0x7f  Rs8:11 Ru8:2 Ww8:1                  12 fn  Event_ObjectPosition Event_Set_Heromove Map_Check_CollisionZone_n_Rect Map_Check_CollisionZone_n_Rect_MoveFlag
+_map+0x84  Rw32:7 Ww32:1                        7 fn  Event_Set_CameraMove HERO_setTeleportMove Map_Initialize Map_Position
+_map+0x88  Rw32:6 Ww32:1                        6 fn  Event_Set_CameraMove HERO_setTeleportMove Map_Initialize Map_getScreenHeight
+_map+0x94  Ru8:2 Ww8:2                          4 fn  MainGameFrame_drawGame Map_Draw_Tile Map_initDrawFlag Tile_draw
+_map+0x95  Rs8:1 Ww8:1                          2 fn  Map_initDrawFlag _Map_Draw_Bottom_Object
+_map+0x96  Ru8:1 Ww8:2                          3 fn  Map_Initialize Map_Position Map_variableInit
+_map+0x97  Ww8:2                                2 fn  Map_Initialize Map_variableInit
+_map+0x9c  Rw32:5 Ww32:4                        7 fn  Event_CameraMove Event_Set_CameraMove Event_endCameraMove Map_Draw_Tile
+_map+0xa0  Rw32:5 Ww32:3                        7 fn  Event_CameraMove Event_Set_CameraMove Event_endCameraMove Map_Draw_Tile
+_map+0xa4  Rw32:1 Ww32:1                        2 fn  Map_Draw_Tile Map_Position
+_map+0xa8  Rw32:1 Ww32:1                        2 fn  Map_Draw_Tile Map_Position
+_map+0xac  Rw32:2 Ww32:1                        3 fn  Map_drawBottomMonster Map_getMapStartX Map_variableInit
+_map+0xb0  Rw32:2 Ww32:1                        3 fn  Map_drawBottomMonster Map_getMapStartY Map_variableInit
+_map+0xbc  Ww32:2                               2 fn  Map_Draw_Tile Map_Position
+_map+0xc0  Rw32:2 Ww32:2                        3 fn  Map_Draw_Buffer_Area_Copy Map_Draw_Tile Map_Position
+_map+0xc4  Ww32:2                               2 fn  Event_CameraMove Map_Position
+_map+0xc8  Ww32:2                               2 fn  Event_CameraMove Map_Position
+_map+0xcc  Ww32:2                               2 fn  Event_CameraMove Map_Position
+_map+0xd0  Ww32:2                               2 fn  Event_CameraMove Map_Position
+_map+0xd4  Ww32:1                               1 fn  Map_Position
+_map+0xd8  Ww32:1                               1 fn  Map_Position
+_map+0x160  Ww32:1                               1 fn  Map_Position
+_map+0x164  Ww32:1                               1 fn  Map_Position
+_map+0x268  Rw32:3 Ww32:5                        6 fn  Event_moveNextSceneWithWeatherTime Map_Initialize Map_Set_Hero_Tile_Position Map_load
+_map+0x26c  Rw32:3 Ww32:5                        6 fn  Event_moveNextSceneWithWeatherTime Map_Initialize Map_Set_Hero_Tile_Position Map_load
+_map+0x270  Ww8:1                                1 fn  Map_SetMapData
+_map+0x288  Ru8:1 Ww8:1                          2 fn  Map_variableInit Scene_getName
+_map+0x2a4  Rw32:4 Ww32:1                        5 fn  Event_Change_AllTile Event_Change_Tile Map_Draw_Tile Map_variableInit
+_map+0x2a8  Ww32:4                               4 fn  Event_Change_AllTile Event_Change_Tile Map_Draw_Tile Map_variableInit
+_map+0x2ac  Rw32:2 Ww32:2                        4 fn  Map_Draw_Tile Map_Load_Tile_image Map_variableInit touch_setUiChange
+_map+0x2b0  Ww32:3                               3 fn  Map_Draw_Tile Map_Load_Tile_image Map_variableInit
+_map+0x2b8  Rw32:5 Ww32:1                        6 fn  MAPOBJ_create Map_Load_Object_image Map_changeAllObject Map_changeEvtObjectImage
+_map+0x2bc  Rw32:2 Ww32:5                        5 fn  Map_Load_Object_Image_Base Map_changeAllObject Map_changeEvtObjectImage Map_releaseObjImg
+_map+0x2c0  Rw32:7 Ww32:1                        8 fn  EVT_OnInitEvent Event_Change_CollisionProperty Event_Change_Tile Map_Draw_Tile
+_map+0x2c4  Rw32:1 Ww32:6                        6 fn  Event_Change_CollisionProperty Event_Change_Tile Map_Draw_Tile Map_Get_TIleProperty
+_map+0x2c8  Rw32:1 Ww32:1                        1 fn  Event_moveNextSceneWithWeatherTime
+_map+0x2cc  Rw32:1 Ww32:1                        1 fn  Event_moveNextSceneWithWeatherTime
+_map+0x2d0  Rw32:1 Ww32:1                        1 fn  Event_moveNextSceneWithWeatherTime
+_map+0x2d4  Rw32:4 Ww32:7                        8 fn  EVENT_ending Event_moveNextSceneWithWeatherTime Map_getRealIndex Map_load
+_map+0x2d8  Ww8:3                                2 fn  Map_load SaveGameDataInit
+_map+0x2d9  Ww8:1                                1 fn  MainGameFrame_Initialize
+_map+0x2da  Ru8:1 Ww8:1                          1 fn  Map_Shake
+_map+0x2db  Ru8:2 Ww8:2                          3 fn  Map_Set_Shake Map_Shake Map_variableInit
+_map+0x2dc  Ru8:1 Ww8:2                          3 fn  Map_Set_Shake Map_Shake Map_variableInit
+_map+0x2dd  Ru8:1 Ww8:3                          3 fn  Map_Set_Shake Map_Shake Map_variableInit
+_map+0x2de  Ww8:1                                1 fn  Map_variableInit
+_map+0x2df  Ww8:1                                1 fn  Map_variableInit
+_map+0x2e4  Ru8:1 Ww8:1                          2 fn  Map_Mapmove Map_Set_ActiveCamera
+_map+0x338  Rw32:5 Ww32:3                        3 fn  Map_Draw_Rain Map_fallDraw Map_fallRandInit
+_map+0x340  Rw32:2 Ww32:1                        3 fn  Map_LoadMapData Map_getData touch_setUiChange
+_map+0x344  Rw32:1                               1 fn  Map_getData_Net
+_map+0x348  Ww8:1                                1 fn  Map_setScreenEffect
+_map+0x34e  Ww8:7                                5 fn  EVT_OnFunction HERO_check_extra_frame HERO_setDamaged Map_variableInit
+_map+0x34f  Ru8:1 Ww8:4                          5 fn  EVT_OnFunction HERO_check_extra_frame HERO_setDamaged Map_extraScreenEffect
+_map+0x351  Ru8:4 Ww8:6                          7 fn  Event_setFGI Map_Draw_Rain Map_fallDraw Map_fallRandDraw
+_map+0x352  Ru8:2 Ww8:5                          5 fn  Event_setFGI Map_Draw_Rain Map_fallRandDraw TitleFrame_Finalize
+_map+0x354  Ww8:1                                1 fn  Event_setFGI
+_map+0x358  Ww8:1                                1 fn  Map_variableInit
+_map+0x35c  Rw32:1                               1 fn  Map_Load_Object_Image_Base
+_map+0x368  Ww8:1                                1 fn  NpcUi_Initialize
+_map+0x369  Ww8:2                                2 fn  EVENT_End GMenu_worldmapKey
+_map+0x374  Ru8:1 Ww8:2                          2 fn  EVENT_End EVENT_worldmap
+_map+0x375  Ww8:1                                1 fn  MainGameFrame_Initialize
+_map+0x376  Ru8:1                                1 fn  Boss_isLast
+_map+0x37c  Ru8:1 Ww8:1                          1 fn  MONSTER_die

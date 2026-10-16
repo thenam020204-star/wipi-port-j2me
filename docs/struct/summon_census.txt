@@ -1,0 +1,176 @@
+0x0000  Rw32:1 Ww32:1                       2 fn  CHAR_getHeroHittedRect SUMMON_preProcess
+0x0004  Ww32:1                              1 fn  CHAR_getHeroHittedRect
+0x0008  Rw32:7 Ww32:2                       8 fn  CHAR_drawEffectList CHAR_getHeroHittedRect CHAR_getX CHAR_setPosition HERO_check_attack_frameSM
+0x000c  Rw32:8 Ww32:2                       9 fn  CHAR_drawEffectList CHAR_getHeroHittedRect CHAR_getY CHAR_isDiagnal CHAR_setPosition
+0x0019  Ww8:1                               1 fn  CHAR_init
+0x0020  Rw32:4                              3 fn  CHAR_drawEffectList CHAR_getTopPivotX SUMMON_attackMonster
+0x0024  Rw32:4                              3 fn  CHAR_drawEffectList CHAR_getTopPivotY SUMMON_attackMonster
+0x0028  Rw32:1                              1 fn  CHAR_getMoveRectX
+0x002c  Rw32:2                              2 fn  CHAR_getMoveRectY CHAR_init
+0x0030  Rw32:1                              1 fn  CHAR_getMoveRectW
+0x0034  Rw32:2                              2 fn  CHAR_getMoveRectH CHAR_init
+0x0038  Rw32:1                              1 fn  CHAR_getHittedRectX
+0x003c  Rw32:1                              1 fn  CHAR_getHittedRectY
+0x0040  Rw32:1                              1 fn  CHAR_getHittedRectW
+0x0044  Rw32:1                              1 fn  CHAR_getHittedRectH
+0x008c  Rs8:1                               1 fn  SUMMON_preProcess
+0x00a4  Rw32:9 Ww32:6                       9 fn  CHAR_AddHp FR_GetValFunc HERO_check_attack_frameSM HERO_check_skilluseSK HERO_check_skilluseSM
+0x00a8  Rw32:2 Ww32:3                       5 fn  CHAR_AddHp FR_GetValFunc HERO_check_skilluseSK HERO_check_skilluseSM SUMMON_initSkillPoint
+0x00ac  Ww16:1                              1 fn  SUMMON_setStatusPassive
+0x00b0  Ww16:1                              1 fn  SUMMON_setStatusPassive
+0x00b2  Ww16:1                              1 fn  SUMMON_setStatus
+0x00b4  Ww16:1                              1 fn  SUMMON_setStatusPassive
+0x00b8  Ww16:1                              1 fn  SUMMON_setStatusPassive
+0x00ba  Ww16:1                              1 fn  SUMMON_setStatus
+0x00bc  Ww16:1                              1 fn  SUMMON_setStatusPassive
+0x00be  Ww16:1                              1 fn  SUMMON_setStatusPassive
+0x00c0  Ww16:1                              1 fn  SUMMON_setStatusPassive
+0x00c2  Ww16:1                              1 fn  SUMMON_setStatus
+0x00c4  Ww16:1                              1 fn  SUMMON_setStatusPassive
+0x00c6  Rs16:1 Ww16:1                       1 fn  SUMMON_preProcess
+0x00c8  Ww16:1                              1 fn  SUMMON_setStatusPassive
+0x00ca  Rs16:1 Ww16:1                       2 fn  SUMMON_preProcess SUMMON_setStatus
+0x00cc  Ww8:1                               1 fn  SUMMON_setStatusPassive
+0x00ce  Ww16:1                              1 fn  SUMMON_setStatusPassive
+0x00d0  Rs16:1 Ww16:1                       2 fn  SUMMON_preProcess SUMMON_setStatus
+0x00d2  Ww8:1                               1 fn  SUMMON_setStatusPassive
+0x00d4  Rs16:1 Ww16:2                       2 fn  FR_GetValFunc SUMMON_setStatus
+0x00d6  Ww16:1                              1 fn  SUMMON_setStatusPassive
+0x00d8  Ww16:1                              1 fn  SUMMON_setStatus
+0x00da  Ww16:1                              1 fn  SUMMON_setStatusPassive
+0x00dc  Ww16:1                              1 fn  SUMMON_setStatus
+0x00de  Ww16:1                              1 fn  SUMMON_setStatusPassive
+0x00e0  Ww16:1                              1 fn  SUMMON_setStatus
+0x00e2  Ww16:1                              1 fn  SUMMON_setStatusPassive
+0x00e4  Ww16:1                              1 fn  SUMMON_setStatus
+0x00e6  Ww16:1                              1 fn  SUMMON_setStatus
+0x00e8  Ww16:1                              1 fn  SUMMON_setStatusPassive
+0x00ea  Ww16:1                              1 fn  SUMMON_setStatus
+0x00ec  Ww16:1                              1 fn  SUMMON_setStatus
+0x00ee  Ww16:1                              1 fn  SUMMON_setStatusPassive
+0x00f0  Ww32:2                              1 fn  SUMMON_attackMonster
+0x00f4  Ru8:2 Ww8:1                         3 fn  CHAR_buffProcess CHAR_initBuff CHAR_isAnyBuff
+0x00f5  Ww8:1                               1 fn  CHAR_initBuff
+0x00f6  Ww8:1                               1 fn  CHAR_initBuff
+0x00f8  Ww16:1                              1 fn  CHAR_initBuff
+0x00fa  Rs16:1 Ww16:1                       2 fn  CHAR_initBuff CHAR_removeBuff
+0x00fc  Ru8:1 Ww8:1                         2 fn  CHAR_initBuff CHAR_isAnyBuff
+0x00fd  Ww8:1                               1 fn  CHAR_initBuff
+0x00fe  Ww8:1                               1 fn  CHAR_initBuff
+0x0100  Ww16:1                              1 fn  CHAR_initBuff
+0x0102  Ww16:1                              1 fn  CHAR_initBuff
+0x0104  Ru8:1                               1 fn  CHAR_isAnyBuff
+0x010c  Ru8:6 Ww8:1                         7 fn  CHAR_buffProcess CHAR_initBuff CHAR_isAdrenalinBuff CHAR_isConcentrationBuff CHAR_isHideBuff
+0x010d  Ww8:1                               1 fn  CHAR_initBuff
+0x010e  Ru8:5 Ww8:1                         6 fn  CHAR_initBuff CHAR_isAdrenalinBuff CHAR_isConcentrationBuff CHAR_isHideBuff CHAR_isSiegeBuff
+0x0110  Ww16:1                              1 fn  CHAR_initBuff
+0x0114  Ru8:5 Ww8:1                         6 fn  CHAR_initBuff CHAR_isAnyBadStatus CHAR_isBleedBuff CHAR_isPoisonBuff CHAR_isReflectBuff
+0x0115  Ww8:1                               1 fn  CHAR_initBuff
+0x0116  Ru8:6 Ww8:1                         7 fn  CHAR_buffProcess CHAR_initBuff CHAR_isBleedBuff CHAR_isPoisonBuff CHAR_isReflectBuff
+0x0118  Ww16:1                              1 fn  CHAR_initBuff
+0x011c  Ru8:2                               2 fn  CHAR_isFiredBuff CHAR_isIcedBuff
+0x011e  Ru8:3                               3 fn  CHAR_isFiredBuff CHAR_isIcedBuff CHAR_setEffAfterMapMove
+0x0124  Ru8:1                               1 fn  CHAR_isStunBuff
+0x0126  Ru8:2                               2 fn  CHAR_isStunBuff CHAR_setEffAfterMapMove
+0x012c  Rs8:1 Ru8:1 Ww8:2                   2 fn  CHAR_initBuff CHAR_removeBuff
+0x013c  Rw32:5                              5 fn  CHAR_checkSameEffectToList CHAR_endProcessTargetEffectList CHAR_preProcessTargetEffectList CHAR_removeBuffEffect CHAR_removeTargetEffect
+0x0148  Ww32:2                              2 fn  CHAR_resetPosition CHAR_setPosition
+0x014c  Ww32:2                              2 fn  CHAR_resetPosition CHAR_setPosition
+0x0150  Ww32:2                              2 fn  CHAR_resetPosition CHAR_setPosition
+0x0154  Ww32:2                              2 fn  CHAR_resetPosition CHAR_setPosition
+0x0164  Ru8:1 Ww8:1                         1 fn  CHAR_destroy
+0x0165  Ru8:1 Ww8:1                         1 fn  CHAR_destroy
+0x0166  Rs8:2 Ww8:21                       13 fn  CHAR_buffProcess CHAR_getMainState CHAR_init CHAR_setMainState GMenu_GuardianKey
+0x0167  Rs8:6 Ru8:2 Ww8:6                   9 fn  CHAR_buffProcess CHAR_destroy CHAR_getMotion CHAR_init CHAR_process
+0x0168  Rs8:11 Ru8:4 Ww8:2                 12 fn  CHAR_getDirection CHAR_getInverseDirection CHAR_init CHAR_process CHAR_setDirection
+0x0169  Rs8:1 Ww8:5                         4 fn  CHAR_process CHAR_setNextMotionDirection SUMMON_endProcess SUMMON_walk
+0x016a  Ru8:1 Ww8:4                         4 fn  CHAR_process CHAR_setDirection CHAR_setNextMotionDirection SUMMON_walk
+0x016b  Rs8:4 Ww8:4                         8 fn  CHAR_copy CHAR_destroy CHAR_init CHAR_isFireEnchantBuff CHAR_isIceEnchantBuff
+0x016c  Ww8:2                               2 fn  CHAR_destroy CHAR_init
+0x016d  Ru8:2 Ww8:1                         1 fn  CHAR_setBlendType
+0x016e  Rs8:2 Ww8:1                         3 fn  SUMMON_checkAndMove SUMMON_draw SUMMON_preProcess
+0x016f  Rs8:2 Ww8:1                         3 fn  CHAR_getMoveX CHAR_getMoveY CHAR_init
+0x0170  Ru8:1                               1 fn  SUMMON_preProcess
+0x0172  Rs8:2 Ru8:1 Ww8:1                   4 fn  CHAR_actionDir CHAR_convertDir CHAR_getDebugDir CHAR_setNextMotionDirection
+0x0177  Ru8:1 Ww8:1                         1 fn  SUMMON_draw
+0x0178  Rw32:1                              1 fn  SUMMON_getHitProperty
+0x0180  Ru16:1                              1 fn  SUMMON_attackPreProcessProperty
+0x0184  Rw32:1                              1 fn  SUMMON_attackPreProcessProperty
+0x01cc  Rw32:6 Ww32:6                       8 fn  HERO_check_attack_frameSM HERO_check_skilluseSK HERO_check_skilluseSM SUMMON_addSp SUMMON_initSkillPoint
+0x01d0  Rw32:1 Ww32:4                       5 fn  HERO_check_skilluseSK HERO_check_skilluseSM SUMMON_addSp SUMMON_initSkillPoint SUMMON_setStatus
+0x01ec  Rs8:5 Ru8:1                         2 fn  SUMMON_summonReinforce SUMMON_summonSummon
+0x01f2  Ww8:1                               1 fn  SUMMON_loadSummonData_D
+0x01f3  Ww8:1                               1 fn  SUMMON_loadSummonData_D
+0x01f4  Ww8:1                               1 fn  SUMMON_loadSummonData_D
+0x01f5  Ww8:1                               1 fn  SUMMON_loadSummonData_D
+0x01f7  Rs8:1 Ww8:1                         2 fn  SUMMON_loadSummonData_D SUMMON_setStatusPassive
+0x01f8  Ru8:1 Ww8:1                         2 fn  SUMMON_loadSummonData_D SUMMON_setStatusPassive
+0x01f9  Ru8:1                               1 fn  SUMMON_setStatusPassive
+0x01fa  Rs8:1                               1 fn  SUMMON_setStatusPassive
+0x01fb  Rs8:1 Ww8:1                         2 fn  SUMMON_loadSummonData_D SUMMON_setStatusPassive
+0x01fc  Rs8:1 Ww8:1                         2 fn  SUMMON_loadSummonData_D SUMMON_setStatusPassive
+0x01fd  Rs8:1 Ww8:1                         2 fn  SUMMON_loadSummonData_D SUMMON_setStatusPassive
+0x01fe  Rs8:1                               1 fn  SUMMON_setStatusPassive
+0x01ff  Rs8:1                               1 fn  SUMMON_setStatusPassive
+0x0200  Rs8:1                               1 fn  SUMMON_setStatusPassive
+0x0201  Rs8:1                               1 fn  SUMMON_setStatusPassive
+0x0202  Rs8:1                               1 fn  SUMMON_setStatusPassive
+0x0203  Rs8:1 Ww8:1                         2 fn  SUMMON_loadSummonData_D SUMMON_setStatusPassive
+0x0204  Rs8:1 Ww8:1                         2 fn  SUMMON_loadSummonData_D SUMMON_setStatusPassive
+0x0205  Rs8:1 Ww8:1                         2 fn  SUMMON_loadSummonData_D SUMMON_setStatusPassive
+0x0206  Rs8:1 Ww8:1                         2 fn  SUMMON_loadSummonData_D SUMMON_setStatusPassive
+0x0207  Rs8:1 Ww8:1                         2 fn  SUMMON_loadSummonData_D SUMMON_setStatusPassive
+0x0208  Rs8:1 Ww8:1                         2 fn  SUMMON_loadSummonData_D SUMMON_setStatusPassive
+0x0209  Rs8:1                               1 fn  SUMMON_setStatusPassive
+0x020a  Rs8:1 Ww8:1                         2 fn  SUMMON_loadSummonData_D SUMMON_setStatusPassive
+0x020b  Rs8:1 Ww8:1                         2 fn  SUMMON_loadSummonData_D SUMMON_setStatusPassive
+0x020c  Rs8:1 Ww8:1                         2 fn  SUMMON_loadSummonData_D SUMMON_setStatusPassive
+0x020d  Rs8:1 Ww8:1                         2 fn  SUMMON_loadSummonData_D SUMMON_setStatusPassive
+0x020e  Rs8:1 Ww8:1                         2 fn  SUMMON_loadSummonData_D SUMMON_setStatusPassive
+0x020f  Rs8:1                               1 fn  SUMMON_setStatusPassive
+0x0210  Rs8:1 Ww8:1                         2 fn  SUMMON_loadSummonData_D SUMMON_setStatusPassive
+0x0214  Ru8:2 Ww8:3                         5 fn  FR_GetValFunc NpcUiGuardianShop_Lv SUMMON_init SUMMON_setStatus SUMMON_setStatusPassive
+0x0215  Ru8:2 Ww8:3                         5 fn  FR_GetValFunc NpcUiGuardianShop_Lv SUMMON_init SUMMON_setStatus SUMMON_setStatusPassive
+0x0216  Ru8:2 Ww8:3                         5 fn  FR_GetValFunc NpcUiGuardianShop_Lv SUMMON_init SUMMON_setStatus SUMMON_setStatusPassive
+0x0217  Ru8:3 Ww8:3                         5 fn  FR_GetValFunc NpcUiGuardianShop_Lv SUMMON_init SUMMON_setStatus SUMMON_setStatusPassive
+0x022e  Ww16:1                              1 fn  SUMMON_setStatusPassive
+0x0232  Ww16:1                              1 fn  SUMMON_setStatusPassive
+0x0254  Ru8:2 Ww8:3                         5 fn  Guardian_load Guardian_save SUMMON_init SUMMON_loadSummonData_initD SUMMON_setUsedTotalExp
+0x0255  Ww8:1                               1 fn  Guardian_load
+0x0259  Ru8:4 Ww8:3                         6 fn  Guardian_load Guardian_save SUMMON_init SUMMON_loadSummonData_initD SUMMON_preProcess
+0x025a  Ww8:1                               1 fn  Guardian_load
+0x025e  Ru8:3 Ww8:3                         6 fn  Guardian_load Guardian_save SUMMON_init SUMMON_loadSummonData_initD SUMMON_setStatus
+0x025f  Ww8:1                               1 fn  Guardian_load
+0x0263  Ru8:5 Ww8:3                         7 fn  Guardian_load Guardian_save SUMMON_init SUMMON_loadSummonData_initD SUMMON_preProcess
+0x0264  Ww8:1                               1 fn  Guardian_load
+0x0274  Rw32:3 Ww32:4                       4 fn  Guardian_load Guardian_save SUMMON_initSkillPoint SUMMON_preProcess
+0x0278  Rw32:2 Ww32:2                       3 fn  SUMMON_initSkillPoint SUMMON_preProcess SUMMON_setStatus
+0x027c  Ww32:2                              2 fn  Guardian_load SUMMON_initSkillPoint
+0x0280  Ww32:1                              1 fn  SUMMON_initSkillPoint
+0x029c  Rw32:3 Ww32:4                       4 fn  Guardian_load Guardian_save SUMMON_initSkillPoint SUMMON_preProcess
+0x02a0  Rw32:2 Ww32:2                       3 fn  SUMMON_initSkillPoint SUMMON_preProcess SUMMON_setStatus
+0x02a4  Ww32:2                              2 fn  Guardian_load SUMMON_initSkillPoint
+0x02a8  Ww32:1                              1 fn  SUMMON_initSkillPoint
+0x02c4  Rw32:7 Ww32:4                       8 fn  GMenu_PaintGuardian Guardian_load Guardian_save NpcUiGuardianShop_Key NpcUiGuardianShop_Paint
+0x02c8  Rw32:1 Ww32:1                       2 fn  SUMMON_addExp SUMMON_setUsedTotalExp
+0x02e6  Ww8:1                               1 fn  SUMMON_initSkillPoint
+0x0302  Ww8:1                               1 fn  SUMMON_initSkillPoint
+0x032a  Ru8:1                               1 fn  SUMMON_attackMonster
+0x03aa  Rs8:1 Ru8:1 Ww8:1                   3 fn  Guardian_load Guardian_save SUMMON_setUsedTotalExp
+0x03c6  Rs8:1 Ru8:1 Ww8:1                   3 fn  Guardian_load Guardian_save SUMMON_setUsedTotalExp
+0x03e2  Rs8:1 Ru8:1 Ww8:1                   3 fn  Guardian_load Guardian_save SUMMON_setUsedTotalExp
+0x03f0  Rw32:1                              1 fn  SUMMON_attackMonster
+0x041a  Ww8:1                               1 fn  Guardian_load
+0x0436  Ww8:1                               1 fn  Guardian_load
+0x0452  Ww8:1                               1 fn  Guardian_load
+0x0620  Ww16:1                              1 fn  SUMMON_loadSummonData_G
+0x0622  Rs16:1 Ww16:1                       2 fn  SUMMON_loadSummonData_G SUMMON_loadSummonImage
+0x062c  Rs8:1 Ww8:1                         2 fn  SUMMON_endProcess SUMMON_walkCount
+0x062d  Ww8:1                               1 fn  SUMMON_walkCount
+0x062e  Ru8:1 Ww8:1                         2 fn  SUMMON_init SUMMON_walkCount
+0x062f  Ww8:2                               1 fn  SUMMON_endProcess
+0x0634  Rw32:10 Ww32:5                      8 fn  MONSTER_attackHero SCENE_Change SUMMON_attackPreProcessProperty SUMMON_distanceWithHero SUMMON_init
+0x0638  Ww8:5                               4 fn  SCENE_Change SUMMON_endProcess SUMMON_isNearMonster SUMMON_preProcess
+0x0639  Rs8:2 Ru8:4 Ww8:4                   3 fn  SUMMON_attackPreProcessProperty SUMMON_init SUMMON_walkPreProcess
+0x063a  Rs8:2 Ww8:1                         2 fn  BattleProc_setSkillEff FR_GetValFunc
+0x063b  Ru8:1                               1 fn  SUMMON_setStatus

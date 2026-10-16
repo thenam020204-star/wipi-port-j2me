@@ -1,0 +1,5 @@
+_mainMenu+0x0  Rs8:4 Ru8:2 Ww8:8                   13 fn  MMenu_ExitKey MMenu_HelpKey MMenu_MainKey MMenu_NetworkKey
+_mainMenu+0x2  Rs8:4 Ru8:2 Ww8:3                    5 fn  MMenu_MainKey MMenu_PaintMain MainMenuFrame_initMenuState MainMenuFrame_keyCommunity
+_mainMenu+0x4  Rw32:5 Ww32:1                        4 fn  MMenu_PaintCommunity MMenu_PaintMain MMenu_PaintStoryMode MainMenuFrame_Initialize
+_mainMenu+0xc  Rw32:5 Ww32:1                        6 fn  GMenu_drawHelp GMenu_keyHelp MMenu_SetTextBox MMenu_StoryModeKey
+_mainMenu+0xb0  Rw32:12 Ww32:12                     11 fn  GMenu_SystemKey GMenu_drawHelp GMenu_keyHelp LogoFrame_Render

@@ -1,0 +1,79 @@
+_event+0x4  Rw32:1 Ww32:1                        1 fn  Event_CheckOKKey
+_event+0x8  Rs8:2                                2 fn  EVT_OnInitEvent Event_getEvtCnt
+_event+0x19  Ru8:1                                1 fn  Event_isSameQuestNum
+_event+0x1fe  Ru8:12 Ww8:3                        15 fn  Boss_endProcess EVENT_End EVT_OnFunction Event_Draw_Alert_Popup
+_event+0x1ff  Ru8:1 Ww8:2                          3 fn  EVENT_End Event_Draw_Alert_Popup Evt_OnMessageBox
+_event+0x200  Rw32:1 Ww32:4                        4 fn  EVENT_End EVENT_TickMovie EVENT_worlmapTick EVT_OnFunction
+_event+0x205  Ww8:2                                2 fn  EVT_Initialize Event_TalkBoxReset
+_event+0x206  Ru8:5 Ww8:1                          5 fn  EVENT_EndProcess EVENT_Tick Event_Init_Skip Event_Key
+_event+0x207  Ru8:1 Ww8:2                          3 fn  EVT_Initialize Event_Draw_Skip_Effect SCENE_StartEffect
+_event+0x208  Ru8:2 Ww8:2                          3 fn  EVENT_Tick Event_Draw_Skip_Effect SCENE_StartEffect
+_event+0x209  Ru8:2 Ww8:1                          3 fn  EVENT_Tick Event_Draw_Skip_Effect SCENE_StartEffect
+_event+0x20c  Rw32:2 Ww32:4                        4 fn  EVT_Initialize Event_CameraMove Event_Popup Event_Set_Delay
+_event+0x210  Rw32:2 Ww32:1                        3 fn  EVT_Initialize Event_CameraMove Event_Popup
+_event+0x214  Ru8:1                                1 fn  Event_Draw_Narration
+_event+0x218  Rw32:1                               1 fn  Event_Draw_Narration
+_event+0x504  Ww8:1                                1 fn  EVT_Initialize
+_event+0x505  Ww8:1                                1 fn  EVT_Initialize
+_event+0x50d  Ru8:1                                1 fn  SCENE_End
+_event+0x514  Ru8:1 Ww8:2                          3 fn  Event_Draw_Popup Event_Init_Popupdata Event_PopupReset
+_event+0x515  Ru8:1 Ww8:2                          3 fn  Event_Init_Popupdata Event_Popup Event_PopupReset
+_event+0x516  Ww8:2                                2 fn  Event_Init_Popupdata Event_PopupReset
+_event+0x57c  Ru8:1 Ww8:1                          2 fn  Event_Init_RepayPop Event_PopupRepay_B
+_event+0x57d  Ww8:1                                1 fn  Event_Init_RepayPop
+_event+0x57e  Ww8:1                                1 fn  Event_Init_RepayPop
+_event+0x580  Ww32:1                               1 fn  Event_Init_RepayPop
+_event+0x584  Ww32:1                               1 fn  Event_Init_RepayPop
+_event+0x588  Ww32:1                               1 fn  Event_Init_RepayPop
+_event+0x58c  Ru8:2 Ww8:1                          3 fn  Event_Draw_Popup Event_Init_Popupdata Event_PopupReset
+_event+0x590  Rw32:1 Ww32:2                        3 fn  Event_Draw_Popup Event_Init_Popupdata Event_PopupReset
+_event+0x594  Rw32:1 Ww32:1                        2 fn  Event_Init_Popupdata Event_PopupReset
+_event+0x598  Rw32:1 Ww32:1                        2 fn  Event_Draw_Popup Event_Init_Popupdata
+_event+0x59c  Ww32:1                               1 fn  Event_Init_Popupdata
+_event+0x5a0  Ru8:1 Ww8:1                          2 fn  Event_Init_Popupdata Event_drawSubQuestPopup
+_event+0x5a4  Rw32:1                               1 fn  Event_drawSubQuestPopup
+_event+0x5a8  Ru8:1 Ww8:2                          2 fn  Event_Init_Popupdata Event_drawSubQuestPopup
+_event+0x5ac  Rw32:1                               1 fn  Event_Draw_Alert_Popup
+_event+0x5d8  Rw32:1                               1 fn  Event_Draw_Alert_Popup
+_event+0x5dc  Ru8:1 Ww8:2                          3 fn  Event_Init_Narration Event_TalkBoxReset Event_TalkBoxTick
+_event+0x5e0  Ww32:3                               3 fn  Event_Init_HeromoveValue Event_Set_Heromove Event_Set_Heromove_2
+_event+0x5e4  Ww32:3                               3 fn  Event_Init_HeromoveValue Event_Set_Heromove Event_Set_Heromove_2
+_event+0x5e8  Ru8:2 Ww8:1                          2 fn  Event_Heromove Event_Init_HeromoveValue
+_event+0x5e9  Ww8:2                                2 fn  Event_Set_Heromove Event_Set_Heromove_2
+_event+0x5eb  Ru8:1 Ww8:1                          2 fn  Event_Init_HeromoveValue HERO_endProcess
+_event+0x5ec  Ru8:1 Ww8:2                          3 fn  EVENT_screenShowInit Event_Draw_Screen GameMenuFrame_returnMainMenu
+_event+0x5ee  Ru8:3                                3 fn  Event_Screen Event_ScreenEnd Event_Set_Screen
+_event+0x5ef  Ww8:1                                1 fn  Event_Set_Screen
+_event+0x5f0  Rw32:1 Ww32:1                        2 fn  Event_Draw_Screen Event_Set_Screen
+_event+0x5f4  Rw32:1 Ww32:1                        2 fn  Event_Draw_Screen Event_Set_Screen
+_event+0x5f8  Rw32:1 Ww32:1                        2 fn  Event_Draw_Screen Event_Set_Screen
+_event+0x600  Ru8:1 Ww32:2                         3 fn  Event_Draw_Screen Event_Set_Screen MainGameData_loadStory
+_event+0x608  Ru8:1 Ww8:2                          3 fn  EVENT_End Event_Draw_SubTitle Event_Set_SubTitle
+_event+0x609  Ww8:1                                1 fn  Event_subtitleOneDraw
+_event+0x60a  Ww8:1                                1 fn  Event_Set_SubTitle
+_event+0x60b  Ww8:1                                1 fn  Event_Set_SubTitle
+_event+0x60c  Ww8:1                                1 fn  Event_Set_SubTitle
+_event+0x60d  Ww8:2                                2 fn  EVENT_End Event_Set_SubTitle
+_event+0x60e  Ww8:2                                2 fn  EVENT_End Event_Set_SubTitle
+_event+0x60f  Ru8:2 Ww8:2                          4 fn  EVT_Initialize Event_Next_Scene Event_moveNextSceneWithWeatherTime Event_nextScene
+_event+0x610  Ru8:1 Ww8:1                          2 fn  EVT_Initialize Event_Next_Scene
+_event+0x611  Ru8:1 Ww8:2                          2 fn  EVT_Initialize Event_ToWorldmap
+_event+0x614  Rw32:1 Ww32:1                        2 fn  Event_Set_CameraMove Event_endCameraMove
+_event+0x618  Rw32:1 Ww32:1                        2 fn  Event_Set_CameraMove Event_endCameraMove
+_event+0x61c  Rw32:1                               1 fn  Event_CameraMove
+_event+0x620  Rw32:1                               1 fn  Event_CameraMove
+_event+0x624  Ww8:1                                1 fn  EVENT_ending
+_event+0x7f7  Ww8:1                                1 fn  Quest_Init
+_event+0x7f8  Ww8:1                                1 fn  Event_Set_SwitchQuest
+_event+0x93e  Ww8:1                                1 fn  Event_setMovie
+_event+0x93f  Ru8:1 Ww8:1                          1 fn  Event_setMovie
+_event+0x940  Ww8:1                                1 fn  EVT_Initialize
+_event+0x941  Ww8:1                                1 fn  EVT_Initialize
+_event+0x942  Ww8:1                                1 fn  EVT_Initialize
+_event+0x943  Ru8:1 Ww8:3                          4 fn  EVENT_End EVT_Initialize Event_Delay Event_Set_Delay
+_event+0x944  Ru8:1 Ww8:1                          2 fn  EVT_Initialize MainGameData_loadStory
+_event+0x945  Ru8:1 Ww8:3                          3 fn  EVT_Initialize GMenu_SystemKey SCENE_Change
+_event+0x946  Ru8:1                                1 fn  Event_getOptScroll
+_event+0x948  Ww8:1                                1 fn  EVENT_onLoad
+_event+0x94c  Rw32:1 Ww32:1                        2 fn  EVENT_End Hero_draw
+_event+0x950  Ww8:1                                1 fn  EVENT_End

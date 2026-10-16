@@ -1,0 +1,24 @@
+_gameMenu+0x1  Rs8:11 Ww8:1                        11 fn  GMenu_ArmsGuardianKey GMenu_EquipMentKey GMenu_InventoryKey_base GMenu_QuestKey
+_gameMenu+0x3  Ww8:2                                1 fn  GMenu_InvenSubKey
+_gameMenu+0x4  Ww8:3                                2 fn  GMenu_InvenSubKey MMenu_setMode
+_gameMenu+0x5  Rs8:10 Ru8:12 Ww8:5                 17 fn  GMenu_ArmsKey GMenu_GuardianKey_Touch GMenu_ItemDisassembly GMenu_PaintArms
+_gameMenu+0x6  Rs8:3 Ww8:3                          4 fn  GMenu_drawHelp GMenu_keyCall MMenu_SupportKey MMenu_setMode
+_gameMenu+0x8  Rs8:10 Ru8:2 Ww8:20                 17 fn  GMenu_InvenSubKey GMenu_PopupSet GMenu_keyHelp GameMenuFrame_initGamsMenuState
+_gameMenu+0x9  Rs8:13 Ru8:2 Ww8:3                  15 fn  GMenu_ArmsKey GMenu_ItemDisassembly GMenu_PaintInventory GMenu_drawInvenMain
+_gameMenu+0xa  Ww8:6                                2 fn  GMenu_InvenSubKey NpcUiShop_Key
+_gameMenu+0xb  Rs8:2 Ww8:3                          3 fn  GMenu_InvenSubKey NpcUiCompound_Key NpcUiNet_Key
+_gameMenu+0xc  Rs8:4 Ru8:2 Ww8:1                    4 fn  GMenu_worldmapKey NpcUiCompound_Key NpcUiNet_Key NpcUi_Initialize
+_gameMenu+0xd  Rs8:2 Ru8:1 Ww8:1                    4 fn  GMenu_worldmapKey NpcUiCompound_Key NpcUiNet_Key NpcUi_Initialize
+_gameMenu+0xe  Rs8:4 Ww8:12                         4 fn  GMenu_InvenSubKey GMenu_PopupSet MMenu_PopupKey MainGameFrame_QuickSaveKeyPressed
+_gameMenu+0xf  Rs8:5 Ww8:1                          3 fn  GMenu_drawHelp MMenu_HelpKey MMenu_SupportKey
+_gameMenu+0x10  Rs8:21 Ru8:9 Ww8:1                  21 fn  GMenu_ArmsKey GMenu_EquipMentKey GMenu_GuardianKey GMenu_PaintInventory
+_gameMenu+0x11  Rs8:1 Ww8:1                          2 fn  GMenu_PopupSet MMenu_PopupKey
+_gameMenu+0x12  Ww8:2                                2 fn  GMenu_PopupSet MMenu_PopupKey
+_gameMenu+0x13  Ww8:1                                1 fn  GMenu_PopupSet
+_gameMenu+0x14  Ru8:2 Ww8:2                          4 fn  GMenu_InvenSubKey GMenu_PopupSet MMenu_ExitKey MMenu_PopupKey
+_gameMenu+0x15  Rs8:1 Ww8:1                          2 fn  GameMenuFrame_Initialize GameMenuFrame_getMax
+_gameMenu+0x16  Rs8:16 Ww8:3                        15 fn  MMenu_NetworkKey MMenu_PaintNetwork MMenu_drawSlot MMenu_drawSlotInfo
+_gameMenu+0x1e  Ru8:4 Ww8:1                          3 fn  GMenu_SkillRegister GMenu_SkillSlotKey GMenu_SkillSlotSet
+_gameMenu+0x20  Ru8:1 Ww8:1                          2 fn  GMenu_SkillKey GameMenuFrame_initGamsMenuState
+_gameMenu+0x21  Rs8:4 Ru8:1 Ww8:2                    5 fn  Load_smsAgree NpcUi_ProcRecvPacket_AUTHORIZATION Save_smsAgree TitleFrame_KeyPressed
+_gameMenu+0x22  Ru8:1 Ww8:3                          3 fn  Load_smsAgree NpcUi_ProcRecvPacket_SHOP Save_smsAgree
