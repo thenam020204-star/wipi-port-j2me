@@ -217,10 +217,134 @@ public final class MapDraw {
                 drawRect(back, 0, sh - ay, sw, ay);
                 break;
             case 9:
-                drawRect(back, 0, 0, sw, sh);
+                drawFull(back);
                 break;
             default:
                 break;
+        }
+    }
+
+    /**
+     * Map_Draw_Tile case 9 (full redraw) @0xa8b68: the cells are blitted straight into the back picture, each clipped to the screen by its own sub-rectangle
+     * (partial first / last column and row: the source offset is the clipped amount, the mirror code is applied to that sub-rectangle, CONFIRMED by the
+     * DM_DrawScreen565 arguments of the original: e.g. a vertically flipped bottom row of 8 pixels reads source rows 0..7 flipped, not 8..15).
+     * A quarter-turn cell goes through DM_DrawEffectClip(rot 0x5a) with width and height swapped.
+     */
+    private static void drawFull(Frame back) {
+        byte[] m = G.map;
+        int sw = Glob.gameW;
+        int sh = Glob.gameH;
+        int tw = m[0x7e];
+        int th = m[0x7f];
+        int camX = s32(156);
+        int camY = s32(160);
+        int offX = s32(172);
+        int offY = s32(176);
+        int c0;                 // first column, its visible width (0 = aligned), the number of columns, the visible width of the last one (0 = whole)
+        int c0w;
+        int ncol;
+        int lastW;
+        if (s32(132) < sw) {
+            ncol = m[0x7a];
+            c0 = 0;
+            c0w = 0;
+            lastW = 0;
+        } else {
+            int extra;
+            if (camX == 0) {
+                extra = 0;
+                c0 = 0;
+                c0w = 0;
+            } else {
+                c0 = camX / tw;
+                int r = camX % tw;
+                c0w = r != 0 ? tw - r : 0;
+                extra = r != 0 ? 1 : 0;
+            }
+            ncol = (sw - c0w) / tw + extra;
+            lastW = (sw - c0w) % tw;
+            if (lastW != 0) {
+                ncol++;
+            }
+        }
+        int r0;
+        int r0h;
+        int nrow;
+        int lastH;
+        if (s32(136) < sh) {
+            nrow = m[0x7b];
+            r0 = 0;
+            r0h = 0;
+            lastH = 0;
+        } else {
+            int extra;
+            if (camY == 0) {
+                extra = 0;
+                r0 = 0;
+                r0h = 0;
+            } else {
+                r0 = camY / th;
+                int r = camY % th;
+                r0h = r != 0 ? th - r : 0;
+                extra = r != 0 ? 1 : 0;
+            }
+            nrow = (sh - r0h) / th + extra;
+            lastH = (sh - r0h) % th;
+            if (lastH != 0) {
+                nrow++;
+            }
+        }
+        int mw = m[0x7a];
+        byte[] la = Maps.layerA;
+        byte[] lb = Maps.layerB;
+        for (int row = r0; row < r0 + nrow; row++) {
+            int rr = row - r0;
+            for (int col = c0; col < c0 + ncol; col++) {
+                int ci = mw * row + col;
+                int a = la[ci] & 0xff;
+                int ts = ((lb[ci] & 0xff) & 0xc) >> 2;
+                int mir;
+                if ((a & 0x80) == 0) {
+                    mir = (a & 0x40) == 0 ? 0x10 : 4;
+                } else {
+                    mir = (a & 0x40) == 0 ? 8 : 0xc;
+                }
+                if (ts >= m[0x270]) {
+                    continue;
+                }
+                Gbm img = Maps.tiles[ts];
+                if (img == null) {
+                    continue;
+                }
+                int w;
+                int sx;
+                if (col == c0 && c0w != 0) {
+                    w = c0w;
+                    sx = tw - c0w;
+                } else {
+                    w = (lastW == 0 || c0 + ncol - 1 != col) ? tw : lastW;
+                    sx = 0;
+                }
+                int h;
+                int syo;
+                if (row == r0 && r0h != 0) {
+                    h = r0h;
+                    syo = th - r0h;
+                } else {
+                    h = (lastH == 0 || r0 + nrow - 1 != row) ? th : lastH;
+                    syo = 0;
+                }
+                int cc = col - c0;
+                int x = (c0w != 0 && cc != 0 ? -tw : 0) + (cc != 0 ? c0w : 0) + cc * tw + offX;
+                int y = th * rr + offY + (r0h != 0 && rr != 0 ? -th : 0) + (rr != 0 ? r0h : 0);
+                tilePalette(img);
+                int srcY = th * (a & 0x1f) + syo;
+                if ((a & 0x20) == 0) {
+                    Blit.drawImg(back, x, y, w, h, img, sx, srcY, mir == 8 ? 1 : (mir == 0xc ? 3 : (mir == 4 ? 2 : 0)), 0, 0);
+                } else {
+                    Fx.drawEffectClip(back, x, y, h, w, img, sx, srcY, mir, 0x5a, 100, 100, 0, 0xff, 0);
+                }
+            }
         }
     }
 

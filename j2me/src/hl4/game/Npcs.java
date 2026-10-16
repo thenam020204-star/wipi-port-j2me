@@ -39,6 +39,46 @@ public final class Npcs {
         n.m[0x1c8] = 0;
     }
 
+    /**
+     * NPC_return(n) @0xba330 (= MP_return case 1): CHAR_destroy, then the NPC_set body WITHOUT clearing the data record: a slot that still names its
+     * event record goes back to that record's stand / walk state (record +6: 1..10 walk, 0 / 11.. stand with a direction; +4 == 5: facing 0).
+     */
+    public static void ret(Char n) {
+        Chars.destroy(n);
+        Chars.init(n, 0, 0, 0, 0, 0, ((Bytes.s16(n.m, 0x160) - 0x29) & 0xffff) > 1 ? 1 : 0, 4);
+        n.m[0x1a8] = 4;
+        setMoveDelay(n);
+        if (n.evRef >= 0) {
+            int r = Event.rec(n.evRef);
+            int b = Event.e[r + 6] & 0xff;
+            if (b - 1 < 10) {
+                setMove(n, 1);
+            } else {
+                if (b < 0xb) {
+                    Chars.setDirection(n, (byte) b);
+                } else {
+                    Chars.setDirection(n, (byte) (b - 0xb));
+                }
+                setStand(n);
+            }
+            if (Event.e[r + 4] == 5) {
+                Chars.setDirection(n, 0);
+            }
+        }
+        n.m[0x1b4] = 0;
+        n.m[0x1c3] = 0;
+        Bytes.w32(n.m, 0x1b8, 0);
+        Bytes.w32(n.m, 0x1bc, 0);
+        n.m[0x1c0] = 0;
+        n.m[0x1c1] = 0;
+        n.m[0x1c2] = 0;
+        n.m[0x1c5] = 0;
+        heartFrame = 0;
+        cannonFrame = 0;
+        n.m[0x171] = (byte) 0xff;
+        n.m[0x1c8] = 0;
+    }
+
     private static String n3(int v) {
         return v < 10 ? "00" + v : (v < 100 ? "0" + v : String.valueOf(v));
     }

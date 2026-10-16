@@ -243,6 +243,24 @@ public final class Chars {
         init(c, 0, 0, 0, 0, 0, 0, 0);
     }
 
+    /**
+     * CHAR_destroy(c) @0x4cc3c: both effect lists emptied, data ids / class / motion reset, the sprite released (SPR_destroy, or SPR_copyNPCIDFree for a
+     * sprite shared with an NPC id: the shared data is garbage collected here, so both end in the zero SPR state), header back to the free state.
+     */
+    public static void destroy(Char c) {
+        c.effects.release();
+        c.targetEffects.release();
+        Bytes.w16(c.m, 0x162, 0xffff);
+        Bytes.w16(c.m, 0x160, 0xffff);
+        c.m[0x16b] = (byte) 0xff;
+        c.m[0x16c] = (byte) 0xff;
+        c.m[0x167] = (byte) 0xff;
+        c.spr.set();
+        c.m[0x165] = 0;
+        c.m[0x164] = 0;
+        c.objSet(1);
+    }
+
     /** CHAR_init(c, class, p3, x, y, motion, dir, speed) @0x4cb94 */
     public static void init(Char c, int cls, int p3, int x, int y, int motion, int dir, int speed) {
         c.effects.init();

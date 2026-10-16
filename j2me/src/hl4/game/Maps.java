@@ -624,8 +624,42 @@ public final class Maps {
         }
     }
 
-    /** Map_Draw_Create_Minimap_Tile @0xa6348 (HUD minimap image; built when the HUD is ported) */
+    /**
+     * Map_Draw_Create_Minimap_Tile(frame, _map+0xdc, mapimg, 0, w, h) @0xa6348, geometry part (CONFIRMED in the disassembly): cell size 3x3 (mode 1: 6x6) and the
+     * minimap area 78 x 78 (mode 1: 164 x 134) give the image size, the "map smaller than the area" flags and the centring offsets.
+     * The image itself (DM_CreateImage + Map_Draw_Collision_Minimap_Tile cells) is built when the HUD is ported: 'minimapPending'.
+     */
     public static void createMinimapTile() {
+        int mode = 0;
+        int w = m[0x7a];
+        int h = m[0x7b];
+        if (m[0xdc] == 0) {
+            return;
+        }
+        m[0x178] = 0;
+        int cell;
+        if (mode == 1) {
+            cell = 6;
+            Bytes.w32(m, 0x154, 0xa4);
+            Bytes.w32(m, 0x158, 0x86);
+        } else {
+            cell = 3;
+            Bytes.w32(m, 0x158, 0x4e);
+            Bytes.w32(m, 0x154, 0x4e);
+        }
+        m[0x14a] = (byte) cell;
+        m[0x14b] = (byte) cell;
+        int areaW = Bytes.s32(m, 0x154);
+        int areaH = Bytes.s32(m, 0x158);
+        int iw = cell * w;
+        int ih = cell * h;
+        Bytes.w32(m, 0x150, ih);
+        m[0x15c] = (byte) (areaW < iw ? 1 : 0);
+        Bytes.w32(m, 0x168, iw < areaW ? (areaW - iw) / 2 : 0);
+        m[0x15d] = (byte) (areaH < ih ? 1 : 0);
+        Bytes.w32(m, 0x14c, iw);
+        int d = areaH - ih;
+        Bytes.w32(m, 0x16c, ih < areaH ? (d - (d >> 31)) >> 1 : 0);
         minimapPending = true;
     }
 
@@ -668,9 +702,89 @@ public final class Maps {
 
     // ---- map load / initialisation -------------------------------------------------------------------------------------------------------
 
-    /** Map_Finalize: frees the map (the Java objects are dropped; pool slots are returned later with MP_return) */
+    /**
+     * Map_Finalize @0xabe14: the map's heap blocks are dropped (tile images, layers, object images, the object-image id list, the 10 sprite bodies),
+     * monsters lose their AI tables, the temporary lists give their objects back to the pools (LinkedList_tempReleaseAll / Map_tempReleaseList).
+     * The strip images (_map+0x21c / +0x23c) are kept: Map_Initialize refills them for the next map.
+     */
     public static void finalizeMap() {
-        throw new IllegalStateException("Map_Finalize: later");
+        Bytes.fill(m, 0x278, 0, 8);
+        tiles[0] = null;
+        tiles[1] = null;
+        tiles[2] = null;
+        objImgs = null;
+        Bytes.w16(m, 0x2b4, 0);
+        Bytes.fill(m, 0x271, 0xff, 3);
+        nObj = 0;
+        layerB = null;
+        layerA = null;
+        for (int i = 0; i < 10; i++) {
+            SObj b = sprBodies[i];
+            if (b != null) {
+                b.objSet(1);
+                b.spr.set();
+                sprObjInit(b, 0, 0, 0xff, 0xff);
+                Bytes.w32(b.m, 0x94, 0);
+                Bytes.w32(b.m, 0x98, 0);
+                sprBodies[i] = null;
+            }
+        }
+        for (Obj o = G.objList.head; o != null; o = o.next) {
+            if (Obj.structType(o) == 3) {
+                Chars.deleteEffectInList((Char) o);
+                Chars.deleteEffectInObjList((Char) o);
+                // MONSTER_release_ai = EnemyAIParsing_Finalize: only frees tables that MONSTER_dataLoad_ai allocates (not ported: the pointers stay 0)
+            }
+        }
+        for (int i = 0; i < 3; i++) {
+            if (monBodies[i] != null) {
+                Chars.destroy(monBodies[i]);                // MONSTER_destroy (MONSTER_initBuff / initDeBuff are empty functions)
+                monBodies[i] = null;
+            }
+            m[0x365 + i] = (byte) 0xff;
+        }
+        tempReleaseAll();
+        tempReleaseList();
+        Bytes.w32(Pool.hero.m, 0xa31, 0);
+    }
+
+    /** LinkedList_tempReleaseAll @0x97314: the per-map lists give every node back to its pool, the NPC pointer list is cleared */
+    public static void tempReleaseAll() {
+        G.topObjectList.release();
+        G.bottomObjectList.release();
+        G.moreBottomObjectList.release();
+        G.dropedItem.release();
+        G.tileList.release();
+        G.npcList.release();
+    }
+
+    /** Map_tempReleaseList @0xabdb4: objects that are not permanent (release type != 1) leave the object list; the pointer lists keep only permanent ones */
+    public static void tempReleaseList() {
+        LList l = G.objList;
+        for (Obj p = l.tail; p != null; ) {
+            Obj pv = p.prev;
+            if (p.m[Obj.RELEASE] != 1) {
+                l.remove(p);
+            }
+            p = pv;
+        }
+        tempReleasePointers(G.monsterList);
+        tempReleasePointers(G.targetEffectList);
+    }
+
+    /** Map_tempRelease(list, 3 | 6) @0xa8138 (the 6 variant is inlined in Map_tempReleaseList) */
+    private static void tempReleasePointers(PList pl) {
+        pl.count = 0;
+        for (int i = 0; i < 0x7f; i++) {
+            Obj o = pl.a[i];
+            if (o != null) {
+                if (o.m[Obj.RELEASE] == 1) {
+                    pl.count++;
+                } else {
+                    pl.a[i] = null;
+                }
+            }
+        }
     }
 
     /** LinkedList_initAll @0x9728c */

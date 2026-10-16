@@ -97,7 +97,7 @@ public final class Scene {
     /** SCENE_End @0x6dbd8: leaves the current scene */
     public static int end() {
         if (Event.isEvent()) {
-            throw new IllegalStateException("Event_ScriptWindow_Close: later");
+            Dialog.scriptWindowClose(Event.e[0x50d]);
         }
         It.cur = null;
         Maps.finalizeMap();

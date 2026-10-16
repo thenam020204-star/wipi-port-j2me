@@ -176,6 +176,35 @@ public final class Pool {
                 hl4.sys.Bytes.w16(o.m, Obj.MAPIDX, 0xffff);
                 break;
             }
+            case NPC:
+                Npcs.ret((Char) o);
+                break;
+            case MAPOBJ:
+                o.objSet(1);
+                Maps.mapObjInit(o, 0, 0, 0xff, 0, 0, 0);
+                break;
+            case TILE:
+                o.objSet(1);
+                o.m[0x20] = 0;
+                hl4.sys.Bytes.w32(o.m, 8, 0);
+                hl4.sys.Bytes.w32(o.m, 0xc, 0);
+                break;
+            case DROP:
+                Maps.dropItemInit(o, 0, 0, 0xff, 0, 0, 0, 0, 0, 0);
+                o.objSet(1);
+                break;
+            case SPROBJ: {
+                SObj so = (SObj) o;
+                o.objSet(1);
+                so.spr.set();
+                Maps.sprObjInit(o, 0, 0, 0xff, 0xff);
+                hl4.sys.Bytes.w32(o.m, 0x94, 0);
+                hl4.sys.Bytes.w32(o.m, 0x98, 0);
+                break;
+            }
+            case HERO:
+            case SUMMON:
+                break;                       // MP_return has no case for them: the node is only unlinked
             default:
                 throw new IllegalStateException("MP_return type " + Obj.structType(o) + ": later");
         }
