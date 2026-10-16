@@ -50,8 +50,8 @@ public final class ObjDraw {
             c.spr.setControlPal(0, 0, 0, 0xff, 0x10);
         }
         int dbg = m[0x172];
-        int p4 = dbg <= 0x40 ? 2 : 0;
-        int p5 = dbg <= 0x40 ? 3 : 1;
+        int p4 = dbg <= 4 ? 2 : 0;
+        int p5 = dbg <= 4 ? 3 : 1;
         c.spr.drawNpc(GfxOut.I, Gfx.scr, m[0x167], p4, p5, m[0x168], frame, x, y, 0, 0, -1);
         byte[] e = G.event;
         if (e[0x1fe] == 0 && m[0x1c4] != 0) {

@@ -414,6 +414,20 @@ public final class Dialog {
         }
     }
 
+    /** Event_Draw_Narration(frame) @0x5ac70: slot 0's text page centred in a translucent band (shown while _event[0x5dc]) */
+    public static void drawNarration(Frame f) {
+        if (e[0x214] == 0 || text[0] == null) {
+            return;
+        }
+        int start = Bytes.s32(e, 0x244);
+        int end = Bytes.s32(e, 0x24c);
+        int lines = Hf.lineCount(text[0], start, end - start, 0x96, 1);
+        int h = Glob.gameH;
+        Gfx.fillRectAlpha(f, 0, (h >> 1) - 0x16 - lines * 5, Glob.gameW, lines * 0xe, 0x7f, 0xb, 0xb, 0xb);
+        Hf.setColor(0xff, 0xff, 0xff);
+        Hf.drawAnchorH2(f, Glob.gameW >> 1, (h >> 1) - 0x14 - lines * 5, 0x96, 0, text[0], start, 0, end, 1);
+    }
+
     /** Event_Draw_Talk(frame, slot, active) @0x5ad90: the revealed part of the current page */
     public static void drawTalk(Frame f, int k, boolean active) {
         int p = slot(k);

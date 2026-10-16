@@ -60,7 +60,7 @@ public final class EventDraw {
                 }
             }
         } else {
-            throw new IllegalStateException("Event_Draw_Narration: later");
+            Dialog.drawNarration(f);
         }
         int b = e[0x93e];
         if (e[0x93f] == 0) {

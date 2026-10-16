@@ -169,7 +169,9 @@ public final class Event {
                 if (e[k * 0xbc + 0x23f] != 0) {
                     Bytes.w32(e, 0x200, -1);
                     if (e[0x5dc] != 0) {
-                        throw new IllegalStateException("Event_Init_Narration: later");
+                        e[0x5dc] = 0;                                   // Event_Init_Narration
+                        Dialog.scriptWindowClose(e[0x50d] & 0xff);
+                        k = e[0x50d] & 0xff;
                     }
                 }
                 if (Dialog.text[k] != null) {

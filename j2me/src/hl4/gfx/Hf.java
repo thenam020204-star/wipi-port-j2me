@@ -193,6 +193,20 @@ public final class Hf {
         return len - start;
     }
 
+    /** HF_GetLineCount(str + base, len, maxW, font) @0x74fc0: number of one-line chunks the text breaks into */
+    public static int lineCount(byte[] s, int base, int len, int maxW, int ft) {
+        int n = 0;
+        int pos = 0;
+        for (;;) {
+            int r = byteLenPrintable(s, base + len, base + pos, maxW, 1, ft);
+            if (r == 0) {
+                return n;
+            }
+            pos += r;
+            n++;
+        }
+    }
+
     /** HF_GetWidth(str, len, font) = HF_GetWidth2(str, len, 0, 0, font). */
     public static int width(byte[] s, int len, int ft) {
         return width2(s, len, 0, 0, ft);

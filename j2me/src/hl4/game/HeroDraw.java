@@ -146,7 +146,7 @@ public final class HeroDraw {
                 s.setControlPal(0, 0, 0, 0xff, 0x10);
             }
             int dbg = m[0x172];
-            m[0x8c] = (byte) s.drawNpc(hl4.gfx.GfxOut.I, Gfx.scr, m[0x167], dbg <= 0x40 ? 2 : 0, dbg <= 0x40 ? 3 : 1, (byte) dir, m[0x8c], Bytes.s32(m, 8) + ox,
+            m[0x8c] = (byte) s.drawNpc(hl4.gfx.GfxOut.I, Gfx.scr, m[0x167], dbg <= 4 ? 2 : 0, dbg <= 4 ? 3 : 1, (byte) dir, m[0x8c], Bytes.s32(m, 8) + ox,
                     Bytes.s32(m, 0xc) + oy, 0, 0, 0);
             s.f68 = 0;
         } else if ((a44 & 1) != 0) {
@@ -157,7 +157,7 @@ public final class HeroDraw {
                 s.setControlPal(0, 0, 0, 0xff, 0x10);
             }
             int dbg = m[0x172];
-            m[0x8c] = (byte) s.drawNpc(hl4.gfx.GfxOut.I, Gfx.scr, m[0x167], dbg <= 0x40 ? 2 : 0, dbg <= 0x40 ? 3 : 1, (byte) dir, m[0x8c], Bytes.s32(m, 8) + ox,
+            m[0x8c] = (byte) s.drawNpc(hl4.gfx.GfxOut.I, Gfx.scr, m[0x167], dbg <= 4 ? 2 : 0, dbg <= 4 ? 3 : 1, (byte) dir, m[0x8c], Bytes.s32(m, 8) + ox,
                     Bytes.s32(m, 0xc) + oy, 0, 0, -1);
         }
         if (Opt.particle()) {
