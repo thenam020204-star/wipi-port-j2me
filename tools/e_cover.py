@@ -6,17 +6,14 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from ref_game import Game
 
 binp, resdir, out, t0, t1 = sys.argv[1], sys.argv[2], sys.argv[3], int(sys.argv[4]), int(sys.argv[5])
-script = {}
-for kv in sys.argv[6:]:
-    t, k = kv.split(':')
-    script[int(t)] = int(k, 0)
+import ref_game
+script = ref_game.parse_script(sys.argv[6:])
 g = Game(binp, resdir).start()
 first = {}
 for i in range(t1):
     if i == t0:
         g.enable_cover()
-    k = script.get(i)
-    g.tick(press=k, release=k) if k is not None else g.tick()
+    ref_game.tick_script(g, script, i)
     if i >= t0:
         for n in g.cover:
             first.setdefault(n, i)

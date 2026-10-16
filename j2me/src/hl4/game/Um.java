@@ -284,4 +284,67 @@ public final class Um {
         o[3] = d;
         return d;
     }
+
+    /**
+     * UM_getDiagonal(x0, y0, x1, y1, &x, &y, n) @0xc9a6c: the point n + 1 steps along the line from (x0, y0) toward (x1, y1); out is written only when the
+     * end point is not reached within those steps (callers pre-set it).  The x-major branch subtracts 2*|dy| (not 2*|dx|) from the error term.
+     */
+    public static void getDiagonal(int x0, int y0, int x1, int y1, int n, int[] out) {
+        int dy = y1 - y0;
+        int dx = x1 - x0;
+        int sx = dx >= 0 ? 1 : -1;
+        int adx = dx < 0 ? -dx : dx;
+        int sy = dy >= 0 ? 1 : -1;
+        int ady = dy < 0 ? -dy : dy;
+        int x;
+        int y = y0;
+        if (adx > ady) {
+            if (x1 == x0) {
+                return;
+            }
+            int lr = 2 * ady;
+            int err = lr - adx;
+            x = x0 + sx;
+            while (true) {
+                if (err >= 0) {
+                    err -= lr;
+                    y += sy;
+                }
+                n--;
+                err += lr;
+                if (n < 0) {
+                    break;
+                }
+                x += sx;
+                if (x1 == x - sx) {
+                    return;
+                }
+            }
+        } else {
+            if (y1 == y0) {
+                return;
+            }
+            int r5 = 2 * adx;
+            y = y0 + sy;
+            x = x0;
+            int err = r5 - ady;
+            while (true) {
+                if (err >= 0) {
+                    err -= 2 * ady;
+                    x += sx;
+                }
+                n--;
+                err += r5;
+                if (n < 0) {
+                    break;
+                }
+                y += sy;
+                if (y1 == y - sy) {
+                    return;
+                }
+            }
+        }
+        out[0] = x;
+        out[1] = y;
+    }
 }

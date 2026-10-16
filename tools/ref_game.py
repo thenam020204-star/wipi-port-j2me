@@ -433,6 +433,7 @@ class Game(Harness):
             if n is not None:
                 self.cover[n] = self.cover.get(n, 0) + 1
         self.uc.hook_add(UC_HOOK_BLOCK, blk)
+        self.uc.ctl_flush_tb()      # blocks translated before the hook was added would not call it
 
     def event(self, typ, p1=0, p2=0):
         return self.call('handleCletEvent', typ, p1 & 0xffffffff, p2 & 0xffffffff)

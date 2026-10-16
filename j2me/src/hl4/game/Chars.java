@@ -388,6 +388,44 @@ public final class Chars {
 
     // ---- per-tick processing -----------------------------------------------------------------------------------------------------------
 
+    /** CHAR_isStunBuff @0xcb304 */
+    public static boolean isStunBuff(Obj c) {
+        return c.m[0x124] != 0 && c.m[0x126] == 1;
+    }
+
+    /** CHAR_isIcedBuff @0xcb2e0 */
+    public static boolean isIcedBuff(Obj c) {
+        return c.m[0x11c] != 0 && c.m[0x11e] == 2;
+    }
+
+    /**
+     * CHAR_buffProcess @0xcbe3c: buff slots (+0xf4, 3 x 8 bytes, counter +0xfa) and status slots (+0x10c, 4 x 8 bytes, counter +0x112) count down;
+     * an expired status slot 0 of kind 2 first switches the character to main state 0x15 / motion 0x13.
+     */
+    public static void buffProcess(Char c) {
+        byte[] m = c.m;
+        for (int i = 0; i < 3; i++) {
+            int o = i * 8;
+            if (m[0xf4 + o] == 1) {
+                int v = (Bytes.s16(m, 0xfa + o) - 1) & 0xffff;
+                Bytes.w16(m, 0xfa + o, v);
+                if ((v & 0x8000) != 0) {
+                    throw new IllegalStateException("CHAR_removeBuff (buff expiry): later");
+                }
+            }
+        }
+        for (int i = 0; i < 4; i++) {
+            int o = i * 8;
+            if (m[0x10c + o] == 1) {
+                int v = (Bytes.s16(m, 0x112 + o) - 1) & 0xffff;
+                Bytes.w16(m, 0x112 + o, v);
+                if ((v & 0x8000) != 0) {
+                    throw new IllegalStateException("CHAR_removeEtcStatus (status expiry): later");
+                }
+            }
+        }
+    }
+
     public static boolean isPoisonBuff(Obj c) {
         return c.m[0x114] != 0 && c.m[0x116] == 2;
     }

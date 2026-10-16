@@ -577,28 +577,54 @@ public final class Monsters {
         return isBoss(o) && o.m[0x3ee] == 0;
     }
 
-    /** MONSTER_isConceal @0xb68d4 / MONSTER_isTeleport @0xb6870: both need MONSTER_getMainStateByCategory (live monster categories, Phase E6) */
+    /** MONSTER_isConceal @0xa68d4: in the conceal state with the concealed motion */
     public static boolean isConceal(Char o) {
-        throw new IllegalStateException("MONSTER_isConceal: later (E6)");
+        if ((byte) MonProc.mainStateByCategory(o) != 5) {
+            return false;
+        }
+        return o.m[0x167] == (byte) MonProc.concealedMotion(o);
     }
 
+    /** MONSTER_isTeleport @0xa6870: in the teleport state with the teleport in / out motion */
     public static boolean isTeleport(Char o) {
-        throw new IllegalStateException("MONSTER_isTeleport: later (E6)");
+        if ((byte) MonProc.mainStateByCategory(o) != 7) {
+            return false;
+        }
+        return o.m[0x167] == (byte) MonProc.teleportInMotion(o) || o.m[0x167] == (byte) MonProc.teleportOutMotion(o);
     }
 
-    /** MONSTER_preProcess @0xb2fa0: a blank placeholder (type 0xff) or a pending scene change does nothing; live monsters are Phase E6 */
+    /** MONSTER_isTeleporting @0xa6758: isTeleport and +0x324 set */
+    public static boolean isTeleporting(Char o) {
+        return isTeleport(o) && o.m[0x324] != 0;
+    }
+
+    /** MONSTER_preProcess: see MonProc */
     public static void preProcess(Char o) {
-        if (Event.nextScene() != 0 || isBlank(o)) {
-            return;
-        }
-        throw new IllegalStateException("MONSTER_preProcess (live monster): later (E6)");
+        MonProc.preProcess(o);
     }
 
-    /** MONSTER_endProcess @0xb3b8c */
+    /** MONSTER_endProcess: see MonProc */
     public static void endProcess(Char o) {
-        if (Event.nextScene() != 0 || isBlank(o)) {
-            return;
-        }
-        throw new IllegalStateException("MONSTER_endProcess (live monster): later (E6)");
+        MonProc.endProcess(o);
+    }
+
+    /** MONSTER_noMoreRegen @0x9e874 (always false) */
+    public static boolean noMoreRegen(Char o) {
+        return false;
+    }
+
+    /** MONSTER_getIndex @0x9e87c */
+    public static int getIndex(Char o) {
+        return o == null ? -1 : o.m[0x16c];
+    }
+
+    /** MONSTER_Regen @0xa0708 */
+    public static void regen(Char o) {
+        throw new IllegalStateException("MONSTER_Regen: later");
+    }
+
+    /** MONSTER_addHp(o, n, p3, p4, p5) @0xa3568 */
+    public static void addHp(Char o, int n, int p3, int p4, int p5) {
+        throw new IllegalStateException("MONSTER_addHp: later");
     }
 }

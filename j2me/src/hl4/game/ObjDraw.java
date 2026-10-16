@@ -168,12 +168,101 @@ public final class ObjDraw {
         }
     }
 
-    /** MONSTER_draw(monster, ox, oy, concealPass) @0xaf148; MONSTER_drawBottom is the same with pass 1.  Blank placeholders draw nothing (live monsters: Phase E6). */
+    /**
+     * MONSTER_draw(monster, ox, oy, pass) @0x9f148 (MONSTER_drawBottom @0x9f688 = pass 1, concealed monsters only; pass 0 skips them).  Shadow, blend tint,
+     * the control-palette pulse of object monsters (+0x370/+0x371), the body (a one-direction motion draws direction 0; the frame counter is not
+     * advanced here), the effect list.
+     */
     private static void monster(Char c, int ox, int oy, int pass) {
         if (Monsters.isBlank(c)) {
             return;
         }
-        throw new IllegalStateException("MONSTER_draw (live monster): later (E6)");
+        byte[] m = c.m;
+        if (pass != 0) {
+            if (!Monsters.isConceal(c)) {
+                return;
+            }
+        } else if (Monsters.isConceal(c)) {
+            return;
+        }
+        if (m[0x324] != 0) {
+            return;                                             // (Boss check result unused)
+        }
+        if ((byte) Chars.getMainState(c) == 9) {
+            return;
+        }
+        if (Pool.hero.m[0xa46] != 0 && !Monsters.isBoss(c)) {
+            return;
+        }
+        int mi = m[0x167] & 0xff;
+        int md = m[0x168] & 0xff;
+        int frame = m[0x8c];
+        int x = Bytes.s32(m, 8) + ox;
+        int y = Bytes.s32(m, 0xc) + oy;
+        if (m[0x35d] == 0 && !Monsters.isDie(c) && !Monsters.isTeleport(c)) {
+            shadow((short) x, (short) y, m[0x16b] / 2, m[0x328]);
+        }
+        int bt;
+        if (Chars.isFiredBuff(c)) {
+            bt = 2;
+        } else if (Chars.isIcedBuff(c)) {
+            bt = 3;
+        } else if (m[0x167] == (byte) MonProc.attackedMotion(c)) {
+            bt = 0;
+        } else {
+            bt = (m[0xf4] | m[0xfc] | m[0x104]) == 0 ? 0xff : 5;      // CHAR_isAnyBuff
+        }
+        HeroDraw.setBlendType(c, (byte) bt);
+        boolean blend = false;
+        if ((byte) Chars.getMainState(c) == 0xd && m[0x36c] > 0) {
+            MonProc.setBlend(c, 1, 0xb2);
+            blend = true;
+        }
+        if (Monsters.isBoss(c)) {
+            throw new IllegalStateException("MONSTER_draw: boss (Boss_draw, states 0xf/0x10): later");
+        }
+        if (m[0x1ae] == 8) {                                        // MONSTER_isObject
+            if (m[0x371] == 2) {
+                c.spr.setControlPal(0, 0, 0, 0, 7);
+            } else {
+                c.spr.setControlPal(0, 0, 0, (m[0x370] * 0x14) & 0xff, 7);
+            }
+            int st = m[0x371];
+            if (st == 0) {
+                int v = (m[0x370] + 1) & 0xff;
+                m[0x370] = (byte) v;
+                if ((byte) v > 5) {
+                    m[0x371] = 1;
+                    m[0x370] = 5;
+                }
+            } else if (st == 1) {
+                int v = (m[0x370] - 1) & 0xff;
+                m[0x370] = (byte) v;
+                if ((v & 0x80) != 0) {
+                    m[0x371] = 2;
+                    m[0x370] = 0;
+                }
+            } else if (st == 2) {
+                int v = (m[0x370] + 1) & 0xff;
+                m[0x370] = (byte) v;
+                if ((byte) v > 0x4f) {
+                    m[0x371] = 0;
+                    m[0x370] = 0;
+                }
+            }
+        }
+        if (c.spr.cif.frameStart[(byte) mi].length == 1) {          // the motion's direction count (SPR+0x44 entry +8)
+            md = 0;
+        }
+        c.spr.drawSprite(GfxOut.I, Gfx.scr, (byte) mi, (byte) md, frame, x, y - m[0x328], 0, -1);
+        HeroDraw.drawEffectList(c);
+        if (blend) {
+            MonProc.setBlend(c, 0, 0xff);
+        }
+        if (m[0x16e] == 7 && m[0x328] <= 4) {
+            throw new IllegalStateException("MONSTER_draw tile property 7 (common effect sprite): later");
+        }
+        Monsters.initBlendType(c);
     }
 
     /** Map_drawBottomMonster @0xa8068: only monsters draw here */

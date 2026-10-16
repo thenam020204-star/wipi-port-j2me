@@ -234,6 +234,8 @@ public final class Maps {
 
     /** _map+8/0xc/0x10: the three monster template bodies of the map */
     public static final Char[] monBodies = new Char[3];
+    /** _map+0 (Map_getBoss @0x9331c): the boss of the map; set by the boss creation (not ported yet), cleared by Map_releaseBoss */
+    public static Char boss;
 
     /** Map_addMobBodyList(body) @0xa0d3c */
     public static void addMobBodyList(Char b) {
