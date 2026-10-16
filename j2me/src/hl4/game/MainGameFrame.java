@@ -68,16 +68,74 @@ public final class MainGameFrame implements FrameHandler {
         Maps.initDrawFlag();
     }
 
+    /** MainGameFrame_Process @0x9c978 (= GamePlayProcess): the cut scene tick, every object's pre-process, screen shake, camera and the play-time limit */
     public void process() {
-        throw new IllegalStateException("MainGameFrame_Process: later");
+        byte[] g = G.game;
+        byte[] e = G.event;
+        if (g[0] != 0) {
+            return;
+        }
+        if (e[0x1fe] != 0) {
+            Event.tick();
+        }
+        if (e[0x60f] == 0) {
+            Maps.objectPreProcess();
+            Cam.shake();
+            if (e[0x1fe] == 0) {
+                Cam.mapMove();
+            }
+            if (e[0x609] != 0 && e[0x1fe] == 0) {
+                throw new IllegalStateException("Event_Set_SubTitle / Scene_getName (map title): later");
+            }
+            int c = Bytes.s16(G.map, 0x356);
+            if (c <= 0) {
+                Pool.hero.m[0x170] = 0;
+            } else {
+                Bytes.w16(G.map, 0x356, c - 1);
+            }
+            byte[] h = Pool.hero.m;
+            int hi = Bytes.s32(h, 0x184);
+            if (hi > 0 || (hi == 0 && Bytes.s32(h, 0x180) != 0)) {
+                throw new IllegalStateException("play-time limit check (MC_knlCurrentTime): later");
+            }
+        }
     }
 
+    /** test hook: skip the (not yet ported) render step while state parity of Process/EndProcess is being checked */
+    public static boolean testNoRender;
+
     public void render() {
+        if (testNoRender) {
+            return;
+        }
         throw new IllegalStateException("MainGameFrame_Render: later");
     }
 
+    /** MainGameFrame_EndProcess @0x9d3a0 */
     public void endProcess() {
-        throw new IllegalStateException("MainGameFrame_EndProcess: later");
+        byte[] g = G.game;
+        if (g[0] == 0 || g[0] == 2) {
+            g[0x55]++;
+            if (g[0x55] > 10) {
+                g[0x55] = 0;
+            }
+            Maps.objectEndProcess();
+            if (Bytes.s32(g, 0x48) != 0) {
+                throw new IllegalStateException("PickUpItem_endProcess (live notices): later");
+            }
+            if (!G.dropedItem.isEmpty()) {
+                throw new IllegalStateException("DropItem_endProcess: later");
+            }
+            Event.endProcess();
+            if (g[0] == 2) {
+                throw new IllegalStateException("MainGameFrame_EndProcess game-over branch: later");
+            }
+        } else if (g[0] == 3 && Engine.changeFrame != 0) {
+            throw new IllegalStateException("MainGameFrame_EndProcess game menu leave: later");
+        }
+        if (Engine.changeFrame != 0) {
+            throw new IllegalStateException("MainGameFrame_EndProcess frame change (game menu / load frame): later");
+        }
     }
 
     public void keyPressed(int key) {

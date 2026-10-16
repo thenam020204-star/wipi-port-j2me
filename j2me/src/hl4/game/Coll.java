@@ -10,6 +10,10 @@ import hl4.sys.Bytes;
 public final class Coll {
     private static final byte[] m = G.map;
 
+    /** scratch step vectors of the movement callers (no allocation per tick) */
+    public static final int[] scratchX = new int[1];
+    public static final int[] scratchY = new int[1];
+
     private Coll() {
     }
 

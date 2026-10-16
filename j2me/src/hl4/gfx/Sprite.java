@@ -155,6 +155,11 @@ public final class Sprite {
         return s8(nf - 1);
     }
 
+    /** SPR_isEndFrame(spr, anim, dir) @0xd0014 for the frame number 'frame' (s8) */
+    public boolean isEndFrame(int anim, int d, int frame) {
+        return maxFrame(anim, d) <= (byte) frame;
+    }
+
     private static Gbm image(Gbm[] set, int idx) {
         if (set == null || idx < 0 || idx >= set.length) {
             return null;

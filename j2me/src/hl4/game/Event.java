@@ -374,4 +374,46 @@ public final class Event {
         Cam.mapMove();
         return Cam.cameraMove(true);
     }
+
+    /** Event_nextScene @0x689a4: a scene change is pending (_event+0x60f) */
+    public static int nextScene() {
+        return e[0x60f];
+    }
+
+    /** Event_HeroStop @0x699c4 */
+    public static void heroStop() {
+        Char h = Pool.hero;
+        HeroCtl.moveStop(h);
+        h.m[0x166] = 0;
+        Bytes.w32(h.m, 0x158, 0);
+        Bytes.w32(h.m, 0x15c, 0);
+        h.m[0x167] = 0;
+    }
+
+    /** Event_Next_Scene @0x6a148: starts the load frame of a requested scene change */
+    public static void nextSceneStep() {
+        if (e[0x60f] != 0) {
+            LoadFrame.setState(8, 4);
+            heroStop();
+            e[0x60f] = 0;
+            return;
+        }
+        if (e[0x610] != 0) {
+            throw new IllegalStateException("Event_Next_Scene (_event+0x610: MainGameFrame_Finalize + load target 4): later");
+        }
+    }
+
+    /** EVENT_EndProcess @0x6d308 */
+    public static void endProcess() {
+        nextSceneStep();
+        if (e[0x611] != 0) {
+            throw new IllegalStateException("Event_ToWorldmap: later");
+        }
+        if (e[0x206] == 0) {
+            e[0x207] = 0;
+        }
+        if (Popup.evtBox[0x2c] != 0) {
+            throw new IllegalStateException("EVENT_EndProcess: evtBox focus (Focus_endProcess / IT_AlertConfirm): later");
+        }
+    }
 }

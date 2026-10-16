@@ -356,4 +356,34 @@ public final class Monsters {
         o.m[Obj.RELEASE] = (byte) rel;
         return o;
     }
+
+    /** Boss_isNotCheckCollision @0xdf48c: a boss whose +0x3ee flag is 0 is not collided with */
+    public static boolean bossNotCheckCollision(Obj o) {
+        return isBoss(o) && o.m[0x3ee] == 0;
+    }
+
+    /** MONSTER_isConceal @0xb68d4 / MONSTER_isTeleport @0xb6870: both need MONSTER_getMainStateByCategory (live monster categories, Phase E6) */
+    public static boolean isConceal(Char o) {
+        throw new IllegalStateException("MONSTER_isConceal: later (E6)");
+    }
+
+    public static boolean isTeleport(Char o) {
+        throw new IllegalStateException("MONSTER_isTeleport: later (E6)");
+    }
+
+    /** MONSTER_preProcess @0xb2fa0: a blank placeholder (type 0xff) or a pending scene change does nothing; live monsters are Phase E6 */
+    public static void preProcess(Char o) {
+        if (Event.nextScene() != 0 || isBlank(o)) {
+            return;
+        }
+        throw new IllegalStateException("MONSTER_preProcess (live monster): later (E6)");
+    }
+
+    /** MONSTER_endProcess @0xb3b8c */
+    public static void endProcess(Char o) {
+        if (Event.nextScene() != 0 || isBlank(o)) {
+            return;
+        }
+        throw new IllegalStateException("MONSTER_endProcess (live monster): later (E6)");
+    }
 }

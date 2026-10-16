@@ -106,9 +106,24 @@ public final class Evt {
         m[0x34e] = (byte) 0xff;
         Bytes.w32(e, 0x200, cmd);
         switch (cmd) {
-            case 0:
-                later("EVT cmd 0x00");
-                return false;
+            case 0: {
+                t.get(b, 4);
+                Char n = npcEvt(b[0]);
+                if (n == null) {
+                    return false;
+                }
+                Chars.setDirection(n, b[2]);
+                Npcs.setNextMotionDirection(n, b[1], b[2]);
+                if (Chars.process(n, false)) {
+                    Npcs.chageMainState(n);
+                }
+                Npcs.setLoop(n, b[3] & 0xff);
+                return true;
+            }
+            case 1:
+                t.get(b, 2);
+                e[(b[0] & 0xff) * 10 + 0x11] = b[1];
+                return true;
             case 2: {
                 t.get(b, 2);
                 int type = e[(b[0]) * 10 + 0xe] & 0xff;
@@ -118,9 +133,42 @@ public final class Evt {
                 }
                 return false;
             }
-            case 5:
-                later("EVT cmd 0x05");
-                return false;
+            case 3: {
+                t.get(b, 5);
+                int type = e[b[0] * 10 + 0xe];
+                Maps.changeEvtObjectImage(type, b[0], b[1]);
+                Char n = npcEvt(b[0]);
+                if (n != null) {
+                    Chars.setDirection(n, b[3]);
+                    if (((b[4] + 1) & 0xff) < 2) {
+                        Npcs.setLoopNextMotionDirection(n, b[2]);
+                    } else {
+                        Npcs.setNextMotionDirection(n, b[2], b[3]);
+                    }
+                    Npcs.setLoop(n, b[4] & 0xff);
+                }
+                return true;
+            }
+            case 4:
+                t.get(b, 2);
+                e[(b[0] & 0xff) * 10 + 0x10] = b[1];
+                return true;
+            case 5: {
+                int a = t.getByte();
+                int d = t.getByte();
+                int type = e[a * 10 + 0xe] & 0xff;
+                if (type > 5) {
+                    Chars.setDirection(npcEvt(a), d);
+                    return true;
+                }
+                if (type != 0 && d == 1) {
+                    Maps.chageEvtObjDir(a);
+                    if (type - 1 < 2 && type - 1 >= 0) {
+                        Maps.initDrawFlag();
+                    }
+                }
+                return true;
+            }
             case 6: {
                 int a = t.getByte() & 0xff;
                 int v = t.getByte();
@@ -134,14 +182,37 @@ public final class Evt {
             }
             case 7: {
                 t.get(b, 5);
-                later("EVT cmd 0x07 (NPC_evnetMove)");
-                return false;
+                Char n = npcEvt(b[0]);
+                if (n == null) {
+                    return false;
+                }
+                if (b[4] != 4) {
+                    n.m[0x1b4] = 0;
+                }
+                int speed = b[3];
+                if (e[0x206] != 0) {
+                    speed = -1;
+                }
+                int dx = (byte) (b[2] * Um.vecX(b[1]));
+                int dy = (byte) (b[2] * Um.vecY(b[1]));
+                Npcs.evnetMove(n, dx, dy, speed, b[4]);
+                e[0] = 1;
+                return e[0x206] != 0;
             }
             case 8:
                 return false;
-            case 9:
-                later("EVT cmd 0x09");
-                return false;
+            case 9: {
+                t.get(b, 4);
+                Char n = npcEvt(b[0]);
+                if (n == null) {
+                    Bytes.w16(e, b[0] * 10 + 10, b[1] << 4);
+                    Bytes.w16(e, b[0] * 10 + 0xc, b[2] << 4);
+                    e[b[0] * 10 + 0x13] = b[3];
+                } else {
+                    Npcs.evnetMove(n, b[1], b[2], 3, b[3]);
+                }
+                return true;
+            }
             case 0xf:
                 t.get(b, 2);
                 m[b[0] + 0x36a] = b[1];

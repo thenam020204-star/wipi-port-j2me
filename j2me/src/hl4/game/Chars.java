@@ -1,6 +1,7 @@
 package hl4.game;
 
 import hl4.sys.Bytes;
+import hl4.sys.Rng;
 
 /**
  * Character functions shared by hero / NPCs / monsters / summons (CHAR_* @0x38ce8..0x4cd..., 0xdb...).  Offsets: +0x20 SPR struct, +0x28..+0x34 move rect
@@ -363,5 +364,87 @@ public final class Chars {
                 throw new IllegalStateException("Eff_deleteEffectInObjList: later");
             }
         }
+    }
+
+    // ---- per-tick processing -----------------------------------------------------------------------------------------------------------
+
+    public static boolean isPoisonBuff(Obj c) {
+        return c.m[0x114] != 0 && c.m[0x116] == 2;
+    }
+
+    public static boolean isBleedBuff(Obj c) {
+        return c.m[0x114] != 0 && c.m[0x116] == 4;
+    }
+
+    public static boolean isFiredBuff(Obj c) {
+        return c.m[0x11c] != 0 && c.m[0x11e] == 1;
+    }
+
+    public static boolean isHideBuff(Obj c) {
+        return c.m[0x10c] != 0 && c.m[0x10e] == 2;
+    }
+
+    /** CHAR_preProcessTargetEffectList @0x4ac38 (the target-effect objects are not ported yet: an occupied list stops here) */
+    public static void preProcessTargetEffects(Char c) {
+        if (!c.targetEffects.isEmpty()) {
+            throw new IllegalStateException("EFF_preProcessOneTargetEffect: later");
+        }
+    }
+
+    /** CHAR_endProcessTargetEffectList @0x4a4cc */
+    public static void endProcessTargetEffects(Char c) {
+        if (!c.targetEffects.isEmpty()) {
+            throw new IllegalStateException("EFF_endProcessOneTargetEffect: later");
+        }
+    }
+
+    /** damage-over-time tick of a buff (poison/bleed use +0x118, burning +0x120) */
+    private static void buffDamage(Char c, int dmgOff) {
+        int d = Bytes.s16(c.m, dmgOff);
+        if (c.m[Obj.TYPE] == 2 || c.m[Obj.TYPE] == 3) {
+            if (d > 2) {
+                d = d - 2 + Rng.rand(0, 4);
+            }
+            throw new IllegalStateException("CHAR_process buff damage (CHAR_heroAddHp / MONSTER_addHp / CHAR_addEffect): later");
+        }
+    }
+
+    /** CHAR_process(c, force) @0x4c890: buff damage ticks; for non-hero characters applies a pending direction/motion change (true = the motion changed and the frame restarted) */
+    public static boolean process(Char c, boolean force) {
+        byte[] m = c.m;
+        if ((isPoisonBuff(c) || isBleedBuff(c)) && Bytes.s16(m, 0x11a) % 0x14 == 1) {
+            buffDamage(c, 0x118);
+        }
+        if (isFiredBuff(c) && Bytes.s16(m, 0x122) % 0x14 == 1) {
+            buffDamage(c, 0x120);
+        }
+        if (m[Obj.TYPE] != 2) {
+            int nd = m[0x16a];
+            if (m[0x168] != nd && nd > -1) {
+                m[0x168] = (byte) nd;
+                m[0x16a] = (byte) 0xff;
+            }
+            if (force || m[0x167] != m[0x169]) {
+                m[0x8c] = 0;                       // SPR_initFrame
+                m[0x167] = m[0x169];
+                return true;
+            }
+        }
+        return false;
+    }
+
+    /** CHAR_turnCorner(c, dir) @0x49f58: the nearest free direction when the way ahead is blocked (right 90/45 first, then left), -1 when none */
+    public static int turnCorner(Obj c, int dir) {
+        boolean a = Coll.charIsMoveable(c, Tab.TURN_R90[dir]);
+        boolean b = Coll.charIsMoveable(c, Tab.TURN_R45[dir]);
+        if (a && b) {
+            return Tab.TURN_R90[dir];
+        }
+        a = Coll.charIsMoveable(c, Tab.TURN_L90[dir]);
+        b = Coll.charIsMoveable(c, Tab.TURN_L45[dir]);
+        if (a && b) {
+            return Tab.TURN_L90[dir];
+        }
+        return -1;
     }
 }

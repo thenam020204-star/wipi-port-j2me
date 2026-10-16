@@ -9,6 +9,19 @@ public final class SprProps {
     public static final class Cell {
         public int type;
         public final int[][] g = new int[4][4];
+
+        /** the original's 0x44-byte cell: +1 type, +4 + 0x10*g the four ints of group g (the other bytes are 0) */
+        public void store(byte[] m, int o) {
+            for (int i = 0; i < 0x44; i++) {
+                m[o + i] = 0;
+            }
+            m[o + 1] = (byte) type;
+            for (int k = 0; k < 4; k++) {
+                for (int j = 0; j < 4; j++) {
+                    hl4.sys.Bytes.w32(m, o + 4 + 16 * k + 4 * j, g[k][j]);
+                }
+            }
+        }
     }
 
     public static final class Entry {

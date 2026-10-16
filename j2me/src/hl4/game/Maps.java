@@ -695,4 +695,69 @@ public final class Maps {
             Sprite.lcdEffSet(0, 0, 0, 0x10, 0xff, 0);
         }
     }
+
+    /** Map_objectPreProcess @0xa7f30: every object of the sorted list gets its per-type pre-process, then each node is re-sorted by its Y (the hero last, with its own pass) */
+    public static void objectPreProcess() {
+        LList l = G.objList;
+        if (l.isEmpty()) {
+            return;
+        }
+        Obj n = l.head;
+        while (n != null) {
+            Obj next = n.next;
+            int t = Obj.structType(n);
+            if (t == 1) {
+                Npcs.preProcess((Char) n);
+            } else if (t == 2) {
+                HeroProc.process(Pool.hero);
+            } else if (t == 3) {
+                Monsters.preProcess((Char) n);
+            } else if (t == 6) {
+                throw new IllegalStateException("EFF_preProcessOneTargetEffect: later");
+            } else if (t == 4) {
+                throw new IllegalStateException("SUMMON_preProcess: later");
+            }
+            n = next;
+        }
+        for (Obj p = l.head; p != null; p = p.next) {
+            l.sort(p);
+        }
+        l.sort(Pool.hero);
+    }
+
+    /** Map_objectEndProcess @0xa7e3c */
+    public static void objectEndProcess() {
+        LList l = G.objList;
+        if (l.isEmpty()) {
+            return;
+        }
+        Obj n = l.head;
+        while (n != null) {
+            Obj next = n.next;
+            int t = Obj.structType(n);
+            if (t == 1) {
+                Npcs.endProcess((Char) n);
+            } else if (t == 2) {
+                HeroProc.endProcess(Pool.hero);
+            } else if (t == 3) {
+                Monsters.endProcess((Char) n);
+            } else if (t == 6) {
+                throw new IllegalStateException("EFF_endProcessOneTargetEffect: later");
+            } else if (t == 4) {
+                throw new IllegalStateException("SUMMON_endProcess: later");
+            }
+            n = next;
+        }
+    }
+
+    /** Map_chageEvtObjDir(k) @0xa3e5c: the first listed object of event index k gets the 'flipped' bit (+0x24 bit 6) */
+    public static void chageEvtObjDir(int k) {
+        for (Obj o = G.objList.head; o != null; o = o.next) {
+            if (o.m[Obj.EVENT] == k) {
+                int v = o.m[0x24] & 0xff;
+                o.m[0x24] = (byte) (v + ((v ^ 0xc0) & 0x40));
+                return;
+            }
+        }
+    }
 }

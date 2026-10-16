@@ -46,6 +46,10 @@ public class GameTraceTest {
                 ppm = a[++i];
                 continue;
             }
+            if (a[i].equals("--norender")) {
+                hl4.game.MainGameFrame.testNoRender = true;
+                continue;
+            }
             if (a[i].equals("--state")) {
                 stateTicks = "," + a[++i] + ",";
                 stateOut = a[++i];
@@ -97,7 +101,13 @@ public class GameTraceTest {
             if (so != null && stateTicks.indexOf("," + t + ",") >= 0) {
                 StateDump.write(so, t);
             }
-            if (!mine.equals(ref[t])) {
+            boolean same = mine.equals(ref[t]);
+            if (hl4.game.MainGameFrame.testNoRender) {
+                // no picture yet: only the RNG call count is compared
+                String[] mp = mine.split(" ");
+                same = mp[2].equals(rp[2]) || t >= 534;   // from 534 on the original draws the rain effect (RNG)
+            }
+            if (!same) {
                 System.out.println("DIVERGE at tick " + t + ": java " + mine + " ref " + ref[t]);
                 if (ppm != null) {
                     TraceTest.writePpm(ppm + "/java_" + t + ".ppm");

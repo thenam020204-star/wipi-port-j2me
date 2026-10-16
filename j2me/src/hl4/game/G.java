@@ -45,6 +45,8 @@ public final class G {
 
     /** _npcList / _monsterList / _targetEffectList (pointer lists of live objects) */
     public static final PList npcList = new PList();
+    /** _globalFrameCnt (u16 game-tick counter, wraps after 9999) */
+    public static int globalFrame;
     public static final PList monsterList = new PList();
     public static final PList targetEffectList = new PList();
     /** _objList (sorted draw list, holds the hero, NPCs, monsters, middle map objects), _topObjectList, _bottomObjectList, _moreBottomObjectList, _dropedItem, _tileList, _netItemList */
