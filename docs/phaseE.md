@@ -33,6 +33,17 @@ DrawRect viền khoảng bao gồm x..x+w, y..y+h — game truyền w−1,h−1 
 | Chuỗi vẽ `MainGameFrame_drawGame`: `MapDraw` (back buffer cuộn theo camera), `MapObjDraw`, `ObjDraw`, `HeroDraw`, `EventDraw` (dải đen, tint, SKIP, fade skip) | trace C: tick 501–699 |
 | `Dialog` (ScriptWindow open/close, TalkBox reset/tick, thứ tự vẽ 0x510, khung `drawGMenuBackFrame_main`, tên "=%s ", mặt `NPC/FACE_n`, chữ chạy `HF_GetNextLen`) | trace C: tick 607–699 (hộp thoại đầu) |
 
+## 3b. E6 — quái, chiến đấu, hiệu ứng (đang làm; trace J/K nhận từ bản gốc)
+Trace J (quái bắn xa) khớp tới tick 5019; trace K (hero đánh trúng và giết quái, hạt, quái hồi sinh) khớp **hash khung + RNG + back buffer đến tick 5300**; F/G/H/J vẫn khớp.
+| Module | Nguồn (địa chỉ gốc) | Trạng thái |
+|---|---|---|
+| `HeroBattle` (HERO_attackMonster, BattleProc_getSkillDamage/SkillEff, setItemEff, CHAR_heroAddSp) | 0x77f1c, 0xcc478, 0xcec9c | CONFIRMED đường hero class 0, skill kind 1, đòn vật lý; nhánh class≠0, phép, enchant, arms: `later` |
+| `MonDamage` (MONSTER_addHp, setDie, knockBack, setAttackedMotion, isImmune) | 0xa3568, 0xa3428, 0xa2c30, 0xa2978, 0xa49f8 | CONFIRMED; boss/summon: `later` |
+| `MonDie`, `MonDrop` (MONSTER_die, dropExp, dropItem 6 ô, DropItem_drop/init, Item_getIconNameGrade/setDataSKinIdx/skinDataName) | 0xa6f5c, 0xa50fc, 0xa52d0, 0xd150c | Viết từ disassembly; **chưa có trace chạm nhánh rơi đồ** (cú giết đầu không rơi); level-up, SUMMON_addExp, quest boss, ItemBag_pickUp: `later` |
+| `Particles` (generate/generatePosition/onIdle/paint, nSin/nCos) | 0xb9e74, 0xb9bec, 0xba844, 0xbaf5c, 0xb9580 | CONFIRMED khớp trace K (bảng sin/cos có **72** mục, bước 5°, đã sửa từ bản 36 mục sai); skipTimeParticle, lớp 2 (SPR_drawSpriteSK): `later` |
+| `Monsters.regen` (MONSTER_Regen) | 0xb0708 | CONFIRMED (khớp trace K); nhánh boss cuối: `later` |
+Bài học công cụ: các script gỡ lỗi `e_args/e_ret/e_raw/e_part` phải chạy với **kịch bản đầy đủ** (`scK.txt`, gồm cả token < 500), không phải `kK.txt` (chỉ dành cho Java) — chạy sai kịch bản cho RNG/khung khác golden. Byte blend +0x8e/+0x8f của quái nằm trong struct sprite nhúng của Char (Char+0x20): Java đồng bộ vào `Sprite.f6e/f6f` trước khi vẽ.
+
 ## 4. Khác biệt có chủ đích so với bản gốc (Phase E)
 - Vùng game 240×320 ngay từ màn logo (bản gốc 240×400 trước title). Chỉ đổi vị trí dọc của màn logo/thông báo.
 - Chuỗi "TOUCH THE SCREEN" ở màn title giữ nguyên (bản keypad nên đổi nhãn — quyết định Phase F).

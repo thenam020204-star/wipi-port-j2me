@@ -641,7 +641,31 @@ public final class Monsters {
 
     /** MONSTER_Regen @0xa0708 */
     public static void regen(Char o) {
-        throw new IllegalStateException("MONSTER_Regen: later");
+        byte[] m = o.m;
+        if (m[0x1ed] == 0) {
+            Bytes.w32(m, 0x18, 0);
+            return;
+        }
+        Chars.resetPosition(o, Bytes.s16(m, 0x1ba), Bytes.s16(m, 0x1bc));
+        // MONSTER_canRegen: the monster's collision rectangle is free of obstacles
+        if (!Coll.isRectMoveable(o, Bytes.s32(m, 0x148), Bytes.s32(m, 0x14c), Bytes.s32(m, 0x150), Bytes.s32(m, 0x154), true, true)) {
+            return;
+        }
+        m[0x325] = 6;
+        if (!isBoss(o)) {
+            m[0x1ed]--;
+        } else if (MonProc.bossIsLast(o)) {
+            throw new IllegalStateException("MONSTER_Regen: last boss (_map+0x37c): later");
+        }
+        m[0x167] = 0;
+        Chars.setVisible(o, 1);
+        o.m[0x8f] = 0;                                         // SPR_setBlend(o + 0x20, 1, 0): the blend bytes of the embedded sprite struct
+        o.m[0x8e] = 1;
+        o.spr.f6f = 0;
+        o.spr.f6e = 1;
+        Bytes.w16(m, 0x28e, 0);
+        m[0x29e] = (byte) 0xff;
+        TEffects.addCommonEffect(o, o, 1, (byte) (m[0x16b] / 2 + 0x13), Chars.getX(o), Chars.getY(o), 0, -1);
     }
 
     /** MONSTER_addHp(o, n, p3, p4, p5) @0xa3568 */

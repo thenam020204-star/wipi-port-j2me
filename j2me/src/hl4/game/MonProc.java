@@ -517,7 +517,7 @@ public final class MonProc {
             if (!isEndFrame(o, (byte) mi, (byte) md)) {
                 repeat = true;
             } else if (m[0x325] < 0) {
-                later("MONSTER_die");
+                MonDie.die(o);
             } else {
                 setBlend(o, 1, 0xf0 - (0xc - m[0x325]) * 0x14);
                 int v = (m[0x325] - 1) & 0xff;

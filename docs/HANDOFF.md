@@ -22,7 +22,8 @@ Không phải launcher, emulator hay transcode máy móc. Emulator ARM (`tools/r
 | Vào game: scene, map, NPC, cutscene mở đầu (fade, camera, SKIP) | xong | `trace_C`: tick 501–606 khớp hash khung + RNG + back-buffer |
 | Hội thoại cutscene (khung trượt, mặt, tên, chữ chạy) | xong (commit `f2eb960`) | `trace_C`: tick 501–699 khớp |
 | **Phím trong game / event** | **đang làm, chặn kế tiếp** | `trace_D` lệch ở tick 723 vì chưa có phím |
-| Story-mode UI (E4), quái/chiến đấu/skill/AI (E6), menu/túi đồ/shop/save/âm thanh/đóng gói (E8) | chưa | — |
+| Quái/chiến đấu/hạt/hồi sinh (E6, một phần: xem `docs/phaseE.md` §3b) | một phần | trace K khớp tới tick 5300 |
+| Story-mode UI (E4), menu/túi đồ/shop/save/âm thanh/đóng gói (E8) | chưa | — |
 | Build: JAR preverify, scanner 0 reject | đạt | `python3 tools/j2me_build.py build` |
 | Thiết bị thật / KVM thật | **chưa xác minh** | — |
 
