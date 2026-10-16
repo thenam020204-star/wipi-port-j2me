@@ -138,7 +138,7 @@ public final class ObjDraw {
         int oy = (shY - camY) + Bytes.s32(m, 176);
         fxOn[0] = false;
         if (!G.targetEffectList.isEmpty()) {
-            throw new IllegalStateException("Map_drawMidddleObject: TargetEffect_draw: later");
+            TEffects.drawList(ox, oy, 2);
         }
         for (Obj o = G.objList.head; o != null; o = o.next) {
             int t = Obj.structType(o);
@@ -157,11 +157,14 @@ public final class ObjDraw {
                     throw new IllegalStateException("SprObject_draw: later");
                 }
             } else if (t == 6) {
-                throw new IllegalStateException("TargetEffect_draw: later");
+                TEffects.draw((TEff) o, ox, oy, 1);
             }
         }
         if (Particles.curCount > 0) {
             throw new IllegalStateException("paintParticles: later");
+        }
+        if (!G.targetEffectList.isEmpty()) {
+            TEffects.drawList(ox, oy, 0);
         }
         for (Obj o = G.topObjectList.head; o != null; o = o.next) {
             mapObj(o, camX - shX, camY - shY, fxOn);

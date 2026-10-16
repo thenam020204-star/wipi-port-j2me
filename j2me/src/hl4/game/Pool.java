@@ -61,7 +61,7 @@ public final class Pool {
         pools[SPROBJ] = new Obj[100];
         for (int i = 0; i < 100; i++) {
             pools[EFFECT][i] = new Obj(SZ_EFFECT, EFFECT, i);
-            pools[TARGET_EFFECT][i] = new Obj(SZ_TEFFECT, TARGET_EFFECT, i);
+            pools[TARGET_EFFECT][i] = new TEff(SZ_TEFFECT, TARGET_EFFECT, i);
             pools[SPROBJ][i] = new SObj(SZ_SPROBJ, SPROBJ, i);
         }
         pools[MAPOBJ] = new Obj[900];
@@ -202,6 +202,21 @@ public final class Pool {
                 Maps.sprObjInit(o, 0, 0, 0xff, 0xff);
                 hl4.sys.Bytes.w32(o.m, 0x94, 0);
                 hl4.sys.Bytes.w32(o.m, 0x98, 0);
+                break;
+            }
+            case EFFECT:                     // Effect_return @0x587bc
+                o.objSet(1);
+                Effects.initEffect(o, 0xff, 0xff, 0);
+                break;
+            case TARGET_EFFECT: {            // TargetEffect_destroy @0x58794
+                TEff t = (TEff) o;
+                o.objSet(1);
+                Effects.targetEffectSet(o);
+                t.owner = null;
+                t.spr = null;
+                t.hitTable = null;
+                t.hitCells = null;
+                hl4.sys.Bytes.w16(o.m, Obj.MAPIDX, 0xffff);
                 break;
             }
             case HERO:

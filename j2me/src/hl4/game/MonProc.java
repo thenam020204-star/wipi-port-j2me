@@ -1368,8 +1368,165 @@ public final class MonProc {
         return true;
     }
 
+    /** MONSTER_getHitProperty @0xa2e20 */
+    static boolean getHitProperty(Char o) {
+        if (o.hitTable == null) {
+            return false;
+        }
+        Attk.getProperty(o, 0x2b4, o.m[0x167]);
+        return Attk.getHitProperty(o, 0x2b4, o.m[0x8c]);
+    }
+
+    /** MONSTER_attackPreProcess @0xa2e7c: the hit cells of the attack frame (types 3/4 are copied to +0x2c4 and checked against the hero) */
     static void attackPreProcess(Char o) {
-        later("MONSTER_attackPreProcess");
+        byte[] m = o.m;
+        int f = o.m[0x8c];
+        if (!Attk.getHitProperty(o, 0x2b4, f)) {
+            return;
+        }
+        if (!getHitProperty(o)) {
+            return;
+        }
+        Bytes.fill(m, 0x2c4, 0, 0x44);
+        if (Bytes.s16(m, 0x2bc) != (byte) o.m[0x8c]) {
+            return;
+        }
+        int n = Bytes.s16(m, 0x2be);
+        hl4.gfx.SprProps.Cell[] cells = o.hitCells;
+        for (int k = 0; k < n; k++) {
+            int t = (byte) cells[k].type;
+            if (t == 3 || t == 4) {
+                cells[k].store(m, 0x2c4);
+                checkPatternInAttackFrame(o);
+            }
+            n = Bytes.s16(m, 0x2be);
+        }
+    }
+
+    private static final int[] ar = new int[4];
+
+    /**
+     * MONSTER_checkAttackRect(o, out) @0xa21b4: is the hero inside the attack cell copied to +0x2c4 (type 3: the cell's own rectangle for the
+     * facing; type 4: the probe rectangles against the hero rect recorded at +0x310)
+     */
+    static boolean checkAttackRect(Char o, int[] out) {
+        byte[] m = o.m;
+        int st = (byte) curSkillType(o);
+        int md = m[0x168] & 0xff;
+        if (!heroCanDamage()) {
+            return false;
+        }
+        int d = m[0x326] & 0xff;
+        if ((d & 0x80) != 0 || (motionDirs(o, m[0x167]) & 0xff) > 2) {
+            d = md;
+        } else {
+            md = d;
+        }
+        int ct = m[0x2c5];
+        int ox = Bytes.s32(m, 8);
+        int oy = Bytes.s32(m, 0xc);
+        if (ct == 3) {
+            if (st != 6 && st != 0 && st != 7) {
+                return false;
+            }
+            int g = (byte) md * 16;
+            heroHitRect(hr);
+            return Um.collision(ox + Bytes.s32(m, 0x2c8 + g), oy + Bytes.s32(m, 0x2cc + g), Bytes.s32(m, 0x2d0 + g), Bytes.s32(m, 0x2d4 + g), hr[0], hr[1], hr[2],
+                    hr[3], out) < 0;
+        }
+        if (ct != 4) {
+            return false;
+        }
+        if (Monsters.isBoss(o)) {
+            later("MONSTER_checkAttackRect: boss (heroInAttackRange_B)");
+        }
+        int a = (byte) d * 4;
+        int g = (byte) md * 16;
+        out[0] = Bytes.s32(m, 0x2c8 + g);
+        out[1] = Bytes.s32(m, 0x2cc + g);
+        out[2] = 0;
+        out[3] = 0;
+        for (int k = 0; k < 4; k++) {
+            hr[k] = Bytes.s32(m, 0x310 + 4 * k);
+        }
+        int ax = ox + RANGE_A[a];
+        int ay = oy + RANGE_A[a + 1];
+        boolean r;
+        if (st == 3) {
+            r = Um.collision(ax, ay, RANGE_A[a + 2], RANGE_A[a + 3], hr[0], hr[1], hr[2], hr[3], out) < 0;
+            if (r) {
+                m[0x346] = 1;
+                return true;
+            }
+        } else {
+            r = Um.collision(ax, ay, RANGE_A[a + 2], RANGE_A[a + 3], hr[0], hr[1], hr[2], hr[3], ar) < 0;
+            if (st == 4 || st == 1) {
+                m[0x346] = (byte) (r ? 1 : 0);
+                return r;
+            }
+        }
+        int bx = ox + RANGE_B[a];
+        int by = oy + RANGE_B[a + 1];
+        if (st == 3) {
+            if (Um.collision(bx, by, RANGE_B[a + 2], RANGE_B[a + 3], hr[0], hr[1], hr[2], hr[3], out) < 0) {
+                m[0x346] = 1;
+                return true;
+            }
+            return false;
+        }
+        boolean r2 = Um.collision(bx, by, RANGE_B[a + 2], RANGE_B[a + 3], hr[0], hr[1], hr[2], hr[3], ar) < 0;
+        if (st == 5 || st == 2) {
+            boolean v = r || r2;
+            m[0x346] = (byte) (v ? 1 : 0);
+            return v;
+        }
+        return false;
+    }
+
+    private static final int[] cr = new int[4];
+
+    /** MONSTER_checkPatternInAttackFrame @0xa71ac: on an attack frame, the attack of the current skill (direct hit or an effect on the map) */
+    static void checkPatternInAttackFrame(Char o) {
+        byte[] m = o.m;
+        int st = (byte) curSkillType(o);
+        int ox = Bytes.s32(m, 8);
+        int oy = Bytes.s32(m, 0xc);
+        int dir = Chars.getDirection(o) & 0xff;
+        int d326 = m[0x326] & 0xff;
+        if ((d326 & 0x80) == 0) {
+            dir = d326;
+        }
+        int enforce = m[0x309] & 0xff;
+        // MONSTER_checkCanAttack @0xa24e4
+        for (int k = 0; k < 4; k++) {
+            cr[k] = 0;
+        }
+        boolean can = checkAttackRect(o, cr);
+        int effIdx = -1;
+        int x = 0;
+        int y = 0;
+        boolean direct = st == 6 || st == 0 || st == 7;
+        if (can || !direct) {
+            effIdx = (byte) curSkillEffect(o);
+            x = cr[0] + (cr[2] >> 1);
+            y = cr[1] + (cr[3] >> 1);
+        }
+        if (!can) {
+            if (direct || enforce == 0) {
+                return;
+            }
+        } else if (direct) {
+            MonBattle.attackHero(o, m[0x40e], x, y);
+            return;
+        }
+        if (st == 3) {
+            if (Monsters.isBoss(o)) {
+                later("MONSTER_checkPatternInAttackFrame: boss attack (Boss_AI_AttackDirSet)");
+            }
+            TEffects.addSunkenOnMap(o, effIdx, 0, 1, -1, m[0x40e], 0, (byte) dir, x, y, 0, 0, 0, 0);
+        } else if (st == 4 || st == 1 || st == 5 || st == 2) {
+            later("MONSTER_checkPatternInAttackFrame: bullet / lulker skill type " + st);
+        }
     }
 
     static void checkSummon(Char o) {

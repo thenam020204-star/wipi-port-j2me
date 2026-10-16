@@ -13,6 +13,9 @@ public final class Coll {
     /** scratch step vectors of the movement callers (no allocation per tick) */
     public static final int[] scratchX = new int[1];
     public static final int[] scratchY = new int[1];
+    /** scratch outputs (the original's stack buffers; only the return values are used) */
+    private static final int[] zo = new int[2];
+    private static final int[] co = new int[4];
 
     private Coll() {
     }
@@ -162,7 +165,9 @@ public final class Coll {
         }
         boolean xs = ux != 0;
         boolean ys = uy != 0;
-        int[] o = new int[2];
+        int[] o = zo;
+        o[0] = 0;
+        o[1] = 0;
         int tw = m[0x7e];
         int th = m[0x7f];
         int kind;
@@ -234,7 +239,7 @@ public final class Coll {
 
     /** CHAR_checkCollision(c, x, y, w, h, withHero, withMonsters) @0x49a34: another character occupies the rectangle */
     public static boolean charCheckCollision(Obj c, int x, int y, int w, int h, boolean withHero, boolean withMon) {
-        int[] o = new int[4];
+        int[] o = co;
         if (Event.isEvent()) {
             return false;
         }
@@ -276,8 +281,7 @@ public final class Coll {
             if (withHero) {
                 heroMoveRect();
                 Obj hr = Pool.hero;
-                int[] o = new int[4];
-                int u = Um.collision(x, y, w, h, Bytes.s32(hr.m, 0x148), Bytes.s32(hr.m, 0x14c), Bytes.s32(hr.m, 0x150), Bytes.s32(hr.m, 0x154), o);
+                int u = Um.collision(x, y, w, h, Bytes.s32(hr.m, 0x148), Bytes.s32(hr.m, 0x14c), Bytes.s32(hr.m, 0x150), Bytes.s32(hr.m, 0x154), co);
                 return u == 0;
             }
         }
@@ -329,14 +333,19 @@ public final class Coll {
         return isRectMoveable(c, dx[0] + x, dy[0] + y, w, h, withHero, withMon);
     }
 
+    private static final int[] mdx = new int[1];
+    private static final int[] mdy = new int[1];
+
     /** CHAR_isMoveable(c, dir) @0x49e7c: could the character take a full-size step in direction dir */
     public static boolean charIsMoveable(Obj c, int dir) {
         int x = Bytes.s32(c.m, 0x148);
         int y = Bytes.s32(c.m, 0x14c);
         int w = Bytes.s32(c.m, 0x150);
         int h = Bytes.s32(c.m, 0x154);
-        int[] dx = {w * Um.vecX(dir)};
-        int[] dy = {h * Um.vecY(dir)};
+        int[] dx = mdx;
+        int[] dy = mdy;
+        dx[0] = w * Um.vecX(dir);
+        dy[0] = h * Um.vecY(dir);
         zoneMove(x, y, w, h, dx, dy);
         if (dx[0] != 0 || dy[0] != 0) {
             return isRectMoveable(c, x + dx[0], y + dy[0], w, h, false, true);

@@ -442,18 +442,14 @@ public final class Chars {
         return c.m[0x10c] != 0 && c.m[0x10e] == 2;
     }
 
-    /** CHAR_preProcessTargetEffectList @0x4ac38 (the target-effect objects are not ported yet: an occupied list stops here) */
+    /** CHAR_preProcessTargetEffectList @0x3ac38 */
     public static void preProcessTargetEffects(Char c) {
-        if (!c.targetEffects.isEmpty()) {
-            throw new IllegalStateException("EFF_preProcessOneTargetEffect: later");
-        }
+        TEffects.preProcessList(c);
     }
 
-    /** CHAR_endProcessTargetEffectList @0x4a4cc */
+    /** CHAR_endProcessTargetEffectList @0x3a4cc */
     public static void endProcessTargetEffects(Char c) {
-        if (!c.targetEffects.isEmpty()) {
-            throw new IllegalStateException("EFF_endProcessOneTargetEffect: later");
-        }
+        TEffects.endProcessList(c);
     }
 
     /** damage-over-time tick of a buff (poison/bleed use +0x118, burning +0x120) */

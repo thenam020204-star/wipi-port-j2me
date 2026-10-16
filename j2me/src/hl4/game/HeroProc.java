@@ -17,41 +17,14 @@ public final class HeroProc {
 
     // ---- attack property of the current frame (HERO_check_extra_frame) -----------------------------------------------------------------------
 
-    /** ATTKPRO_getProperty(spr, hero+0x22c, motion): the record of the motion (pointer, count) */
+    /** ATTKPRO_getProperty(spr, hero+0x22c, motion) */
     private static void getProperty(Char h, int motion) {
-        h.hitTable = null;
-        int n = 0;
-        SprProps pr = h.spr.props;
-        if (motion != -1 && pr != null) {
-            int idx = pr.idx[motion & 0xff];
-            if (idx != -1 && idx >= 0 && idx < pr.n && pr.slots[idx] != null) {
-                h.hitTable = pr.slots[idx];
-                n = h.hitTable.length;
-            }
-        }
-        Bytes.w32(h.m, 0x230, n);
+        Attk.getProperty(h, 0x22c, motion);
     }
 
-    /** ATTKPRO_getHitProperty(table, frame, hero+0x234): the entry of the frame (id, count, cells) or -1s */
+    /** ATTKPRO_getHitProperty(hero+0x22c, frame, hero+0x234) */
     private static boolean getHitProperty(Char h, int frame) {
-        byte[] m = h.m;
-        SprProps.Entry[] t = h.hitTable;
-        int n = Bytes.s32(m, 0x230);
-        if (n <= 0) {
-            return true;
-        }
-        for (int i = 0; i < n; i++) {
-            if (t[i].id == (short) frame) {
-                Bytes.w16(m, 0x234, t[i].id);
-                Bytes.w16(m, 0x236, t[i].nB);
-                h.hitCells = t[i].cells;
-                return true;
-            }
-        }
-        Bytes.w32(m, 0x234, -1);
-        Bytes.w32(m, 0x238, -1);
-        h.hitCells = null;
-        return false;
+        return Attk.getHitProperty(h, 0x22c, frame);
     }
 
     /** word 'i' of group 'dir' of cell k (the groups of the original's 0x44-byte cells; a direction past the 4th group reads on into the next cell) */

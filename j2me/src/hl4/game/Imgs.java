@@ -64,6 +64,7 @@ public final class Imgs {
     /** loadCommonImage @0xcd35c: common images (tinted by the time-of-day slot _map[0x68]) */
     public static void loadCommon(int timeSlot) {
         cm = Img.loadAll("/CM/_CM_IMGCM", 1);
+        TEffects.loadCommon();
     }
 
     /** loadEvtEffectCif(cifId, slot) @0xcd1d4 + loadSimpleSprite */

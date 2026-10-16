@@ -76,6 +76,13 @@ def mask_for(name):
         r += [(0, 8), (0x10, 0x14)]
     if base in ('hero', 'summon', 'monster', 'npc'):
         r += [(0x48, 0x94), (0x130, 0x13c + 12)]   # +0x20..0x47 = SPR header ints (anchor, move rect, rect 2) are compared
+    if base == 'monster':
+        # AI script heap pointers (EnemyAIParsing_LoadData / setAclionList / ActionCheck; the Java port keeps them in Char.ai),
+        # the speech-string pointer (+0x2b0) and the attack-property table / cells pointers (+0x2b4, +0x2c0; Char.hitTable / hitCells)
+        for a in (0x210, 0x214, 0x218, 0x21c, 0x224, 0x22c, 0x238, 0x23c, 0x240, 0x244, 0x24c, 0x258, 0x260, 0x284, 0x288, 0x2b0, 0x2b4, 0x2c0):
+            r += [(a, a + 4)]
+    if base == 'hero':
+        r += [(0x22c, 0x230), (0x238, 0x23c)]     # attack-property table / cells pointers (Char.hitTable / hitCells)
     if base == 'npc':
         r += [(0x1b0, 0x1b4)]
     if base == 'mapobj':
