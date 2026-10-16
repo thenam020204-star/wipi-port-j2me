@@ -129,21 +129,27 @@ Chi tiết: `docs/phaseD.md`, kết quả kiểm: `docs/phaseD_selftest.txt`. D�
 `SPR_drawSpriteNPC` (59.907 lời gọi), `DM_DrawImgEx`/co giãn/palette/HSB/tint (≈17 nghìn dòng golden), glyph HNF (2432 ký tự) — **0 lệch**, cả trên lớp đã preverify.
 MIDlet khung chạy được trong MicroEmulator 2.0.4 (240×320, JAR+JAD, ảnh `TITLE_BM` từ JAR). Chưa chạy KVM/thiết bị thật.
 
+## Phase E — tiến độ (2026-10-16)
+Chi tiết: `docs/phaseE.md`. **Bàn giao cho phiên sau: `docs/HANDOFF.md`.**
+
+- Đo bằng `tools/port_cover.py`: 378 / 2113 hàm trong phạm vi (≈ 18%); còn 108 nhánh `later`.
+- Golden trace toàn game: tick 501–699 khớp hash khung + số lần gọi RNG + hash back-buffer từng tick (`trace_C`).
+  Đoạn này gồm vào game, cutscene mở đầu và hộp thoại đầu tiên.
+- Chặn kế tiếp: đường phím trong game (`MainGameFrame_KeyPressed`, `Event_Key`).
+
 ## Trạng thái (Definition of Done)
 | Hạng mục | Trạng thái | Bằng chứng |
 |---|---|---|
-| Đã phân tích | Phase A xong; Phase B: symbol, call graph (sống/chết), màn hình, loop, input/phím, frame, RNG, audio, save (chuỗi gọi + container), xác thực, bảng chuyển frame xong; còn pipeline vẽ. Phase C: DES, GBM, font, text, CIF, blit, sprite, fx, PAL, map, EXD, MMF, AI, _scn đã kiểm vi sai; bảng dữ liệu đã có khung + bố cục đo (phần còn lại: `docs/phaseC_tables.md` §5) | `docs/manifest_*.tsv`, `docs/binlayout_output.txt`, `docs/phaseB_*.md`, `docs/*_and2011.tsv` |
-| Đã triển khai | một phần: lõi dữ liệu + đồ hoạ (Phase D); logic game chưa | `j2me/src`, `docs/phaseD.md` |
-| Đã build | JAR/JAD preverify (lõi + khung demo), quét 0 reject | `tools/j2me_build.py`, `work/build/hl4.sha256` (cục bộ) |
-| Chạy emulator | MicroEmulator 2.0.4: khung demo chạy; golden của từng module chạy trên JVM máy tính | `docs/phaseD_selftest.txt` |
-| Đối chiếu bản gốc | từng module Java == mô hình Python == hàm gốc ARM (differential Phase C + golden Phase D); chưa có golden trace toàn game | `docs/phaseC_*`, `docs/phaseD_selftest.txt` |
+| Đã phân tích | Phase A–C xong; Phase E phân tích theo luồng chạy (tới hộp thoại cutscene + đường phím đã đọc pseudo-C) | `docs/phaseB_*.md`, `docs/phaseC_*`, `docs/HANDOFF.md` §5 |
+| Đã triển khai | một phần (≈ 18% hàm): lõi dữ liệu/đồ hoạ, Logo/Load/Title, scene/map/NPC/hero (event mode), cutscene, hội thoại; chưa: phím, play mode, chiến đấu, menu, save, âm thanh | `j2me/src`, `tools/port_cover.py` |
+| Đã build | JAR/JAD preverify, scanner 0 reject (92 lớp) | `tools/j2me_build.py build` |
+| Chạy emulator | MicroEmulator 2.0.4 (khung demo); golden trace trên JVM máy tính | `docs/phaseD_selftest.txt` |
+| Đối chiếu bản gốc | trace A (300 tick) + trace C tick 501–699 khớp từng tick | `tools/e_trace.py` ↔ `GameTraceTest` |
 | Chạy thiết bị thật | chưa xác minh | — |
 
 ## Việc tiếp theo
-1. Phase B (phần còn lại): pipeline vẽ `DM_*`/`SPR_*`;
-   đối chiếu `kickass` mẫu với thư viện MIDAS của KTF/LGT 2010.
-2. Emulator đối chứng: ARM interpreter + HLE cho 105 import có tên (tham khảo runtime LGT của project cũ). Ghi golden trace cho Phase F,
-   gồm đo nhịp khung và kiểm chứng dãy RNG.
-2b. Phase D (đã xong phần nền): tiếp theo Phase E — bảng phím + nhịp khung (`timerCB`), vẽ bản đồ, bố cục chữ, loader `Item_*/NpcUi*/FR_*` + VM `IT_*`/`EVT_*`, chiến đấu/AI, save; golden trace bằng emulator ARM.
-3. Phase C (phần còn lại): bố cục loader `Item_*`/`NpcUi*`/`FR_*` (golden dump khi chuyển sang Java). Phase D: dựng project Java ME (CLDC 1.1/MIDP 2.0, preverify) và bộ golden-trace; Phase E: logic game (vẽ map, VM `_scn`, chiến đấu).
-4. Ghép tên AND2011 → KTF vẫn giữ để đối chiếu (`docs/xmatch_strings_ktf_so.tsv`).
+Xem `docs/HANDOFF.md` §5. Tóm tắt:
+1. Phím trong game/event.
+2. Các lệnh script/popup/narration mà `trace_D` chạm tới (lấy danh sách bằng `e_cover.py` trước, port theo cụm).
+3. Play mode hero + HUD.
+4. E6 chiến đấu, E4 story menu, E8 menu/save/âm thanh/đóng gói.

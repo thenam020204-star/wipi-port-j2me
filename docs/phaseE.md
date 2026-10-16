@@ -29,6 +29,9 @@ DrawRect viền khoảng bao gồm x..x+w, y..y+h — game truyền w−1,h−1 
 | `Prim`/`Gfx` (FillRect, DrawRect, DrawLine, FillRectAlpha, CopyOffScreen) | qua trace (FillRectAlpha, DrawLine chưa có golden riêng) |
 | `Touch` (TF_setFrame/Push/Pop, extradata, Touch_draw) | trace |
 | `LoadFrame`, `LogoFrame`, `TitleFrame` (hộp đồng ý), `MapFx` (fade + hiệu ứng rơi) | trace A: 300 tick (logo → trang thông báo → logo → tải → title → hộp đồng ý), hash + RNG trùng từng tick |
+| `GameStart`, `Scene`, `Maps` (nạp scene/map/object), `Npcs`, `Chars`, `HeroProc` (event mode), `Cam`, `Event`/`Evt`/`It` (VM script: lệnh 0–9, 0xf, 0x20, 0x23, 0x24, 0x2b, 0x2d–0x31, 0x37) | trace C: tick 501–699, hash khung + RNG + back-buffer |
+| Chuỗi vẽ `MainGameFrame_drawGame`: `MapDraw` (back buffer cuộn theo camera), `MapObjDraw`, `ObjDraw`, `HeroDraw`, `EventDraw` (dải đen, tint, SKIP, fade skip) | trace C: tick 501–699 |
+| `Dialog` (ScriptWindow open/close, TalkBox reset/tick, thứ tự vẽ 0x510, khung `drawGMenuBackFrame_main`, tên "=%s ", mặt `NPC/FACE_n`, chữ chạy `HF_GetNextLen`) | trace C: tick 607–699 (hộp thoại đầu) |
 
 ## 4. Khác biệt có chủ đích so với bản gốc (Phase E)
 - Vùng game 240×320 ngay từ màn logo (bản gốc 240×400 trước title). Chỉ đổi vị trí dọc của màn logo/thông báo.
