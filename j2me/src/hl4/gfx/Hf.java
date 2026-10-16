@@ -165,6 +165,34 @@ public final class Hf {
         }
     }
 
+    /**
+     * HF_GetNextLen(str, len, start, off) @0x74e08: the typewriter step of the dialog text: from position start + off, one printable glyph is taken
+     * (spaces, escape codes and '=' ride along) and the position of the next glyph, relative to start, is returned (len - start at the end).
+     */
+    public static int nextLen(byte[] s, int len, int start, int off) {
+        int i = off + start;
+        boolean seen = false;
+        while (i < len) {
+            int b = s[i] & 0xff;
+            if ((b & 0x80) == 0) {
+                if (b != 0x20 && !isEscape(b) && b != 0x3d) {
+                    if (seen) {
+                        return (1 - start) + i;
+                    }
+                    seen = true;
+                }
+                i++;
+            } else {
+                if (seen) {
+                    return (2 - start) + i;
+                }
+                seen = true;
+                i += 2;
+            }
+        }
+        return len - start;
+    }
+
     /** HF_GetWidth(str, len, font) = HF_GetWidth2(str, len, 0, 0, font). */
     public static int width(byte[] s, int len, int ft) {
         return width2(s, len, 0, 0, ft);

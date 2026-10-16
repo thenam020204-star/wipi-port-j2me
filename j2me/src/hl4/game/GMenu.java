@@ -38,6 +38,29 @@ public final class GMenu {
         }
     }
 
+    /**
+     * drawGMenuBackFrame_main(p1, x, y, p4, w, h, r, g, b, p10) @0x6ac70: translucent panel (alpha ~p10) with a green line, two black outlines and the four
+     * corner ornaments of the common menu image 0.  p1 != 0 shortens the box by 12.
+     */
+    public static void backFrameMain(Frame f, int p1, int x, int y, int p4, int w, int h, int r, int g, int b, int p10) {
+        int top = p4 + y;
+        int cut = p1 == 0 ? 0 : 0xc;
+        int hh = (h - p4) - cut;
+        Gfx.fillRectAlpha(f, x, top, w, hh, ~p10 & 0xff, r, g, b);
+        Gfx.drawRectRGB(f, x, top, w, hh, 0x53, 0x5b, 0x2b);
+        Gfx.drawRectRGB(f, x + 1, top + 1, w - 2, ((-2 - p4) + h) - cut, 0xb, 0xb, 0xb);
+        int lx = x - 1;
+        int ty = top - 1;
+        Gfx.drawRectRGB(f, lx, ty, w + 2, (h - (p4 - 2)) - cut, 0xb, 0xb, 0xb);
+        int rx = w + x + 1;
+        Gbm img = hl4.gfx.Img.get(Imgs.gmenuComm, 0);
+        Fx.drawImgRotate(f, lx, ty, img.w, img.h, img, 0, 0, 0, 0, 100, 100, 9);
+        Fx.drawImgRotate(f, rx, ty, img.w, img.h, img, 0, 0, 1, 0, 100, 100, 0x21);
+        int by = ((y + 1) + h) - cut;
+        Fx.drawImgRotate(f, lx, by, img.w, img.h, img, 0, 0, 2, 0, 100, 100, 0xc);
+        Fx.drawImgRotate(f, rx, by, img.w, img.h, img, 0, 0, 3, 0, 100, 100, 0x24);
+    }
+
     /** GMenu_drawSubTitle(x, y, w, num1, num2, text, kind) @0x73090 (kind 7 = green ribbon). num1/num2 = -1 mean none. */
     public static void drawSubTitle(int x, int y, int w, int num1, int num2, byte[] text, int kind) {
         Frame f = Gfx.scr;

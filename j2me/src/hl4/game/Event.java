@@ -161,11 +161,31 @@ public final class Event {
             case 0x2d:
                 return delay(true);
             case 0x2e:
+            case 0x30: {
+                if (e[0x206] != 0) {
+                    e[e[0x205] * 0xbc + 0x23f] = 1;
+                }
+                int k = e[0x50d] & 0xff;
+                if (e[k * 0xbc + 0x23f] != 0) {
+                    Bytes.w32(e, 0x200, -1);
+                    if (e[0x5dc] != 0) {
+                        throw new IllegalStateException("Event_Init_Narration: later");
+                    }
+                }
+                if (Dialog.text[k] != null) {
+                    Dialog.talkBoxTick(k);
+                    return true;
+                }
+                Bytes.w32(e, 0x200, -1);
+                return false;
+            }
             case 0x2f:
-            case 0x30:
-            case 0x32:
+                return Dialog.scriptWindowClose(e[0x50a] & 0xff) != 0;
             case 0x3c:
-                throw new IllegalStateException("EVENT_TickMovie cmd " + Bytes.s32(e, 0x200) + ": later");
+                Dialog.scriptWindowOpen(e[0x505] & 0xff);
+                return true;
+            case 0x32:
+                throw new IllegalStateException("Event_Popup (EVENT_TickMovie cmd 50): later");
             default:
                 break;
         }
@@ -288,6 +308,7 @@ public final class Event {
         Bytes.w32(e, p + 0x218, 0);
         Bytes.w32(e, p + 0x220, 0);
         Bytes.w32(e, p + 0x224, 0);
+        Dialog.clear(k);
     }
 
     /** Event_Release_Faceimage(k) @0x6ba68: frees the face sprite/image of script slot k */

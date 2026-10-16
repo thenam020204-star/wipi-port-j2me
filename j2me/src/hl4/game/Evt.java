@@ -255,6 +255,56 @@ public final class Evt {
                 e[0x943] = 0;
                 return true;
             }
+            case 0x2e: {
+                t.get(b, 4);
+                if (e[0x206] != 0) {
+                    return true;
+                }
+                int idx = b[1];
+                int partner = ((idx + (idx >>> 31)) & ~1) + ((idx + 1) % 2);
+                if (e[partner * 0xbc + 0x214] != 0) {
+                    int old = e[0x505] & 0xff;
+                    e[0x50a] = (byte) old;
+                    e[0x50b] = (byte) (old <= 1 ? 1 : 0);
+                    e[old * 0xbc + 0x23e] = 1;
+                    e[0x506] = (byte) ((idx & 1) != 0 ? 2 : 3);
+                    Bytes.w32(e, 0x200, 0x2f);
+                    e[0x204] = 1;
+                } else {
+                    e[0x506] = (byte) ((idx & 1) != 0 ? 2 : 3);
+                    Bytes.w32(e, 0x200, 0x3c);
+                }
+                e[0x508] = b[0];
+                e[0x509] = b[2];
+                e[0x50e] = b[3];
+                e[0x50d] = b[1];
+                e[0x505] = b[1];
+                return false;
+            }
+            case 0x2f: {
+                int s = t.getByte() & 0xff;
+                e[0x50a] = (byte) s;
+                if (s == 4) {
+                    e[0x472] = 1;
+                    e[0x23e] = 1;
+                    e[0x2fa] = 1;
+                    e[0x3b6] = 1;
+                } else {
+                    e[0x50b] = (byte) (s <= 1 ? 1 : 0);
+                    e[s * 0xbc + 0x23e] = 1;
+                }
+                return false;
+            }
+            case 0x30: {
+                int v = t.getByte() & 0xff;
+                if (e[0x206] != 0) {
+                    return true;
+                }
+                e[0x50e] = (byte) v;
+                e[0x50d] = 0;
+                Dialog.talkBoxReset(v, 0, 1);
+                return false;
+            }
             case 0x31: {
                 int c = t.getByte();
                 if (e[0x206] == 0) {

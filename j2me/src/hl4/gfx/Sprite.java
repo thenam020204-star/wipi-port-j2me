@@ -17,6 +17,7 @@ public final class Sprite {
     public Gbm[][] orig = new Gbm[32][];    // spr+0x2c
     public int c60, c62, c64, c67, c66;     // control palette parameters (s16 s16 s16 u8 u8)
     public int f68;                         // control-palette flag
+    public int f6c;                         // current frame counter (SPR_getFrame / SPR_repeatFrame / SPR_initFrame)
     public int f6d;                         // 'set-2 image offset' flag
     public int f6e;                         // blend enable
     public int f6f;                         // blend alpha
@@ -39,6 +40,7 @@ public final class Sprite {
         c67 = 0;
         c66 = 0;
         f68 = 0;
+        f6c = 0;
         f6d = 0;
         f6e = 0;
         f6f = 0;
@@ -95,11 +97,22 @@ public final class Sprite {
     }
 
     /**
-     * SPR_drawSprite(frame, spr, anim, dir, &frameNo, x, y, p8, p9) @0xd11bc = SPR_drawSpriteNPC(frame, spr, anim, 2, 3, dir, &frameNo,
-     * x, y, p8, p9, -1) (the control-palette pre-step for _lcdEff[10] == 2 is not ported yet: that class never occurs in the title flow).
+     * SPR_drawSprite(frame, spr, anim, dir, &frameNo, x, y, p8, p9) @0xc11bc = SPR_drawSpriteNPC(frame, spr, anim, 2, 3, dir, &frameNo,
+     * x, y, p8, p9, -1) after the control-palette pre-step for _lcdEff[10] == 2 (SPR_set_control_pal(spr, 0, 0, 0, 0xff, 0x10)).
      */
     public int drawSprite(SpriteOut o, Frame fr, int anim, int dir, int frameNo, int x, int y, int p8, int p9) {
+        if (lcdEff[10] == 2) {
+            setControlPal(0, 0, 0, 0xff, 0x10);
+        }
         return drawNpc(o, fr, anim, 2, 3, dir, frameNo, x, y, p8, p9, -1);
+    }
+
+    /** SPR_repeatFrame(spr, 0, 0) @0xc005c: next frame; past the last frame of animation 0 / direction 0 the counter restarts (SPR_initFrame) */
+    public void repeatFrame() {
+        f6c = (f6c + 1) & 0xff;
+        if ((byte) f6c > maxFrame(0, 0)) {
+            f6c = 0;
+        }
     }
 
     // global render state read by the function

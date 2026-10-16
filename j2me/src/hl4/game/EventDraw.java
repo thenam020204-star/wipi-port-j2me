@@ -48,9 +48,15 @@ public final class EventDraw {
             throw new IllegalStateException("Event_Draw_Alert_Popup: later");
         }
         if (e[0x5dc] == 0) {
+            boolean active = false;
             for (int i = 0; i < 4; i++) {
-                if (e[0x510 + i] != -1) {
-                    throw new IllegalStateException("Event_Draw_ScriptWindow / Event_Draw_Talk: later");
+                int s = e[0x510 + i];
+                if (s != -1) {
+                    if (e[0x504] == s) {
+                        active = true;
+                    }
+                    Dialog.drawScriptWindow(f, s, active);
+                    Dialog.drawTalk(f, e[0x510 + i], active);
                 }
             }
         } else {
