@@ -41,6 +41,17 @@ public final class Glob {
      * cleared and the title background redrawn when loaded.
      */
     public static void setUiChange(int mode) {
+        if (mode == 0) {
+            // game mode (portrait): same game area as mode 1; Touch layer on; without a loaded map the whole buffer is cleared
+            Touch.standInit();
+            setMenuXY();
+            Gfx.setClip(0, 0, gameW, gameH);
+            if (Maps.layerA == null || Maps.layerB == null) {
+                Gfx.fillRectRGB(Gfx.scr, 0, 0, gameW, gameH, 0xb, 0xb, 0xb);
+                return;
+            }
+            throw new IllegalStateException("touch_setUiChange(0) with a loaded map: later");
+        }
         if (mode != 1) {
             throw new IllegalStateException("touch_setUiChange(" + mode + "): later");
         }

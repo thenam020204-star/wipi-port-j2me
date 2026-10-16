@@ -41,10 +41,15 @@ public final class LoadFrame implements FrameHandler {
         if (next == 1) {
             Glob.setUiChange(1);
         } else if (next == 4) {
-            throw new IllegalStateException("in-game load: later");
+            Glob.setUiChange(0);
         } else {
             Glob.setUiChange(1);
         }
+    }
+
+    /** MainMenuFrame_initMenuState(1|2) @0xa092c: starts the game load (target 6, then frame 4) */
+    public static void setStateGame() {
+        setState(6, 4);
     }
 
     /** MrgText_load("/tdf/_tdf_TIP") + UM_Rand(0, n-1) + copy: consumes one RNG value. */
@@ -80,11 +85,42 @@ public final class LoadFrame implements FrameHandler {
                 Touch.setFrame(0x3a);
                 break;
             case 5:
+                Sound.menuBgm();
                 Imgs.loadMenu();
                 loadCnt = 10;
                 break;
+            case 6:
+                if (loadCnt == 0) {
+                    Imgs.loadGameCommon();
+                    return;
+                }
+                if (loadCnt - 1 < 9) {
+                    GameLoad.mainGameFrameLoad((byte) (loadCnt - 1));
+                    return;
+                }
+                GameLoad.loadHeroAndSummon();
+                MainGameFrame.initialize();
+                Hero.setHeroStatus(0, 0);
+                curTarget = 8;
+                loadCnt = 0;
+                Scene.change(0);
+                afterSceneStep();
+                break;
+            case 8:
+                if (loadCnt < 10) {
+                    Scene.change(loadCnt);
+                }
+                afterSceneStep();
+                break;
             default:
                 throw new IllegalStateException("load target " + curTarget + ": later");
+        }
+    }
+
+    private static void afterSceneStep() {
+        if (loadCnt == 10) {
+            Event.onLoad();
+            MainGameFrame.mapChangeInitialize();
         }
     }
 
@@ -97,6 +133,10 @@ public final class LoadFrame implements FrameHandler {
             case 5:
                 MainMenuFrame.finalizeFrame();
                 Imgs.deleteMenu();
+                break;
+            case 7:
+            case 8:
+                Scene.end();
                 break;
             default:
                 break;
@@ -145,6 +185,10 @@ public final class LoadFrame implements FrameHandler {
             case 3:
                 MainMenuFrame.initialize();
                 Engine.setFrame(MainMenuFrame.I);
+                break;
+            case 4:
+            case 6:
+                Engine.setFrame(MainGameFrame.I);
                 break;
             default:
                 throw new IllegalStateException("next frame " + nextFrame + ": later");

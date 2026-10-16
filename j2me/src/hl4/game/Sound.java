@@ -13,6 +13,13 @@ public final class Sound {
     public static void checkBgm() {
     }
 
+    /** Map_setBgmPlay(1); Map_Set_BGM(10): menu music request (state in _map) */
+    public static void menuBgm() {
+        G.map[0x6b] = 1;
+        G.map[0x6a] = G.map[0x69];
+        G.map[0x69] = 10;
+    }
+
     /** SM_StopSound */
     public static void stop() {
     }

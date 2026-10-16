@@ -10,6 +10,8 @@ package hl4.gfx;
  */
 public final class Sprite {
     public Cif cif;
+    /** attack / hit rectangles (spr+0..0x24, +0x54, +0x58, +0x5c): loaded by SPR_loadExtra / SPR_loadAttackProperty */
+    public SprProps props;
     public int nSets;                       // spr+0x38
     public Gbm[][] sets = new Gbm[32][];    // spr+0x28 (current)
     public Gbm[][] orig = new Gbm[32][];    // spr+0x2c
@@ -22,10 +24,38 @@ public final class Sprite {
     public Sprite() {
     }
 
+    /** SPR_set @0xd1784: the zero state of an SPR struct */
+    public void set() {
+        cif = null;
+        props = null;
+        nSets = 0;
+        for (int i = 0; i < sets.length; i++) {
+            sets[i] = null;
+            orig[i] = null;
+        }
+        c60 = 0;
+        c62 = 0;
+        c64 = 0;
+        c67 = 0;
+        c66 = 0;
+        f68 = 0;
+        f6d = 0;
+        f6e = 0;
+        f6f = 0;
+    }
+
     /** SPR_loadSprite(spr, path, mode): index parsed from the CIF file; nSets = first byte (spr+0x38). */
     public Sprite(byte[] cifData, int mode) {
         cif = new Cif(cifData, mode);
         nSets = cifData[0];
+    }
+
+    /** SPR_freeSpriteImage: drops every image set (the sprite structure stays loaded) */
+    public void freeImages() {
+        for (int i = 0; i < sets.length; i++) {
+            sets[i] = null;
+            orig[i] = null;
+        }
     }
 
     /** loadSprImages(spr, setIdx, ...): both the current and the original set array point at the loaded images. */

@@ -16,6 +16,7 @@ public final class Pool {
     public static final int ITEM = 8;
     public static final int DROP = 9;
     public static final int TILE = 10;
+    public static final int PICKUP = 14;
     public static final int ARMS_ITEM = 12;
     public static final int SPROBJ = 16;
 
@@ -29,6 +30,7 @@ public final class Pool {
     public static final int SZ_ITEM = 0x270;
     public static final int SZ_DROP = 0x60;
     public static final int SZ_TILE = 0x24;
+    public static final int SZ_PICKUP = 0x48;
     public static final int SZ_SPROBJ = 0xa0;
 
     /** pools[type][idx] */
@@ -78,9 +80,71 @@ public final class Pool {
         for (int i = 0; i < 30; i++) {
             pools[DROP][i] = new Obj(SZ_DROP, DROP, i);
         }
+        pools[PICKUP] = new Obj[5];
+        for (int i = 0; i < 5; i++) {
+            pools[PICKUP][i] = new Obj(SZ_PICKUP, PICKUP, i);
+        }
         pools[TILE] = new Obj[20];
         for (int i = 0; i < 20; i++) {
             pools[TILE][i] = new Obj(SZ_TILE, TILE, i);
+        }
+    }
+
+    /** the rest of MP_Initialize: every slot gets its type's *_set state (hero, summon, monsters, map objects, tiles, sprite objects, items, NPCs, effects, drops) */
+    public static void initSlots() {
+        Hero.set(hero);
+        Summon.set(summon);
+        for (int i = 0; i < 25; i++) {
+            Char c = (Char) pools[MONSTER][i];
+            Chars.set(c);
+            Chars.init(c, 0xff, 0xff, 0, 0, 0, 0, 0);      // MONSTER_set
+        }
+        for (int i = 0; i < 900; i++) {
+            Obj o = pools[MAPOBJ][i];
+            o.objSet(1);
+            Maps.mapObjInit(o, 0, 0, 0xff, 0, 0, 0);
+        }
+        for (int i = 0; i < 20; i++) {
+            Obj o = pools[TILE][i];
+            o.objSet(1);
+            o.m[0x20] = 0;
+            hl4.sys.Bytes.w32(o.m, 8, 0);
+            hl4.sys.Bytes.w32(o.m, 0xc, 0);
+        }
+        for (int i = 0; i < 100; i++) {
+            Obj o = pools[SPROBJ][i];
+            o.objSet(1);
+            Maps.sprObjInit(o, 0, 0, 0xff, 0xff);
+        }
+        for (int i = 0; i < 200; i++) {
+            Obj o = pools[ITEM][i];
+            o.objSet(1);
+            Items.init(o);
+        }
+        for (int i = 0; i < 70; i++) {
+            Obj o = pools[ARMS_ITEM][i];
+            o.objSet(1);
+            Items.init(o);
+        }
+        for (int i = 0; i < 20; i++) {
+            Npcs.set((Char) pools[NPC][i]);
+        }
+        for (int i = 0; i < 100; i++) {
+            Obj o = pools[EFFECT][i];
+            o.objSet(1);
+            Effects.initEffect(o, 0xff, 0xff, 0);
+            o.m[0x19] = 100;
+            Obj t = pools[TARGET_EFFECT][i];
+            t.objSet(1);
+            Effects.initEffect(t, 0xff, 0xff, 0);
+            t.m[0x19] = 100;
+            Effects.targetEffectSet(t);
+        }
+        PickUp.init();
+        for (int i = 0; i < 30; i++) {
+            Obj o = pools[DROP][i];
+            o.objSet(1);
+            Maps.dropItemInit(o, 0, 0, 0xff, 0, 0, 0, 0, 0, 0);
         }
     }
 

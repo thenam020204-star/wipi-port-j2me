@@ -33,6 +33,8 @@ public final class MainMenuFrame implements FrameHandler {
         Engine.frameDelay = Opt.FPS[Opt.v[2]];
         mode = 0;
         sel = 0;
+        G.gameMenu[0x16] = 0;
+        G.map[0x68] = (byte) 0xff;
         Touch.setFrame(Touch.NONE);
     }
 

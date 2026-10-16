@@ -26,6 +26,35 @@ public final class Img {
         return a;
     }
 
+    /**
+     * loadSprImages' image loader (DM_LoadResGbmMergeBlending @0x54750 per image): palIndex (u16) <= 254 first swaps the colours with
+     * /H4/PAL/_H_###_PAL, then the time-of-day tint of slot is applied (-1 = none).  null when the resource is missing.
+     */
+    public static Gbm[] loadSprSet(String path, int palIndex, int slot) {
+        byte[] b = Res.load(path);
+        if (b == null) {
+            return null;
+        }
+        Gbm[] a = Gbm.loadMerged(b);
+        int pi = palIndex & 0xffff;
+        int[] pairs = null;
+        if (pi <= 254) {
+            byte[] pf = Res.load("/H4/PAL/_H_" + (pi < 10 ? "00" + pi : (pi < 100 ? "0" + pi : String.valueOf(pi))) + "_PAL");
+            if (pf != null) {
+                pairs = hl4.data.Pal.parse(pf);
+            }
+        }
+        for (int i = 0; i < a.length; i++) {
+            if (pairs != null) {
+                hl4.data.Pal.apply(a[i].palBase, a[i].pal, pairs);
+            }
+            if (slot != -1) {
+                Fx.mergeBlend(a[i], slot);
+            }
+        }
+        return a;
+    }
+
     /** getImage(set, idx). */
     public static Gbm get(Gbm[] set, int idx) {
         return set == null || idx < 0 || idx >= set.length ? null : set[idx];

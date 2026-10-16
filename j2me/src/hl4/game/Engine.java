@@ -24,6 +24,8 @@ public final class Engine {
     public static boolean exit;
     /** MainFrame_certification failed (mainFrame+0x4e): the offline port always passes */
     public static boolean authError;
+    /** mainFrame+0: the frame counter word reset by SaveGameDataInit */
+    public static int mainFrame0;
 
     private Engine() {
     }
@@ -39,6 +41,10 @@ public final class Engine {
         Glob.gameW = 240;
         Glob.gameH = 320;
         // _menuOptions stays all zero until TitleFrame_Initialize runs LoadOption (CONFIRMED by the reference run: opt bytes 00.. before the title)
+        Fr.load();
+        Items.dataPreLoad();
+        Pool.initialize();
+        Pool.initSlots();
         Gfx.init();
         Gfx.fillRectRGB(Gfx.scr, 0, 0, Glob.gameW, Glob.gameH, 0xd, 0xd, 0xf);
         Hf.init();

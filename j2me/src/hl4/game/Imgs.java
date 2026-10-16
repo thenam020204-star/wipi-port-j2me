@@ -20,6 +20,9 @@ public final class Imgs {
     public static Gbm[] mmenu;
     /** _MMenuChSpr[0..3]: main-menu character sprites (/CM/_MMENU_CHAR_n_CIF + _BM) */
     public static final Sprite[] mmenuChar = new Sprite[4];
+    public static Sprite imo;
+    public static Gbm[] shadow;
+    public static byte[] txtPopup;
     /** _sprEvtEffect[]: event/title effect sprites (MAP/EFFECT/_EVT_EFF_n_CIF) */
     public static final Sprite[] evtEffect = new Sprite[5];
 
@@ -85,6 +88,30 @@ public final class Imgs {
             Sprite s = new Sprite(hl4.sys.Res.load("/CM/_MMENU_CHAR_" + i + "_CIF"), 0x11);
             s.setImages(0, Img.loadAll("/CM/_MMENU_CHAR_" + i + "_BM", -1));
             mmenuChar[i] = s;
+        }
+    }
+
+    /** loadGameCommonImage @0xcd484: emotion sprite, shadows, event popup text, damage numbers, in-game UI images, item icons */
+    public static void loadGameCommon() {
+        // loadIMOImage: SPR_loadSprite(_imgIMO, "/CM/_CM_EMOSPR", 0x11) + its images tinted for the time class _map[0x68]
+        imo = new Sprite(hl4.sys.Res.load("/CM/_CM_EMOSPR"), 0x11);
+        imo.setImages(0, Img.loadAll("/CM/_CM_EMO", hl4.game.G.map[0x68]));
+        shadow = Img.loadAll("/CM/_CM_SHADOW", -1);
+        txtPopup = hl4.sys.Res.load("/NPC/_EVENT_POP_TXT");
+        byte[] pal = hl4.sys.Res.load("/H4/PAL/_H_200_PAL");
+        if (pal != null) {
+            Icons.damageNumber = Img.loadAll("/CM/_CM_NUM", -1);
+            Icons.heroDamageNumber = Img.loadAll("/CM/_CM_NUM", -1);
+            int[] pairs = hl4.data.Pal.parse(pal);
+            for (int k = 0; k < 10; k++) {
+                hl4.data.Pal.apply(Icons.heroDamageNumber[k].palBase, Icons.heroDamageNumber[k].pal, pairs);
+            }
+            Icons.uiGame = Img.loadAll("/CM/_CM_INGAMEUI", -1);
+            Icons.uiScript = Img.loadAll("/CM/_CM_SCRIPT", -1);
+            Icons.itemIcon = Img.loadAll("/ITM/_ITM_ICN", -1);
+            hl4.game.G.itemBagPtrs.release();
+            hl4.game.G.itemBag.release();
+            hl4.game.G.armsBag.release();
         }
     }
 

@@ -33,6 +33,14 @@ public final class Rng {
         reset();
     }
 
+    /** test aid: restore a snapshot of the generator taken from the reference (tools/e_trace.py SNAP) */
+    public static void restore(int[] words, int fi, int ri, int callCount) {
+        System.arraycopy(words, 0, st, 0, 31);
+        f = fi;
+        r = ri;
+        calls = callCount;
+    }
+
     /** UM_Random @0xc8f2c: returns a 31-bit value. */
     public static int random() {
         calls++;

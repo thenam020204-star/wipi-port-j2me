@@ -28,7 +28,16 @@ def main():
     g = Game(binp, res).start()
     lines = ['# ref_game.IMPL: ' + k + ' = ' + v for k, v in ref_game.IMPL.items()]
     lines.append('# clock base %d ms, tick %d ms; scenario %s' % (ref_game.CLOCK_BASE_MS, g.tick_ms, ' '.join(sys.argv[5:])))
+    snap = set(int(x) for x in os.environ.get('SNAP', '').split(',') if x)
     for i in range(n):
+        if i in snap:
+            # RNG state before this tick: BSD randtbl (32 words, [0] = type marker), fptr/rptr as indices into the 31-word state
+            tb = g.objaddr('_randtbl')
+            words = struct.unpack('<32I', g.read(tb, 128))
+            fp, rp = struct.unpack('<II', g.read(g.objaddr('_fptr'), 4) + g.read(g.objaddr('_rptr'), 4))
+            fp = struct.unpack('<I', g.read(g.objaddr('_fptr'), 4))[0]
+            rp = struct.unpack('<I', g.read(g.objaddr('_rptr'), 4))[0]
+            lines.append('# snap %d calls %d f %d r %d %s' % (i, g.rng_calls, (fp - tb) // 4 - 1, (rp - tb) // 4 - 1, ' '.join('%08x' % w for w in words[1:])))
         k = script.get(i)
         g.tick(press=k, release=k) if k is not None else g.tick()
         w, h, px = g.frame()

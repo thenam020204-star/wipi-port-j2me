@@ -38,4 +38,37 @@ public final class Tab {
     /** C.14.18224 @0xd6f50 */
     public static final short[] BLEND_PARAMS = {(short) 255, (short) 255, (short) 255, (short) 170, (short) 0, (short) 255, (short) 255, (short) 255, (short) 90, (short) 0, (short) 255, (short) 255, (short) 255, (short) 170, (short) 0, (short) 255, (short) 255, (short) 255, (short) 90, (short) 0, (short) 235, (short) 201, (short) 0, (short) 130, (short) 10, (short) 235, (short) 201, (short) 0, (short) 70, (short) 10, (short) 235, (short) 201, (short) 0, (short) 130, (short) 10, (short) 235, (short) 201, (short) 0, (short) 255, (short) 10, (short) 196, (short) 69, (short) 0, (short) 255, (short) 10, (short) 196, (short) 69, (short) 0, (short) 255, (short) 10, (short) 196, (short) 69, (short) 0, (short) 255, (short) 10, (short) 196, (short) 69, (short) 0, (short) 255, (short) 10, (short) 0, (short) 140, (short) 255, (short) 255, (short) 10, (short) 0, (short) 140, (short) 255, (short) 255, (short) 10, (short) 0, (short) 140, (short) 255, (short) 255, (short) 10, (short) 0, (short) 140, (short) 255, (short) 255, (short) 10, (short) 77, (short) 196, (short) 103, (short) 255, (short) 10, (short) 77, (short) 196, (short) 103, (short) 255, (short) 10, (short) 77, (short) 196, (short) 103, (short) 255, (short) 10, (short) 77, (short) 196, (short) 103, (short) 255, (short) 10, (short) 196, (short) 92, (short) 185, (short) 255, (short) 10, (short) 196, (short) 92, (short) 185, (short) 255, (short) 10, (short) 196, (short) 92, (short) 185, (short) 255, (short) 10, (short) 196, (short) 92, (short) 185, (short) 255, (short) 10, (short) 255, (short) 255, (short) 255, (short) 130, (short) 10, (short) 255, (short) 255, (short) 255, (short) 70, (short) 10, (short) 255, (short) 255, (short) 255, (short) 130, (short) 10, (short) 255, (short) 255, (short) 255, (short) 255, (short) 10};
 
+    /** C.5.16487 @0xd9a56 */
+    public static final byte[] EFF_GOOD = {(byte) 33, (byte) 26, (byte) 27, (byte) 30};
+
+    /** C.6.16502 @0xd9a52 */
+    public static final byte[] EFF_BAD = {(byte) 12, (byte) 13, (byte) 15, (byte) 14};
+
+    /** C.7.16515 @0xd9a4c */
+    public static final byte[] EFF_MAGIC = {(byte) 4, (byte) 5, (byte) 6, (byte) 7, (byte) 8, (byte) 9};
+
+    /** C.47.16090 @0xd949f */
+    public static final byte[] PS_COUNT = {(byte) 1, (byte) 2, (byte) 3, (byte) 2};
+
+    /** C.48.16091 @0xd9497 */
+    public static final byte[] PS_FILE = {(byte) 0, (byte) 3, (byte) 1, (byte) 3, (byte) 0, (byte) 2, (byte) 0, (byte) 3};
+
+    /** C.39.18590 @0xd87c8 */
+    public static final byte[] HP_COUNT = {(byte) 1, (byte) 2, (byte) 3, (byte) 2};
+
+    /** C.40.18591 @0xd87bc */
+    public static final byte[] HP_FILE = {(byte) 0, (byte) -1, (byte) -1, (byte) 1, (byte) 2, (byte) -1, (byte) 3, (byte) 4, (byte) 5, (byte) 6, (byte) 7, (byte) -1};
+
+    /** C.3.16224 @0xd97f8 */
+    public static final byte[] FOLDER_IMG = {(byte) 1, (byte) 1, (byte) 0, (byte) 0, (byte) 1, (byte) 1, (byte) 0, (byte) 0, (byte) 1, (byte) 1, (byte) 0, (byte) 0, (byte) 1, (byte) 1, (byte) 0, (byte) 0, (byte) 0, (byte) 1, (byte) 0, (byte) 2, (byte) 0, (byte) 1, (byte) 2, (byte) 3, (byte) -1, (byte) -1, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 1, (byte) 0};
+
+    /** C.4.16225 @0xd97f0 */
+    public static final byte[] FOLDER_IMG2 = {(byte) 94, (byte) 63, (byte) 51, (byte) 42, (byte) 0, (byte) 0, (byte) -1, (byte) 3};
+
+    /** um_sin @0xe1cb8 */
+    public static final int[] UM_SIN = {0, 174, 348, 523, 697, 871, 1045, 1218, 1391, 1564, 1736, 1908, 2079, 2249, 2419, 2588, 2756, 2923, 3090, 3255, 3420, 3583, 3746, 3907, 4067, 4226, 4383, 4539, 4694, 4848, 4999, 5150, 5299, 5446, 5591, 5735, 5877, 6018, 6156, 6293, 6427, 6560, 6691, 6819, 6946, 7071, 7193, 7313, 7431, 7547, 7660, 7771, 7880, 7986, 8090, 8191, 8290, 8386, 8480, 8571, 8660, 8746, 8829, 8910, 8987, 9063, 9135, 9205, 9271, 9335, 9396, 9455, 9510, 9563, 9612, 9659, 9702, 9743, 9781, 9816, 9848, 9876, 9902, 9925, 9945, 9961, 9975, 9986, 9993, 9998, 10000};
+
+    /** um_cos @0xe1e24 */
+    public static final int[] UM_COS = {10000, 9998, 9993, 9986, 9975, 9961, 9945, 9925, 9902, 9876, 9848, 9816, 9781, 9743, 9702, 9659, 9612, 9563, 9510, 9455, 9396, 9335, 9271, 9205, 9135, 9063, 8987, 8910, 8829, 8746, 8660, 8571, 8480, 8386, 8290, 8191, 8090, 7986, 7880, 7771, 7660, 7547, 7431, 7313, 7193, 7071, 6946, 6819, 6691, 6560, 6427, 6293, 6156, 6018, 5877, 5735, 5591, 5446, 5299, 5150, 4999, 4848, 4694, 4539, 4383, 4226, 4067, 3907, 3746, 3583, 3420, 3255, 3090, 2923, 2756, 2588, 2419, 2249, 2079, 1908, 1736, 1564, 1391, 1218, 1045, 871, 697, 523, 348, 174, 0};
+
 }
