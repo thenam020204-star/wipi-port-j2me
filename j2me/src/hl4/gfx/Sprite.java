@@ -19,6 +19,29 @@ public final class Sprite {
     public int f6e;                         // blend enable
     public int f6f;                         // blend alpha
 
+    public Sprite() {
+    }
+
+    /** SPR_loadSprite(spr, path, mode): index parsed from the CIF file; nSets = first byte (spr+0x38). */
+    public Sprite(byte[] cifData, int mode) {
+        cif = new Cif(cifData, mode);
+        nSets = cifData[0];
+    }
+
+    /** loadSprImages(spr, setIdx, ...): both the current and the original set array point at the loaded images. */
+    public void setImages(int setIdx, Gbm[] imgs) {
+        sets[setIdx] = imgs;
+        orig[setIdx] = imgs;
+    }
+
+    /**
+     * SPR_drawSprite(frame, spr, anim, dir, &frameNo, x, y, p8, p9) @0xd11bc = SPR_drawSpriteNPC(frame, spr, anim, 2, 3, dir, &frameNo,
+     * x, y, p8, p9, -1) (the control-palette pre-step for _lcdEff[10] == 2 is not ported yet: that class never occurs in the title flow).
+     */
+    public int drawSprite(SpriteOut o, Frame fr, int anim, int dir, int frameNo, int x, int y, int p8, int p9) {
+        return drawNpc(o, fr, anim, 2, 3, dir, frameNo, x, y, p8, p9, -1);
+    }
+
     // global render state read by the function
     public static final int[] lcdEff = new int[12];     // _lcdEff bytes
     public static Gbm[] extraEffect;                    // _imgSKextraEffect (an image set)
@@ -36,7 +59,7 @@ public final class Sprite {
     }
 
     /** SPR_getMaxFrame @0xbff54 -> s8: number of frames of direction slot d, minus one. */
-    private int maxFrame(int anim, int d) {
+    public int maxFrame(int anim, int d) {
         d = s8(d);
         int k;
         if (d == 3) {

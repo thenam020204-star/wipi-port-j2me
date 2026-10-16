@@ -35,7 +35,7 @@ IMPL = {
                    'the reference forces _menuOptions+4 = 0 right after OptionInit returns (portrait path 0x35e18, the legacy '
                    'layout), so game area = 240x320 + 80 rows of virtual pad that are never part of a hash.',
     'logo_h': 'until TitleFrame_Initialize the stock game area is 240x400 (Logo/notice screens laid out for 400 rows); the reference pokes '
-              '_lcdG+0x58 = 320 after startClet so the J2ME target (240x320 throughout) sees the same layout',
+              '_lcdG+0x58 = 320 after startClet and re-runs Touch_Stand_Initialize + UM_SetMenuXY so the J2ME target (240x320 throughout) sees the same layout',
     'prims': 'MC_grpFillRect(f,x,y,w,h,pgc) fills w x h; MC_grpDrawRect(f,x,y,w,h,pgc) outlines the INCLUSIVE extent x..x+w, y..y+h '
              '(the game passes w-1,h-1 and pairs it with an inner fill of w-2, so the pair is consistent); MC_grpDrawLine = Bresenham, '
              'both ends inclusive; foreground pixel = pgc context index 1; clipping to the frame buffer only',
@@ -298,6 +298,9 @@ class Game(Harness):
         self.call('startClet')
         if logo_h:
             self.write(self.objaddr('_lcdG') + 0x58, struct.pack('<i', logo_h))
+            self.write(self.objaddr('m_TouchDirectKeySize'), struct.pack('<i', 400 - logo_h))   # 80 (TitleFrame_Initialize sets it only at the title)
+            self.call('Touch_Stand_Initialize')     # centre/size of the touch skin layer and menu positions follow the poked height
+            self.call('UM_SetMenuXY')
         return self
 
     def stub_touch_draw(self, only=None):

@@ -53,6 +53,17 @@ public final class HnfFont {
         return -1;
     }
 
+    /** First/second byte of the _FT_HANINFO entry of a KS X 1001 syllable (0 when the pair is outside the table: the original reads unrelated memory there). */
+    public int hanInfoHi(int lead, int trail) {
+        int i = (lead - 0xb0) * 94 + (trail - 0xa1);
+        return i >= 0 && 2 * i + 1 < hanInfo.length ? hanInfo[2 * i] & 0xff : 0;
+    }
+
+    public int hanInfoLo(int lead, int trail) {
+        int i = (lead - 0xb0) * 94 + (trail - 0xa1);
+        return i >= 0 && 2 * i + 1 < hanInfo.length ? hanInfo[2 * i + 1] & 0xff : 0;
+    }
+
     /** Composes the glyph of a Johab code into rows[0..hangulHeight()): cho glyph copied, jung/jong OR-ed in. */
     public void compose(int code, int[] rows) {
         int cho = hanCode[(code >> 10) & 0x1f] & 0xff;

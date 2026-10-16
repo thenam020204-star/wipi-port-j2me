@@ -9,8 +9,26 @@ for p in parts[1:]:
     m = re.match(r'(\S+) @(\w+) size=(\d+)', p)
     if m:
         idx[m.group(1)] = p
-for n in sys.argv[1:]:
+DECL = re.compile(r'^\s+(undefined\d?|u?int|u?short|u?char|byte|bool|code|longlong|ulonglong|float|double|uint|ushort)\s*[\*]*\s*[\w\[\]\s,\*]+;\s*$')
+
+
+def compact(body):
+    out, inhead = [], False
+    for ln in body.split('\n'):
+        if ln.startswith('/* WARNING') or ln.strip() == '':
+            continue
+        if DECL.match(ln):
+            continue
+        ln = re.sub(r'\bundefined[1248]?\b', 'int', ln)
+        out.append(ln)
+    return '\n'.join(out)
+
+
+names = [a for a in sys.argv[1:] if not a.startswith('-')]
+full = '--full' in sys.argv
+for n in names:
     if n in idx:
-        print('// ==== ' + idx[n].rstrip())
+        b = idx[n].rstrip()
+        print('// ==== ' + (b if full else compact(b)))
     else:
         print('// ==== %s: not found' % n)
