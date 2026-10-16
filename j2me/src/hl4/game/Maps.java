@@ -631,9 +631,39 @@ public final class Maps {
 
     public static boolean minimapPending;
 
-    /** Map_changeEvtObjectImage(type, k, img) @0xaaba0 */
+    /**
+     * Map_changeEvtObjectImage(type, k, img) @0x9aba0 (event record type: 0 tile, 1..4 map object layers, others NPC): only the NPC branch is ported so far.
+     * img -1 hides the NPC; an existing NPC of another kind is reloaded (SPR_destroy, NPC_load, NPC_init at its record position) and shown; without an NPC
+     * one is created from the record (kind = img) and turned to the record's direction (+9).
+     */
     public static void changeEvtObjectImage(int type, int k, int img) {
-        throw new IllegalStateException("Map_changeEvtObjectImage: later");
+        if (type >= 0 && type <= 4) {
+            throw new IllegalStateException("Map_changeEvtObjectImage(" + type + "," + k + "," + img + "): later");
+        }
+        Char n = Evt.npcEvt(k);
+        if (img == -1) {
+            if (n != null) {
+                Chars.setVisible(n, 0);
+            }
+            return;
+        }
+        byte[] e = Event.e;
+        if (n != null) {
+            if (Bytes.s16(n.m, 0x160) != img) {
+                n.spr.set();
+                Npcs.load(n, img);
+                int r = Event.rec(n.evRef);
+                Npcs.init(n, n.m[0x16c], Bytes.s16(e, r) + 8, Bytes.s16(e, r + 2) + 8);
+            }
+            Chars.setVisible(n, 1);
+            return;
+        }
+        int r = Event.rec(k);
+        e[r + 5] = (byte) img;
+        Npcs.create(k, k);
+        n = Evt.npcEvt(k);
+        n.m[0x1c2] = e[r + 9];
+        Chars.setDirection(n, e[r + 9]);
     }
 
     // ---- map load / initialisation -------------------------------------------------------------------------------------------------------

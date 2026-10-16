@@ -141,10 +141,10 @@ public final class MapObjDraw {
             int sy;
             int ddx;
             int ddy;
+            if (Um.collision(rx, ry, rw, rh, px, py, iw, ih, OUT) >= 0) {       // every layer: objects outside the rectangle are skipped
+                continue;
+            }
             if (strip) {
-                if (Um.collision(rx, ry, rw, rh, px, py, iw, ih, OUT) >= 0) {
-                    continue;
-                }
                 dw = OUT[2];
                 dh = OUT[3];
                 sy = OUT[1] - py;

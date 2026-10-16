@@ -87,7 +87,8 @@ public final class Evt {
         later("Evt_OnMessageBox");
     }
 
-    private static Char npcEvt(int k) {
+    /** Npc_getEvt(k) @0xa8a48: the NPC created for event record k */
+    static Char npcEvt(int k) {
         for (int i = 0; i < G.npcList.count && i < 128; i++) {
             Obj o = G.npcList.a[i];
             if (o != null && o.m[Obj.EVENT] == k) {
@@ -223,6 +224,35 @@ public final class Evt {
                 Quest.setSwitchDefault((byte) a, v);
                 Quest.check(0xe, (byte) a, v);
                 It.changed = true;
+                return true;
+            }
+            case 0x21: {
+                int c = t.getByte();
+                if (e[0x206] == 0) {
+                    int cur = m[0x69];
+                    int nv;
+                    if ((c & 0xff) == cur) {
+                        m[0x6b] = 0;                                    // Map_setBgmPlay(0)
+                        nv = c;
+                    } else {
+                        Sound.freeBgm();
+                        if (c == -1) {
+                            nv = -1;
+                        } else {
+                            Sound.loadBgm(c);
+                            nv = c;
+                        }
+                    }
+                    m[0x6a] = m[0x69];                                  // Map_Set_BGM(nv)
+                    m[0x69] = (byte) nv;
+                    if ((c & 0xff) != 0xff) {
+                        return true;
+                    }
+                } else if (c != -1) {
+                    m[0x69] = (byte) c;
+                    return true;
+                }
+                Sound.freeBgm();
                 return true;
             }
             case 0x23: {
