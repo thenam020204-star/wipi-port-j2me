@@ -75,7 +75,7 @@ def mask_for(name):
     if base in ('hero', 'summon', 'monster', 'npc', 'mapobj', 'item', 'arms', 'sprobj', 'effect', 'teffect', 'drop', 'tile'):
         r += [(0, 8), (0x10, 0x14)]
     if base in ('hero', 'summon', 'monster', 'npc'):
-        r += [(0x20, 0x94), (0x130, 0x13c + 12)]
+        r += [(0x48, 0x94), (0x130, 0x13c + 12)]   # +0x20..0x47 = SPR header ints (anchor, move rect, rect 2) are compared
     if base == 'npc':
         r += [(0x1b0, 0x1b4)]
     if base == 'mapobj':
@@ -84,7 +84,15 @@ def mask_for(name):
         r += [(0x20, 0x94)]
     if base in ('effect', 'teffect'):
         r += [(0x20, 0x48)]
+    if base == 'hero':
+        r += [(0x1f0, 0x1f4), (0xa50, 0xad0)]   # particle-info pointer; the embedded particle SPR struct (HERO_Copy_Sprite_ImageInfo: image pointers; Java Particles keep their own Sprite)
+    if base == 'summon':
+        r += [(0x634, 0x638)]                    # SUMMON_init stores a pointer to the hero object
+    if name in ('_gameMenu', '_slotInfo', '_lcdEff', '_menuOptions', '_questBoss'):
+        r += [(0, 0x10000)]                      # story-menu / option state: the Java golden run starts at GameStart.newGame (E4 not ported); compared again once E4 exists
     if name == '_map':
+        r += [(0x14a, 0x164), (0x21c, 0x238)]    # minimap tile image state (Map_Draw_Create_Minimap_Tile, HUD pass pending)
+        r += [(0x2ec, 0x340), (0x340, 0x344)]   # Map_fallRand* object state left over from the title scene (the Java run skips the title); pointers 0x340
         r += [(0x8, 0x44), (0x278, 0x288), (0x2a4, 0x2c8), (0x35c, 0x364)]
     if name == '_game':
         r += [(0x68, 0x118)]

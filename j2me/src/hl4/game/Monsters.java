@@ -178,6 +178,44 @@ public final class Monsters {
     }
 
     /** MONSTER_init(m, idx, x, y) @0xaf6c0 */
+    /** MONSTER_initBlendType @0xaedd4 (MONSTER_initBuff @0xae758 is an empty function) */
+    static void initBlendType(Char o) {
+        byte[] m = o.m;
+        int b = (m[0x373] + 1) & 0xff;
+        m[0x373] = (byte) b;
+        if (m[0x372] != -1 && b > 2 && b < 0x80) {
+            m[0x373] = 2;              // MONSTER_setBlendType(p1, -1)
+            m[0x372] = (byte) 0xff;
+            o.spr.f68 = 0;             // SPR_set_restore_pal(p1 + 0x20)
+            m[0x373] = 0;
+        }
+    }
+
+    /** EnemyAIParsing_Initialize @0xd18ec = branch to EnemyAIParsing_TestInit @0xd1854 */
+    static void aiInitialize(byte[] m) {
+        Bytes.w32(m, 0x290, 0x78);
+        Bytes.w32(m, 0x294, 0x78);
+        Bytes.w32(m, 0x298, 0xf);
+        Bytes.w16(m, 0x28e, 0);
+        m[0x29e] = (byte) 0xff;
+        Bytes.w32(m, 0x270, -1);
+        m[0x26d] = (byte) 0xff;
+        m[0x26b] = (byte) 0xff;
+        m[0x26c] = (byte) 0xff;
+        m[0x26a] = (byte) 0xff;
+        Bytes.w32(m, 0x274, 0);
+        m[0x28c] = 0;
+        m[0x29c] = 0;
+        m[0x29d] = 0;
+        Bytes.fill(m, 0x29f, 0, 9);
+        m[0x268] = 0;
+        m[0x2ad] = 1;
+        m[0x2a8] = 0;
+        m[0x2a9] = 0;
+        m[0x2ac] = 0;
+        m[0x2aa] = 0;
+    }
+
     public static void init(Char o, int p2, int p3, int p4) {
         byte[] m = o.m;
         int speed = m[0x1ad];
@@ -227,10 +265,12 @@ public final class Monsters {
         m[0x34c] = 4;
         Bytes.w32(m, 0x334, 0);
         Bytes.w32(m, 0x338, 0);
+        initBlendType(o);
         cryingFallFrameMob = 0;
         m[0x324] = 0;
         m[0x323] = 0;
         m[0x35c] = 0;
+        aiInitialize(m);
         Bytes.w16(m, 0x32e, 0);
         m[0x2aa] = 0;
         Bytes.w32(m, 0x2b8, 0);

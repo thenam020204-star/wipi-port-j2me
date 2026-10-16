@@ -55,7 +55,7 @@ public final class Npcs {
         Bytes.w16(m, 0x162, d[b + 2]);
         m[0x16b] = d[b + 3];
         Bytes.w16(m, 0x188, d[b + 4]);
-        for (int j = 0; j < 4; j++) {
+        for (int j = 0; j < 5; j++) {
             Bytes.w16(m, 0x18a + 2 * j, d[b + 5 + j]);
         }
         Bytes.w16(m, 0x198, d[b + 10]);

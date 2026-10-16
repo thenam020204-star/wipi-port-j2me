@@ -29,7 +29,21 @@ public class StateDump {
 
     public static void write(PrintStream o, int t) {
         line(o, t, "_game", G.game);
-        line(o, t, "_map", G.map);
+        byte[] mp = new byte[G.map.length];
+        System.arraycopy(G.map, 0, mp, 0, mp.length);
+        // MapFx keeps its state in statics: mirror it at the original offsets for the comparison
+        mp[0x348] = (byte) hl4.game.MapFx.scrType;
+        mp[0x34a] = (byte) hl4.game.MapFx.scrCur;
+        mp[0x34b] = (byte) (hl4.game.MapFx.scrCur >> 8);
+        mp[0x34c] = (byte) hl4.game.MapFx.scrMax;
+        mp[0x34d] = (byte) (hl4.game.MapFx.scrMax >> 8);
+        mp[0x351] = (byte) (hl4.game.MapFx.fallOn ? 1 : 0);
+        mp[0x352] = (byte) hl4.game.MapFx.fallType;
+        mp[0x353] = (byte) hl4.game.MapFx.effectId;
+        mp[0x354] = (byte) hl4.game.MapFx.fallCount;
+        mp[0x338] = (byte) hl4.game.MapFx.cursor;
+        mp[0x33d] = (byte) hl4.game.MapFx.rainIdx;
+        line(o, t, "_map", mp);
         line(o, t, "_event", G.event);
         line(o, t, "_gameMenu", G.gameMenu);
         line(o, t, "_slotInfo", G.slotInfo);

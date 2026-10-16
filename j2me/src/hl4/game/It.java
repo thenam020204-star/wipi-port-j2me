@@ -326,15 +326,12 @@ public final class It {
         }
         int len = msgLens[sel] & 0xff;
         cur = n;
-        n.d = curData;
+        n.d = scData;
         n.pos = pos;
         n.end = pos + len;
         msgLens = null;
         msgPending = false;
     }
-
-    /** the data array the message-box sub-blocks live in (the script token's data) */
-    public static byte[] curData;
 
     /** IT_GetString(idx): the string bytes (without the trailing NUL), null when out of range */
     public static byte[] getString(int idx) {

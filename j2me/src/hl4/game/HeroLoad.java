@@ -22,6 +22,7 @@ public final class HeroLoad {
         h.m[0x16b] = (byte) cls;                                 // HERO_set_class
         h.spr = new Sprite(Res.load("/H4/CIF/_H_" + n3(cls + 1) + "_CIF"), 2);
         h.spr.props = SprProps.parse(Res.load("/H4/EXD/_H_" + n3(cls + 1) + "_EXD"));
+        h.spr.props.store(h.m, 0x20);
     }
 
     /** Hero_loadData @0x8f364 */

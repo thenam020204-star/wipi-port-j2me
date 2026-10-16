@@ -18,9 +18,20 @@ public final class SprProps {
     }
 
     public final int[] hdr = new int[10];
+    /** bit i set: hdr[i] is present in the file (the original leaves the other ints of the SPR struct untouched) */
+    public int hdrMask;
     public final byte[] idx = new byte[400];
     public int n;
     public Entry[][] slots;
+
+    /** the header ints land in the character's SPR struct (spr = char + 0x20): anchor at +0x20/+0x24, rectangle 1 (move rect) at +0x28.., rectangle 2 at +0x38.. */
+    public void store(byte[] m, int sprBase) {
+        for (int i = 0; i < 10; i++) {
+            if ((hdrMask & (1 << i)) != 0) {
+                hl4.sys.Bytes.w32(m, sprBase + 4 * i, hdr[i]);
+            }
+        }
+    }
 
     private static int s16(byte[] b, int o) {
         return (short) ((b[o] & 0xff) | ((b[o + 1] & 0xff) << 8));
@@ -48,15 +59,18 @@ public final class SprProps {
                         if (t == 0) {
                             r.hdr[0] = s16(b, q);
                             r.hdr[1] = s16(b, q + 2);
+                            r.hdrMask |= 3;
                             q += 4;
                         } else if (t == 1) {
                             for (int k = 0; k < 4; k++) {
                                 r.hdr[2 + k] = s16(b, q + 2 * k);
+                                r.hdrMask |= 1 << (2 + k);
                             }
                             q += 8;
                         } else if (t == 2) {
                             for (int k = 0; k < 4; k++) {
                                 r.hdr[6 + k] = s16(b, q + 2 * k);
+                                r.hdrMask |= 1 << (6 + k);
                             }
                             q += 8;
                         }
