@@ -23,6 +23,15 @@ public final class Strs {
     /** @0xd9950 TitleFrame_Render consent button 2 */
     public static final byte[] TITLE_REFUSE = {38, -80, -59, -70, -50, -57, -44, 0, 0, 0, 0};
 
+    /** @0xd79e0 drawPopup_skt yes button "예" */
+    public static final byte[] YES = {-65, -71, 0, 0};
+
+    /** @0xd79e8 drawPopup_skt no button "아니오" */
+    public static final byte[] NO = {-66, -58, -76, -49, -65, -64, 0, 0};
+
+    /** @0xd8970 MainGameFrame_drawGameOver */
+    public static final byte[] GAME_OVER = {71, 65, 77, 69, 32, 79, 86, 69, 82, 0, 0, 0};
+
     public static final byte[] PHONE = ascii("02-559-8787");
     public static final byte[] EA = ascii("ELECTRONIC ARTS KOREA LLC");
     public static final byte[] VER = ascii("1.0.0");

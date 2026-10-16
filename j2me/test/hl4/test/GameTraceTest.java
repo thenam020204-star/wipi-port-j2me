@@ -138,7 +138,12 @@ public class GameTraceTest {
                 Engine.onKey(false, kr.intValue());
             }
             Clock.setVirtual(Clock.now() + 50);
-            Engine.tick();
+            try {
+                Engine.tick();
+            } catch (RuntimeException ex) {
+                System.out.println("exception at tick " + t);
+                throw ex;
+            }
             int h = Fnv.shorts(Gfx.scr.px, Gfx.scr.px.length);
             String mine = t + " " + TraceTest.hex8(h) + " " + Rng.calls;
             String[] rp = ref[t].split(" ");

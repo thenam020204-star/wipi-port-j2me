@@ -33,7 +33,7 @@ DrawRect viền khoảng bao gồm x..x+w, y..y+h — game truyền w−1,h−1 
 | Chuỗi vẽ `MainGameFrame_drawGame`: `MapDraw` (back buffer cuộn theo camera), `MapObjDraw`, `ObjDraw`, `HeroDraw`, `EventDraw` (dải đen, tint, SKIP, fade skip) | trace C: tick 501–699 |
 | `Dialog` (ScriptWindow open/close, TalkBox reset/tick, thứ tự vẽ 0x510, khung `drawGMenuBackFrame_main`, tên "=%s ", mặt `NPC/FACE_n`, chữ chạy `HF_GetNextLen`) | trace C: tick 607–699 (hộp thoại đầu) |
 
-## 3b. E6 — quái, chiến đấu, hiệu ứng (đang làm; trace J/K nhận từ bản gốc)
+## 3b. E6 — quái, chiến đấu, hiệu ứng (đang làm; trace J/K/L nhận từ bản gốc)
 Trace J (quái bắn xa) khớp tới tick 5019; trace K (hero đánh trúng và giết quái, hạt, quái hồi sinh) khớp **hash khung + RNG + back buffer đến tick 5300**; F/G/H/J vẫn khớp.
 | Module | Nguồn (địa chỉ gốc) | Trạng thái |
 |---|---|---|
@@ -42,6 +42,9 @@ Trace J (quái bắn xa) khớp tới tick 5019; trace K (hero đánh trúng và
 | `MonDie`, `MonDrop` (MONSTER_die, dropExp, dropItem 6 ô, DropItem_drop/init, Item_getIconNameGrade/setDataSKinIdx/skinDataName) | 0xa6f5c, 0xa50fc, 0xa52d0, 0xd150c | Viết từ disassembly; **chưa có trace chạm nhánh rơi đồ** (cú giết đầu không rơi); level-up, SUMMON_addExp, quest boss, ItemBag_pickUp: `later` |
 | `Particles` (generate/generatePosition/onIdle/paint, nSin/nCos) | 0xb9e74, 0xb9bec, 0xba844, 0xbaf5c, 0xb9580 | CONFIRMED khớp trace K (bảng sin/cos có **72** mục, bước 5°, đã sửa từ bản 36 mục sai); skipTimeParticle, lớp 2 (SPR_drawSpriteSK): `later` |
 | `Monsters.regen` (MONSTER_Regen) | 0xb0708 | CONFIRMED (khớp trace K); nhánh boss cuối: `later` |
+| `MainGameFrame` game over (MainGameFrame_GameOver, initGameOver, Render/EndProcess state 2, drawGameOver, GameOverKeyPressed) | 0x9d4dc, 0x9d254, 0x9c694, 0x9d3a0, 0x9c1d4, 0x9a694 | CONFIRMED: trace L (đánh tiếp, hero chết) khớp **hash + RNG + back buffer tới tick 5496**, pixel khớp ảnh gốc ở 5483/5490/5495 (chữ GAME OVER, popup mua bùa hồi sinh, nút 예/아니오). Hồi sinh (`MainGameFrame_revive`), shop NpcUi(6,10): `later` |
+| `Popup` (PopupBox_setBox/WithXyPos type 2-5, drawPopup_skt, drawYesNoSelectBox), `Touch.drawImage/validExtra/exists` | 0xcbca8, 0x62604, 0x62538, 0x48b3c, 0x48040 | CONFIRMED (trace L). `s_ui_image_count` @0xd6f37 đọc từ rodata. Type 1, kind 0 (nút OK/WAIT), nhãn NpcUi: `later` |
+Trace L dừng ở tick 5497: chọn "아니오" → `MainGameFrame_changeFrame` → `GameMenuFrame_returnMainMenu` (dọn toàn bộ game: Quest_Init, SCENE_End, Map_release, HERO_init, túi đồ ...; `LoadFrame_setState(5, 3)`) → menu chính → story mode → game mới (ảnh gốc tick 6000 là cảnh mở đầu). Phần này thuộc E4; trace L giữ làm trace nghiệm thu cho E4.
 Bài học công cụ: các script gỡ lỗi `e_args/e_ret/e_raw/e_part` phải chạy với **kịch bản đầy đủ** (`scK.txt`, gồm cả token < 500), không phải `kK.txt` (chỉ dành cho Java) — chạy sai kịch bản cho RNG/khung khác golden. Byte blend +0x8e/+0x8f của quái nằm trong struct sprite nhúng của Char (Char+0x20): Java đồng bộ vào `Sprite.f6e/f6f` trước khi vẽ.
 
 ## 4. Khác biệt có chủ đích so với bản gốc (Phase E)

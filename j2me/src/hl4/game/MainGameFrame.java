@@ -81,6 +81,39 @@ public final class MainGameFrame implements FrameHandler {
         }
     }
 
+    /** _txtGMenu @0x14db0c: /GMenu/_GMENU_TXT (LinkedText), loaded for the game-over popup */
+    static byte[][] txtGMenu;
+
+    /** MainGameFrame_initGameOver(p1) @0x9d254: p1 = 1 opens the popup (choices: revive (0) if a revive item (8, 0x10) is held, else the shop (1); 1; 2) */
+    static void initGameOver(int p1) {
+        byte[] g = G.game;
+        if (p1 == 1) {
+            g[0x5a] = 0;
+            g[0x57] = g[0x58] = g[0x59] = -1;
+            g[0x5b] = 0;
+            txtGMenu = hl4.data.Text.linkedAll(hl4.sys.Res.load("/GMenu/_GMENU_TXT"));
+            int n = g[0x5a];
+            if (Items.getItemCnt(8, 0x10) > 0) {
+                g[0x57 + n] = 0;
+            } else {
+                g[0x57 + n] = (byte) p1;
+                G.gameMenu[8] = (byte) p1;
+            }
+            n = (byte) (n + 1);
+            g[0x57 + n] = 1;
+            g[0x57 + (byte) (n + 1)] = 2;
+            g[0x5a] = (byte) (n + 2);
+            Popup.setBox(Popup.box, 4, 0x5e, g[0x5a] == 2 ? 0x31 : 0x44, g[0x5a]);
+        }
+        g[0x56] = (byte) p1;
+    }
+
+    /** MainGameFrame_drawGameOver @0x9c1d4 (PopupBox_window(9, ..) only computes a height: nothing is drawn but the caption) */
+    private static void drawGameOver() {
+        hl4.gfx.Hf.setColor(0xff, 0xff, 0xff);
+        hl4.gfx.Hf.drawText(Gfx.scr, Glob.gameW / 2 - 0x1e, Glob.gameH / 2 + 10 - (G.game[0x5a] << 3), Strs.GAME_OVER, 0);
+    }
+
     /** MainGameFrame_Process @0x9c978 (= GamePlayProcess): the cut scene tick, every object's pre-process, screen shake, camera and the play-time limit */
     public void process() {
         byte[] g = G.game;
@@ -119,11 +152,33 @@ public final class MainGameFrame implements FrameHandler {
     /** test hook: skip the (not yet ported) render step while state parity of Process/EndProcess is being checked */
     public static boolean testNoRender;
 
+    /** MainGameFrame_Render @0x9c694 */
     public void render() {
         if (testNoRender) {
             return;
         }
-        drawGame();
+        byte[] g = G.game;
+        if (g[0] == 0) {
+            drawGame();
+        } else if (g[0] == 3) {
+            throw new IllegalStateException("MainGameFrame_Render game menu popup (state 3): later");
+        } else if (g[0] == 2) {
+            drawGame();
+            if (g[0x56] != 1) {
+                return;
+            }
+            if (g[0x57] == 0) {
+                Popup.drawYesNo(txtGMenu[0x66], G.gameMenu[8], 0xb0, 1);
+                g[0x5b] = 0xb;
+            } else if (g[0x5b] <= 9) {
+                drawGameOver();
+            } else {
+                hl4.gfx.Hf.semicolon = 1;                       // TF_semiSet(1)
+                Popup.drawYesNo(txtGMenu[0x6e], G.gameMenu[8], 0xc4, 1);
+                hl4.gfx.Hf.semicolon = 0;
+                g[0x5b] = 0xb;
+            }
+        }
     }
 
     /** MainGameFrame_Render / MainGameFrame_drawGame @0x9c2ec (the in-game picture, game state 0) */
@@ -258,27 +313,25 @@ public final class MainGameFrame implements FrameHandler {
                         g[0x5b] = 10;
                     }
                     if (MapFx.screenEffectCheck(4)) {
-                        throw new IllegalStateException("MainGameFrame_initGameOver(1) (game over popup): later");
+                        initGameOver(1);
                     }
-                } else {
-                    throw new IllegalStateException("MainGameFrame_EndProcess game-over popup state: later");
+                } else if (g[0x56] == 1 && g[0x57] == 1 && g[0x5b] <= 9) {
+                    g[0x5b]++;
                 }
             }
         } else if (g[0] == 3 && Engine.changeFrame != 0) {
             throw new IllegalStateException("MainGameFrame_EndProcess game menu leave: later");
         }
         if (Engine.changeFrame != 0) {
-            throw new IllegalStateException("MainGameFrame_EndProcess frame change (game menu / load frame): later");
+            throw new IllegalStateException("MainGameFrame_changeFrame -> GameMenuFrame_returnMainMenu (teardown, LoadFrame_setState(5, 3)) / game menu: later");
         }
     }
 
     /** MainGameFrame_KeyPressed @0x8cc20 -> GamePlayKeyPressed @0x8ca44 (game state 0); a running cut scene takes every key (Event_Key) */
     public void keyPressed(int key) {
         if (G.game[0] == 2) {
-            if (G.game[0x56] != 1) {
-                return;                                         // MainGameFrame_GameOverKeyPressed @0x9a694: keys count only while the popup is up
-            }
-            throw new IllegalStateException("MainGameFrame_GameOverKeyPressed (popup keys): later");
+            gameOverKeyPressed(key);
+            return;
         }
         if (G.game[0] != 0) {
             throw new IllegalStateException("MainGameFrame_KeyPressed for game state != 0 / 2: later");
@@ -315,6 +368,37 @@ public final class MainGameFrame implements FrameHandler {
             }
         } else if (key == 0x2a) {
             G.game[3] = (byte) (G.game[3] == 0 ? 1 : 0);
+        }
+    }
+
+    /** MainGameFrame_GameOverKeyPressed @0x9a694: keys count only while the popup is up; left / right / 4 / 6 toggle, OK / 5 confirms once it has been drawn */
+    private static void gameOverKeyPressed(int key) {
+        byte[] g = G.game;
+        byte[] gm = G.gameMenu;
+        if (g[0x56] != 1) {
+            return;
+        }
+        if (key > 0x3a97 && key != 0x3cd1) {
+            throw new IllegalStateException("Touch_keyCommonPopup (pointer area codes): not generated by the port");
+        }
+        if (key == -3 || key == -4 || key == 0x34 || key == 0x36) {
+            int v = gm[8] + 1;
+            gm[8] = (byte) (v % 2);
+        } else if (key == -5 || key == 0x35) {
+            if (g[0x5b] <= 10) {
+                return;
+            }
+            if (gm[8] != 0) {
+                Engine.requestChange(1);
+            } else if (g[0x57] == 0) {
+                throw new IllegalStateException("MainGameFrame_revive: later");
+            } else if (g[0x57] == 1) {
+                throw new IllegalStateException("NpcUi_Initialize(6, 10) (revive item shop): later");
+            }
+            Popup.end(Popup.box);
+            if (gm[8] != 0) {
+                Touch.setFrame(0x3a);
+            }
         }
     }
 

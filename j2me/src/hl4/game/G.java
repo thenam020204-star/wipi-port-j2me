@@ -12,6 +12,8 @@ public final class G {
     public static final byte[] map = new byte[896];
     /** _event (2388 bytes) */
     public static final byte[] event = new byte[2388];
+    /** _npcUi (984 bytes) @0x14d298: NPC / shop UI state (+2 mode, +0xcb ...) */
+    public static final byte[] npcUi = new byte[984];
     /** _gameMenu (36 bytes) */
     public static final byte[] gameMenu = new byte[36];
     /** _slotInfo (48 bytes: 3 slots x 16) */

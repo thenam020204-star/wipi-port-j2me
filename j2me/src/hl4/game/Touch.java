@@ -1,6 +1,8 @@
 package hl4.game;
 
+import hl4.gfx.Blit;
 import hl4.gfx.Frame;
+import hl4.gfx.Gbm;
 import hl4.gfx.GfxOut;
 import hl4.gfx.Img;
 import hl4.gfx.Sprite;
@@ -206,6 +208,40 @@ public final class Touch {
             }
         }
         return NULLX;
+    }
+
+    /** Touch_existExtradata(code) @0x3639c: the current state has an anchor with that area code */
+    public static boolean exists(int code) {
+        return extra(code) != NULLX;
+    }
+
+    /** Touch_getValidExtradata(2, a, b) @0x48040: the anchor of the first area code that exists, else the null anchor */
+    public static int[] validExtra(int a, int b) {
+        if (exists(a)) {
+            return extra(a);
+        }
+        if (exists(b)) {
+            return extra(b);
+        }
+        return NULLX;
+    }
+
+    /** s_ui_image_count @0xd6f37 (rodata): images per TOUCH/IMG set; a UI image number counts through the sets in order */
+    private static final byte[] UI_IMAGE_COUNT = {14, 59, 1, 5, 3, 7, 7, 12, 8, 12, 5, 4, 2, 5, 9, 9, 40, 36, 5, 5, 10, 10, 9, 9};
+
+    /** Touch_drawImage(idx, x, y) @0x38cc8 = Touch_drawImageEx(idx, x, y, 0, 9) @0x48b3c: UI image idx of sprite 0's base sets, centre-relative */
+    public static void drawImage(Frame f, int idx, int x, int y) {
+        int base = 0;
+        for (int i = 0; i < UI_IMAGE_COUNT.length; i++) {
+            int n = UI_IMAGE_COUNT[i];
+            if (idx < base + n) {
+                Gbm img = spr[0].orig[i][idx - base];
+                Blit.drawImg(f, x + cx, y + cy, img.aux, img.h, img, 0, 0, 0, 0, 9);
+                return;
+            }
+            base += n;
+        }
+        throw new IllegalStateException("Touch_drawImageEx: image number past the table (undefined in the original)");
     }
 
     /** debugging aid */
