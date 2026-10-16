@@ -304,10 +304,46 @@ public final class Blit {
         M[5] = dvdy;
     }
 
+    /**
+     * DM_DrawScreen565 @0x4de54, mode 0, 4 bpp, width 0 with an odd source column (CONFIRMED against the original, tick 732 of the opening scene: an emoticon
+     * clipped by the left edge).  The odd-start branch always draws its first pixel (low nibble of column SX) and sets the remaining width to -1, whose
+     * odd bit then makes the trailing branch draw one more pixel (high nibble of column SX + 1); the destination offset advances by 2 pixels and then by
+     * the frame stride per row, so a diagonal of pixel pairs is written at (X + 2k, Y + k) with no clipping (linear offsets).
+     */
+    private static void zeroWidth(Frame f, Gbm img, int X, int Y, int H, int SX, int SY) {
+        short[] pal = img.pal;
+        byte[] d = img.data;
+        int stride = (img.w + 1) >> 1;
+        int p2 = Y * f.w + X;
+        for (int k = 0; k < H; k++) {
+            int row = img.pixOff + (SY + k) * stride + (SX >> 1);
+            for (int n = 0; n < 2; n++) {
+                int c = -1;
+                int bi = row + n;
+                if (bi >= img.pixOff && bi < img.pixOff + stride * img.h) {      // past the last row = heap garbage in the original (not drawn at tick 732)
+                    int bb = d[bi] & 0xff;
+                    int idx = n == 0 ? bb & 0xf : bb >> 4;
+                    if (idx < pal.length) {
+                        c = pal[idx] & 0xffff;
+                    }
+                }
+                if (c != -1 && c != Gbm.SKIP_COL && p2 >= 0 && p2 < f.px.length) {
+                    f.px[p2] = (short) c;
+                }
+                p2++;
+            }
+            p2 += f.w;
+        }
+    }
+
     /** DM_DrawScreen565 (layer 2): copy the source rectangle (SX, SY, W, H), transformed by `mode`, to (X, Y). */
     private static void raster(Frame f, Gbm img, int X, int Y, int W, int H, int SX, int SY, int mode) {
+        if (W == 0 && H > 0 && mode == 0 && img.type == 0x0b && (SX & 1) != 0) {
+            zeroWidth(f, img, X, Y, H, SX, SY);
+            return;
+        }
         if (W <= 0 || H <= 0) {
-            return;                                   // original: undefined (uninitialised stack slot); draws nothing here
+            return;                                   // other zero-width cases: UNKNOWN (not traced); draws nothing here
         }
         int flip = MODE_FLIP[mode];
         int rot = MODE_ROT[mode];

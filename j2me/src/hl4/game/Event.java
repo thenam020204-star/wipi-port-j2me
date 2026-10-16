@@ -424,6 +424,67 @@ public final class Event {
         }
     }
 
+    /**
+     * Event_Key(key) @0x59b1c (real address; Ghidra 0x69b1c): keys while a cut scene runs.  Mapped codes: 0x3b35..0x3b37 and 0x3b07/0x3b08 = OK (-5),
+     * 0x3b6b = '#'.  '#' starts the skip fade; OK on a dialog (state 0x2e / 0x30) completes the page being typed, shows the next page or finishes the line.
+     */
+    public static void key(int key) {
+        if (key != 0x3cd1 && key > 14999) {
+            if (key <= 0x3b37) {
+                if (key >= 0x3b35 || key - 0x3b07 == 0 || key - 0x3b07 == 1) {
+                    key = -5;
+                }
+            } else if (key == 0x3b6b) {
+                key = 0x23;
+            }
+        }
+        if (e[0x206] != 0) {
+            return;
+        }
+        if (Popup.evtBox[0x2c] != 0) {
+            throw new IllegalStateException("PopopBox_key (open box): later");
+        }
+        int st = Bytes.s32(e, 0x200);
+        if (key == 0x23) {
+            if (st == 0x32) {
+                throw new IllegalStateException("Event_Key popup branch (state 0x32): later");
+            }
+            if (st == 0x3c || st == 0x2f) {
+                return;
+            }
+            e[0x207] = 1;
+            e[0x208] = 0;
+            e[0x206] = 1;
+            e[0x209] = 5;
+            if (e[0x5ef] == 0 || e[0x5ee] == 0) {
+                e[0x208] = 5;
+            }
+            e[0x5ef] = (byte) 0xff;
+            e[0x5ec] = 0;
+            e[0x608] = 0;
+        }
+        if (st == 0x32) {
+            throw new IllegalStateException("Event_Key popup branch (state 0x32): later");
+        }
+        if ((st == 0x30 || st == 0x2e) && (key == -5 || key == 0x35)) {
+            int k = e[0x205];
+            int p = k * 0xbc;
+            int cur = Bytes.s32(e, p + 0x24c);
+            if (cur < Bytes.s32(e, p + 0x248)) {
+                while (Dialog.talkBoxTick(k) != 0) {
+                    k = e[0x205];
+                }
+            } else if (cur < Bytes.s32(e, p + 0x250)) {
+                if (e[p + 0x240] == 0) {
+                    Bytes.w32(e, p + 0x244, Bytes.s32(e, p + 0x248));
+                    e[p + 0x240] = 1;
+                }
+            } else {
+                e[p + 0x23f] = 1;
+            }
+        }
+    }
+
     /** EVENT_EndProcess @0x6d308 */
     public static void endProcess() {
         nextSceneStep();

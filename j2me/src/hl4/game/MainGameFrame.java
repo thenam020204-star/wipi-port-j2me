@@ -172,11 +172,23 @@ public final class MainGameFrame implements FrameHandler {
         }
     }
 
+    /** MainGameFrame_KeyPressed @0x8cc20 -> GamePlayKeyPressed @0x8ca44 (game state 0); a running cut scene takes every key (Event_Key) */
     public void keyPressed(int key) {
-        throw new IllegalStateException("MainGameFrame_KeyPressed: later");
+        if (G.game[0] != 0) {
+            throw new IllegalStateException("MainGameFrame_KeyPressed for game state != 0: later");
+        }
+        if (G.event[0x1fe] != 0) {
+            Event.key(key);
+            return;
+        }
+        throw new IllegalStateException("MainGameFrame_GamePlayKeyPressed (play mode): later");
     }
 
+    /** MainGameFrame_KeyReleased @0x8a3b0 -> HERO_Key_Release: nothing happens while an event runs (HERO_Key_Release returns on Event_isEvent) */
     public void keyReleased(int key) {
+        if (G.game[0] != 0 || !Event.isEvent()) {
+            throw new IllegalStateException("HERO_Key_Release (play mode): later");
+        }
     }
 
     public void hideNotify() {
