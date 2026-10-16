@@ -132,19 +132,21 @@ MIDlet khung chạy được trong MicroEmulator 2.0.4 (240×320, JAR+JAD, ảnh
 ## Phase E — tiến độ (2026-10-16)
 Chi tiết: `docs/phaseE.md`. **Bàn giao cho phiên sau: `docs/HANDOFF.md`.**
 
-- Đo bằng `tools/port_cover.py`: 378 / 2113 hàm trong phạm vi (≈ 18%); còn 108 nhánh `later`.
-- Golden trace toàn game: tick 501–699 khớp hash khung + số lần gọi RNG + hash back-buffer từng tick (`trace_C`).
-  Đoạn này gồm vào game, cutscene mở đầu và hộp thoại đầu tiên.
-- Chặn kế tiếp: đường phím trong game (`MainGameFrame_KeyPressed`, `Event_Key`).
+- Đo bằng `tools/port_cover.py`: 433 / 2113 hàm trong phạm vi (≈ 20,5%); còn 124 nhánh `later`.
+- Golden trace toàn game `trace_F`: tick 501–8100 khớp hash khung + số lần gọi RNG + hash back-buffer từng tick.
+  Đoạn này gồm vào game, toàn bộ cutscene mở đầu (chuyển cảnh, popup, danh sách quest), rồi chế độ chơi đứng yên với phím OK mỗi 50 tick (làng, không di chuyển).
+- Chế độ chơi đã port: va chạm vùng sự kiện (`Map_Check_Collision_Hero_Eventzone`, `_Move`, `OKKey`), hồi HP/SP và đếm lùi (`HERO_process`), `HERO_HK_endprocess`,
+  phím nhấn/nhả (`HERO_Key_press`/`Release`), bước đi (`HERO_set_move`), va chạm ô của hero (`..._MoveFlag_hero`, chưa đối chiếu), HUD khung trạng thái, tiêu đề bản đồ.
+- Chặn kế tiếp: đối chiếu đi bộ (trace G), rồi chiến đấu (`HERO_check_skilluseHK`, quái, thả đồ), menu game (`GameMenuFrame`), NpcUi.
 
 ## Trạng thái (Definition of Done)
 | Hạng mục | Trạng thái | Bằng chứng |
 |---|---|---|
 | Đã phân tích | Phase A–C xong; Phase E phân tích theo luồng chạy (tới hộp thoại cutscene + đường phím đã đọc pseudo-C) | `docs/phaseB_*.md`, `docs/phaseC_*`, `docs/HANDOFF.md` §5 |
-| Đã triển khai | một phần (≈ 18% hàm): lõi dữ liệu/đồ hoạ, Logo/Load/Title, scene/map/NPC/hero (event mode), cutscene, hội thoại; chưa: phím, play mode, chiến đấu, menu, save, âm thanh | `j2me/src`, `tools/port_cover.py` |
+| Đã triển khai | một phần (≈ 20,5% hàm): lõi dữ liệu/đồ hoạ, Logo/Load/Title, scene/map/NPC/hero, cutscene, hội thoại, phím + đi bộ + HUD cơ bản; chưa: chiến đấu, menu, save, âm thanh | `j2me/src`, `tools/port_cover.py` |
 | Đã build | JAR/JAD preverify, scanner 0 reject (92 lớp) | `tools/j2me_build.py build` |
 | Chạy emulator | MicroEmulator 2.0.4 (khung demo); golden trace trên JVM máy tính | `docs/phaseD_selftest.txt` |
-| Đối chiếu bản gốc | trace A (300 tick) + trace C tick 501–699 khớp từng tick | `tools/e_trace.py` ↔ `GameTraceTest` |
+| Đối chiếu bản gốc | trace A (300 tick) + trace F tick 501–8100 khớp từng tick | `tools/e_trace.py` ↔ `GameTraceTest` |
 | Chạy thiết bị thật | chưa xác minh | — |
 
 ## Việc tiếp theo

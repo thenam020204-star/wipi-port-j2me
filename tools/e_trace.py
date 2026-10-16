@@ -26,10 +26,7 @@ SEEDS = [('_gameMenu', 0, 36), ('_slotInfo', 0, 48), ('_map', 0x69, 3), ('_map',
 
 def main():
     binp, res, out, n = sys.argv[1], sys.argv[2], sys.argv[3], int(sys.argv[4])
-    script = {}
-    for kv in sys.argv[5:]:
-        t, k = kv.split(':')
-        script[int(t)] = int(k, 0)
+    script = ref_game.parse_script(sys.argv[5:])
     g = Game(binp, res).start()
     lines = ['# ref_game.IMPL: ' + k + ' = ' + v for k, v in ref_game.IMPL.items()]
     lines.append('# clock base %d ms, tick %d ms; scenario %s' % (ref_game.CLOCK_BASE_MS, g.tick_ms, ' '.join(sys.argv[5:])))
@@ -45,8 +42,7 @@ def main():
             for nm, off, ln in SEEDS:
                 lines.append('# seed %s %d %s' % (nm, off, g.read(g.objaddr(nm) + off, ln).hex()))
             lines.append('# snap %d calls %d f %d r %d %s' % (i, g.rng_calls, (fp - tb) // 4 - 1, (rp - tb) // 4 - 1, ' '.join('%08x' % w for w in words[1:])))
-        k = script.get(i)
-        g.tick(press=k, release=k) if k is not None else g.tick()
+        ref_game.tick_script(g, script, i)
         w, h, px = g.frame()
         try:
             bpx = g.back_area()[2]

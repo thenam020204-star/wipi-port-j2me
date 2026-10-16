@@ -483,3 +483,26 @@ if __name__ == '__main__':
         g.tick()
         print(i, '%08x' % g.fhash(), 'icount?')
     print('missing imports:', g.missing)
+
+
+def parse_script(tokens):
+    """Scenario tokens 'tick:key' (tap = press+release in that tick), 'tick:pKEY' (press only), 'tick:rKEY' (release only) -> {tick: [press, release]}"""
+    sc = {}
+    for kv in tokens:
+        t, k = kv.split(':')
+        e = sc.setdefault(int(t), [None, None])
+        if k[:1] == 'p':
+            e[0] = int(k[1:], 0)
+        elif k[:1] == 'r':
+            e[1] = int(k[1:], 0)
+        else:
+            e[0] = e[1] = int(k, 0)
+    return sc
+
+
+def tick_script(g, sc, i):
+    e = sc.get(i)
+    if e is None:
+        g.tick()
+    else:
+        g.tick(press=e[0], release=e[1])

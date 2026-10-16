@@ -6,9 +6,8 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from unicorn import UC_HOOK_CODE, arm_const
 from ref_game import Game
 binp, res, t0, t1, fns = sys.argv[1], sys.argv[2], int(sys.argv[3]), int(sys.argv[4]), sys.argv[5].split(',')
-script = {}
-for kv in sys.argv[6:]:
-    t, k = kv.split(':'); script[int(t)] = int(k, 0)
+import ref_game
+script = ref_game.parse_script(sys.argv[6:])
 g = Game(binp, res)
 cur = [-1]
 def s32(v):
@@ -29,5 +28,4 @@ for f in fns:
 g.start()
 for i in range(t1 + 1):
     cur[0] = i
-    k = script.get(i)
-    g.tick(press=k, release=k) if k is not None else g.tick()
+    ref_game.tick_script(g, script, i)

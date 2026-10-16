@@ -32,14 +32,12 @@ def main():
         return
     from ref_game import Game
     binp, res, out, ticks = sys.argv[1], sys.argv[2], sys.argv[3], [int(x) for x in sys.argv[4].split(',')]
-    script = {}
-    for kv in sys.argv[5:]:
-        t, k = kv.split(':'); script[int(t)] = int(k, 0)
+    import ref_game
+    script = ref_game.parse_script(sys.argv[5:])
     os.makedirs(out, exist_ok=True)
     g = Game(binp, res).start()
     for i in range(max(ticks) + 1):
-        k = script.get(i)
-        g.tick(press=k, release=k) if k is not None else g.tick()
+        ref_game.tick_script(g, script, i)
         if i in ticks:
             w, h, px = g.frame()
             open('%s/s%04d.raw' % (out, i), 'wb').write(b''.join(struct.pack('<H', v) for v in px[:240 * 320]))

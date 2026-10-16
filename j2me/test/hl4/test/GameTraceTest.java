@@ -42,6 +42,8 @@ public class GameTraceTest {
         int end = Integer.parseInt(a[1]);
         int start = Integer.parseInt(a[2]);
         Hashtable script = new Hashtable();
+        Hashtable pressOnly = new Hashtable();
+        Hashtable releaseOnly = new Hashtable();
         String ppm = null;
         String stateTicks = null;
         String stateOut = null;
@@ -73,7 +75,15 @@ public class GameTraceTest {
                 continue;
             }
             int c = a[i].indexOf(':');
-            script.put(new Integer(Integer.parseInt(a[i].substring(0, c))), new Integer(Integer.decode(a[i].substring(c + 1)).intValue()));
+            Integer tk = new Integer(Integer.parseInt(a[i].substring(0, c)));
+            String kv = a[i].substring(c + 1);
+            if (kv.startsWith("p")) {
+                pressOnly.put(tk, Integer.decode(kv.substring(1)));
+            } else if (kv.startsWith("r")) {
+                releaseOnly.put(tk, Integer.decode(kv.substring(1)));
+            } else {
+                script.put(tk, new Integer(Integer.decode(kv).intValue()));
+            }
         }
         String[] p = snap.split(" ");
         int calls = Integer.parseInt(p[4]);
@@ -105,6 +115,14 @@ public class GameTraceTest {
             if (k != null) {
                 Engine.onKey(true, k.intValue());
                 Engine.onKey(false, k.intValue());
+            }
+            Integer kp = (Integer) pressOnly.get(new Integer(t));
+            if (kp != null) {
+                Engine.onKey(true, kp.intValue());
+            }
+            Integer kr = (Integer) releaseOnly.get(new Integer(t));
+            if (kr != null) {
+                Engine.onKey(false, kr.intValue());
             }
             Clock.setVirtual(Clock.now() + 50);
             Engine.tick();

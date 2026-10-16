@@ -103,15 +103,12 @@ def main():
     if sys.argv[1] == 'dump':
         from ref_game import Game
         binp, res, outp, ticks, total = sys.argv[2], sys.argv[3], sys.argv[4], set(int(x) for x in sys.argv[5].split(',')), int(sys.argv[6])
-        script = {}
-        for kv in sys.argv[7:]:
-            t, k = kv.split(':')
-            script[int(t)] = int(k, 0)
+        import ref_game
+        script = ref_game.parse_script(sys.argv[7:])
         g = Game(binp, res).start()
         lines = []
         for i in range(total):
-            k = script.get(i)
-            g.tick(press=k, release=k) if k is not None else g.tick()
+            ref_game.tick_script(g, script, i)
             if i in ticks:
                 for nm, b in dump(g).items():
                     lines.append('%d %s %s' % (i, nm, b.hex()))

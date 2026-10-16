@@ -326,17 +326,6 @@ public final class HeroProc {
         }
     }
 
-    /** Map_Check_CollisionZone_Move_hero @0xa2c6c: the hero variant of the tile-collision move cut (slope tiles); only entered with a pending move on a map with collision tilesets */
-    public static void zoneMoveHero(int p1, int p2, int p3, int p4, byte[] m, int ox, int oy) {
-        if (Bytes.s32(m, ox) == 0 && Bytes.s32(m, oy) == 0) {
-            return;
-        }
-        if (M[0x270] < 1) {
-            return;
-        }
-        throw new IllegalStateException("Map_Check_CollisionZone_Move_hero / ..._n_Rect_MoveFlag_hero (hero tile collision with a pending move): later");
-    }
-
     /** the hero's per-tick timers once the cut scene is over: buff/status countdowns (CHAR_buffProcess @0xdbe3c), drug timers (Hero_processUseDrug @0x492d0), HP/SP regeneration, skill and item cool-downs */
     private static void regen(Char h) {
         byte[] m = h.m;
@@ -432,6 +421,28 @@ public final class HeroProc {
         throw new IllegalStateException("HERO_touchProcess: touch destination (not ported: keypad build)");
     }
 
+    /**
+     * HERO_process, walking: the per-tick step is 0x30 / (frames of the walk animation) px (2/3 on tile property 7, halved by a slow buff); a touch destination
+     * (+0xd18 / +0xd1c >= 0) can shorten the last step to the remaining distance - with the keypad both are -1 and the full step is taken
+     */
+    private static void walkStep(Char h) {
+        byte[] m = h.m;
+        int dir = m[0x168];
+        int sp = 0x30 / (h.spr.maxFrame(m[0x167], dir) + 1);
+        if (m[0x16e] == 7) {
+            sp = (sp * 2) / 3;
+        }
+        if (m[0x114] != 0 && m[0x116] == 1) {
+            sp = (sp + (sp >>> 31)) >> 1;               // CHAR_isSlowBuff
+        }
+        int tx = Bytes.s32(m, 0xd18);
+        int ty = Bytes.s32(m, 0xd1c);
+        if (tx >= 0 || ty >= 0) {
+            throw new IllegalStateException("HERO_process: touch destination step (not ported: keypad build)");
+        }
+        HeroCtl.setMove(h, sp, dir);
+    }
+
     // ---- HERO_process --------------------------------------------------------------------------------------------------------------------
 
     /** HERO_process(h) @0x8ce2c */
@@ -492,11 +503,15 @@ public final class HeroProc {
             y += 15;
         }
         m[0x16e] = (byte) Coll.tileProp((x << 20) >> 24, (y << 20) >> 24);
+        boolean skipStop = false;
         if (m[0x166] == 1) {
-            if (m[0x167] != 8) {
-                throw new IllegalStateException("HERO_process: walking (HERO_set_move / HERO_Key_Release): later");
+            if (m[0x167] == 8) {
+                skipStop = true;
+            } else {
+                walkStep(h);
             }
-        } else if (m[0x167] == 0) {
+        }
+        if (!skipStop && m[0x167] == 0) {
             HeroCtl.moveStop(h);
         }
         checkExtraFrame(h);
@@ -520,7 +535,7 @@ public final class HeroProc {
             Event.checkEvent(idx);
         }
         if (!Event.isEvent()) {
-            zoneMoveHero(zx, zy, zw, zh, m, 0x158, 0x15c);
+            HeroColl.zoneMoveHero(zx, zy, zw, zh, m, 0x158, 0x15c);
             eventZoneMove(zx, zy, zw, zh, m, 0x158, 0x15c);
         }
         if (Bytes.s32(m, 0x158) == 0 && Bytes.s32(m, 0x15c) == 0 && m[0x167] != 0 && m[0x167] != 2
