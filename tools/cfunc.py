@@ -13,8 +13,23 @@ DECL = re.compile(r'^\s+(undefined\d?|u?int|u?short|u?char|byte|bool|code|longlo
 
 
 def compact(body):
-    out, inhead = [], False
+    out, skipping, inl = [], False, None
     for ln in body.split('\n'):
+        if inl is not None:                # inlined Touch_setState/TF_setFrame body: print one line, drop the rest of the block
+            if ln == inl + '}':
+                inl = None
+            continue
+        m = re.match(r'^(\s*)if \(iRam000fd350 != (.*?)\) \{$', ln)
+        if m:
+            out.append('%s/* inlined Touch_setState(%s) */' % (m.group(1), m.group(2)))
+            inl = m.group(1)
+            continue
+        if skipping:                       # continuation of a touch_Addrect(...) statement
+            skipping = ';' not in ln
+            continue
+        if ln.strip().startswith('touch_Addrect(') or ln.strip() == 'touch_rectClear();':
+            skipping = ';' not in ln
+            continue
         if ln.startswith('/* WARNING') or ln.strip() == '':
             continue
         if DECL.match(ln):
