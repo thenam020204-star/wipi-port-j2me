@@ -301,9 +301,7 @@ public final class MainGameFrame implements FrameHandler {
                 g[0x55] = 0;
             }
             Maps.objectEndProcess();
-            if (Bytes.s32(g, 0x48) != 0) {
-                throw new IllegalStateException("PickUpItem_endProcess (live notices): later");
-            }
+            PickUp.endProcess();
             DropItems.endProcess();
             Event.endProcess();
             if (g[0] == 2) {
@@ -343,8 +341,12 @@ public final class MainGameFrame implements FrameHandler {
         Char hero = Pool.hero;
         if (key == -5 || key == 0x35) {
             Coll.heroMoveRect();
-            if (!G.dropedItem.isEmpty()) {
-                throw new IllegalStateException("ItemBag_pickUp / isItemPlaced (dropped items): later");
+            if (PickUp.bagPickUp()) {
+                HeroCtl.moveStop(hero);
+                hero.m[0x166] = 0;
+                hero.m[0x20d] = 0;
+                hero.m[0x169] = -1;
+                return;
             }
             if (G.event[0x1fe] == 0) {
                 Event.checkOKKey();

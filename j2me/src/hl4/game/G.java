@@ -57,6 +57,8 @@ public final class G {
     public static final LList bottomObjectList = new LList();
     public static final LList moreBottomObjectList = new LList();
     public static final LList dropedItem = new LList();
+    /** _game+0x48: the picked-up item notices (PickUp) */
+    public static final LList pickUps = new LList();
     public static final LList tileList = new LList();
     public static final LList netItemList = new LList();
 

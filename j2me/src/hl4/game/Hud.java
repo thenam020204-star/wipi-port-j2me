@@ -43,9 +43,7 @@ public final class Hud {
             return;
         }
         byte[] g = G.game;
-        if (Bytes.s32(g, 0x50) > 0 && Bytes.s32(g, 0x48) != 0) {
-            throw new IllegalStateException("PickUpItem_drawItems (live notices): later");
-        }
+        PickUp.drawItems();
         drawGameBottomUI();
         if (g[3] != 0) {
             throw new IllegalStateException("Map_Draw_Minimap: later");

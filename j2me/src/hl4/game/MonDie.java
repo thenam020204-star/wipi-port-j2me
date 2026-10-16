@@ -79,12 +79,67 @@ public final class MonDie {
         }
         int cur = Bytes.s32(m, 0x178) + exp;
         Bytes.w32(m, 0x178, cur);
-        int max = Bytes.s32(m, 0x17c);
-        if (cur < max || cur == 0) {
+        if (cur < Bytes.s32(m, 0x17c) || cur == 0) {
             return 0;
         }
-        later("HERO_add_curExp: level up");
+        // the first level: the remainder, +1 level (up to 99), points, status; then the next-exp table once; further levels in the
+        // same call compare against that new value without recomputing it (as the original does)
+        Bytes.w32(m, 0x178, cur - Bytes.s32(m, 0x17c));
+        if (m[0x94] <= 0x62) {
+            levelUp(m);
+        }
+        setNextExp(h);
+        for (;;) {
+            cur = Bytes.s32(m, 0x178);
+            if (cur < Bytes.s32(m, 0x17c)) {
+                break;
+            }
+            Bytes.w32(m, 0x178, cur - Bytes.s32(m, 0x17c));
+            if (m[0x94] <= 0x62) {
+                levelUp(m);
+            }
+        }
+        TEffects.addCommonEffect(h, h, 0, 3, 0, 0, 0, -1);
         return 1;
+    }
+
+    private static void levelUp(byte[] m) {
+        m[0x94]++;
+        addSkillPoint(0);
+        for (int i = 0; i < 4; i++) {
+            addAttributePoint(0);
+        }
+        Hero.setHeroStatus(1, 0);
+    }
+
+    /** HERO_set_nextExp(h) @0x77ccc: +0x17c = formula 0xbbd */
+    static void setNextExp(Char h) {
+        Bytes.w32(h.m, 0x17c, Fr.calc(0xbbd, h, null, -1, 0, h, null));
+    }
+
+    /** HERO_add_SkillPoint(sub) @0x76f1c: +0x222 += 1 (sub = 0) or -= 1 floored at 0 */
+    static int addSkillPoint(int sub) {
+        return addPoint(0x222, sub);
+    }
+
+    /** HERO_add_AttributePoint(sub) @0x76f8c: the same on +0x220 */
+    static int addAttributePoint(int sub) {
+        return addPoint(0x220, sub);
+    }
+
+    private static int addPoint(int off, int sub) {
+        byte[] m = Pool.hero.m;
+        int v = Bytes.u16(m, off);
+        if (sub == 0) {
+            v = (v + 1) & 0xffff;
+        } else {
+            v = (v - 1) & 0xffff;
+            if ((v & 0x8000) != 0) {
+                v = 0;
+            }
+        }
+        Bytes.w16(m, off, v);
+        return (short) v;
     }
 
     /** MONSTER_dropItem(o) @0xa52d0 */

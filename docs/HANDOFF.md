@@ -64,6 +64,7 @@ Các module lớn còn thiếu: HERO 29/156, MONSTER 20/148, CHAR 30/113, GMenu 
 
 Cả hai trace snapshot tại tick 500. Lúc đó Java bỏ qua title + story menu, gọi thẳng `GameStart.newGame` với seed lấy từ dòng `# seed` của trace.
 
+- Token kịch bản (chung cho `tools/ref_game.py` và `GameTraceTest`): `t:KEY` (bấm+nhả), `t:pKEY`, `t:rKEY`, `t:wSCENE/X/Y/W` (warp, móc test), `t:H` (**fixture test**, không phải hành vi gốc: HP hero +0xa4 := HP max +0xa8 trước tick t, áp dụng giống hệt ở cả hai phía — dùng cho trace M để hero sống qua nhiều lần giết).
 - `trace_C.txt`: 700 tick, kịch bản `80:-5 100:-5 250:-5 300:-5 340:-5 380:-5 420:-5 460:-5 500:-5 540:-5`.
 - `trace_D.txt`: 1320 tick; kịch bản như trên cộng thêm OK (-5) tại 720, 780, …, 1260 (mỗi 60 tick) để qua chuỗi thoại.
 

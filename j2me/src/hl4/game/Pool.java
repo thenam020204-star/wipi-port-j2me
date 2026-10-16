@@ -219,6 +219,9 @@ public final class Pool {
                 hl4.sys.Bytes.w16(o.m, Obj.MAPIDX, 0xffff);
                 break;
             }
+            case PICKUP:
+                PickUp.initSlot(hl4.sys.Bytes.s16(o.m, Obj.IDX));
+                break;
             case HERO:
             case SUMMON:
                 break;                       // MP_return has no case for them: the node is only unlinked

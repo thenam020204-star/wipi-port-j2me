@@ -45,6 +45,7 @@ public class GameTraceTest {
         Hashtable pressOnly = new Hashtable();
         Hashtable releaseOnly = new Hashtable();
         Hashtable warps = new Hashtable();
+        Hashtable heals = new Hashtable();
         String ppm = null;
         String stateTicks = null;
         String stateOut = null;
@@ -78,7 +79,9 @@ public class GameTraceTest {
             int c = a[i].indexOf(':');
             Integer tk = new Integer(Integer.parseInt(a[i].substring(0, c)));
             String kv = a[i].substring(c + 1);
-            if (kv.startsWith("w")) {
+            if (kv.equals("H")) {
+                heals.put(tk, tk);                          // test fixture (tools/ref_game.py): hero hp := max hp before the tick
+            } else if (kv.startsWith("w")) {
                 warps.put(tk, kv.substring(1));
             } else if (kv.startsWith("p")) {
                 pressOnly.put(tk, Integer.decode(kv.substring(1)));
@@ -123,6 +126,10 @@ public class GameTraceTest {
                     q[qi] = Integer.parseInt(qt.nextToken());
                 }
                 hl4.game.Event.moveNextScene(q[0], q[1], q[2], q[3], -1);
+            }
+            if (heals.get(new Integer(t)) != null) {
+                byte[] hm = hl4.game.Pool.hero.m;
+                hl4.sys.Bytes.w32(hm, 0xa4, hl4.sys.Bytes.s32(hm, 0xa8));
             }
             Integer k = (Integer) script.get(new Integer(t));
             if (k != null) {

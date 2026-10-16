@@ -66,13 +66,144 @@ public final class DropItems {
         }
     }
 
-    /** DropItem_drawInfos: the name balloon of the first item under the hero (rectangle 16 x 16 at the item) */
+    /** DropItem_drawInfos @0x99c0c: the name balloon of the first item under the hero */
     static void drawInfos() {
+        if (G.dropedItem.isEmpty()) {
+            return;
+        }
+        byte[] g = G.map;
+        int ox = (Bytes.s16(g, 0x2e0) - Bytes.s32(g, 156)) + Bytes.s32(g, 172);
+        int oy = (Bytes.s16(g, 0x2e2) - Bytes.s32(g, 160)) + Bytes.s32(g, 176);
         for (Obj o = G.dropedItem.head; o != null; o = o.next) {
-            if (heroOnItem(o)) {
-                throw new IllegalStateException("DropItem_drawInfo (name balloon): later");
+            if (drawInfo(o, ox, oy)) {
+                return;
             }
         }
+    }
+
+    /** _checkDir @0xe2028 (.data): two balloon sides to try per facing (item -> hero) 0..3: 2/3 left/right low, 5/6 left/right high */
+    private static final byte[] CHECK_DIR = {2, 3, 2, 3, 6, 3, 5, 2};
+    /** ITEMNAME_COLOR @0xd9ab0 */
+    private static final int[] NAME_RGB = {255, 255, 255, 255, 216, 0, 0, 176, 255, 181, 85, 255, 255, 33, 42, 62, 255, 36};
+    /** the "%s %s" buffer (sp+0x45 in the original), NUL padded to the 100 bytes it is drawn with */
+    private static final byte[] BAL = new byte[100];
+    private static final byte[] TMP = new byte[100];
+
+    private static byte[] field(byte[] m, int off, int max) {
+        int n = 0;
+        while (n < max && m[off + n] != 0) {
+            TMP[n] = m[off + n];
+            n++;
+        }
+        for (int i = n; i < TMP.length; i++) {
+            TMP[i] = 0;
+        }
+        return TMP;
+    }
+
+    /** DropItem_checkBalloonPos(x, y, w, h) @0xe0ab4 */
+    private static boolean balloonFits(int x, int y, int w, int h) {
+        return (x | y) >= 0 && x + 2 + w <= Glob.gameW && y + 2 + h <= Glob.gameH;
+    }
+
+    /** DropItem_drawBox(x, y, w, h, light) @0xe0b18: a box with cut corners (alpha 0xb2), white or dark blue */
+    private static void drawBox(int x, int y, int w, int h, int light) {
+        hl4.gfx.Frame f = Gfx.scr;
+        int r = light != 0 ? 0xff : 0x1a;
+        int gg = light != 0 ? 0xff : 0x26;
+        int b = light != 0 ? 0xff : 0x3e;
+        Gfx.fillRectAlpha(f, x + 1, y, w - 2, h, 0xb2, r, gg, b);
+        Gfx.fillRectAlpha(f, x, y + 1, 1, h - 2, 0xb2, r, gg, b);
+        Gfx.fillRectAlpha(f, x - 1 + w, y + 1, 1, h - 2, 0xb2, r, gg, b);
+    }
+
+    /** DropItem_drawInfo(item, ox, oy) @0xe0f58: when the hero stands on the item, "name skin" in a white balloon beside it */
+    private static boolean drawInfo(Obj o, int ox, int oy) {
+        byte[] m = o.m;
+        int ix = Bytes.s32(m, 8);
+        int iy = Bytes.s32(m, 0xc);
+        if (!heroOnItem(o)) {
+            return false;
+        }
+        int wn = hl4.gfx.Hf.width(field(m, 0x45, 0x1b), 100, 1);
+        int ws = hl4.gfx.Hf.width(field(m, 0x2a, 0x1b), 100, 1);
+        Char h = Pool.hero;
+        int dir = (byte) Um.turnDirection(ix + 8, iy + 0x10, Chars.getX(h), Chars.getY(h));
+        if (dir == -1) {
+            return false;
+        }
+        int w = wn + ws + 4;
+        int half = w >> 1;
+        int sx = ox + ix;
+        int sy = oy + iy;
+        int bx = sx + 8 - half;
+        int by = sy - 0x13;
+        int side = 0;
+        for (int k = 0; k < 2; k++) {
+            side = CHECK_DIR[dir * 2 + k];
+            switch (side) {
+                case 2:
+                    bx = sx - w;
+                    by = sy - 0xb;
+                    break;
+                case 3:
+                    bx = sx + 0x10;
+                    by = sy - 0xb;
+                    break;
+                case 5:
+                    bx = sx - w;
+                    by = sy - 0x13;
+                    break;
+                case 6:
+                    bx = sx + 0x10;
+                    by = sy - 0x13;
+                    break;
+                default:
+                    break;
+            }
+            if (balloonFits(bx, by, w, 0x10)) {
+                break;
+            }
+        }
+        if (bx < 0) {
+            bx = 0;
+        }
+        drawBox(bx, by, w, 0xe, 1);
+        int cx = bx + half;
+        hl4.gfx.Frame f = Gfx.scr;
+        if (side == 6 || side == 3) {
+            Gfx.fillRectAlpha(f, cx - 2, by + 0x10, 1, 2, 0x32, 0xff, 0xff, 0xff);
+            Gfx.fillRectAlpha(f, cx - 3, by + 0x10, 1, 3, 0x32, 0xff, 0xff, 0xff);
+        } else {
+            Gfx.fillRectAlpha(f, cx + 2, by + 0x10, 1, 2, 0x32, 0xff, 0xff, 0xff);
+            Gfx.fillRectAlpha(f, cx + 3, by + 0x10, 1, 3, 0x32, 0xff, 0xff, 0xff);
+        }
+        int gr = m[0x29];
+        if (gr == 0) {
+            hl4.gfx.Hf.setColor(0, 0, 0);
+        } else {
+            if (gr < 0) {
+                throw new IllegalStateException("DropItem_drawInfo: negative grade reads before ITEMNAME_COLOR (undefined)");
+            }
+            int k = gr > 4 ? 5 : gr;
+            hl4.gfx.Hf.setColor(NAME_RGB[k * 3], NAME_RGB[k * 3 + 1], NAME_RGB[k * 3 + 2]);
+        }
+        int n = 0;
+        for (int i = 0; i < 0x1b && m[0x45 + i] != 0; i++) {
+            BAL[n++] = m[0x45 + i];
+        }
+        BAL[n++] = ' ';
+        for (int i = 0; i < 0x1b && m[0x2a + i] != 0; i++) {
+            BAL[n++] = m[0x2a + i];
+        }
+        if (n > 0x1a) {
+            throw new IllegalStateException("DropItem_drawInfo: \"%s %s\" overruns the 0x1b-byte stack buffer of the original: later");
+        }
+        while (n < BAL.length) {
+            BAL[n++] = 0;
+        }
+        hl4.gfx.Hf.drawAnchorH(f, cx, by + 2, BAL, 100, 0, 1);
+        return true;
     }
 
     /** MainGameFrame_checkRectWithHero(x, y, 16, 16): the item's rectangle meets the hero's, shifted half a tile in the facing direction */
