@@ -68,9 +68,11 @@ public final class HeroDraw {
     private static void particleProcess() {
         long now = Clock.now();
         if (Particles.sets != null) {
-            if (Particles.curCount > 0) {
-                throw new IllegalStateException("onIdleParticles (live particles): later");
+            long iv = now - particleStart;
+            if (iv < 0) {
+                iv = 0;
             }
+            Particles.onIdle(iv);
         }
         particleStart = now;
     }

@@ -28,6 +28,8 @@ public final class MonProc {
     static void setBlend(Char o, int on, int alpha) {
         o.m[0x8f] = (byte) alpha;
         o.m[0x8e] = (byte) on;
+        o.spr.f6f = alpha & 0xff;                               // the blend bytes live in the embedded sprite struct (Char + 0x20)
+        o.spr.f6e = on & 0xff;
     }
 
     /** SPR_isEndFrame(spr, anim, dir) */

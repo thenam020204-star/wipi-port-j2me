@@ -360,6 +360,7 @@ public final class HeroAttack {
     }
 
     private static final int[] OVL = new int[4];
+    private static final int[] HR = new int[4];
 
     /**
      * HERO_serch_monster_area(h, rect, motion, skill, a5, a6, a7) @0x79bb8: every live visible monster whose hit rectangle meets the attack rectangle is
@@ -378,17 +379,41 @@ public final class HeroAttack {
             }
             int c = Um.collision(r[0], r[1], r[2], r[3], Chars.getHittedRectX(o), Chars.getHittedRectY(o), Chars.getHittedRectW(o),
                     Chars.getHittedRectH(o), OVL);
+            int[] rect;
+            int arg7;
             if (c != 0) {
-                if (a5 != 0) {
-                    later("HERO_serch_monster_area: Hero_canAttack");
+                if (a5 != 0 && HeroBattle.canAttack((Char) o)) {
+                    return 1;
                 }
-                later("HERO_attackMonsterProcess");
+                rect = OVL;
+                arg7 = a7;
             } else if (o.m[0x327] == 1) {
-                later("HERO_serch_monster_area: monster with +0x327 set");
+                if (a5 != 0 && HeroBattle.canAttack((Char) o)) {
+                    return 1;
+                }
+                HR[0] = Chars.getHittedRectX(o);
+                HR[1] = Chars.getHittedRectY(o);
+                HR[2] = Chars.getHittedRectW(o);
+                HR[3] = Chars.getHittedRectH(o);
+                rect = HR;
+                arg7 = 0;
+            } else {
+                continue;
+            }
+            if (HeroBattle.attackMonsterProcess(h, (Char) o, motion, skill, rect, arg7) > 0) {
+                hits++;
             }
         }
         if (hits > 0) {
-            later("HERO_serch_monster_area: hit tail");
+            int cl = h.m[0x16b];
+            if (cl != 0) {
+                later("HERO_serch_monster_area: hit tail of class " + cl);
+            }
+            if (skill == 6 || skill == 7 || skill == 4) {
+                h.m[0xa2f]++;
+            }
+            HeroBattle.playSkillSound(skill);
+            return 1;
         }
         int cl = h.m[0x16b];
         if (cl != 0 && cl != 2) {

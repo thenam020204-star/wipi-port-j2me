@@ -191,11 +191,7 @@ public final class MainGameFrame implements FrameHandler {
         hl4.gfx.Fx.fillRectBlend(f, x + 1, ty, w - 2, 2, 0, 0xff, 0x535b2b);
         int mx = Bytes.s32(m, 0xa8);
         if (mx != 0) {
-            int cur = Bytes.s32(m, 0xa4);
-            if (cur > mx) {
-                cur = mx;
-                Bytes.w32(m, 0xa4, mx);
-            }
+            int cur = Monsters.getCurHp(infoMonster);
             hl4.gfx.Fx.fillRectBlend(f, x + 1, ty, (w - 2) * cur / mx, 2, 0, 0xff, 0xff1c24);
             y += 4;
             ty = y + 1;

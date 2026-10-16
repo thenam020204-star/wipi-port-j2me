@@ -161,7 +161,7 @@ public final class ObjDraw {
             }
         }
         if (Particles.curCount > 0) {
-            throw new IllegalStateException("paintParticles: later");
+            Particles.paint(ox, oy);
         }
         if (!G.targetEffectList.isEmpty()) {
             TEffects.drawList(ox, oy, 0);
@@ -257,6 +257,8 @@ public final class ObjDraw {
         if (c.spr.cif.frameStart[(byte) mi].length == 1) {          // the motion's direction count (SPR+0x44 entry +8)
             md = 0;
         }
+        c.spr.f6e = m[0x8e] & 0xff;                                 // the blend bytes at +0x8e/+0x8f are part of the embedded sprite struct
+        c.spr.f6f = m[0x8f] & 0xff;
         c.spr.drawSprite(GfxOut.I, Gfx.scr, (byte) mi, (byte) md, frame, x, y - m[0x328], 0, -1);
         HeroDraw.drawEffectList(c, ox, oy);
         if (blend) {

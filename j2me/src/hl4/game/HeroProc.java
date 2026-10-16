@@ -534,7 +534,7 @@ public final class HeroProc {
             throw new IllegalStateException("MainGameFrame_GameOver: later");
         }
         if (Opt.v[7] == 1 && m[0x28c] != 0) {
-            throw new IllegalStateException("HERO_extra_set_particles: later");
+            Particles.extraSetParticles(m[0x28d], h.x() + Bytes.s16(m, 0x28e), h.y() + Bytes.s16(m, 0x290));
         }
     }
 

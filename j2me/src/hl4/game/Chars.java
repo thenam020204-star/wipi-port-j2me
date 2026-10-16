@@ -278,6 +278,37 @@ public final class Chars {
         initBuff(c);
     }
 
+    /** CHAR_isFireEnchantBuff @0xcb328: class 2 only; one of the three weapon-enchant slots (+0xf4 + 8 i) holds buff 7 */
+    public static boolean isFireEnchantBuff(Obj c) {
+        return enchant(c, 7);
+    }
+
+    /** CHAR_isIceEnchantBuff @0xcb388 */
+    public static boolean isIceEnchantBuff(Obj c) {
+        return enchant(c, ICE_ENCHANT);
+    }
+
+    private static final int ICE_ENCHANT = 8;
+
+    private static boolean enchant(Obj c, int id) {
+        if (c.m[0x16b] != 2) {
+            return false;
+        }
+        boolean r = false;
+        for (int i = 0; i < 3; i++) {
+            int b = 8 * i;
+            if (c.m[0xf4 + b] != 0 && c.m[0xf6 + b] == id) {
+                r = true;
+            }
+        }
+        return r;
+    }
+
+    /** CHAR_isReflectBuff @0xcb274 */
+    public static boolean isReflectBuff(Obj c) {
+        return c.m[0x114] != 0 && c.m[0x116] == 3;
+    }
+
     /** CHAR_initBuff @0xdbb60 */
     public static void initBuff(Char c) {
         byte[] m = c.m;

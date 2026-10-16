@@ -72,6 +72,17 @@ public final class Monsters {
         return true;
     }
 
+    /** MONSTER_getCurHp @0x9e684: the HP, cut to the maximum (and stored back) */
+    public static int getCurHp(Obj o) {
+        int mx = Bytes.s32(o.m, 0xa8);
+        int cur = Bytes.s32(o.m, 0xa4);
+        if (cur > mx) {
+            cur = mx;
+            Bytes.w32(o.m, 0xa4, mx);
+        }
+        return cur;
+    }
+
     /** MONSTER_bodyRemain @0x9efa8: the corpse stays (main state 0x12) */
     public static boolean bodyRemain(Obj o) {
         return o.m[0x166] == 0x12;

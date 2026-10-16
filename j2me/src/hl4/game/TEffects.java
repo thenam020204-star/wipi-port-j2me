@@ -211,7 +211,12 @@ public final class TEffects {
                     tint = (g[1] & 0xff) != 0;
                 } else if (ty == 13) {
                     if (Opt.particle()) {
-                        later("HERO_extra_set_particles");
+                        int px = Bytes.s32(m, 8) + g[0];
+                        int py = Bytes.s32(m, 0xc) + g[1];
+                        if (Pool.hero.m[0x20f] != 0) {
+                            py -= 0x2d;
+                        }
+                        Particles.extraSetParticles((byte) g[2], px, py);
                     }
                 }
                 if (!tint) {
