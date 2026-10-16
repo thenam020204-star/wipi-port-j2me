@@ -39,10 +39,28 @@ public final class HeroDraw {
         m[0x16d]--;
     }
 
-    /** CHAR_drawEffectList(c, ox, oy): the target effects and the effect list of the character (both empty in the scenes ported so far) */
-    public static void drawEffectList(Char c) {
-        if (!c.targetEffects.isEmpty() || !c.effects.isEmpty()) {
-            throw new IllegalStateException("CHAR_drawEffectList (live effects): later");
+    /**
+     * CHAR_drawEffectList(c, ox, oy) @0x3ad68: CHAR_drawTargetEffectList (@0x3ac8c: kinds 9/0xa/0x17/0x18 of +0x13c drawn with pass 0), then every
+     * effect of +0x130 at (x + anchor x + ox, y + anchor y + oy); an effect whose Effect_process reports the end leaves the list and goes back to the pool.
+     */
+    public static void drawEffectList(Char c, int ox, int oy) {
+        for (Obj p = c.targetEffects.head; p != null; ) {
+            Obj nx = p.next;
+            int k = p.m[0x20];
+            if (k == 9 || k == 0xa || k == 0x17 || k == 0x18) {
+                TEffects.draw((TEff) p, ox, oy, 0);
+            }
+            p = nx;
+        }
+        byte[] m = c.m;
+        for (Obj e = c.effects.head; e != null; ) {
+            Effects.draw(e, Bytes.s32(m, 0x20) + Bytes.s32(m, 8) + ox, Bytes.s32(m, 0x24) + Bytes.s32(m, 0xc) + oy);
+            Obj nx = e.next;
+            if (Effects.process(e)) {
+                c.effects.remove(e);                // LinkedList_remove + Effect_return: LList.remove already resets it through Pool.ret
+
+            }
+            e = nx;
         }
     }
 
@@ -174,7 +192,7 @@ public final class HeroDraw {
         if (Opt.particle()) {
             particleProcess();
         }
-        drawEffectList(h);
+        drawEffectList(h, ox, oy);
         if (m[0x171] != -1) {
             Imgs.imo.f68 = 0;                                       // SPR_set_restore_pal
             Sprite im = Imgs.imo;

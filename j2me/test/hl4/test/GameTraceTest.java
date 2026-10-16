@@ -99,6 +99,7 @@ public class GameTraceTest {
         Clock.setVirtual(1303268400000L);
         hl4.game.Glob.presetConsent = 1;
         Engine.startApp();
+        hl4.game.Imgs.loadCommon(0);       // stand-in for the boot LoadFrame (target 3) the original ran before the snapshot
         Rng.restore(w, fi, ri, calls);
         Clock.setVirtual(1303268400000L + (long) (start + 1) * 50);
         // test seeding standing in for the title + story menu (E4): state the original holds at the snapshot tick that the game code reads

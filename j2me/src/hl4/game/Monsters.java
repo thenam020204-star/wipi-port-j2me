@@ -72,6 +72,16 @@ public final class Monsters {
         return true;
     }
 
+    /** MONSTER_bodyRemain @0x9efa8: the corpse stays (main state 0x12) */
+    public static boolean bodyRemain(Obj o) {
+        return o.m[0x166] == 0x12;
+    }
+
+    /** MONSTER_isObject @0xa4750 */
+    public static boolean isObject(Obj o) {
+        return o.m[0x1ae] == 8;
+    }
+
     /** MONSTER_isHidding */
     public static boolean isHidding(Obj o) {
         return o.m[0x35d] != 0;

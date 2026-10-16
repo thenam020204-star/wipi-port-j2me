@@ -489,7 +489,7 @@ public final class HeroProc {
         }
         checkExtraFrame(h);
         if (m[0x166] == 3) {
-            throw new IllegalStateException("HERO_check_attack_frame: later");
+            HeroAttack.checkAttackFrame(h);
         }
         switch (m[0x16b]) {
             case 0:
@@ -559,7 +559,9 @@ public final class HeroProc {
             }
         } else {
             if (sp.isEndFrame(m[0x167], d, m[0x8c]) && m[0x166] == 3) {
-                throw new IllegalStateException("Hero_end_skilluse: later");
+                if (m[0x20d] == 0x11 ? HeroAttack.endSkillUse(h, m[0xd0c], 1) : HeroAttack.endSkillUse(h, 0, 3)) {
+                    return;
+                }
             }
             switch (m[0x16b]) {
                 case 0:
@@ -581,7 +583,7 @@ public final class HeroProc {
             m[0xa2f] = 0;                       // SM_Vibrator: likewise
         }
         if (m[0x285] != 0) {
-            throw new IllegalStateException("HERO_set_move (queued move +0x285): later");
+            HeroCtl.setMove(h, m[0x286], m[0x168]);         // the queued move of the attack frame (cell type 7)
         }
         m[0x285] = 0;
         if (m[0x289] != 0) {

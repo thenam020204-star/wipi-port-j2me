@@ -137,12 +137,94 @@ public final class MainGameFrame implements FrameHandler {
         MapFx.fallRandDraw(Gfx.scr);
         MapFx.screenEffect();
         Hud.drawBottomBar();
-        if (g[6] != 0 && infoMonster != null && !Event.isEvent()) {
-            throw new IllegalStateException("MainGameFrame_drawMonsterInfo: later");
-        }
+        drawMonsterInfo();
         EventDraw.draw(Gfx.scr);
         EventDraw.subTitle(Gfx.scr);
         EventDraw.skipFade(Gfx.scr);
+    }
+
+    private static final byte[] LV = {'L', 'V', 0};
+    private static final byte[] LVSTR = new byte[8];
+    private static final byte[] NAME = new byte[32];
+
+    /** MainGameFrame_drawMonsterInfo @0x8aca4: the monster bar slides in (+0x46 0..5) while the show counter (+5) runs and slides out afterwards */
+    static void drawMonsterInfo() {
+        byte[] g = G.game;
+        if (g[6] == 0 || infoMonster == null || Event.isEvent()) {
+            return;
+        }
+        drawInfo();
+        g[5]--;
+        if (g[5] == -1) {
+            initMonsterInfo(null, 0, 0);
+        }
+        if (g[5] > 0) {
+            if (g[0x46] <= 4) {
+                g[0x46]++;
+            }
+        } else if (g[0x46] > 0) {
+            g[0x46]--;
+        }
+    }
+
+    /**
+     * MainGameFrame_drawInfo(1, 0) @0x8a8d4 (monster variant, width 100): rank marks (_uiGame 7, m[0x33c] / 2), the frame, the HP fill, the dimmed
+     * body, "name" and "LV nn".
+     */
+    private static void drawInfo() {
+        byte[] g = G.game;
+        byte[] m = infoMonster.m;
+        hl4.gfx.Frame f = Gfx.scr;
+        int w = 0x64;
+        int y = g[0x46] * 3 - 0xf;
+        int x = Glob.gameW - 0x65;
+        int n = (m[0x33c] + ((m[0x33c] >> 31) & 1)) >> 1;
+        if (n > 0) {
+            hl4.gfx.Gbm ic = hl4.gfx.Img.get(Icons.uiGame, 7);
+            int xx = x + 0x1d - n * 2;
+            for (int i = 0; i < n; i++, xx += 4) {
+                hl4.gfx.Img.draw(f, xx, y, ic, 9);
+            }
+        }
+        hl4.gfx.Fx.fillRectBlend(f, x, y, w, 4, 0, 0xff, 0x0b0b0b);
+        int ty = y + 1;
+        hl4.gfx.Fx.fillRectBlend(f, x + 1, ty, w - 2, 2, 0, 0xff, 0x535b2b);
+        int mx = Bytes.s32(m, 0xa8);
+        if (mx != 0) {
+            int cur = Bytes.s32(m, 0xa4);
+            if (cur > mx) {
+                cur = mx;
+                Bytes.w32(m, 0xa4, mx);
+            }
+            hl4.gfx.Fx.fillRectBlend(f, x + 1, ty, (w - 2) * cur / mx, 2, 0, 0xff, 0xff1c24);
+            y += 4;
+            ty = y + 1;
+        }
+        hl4.gfx.Fx.fillRectBlend(f, x + 1, y, w - 2, 0xd, 0, 0x80, 0x0b0b0b);
+        hl4.gfx.Hf.setColor(0x96, 0x96, 0x96);
+        int q = 0;
+        while (q < 31 && m[0x95 + q] != 0) {
+            NAME[q] = m[0x95 + q];
+            q++;
+        }
+        NAME[q] = 0;
+        hl4.gfx.Hf.drawText(f, x + 0x19, ty, NAME, 0);
+        int lv = m[0x94];
+        if (lv < 0) {
+            return;
+        }
+        int k = 0;
+        if (lv <= 9) {
+            LVSTR[k++] = '0';
+        }
+        if (lv > 9) {
+            LVSTR[k++] = (byte) ('0' + lv / 10);
+        }
+        LVSTR[k++] = (byte) ('0' + lv % 10);
+        LVSTR[k] = 0;
+        hl4.gfx.Hf.drawText(f, x + 3, y + 6, LV, 1);
+        hl4.gfx.Hf.setColor(0xff, 0xff, 0xff);
+        hl4.gfx.Hf.drawText(f, x + 0xd, y + 6, LVSTR, 1);
     }
 
     /** MainGameFrame_EndProcess @0x9d3a0 */

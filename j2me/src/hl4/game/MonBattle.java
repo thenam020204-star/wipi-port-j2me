@@ -16,19 +16,9 @@ public final class MonBattle {
         throw new IllegalStateException(what + ": later");
     }
 
-    /** MainGameFrame_initMonsterInfo(o, ticks, keep) @0x893bc: the monster whose HP bar is shown (_game+8, the original keeps a pointer) */
-    public static Char monInfo;
-
+    /** MainGameFrame_initMonsterInfo(o, ticks, keep) @0x893bc (the state lives in MainGameFrame.infoMonster = _game+8) */
     static void initMonsterInfo(Char o, int t, int keep) {
-        byte[] g = G.game;
-        if (keep != 0 && monInfo != null) {
-            return;
-        }
-        boolean on = o != null && t > 0;
-        Bytes.w32(g, 0xc, 0);
-        monInfo = o;
-        g[6] = (byte) (on ? 1 : 0);
-        g[5] = (byte) (on ? t : 0);
+        MainGameFrame.initMonsterInfo(o, t, keep);
     }
 
     /** IncDecGaugeList_add(kind, cur, max, delta) @0x892ac: the HP (0) / SP (1) bar change animation state at _game+0x10 / +0x20 */

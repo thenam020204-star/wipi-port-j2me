@@ -258,7 +258,7 @@ public final class ObjDraw {
             md = 0;
         }
         c.spr.drawSprite(GfxOut.I, Gfx.scr, (byte) mi, (byte) md, frame, x, y - m[0x328], 0, -1);
-        HeroDraw.drawEffectList(c);
+        HeroDraw.drawEffectList(c, ox, oy);
         if (blend) {
             MonProc.setBlend(c, 0, 0xff);
         }

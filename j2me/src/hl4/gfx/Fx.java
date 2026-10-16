@@ -137,6 +137,53 @@ public final class Fx {
         return ((r << 11) | ((g6 << 5) & 0x7e0) | (b & 0x1f)) & 0xffff;
     }
 
+    /**
+     * DM_FillRectBlendingRGB(frame, x, y, w, h, mode, alpha, rgb) @0x5222c (565 frames; the 24-bit colour is cut to 5-bit R/G/B): the rectangle is
+     * clipped to the frame buffer (not the clip rectangle); per pixel the table of 'mode' is applied to (colour, destination) and then mixed with the
+     * destination by alpha exactly as blendPixel does (the blue weight uses alpha >> 3, not +1: CONFIRMED in the disassembly).
+     */
+    public static void fillRectBlend(Frame f, int x, int y, int w, int h, int mode, int alpha, int rgb) {
+        if (x < 0) {
+            w += x;
+            x = 0;
+        }
+        if (y < 0) {
+            h += y;
+            y = 0;
+        }
+        if (x + w > f.w) {
+            w = f.w - x;
+        }
+        if (y + h > f.h) {
+            h = f.h - y;
+        }
+        int sr = (rgb & 0xf80000) >> 19;
+        int sg = (rgb & 0xf800) >> 11;
+        int sb = (rgb & 0xf8) >> 3;
+        int base = (mode & 0xff) * 1024;
+        int ra = ((alpha & 0xf8) >> 3) + 1;
+        int ga = ((alpha & 0xf8) >> 2) + 1;
+        int ba = (alpha & 0xf8) >> 3;
+        for (int j = 0; j < h; j++) {
+            int o = (y + j) * f.w + x;
+            for (int i = 0; i < w; i++, o++) {
+                int d = f.px[o] & 0xffff;
+                int rd = d >> 11;
+                int gd = (d & 0x7e0) >> 6;
+                int bd = d & 31;
+                int r = TABLE[base + sr * 32 + rd] & 0xff;
+                int g6 = (TABLE[base + sg * 32 + gd] & 0xff) * 2;
+                int b = TABLE[base + sb * 32 + bd] & 0xff;
+                if (alpha != 0xff) {
+                    r = (r * ra + rd * (32 - ra)) >> 5;
+                    g6 = (g6 * ga + gd * 2 * (64 - ga)) >> 6;
+                    b = (b * ba + bd * (32 - ba)) >> 5;
+                }
+                f.px[o] = (short) ((r << 11) | ((g6 << 5) & 0x7e0) | (b & 0x1f));
+            }
+        }
+    }
+
     /** DM_DrawScreen565Ex @0x3fdec: like Blit.raster but blending into the destination. */
     private static void rasterEx(Frame f, Gbm img, int X, int Y, int W, int H, int SX, int SY, int mode, int alpha, int effect) {
         if (alpha == 0 || W <= 0 || H <= 0) {

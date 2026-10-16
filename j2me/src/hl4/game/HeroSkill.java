@@ -86,7 +86,7 @@ public final class HeroSkill {
         }
         switch (m[0x16b]) {
             case 0:
-                throw new IllegalStateException("HERO_check_skilluseHK (attack / skill start): later");
+                return HeroAttack.checkSkillUse(h, p3, p4, p5);
             default:
                 throw new IllegalStateException("HERO_check_skilluseHG/SK/SM: later");
         }
