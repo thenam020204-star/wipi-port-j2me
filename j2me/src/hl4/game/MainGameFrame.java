@@ -128,9 +128,7 @@ public final class MainGameFrame implements FrameHandler {
         MapObjDraw.drawBottom(Gfx.back);
         MapDraw.copyToScreen();
         Gfx.setClip(0, 0, Glob.gameW, Glob.gameH);
-        if (!G.dropedItem.isEmpty()) {
-            throw new IllegalStateException("DropItem_drawItems: later");
-        }
+        DropItems.drawItems();
         ObjDraw.drawBottomMonster();
         MapFx.extraScreenEffect();
         ObjDraw.drawMiddle();
@@ -235,9 +233,7 @@ public final class MainGameFrame implements FrameHandler {
             if (Bytes.s32(g, 0x48) != 0) {
                 throw new IllegalStateException("PickUpItem_endProcess (live notices): later");
             }
-            if (!G.dropedItem.isEmpty()) {
-                throw new IllegalStateException("DropItem_endProcess: later");
-            }
+            DropItems.endProcess();
             Event.endProcess();
             if (g[0] == 2) {
                 throw new IllegalStateException("MainGameFrame_EndProcess game-over branch: later");
