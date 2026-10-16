@@ -7,6 +7,8 @@ public final class DropItems {
     private DropItems() {
     }
 
+    private static final int[] SCRATCH = new int[4];
+
     /** DropItem_process(o): ages the item, blinks it after 0x172 frames and removes it at 0x191 */
     private static void process(Obj o) {
         byte[] m = o.m;
@@ -62,5 +64,23 @@ public final class DropItems {
         for (Obj o = G.dropedItem.head; o != null; o = o.next) {
             draw(o, ox, oy);
         }
+    }
+
+    /** DropItem_drawInfos: the name balloon of the first item under the hero (rectangle 16 x 16 at the item) */
+    static void drawInfos() {
+        for (Obj o = G.dropedItem.head; o != null; o = o.next) {
+            if (heroOnItem(o)) {
+                throw new IllegalStateException("DropItem_drawInfo (name balloon): later");
+            }
+        }
+    }
+
+    /** MainGameFrame_checkRectWithHero(x, y, 16, 16): the item's rectangle meets the hero's, shifted half a tile in the facing direction */
+    static boolean heroOnItem(Obj o) {
+        Char h = Pool.hero;
+        int dir = h.m[0x168];
+        int hx = Chars.getX(h) - 8 + (byte) (Um.vecX(dir) * 8);
+        int hy = Chars.getY(h) - 8 + (byte) (Um.vecY(dir) * 8);
+        return Um.collision(Bytes.s32(o.m, 8), Bytes.s32(o.m, 0xc), 16, 16, hx, hy, 16, 16, SCRATCH) < 0;
     }
 }

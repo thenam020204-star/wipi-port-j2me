@@ -95,7 +95,7 @@ public final class MonBattle {
     static void cancelCasting(Char h) {
         int mo = h.m[0x167];
         if (mo == 10 || mo == 11) {
-            later("HERO_cancelCasting (CHAR_removeTargetEffect)");
+            Chars.removeTargetEffect(h, 10, mo == 10 ? 0x1d : 0x1e);
         }
     }
 

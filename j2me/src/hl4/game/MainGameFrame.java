@@ -68,6 +68,19 @@ public final class MainGameFrame implements FrameHandler {
         Maps.initDrawFlag();
     }
 
+    /** MainGameFrame_GameOver @0x9d4dc: the hero's HP reached 0 */
+    static void gameOver() {
+        byte[] g = G.game;
+        if (g[0] == 0) {
+            g[0] = 2;
+            g[0x56] = 0;
+            HeroCtl.setMotion(Pool.hero, 5, 0);                 // CHAR_heroMotionDie
+            Pool.hero.m[0x166] = 4;
+            MapFx.setScreenEffect(4, -0x32, 0x46);
+            g[0x5b] = 0;
+        }
+    }
+
     /** MainGameFrame_Process @0x9c978 (= GamePlayProcess): the cut scene tick, every object's pre-process, screen shake, camera and the play-time limit */
     public void process() {
         byte[] g = G.game;
@@ -116,8 +129,8 @@ public final class MainGameFrame implements FrameHandler {
     /** MainGameFrame_Render / MainGameFrame_drawGame @0x9c2ec (the in-game picture, game state 0) */
     public static void drawGame() {
         byte[] g = G.game;
-        if (g[0] != 0) {
-            throw new IllegalStateException("MainGameFrame_Render for game state != 0: later");
+        if (g[0] != 0 && g[0] != 2) {
+            throw new IllegalStateException("MainGameFrame_Render for game state != 0 / 2: later");
         }
         byte[] m = G.map;
         MapDraw.drawTile(Gfx.back);
@@ -136,9 +149,12 @@ public final class MainGameFrame implements FrameHandler {
         MapFx.screenEffect();
         Hud.drawBottomBar();
         drawMonsterInfo();
-        EventDraw.draw(Gfx.scr);
-        EventDraw.subTitle(Gfx.scr);
-        EventDraw.skipFade(Gfx.scr);
+        DropItems.drawInfos();
+        if (g[0] == 0) {
+            EventDraw.draw(Gfx.scr);
+            EventDraw.subTitle(Gfx.scr);
+            EventDraw.skipFade(Gfx.scr);
+        }
     }
 
     private static final byte[] LV = {'L', 'V', 0};
@@ -236,7 +252,17 @@ public final class MainGameFrame implements FrameHandler {
             DropItems.endProcess();
             Event.endProcess();
             if (g[0] == 2) {
-                throw new IllegalStateException("MainGameFrame_EndProcess game-over branch: later");
+                if (g[0x56] == 0) {
+                    g[0x5b]++;
+                    if (g[0x5b] > 10) {
+                        g[0x5b] = 10;
+                    }
+                    if (MapFx.screenEffectCheck(4)) {
+                        throw new IllegalStateException("MainGameFrame_initGameOver(1) (game over popup): later");
+                    }
+                } else {
+                    throw new IllegalStateException("MainGameFrame_EndProcess game-over popup state: later");
+                }
             }
         } else if (g[0] == 3 && Engine.changeFrame != 0) {
             throw new IllegalStateException("MainGameFrame_EndProcess game menu leave: later");
@@ -248,8 +274,14 @@ public final class MainGameFrame implements FrameHandler {
 
     /** MainGameFrame_KeyPressed @0x8cc20 -> GamePlayKeyPressed @0x8ca44 (game state 0); a running cut scene takes every key (Event_Key) */
     public void keyPressed(int key) {
+        if (G.game[0] == 2) {
+            if (G.game[0x56] != 1) {
+                return;                                         // MainGameFrame_GameOverKeyPressed @0x9a694: keys count only while the popup is up
+            }
+            throw new IllegalStateException("MainGameFrame_GameOverKeyPressed (popup keys): later");
+        }
         if (G.game[0] != 0) {
-            throw new IllegalStateException("MainGameFrame_KeyPressed for game state != 0: later");
+            throw new IllegalStateException("MainGameFrame_KeyPressed for game state != 0 / 2: later");
         }
         if (G.event[0x1fe] != 0) {
             Event.key(key);

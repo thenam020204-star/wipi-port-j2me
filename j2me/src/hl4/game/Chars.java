@@ -396,6 +396,21 @@ public final class Chars {
         removeCommonEffect(c, 7, 0x28);
     }
 
+    /** CHAR_removeTargetEffect(c, kind, sub) @0x4b024: removes the first target effect (+0x20 = kind, +0x21 = sub) of the character's list; true when one was found */
+    public static boolean removeTargetEffect(Char c, int kind, int sub) {
+        if ((kind | sub) < 0) {
+            return false;
+        }
+        for (Obj p = c.targetEffects.head; p != null; p = p.next) {
+            if (Obj.structType(p) == 6 && p.m[0x20] == kind && p.m[0x21] == sub) {
+                c.targetEffects.remove(p);
+                G.targetEffectList.remove(p);
+                return true;
+            }
+        }
+        return false;
+    }
+
     /** Eff_deleteEffectInList(c) @0x4a17c: drops the character's own effect objects */
     public static void deleteEffectInList(Char c) {
         for (Obj p = c.effects.head; p != null; ) {
