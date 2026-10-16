@@ -248,6 +248,93 @@ public final class Event {
         return tick();
     }
 
+    private static final int[] okIdx = new int[10];
+    private static final int[] okArea = new int[10];
+    private static final int[] okOut = new int[4];
+
+    /**
+     * Map_Check_Hero_Eventzone_OKKey @0xa56c4: the event-zone record the hero activates with the OK key: a type 2 record the hero's tile overlaps by more than a
+     * quarter tile, or the type 4 records (one tile ahead of the hero's facing, the probe rectangle moves 5 px with every type 4 record seen); -1 when none
+     */
+    public static int okKeyZone() {
+        Char h = Pool.hero;
+        byte[] hm = h.m;
+        int dir = hm[0x168];
+        if (hm[0x166] != 0) {
+            return -1;
+        }
+        int tw = G.map[0x7e];
+        int th = G.map[0x7f];
+        int rw = tw;
+        int rh = th;
+        int rx = Bytes.s32(hm, 8) - rw / 2;
+        int ry = Bytes.s32(hm, 0xc) - rh / 2;
+        int cnt = e[8];
+        int dx = 0;
+        int dy = 0;
+        int n = 0;
+        for (int k = 1; k < cnt; k++) {
+            int r = rec(k);
+            int zx = Bytes.s16(e, r);
+            int zy = Bytes.s16(e, r + 2);
+            int t = e[r + 7];
+            if (t == 2) {
+                int a = Um.collision(rx, ry, rw, rh, zx, zy, tw, th, okOut);
+                if (a + (tw / 2) * (th / 2) < 0) {
+                    return k;
+                }
+            }
+            if (t == 4) {
+                switch (dir) {
+                    case 0:
+                        dy = -5;
+                        break;
+                    case 1:
+                        dy = 5;
+                        break;
+                    case 2:
+                        dx = -5;
+                        break;
+                    case 3:
+                        dx = 5;
+                        break;
+                    default:
+                        break;
+                }
+                rw = tw;
+                rh = th;
+                rx = Bytes.s32(hm, 8) - rw / 2 + dx;
+                ry = Bytes.s32(hm, 0xc) - rh / 2 + dy;
+                int a = Um.collision(rx, ry, rw, rh, zx, zy, tw, th, okOut);
+                if (a < 0 && n < 10) {
+                    okIdx[n] = k;
+                    okArea[n] = a;
+                    n++;
+                }
+            }
+        }
+        if (n == 1) {
+            return okIdx[0];
+        }
+        if (n == 2) {
+            int a0 = okArea[0] < 0 ? -okArea[0] : okArea[0];
+            int a1 = okArea[1] < 0 ? -okArea[1] : okArea[1];
+            if (a0 == a1 || a0 > a1) {
+                return okIdx[0];
+            }
+            return okIdx[1];
+        }
+        return -1;
+    }
+
+    /** Event_CheckOKKey @0x6d678: runs the event under the hero's OK-key probe */
+    public static boolean checkOKKey() {
+        int idx = okKeyZone();
+        Bytes.w32(e, 4, idx);
+        checkEvent(idx);
+        return idx != -1;
+    }
+
     /** EVENT_onLoad @0x5d6b0 */
     public static boolean onLoad() {
         e[0x948] = 5;

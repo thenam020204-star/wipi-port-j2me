@@ -181,14 +181,43 @@ public final class MainGameFrame implements FrameHandler {
             Event.key(key);
             return;
         }
-        throw new IllegalStateException("MainGameFrame_GamePlayKeyPressed (play mode): later");
+        Char hero = Pool.hero;
+        if (key == -5 || key == 0x35) {
+            Coll.heroMoveRect();
+            if (!G.dropedItem.isEmpty()) {
+                throw new IllegalStateException("ItemBag_pickUp / isItemPlaced (dropped items): later");
+            }
+            if (G.event[0x1fe] == 0) {
+                Event.checkOKKey();
+            }
+        }
+        if (Event.isEvent()) {
+            return;
+        }
+        HeroCtl.keyPress(hero, key);
+        if (key == -8) {
+            if (Bytes.s32(hero.m, 0xa4) > 0) {
+                throw new IllegalStateException("GameMenu open (soft key): later");
+            }
+        } else if (key < -8) {
+            if (key == -16 && Bytes.s32(hero.m, 0xa4) > 0) {
+                throw new IllegalStateException("exit to menu (soft key 2): later");
+            }
+        } else if (key == -7) {
+            if (G.map[0x375] != 0) {
+                throw new IllegalStateException("NpcUi_Initialize(0, 0xb): later");
+            }
+        } else if (key == 0x2a) {
+            G.game[3] = (byte) (G.game[3] == 0 ? 1 : 0);
+        }
     }
 
     /** MainGameFrame_KeyReleased @0x8a3b0 -> HERO_Key_Release: nothing happens while an event runs (HERO_Key_Release returns on Event_isEvent) */
     public void keyReleased(int key) {
-        if (G.game[0] != 0 || !Event.isEvent()) {
-            throw new IllegalStateException("HERO_Key_Release (play mode): later");
+        if (G.game[0] != 0) {
+            return;
         }
+        HeroCtl.keyRelease(Pool.hero, key);
     }
 
     public void hideNotify() {

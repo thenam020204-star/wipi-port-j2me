@@ -151,4 +151,254 @@ public final class HeroCtl {
         Bytes.fill(m, 0xd25, 0, 4);
         m[0xd16] = 0;
     }
+
+    /** HERO_setWalkMotion(h, dir) @0x88f0c */
+    public static void setWalkMotion(Obj h, int dir) {
+        byte[] m = h.m;
+        setStatusAir(h, 0);
+        m[0x20e] = 0;
+        m[0x168] = (byte) dir;
+        m[0x166] = 1;
+        m[0x174] = (byte) 0xff;
+        m[0x167] = 1;
+    }
+
+    /** HERO_Match_Number_key @0x86a74: the digit keys of the movement pad become the soft arrow codes */
+    public static int matchNumberKey(int k) {
+        switch (k) {
+            case 0x32:
+                return -1;
+            case 0x34:
+                return -3;
+            case 0x35:
+                return -5;
+            case 0x36:
+                return -4;
+            case 0x38:
+                return -2;
+            default:
+                return k;
+        }
+    }
+
+    /** HERO_Key_press(h, key) @0x8adb0 */
+    public static void keyPress(Char h, int key) {
+        byte[] m = h.m;
+        int d = (Um.abs(key) - 1) & 0xff;
+        if (d >= 4) {
+            d = m[0x168];
+        }
+        int k = matchNumberKey(key);
+        if (k == 0x23) {
+            m[0x20c] = (byte) ((m[0x20c] + 1) & 1);
+            return;
+        }
+        if (k == -16 || k == -6 || k == -7) {
+            return;
+        }
+        if (m[0xa41] == 0 || m[0xa41] == 2) {
+            if (k != -1 && k != -3 && k != -2 && k != -4) {
+                return;
+            }
+        }
+        if (Event.isEvent()) {
+            return;
+        }
+        if (Bytes.s16(G.map, 0x356) > 0 && m[0x170] == 0) {
+            return;
+        }
+        if (m[0x217] > 0) {
+            return;
+        }
+        if (m[0x124] != 0 && m[0x126] == 1) {
+            return;
+        }
+        if (m[0x167] == 6) {
+            return;
+        }
+        if (m[0x16b] == 2 || m[0x16b] == 3) {
+            throw new IllegalStateException("HERO_Sunju_key_press: later");
+        }
+        humanKeyPress(h, k);
+        int s = m[0x20c] & 0xff;
+        int p2;
+        int p3;
+        switch (k) {
+            case 0x31:
+                p2 = m[0x1f4 + s];
+                p3 = m[0x200 + s];
+                break;
+            case -5:
+                p2 = m[0x1f8 + s];
+                p3 = m[0x204 + s];
+                break;
+            case 0x30:
+                p2 = m[0x1fe + s];
+                p3 = m[0x20a + s];
+                break;
+            case 0x37:
+                p2 = m[0x1fa + s];
+                p3 = m[0x206 + s];
+                break;
+            case 0x39:
+                p2 = m[0x1fc + s];
+                p3 = m[0x208 + s];
+                break;
+            case 0x33:
+                p2 = m[0x1f6 + s];
+                p3 = m[0x202 + s];
+                break;
+            default:
+                return;
+        }
+        HeroSkill.checkSkillUse(h, p2, p3, d, 0);
+    }
+
+    /** HERO_Human_key_press(h, key) @0x91150: a direction key starts / continues walking (double tap in a battle scene = dash) */
+    private static void humanKeyPress(Char h, int key) {
+        byte[] m = h.m;
+        if (m[0x167] == 8) {
+            return;
+        }
+        int d = (Um.abs(key) - 1) & 0xff;
+        if (d >= 4) {
+            d = m[0x168];
+        }
+        if (key + 4 < 0 || key + 4 >= 4) {
+            m[0x229] = 0;
+            m[0x226] = 0;
+            m[0x227] = 0;
+            m[0x228] = 0;
+            return;
+        }
+        m[0xd25 + d] = 1;
+        if (m[0x10c] != 0 && m[0x10e] == 4) {
+            throw new IllegalStateException("CHAR_removeEtcStatus (siege buff): later");
+        }
+        int mo = m[0x167];
+        if (mo == 6 || !(mo == 0 || mo == 2 || mo == 1 || mo == 3)) {
+            return;
+        }
+        if (m[0x226 + d] < 1 || m[0x226 + m[0x168]] < 1 || m[0xd15] < 1 || d != m[0x168]) {
+            setWalkMotion(h, d);
+            m[0x22b] = 0;
+            setDirection(h, d);
+            m[0x226 + m[0x22a]] = 0;
+            m[0x226 + d]++;
+        } else {
+            if (m[0xa41] == 1) {
+                setMotion(h, 8, d);
+                Sound.playEff(0xb);
+                m[0x166] = 3;
+                return;
+            }
+            setWalkMotion(h, d);
+            m[0x22b] = 0;
+            setDirection(h, d);
+            m[0x226 + m[0x22a]] = 0;
+            m[0x226 + d] = 0;
+        }
+        int o = Opt.v[2] & 0xff;
+        m[0xd15] = (byte) (o <= 4 ? 10 : o + 6);
+    }
+
+    /** HERO_Key_Release(h, key) @0x8ab6c (also inlined in MainGameFrame_KeyReleased @0x9a3b0) */
+    public static void keyRelease(Char h, int key) {
+        byte[] m = h.m;
+        int d = (Um.abs(key) - 1) & 0xff;
+        if (d >= 4) {
+            d = m[0x168];
+        }
+        if (key == -16 || key == -6 || key == -7) {
+            return;
+        }
+        int k = matchNumberKey(key);
+        if (Event.isEvent()) {
+            return;
+        }
+        if (m[0xa41] == 0 || m[0xa41] == 2) {
+            if (k != -1 && k != -3 && k != -2 && k != -4) {
+                return;
+            }
+        }
+        if (Bytes.s16(G.map, 0x356) > 0 && m[0x170] == 0) {
+            return;
+        }
+        if (m[0x124] != 0 && m[0x126] == 1) {
+            return;                                     // CHAR_isStunBuff
+        }
+        if (m[0x11c] != 0 && m[0x11e] == 2) {
+            return;                                     // CHAR_isIcedBuff
+        }
+        if (m[0x16b] == 2 || m[0x16b] == 3) {
+            throw new IllegalStateException("HERO_Sunju_key_release: later");
+        }
+        humanKeyRelease(h, k);
+        int s = m[0x20c] & 0xff;
+        int p2;
+        int p3;
+        switch (k) {
+            case 0x31:
+                p2 = m[0x1f4 + s];
+                p3 = m[0x200 + s];
+                break;
+            case -5:
+                p2 = m[0x1f8 + s];
+                p3 = m[0x204 + s];
+                break;
+            case 0x30:
+                p2 = m[0x1fe + s];
+                p3 = m[0x20a + s];
+                break;
+            case 0x37:
+                p2 = m[0x1fa + s];
+                p3 = m[0x206 + s];
+                break;
+            case 0x39:
+                p2 = m[0x1fc + s];
+                p3 = m[0x208 + s];
+                break;
+            case 0x33:
+                p2 = m[0x1f6 + s];
+                p3 = m[0x202 + s];
+                break;
+            default:
+                return;
+        }
+        HeroSkill.checkSkillUse(h, p2, p3, d, 2);
+    }
+
+    /** HERO_Human_key_release(h, key) @0x91010 */
+    private static void humanKeyRelease(Char h, int key) {
+        byte[] m = h.m;
+        int d = (Um.abs(key) - 1) & 0xff;
+        if (d >= 4) {
+            d = m[0x168];
+        }
+        if (key + 4 < 0 || key + 4 >= 4) {
+            return;
+        }
+        int mo = m[0x167];
+        m[0xd25 + d] = 0;
+        if (mo == 1 || mo == 3) {
+            if (m[0xa41] == 1) {
+                int o = Opt.v[2] & 0xff;
+                m[0xd15] = (byte) (o <= 4 ? 10 : o + 6);
+            }
+            if (m[0x168] != d) {
+                if (m[0xd25] != 0 || m[0xd26] != 0 || m[0xd27] != 0) {
+                    return;
+                }
+                if (m[0xd28] != 0) {
+                    return;
+                }
+            }
+            setStandMotion(h, 0, 0, d);
+            return;
+        }
+        if (mo == 8) {
+            m[0x226 + m[0x168]] = 0;
+            m[0x226 + m[0x22a]] = 0;
+        }
+    }
 }
