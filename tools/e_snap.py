@@ -62,6 +62,23 @@ def load(binp, res, path, **kw):
     return g, d['tick']
 
 
+def restore(g, d):
+    """put a loaded snapshot dict (pickle content) back onto an existing Game (its hooks stay): faster than load() for many runs"""
+    for begin, blob in d['mem']:
+        g.uc.mem_write(begin, zlib.decompress(blob))
+    for k, v in d['attrs'].items():
+        setattr(g, k, pickle.loads(pickle.dumps(v)))      # private copies: the run mutates dicts / lists
+    g.uc.ctl_flush_tb()
+    return d['tick']
+
+
+def read(path):
+    with open(path, 'rb') as f:
+        d = pickle.load(f)
+    assert d['version'] == VERSION
+    return d
+
+
 def boot(binp, res, **kw):
     """Game + first tick to run: from env SNAPLOAD if set, else a fresh start at tick 0"""
     p = os.environ.get('SNAPLOAD')

@@ -666,6 +666,7 @@ public final class MonProc {
         Char h = Pool.hero;
         int c;
         if (p != 0) {
+            Coll.heroMoveRect();                    // 0xa0fb4: refreshed before it is read
             c = collideMoveRect(o, Bytes.s32(h.m, 0x148), Bytes.s32(h.m, 0x14c), Bytes.s32(h.m, 0x150), Bytes.s32(h.m, 0x154));
         } else {
             c = collideMoveRect(o, Chars.getHittedRectX(h), Chars.getHittedRectY(h), Chars.getHittedRectW(h), Chars.getHittedRectH(h));
@@ -1260,6 +1261,7 @@ public final class MonProc {
         if (!withHero) {
             return true;
         }
+        Coll.heroMoveRect();                        // 0xa5c38
         Char hr = Pool.hero;
         return Um.collision(x, y, w, h, Bytes.s32(hr.m, 0x148), Bytes.s32(hr.m, 0x14c), Bytes.s32(hr.m, 0x150), Bytes.s32(hr.m, 0x154), rc) == 0;
     }
