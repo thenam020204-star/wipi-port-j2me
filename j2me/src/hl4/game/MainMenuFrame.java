@@ -111,6 +111,15 @@ public final class MainMenuFrame implements FrameHandler {
                     return;
                 }
                 throw new IllegalStateException("main menu item " + sel + ": later");
+            case 0x31:
+            case 0x32:
+            case 0x33:
+                if (sel == 0) {
+                    // TEST BUILD shortcut (T0.6, temporary, docs/phaseE.md section 4): keys 1/2/3 on item 0 start a new game with hero class 1/2/3
+                    // (0 human warrior via OK, 1 human gunslinger, 2/3 the two Nebed classes) instead of the story-mode force / class screens (E4)
+                    GameStart.newGame(key - 0x30);
+                }
+                break;
             default:
                 break;
         }

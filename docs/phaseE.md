@@ -54,6 +54,7 @@ Bài học công cụ: các script gỡ lỗi `e_args/e_ret/e_raw/e_part` phải
 - **Lối tắt của bản thử nghiệm** (tạm thời, bỏ khi port xong phần tương ứng):
   - Màn đồng ý thông tin: phím 1 (동의함) / 2 (거부함) lưu câu trả lời như `Save_smsAgree` rồi phím kế tiếp rời màn title. Popup xác nhận NpcUi(5, 10) bị bỏ qua.
   - Menu chính, mục 0 (게임시작): vào thẳng game mới, slot 0, class 0 (`GameStart.newGame(0)`) thay cho các màn story mode (E4).
+  - (T0.6) Menu chính, mục 0: phím 1/2/3 vào game mới với class 1/2/3 (1 = người/gunslinger, 2/3 = hai class Nebed; OK = class 0 warrior). Class gốc = `_gameMenu[8] + force·2` (`MMenu_StoryModeKey` mode 1/2, lưu ở `_slotInfo[slot·16]`, chép sang hero +0x16b). Nebed là force trả phí: bản gốc chỉ cho chọn khi `_gameMenu[0x22] != 0` (đã mua); trace gốc dùng fixture `t:N`.
   - Gặp phần chưa port (`IllegalStateException "...: later"`): vòng lặp dừng và lỗi hiện lên đầu màn hình (`GameCanvas.drawError`) thay vì treo.
   - Jar đóng gói tài nguyên gốc (`tools/j2me_stage_res.py` → `work/resjar_full`, không có SND): 2,5 MB — có thể vượt giới hạn jar của nhiều máy thật.
 - Không có vùng bấm / pointer / bàn phím ảo. Âm thanh chưa gắn (lời gọi `Sound.*` giữ chỗ).

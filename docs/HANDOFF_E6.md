@@ -65,7 +65,10 @@ Việc đầu tiên của phiên sau là kiểm chứng phần này (§4 bước
 `docs/golden_scripts/scX.txt` = kịch bản đầy đủ cho `tools/e_trace.py` / `e_ret.py` / `e_raw.py` (gồm token < 500); `kX.txt` = phần từ tick 500 cho `GameTraceTest`.
 Token: `t:KEY`, `t:pKEY`, `t:rKEY`, `t:wSCENE/X/Y/W` (warp, móc test), `t:H` (fixture test: HP hero := HP max trước tick t — **không phải hành vi gốc**).
 Trace A–M đã commit trong `golden/`; trace mới sinh bằng `SNAP=500 python3 tools/e_trace.py "$B" work/res work/golden/trace_X.txt <ticks> $(cat docs/golden_scripts/scX.txt)`.
-Số tick (tick cuối + 1): E 3300, F 8100, G 6000, H 5400, I 6200, J 6000, K 5300, L 7500, M 9000, N 12000.
+Token `t:N` (fixture test, T0.6): `_gameMenu[0x22] := 1` trước tick t = force Nebed coi như đã mua (bản gốc offline chờ server mãi); đặt sau màn đồng ý (stub `Load_smsAgree` ghi lại byte này), ví dụ 390.
+Số tick (tick cuối + 1): E 3300, F 8100, G 6000, H 5400, I 6200, J 6000, K 5300, L 7500, M 9000, N 12000, O/P/Q 6000.
+Trace theo class (T0.6, kịch bản M, sinh 2026-10-17): **O** class 1 (người/gunslinger: `440:-4`), **P** class 2 (Nebed: `390:N 400:-4`), **Q** class 3 (Nebed: `390:N 400:-4 440:-4`). GameTraceTest lấy class từ seed `_slotInfo[slot·16]`. Java hiện: O khớp 501..521 rồi `HERO_HG/SK/SM_process: later`; P/Q dừng ở 502 `Guardian_loadBasicData: later`. Snapshot ở 4700: `work/snap/{O,P,Q}/snap_4700.snap` (sinh lại: `SNAPSAVE=4700 SNAPDIR=...` khi chạy `e_trace.py`).
+Trace N (sinh lại 2026-10-17 từ snapshot M_500, kịch bản sửa: phần đầu chuẩn <500 + kN): Java khớp 501..4737, dừng ở `Event_PopupRepay (item popup): later` (story, giai đoạn 2). J dừng ở 5070 (`GameMenuFrame_returnMainMenu: later`, có từ trước).
 
 ## 6. Quirk của bản gốc đã gặp ở giai đoạn này (đã chép đúng, đừng "sửa")
 
