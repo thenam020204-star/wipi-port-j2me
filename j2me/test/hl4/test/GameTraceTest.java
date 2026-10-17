@@ -145,11 +145,20 @@ public class GameTraceTest {
                 Engine.onKey(false, kr.intValue());
             }
             Clock.setVirtual(Clock.now() + 50);
+            long b0 = t >= BENCH_FROM ? System.nanoTime() : 0;
             try {
                 Engine.tick();
             } catch (RuntimeException ex) {
                 System.out.println("exception at tick " + t);
                 throw ex;
+            }
+            if (t >= BENCH_FROM) {
+                long d = System.nanoTime() - b0;
+                benchSum += d;
+                benchN++;
+                if (d > benchMax) {
+                    benchMax = d;
+                }
             }
             int h = Fnv.shorts(Gfx.scr.px, Gfx.scr.px.length);
             String mine = t + " " + TraceTest.hex8(h) + " " + Rng.calls;
@@ -190,9 +199,17 @@ public class GameTraceTest {
         if (so != null) {
             so.close();
         }
+        if (benchN > 0) {
+            System.out.println("bench ticks " + benchN + " avg " + (benchSum / benchN / 1000) + " us max " + (benchMax / 1000) + " us (Engine.tick only)");
+        }
         System.out.println("GameTraceTest " + (bad == 0 ? "ok" : "DIVERGED") + " ticks " + (start + 1) + ".." + end);
         System.exit(bad == 0 ? 0 : 1);
     }
+
+    /** test-only timing of Engine.tick (-Dbench=<first tick>); not part of the product */
+    static final int BENCH_FROM = Integer.parseInt(System.getProperty("bench", "2147483647"));
+    static long benchSum, benchMax;
+    static int benchN;
 
     static void writeRaw(String path, short[] px) throws Exception {
         java.io.FileOutputStream o = new java.io.FileOutputStream(path);
