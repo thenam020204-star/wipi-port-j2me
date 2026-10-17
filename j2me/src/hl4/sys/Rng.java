@@ -59,7 +59,7 @@ public final class Rng {
         return v >>> 1;
     }
 
-    /** UM_Rand(a, b) = a + random() % (b - a + 1) with an UNSIGNED modulo (__aeabi_uidivmod). */
+    /** UM_Rand(a, b) @0xc8fc0: a + random() % (b - a + 1) with an UNSIGNED modulo (__aeabi_uidivmod); b - a + 1 == 0 divides by zero (the original does not guard it either) */
     public static int rand(int a, int b) {
         int d = b - a + 1;
         int v = random();
@@ -69,7 +69,7 @@ public final class Rng {
         return a + (int) ((v & 0xffffffffL) % (d & 0xffffffffL));
     }
 
-    /** UM_RandRatio(p): UM_Rand(0, 100) <= p. */
+    /** UM_RandRatio(p) @0xc8fec: UM_Rand(0, 100) <= p (signed compare), returns 1/0 */
     public static boolean ratio(int p) {
         return rand(0, 100) <= p;
     }

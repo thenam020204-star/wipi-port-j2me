@@ -11,3 +11,4 @@ ItemBag_setItemDN	/4+r	D1 agent (disassembly)
 ItemBag_setItemOptAdd	/8+r	D1 agent (disassembly)
 Item_getIcon	/2+r	D1 agent: = Item_getIconName(type, idx, 0, 0)
 Item_createItem	+r	returns the item
+PointerList_releaseAll	/0	D1 UM agent: single instruction b 0x87154 (tail call of PointerList_initAll), no arguments, void; no decompilation
