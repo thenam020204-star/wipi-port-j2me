@@ -178,6 +178,14 @@ public class GameTraceTest {
             }
             int h = Fnv.shorts(Gfx.scr.px, Gfx.scr.px.length);
             String mine = t + " " + TraceTest.hex8(h) + " " + Rng.calls;
+            if (ref[t] == null) {
+                if (t == probeTick) {
+                    probe(t + 1);
+                    System.out.println("GameTraceTest probes done after tick " + t);
+                    System.exit(0);
+                }
+                continue;                                   // no reference line for this tick (trace generated from a later snapshot)
+            }
             String[] rp = ref[t].split(" ");
             if (rp.length > 3) {
                 // the background buffer is compared from the first in-game render on (before that it still holds whatever the menus drew)

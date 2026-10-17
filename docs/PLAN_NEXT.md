@@ -43,6 +43,18 @@ Không có giai đoạn này thì không nên giao việc cho agent: thiếu tes
 | T0.7 | **Giao diện bàn phím từ KTF** (quyết định 2026-10-17, xem `NOTES.md`): (a) xác minh bản LGT 2010 có cùng HUD với KTF không (chạy LGT 2010 trong bộ chạy tham chiếu hoặc so tài nguyên/chuỗi UI); (b) liệt kê phần giao diện khác AND2011: thanh dưới (ô tắt 1/3/5/7/9/0 + icon, HP/MP), thanh tên/cấp quái phía trên, nhãn phím mềm ("Phím phải SHOP"), menu; (c) kiểm ảnh UI của KTF có trong tài nguyên AND2011 không (so hash `docs/manifest_ktf.tsv` ↔ `docs/manifest_android.tsv`); (d) tìm hàm vẽ tương ứng trong KTF (raw Thumb, không symbol) bằng ghép chuỗi/cấu trúc với AND2011 (`tools/xmatch_strings.py`, `docs/xmatch_strings_ktf_so.tsv`). Không đoán bố cục từ ảnh chụp: tọa độ phải lấy từ code gốc. | Báo cáo (a)–(d) + danh sách hàm. Ảnh chụp KTF (HUD, Status, Inventory, Equipment, Skill, Quest, System, Option) đã có ở `docs/ref_ktf/` (xem README trong đó); chỉ dùng để nhận diện màn hình. |
 | T0.6 | Lựa chọn class test: lối tắt chọn class 1–3 (thay màn chọn class E4), ghi rõ là tạm. | Vào game được với cả 4 class; trace gốc tương ứng sinh được. |
 
+### Trạng thái Giai đoạn 0 (phiên 2026-10-17)
+
+| ID | Trạng thái | Kết quả / nơi xem |
+|---|---|---|
+| T0.1 | **xong** | `tools/e_calls.py`, `hl4.test.CallRec` + `tools/callrec_inst.py` + `tools/jcr.sh`, `tools/callcmp.py` (`--only`, `CALLDUMP`, `CALLER`, probe + `!poke`). Trace M 4800–5400: 27 hàm, 0 lệch; tìm ra và sửa 3 chỗ thiếu `CHAR_getHeroMoveRect` (MONSTER_checkWithHeroRect, MONSTER_isHeroNear, MONSTER_isRectMoveable). Thử làm sai 1 hàm: tool chỉ đúng lời gọi đó |
+| T0.2 | **xong** | `tools/c2j.py`, `tools/c2j_eval.py`, `docs/T02_c2j.md`: 13/20 nháp đạt 0 lệch không cần sửa (65%), 6 đạt sau khi sửa dòng C2J-CHECK, 1 phải viết tay |
+| T0.3 | **xong** | `tools/e_snap.py`; trace M từ snapshot 4500 giống hệt (4500 dòng); mọi công cụ `e_*` nhận `SNAPLOAD` |
+| T0.4 | đang làm | `tools/e_scan.py` (quét map: hàm module nào chạy ở map nào) → kịch bản module trong `docs/golden_scripts/` |
+| T0.5 | **xong** | `docs/AGENT_BRIEF.md`; agent Sonnet thử module D1 Item/ItemBag/ArmsBag: 37 hàm, 0 lệch, 33 phút, đã ghép (`docs/agent_reports/`) |
+| T0.6 | **xong** | phím 1/2/3 ở menu chính = class 1/2/3; trace gốc O/P/Q (fixture `t:N` = Nebed đã mua) |
+| T0.7 | **xong (báo cáo)** | `docs/T07_ktf_ui.md`, `tools/ktf_code.py`, `tools/ktf_match.py`; còn mở: nhãn phím mềm, menu KTF, bộ ghép tự động mới 228/1873 hàm |
+
 ## 4. Giai đoạn 1: gameplay, theo thứ tự (số trong ngoặc = hàm đã port / tổng của module, theo `tools/port_cover.py`)
 
 ### 4a. D1 dễ (Sonnet, có thể chạy song song)
