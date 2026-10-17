@@ -494,13 +494,17 @@ if __name__ == '__main__':
 
 def parse_script(tokens):
     """Scenario tokens 'tick:key' (tap = press+release in that tick), 'tick:pKEY' (press only), 'tick:rKEY' (release only), 'tick:wSCENE/X/Y/W' (warp via Event_moveNextScene),
-    'tick:H' (test fixture: hero hp (+0xa4) := max hp (+0xa8) before the tick) -> {tick: [press, release, warp, heal]}"""
+    'tick:H' (test fixture: hero hp (+0xa4) := max hp (+0xa8) before the tick),
+    'tick:N' (test fixture: _gameMenu[0x22] := 1 before the tick = the paid Nebed force counts as bought, so the story menu offers classes 2/3
+    offline; the real purchase path waits for the carrier server forever, MMenu_StoryModeKey mode 1) -> {tick: [press, release, warp, heal, nebed]}"""
     sc = {}
     for kv in tokens:
         t, k = kv.split(':')
-        e = sc.setdefault(int(t), [None, None, None, False])
+        e = sc.setdefault(int(t), [None, None, None, False, False])
         if k == 'H':
             e[3] = True
+        elif k == 'N':
+            e[4] = True
         elif k[:1] == 'w':
             e[2] = [int(x) for x in k[1:].split('/')]      # warp: Event_moveNextScene(scene, tileX, tileY, weather) before the tick (test hook)
         elif k[:1] == 'p':
@@ -519,6 +523,8 @@ def tick_script(g, sc, i):
     else:
         if e[2] is not None:
             g.call('Event_moveNextSceneWithWeatherTime', e[2][0], e[2][1], e[2][2], e[2][3], 0xffffffff)
+        if e[4]:
+            g.write(g.objaddr('_gameMenu') + 0x22, b'\x01')
         if e[3]:
             h = g.objaddr('_pool')                          # the hero is pool object 0
             g.uc.mem_write(h + 0xa4, bytes(g.read(h + 0xa8, 4)))

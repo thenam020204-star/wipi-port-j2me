@@ -89,6 +89,9 @@ public class GameTraceTest {
             int c = a[i].indexOf(':');
             Integer tk = new Integer(Integer.parseInt(a[i].substring(0, c)));
             String kv = a[i].substring(c + 1);
+            if (kv.equals("N")) {
+                continue;                                   // fixture of the original's story menu (before the snapshot): nothing to do here
+            }
             if (kv.equals("H")) {
                 heals.put(tk, tk);                          // test fixture (tools/ref_game.py): hero hp := max hp before the tick
             } else if (kv.startsWith("w")) {
@@ -124,7 +127,9 @@ public class GameTraceTest {
                 dst[off + k / 2] = (byte) Integer.parseInt(q[4].substring(k, k + 2), 16);
             }
         }
-        GameStart.newGame(0);
+        // hero class: the class screen stored it in the slot record before the snapshot (MMenu_StoryModeKey: slot[0] = class, case 3 copies it to hero +0x16b)
+        int cls = hl4.game.G.slotInfo[hl4.game.G.gameMenu[0x16] * 16];
+        GameStart.newGame(cls);
         java.io.PrintStream so = stateOut == null ? null : new java.io.PrintStream(new java.io.FileOutputStream(stateOut));
         int bad = 0;
         for (int t = start + 1; t < end && t < nref; t++) {
