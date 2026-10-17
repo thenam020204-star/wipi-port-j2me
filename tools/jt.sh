@@ -11,4 +11,4 @@ tc = B.compile_tests()
 open('/tmp/jt.cp', 'w').write(cls + ':' + tc)
 PY
 CP=$(cat /tmp/jt.cp):work/res
-exec java -cp "$CP" "$@"
+exec java $JT_OPTS -cp "$CP" "$@"
