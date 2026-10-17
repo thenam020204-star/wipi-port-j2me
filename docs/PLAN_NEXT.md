@@ -72,6 +72,19 @@ Không có giai đoạn này thì không nên giao việc cho agent: thiếu tes
 
 E4 story mode (trace L là trace nghiệm thu), cutscene và hội thoại còn lại, chuỗi quest chính, popup thưởng quest (`Event_PopupRepay`, blocker tick 4738), `Event_Next_Scene`, `MainGameData_saveStory`, quest phụ, tranh kết thúc, phụ đề số. Bỏ các lối tắt test (màn đồng ý, vào thẳng game, chọn class).
 
+## 5b. Giai đoạn 3: sau khi port xong — đặt tên hằng cho các offset (để mod dễ hơn)
+
+Làm **sau** khi gameplay và story đã khớp trace; không làm xen vào lúc đang port (đổi hàng loạt dễ đụng code agent đang sửa).
+
+1. **Bảng offset** `docs/offsets.md`: mỗi struct (`Char`/hero, `Obj`, `G.game`, `G.event`, `G.map`, `G.questMenu`, item, popup box, ...) một bảng `offset | kiểu (s8/u8/s16/s32) | tên | độ tin cậy | bằng chứng`.
+   - Tên chỉ đặt khi có bằng chứng: tên hàm gốc đọc/ghi ô đó (symbol AND2011), chuỗi, cách dùng trong nhiều hàm. Độ tin cậy HIGH thì đặt tên nghĩa (`HP = 0xa4`, `HP_MAX = 0xa8`); MEDIUM đặt tên kèm ghi chú; LOW giữ tên tạm `UNK_0148`. Không biến suy đoán thành sự thật.
+2. **Lớp hằng** cho từng struct (ví dụ `hl4.game.CharF`, `hl4.game.GameF`): chỉ gồm `static final int` (hằng lúc biên dịch). javac/ecj chép thẳng giá trị vào chỗ dùng ⇒ **bytecode của các method không đổi**, không tốn bộ nhớ lúc chạy; ProGuard có thể bỏ hẳn lớp hằng khỏi jar.
+3. **Thay dần** `Bytes.s32(m, 0xa4)` → `Bytes.s32(m, CharF.HP)`, từng struct một, bằng script (không sửa tay hàng loạt), giữ nguyên kiểu đọc (s8/u8/s16/s32) như cũ.
+4. **Nghiệm thu mỗi đợt:**
+   - so bytecode trước/sau (`javap -c -p` từng class, bỏ qua bảng hằng của lớp hằng mới): **giống hệt**; khác byte nào thì đợt đó bị loại;
+   - build + scanner 0 reject + preverify; toàn bộ trace hồi quy vẫn khớp.
+5. Ghi mapping `tên mới → offset gốc` để truy ngược khi gỡ lỗi và khi đối chiếu với disassembly (`tools/disf.py` vẫn in offset gốc).
+
 ## 6. Quy trình mỗi module
 
 1. `tools/e_cover.py` trên kịch bản của module → danh sách hàm cần port.
