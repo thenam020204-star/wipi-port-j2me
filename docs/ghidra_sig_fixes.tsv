@@ -12,3 +12,7 @@ ItemBag_setItemOptAdd	/8+r	D1 agent (disassembly)
 Item_getIcon	/2+r	D1 agent: = Item_getIconName(type, idx, 0, 0)
 Item_createItem	+r	returns the item
 PointerList_releaseAll	/0	D1 UM agent: single instruction b 0x87154 (tail call of PointerList_initAll), no arguments, void; no decompilation
+LinkedList_isEmpty	/1+r	D1 agent: reads r0 (the list) via LinkedList_getSize, returns 1 - size (0 when it borrows)
+MP_getNew	/2	D1 agent: tail-call thunk of MP_search(type, out position); no decompilation
+MAPOBJ_set	/2	D1 agent: OBJ_set(o, pos) reads r1 = the position MP_Initialize passes
+DropItem_set	/2	D1 agent: OBJ_set(o, pos) reads r1 = the position MP_Initialize passes

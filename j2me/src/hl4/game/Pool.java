@@ -101,8 +101,7 @@ public final class Pool {
         }
         for (int i = 0; i < 900; i++) {
             Obj o = pools[MAPOBJ][i];
-            o.objSet(1);
-            Maps.mapObjInit(o, 0, 0, 0xff, 0, 0, 0);
+            MapObjDraw.set(o);
         }
         for (int i = 0; i < 20; i++) {
             Obj o = pools[TILE][i];
@@ -143,13 +142,18 @@ public final class Pool {
         PickUp.init();
         for (int i = 0; i < 30; i++) {
             Obj o = pools[DROP][i];
-            o.objSet(1);
-            Maps.dropItemInit(o, 0, 0, 0xff, 0, 0, 0, 0, 0, 0);
+            DropItems.set(o);
         }
     }
 
-    /** MP_search / MP_getNew: first free slot of the type (its free flag is cleared); null = none (the original returns type 0x11) */
+    /**
+     * MP_getNew(type, out) @0x9dab0 (a tail call of MP_search @0xad444): first free slot of the type (its free flag is cleared); null = none
+     * (the original fills the out position with type 0x11, idx -1; also for the types MP_search has no case for: 11, 13, 15, out of range)
+     */
     public static Obj getNew(int type) {
+        if (type < 0 || type >= pools.length || pools[type] == null) {
+            return null;
+        }
         Obj[] a = pools[type];
         for (int i = 0; i < a.length; i++) {
             if (a[i].m[Obj.FREE] != 0) {
@@ -158,6 +162,105 @@ public final class Pool {
             }
         }
         return null;
+    }
+
+    /**
+     * MP_POSITION_init(pos, type, idx, ptr, flag) @0x9d1cc: fills the position {ptr +0, type +4 (byte), flag +5 (byte), idx +6 (halfword)};
+     * here the position is the object header at +0x10 of 'o' (self pointer = o: 'ptr' is not stored).
+     */
+    public static void positionInit(Obj o, int type, int idx, Obj ptr, int flag) {
+        o.m[Obj.TYPE] = (byte) type;
+        o.m[Obj.FREE] = (byte) flag;
+        hl4.sys.Bytes.w16(o.m, Obj.IDX, idx);
+    }
+
+    /** MP_InitNetItem(idx) @0x9d1e4: position of the arms/net item slot idx = {item, 12, 1, idx} (the slot's own header; no network access) */
+    public static void initNetItem(int idx) {
+        Obj o = pools[ARMS_ITEM][(short) idx];
+        positionInit(o, ARMS_ITEM, idx, o, 1);
+    }
+
+    /**
+     * MP_getObj(pos) @0x9d250: the pool object a position names (type +4 signed byte, idx +6); null for types without a pool here
+     * (0, 11, 13..15, > 16).  The hero and the summon ignore the index.  An index outside the pool gives null (the original computes a wild address).
+     */
+    public static Obj getObj(Obj pos) {
+        int t = pos.m[Obj.TYPE];
+        int i = hl4.sys.Bytes.s16(pos.m, Obj.IDX);
+        switch (t) {
+            case NPC:
+            case MONSTER:
+            case EFFECT:
+            case TARGET_EFFECT:
+            case MAPOBJ:
+            case ITEM:
+            case DROP:
+            case TILE:
+            case ARMS_ITEM:
+            case SPROBJ:
+                return i >= 0 && i < pools[t].length ? pools[t][i] : null;
+            case HERO:
+                return hero;
+            case SUMMON:
+                return summon;
+            default:
+                return null;
+        }
+    }
+
+    /** MP_getHero() @0x9dab4 */
+    public static Char getHero() {
+        return hero;
+    }
+
+    /** MP_getSummon() @0x9dad0 */
+    public static Char getSummon() {
+        return summon;
+    }
+
+    /** MP_getPickUpItem(i) @0x9db78 */
+    public static Obj getPickUpItem(int i) {
+        return pools[PICKUP][i];
+    }
+
+    /** MP_getBag() @0x827a8: _itemBag */
+    public static LList getBag() {
+        return G.itemBag;
+    }
+
+    /** MP_getArmsBag() @0x829bc: _armsBag */
+    public static LList getArmsBag() {
+        return G.armsBag;
+    }
+
+    /** MP_getEquip(i) @0x827c4: _equip[i] */
+    public static Obj getEquip(int i) {
+        return G.equip[i];
+    }
+
+    /** MP_getArmsEquip(i) @0x82a18: _armsEquip[i] */
+    public static Obj getArmsEquip(int i) {
+        return G.armsEquip[i];
+    }
+
+    /** MP_getX(pos) @0x9db34: x of the monster a position names; -1 when the position is not a monster */
+    public static int getX(Obj pos) {
+        if (pos.m[Obj.TYPE] != MONSTER) {
+            return -1;
+        }
+        return hl4.sys.Bytes.s32(pools[MONSTER][hl4.sys.Bytes.s16(pos.m, Obj.IDX)].m, Obj.X);
+    }
+
+    /** MP_getY(pos) @0x9daf0: y of the monster a position names; -1 when the position is not a monster */
+    public static int getY(Obj pos) {
+        if (pos.m[Obj.TYPE] != MONSTER) {
+            return -1;
+        }
+        return hl4.sys.Bytes.s32(pools[MONSTER][hl4.sys.Bytes.s16(pos.m, Obj.IDX)].m, Obj.Y);
+    }
+
+    /** MP_release() @0x9d24c: empty in the original (a bare return; the pool is static) */
+    public static void release() {
     }
 
     /** MP_return @0xadc4c: resets the object to the free state of its type */
@@ -181,8 +284,7 @@ public final class Pool {
                 Npcs.ret((Char) o);
                 break;
             case MAPOBJ:
-                o.objSet(1);
-                Maps.mapObjInit(o, 0, 0, 0xff, 0, 0, 0);
+                MapObjDraw.ret(o);
                 break;
             case TILE:
                 o.objSet(1);
@@ -191,8 +293,7 @@ public final class Pool {
                 hl4.sys.Bytes.w32(o.m, 0xc, 0);
                 break;
             case DROP:
-                Maps.dropItemInit(o, 0, 0, 0xff, 0, 0, 0, 0, 0, 0);
-                o.objSet(1);
+                DropItems.ret(o);
                 break;
             case SPROBJ: {
                 SObj so = (SObj) o;

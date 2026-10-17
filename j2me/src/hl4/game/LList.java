@@ -17,12 +17,17 @@ public final class LList {
         size = 0;
     }
 
-    /** LinkedList_isEmpty: size == 0 */
+    /** LinkedList_getSize(list) @0x86960: the size field (+8) */
+    public int getSize() {
+        return size;
+    }
+
+    /** LinkedList_isEmpty(list) @0x86968: LinkedList_getSize == 0 (1 - size, 0 when that borrows) */
     public boolean isEmpty() {
         return size == 0;
     }
 
-    /** LinkedList_addLastObject (no size change) */
+    /** LinkedList_addLastObject(list, n) @0x86934 (no size change) */
     public void addLastObject(Obj n) {
         n.prev = tail;
         n.next = null;
@@ -35,7 +40,7 @@ public final class LList {
         }
     }
 
-    /** LinkedList_addFirstObject (no size change) */
+    /** LinkedList_addFirstObject(list, n) @0x86904 (no size change) */
     public void addFirstObject(Obj n) {
         n.prev = null;
         n.next = head;
@@ -187,6 +192,45 @@ public final class LList {
         size = 0;
         head = null;
         tail = null;
+    }
+
+    /**
+     * LinkedList_tempRelease(list) @0x87070: from the tail backwards every node whose release type (+0x1a, signed) is not 1 is removed
+     * (LinkedList_remove: unlinked and given back to its pool); finally a head / tail that is still not permanent is cleared.
+     */
+    public void tempRelease() {
+        Obj p = tail;
+        while (p != null) {
+            Obj pv = p.prev;
+            if (p.m[Obj.RELEASE] != 1) {
+                remove(p);
+            }
+            p = pv;
+        }
+        if (head != null && head.m[Obj.RELEASE] != 1) {
+            head = null;
+        }
+        if (tail != null && tail.m[Obj.RELEASE] != 1) {
+            tail = null;
+        }
+    }
+
+    /**
+     * LinkedList_releaseAll() @0x8719c: LinkedList_release of _objList, _topObjectList, _bottomObjectList, _moreBottomObjectList, _dropedItem,
+     * _tileList, _netItemList; then (tail call PointerList_releaseAll @0x87198 = PointerList_initAll @0x87154) PointerList_release of
+     * _npcList, _monsterList, _targetEffectList.
+     */
+    public static void releaseAll() {
+        G.objList.release();
+        G.topObjectList.release();
+        G.bottomObjectList.release();
+        G.moreBottomObjectList.release();
+        G.dropedItem.release();
+        G.tileList.release();
+        G.netItemList.release();
+        G.npcList.release();
+        G.monsterList.release();
+        G.targetEffectList.release();
     }
 
     /** LinkedList_find @0x96984 (index counted from the head; the original returns the node AFTER 'idx' links) */

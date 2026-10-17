@@ -9,7 +9,7 @@ public final class DropItems {
 
     private static final int[] SCRATCH = new int[4];
 
-    /** DropItem_process(o): ages the item, blinks it after 0x172 frames and removes it at 0x191 */
+    /** DropItem_process(o) @0xd140c: ages the item, blinks it after 0x172 frames and removes it at 0x191 */
     private static void process(Obj o) {
         byte[] m = o.m;
         int f = (short) (Bytes.s16(m, 0x20) + 1);
@@ -33,7 +33,19 @@ public final class DropItems {
         }
     }
 
-    /** DropItem_draw(o, ox, oy) */
+    /** DropItem_set(o) @0xd16cc: OBJ_set(o, ..) (free flag 1) + DropItem_init(o, 0, 0, -1, 0, 0, 0, 0, 0, 0) */
+    public static void set(Obj o) {
+        o.objSet(1);
+        Maps.dropItemInit(o, 0, 0, 0xff, 0, 0, 0, 0, 0, 0);
+    }
+
+    /** DropItem_return(o) @0xd1684: DropItem_init(o, 0, 0, -1, 0, 0, 0, 0, 0, 0), then OBJ_return(o) (tail call) */
+    public static void ret(Obj o) {
+        Maps.dropItemInit(o, 0, 0, 0xff, 0, 0, 0, 0, 0, 0);
+        Obj.ret(o);
+    }
+
+    /** DropItem_draw(o, ox, oy) @0xd12f0: shadow + item icon; on a water tile (property 7) the splash sprite of the common effects (animation 0x16) */
     private static void draw(Obj o, int ox, int oy) {
         byte[] m = o.m;
         int x = Bytes.s32(m, 8);
@@ -49,7 +61,9 @@ public final class DropItems {
         ObjDraw.shadow((short) (px + 8), (short) (py + 10), 0, 0);
         hl4.gfx.Blit.drawImg(Gfx.scr, px + 8, py + 8, 13, 13, Icons.itemIcon[0], m[0x25] * 13, 0, 0, 0, 0x12);
         if ((byte) prop == 7) {
-            throw new IllegalStateException("DropItem_draw: water effect (common effect sprite 0x16): later");
+            hl4.gfx.Sprite cs = TEffects.commonSpr;
+            cs.f6c = cs.drawSprite(hl4.gfx.GfxOut.I, Gfx.scr, 0x16, 0, cs.f6c, px + 8, py + 10, 0, 0) & 0xff;
+            cs.repeatFrame(0x16, 0);
         }
     }
 

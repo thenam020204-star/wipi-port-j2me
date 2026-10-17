@@ -72,6 +72,7 @@ public final class ObjDraw {
         }
     }
 
+    /** MAPOBJ_getOpacityType(a) @0x9c3b4: 0 for 0xff, then 1..6 by the thresholds 0xe9, 0xc2, 0x9b, 0x74, 0x4d (higher opacity byte = lower type) */
     private static int opacityType(int a) {
         a &= 0xff;
         if (a == 0xff) {

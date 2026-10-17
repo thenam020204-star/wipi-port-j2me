@@ -22,6 +22,28 @@ public final class MapObjDraw {
     private static final int[] ALPHA = {0xff, 0xea, 0xc3, 0x9c, 0x75, 0x4e, 0x27};
     private static final int[] OUT = new int[4];
 
+    /** MAPOBJ_set(o) @0x9d18c: OBJ_set(o, ..) (free flag 1) + MAPOBJ_init(o, 0, 0, 0xff, 0, 0, 0) */
+    public static void set(Obj o) {
+        o.objSet(1);
+        Maps.mapObjInit(o, 0, 0, 0xff, 0, 0, 0);
+    }
+
+    /** MAPOBJ_return(o) @0x9d150: OBJ_return(o) + MAPOBJ_init(o, 0, 0, 0xff, 0, 0, 0) */
+    public static void ret(Obj o) {
+        Obj.ret(o);
+        Maps.mapObjInit(o, 0, 0, 0xff, 0, 0, 0);
+    }
+
+    /** MAPOBJ_setTrans(o, v) @0x9c3ac: the flag byte +0x24 (mirror / scale / quarter turn bits) */
+    public static void setTrans(Obj o, int v) {
+        o.m[0x24] = (byte) v;
+    }
+
+    /** MAPOBJ_setVisible(o, v) @0x9c590: OBJ_setVisible(o, v & 0xff) */
+    public static void setVisible(Obj o, int v) {
+        Obj.setVisible(o, v & 0xff);
+    }
+
     /** the effect id for the high 5 bits of the opacity byte; -1 = not in the table */
     private static int effectId(int v) {
         if (v >= 1 && v <= 0xf) {

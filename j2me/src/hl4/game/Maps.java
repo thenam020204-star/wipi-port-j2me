@@ -480,7 +480,7 @@ public final class Maps {
         mm[0x27] = (byte) p8;
         mm[0x28] = (byte) p9;
         mm[0x29] = (byte) p10;
-        mm[0x20] = 0;
+        Bytes.w16(mm, 0x20, 0);
         Bytes.fill(mm, 0x45, 0, 0x1b);
         Bytes.fill(mm, 0x2a, 0, 0x1b);
     }
@@ -838,14 +838,7 @@ public final class Maps {
 
     /** Map_tempReleaseList @0xabdb4: objects that are not permanent (release type != 1) leave the object list; the pointer lists keep only permanent ones */
     public static void tempReleaseList() {
-        LList l = G.objList;
-        for (Obj p = l.tail; p != null; ) {
-            Obj pv = p.prev;
-            if (p.m[Obj.RELEASE] != 1) {
-                l.remove(p);
-            }
-            p = pv;
-        }
+        G.objList.tempRelease();                      // LinkedList_tempRelease
         tempReleasePointers(G.monsterList);
         tempReleasePointers(G.targetEffectList);
     }

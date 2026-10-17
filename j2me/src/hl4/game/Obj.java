@@ -57,8 +57,9 @@ public class Obj {
     }
 
     /**
-     * OBJ_set @0xc9318 (also OBJ_destroy / OBJ_return): header reset, free flag = 'avail'.
-     * x = y = 0, visible = 1, sort-Y offset 0, event -1, release type 0, create-map index 0xffff.
+     * OBJ_set(o, pos) @0xb9318 (Ghidra 0xc9318; with pos = {self, type, 'avail', idx}; also the head of OBJ_destroy / OBJ_return):
+     * header reset, free flag = 'avail'.  x = y = 0, visible = 1, sort-Y offset 0, event -1 (OBJ_setEventIdx), release type 0 and
+     * create-map index -1 (OBJ_initReleaseTypeCreateMapIdx: a halfword store, bytes +0x1e/+0x1f are left alone).
      */
     public final void objSet(int avail) {
         prev = null;
@@ -66,10 +67,81 @@ public class Obj {
         Bytes.w8(m, FREE, avail);
         Bytes.w32(m, X, 0);
         Bytes.w32(m, Y, 0);
-        Bytes.w32(m, VISIBLE, 1);                 // +0x18..0x1b
-        Bytes.w32(m, SORTY, 0);                   // +0x19..0x1c
+        Bytes.w8(m, VISIBLE, 1);
+        Bytes.w8(m, SORTY, 0);
         Bytes.w8(m, EVENT, 0xff);
         Bytes.w8(m, RELEASE, 0);
-        Bytes.w32(m, MAPIDX, 0xffff);
+        Bytes.w16(m, MAPIDX, 0xffff);
+    }
+
+    /** OBJ_getPtr(o) @0xb9258: the object's self pointer at +0x10 (here the object itself; NULL stays NULL) */
+    public static Obj getPtr(Obj o) {
+        return o;
+    }
+
+    /** OBJ_next(o) @0xb9264: the next node of the list the object is linked in (NULL stays NULL) */
+    public static Obj next(Obj o) {
+        return o == null ? null : o.next;
+    }
+
+    /** OBJ_setPosition(o, x, y) @0xb923c */
+    public static void setPosition(Obj o, int x, int y) {
+        Bytes.w32(o.m, Y, y);
+        Bytes.w32(o.m, X, x);
+    }
+
+    /** OBJ_getVisible(o) @0xb9248 (ldrb) */
+    public static int getVisible(Obj o) {
+        return o.m[VISIBLE] & 0xff;
+    }
+
+    /** OBJ_setVisible(o, v) @0xb9250 (strb) */
+    public static void setVisible(Obj o, int v) {
+        o.m[VISIBLE] = (byte) v;
+    }
+
+    /** OBJ_setReleaseType(o, t) @0xb928c (strb) */
+    public static void setReleaseType(Obj o, int t) {
+        o.m[RELEASE] = (byte) t;
+    }
+
+    /** OBJ_setCreateMapIdx(o, idx) @0xb929c (strh) */
+    public static void setCreateMapIdx(Obj o, int idx) {
+        Bytes.w16(o.m, MAPIDX, idx);
+    }
+
+    /** OBJ_initReleaseTypeCreateMapIdx(o) @0xb92a4: release type 0, create-map index -1 */
+    public static void initReleaseTypeCreateMapIdx(Obj o) {
+        setReleaseType(o, 0);
+        setCreateMapIdx(o, -1);
+    }
+
+    /** OBJ_getCreateMapIdx(o) @0xb92c4 (ldrsh) */
+    public static int getCreateMapIdx(Obj o) {
+        return Bytes.s16(o.m, MAPIDX);
+    }
+
+    /** OBJ_setEventIdx(o, idx) @0xb9310 (strb) */
+    public static void setEventIdx(Obj o, int idx) {
+        o.m[EVENT] = (byte) idx;
+    }
+
+    /** OBJ_getEventIdx(o) @0xb9408 (ldrsb) */
+    public static int getEventIdx(Obj o) {
+        return o.m[EVENT];
+    }
+
+    /** OBJ_destroy(o) @0xb9368: OBJ_set(o, {self, type, 1, idx}) (= objSet(1)), OBJ_setEventIdx(o, -1), OBJ_initReleaseTypeCreateMapIdx(o) */
+    public static void destroy(Obj o) {
+        o.objSet(1);
+        setEventIdx(o, -1);
+        initReleaseTypeCreateMapIdx(o);
+    }
+
+    /** OBJ_return(o) @0xb93b8: the same body as OBJ_destroy */
+    public static void ret(Obj o) {
+        o.objSet(1);
+        setEventIdx(o, -1);
+        initReleaseTypeCreateMapIdx(o);
     }
 }
