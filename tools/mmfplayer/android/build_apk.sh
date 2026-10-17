@@ -17,7 +17,7 @@ s = s.replace('/*SMAF*/', open(m + '/smaf.js').read()).replace('/*SYNTH*/', open
 s = re.sub(r'<link rel="preconnect"[^>]*>\n', '', s)
 s = re.sub(r'<link rel="stylesheet" href="https://fonts.googleapis.com[^>]*>\n', '', s)   # offline: system fonts
 s = s.replace('<meta name="claude:viewport-fit-sides" content="cover">\n', '')
-s = s.replace('<style>\n', '<style>\nhtml, body { margin: 0; } [hidden] { display: none !important; }\n', 1)
+pass
 s = s.replace('<script>\n', '<script src="sf2data.js"></script>\n<script>\n', 1)
 open(out + '/index.html', 'w').write('<!doctype html>\n<html lang="vi">\n<head>\n<meta charset="utf-8">\n'
     '<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">\n</head>\n<body>\n' + s + '\n</body>\n</html>\n')

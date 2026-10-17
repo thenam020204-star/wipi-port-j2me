@@ -3,7 +3,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600&family=Be+Vietnam+Pro:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
 <style>
-/* Layout: one narrow column like a phone screen; a "display" panel (now playing) above a plain list of picked files. */
+/* Layout: phone-app shell; one scrolling tab panel above a fixed bottom tab bar. The "now playing" tab opens on a monochrome LCD. */
 :root {
   --bg: #eceae4;          /* phone-plastic grey, slightly warm */
   --panel: #f7f6f2;
@@ -12,109 +12,185 @@
   --line: #d6d3cb;
   --lcd: #c9d3b4;         /* monochrome LCD green-grey */
   --lcd-ink: #2c3522;
-  --accent: #2f5fb3;      /* Nokia-ish blue */
+  --accent: #2f5fb3;      /* keypad-phone blue */
   --accent-ink: #ffffff;
   --warn: #a14a1f;
+  --bar: #e2dfd7;
   --font-display: "Chakra Petch", "Segoe UI", system-ui, sans-serif;
   --font-body: "Be Vietnam Pro", "Segoe UI", system-ui, sans-serif;
   --font-mono: "JetBrains Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    --bg: #17181b; --panel: #202226; --ink: #e9e7e1; --muted: #9a988f; --line: #33353a;
-    --lcd: #2b3324; --lcd-ink: #cfe0b0; --accent: #7aa2ec; --accent-ink: #0d1424; --warn: #e3946a; color-scheme: dark;
+    --bg: #131416; --panel: #1d1f22; --ink: #e9e7e1; --muted: #9a988f; --line: #2e3034; --bar: #1a1b1e;
+    --lcd: #26301f; --lcd-ink: #cfe0b0; --accent: #7aa2ec; --accent-ink: #0d1424; --warn: #e3946a; color-scheme: dark;
   }
 }
 :root[data-theme="dark"] {
-  --bg: #17181b; --panel: #202226; --ink: #e9e7e1; --muted: #9a988f; --line: #33353a;
-  --lcd: #2b3324; --lcd-ink: #cfe0b0; --accent: #7aa2ec; --accent-ink: #0d1424; --warn: #e3946a; color-scheme: dark;
+  --bg: #131416; --panel: #1d1f22; --ink: #e9e7e1; --muted: #9a988f; --line: #2e3034; --bar: #1a1b1e;
+  --lcd: #26301f; --lcd-ink: #cfe0b0; --accent: #7aa2ec; --accent-ink: #0d1424; --warn: #e3946a; color-scheme: dark;
 }
-body {
-  background: var(--bg); color: var(--ink); font-family: var(--font-body); font-size: 15px; line-height: 1.5;
-}
+html, body { height: 100%; margin: 0; }
+[hidden] { display: none !important; }
+body { background: var(--bg); color: var(--ink); font-family: var(--font-body); font-size: 15px; line-height: 1.5; }
+.app { height: 100%; display: flex; flex-direction: column; }
+.panel { flex: 1; overflow-y: auto; -webkit-overflow-scrolling: touch; }
 .wrap {
-  max-width: 560px; margin: 0 auto;
+  max-width: 600px; margin: 0 auto;
   padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px));
-  padding-block: 20px 40px;
-  display: flex; flex-direction: column; gap: 16px;
+  padding-block: 16px 24px; display: flex; flex-direction: column; gap: 14px;
 }
-h1 { font-family: var(--font-display); font-weight: 600; font-size: 26px; letter-spacing: 0.02em; margin: 0; text-wrap: balance; }
-.sub { color: var(--muted); margin: 2px 0 0; font-size: 14px; }
+.tabs {
+  display: grid; grid-template-columns: repeat(4, 1fr); background: var(--bar); border-top: 1px solid var(--line);
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+  padding-left: env(safe-area-inset-left, 0px); padding-right: env(safe-area-inset-right, 0px);
+}
+.tabs button {
+  border: 0; background: none; color: var(--muted); padding: 8px 4px 9px; display: flex; flex-direction: column; align-items: center;
+  gap: 2px; font: 500 12px/1.2 var(--font-body); cursor: pointer; border-top: 2px solid transparent; min-height: 52px; border-radius: 0;
+}
+.tabs button[aria-selected="true"] { color: var(--accent); border-top-color: var(--accent); }
+.tabs svg { width: 22px; height: 22px; fill: currentColor; }
+h2 { font-family: var(--font-display); font-weight: 600; font-size: 20px; margin: 0; letter-spacing: 0.01em; text-wrap: balance; }
+h3 { font-size: 13px; font-weight: 600; margin: 6px 0 0; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
 .lcd {
-  background: var(--lcd); color: var(--lcd-ink); border-radius: 10px; padding: 14px 16px;
-  font-family: var(--font-mono); display: flex; flex-direction: column; gap: 8px;
-  box-shadow: inset 0 0 0 1px rgba(0,0,0,0.12);
+  background: var(--lcd); color: var(--lcd-ink); border-radius: 12px; padding: 18px 16px 14px;
+  font-family: var(--font-mono); display: flex; flex-direction: column; gap: 10px; box-shadow: inset 0 0 0 1px rgba(0,0,0,0.12);
 }
 .lcd .label { font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; opacity: 0.75; }
-.lcd .name { font-size: 17px; font-weight: 500; overflow-wrap: anywhere; min-height: 1.5em; }
-.bar { position: relative; height: 8px; border-radius: 4px; background: rgba(0,0,0,0.12); cursor: pointer; }
-.bar > i { position: absolute; inset: 0 auto 0 0; width: 0%; background: var(--lcd-ink); border-radius: 4px; }
+.lcd .name { font-size: 19px; font-weight: 500; overflow-wrap: anywhere; min-height: 2.6em; }
+.lcd .where { font-size: 12px; opacity: 0.8; overflow-wrap: anywhere; }
+.bar { position: relative; height: 10px; border-radius: 5px; background: rgba(0,0,0,0.14); cursor: pointer; touch-action: none; }
+.bar > i { position: absolute; inset: 0 auto 0 0; width: 0%; background: var(--lcd-ink); border-radius: 5px; }
 .row { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
-.time { font-variant-numeric: tabular-nums; font-size: 14px; }
-.controls { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
-button, .pick {
-  font: 500 15px/1 var(--font-body); border-radius: 8px; border: 1px solid var(--line); background: var(--panel); color: var(--ink);
-  padding: 11px 16px; cursor: pointer; min-height: 44px;
+.time { font-variant-numeric: tabular-nums; font-size: 13px; }
+.transport { display: flex; align-items: center; justify-content: space-between; gap: 6px; }
+.icon {
+  width: 48px; height: 48px; border-radius: 50%; border: 0; background: none; color: var(--ink); display: inline-flex;
+  align-items: center; justify-content: center; cursor: pointer; position: relative; padding: 0; min-height: 0;
 }
-button:focus-visible, .pick:focus-within, input:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
-button.primary, .pick.primary { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); }
-button:disabled { opacity: 0.45; cursor: default; }
-.pick { display: inline-flex; align-items: center; justify-content: center; gap: 8px; position: relative; overflow: hidden; box-sizing: border-box; height: 44px; }
+.icon svg { width: 26px; height: 26px; fill: currentColor; }
+.icon.big { width: 64px; height: 64px; background: var(--accent); color: var(--accent-ink); }
+.icon.big svg { width: 32px; height: 32px; }
+.icon.on { color: var(--accent); }
+.icon .one { position: absolute; font: 600 10px/1 var(--font-mono); right: 9px; top: 10px; }
+.icon:disabled { opacity: 0.35; cursor: default; }
+button.btn, .pick {
+  font: 500 14px/1 var(--font-body); border-radius: 8px; border: 1px solid var(--line); background: var(--panel); color: var(--ink);
+  padding: 0 14px; cursor: pointer; height: 42px; display: inline-flex; align-items: center; justify-content: center; gap: 6px;
+  position: relative; overflow: hidden; box-sizing: border-box;
+}
+button.btn.primary, .pick.primary { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); }
+button.btn:disabled { opacity: 0.45; cursor: default; }
 .pick input { position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0; cursor: pointer; font-size: 0; }
-label.toggle { display: inline-flex; align-items: center; gap: 8px; font-size: 14px; cursor: pointer; }
-.status { font-size: 13px; color: var(--muted); }
+button:focus-visible, .pick:focus-within, input:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.actions { display: flex; gap: 8px; flex-wrap: wrap; }
+.status { font-size: 13px; color: var(--muted); min-height: 1.4em; margin: 0; }
 .status.err { color: var(--warn); }
 .list { display: flex; flex-direction: column; border-top: 1px solid var(--line); }
-.item {
-  display: grid; grid-template-columns: 1fr auto; gap: 2px 12px; padding: 12px 4px; border-bottom: 1px solid var(--line);
-  cursor: pointer; text-align: left; background: none; border-left: 0; border-right: 0; border-top: 0; border-radius: 0; min-height: 0;
+.item { display: flex; align-items: center; gap: 10px; padding: 10px 2px; border-bottom: 1px solid var(--line); min-width: 0; }
+.item .main { flex: 1; min-width: 0; cursor: pointer; display: flex; flex-direction: column; gap: 1px; background: none; border: 0;
+  text-align: left; color: inherit; font: inherit; padding: 0; }
+.item .n { font-weight: 500; overflow-wrap: anywhere; }
+.item .m { font-size: 12.5px; color: var(--muted); overflow-wrap: anywhere; font-variant-numeric: tabular-nums; }
+.item.cur .n { color: var(--accent); }
+.item.cur { box-shadow: inset 3px 0 0 var(--accent); padding-left: 10px; }
+.tag { font: 500 11px/1 var(--font-mono); color: var(--muted); border: 1px solid var(--line); border-radius: 4px; padding: 4px 5px; flex: none; }
+.mini { width: 36px; height: 36px; border-radius: 8px; border: 0; background: none; color: var(--muted); cursor: pointer; flex: none;
+  display: inline-flex; align-items: center; justify-content: center; padding: 0; }
+.mini svg { width: 20px; height: 20px; fill: currentColor; }
+.search { display: flex; gap: 8px; }
+.search input {
+  flex: 1; min-width: 0; height: 42px; border-radius: 8px; border: 1px solid var(--line); background: var(--panel); color: var(--ink);
+  padding: 0 12px; font: 400 15px var(--font-body);
 }
-.item:hover { background: var(--panel); }
-.item[aria-current="true"] { background: var(--panel); box-shadow: inset 3px 0 0 var(--accent); }
-.item .n { font-weight: 500; overflow-wrap: anywhere; min-width: 0; }
-.item .k { font-family: var(--font-mono); font-size: 12px; color: var(--muted); align-self: center; }
-.item .m { grid-column: 1 / -1; font-size: 13px; color: var(--muted); font-variant-numeric: tabular-nums; }
-.item .m.err { color: var(--warn); }
-.hint { font-size: 13px; color: var(--muted); margin: 0; }
+.chips { display: flex; gap: 6px; flex-wrap: wrap; }
+.chip { height: 32px; border-radius: 16px; border: 1px solid var(--line); background: var(--panel); color: var(--ink); padding: 0 12px;
+  font: 500 13px/1 var(--font-body); cursor: pointer; display: inline-flex; align-items: center; gap: 6px; }
+.chip[aria-pressed="true"] { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); }
+.empty { color: var(--muted); font-size: 14px; padding: 18px 2px; margin: 0; }
+.kv { display: flex; flex-direction: column; gap: 2px; padding: 10px 0; border-bottom: 1px solid var(--line); }
+.kv .k { font-size: 13px; color: var(--muted); }
+.kv .v { overflow-wrap: anywhere; }
 details { font-size: 13px; color: var(--muted); }
 details summary { cursor: pointer; }
 @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
 </style>
 
-<div class="wrap">
-  <header>
-    <h1>Máy nghe MMF</h1>
-    <p class="sub">Chuyển nhạc chuông/nhạc game SMAF (.mmf) sang MIDI theo bộ chuyển của project HL4 cũ, phát bằng soundfont Nokia.</p>
-  </header>
+<div class="app">
+  <main class="panel" id="panel">
+    <!-- now playing -->
+    <section class="wrap" id="tab-now">
+      <div class="lcd" aria-live="polite">
+        <div class="row"><span class="label" id="np-label">Đang chọn</span><span class="label" id="np-kind"></span></div>
+        <div class="name" id="np-name">Chưa có bài nào</div>
+        <div class="where" id="np-where">Thêm thư mục trong tab Thư mục, hoặc bấm Nghe thử.</div>
+        <div class="bar" id="bar" role="slider" aria-label="Vị trí phát" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" tabindex="0"><i id="bar-fill"></i></div>
+        <div class="row"><span class="time" id="time">0:00 / 0:00</span><span class="time" id="np-pos"></span></div>
+      </div>
+      <div class="transport">
+        <button class="icon" id="btn-repeat" aria-label="Lặp lại: tắt"><svg viewBox="0 0 24 24"><path d="M7 7h10v3l4-4-4-4v3H5v6h2zm10 10H7v-3l-4 4 4 4v-3h12v-6h-2z"/></svg><span class="one" id="repeat-one" hidden>1</span></button>
+        <button class="icon" id="btn-prev" aria-label="Bài trước"><svg viewBox="0 0 24 24"><path d="M6 6h2v12H6zm3.5 6 8.5 6V6z"/></svg></button>
+        <button class="icon big" id="btn-play" aria-label="Phát"><svg viewBox="0 0 24 24" id="ico-play"><path d="M8 5v14l11-7z"/></svg></button>
+        <button class="icon" id="btn-next" aria-label="Bài sau"><svg viewBox="0 0 24 24"><path d="M6 18l8.5-6L6 6zM16 6h2v12h-2z"/></svg></button>
+        <button class="icon" id="btn-shuffle" aria-label="Trộn bài: tắt"><svg viewBox="0 0 24 24"><path d="M10.6 9.2 5.4 4 4 5.4l5.2 5.2zM14.5 4l2 2L4 18.6 5.4 20 18 7.5l2 2V4zm.3 9.4-1.4 1.4 3.1 3.1-2 2.1H20v-5.5l-2 2z"/></svg></button>
+      </div>
+      <div class="actions">
+        <button class="btn" id="btn-export" disabled>Xuất WAV</button>
+        <button class="btn" id="btn-demo">Nghe thử soundfont</button>
+      </div>
+      <p class="status" id="np-status"></p>
+    </section>
 
-  <section class="lcd" aria-live="polite">
-    <div class="row"><span class="label" id="np-label">Đang chọn</span><span class="label" id="np-kind"></span></div>
-    <div class="name" id="np-name">Chưa có bài nào</div>
-    <div class="bar" id="bar" role="slider" aria-label="Vị trí phát" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" tabindex="0"><i id="bar-fill"></i></div>
-    <div class="row"><span class="time" id="time">0:00 / 0:00</span><span class="time" id="np-info"></span></div>
-  </section>
+    <!-- queue -->
+    <section class="wrap" id="tab-queue" hidden>
+      <div class="row"><h2>Hàng chờ</h2><button class="btn" id="btn-clearq">Xoá hàng chờ</button></div>
+      <p class="status" id="q-info"></p>
+      <div class="list" id="q-list"></div>
+    </section>
 
-  <div class="controls">
-    <button class="primary" id="btn-play" disabled>Phát</button>
-    <button id="btn-stop" disabled>Dừng</button>
-    <label class="toggle"><input type="checkbox" id="chk-loop"> Lặp lại</label>
-  </div>
+    <!-- library -->
+    <section class="wrap" id="tab-lib" hidden>
+      <h2>Thư viện</h2>
+      <div class="search"><input id="q" type="search" placeholder="Tìm theo tên hoặc thư mục" autocomplete="off"></div>
+      <div class="chips" id="type-chips">
+        <button class="chip" data-type="" aria-pressed="true">Tất cả</button>
+        <button class="chip" data-type="mmf" aria-pressed="false">MMF</button>
+        <button class="chip" data-type="midi" aria-pressed="false">MIDI</button>
+        <button class="chip" id="folder-chip" aria-pressed="true" hidden></button>
+      </div>
+      <div class="row"><p class="status" id="lib-info"></p><button class="btn" id="btn-playall" disabled>Phát tất cả</button></div>
+      <div class="list" id="lib-list"></div>
+    </section>
 
-  <div class="controls">
-    <label class="pick primary">Chọn file MMF<input type="file" id="file-mmf" multiple></label>
-    <button id="btn-demo">Nghe thử soundfont</button>
-  </div>
-  <p class="status" id="sf-status">Đang tải soundfont Nokia…</p>
+    <!-- folders and settings -->
+    <section class="wrap" id="tab-dirs" hidden>
+      <h2>Thư mục</h2>
+      <h3>Thư mục nguồn</h3>
+      <div class="list" id="src-list"></div>
+      <div class="actions" id="src-actions"></div>
+      <p class="status" id="scan-status"></p>
+      <h3>Thư mục con</h3>
+      <div class="list" id="sub-list"></div>
+      <h3>Xuất WAV</h3>
+      <div class="kv"><span class="k">Lưu vào</span><span class="v" id="export-dir">Chưa chọn</span></div>
+      <div class="actions" id="export-actions"></div>
+      <h3>Soundfont</h3>
+      <div class="kv"><span class="k">Đang dùng</span><span class="v" id="sf-status">Đang tải Nokia.sf2…</span></div>
+      <div class="actions"><label class="pick">Chọn file .sf2 khác<input type="file" id="file-sf2" accept=".sf2"></label></div>
+      <details>
+        <summary>Về app</summary>
+        <p>MMF → MIDI dùng bản JavaScript của bộ chuyển <code>hl4.core.Smaf</code> (project HL4 cũ), đã so khớp từng byte với bản Java trên 125 file MMF. File MMF chỉ có PCM (ADPCM) được giải mã ra WAV. MIDI được dựng bằng bộ phát soundfont đơn giản (không reverb, chorus, filter, LFO). File của game không có đuôi (ví dụ <code>BGM_07_MMF</code>) được nhận diện theo nội dung.</p>
+      </details>
+    </section>
+  </main>
 
-  <div class="list" id="list"></div>
-  <p class="hint" id="empty-hint">Chọn một hoặc nhiều file. File của game không cần đuôi .mmf (ví dụ <code>BGM_07_MMF</code>): app nhận diện theo nội dung (chữ <code>MMMD</code> ở đầu file).</p>
-
-  <details>
-    <summary>Đổi soundfont / chi tiết</summary>
-    <p>Mặc định dùng <code>Nokia.sf2</code> đi kèm trang. Có thể chọn file .sf2 khác (chỉ dùng trong lần mở này):</p>
-    <label class="pick">Chọn file .sf2<input type="file" id="file-sf2" accept=".sf2"></label>
-    <p>Bộ chuyển MMF → MIDI là bản JavaScript của <code>hl4.core.Smaf</code> (project HL4 cũ), đã so khớp từng byte với bản Java trên 125 file MMF của game. File chỉ có PCM (ADPCM) được giải mã ra WAV như bản gốc. Bộ phát soundfont là bản đơn giản: không có reverb, chorus, filter, LFO.</p>
-  </details>
+  <nav class="tabs" role="tablist">
+    <button role="tab" data-tab="now" aria-selected="true"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm-2 14.5v-9l6 4.5z"/></svg>Đang phát</button>
+    <button role="tab" data-tab="queue" aria-selected="false"><svg viewBox="0 0 24 24"><path d="M3 6h12v2H3zm0 4h12v2H3zm0 4h8v2H3zm14-4v6.2a2.5 2.5 0 1 0 2 2.4V12h3v-2z"/></svg>Hàng chờ</button>
+    <button role="tab" data-tab="lib" aria-selected="false"><svg viewBox="0 0 24 24"><path d="M12 3v10.6A4 4 0 1 0 14 17V7h4V3z"/></svg>Thư viện</button>
+    <button role="tab" data-tab="dirs" aria-selected="false"><svg viewBox="0 0 24 24"><path d="M10 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-8z"/></svg>Thư mục</button>
+  </nav>
 </div>
 
 <script>
@@ -127,37 +203,135 @@ details summary { cursor: pointer; }
 (function () {
   'use strict';
   var $ = function (id) { return document.getElementById(id); };
+  var NATIVE = !!(window.Android && window.Android.getState);
   var RATE = 44100;
-  var sf = null, ctx = null, items = [], cur = -1;
-  var src = null, startedAt = 0, offset = 0, playing = false, raf = 0;
+  var ICO_PLAY = '<path d="M8 5v14l11-7z"/>', ICO_PAUSE = '<path d="M6 5h4v14H6zm8 0h4v14h-4z"/>';
+
+  // ---------------------------------------------------------------- state
+  var sf = null, ctx = null;
+  var library = [];          // { id, name, folder, root, type: 'mmf'|'midi', size, uri? (native) | file? (web) | data? (demo) }
+  var byId = {};
+  var folders = [], exportFolder = null, scanning = false;
+  var queue = [], qi = -1, repeat = 'off', shuffle = false;
+  var filter = { q: '', type: '', folder: '' };
+  var prepared = null;       // { id, buffer, kind, pcm?: {left,right,rate}, wav?: Uint8Array }
+  var src = null, startedAt = 0, offset = 0, playing = false, raf = 0, preparing = false;
+  var durations = {};
+  var webSeq = 0, pendingExport = false;
+
+  function store(k, v) { try { localStorage.setItem('mmf.' + k, JSON.stringify(v)); } catch (e) {} }
+  function load(k, d) { try { var v = localStorage.getItem('mmf.' + k); return v === null ? d : JSON.parse(v); } catch (e) { return d; } }
+  durations = load('dur', {});
+  repeat = load('repeat', 'off'); shuffle = load('shuffle', false);
 
   function fmt(s) { s = Math.max(0, Math.floor(s)); return Math.floor(s / 60) + ':' + String(s % 60).padStart(2, '0'); }
-  // short sound effects: seconds with one decimal instead of 0:00
-  function fmtLen(s, ref) { return ref < 10 ? (Math.max(0, s)).toFixed(1).replace('.', ',') + ' s' : fmt(s); }
-  function setStatus(t, err) { var e = $('sf-status'); e.textContent = t; e.className = 'status' + (err ? ' err' : ''); }
+  function fmtLen(s, ref) { return ref < 10 ? Math.max(0, s).toFixed(1).replace('.', ',') + ' s' : fmt(s); }
+  function kb(n) { return n >= 1048576 ? (n / 1048576).toFixed(1).replace('.', ',') + ' MB' : (n / 1024).toFixed(1).replace('.', ',') + ' KB'; }
+  function status(id, t, err) { var e = $(id); e.textContent = t || ''; e.className = 'status' + (err ? ' err' : ''); }
+  function el(tag, cls, text) { var e = document.createElement(tag); if (cls) e.className = cls; if (text !== undefined) e.textContent = text; return e; }
+  var SVG = {
+    plus: '<svg viewBox="0 0 24 24"><path d="M11 5h2v6h6v2h-6v6h-2v-6H5v-2h6z"/></svg>',
+    x: '<svg viewBox="0 0 24 24"><path d="M6.4 5 12 10.6 17.6 5 19 6.4 13.4 12l5.6 5.6-1.4 1.4-5.6-5.6L6.4 19 5 17.6l5.6-5.6L5 6.4z"/></svg>'
+  };
 
+  // ---------------------------------------------------------------- soundfont
   function loadSf(buf, name) {
     try {
       sf = Sf2Synth.parseSf2(buf);
-      setStatus('Soundfont: ' + name + ' (' + (buf.byteLength / 1048576).toFixed(1) + ' MB, ' + Object.keys(sf.presets).length + ' preset)');
-      items.forEach(function (it) { if (it.kind === 'MIDI') it.buffer = null; });
-    } catch (e) { setStatus('Không đọc được soundfont: ' + e.message, true); }
+      $('sf-status').textContent = name + ' (' + kb(buf.byteLength) + ', ' + Object.keys(sf.presets).length + ' preset)';
+      if (prepared && prepared.kind === 'MIDI') prepared = null;
+    } catch (e) { $('sf-status').textContent = 'Không đọc được soundfont: ' + e.message; }
   }
-  // Nokia.sf2 ships next to the page as base64 text (artifact pages serve text, not arbitrary binary types);
-  // the Android build defines it as a script global instead (WebView cannot fetch() file:// assets)
+  function b64ToBytes(t) {
+    var bin = atob(t), u = new Uint8Array(bin.length);
+    for (var i = 0; i < bin.length; i++) u[i] = bin.charCodeAt(i);
+    return u;
+  }
+  function bytesToB64(u) {
+    var s = '';
+    for (var i = 0; i < u.length; i += 0x8000) s += String.fromCharCode.apply(null, u.subarray(i, i + 0x8000));
+    return btoa(s);
+  }
+  // Nokia.sf2 ships next to the web page as base64 text; the Android build defines it as a script global
   (window.NOKIA_SF2_B64 ? Promise.resolve(window.NOKIA_SF2_B64)
     : fetch('Nokia.sf2.b64.txt').then(function (r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r.text(); }))
-    .then(function (t) {
-      var bin = atob(t.trim()), u = new Uint8Array(bin.length);
-      for (var i = 0; i < bin.length; i++) u[i] = bin.charCodeAt(i);
-      loadSf(u.buffer, 'Nokia.sf2');
-    })
-    .catch(function (e) { setStatus('Không tải được Nokia.sf2 (' + e.message + '). Chọn file .sf2 trong mục "Đổi soundfont".', true); });
-
+    .then(function (t) { loadSf(b64ToBytes(t.trim()).buffer, 'Nokia.sf2'); })
+    .catch(function (e) { $('sf-status').textContent = 'Không tải được Nokia.sf2 (' + e.message + '). Chọn file .sf2 khác bên dưới.'; });
   $('file-sf2').addEventListener('change', function () {
     var f = this.files[0]; if (!f) return;
-    f.arrayBuffer().then(function (b) { loadSf(b, f.name); stop(); });
+    f.arrayBuffer().then(function (b) { loadSf(b, f.name); });
   });
+
+  // ---------------------------------------------------------------- library
+  function setLibrary(list) {
+    library = list;
+    byId = {};
+    library.forEach(function (it) { byId[it.id] = it; });
+    queue = queue.filter(function (id) { return byId[id]; });
+    if (qi >= queue.length) qi = queue.length - 1;
+    renderAll();
+  }
+
+  function applyNative(st) {
+    folders = st.folders || [];
+    exportFolder = st.exportFolder || null;
+    scanning = !!st.scanning;
+    var lib = (st.library || []).map(function (o) {
+      return { id: o.uri, uri: o.uri, name: o.name, folder: o.folder, root: o.root, type: o.type, size: o.size };
+    });
+    lib.sort(function (a, b) { return (a.folder + '/' + a.name).localeCompare(b.folder + '/' + b.name, 'vi', { numeric: true }); });
+    var keepDemo = library.filter(function (it) { return it.data; });
+    setLibrary(keepDemo.concat(lib));
+    if (!scanning) status('scan-status', lib.length ? 'Đã quét: ' + lib.length + ' file MMF/MIDI.' : (folders.length ? 'Không thấy file MMF/MIDI trong các thư mục nguồn.' : ''));
+    if (pendingExport && exportFolder) { pendingExport = false; doExport(); }
+  }
+
+  window.onNative = function (type, data) {
+    if (type === 'state') applyNative(data);
+    else if (type === 'scan') status('scan-status', 'Đang quét… đã xem ' + data.seen + ' file, thấy ' + data.found + ' file MMF/MIDI');
+    else if (type === 'error') status('scan-status', String(data), true);
+  };
+  window.onBack = function () {
+    if (currentTab !== 'now') { showTab('now'); return true; }
+    return false;
+  };
+
+  function sniff(b) {
+    if (b[0] === 0x4d && b[1] === 0x4d && b[2] === 0x4d && b[3] === 0x44) return 'mmf';
+    if (b[0] === 0x4d && b[1] === 0x54 && b[2] === 0x68 && b[3] === 0x64) return 'midi';
+    return null;
+  }
+  // web build: files or a folder picked with the browser (kept for this visit only)
+  function addWebFiles(files) {
+    var list = Array.prototype.slice.call(files);
+    status('scan-status', 'Đang đọc ' + list.length + ' file…');
+    Promise.all(list.map(function (f) {
+      var n = f.name.toLowerCase();
+      if (/\.(mp3|ogg|wav|png|jpg|jpeg|gif|txt|json|zip|apk|jar|pdf)$/.test(n) || f.size > 4194304 || f.size < 8) return Promise.resolve(null);
+      return f.slice(0, 4).arrayBuffer().then(function (b) {
+        var t = sniff(new Uint8Array(b));
+        if (!t) return null;
+        var rel = (f.webkitRelativePath || f.name).split('/');
+        rel.pop();
+        return { id: 'w' + (++webSeq), file: f, name: f.name, folder: rel.join('/') || 'File đã chọn', root: rel[0] || 'File đã chọn', type: t, size: f.size };
+      });
+    })).then(function (found) {
+      found = found.filter(Boolean);
+      var known = {};
+      library.forEach(function (it) { if (it.file) known[it.folder + '/' + it.name + '/' + it.size] = 1; });
+      found = found.filter(function (it) { return !known[it.folder + '/' + it.name + '/' + it.size]; });
+      setLibrary(library.concat(found));
+      status('scan-status', 'Thêm ' + found.length + ' file MMF/MIDI (' + list.length + ' file đã xem).');
+    });
+  }
+
+  function readBytes(it) {
+    if (it.data) return Promise.resolve(it.data);
+    if (it.file) return it.file.arrayBuffer().then(function (b) { return new Uint8Array(b); });
+    var t = window.Android.readFile(it.uri);
+    if (!t) return Promise.reject(new Error('không đọc được file (thư mục bị gỡ quyền?)'));
+    return Promise.resolve(b64ToBytes(t));
+  }
 
   function audio() {
     if (!ctx) ctx = new (window.AudioContext || window.webkitAudioContext)();
@@ -165,101 +339,123 @@ details summary { cursor: pointer; }
     return ctx;
   }
 
-  function renderList() {
-    var list = $('list');
-    list.textContent = '';
-    $('empty-hint').hidden = items.length > 0;
-    items.forEach(function (it, i) {
-      var b = document.createElement('button');
-      b.className = 'item'; b.type = 'button';
-      b.setAttribute('aria-current', i === cur ? 'true' : 'false');
-      var n = document.createElement('span'); n.className = 'n'; n.textContent = it.name;
-      var k = document.createElement('span'); k.className = 'k'; k.textContent = it.kind || '—';
-      var m = document.createElement('span'); m.className = 'm' + (it.error ? ' err' : '');
-      m.textContent = it.error ? it.error : (fmtLen(it.durationMs / 1000, it.durationMs / 1000) + (it.notes ? ' · ' + it.notes + ' nốt' : '') + ' · ' + (it.size / 1024).toFixed(1) + ' KB');
-      b.append(n, k, m);
-      b.addEventListener('click', function () { select(i, true); });
-      list.appendChild(b);
-    });
-  }
-
-  function addFile(name, bytes) {
-    var c = Smaf.convert(bytes);
-    var it = { name: name, size: bytes.length, durationMs: c.durationMs, data: c.data, buffer: null, notes: 0 };
-    if (!c.data) it.error = bytes[0] === 0x4d && bytes[1] === 0x4d && bytes[2] === 0x4d && bytes[3] === 0x44
-      ? 'MMF không có phần chơi được (bộ chuyển trả về rỗng)' : 'Không phải file SMAF/MMF';
-    else it.kind = c.type === 'audio/midi' ? 'MIDI' : 'WAV';
-    items.push(it);
-    return items.length - 1;
-  }
-
-  $('file-mmf').addEventListener('change', function () {
-    var fs = Array.prototype.slice.call(this.files);
-    var first = items.length;
-    Promise.all(fs.map(function (f) { return f.arrayBuffer().then(function (b) { return [f.name, new Uint8Array(b)]; }); }))
-      .then(function (arr) {
-        arr.forEach(function (x) { addFile(x[0], x[1]); });
-        renderList();
-        if (arr.length) select(first, false);
-      });
-    this.value = '';
-  });
-
-  // a short C-major phrase on a few General MIDI programs, to hear the soundfont without a file
-  $('btn-demo').addEventListener('click', function () {
-    var ev = [], t = 0;
-    function put(dt, bytes) { var v = dt, s = [v & 0x7f]; while ((v >>= 7)) s.unshift((v & 0x7f) | 0x80); ev.push.apply(ev, s.concat(bytes)); }
-    var progs = [0, 11, 73, 80];
-    progs.forEach(function (p, j) {
-      put(j ? 0 : 0, [0xC0, p]);
-      [60, 64, 67, 72, 67, 64].forEach(function (k, i) { put(i || j ? 40 : 0, [0x90, k, 100]); put(220, [0x80, k, 0]); });
-    });
-    [36, 42, 38, 42, 36, 36, 38, 42].forEach(function (k) { put(60, [0x99, k, 110]); put(120, [0x89, k, 0]); });
-    put(0, [0xff, 0x2f, 0]);
-    var hdr = [0x4d, 0x54, 0x68, 0x64, 0, 0, 0, 6, 0, 0, 0, 1, 0x01, 0xf4, 0x4d, 0x54, 0x72, 0x6b,
-      (ev.length >>> 24) & 255, (ev.length >>> 16) & 255, (ev.length >>> 8) & 255, ev.length & 255];
-    var it = { name: 'Nghe thử: piano, celesta, sáo, synth, trống', size: hdr.length + ev.length, durationMs: 9000, data: Uint8Array.from(hdr.concat(ev)), kind: 'MIDI', notes: 32, buffer: null };
-    items.push(it);
-    renderList();
-    select(items.length - 1, true);
-  });
-
+  // bytes -> playable buffer (+ PCM kept for the WAV export)
   function prepare(it) {
-    if (it.buffer) return Promise.resolve(it.buffer);
+    if (prepared && prepared.id === it.id) return Promise.resolve(prepared);
     var ac = audio();
-    if (it.kind === 'WAV') {
-      return ac.decodeAudioData(it.data.slice().buffer).then(function (b) { it.buffer = b; it.durationMs = Math.round(b.duration * 1000); renderList(); return b; });
-    }
-    if (!sf) return Promise.reject(new Error('Soundfont chưa sẵn sàng'));
-    $('np-info').textContent = 'Đang dựng âm thanh…';
-    return new Promise(function (res, rej) {
-      setTimeout(function () {
-        try {
-          var r = Sf2Synth.render(sf, it.data, RATE);
-          var b = ac.createBuffer(2, Math.max(1, r.left.length), RATE);
-          b.copyToChannel(r.left, 0); b.copyToChannel(r.right, 1);
-          it.buffer = b; it.notes = r.notes; it.durationMs = Math.round(b.duration * 1000);
-          renderList();
-          res(b);
-        } catch (e) { rej(e); }
-      }, 30);
+    preparing = true;
+    status('np-status', 'Đang dựng âm thanh…');
+    return readBytes(it).then(function (bytes) {
+      var midi = null, wav = null;
+      if (it.type === 'mmf') {
+        var c = Smaf.convert(bytes);
+        if (!c.data) throw new Error('MMF không có phần chơi được');
+        if (c.type === 'audio/midi') midi = c.data; else wav = c.data;
+      } else midi = bytes;
+      if (wav) {
+        return ac.decodeAudioData(wav.slice().buffer).then(function (b) { return { id: it.id, buffer: b, kind: 'WAV', wav: wav }; });
+      }
+      if (!sf) throw new Error('soundfont chưa sẵn sàng');
+      return new Promise(function (res, rej) {
+        setTimeout(function () {
+          try {
+            var r = Sf2Synth.render(sf, midi, RATE);
+            var b = ac.createBuffer(2, Math.max(1, r.left.length), RATE);
+            b.copyToChannel(r.left, 0); b.copyToChannel(r.right, 1);
+            res({ id: it.id, buffer: b, kind: 'MIDI', notes: r.notes, pcm: r });
+          } catch (e) { rej(e); }
+        }, 20);
+      });
+    }).then(function (p) {
+      preparing = false;
+      prepared = p;
+      durations[it.id] = Math.round(p.buffer.duration * 10) / 10;
+      store('dur', durations);
+      status('np-status', '');
+      return p;
+    }, function (e) { preparing = false; throw e; });
+  }
+
+  // ---------------------------------------------------------------- playback
+  function current() { return qi >= 0 ? byId[queue[qi]] : null; }
+
+  function stopSource() { if (src) { src.onended = null; try { src.stop(); } catch (e) {} src = null; } }
+
+  function playIndex(i, at) {
+    if (i < 0 || i >= queue.length) return;
+    qi = i;
+    saveQueue();
+    var it = current();
+    stopSource(); playing = false; offset = at || 0;
+    renderNow(); renderQueue();
+    prepare(it).then(function (p) {
+      if (current() !== it) return;
+      startAt(offset);
+    }).catch(function (e) {
+      status('np-status', 'Không phát được ' + it.name + ': ' + e.message, true);
+      renderNow();
     });
   }
 
-  function showCurrent() {
-    var it = items[cur];
-    $('np-label').textContent = playing ? 'Đang phát' : 'Đang chọn';
-    $('np-name').textContent = it ? it.name : 'Chưa có bài nào';
-    $('np-kind').textContent = it && it.kind ? it.kind : '';
-    $('btn-play').disabled = !it || !it.data;
-    $('btn-stop').disabled = !it || (!playing && offset === 0);
-    $('btn-play').textContent = playing ? 'Tạm dừng' : 'Phát';
+  function startAt(at) {
+    var it = current();
+    if (!prepared || !it || prepared.id !== it.id) { playIndex(qi, at); return; }
+    stopSource();
+    var ac = audio();
+    src = ac.createBufferSource();
+    src.buffer = prepared.buffer;
+    src.loop = repeat === 'one';
+    src.connect(ac.destination);
+    at = Math.min(Math.max(0, at), prepared.buffer.duration);
+    src.start(0, at);
+    startedAt = ac.currentTime - at;
+    playing = true;
+    src.onended = function () { playing = false; offset = 0; next(true); };
+    renderNow();
+    cancelAnimationFrame(raf); tick();
+  }
+
+  function pause() {
+    if (!playing || !src) return;
+    offset = (ctx.currentTime - startedAt) % src.buffer.duration;
+    stopSource(); playing = false;
+    renderNow(); tick();
+  }
+
+  function next(auto) {
+    if (!queue.length) return;
+    if (auto && repeat === 'one') { playIndex(qi, 0); return; }
+    var n;
+    if (shuffle && queue.length > 1) { do { n = Math.floor(Math.random() * queue.length); } while (n === qi); }
+    else n = qi + 1;
+    if (n >= queue.length) {
+      if (repeat === 'all' || !auto) n = 0;
+      else { playing = false; offset = 0; renderNow(); tick(); return; }
+    }
+    playIndex(n, 0);
+  }
+  function prev() {
+    if (!queue.length) return;
+    var pos = playing ? ctx.currentTime - startedAt : offset;
+    if (pos > 3) { playIndex(qi, 0); return; }
+    playIndex(qi > 0 ? qi - 1 : (repeat === 'all' ? queue.length - 1 : 0), 0);
+  }
+
+  function playList(ids, start) {
+    queue = ids.slice();
+    playIndex(start, 0);
+    renderQueue();
+  }
+  function saveQueue() {
+    if (!NATIVE) return;
+    store('queue', { ids: queue.filter(function (id) { return byId[id] && byId[id].uri; }), qi: qi });
   }
 
   function tick() {
-    var it = items[cur], dur = it && it.buffer ? it.buffer.duration : (it ? it.durationMs / 1000 : 0);
+    var it = current();
+    var dur = prepared && it && prepared.id === it.id ? prepared.buffer.duration : (it && durations[it.id]) || 0;
     var pos = playing ? (ctx.currentTime - startedAt) : offset;
-    if (playing && $('chk-loop').checked && dur > 0) pos = pos % dur;
+    if (playing && dur > 0) pos = pos % dur;
     pos = Math.min(pos, dur);
     $('bar-fill').style.width = (dur > 0 ? pos / dur * 100 : 0) + '%';
     $('bar').setAttribute('aria-valuenow', String(dur > 0 ? Math.round(pos / dur * 100) : 0));
@@ -267,75 +463,329 @@ details summary { cursor: pointer; }
     if (playing) raf = requestAnimationFrame(tick);
   }
 
-  function startAt(at) {
-    var it = items[cur];
-    prepare(it).then(function (buf) {
-      if (items[cur] !== it) return;
-      if (src) { src.onended = null; try { src.stop(); } catch (e) {} }
-      src = ctx.createBufferSource();
-      src.buffer = buf;
-      src.loop = $('chk-loop').checked;
-      src.connect(ctx.destination);
-      at = Math.min(at, buf.duration);
-      src.start(0, at);
-      startedAt = ctx.currentTime - at;
-      playing = true;
-      src.onended = function () { if (!src.loop) { playing = false; offset = 0; showCurrent(); tick(); } };
-      $('np-info').textContent = it.kind === 'MIDI' ? 'MIDI → Nokia.sf2' : 'PCM → WAV';
-      showCurrent();
-      cancelAnimationFrame(raf); tick();
+  // ---------------------------------------------------------------- export
+  function wavHeader(frames, ch, rate) {
+    var h = new Uint8Array(44), dv = new DataView(h.buffer), n = frames * ch * 2;
+    [0x52, 0x49, 0x46, 0x46].forEach(function (c, i) { h[i] = c; });
+    dv.setUint32(4, 36 + n, true);
+    'WAVEfmt '.split('').forEach(function (c, i) { h[8 + i] = c.charCodeAt(0); });
+    dv.setUint32(16, 16, true); dv.setUint16(20, 1, true); dv.setUint16(22, ch, true); dv.setUint32(24, rate, true);
+    dv.setUint32(28, rate * ch * 2, true); dv.setUint16(32, ch * 2, true); dv.setUint16(34, 16, true);
+    'data'.split('').forEach(function (c, i) { h[36 + i] = c.charCodeAt(0); });
+    dv.setUint32(40, n, true);
+    return h;
+  }
+  // the WAV file as a list of byte chunks, produced lazily (no whole-file copy in memory)
+  function wavChunks(p) {
+    if (p.wav) return { total: p.wav.length, at: function (i) { return i === 0 ? p.wav : null; } };
+    var L = p.pcm.left, R = p.pcm.right, frames = L.length, step = 65536;
+    var count = Math.ceil(frames / step);
+    return {
+      total: 44 + frames * 4,
+      at: function (i) {
+        if (i > count) return null;
+        if (i === 0) return wavHeader(frames, 2, p.pcm.rate);
+        var a = (i - 1) * step, b = Math.min(frames, a + step), out = new Uint8Array((b - a) * 4), dv = new DataView(out.buffer);
+        for (var k = a, o = 0; k < b; k++, o += 4) {
+          dv.setInt16(o, Math.max(-32768, Math.min(32767, Math.round(L[k] * 32767))), true);
+          dv.setInt16(o + 2, Math.max(-32768, Math.min(32767, Math.round(R[k] * 32767))), true);
+        }
+        return out;
+      }
+    };
+  }
+  function exportName(it) { return it.name.replace(/\.(mmf|mid|midi|kar)$/i, '') + '.wav'; }
+
+  function doExport() {
+    var it = current();
+    if (!it) return;
+    if (NATIVE && !exportFolder) {
+      pendingExport = true;
+      status('np-status', 'Chọn thư mục để lưu file WAV…');
+      window.Android.pickExportFolder();
+      return;
+    }
+    $('btn-export').disabled = true;
+    prepare(it).then(function (p) {
+      var w = wavChunks(p), name = exportName(it);
+      if (!NATIVE) {
+        var parts = [];
+        for (var i = 0, c; (c = w.at(i)); i++) parts.push(c);
+        var a = document.createElement('a');
+        a.href = URL.createObjectURL(new Blob(parts, { type: 'audio/wav' }));
+        a.download = name;
+        document.body.appendChild(a); a.click(); a.remove();
+        status('np-status', 'Đã tạo ' + name + ' (' + kb(w.total) + '). Nếu trình duyệt không tải về, hãy dùng bản APK.');
+        $('btn-export').disabled = false;
+        return;
+      }
+      var h = window.Android.exportBegin(name);
+      if (!h || h.indexOf('ERR:') === 0) throw new Error(h ? h.slice(4) : 'chưa chọn thư mục xuất');
+      var i = 0, sent = 0;
+      (function step() {
+        var c = w.at(i++);
+        if (!c) {
+          if (!window.Android.exportEnd(h)) { status('np-status', 'Lỗi khi đóng file ' + name, true); }
+          else status('np-status', 'Đã lưu ' + name + ' (' + kb(w.total) + ') vào ' + (exportFolder ? exportFolder.path : 'thư mục xuất') + '.');
+          $('btn-export').disabled = false;
+          return;
+        }
+        if (!window.Android.exportChunk(h, bytesToB64(c))) {
+          window.Android.exportEnd(h);
+          status('np-status', 'Lỗi khi ghi ' + name, true);
+          $('btn-export').disabled = false;
+          return;
+        }
+        sent += c.length;
+        status('np-status', 'Đang xuất ' + name + '… ' + Math.round(sent / w.total * 100) + '%');
+        setTimeout(step, 0);
+      })();
     }).catch(function (e) {
-      $('np-info').textContent = '';
-      it.error = 'Không phát được: ' + e.message;
-      renderList(); showCurrent();
+      status('np-status', 'Không xuất được: ' + e.message, true);
+      $('btn-export').disabled = false;
     });
   }
 
-  function pause() {
-    if (!playing) return;
-    var dur = src.buffer.duration;
-    offset = (ctx.currentTime - startedAt) % dur;
-    src.onended = null; try { src.stop(); } catch (e) {}
-    playing = false;
-    showCurrent(); tick();
+  // ---------------------------------------------------------------- rendering
+  var currentTab = 'now';
+  function showTab(t) {
+    currentTab = t;
+    ['now', 'queue', 'lib', 'dirs'].forEach(function (k) { $('tab-' + k).hidden = k !== t; });
+    Array.prototype.forEach.call(document.querySelectorAll('.tabs button'), function (b) { b.setAttribute('aria-selected', b.dataset.tab === t ? 'true' : 'false'); });
+    $('panel').scrollTop = 0;
+  }
+  Array.prototype.forEach.call(document.querySelectorAll('.tabs button'), function (b) {
+    b.addEventListener('click', function () { showTab(b.dataset.tab); });
+  });
+
+  function meta(it) {
+    var d = durations[it.id];
+    return (it.type === 'mmf' ? 'MMF' : 'MIDI') + ' · ' + (d ? fmtLen(d, d) + ' · ' : '') + kb(it.size) + ' · ' + it.folder;
   }
 
-  function stop() {
-    if (src) { src.onended = null; try { src.stop(); } catch (e) {} }
-    playing = false; offset = 0;
-    showCurrent(); tick();
+  function renderNow() {
+    var it = current();
+    $('np-label').textContent = preparing ? 'Đang dựng' : (playing ? 'Đang phát' : 'Đang chọn');
+    $('np-name').textContent = it ? it.name : 'Chưa có bài nào';
+    $('np-where').textContent = it ? it.folder : (library.length ? 'Chọn một bài trong tab Thư viện.' : 'Thêm thư mục trong tab Thư mục, hoặc bấm Nghe thử.');
+    $('np-kind').textContent = it ? (prepared && prepared.id === it.id ? prepared.kind : it.type.toUpperCase()) : '';
+    $('np-pos').textContent = it ? (qi + 1) + ' / ' + queue.length : '';
+    $('ico-play').innerHTML = playing ? ICO_PAUSE : ICO_PLAY;
+    $('btn-play').setAttribute('aria-label', playing ? 'Tạm dừng' : 'Phát');
+    $('btn-play').disabled = !it;
+    $('btn-prev').disabled = $('btn-next').disabled = !queue.length;
+    $('btn-export').disabled = !it;
+    $('btn-repeat').classList.toggle('on', repeat !== 'off');
+    $('repeat-one').hidden = repeat !== 'one';
+    $('btn-repeat').setAttribute('aria-label', 'Lặp lại: ' + (repeat === 'off' ? 'tắt' : repeat === 'all' ? 'cả hàng chờ' : 'một bài'));
+    $('btn-shuffle').classList.toggle('on', shuffle);
+    $('btn-shuffle').setAttribute('aria-label', 'Trộn bài: ' + (shuffle ? 'bật' : 'tắt'));
   }
 
-  function select(i, play) {
-    stop();
-    cur = i;
-    renderList(); showCurrent(); tick();
-    if (play) { audio(); startAt(0); }
+  function itemRow(it, isCur, onMain, miniIcon, miniLabel, onMini) {
+    var row = el('div', 'item' + (isCur ? ' cur' : ''));
+    var main = el('button', 'main'); main.type = 'button';
+    main.append(el('span', 'n', it.name), el('span', 'm', meta(it)));
+    main.addEventListener('click', onMain);
+    row.appendChild(main);
+    if (miniIcon) {
+      var m = el('button', 'mini'); m.type = 'button'; m.innerHTML = miniIcon; m.setAttribute('aria-label', miniLabel);
+      m.addEventListener('click', onMini);
+      row.appendChild(m);
+    }
+    return row;
   }
 
+  function renderQueue() {
+    var l = $('q-list'); l.textContent = '';
+    var total = 0, known = 0;
+    queue.forEach(function (id, i) {
+      var it = byId[id]; if (!it) return;
+      if (durations[id]) { total += durations[id]; known++; }
+      l.appendChild(itemRow(it, i === qi, function () { playIndex(i, 0); }, SVG.x, 'Bỏ khỏi hàng chờ', function () {
+        queue.splice(i, 1);
+        if (i < qi) qi--; else if (i === qi) { stopSource(); playing = false; offset = 0; prepared = null; if (qi >= queue.length) qi = queue.length - 1; }
+        saveQueue(); renderQueue(); renderNow(); tick();
+      }));
+    });
+    if (!queue.length) l.appendChild(el('p', 'empty', 'Hàng chờ trống. Bấm một bài trong Thư viện để phát cả danh sách đang lọc.'));
+    $('q-info').textContent = queue.length ? queue.length + ' bài' + (known ? ' · ' + fmt(total) + (known < queue.length ? '+' : '') : '') : '';
+  }
+
+  function filtered() {
+    var q = filter.q.trim().toLowerCase();
+    return library.filter(function (it) {
+      if (filter.type && it.type !== filter.type) return false;
+      if (filter.folder && it.folder !== filter.folder) return false;
+      if (q && (it.name + ' ' + it.folder).toLowerCase().indexOf(q) < 0) return false;
+      return true;
+    });
+  }
+
+  function renderLib() {
+    var l = $('lib-list'); l.textContent = '';
+    var list = filtered(), cur = current();
+    var shown = list.slice(0, 600);
+    shown.forEach(function (it, i) {
+      l.appendChild(itemRow(it, cur === it, function () { playList(list.map(function (x) { return x.id; }), i); showTab('now'); },
+        SVG.plus, 'Thêm vào hàng chờ', function () {
+          queue.push(it.id); saveQueue(); renderQueue(); renderNow();
+          status('lib-info', 'Đã thêm ' + it.name + ' vào hàng chờ.');
+        }));
+    });
+    if (!library.length) l.appendChild(el('p', 'empty', 'Thư viện trống. Vào tab Thư mục để thêm thư mục chứa file MMF hoặc MIDI.'));
+    else if (!list.length) l.appendChild(el('p', 'empty', 'Không có bài nào khớp bộ lọc.'));
+    status('lib-info', list.length + ' / ' + library.length + ' bài' + (list.length > shown.length ? ' (hiện 600 bài đầu, hãy lọc thêm)' : ''));
+    $('btn-playall').disabled = !list.length;
+    var fc = $('folder-chip');
+    fc.hidden = !filter.folder;
+    fc.textContent = filter.folder ? filter.folder + ' ✕' : '';
+    Array.prototype.forEach.call(document.querySelectorAll('#type-chips [data-type]'), function (c) {
+      c.setAttribute('aria-pressed', c.dataset.type === filter.type ? 'true' : 'false');
+    });
+  }
+
+  function renderDirs() {
+    var l = $('src-list'); l.textContent = '';
+    var counts = {}, sub = {};
+    library.forEach(function (it) {
+      if (it.data) return;
+      counts[it.root] = (counts[it.root] || 0) + 1;
+      sub[it.folder] = (sub[it.folder] || 0) + 1;
+    });
+    if (NATIVE) {
+      folders.forEach(function (f) {
+        var row = el('div', 'item');
+        var main = el('div', 'main');
+        main.append(el('span', 'n', f.name), el('span', 'm', f.path + ' · ' + (counts[f.uri] || 0) + ' bài'));
+        row.appendChild(main);
+        var m = el('button', 'mini'); m.type = 'button'; m.innerHTML = SVG.x; m.setAttribute('aria-label', 'Gỡ thư mục ' + f.name);
+        m.addEventListener('click', function () { applyNative(JSON.parse(window.Android.removeFolder(f.uri))); });
+        row.appendChild(m);
+        l.appendChild(row);
+      });
+      if (!folders.length) l.appendChild(el('p', 'empty', 'Chưa có thư mục nguồn. Thêm thư mục (ví dụ Download/SND), app sẽ quét cả thư mục con và đưa mọi file MMF/MIDI vào thư viện.'));
+    } else {
+      var roots = Object.keys(counts);
+      roots.forEach(function (r) {
+        var row = el('div', 'item'); var main = el('div', 'main');
+        main.append(el('span', 'n', r), el('span', 'm', counts[r] + ' bài (chỉ trong lần mở này)'));
+        row.appendChild(main); l.appendChild(row);
+      });
+      if (!roots.length) l.appendChild(el('p', 'empty', 'Chọn một thư mục (trình duyệt máy tính) hoặc chọn nhiều file. Bản APK nhớ thư mục và tự quét lại.'));
+    }
+    var s = $('sub-list'); s.textContent = '';
+    Object.keys(sub).sort(function (a, b) { return a.localeCompare(b, 'vi', { numeric: true }); }).forEach(function (k) {
+      var row = el('div', 'item');
+      var main = el('button', 'main'); main.type = 'button';
+      main.append(el('span', 'n', k.split('/').pop()), el('span', 'm', k + ' · ' + sub[k] + ' bài'));
+      main.addEventListener('click', function () { filter.folder = k; renderLib(); showTab('lib'); });
+      row.appendChild(main); s.appendChild(row);
+    });
+    if (!Object.keys(sub).length) s.appendChild(el('p', 'empty', 'Chưa có.'));
+    $('export-dir').textContent = NATIVE ? (exportFolder ? exportFolder.path : 'Chưa chọn (sẽ hỏi khi xuất lần đầu)') : 'Trình duyệt tải file về (khung xem artifact chặn tải; dùng bản APK).';
+  }
+
+  function renderAll() { renderNow(); renderQueue(); renderLib(); renderDirs(); tick(); }
+
+  // ---------------------------------------------------------------- controls
   $('btn-play').addEventListener('click', function () {
-    if (cur < 0) return;
+    if (qi < 0) return;
     audio();
     if (playing) pause(); else startAt(offset);
   });
-  $('btn-stop').addEventListener('click', stop);
-  $('chk-loop').addEventListener('change', function () { if (src) src.loop = this.checked; });
-  function seek(clientX) {
-    var it = items[cur]; if (!it || !it.buffer) return;
-    var r = $('bar').getBoundingClientRect();
-    var f = Math.max(0, Math.min(1, (clientX - r.left) / r.width));
-    if (playing) startAt(f * it.buffer.duration); else { offset = f * it.buffer.duration; tick(); }
-  }
-  $('bar').addEventListener('click', function (e) { seek(e.clientX); });
-  $('bar').addEventListener('keydown', function (e) {
-    var it = items[cur]; if (!it || !it.buffer) return;
-    var d = it.buffer.duration, p = playing ? (ctx.currentTime - startedAt) % d : offset;
-    if (e.key === 'ArrowRight' || e.key === 'ArrowLeft') {
-      e.preventDefault();
-      p = Math.max(0, Math.min(d, p + (e.key === 'ArrowRight' ? 5 : -5)));
-      if (playing) startAt(p); else { offset = p; tick(); }
-    }
+  $('btn-next').addEventListener('click', function () { next(false); });
+  $('btn-prev').addEventListener('click', prev);
+  $('btn-repeat').addEventListener('click', function () {
+    repeat = repeat === 'off' ? 'all' : repeat === 'all' ? 'one' : 'off';
+    store('repeat', repeat);
+    if (src) src.loop = repeat === 'one';
+    renderNow();
   });
-  renderList(); showCurrent(); tick();
+  $('btn-shuffle').addEventListener('click', function () { shuffle = !shuffle; store('shuffle', shuffle); renderNow(); });
+  $('btn-export').addEventListener('click', doExport);
+  $('btn-clearq').addEventListener('click', function () { stopSource(); playing = false; offset = 0; queue = []; qi = -1; prepared = null; saveQueue(); renderAll(); });
+  $('btn-playall').addEventListener('click', function () { var l = filtered(); if (l.length) { playList(l.map(function (x) { return x.id; }), shuffle ? Math.floor(Math.random() * l.length) : 0); showTab('now'); } });
+  $('q').addEventListener('input', function () { filter.q = this.value; renderLib(); });
+  Array.prototype.forEach.call(document.querySelectorAll('#type-chips [data-type]'), function (c) {
+    c.addEventListener('click', function () { filter.type = c.dataset.type; renderLib(); });
+  });
+  $('folder-chip').addEventListener('click', function () { filter.folder = ''; renderLib(); });
+
+  function seekTo(clientX) {
+    var it = current(); if (!it || !prepared || prepared.id !== it.id) return;
+    var r = $('bar').getBoundingClientRect(), d = prepared.buffer.duration;
+    var t = Math.max(0, Math.min(1, (clientX - r.left) / r.width)) * d;
+    if (playing) startAt(t); else { offset = t; tick(); }
+  }
+  $('bar').addEventListener('click', function (e) { seekTo(e.clientX); });
+  $('bar').addEventListener('keydown', function (e) {
+    if (!prepared || !current() || prepared.id !== current().id) return;
+    if (e.key !== 'ArrowRight' && e.key !== 'ArrowLeft') return;
+    e.preventDefault();
+    var d = prepared.buffer.duration, p = playing ? (ctx.currentTime - startedAt) % d : offset;
+    p = Math.max(0, Math.min(d, p + (e.key === 'ArrowRight' ? 5 : -5)));
+    if (playing) startAt(p); else { offset = p; tick(); }
+  });
+
+  // a short C-major phrase on a few General MIDI programs, to hear the soundfont without a file
+  $('btn-demo').addEventListener('click', function () {
+    var ev = [];
+    function put(dt, bytes) { var v = dt, s = [v & 0x7f]; while ((v >>= 7)) s.unshift((v & 0x7f) | 0x80); ev.push.apply(ev, s.concat(bytes)); }
+    [0, 11, 73, 80].forEach(function (p, j) {
+      put(0, [0xC0, p]);
+      [60, 64, 67, 72, 67, 64].forEach(function (k, i) { put(i || j ? 40 : 0, [0x90, k, 100]); put(220, [0x80, k, 0]); });
+    });
+    [36, 42, 38, 42, 36, 36, 38, 42].forEach(function (k) { put(60, [0x99, k, 110]); put(120, [0x89, k, 0]); });
+    put(0, [0xff, 0x2f, 0]);
+    var hdr = [0x4d, 0x54, 0x68, 0x64, 0, 0, 0, 6, 0, 0, 0, 1, 0x01, 0xf4, 0x4d, 0x54, 0x72, 0x6b,
+      (ev.length >>> 24) & 255, (ev.length >>> 16) & 255, (ev.length >>> 8) & 255, ev.length & 255];
+    var data = Uint8Array.from(hdr.concat(ev));
+    var it = byId.demo;
+    if (!it) {
+      it = { id: 'demo', data: data, name: 'Nghe thử soundfont', folder: 'Piano, celesta, sáo, synth, trống', root: '', type: 'midi', size: data.length };
+      library.unshift(it); byId.demo = it;
+    }
+    audio();
+    queue = ['demo'];
+    playIndex(0, 0);
+    renderAll();
+  });
+
+  // source actions
+  var sa = $('src-actions'), ea = $('export-actions');
+  if (NATIVE) {
+    var add = el('button', 'btn primary', 'Thêm thư mục'); add.type = 'button';
+    add.addEventListener('click', function () { window.Android.addFolder(); });
+    var rescan = el('button', 'btn', 'Quét lại'); rescan.type = 'button';
+    rescan.addEventListener('click', function () { status('scan-status', 'Đang quét…'); window.Android.scan(); });
+    sa.append(add, rescan);
+    var pe = el('button', 'btn', 'Chọn thư mục xuất'); pe.type = 'button';
+    pe.addEventListener('click', function () { window.Android.pickExportFolder(); });
+    ea.appendChild(pe);
+  } else {
+    var pd = el('label', 'pick primary', 'Chọn thư mục');
+    var inD = document.createElement('input'); inD.type = 'file'; inD.id = 'pick-dir'; inD.multiple = true;
+    inD.setAttribute('webkitdirectory', ''); inD.setAttribute('directory', '');
+    inD.addEventListener('change', function () { addWebFiles(this.files); this.value = ''; });
+    pd.appendChild(inD);
+    var pf = el('label', 'pick', 'Chọn file');
+    var inF = document.createElement('input'); inF.type = 'file'; inF.id = 'pick-files'; inF.multiple = true;
+    inF.addEventListener('change', function () { addWebFiles(this.files); this.value = ''; });
+    pf.appendChild(inF);
+    sa.append(pd, pf);
+  }
+
+  // start
+  if (NATIVE) {
+    var saved = load('queue', null);
+    applyNative(JSON.parse(window.Android.getState()));
+    if (saved && saved.ids) {
+      queue = saved.ids.filter(function (id) { return byId[id]; });
+      qi = Math.min(saved.qi, queue.length - 1);
+    }
+    if (folders.length) window.Android.scan();   // pick up files added since the last visit
+  }
+  renderAll();
 })();
 </script>
