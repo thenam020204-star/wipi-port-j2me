@@ -41,6 +41,7 @@ WRITE = {1: 'w8', 2: 'w16', 4: 'w32'}
 GLOBALS = {'_game': 'G.game', '_event': 'G.event', '_map': 'G.map', '_gameMenu': 'G.gameMenu', '_slotInfo': 'G.slotInfo', '_npcUi': 'G.npcUi',
            '_questMenu': 'G.questMenu', '_guardian': 'G.guardian'}
 OBJTYPES = ('Obj', 'Char', 'SObj', 'TEff')
+ESC = {'\\0': 0, '\\a': 7, '\\b': 8, '\\t': 9, '\\n': 10, '\\v': 11, '\\f': 12, '\\r': 13, '\\"': 34, "\\'": 39, '\\\\': 92}
 # original functions returning a fixed object: translated to the Java reference directly
 ALIAS = {'MP_getHero': 'Pool.hero', 'CHAR_getHeroChar': 'Pool.hero', 'MP_getSummon': 'Pool.summon'}
 
@@ -48,6 +49,24 @@ ALIAS = {'MP_getHero': 'Pool.hero', 'CHAR_getHeroChar': 'Pool.hero', 'MP_getSumm
 # ---------------------------------------------------------------- Java index (original name -> Java method)
 DOC = re.compile(r'/\*\*\s*(?:\*\s*)?([A-Za-z_]+_\w*)')
 SIG = re.compile(r'(\s*)((?:(?:public|private|protected|static|final|synchronized)\s+)*)([\w\[\]]+)\s+(\w+)\s*\(([^)]*)\)\s*(throws\s+[\w.,\s]+)?\{', re.S)
+
+
+MSIG = re.compile(r'\n(\s*)((?:(?:public|private|protected|static|final|synchronized)\s+)*static\s+(?:final\s+)?)([\w\[\]]+)\s+(\w+)\s*\(([^)]*)\)\s*(?:throws\s+[\w.,\s]+)?\{')
+
+
+def by_name(name, methods):
+    """fallback for an original name no javadoc cites: 'PREFIX_rest' -> the static method 'rest' (or rest without get/set kept) of a
+    class whose name starts like the prefix, when exactly one exists"""
+    if '_' not in name.strip('_'):
+        return None
+    pre, rest = name.split('_', 1)
+    if not rest:
+        return None
+    m = rest[0].lower() + rest[1:]
+    cands = [x for x in methods.get(m, []) if x[1].lower().startswith(pre[:3].lower())]
+    if len(cands) == 1:
+        return cands[0]
+    return None
 
 
 def java_index():
@@ -67,6 +86,36 @@ def java_index():
                 params = [(p.split()[-2], p.split()[-1]) for p in ps]
                 idx.setdefault(m.group(1), (pkg, f[:-5], s.group(4), 'static' in s.group(2).split(), params, s.group(3)))
     return idx
+
+
+def java_methods():
+    """all static methods: name -> [(pkg, class, name, True, params, rettype)]"""
+    out = {}
+    for dp, _, fs in os.walk(SRC):
+        for f in fs:
+            if not f.endswith('.java'):
+                continue
+            t = open(os.path.join(dp, f), encoding='utf-8').read()
+            for s in MSIG.finditer(t):
+                ps = [p.strip() for p in s.group(5).split(',') if p.strip()]
+                params = [(p.split()[-2], p.split()[-1]) for p in ps]
+                out.setdefault(s.group(4), []).append((os.path.basename(dp), f[:-5], s.group(4), True, params, s.group(3)))
+    return out
+
+
+METHODS = None
+
+
+def lookup(idx, name):
+    """Java method of an original function: javadoc index first, then the name fallback (marked by the caller)"""
+    global METHODS
+    j = idx.get(name)
+    if j is not None:
+        return j, False
+    if METHODS is None:
+        METHODS = java_methods()
+    j = by_name(name, METHODS)
+    return j, j is not None
 
 
 class LCompound(c_ast.Compound):
@@ -100,6 +149,9 @@ class Gen:
         self.fn = [e for e in ast.ext if isinstance(e, c_ast.FuncDef)][0]
         self.vtype = {}            # C type name of locals / params
         self.ptr = set()           # variables used as struct pointers
+        self.mixed = set()         # variables holding an object and a number
+        self.split = set()         # ... split into an int 'v' and an Obj 'v_o'
+        self.stride = set()        # object pointers advanced by constants (p_off)
         self.java = idx.get(name)
         decl = self.fn.decl.type
         self.params = []
@@ -118,6 +170,9 @@ class Gen:
             jp = self.java[4]
             if len(jp) != len(self.params):
                 self.check('Java has %d parameters, Ghidra %d: parameter mapping by position' % (len(jp), len(self.params)))
+                for k in range(len(self.params), len(jp)):      # Ghidra lost trailing parameters: name them so pass-through calls can use them
+                    self.params.append('param_%d' % (k + 1))
+                    self.vtype['param_%d' % (k + 1)] = 'int'
             for (t, n), p in zip(jp, self.params):
                 self.pmap[p] = n
                 self.ptype[p] = t
@@ -177,6 +232,40 @@ class Gen:
                 b = self.base(n.expr)
                 if b:
                     self.ptr.add(b)
+            # object-typed by the Java side: arguments passed to an Obj/Char parameter, results of calls returning an object
+            if isinstance(n, c_ast.FuncCall) and isinstance(n.name, c_ast.ID):
+                j = self.idx.get(n.name.name)
+                if j and n.args:
+                    for (pt, pn), a in zip(j[4], n.args.exprs):
+                        if pt in OBJTYPES and isinstance(a, c_ast.ID):
+                            self.ptr.add(a.name)
+            if isinstance(n, c_ast.Assignment) and isinstance(n.lvalue, c_ast.ID) and isinstance(n.rvalue, c_ast.FuncCall) \
+                    and isinstance(n.rvalue.name, c_ast.ID):
+                f = n.rvalue.name.name
+                if f in ALIAS or (self.idx.get(f) or (0, 0, 0, 0, 0, ''))[5] in OBJTYPES:
+                    self.ptr.add(n.lvalue.name)
+        # a Ghidra variable that holds an object in one place and a number in another (register reuse): flag it
+        for n in self.walk(node):
+            if isinstance(n, c_ast.Assignment) and isinstance(n.lvalue, c_ast.ID) and n.lvalue.name in self.ptr and n.op == '=':
+                r = n.rvalue
+                ok = (isinstance(r, c_ast.ID) and (r.name in self.ptr or r.name in GLOBALS)) or (isinstance(r, c_ast.Constant) and r.value == '0') \
+                    or (isinstance(r, c_ast.FuncCall) and isinstance(r.name, c_ast.ID) and (r.name.name in ALIAS or (self.idx.get(r.name.name) or (0, 0, 0, 0, 0, ''))[5] in OBJTYPES or r.name.name not in self.idx)) \
+                    or (isinstance(r, c_ast.Cast))
+                if not ok:
+                    self.mixed.add(n.lvalue.name)
+        # 'p = p + K' on an object pointer (walking an array of slots inside a struct): p keeps the object, p_off accumulates K
+        for n in self.walk(node):
+            if isinstance(n, c_ast.Assignment) and isinstance(n.lvalue, c_ast.ID) and n.lvalue.name in self.ptr:
+                r = n.rvalue
+                if n.op == '+=' and isinstance(r, c_ast.Constant) or (n.op == '=' and isinstance(r, c_ast.BinaryOp) and r.op == '+'
+                                                                       and isinstance(r.left, c_ast.ID) and r.left.name == n.lvalue.name
+                                                                       and isinstance(r.right, c_ast.Constant)):
+                    self.stride.add(n.lvalue.name)
+        self.mixed -= self.stride
+        for v in self.mixed:                      # split: 'v' stays an int, 'v_o' holds the object
+            if v not in self.params:
+                self.ptr.discard(v)
+                self.split.add(v)
 
     def walk(self, n):
         yield n
@@ -202,8 +291,25 @@ class Gen:
             return self.ctype(e.to_type.type) in ('uint', 'dword', 'ulong')
         if isinstance(e, c_ast.ID):
             return self.vtype.get(e.name) in ('uint', 'dword', 'ulong')
+        if isinstance(e, c_ast.BinaryOp) and e.op in ('+', '-'):
+            # Ghidra types 'byte - 2' / 'ushort + k' as unsigned (the code compares with lo/ls/hi/hs): an unsigned operand makes it unsigned
+            def uns(x):
+                if isinstance(x, c_ast.ID):
+                    return self.vtype.get(x.name) in ('uint', 'dword', 'ulong', 'byte', 'uchar', 'ushort', 'word')
+                return self.unsigned(x)
+            return uns(e.left) or uns(e.right)
         if isinstance(e, c_ast.Constant):
             return e.value.lower().endswith('u')
+        return False
+
+    def is_ptr_expr(self, r):
+        if isinstance(r, c_ast.Cast):
+            return self.is_ptr_expr(r.expr)
+        if isinstance(r, c_ast.ID):
+            return r.name in self.ptr or r.name in GLOBALS
+        if isinstance(r, c_ast.FuncCall) and isinstance(r.name, c_ast.ID):
+            f = r.name.name
+            return f in ALIAS or (self.idx.get(f) or (0, 0, 0, 0, 0, ''))[5] in OBJTYPES
         return False
 
     def deref(self, e):
@@ -215,6 +321,14 @@ class Gen:
             if isinstance(tt, c_ast.PtrDecl):
                 width, signed = WIDTH.get(self.ctype(tt.type), (4, True))
             t = t.expr
+        if isinstance(t, c_ast.BinaryOp) and t.op == '+' and isinstance(t.left, c_ast.ID) and t.left.name in self.split:
+            return t.left.name + '_o.m', self.expr(t.right), width, signed
+        if isinstance(t, c_ast.ID) and t.name in self.split:
+            return t.name + '_o.m', '0', width, signed
+        if isinstance(t, c_ast.BinaryOp) and t.op == '+' and isinstance(t.left, c_ast.ID) and t.left.name in self.stride:
+            return self.var(t.left.name) + '.m', '%s + %s_off' % (self.expr(t.right), self.var(t.left.name)), width, signed
+        if isinstance(t, c_ast.ID) and t.name in self.stride:
+            return self.var(t.name) + '.m', self.var(t.name) + '_off', width, signed
         if isinstance(t, c_ast.BinaryOp) and t.op == '+' and isinstance(t.left, c_ast.ID) and t.left.name in self.ptr:
             return self.var(t.left.name) + '.m', self.expr(t.right), width, signed
         if isinstance(t, c_ast.ID) and t.name in self.ptr:
@@ -230,7 +344,9 @@ class Gen:
                 if c.startswith('\\x'):
                     return str(int(c[2:], 16) - (256 if int(c[2:], 16) > 127 else 0))
                 if c.startswith('\\'):
-                    return str({'\\0': 0, '\\n': 10, '\\t': 9, '\\r': 13, "\\'": 39, '\\\\': 92}.get(c, 0))
+                    if c not in ESC:
+                        self.check('char literal %s' % c)
+                    return str(ESC.get(c, 0))
                 return str(ord(c))
             if e.type == 'string':
                 return v
@@ -283,12 +399,14 @@ class Gen:
             if op == '>>' and self.unsigned(e.left):
                 op = '>>>'
             if op in ('<', '<=', '>', '>=') and uns:
+                if isinstance(e.left, c_ast.BinaryOp) or isinstance(e.right, c_ast.BinaryOp):
+                    self.check('unsigned compare of byte/ushort arithmetic (Ghidra typing): check lo/ls/hi/hs')
                 return '((%s) + 0x80000000 %s (%s) + 0x80000000)' % (l, op, r)
             if op in ('/', '%') and uns:
                 self.check('unsigned division')
             if op in ('&&', '||'):
                 return '(%s) %s (%s)' % (self.cond(e.left), op, self.cond(e.right))
-            if op in ('+', '-') and isinstance(e.left, c_ast.ID) and e.left.name in self.ptr:
+            if op in ('+', '-') and isinstance(e.left, c_ast.ID) and e.left.name in self.ptr and e.left.name not in self.stride:
                 self.check('pointer arithmetic on %s' % e.left.name)
             return '(%s %s %s)' % (l, op, r)
         if k == 'Assignment':
@@ -350,7 +468,7 @@ class Gen:
 
     def isbool(self, e):
         if isinstance(e, c_ast.FuncCall) and isinstance(e.name, c_ast.ID):
-            j = self.idx.get(e.name.name)
+            j = lookup(self.idx, e.name.name)[0]
             return bool(j) and j[5] == 'boolean'
         return False
 
@@ -361,6 +479,13 @@ class Gen:
         if isinstance(e.rvalue, c_ast.FuncCall) and self.isbool(e.rvalue):
             rv = '(%s ? 1 : 0)' % rv
         lv = e.lvalue
+        if isinstance(lv, c_ast.ID) and lv.name in self.stride:
+            r = e.rvalue
+            k = self.expr(r if e.op == '+=' else r.right) if (e.op == '+=' or (isinstance(r, c_ast.BinaryOp) and isinstance(r.left, c_ast.ID)
+                                                                                 and r.left.name == lv.name)) else None
+            if k is not None:
+                return '%s_off += %s' % (self.var(lv.name), k)
+            self.check('%s re-pointed inside a strided walk' % lv.name)
         if isinstance(lv, c_ast.UnaryOp) and lv.op == '*':
             o, off, w, s = self.deref(lv)
             if o is None:
@@ -373,8 +498,10 @@ class Gen:
             g, off, n = self.field(lv)
             return 'Bytes.%s(%s, %s, %s)' % (WRITE[int(n)], g, off, rv)
         if isinstance(lv, c_ast.ID) and isinstance(e.rvalue, c_ast.FuncCall) and isinstance(e.rvalue.name, c_ast.ID) and \
-                (e.rvalue.name.name in ALIAS or (self.idx.get(e.rvalue.name.name) or (0, 0, 0, 0, 0, ''))[5] in OBJTYPES):
+                (e.rvalue.name.name in ALIAS or (self.idx.get(e.rvalue.name.name) or (0, 0, 0, 0, 0, ''))[5] in OBJTYPES) and lv.name not in self.split:
             self.ptr.add(lv.name)
+        if isinstance(lv, c_ast.ID) and lv.name in self.split and self.is_ptr_expr(e.rvalue):
+            return '%s_o = %s' % (lv.name, rv)
         if isinstance(lv, c_ast.ID):
             name = lv.name
             t = self.vtype.get(name, 'int')
@@ -406,13 +533,15 @@ class Gen:
             self.check('indirect call')
             return 'C2J_ICALL()'
         n = e.name.name
-        args = list(e.args.exprs) if e.args else []
+        args = self.passthrough(n, list(e.args.exprs) if e.args else [])
         if n.startswith('__F'):
             g, off, w = self.field(e)
             return 'Bytes.%s(%s, %s)' % ({'1': 's8', '2': 's16', '4': 's32'}.get(w, 's32'), g, off)
         if n in ALIAS:
             return ALIAS[n]
-        j = self.idx.get(n)
+        j, guessed = lookup(self.idx, n)
+        if guessed:
+            self.check('%s matched by name to %s.%s' % (n, j[1], j[2]))
         if j is None:
             leaf = self.leaf(n, args)
             if leaf is not None:
@@ -432,6 +561,8 @@ class Gen:
                 if isinstance(a, c_ast.ID):
                     self.ptr.add(a.name)
                 s = self.expr(a)
+                if isinstance(a, c_ast.ID) and a.name in self.split:
+                    s = a.name + '_o'
                 have = self.ptype.get(a.name, 'Obj') if isinstance(a, c_ast.ID) else 'Obj'
                 out.append('null' if s == '0' else ('(%s) %s' % (pt, s) if pt != 'Obj' and have != pt else s))
             elif pt == 'boolean':
@@ -440,6 +571,29 @@ class Gen:
                 out.append(self.expr(a))
         q = '' if (pkg == 'game' and cls == self.cur_cls) else cls + '.'
         return '%s%s(%s)' % (q, meth, ', '.join(out))
+
+    def passthrough(self, n, args):
+        """Ghidra drops an argument whose register still holds the caller's parameter of the same position: fill those in (C2J-CHECK)"""
+        need = None
+        j = lookup(self.idx, n)[0]
+        if j is not None:
+            need = len(j[4])
+        else:
+            try:
+                g = Gen(n, self.idx, inner=True)
+                need = len(g.params)
+            except BaseException:
+                return args
+        if need is not None and len(args) < need:
+            add = []
+            for k in range(len(args), need):
+                if k < len(self.params):
+                    add.append(c_ast.ID(self.params[k]))
+                else:
+                    return args
+            self.check('%s: r%d..r%d assumed passed through unchanged (check the disassembly)' % (n, len(args), need - 1))
+            return args + add
+        return args
 
     def leaf(self, n, args):
         """an unported callee whose body is only 'return <expr of its params>;' is translated inline (CHAR_getX & co)"""
@@ -478,6 +632,34 @@ class Gen:
         g.ptr = set(g.params) & g.ptr
         return '%s /* %s */' % (g.expr(items[0].expr), n)
 
+    def leaf_stmts(self, n, args):
+        """an unported callee whose body only stores into its parameters' objects (setters like MONSTER_setAttackCommand): inline statements"""
+        try:
+            g = Gen(n, self.idx, inner=True)
+        except BaseException:
+            return None
+        items = [x for x in (g.fn.body.block_items or []) if not isinstance(x, c_ast.Decl)]
+        if items and isinstance(items[-1], c_ast.Return) and items[-1].expr is None:
+            items = items[:-1]
+        if not items or len(items) > 8 or len(args) < len(g.params):
+            return None
+        for it in items:
+            if not isinstance(it, c_ast.Assignment) or any(isinstance(x, c_ast.FuncCall) for x in g.walk(it)):
+                return None
+        pm = {}
+        for p, a in zip(g.params, args):
+            if isinstance(a, c_ast.ID):
+                pm[p] = self.var(a.name)
+                if p in g.ptr:
+                    self.ptr.add(a.name)
+            elif isinstance(a, c_ast.Constant):
+                pm[p] = self.expr(a)
+            else:
+                return None
+        g.pmap = pm
+        g.ptr = set(g.params) & g.ptr
+        return ['%s; // %s' % (g.expr(it), n) for it in items]
+
     # ------------------------------------------------------------ statements
     def emit(self, s, ind):
         self.lines.append('    ' * ind + s)
@@ -497,6 +679,14 @@ class Gen:
         if k == 'Decl':
             return                                         # locals are declared at the top
         if k in ('Assignment', 'FuncCall', 'UnaryOp'):
+            if k == 'FuncCall' and isinstance(s.name, c_ast.ID) and s.name.name in ALIAS:
+                return                                     # result unused: nothing to do
+            if k == 'FuncCall' and isinstance(s.name, c_ast.ID) and lookup(self.idx, s.name.name)[0] is None:
+                st = self.leaf_stmts(s.name.name, self.passthrough(s.name.name, list(s.args.exprs) if s.args else []))
+                if st is not None:
+                    for x in st:
+                        self.emit(x, ind)
+                    return
             t = self.expr(s)
             self.flush_unported(ind)
             if not t.startswith('0 /*'):                  # a bare call of an unported function: only the throw above remains
@@ -611,14 +801,19 @@ class Gen:
             rt = 'void' if self.ret_c == 'void' else 'int'
             ps = ', '.join('%s %s' % ('Obj' if p in self.ptr else 'int', p) for p in self.params)
             sig = 'static %s %s(%s)' % (rt, self.name, ps)
+        for v in sorted(self.mixed):
+            self.check('%s holds an object and a number (Ghidra register reuse): split into %s / %s_o' % (v, v, v))
         body_start = len(self.lines)
         self.stmt(self.fn.body, 2)
         locs = sorted(n for n in self.vtype if n not in self.params)
         decl = []
         ints = [self.var(n) for n in locs if n not in self.ptr]
-        objs = [self.var(n) for n in locs if n in self.ptr]
+        objs = [self.var(n) for n in locs if n in self.ptr] + [n + '_o' for n in locs if n in self.split]
         if ints:
             decl.append('        int %s;' % ', '.join(ints))
+        for v in sorted(self.stride):
+            decl.append('        int %s_off = 0;                     // C2J: %s walks slots of its object' % (self.var(v), self.var(v)))
+            self.checks.append('strided pointer %s' % v)
         if objs:
             decl.append('        Obj %s;' % ', '.join(objs))
         body = decl + self.lines[body_start:]

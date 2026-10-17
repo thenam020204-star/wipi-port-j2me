@@ -103,7 +103,7 @@ Làm **sau** khi gameplay và story đã khớp trace; không làm xen vào lúc
 
 | Module | Hàm port | Thời gian | Leo thang | Ghi chú |
 |---|---|---|---|---|
-| (chưa có) | | | | |
+| D1 `Item`/`ItemBag`/`ArmsBag` (agent Sonnet thử nghiệm T0.5, 2026-10-17) | 37 (30 port mới + 7 thêm javadoc) + 4 hàm phụ thuộc | 33 phút (1 agent) | 0 (1 hàm kiểm một phần: `Item_TestSetItem`, emulator dừng) | mọi hàm kiểm bằng probe, 0 lệch; 15 góp ý cho brief đã áp dụng |
 
 ## 8. Phiên kế tiếp bắt đầu thế nào
 

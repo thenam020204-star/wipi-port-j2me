@@ -2,6 +2,7 @@
 """T0.2 acceptance harness: for each function, replace its hand-written Java method by the tools/c2j.py draft in a copy of the sources
 (work/c2j/src_<NAME>), compile, and check it against the original with the call recorder (tools/jcr.sh + tools/callcmp.py).
 
+A fixed draft in work/c2j/fixed/<NAME>.java (the c2j output after its C2J-CHECK marks were resolved) is used instead of the raw draft.
 Usage: c2j_eval.py <ref calls (tools/e_calls.py, covering all the functions)> <spec list used for the ref> <NAME,NAME..> <GameTraceTest args...>
 Prints one line per function: C2J-CHECK count, compile result, callcmp result.  The hand port stays untouched (j2me/src)."""
 import os
@@ -60,6 +61,10 @@ def main():
         try:
             g = c2j.Gen(n, idx)
             txt = g.gen()
+            fixed = os.path.join(ROOT, 'work', 'c2j', 'fixed', n + '.java')
+            if os.path.exists(fixed):                  # the draft after a reviewer fixed its C2J-CHECK marks
+                txt = open(fixed, encoding='utf-8').read()
+                n_fixed = True
         except Exception as ex:
             print('%-34s c2j failed: %s' % (n, str(ex)[:100]))
             continue
