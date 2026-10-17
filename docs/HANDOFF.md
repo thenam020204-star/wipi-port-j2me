@@ -1,6 +1,6 @@
 # HANDOFF: hướng dẫn cho phiên làm việc sau
 
-Cập nhật: 2026-10-17. **Bàn giao giai đoạn mới nhất: `docs/HANDOFF_E6.md`** (trạng thái E6, phần chưa kiểm chứng, bản chạy thử, việc tiếp theo); §4–§5 dưới đây là ghi chép cũ của E5. Nhánh làm việc: `ccr-f53d26cc-ct4qk8` (push bằng `git push -u origin ccr-f53d26cc-ct4qk8`, không tạo PR khi chưa được yêu cầu).
+Cập nhật: 2026-10-17. **Bàn giao giai đoạn mới nhất: `docs/HANDOFF_E6.md`** (trạng thái E6, phần chưa kiểm chứng, bản chạy thử, việc tiếp theo); §4–§5 dưới đây là ghi chép cũ của E5. Nhánh làm việc: `hl4-j2me-port` (đổi tên từ `ccr-f53d26cc-ct4qk8` ngày 2026-10-17 theo yêu cầu người dùng; nhánh cũ giữ nguyên làm bản lưu, không push thêm. Phiên cloud mới được hệ thống gán một nhánh `ccr-…` riêng: bỏ qua nó, checkout và push vào `hl4-j2me-port`) (push bằng `git push -u origin hl4-j2me-port`, không tạo PR khi chưa được yêu cầu).
 Đọc trước: `NOTES.md` (quyết định, phạm vi, trạng thái) và `docs/phaseE.md` (kiến trúc + cách kiểm chứng Phase E).
 
 ## 1. Dự án là gì, đang ở đâu

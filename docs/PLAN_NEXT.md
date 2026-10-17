@@ -93,7 +93,7 @@ Làm **sau** khi gameplay và story đã khớp trace; không làm xen vào lúc
 4. Kiểm từng hàm bằng T0.1 trên trace của module: 0 lệch logic.
 5. Hồi quy **tuần tự** F/G/H/J/K/L/M (`docs/HANDOFF_E6.md` §4), cộng trace của module.
 6. Kiểm tay: không float, không cấp phát trong `paint`/vòng lặp, giữ kiểu byte/short/int, không đổi descriptor đã có.
-7. Cập nhật `docs/phaseE.md` (bảng module + quirk mới), `docs/known_diffs.md`; commit + push lên `ccr-f53d26cc-ct4qk8`.
+7. Cập nhật `docs/phaseE.md` (bảng module + quirk mới), `docs/known_diffs.md`; commit + push lên `hl4-j2me-port`.
 8. Báo cáo ngắn: Đã phân tích | Đã triển khai | Đã build | Chạy emulator | Đối chiếu bản gốc | Chạy thiết bị thật (chưa xác minh).
 
 ## 7. Đo tốc độ
