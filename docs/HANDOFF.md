@@ -40,7 +40,7 @@ Các module lớn còn thiếu: HERO 29/156, MONSTER 20/148, CHAR 30/113, GMenu 
    - `pip install unicorn==2.1.4 capstone==5.0.9`
    - lấy các jar build (ECJ 4.6.1, ProGuard 6.2.2, stub CLDC/MIDP, MicroEmulator 2.0.4) từ `HL4_project_2026-09-27j.zip` đã commit và kiểm hash
    - dựng `work/orig` bằng `tools/inventory.py`, tạo symlink `work/res`, build JAR
-   - với `--ghidra`: tải Ghidra 11.3.2 rồi sinh `work/ghidra/decomp_and2011.c` cho `tools/cfunc.py` (chỉ để đọc, mất khoảng 10 phút)
+   - pseudo-C Ghidra đã commit ở `ghidra/decomp_and2011.c`; script chép sang `work/ghidra/` cho `tools/cfunc.py` (chỉ để đọc). Cờ `--ghidra` chỉ cần khi muốn sinh lại (tải Ghidra 11.3.2, khoảng 10 phút)
 3. Python và JVM cần `LC_ALL=C.UTF-8` (đường dẫn có tiếng Hàn). Binary nằm ở
    `"work/orig/android/영웅서기4.apk!/res/raw/jarfile.mp3!/binary.mod"`. Địa chỉ Ghidra = địa chỉ thật + 0x10000.
 4. Golden vector và golden trace của bản gốc **đã có trong repo** (`golden/`, chỉ chứa hash, số lần gọi RNG, dump trạng thái game; không chứa tài nguyên gốc). `setup_env.sh` tự chép sang `work/golden`. Chỉ phải sinh trace **mới** (§4); trace mới sinh xong thì chép vào `golden/` và commit.
