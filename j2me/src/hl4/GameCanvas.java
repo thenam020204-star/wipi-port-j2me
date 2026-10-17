@@ -24,6 +24,8 @@ public class GameCanvas extends Canvas implements Runnable {
     private volatile boolean paused;
     private boolean started;
     private Main midlet;
+    /** a part of the original that is not ported yet (IllegalStateException "...: later") stops the loop and is shown on screen */
+    private volatile String error;
 
     public GameCanvas(Main m) {
         midlet = m;
@@ -50,8 +52,12 @@ public class GameCanvas extends Canvas implements Runnable {
     public void run() {
         while (running) {
             long t0 = System.currentTimeMillis();
-            if (!paused) {
-                tick();
+            if (!paused && error == null) {
+                try {
+                    tick();
+                } catch (RuntimeException e) {
+                    error = e.toString();
+                }
                 repaint();
                 serviceRepaints();
             }
@@ -87,6 +93,7 @@ public class GameCanvas extends Canvas implements Runnable {
         int ox = (sw - W) / 2;
         int oy = (sh - H) / 2;
         if (frame == null) {
+            drawError(g, sw);
             return;
         }
         short[] px = frame.px;
@@ -116,6 +123,38 @@ public class GameCanvas extends Canvas implements Runnable {
                 rgb[i] = 0xff000000 | (((r << 3) | (r >> 2)) << 16) | (((gg << 2) | (gg >> 4)) << 8) | ((b << 3) | (b >> 2));
             }
             g.drawRGB(rgb, skip * W + sx0, W, dx0, top + skip, cw, ch, false);
+        }
+        drawError(g, sw);
+    }
+
+    /** the stop message, word-wrapped on a dark band (only after a failure: nothing is allocated while the game runs) */
+    private void drawError(Graphics g, int sw) {
+        String e = error;
+        if (e == null) {
+            return;
+        }
+        javax.microedition.lcdui.Font f = javax.microedition.lcdui.Font.getFont(javax.microedition.lcdui.Font.FACE_SYSTEM,
+                javax.microedition.lcdui.Font.STYLE_PLAIN, javax.microedition.lcdui.Font.SIZE_SMALL);
+        g.setFont(f);
+        int lh = f.getHeight();
+        int maxW = sw - 8;
+        java.util.Vector lines = new java.util.Vector();
+        lines.addElement("Chua port (ban thu nghiem):");
+        int i = 0;
+        while (i < e.length()) {
+            int j = i + 1;
+            while (j <= e.length() && f.substringWidth(e, i, j - i) <= maxW) {
+                j++;
+            }
+            lines.addElement(e.substring(i, j - 1));
+            i = j - 1;
+        }
+        int h = lh * lines.size() + 8;
+        g.setColor(0x400000);
+        g.fillRect(0, 0, sw, h);
+        g.setColor(0xffffff);
+        for (int k = 0; k < lines.size(); k++) {
+            g.drawString((String) lines.elementAt(k), 4, 4 + k * lh, Graphics.TOP | Graphics.LEFT);
         }
     }
 

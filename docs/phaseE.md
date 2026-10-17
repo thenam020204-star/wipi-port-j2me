@@ -51,4 +51,9 @@ Bài học công cụ: các script gỡ lỗi `e_args/e_ret/e_raw/e_part` phải
 ## 4. Khác biệt có chủ đích so với bản gốc (Phase E)
 - Vùng game 240×320 ngay từ màn logo (bản gốc 240×400 trước title). Chỉ đổi vị trí dọc của màn logo/thông báo.
 - Chuỗi "TOUCH THE SCREEN" ở màn title giữ nguyên (bản keypad nên đổi nhãn — quyết định Phase F).
+- **Lối tắt của bản thử nghiệm** (tạm thời, bỏ khi port xong phần tương ứng):
+  - Màn đồng ý thông tin: phím 1 (동의함) / 2 (거부함) lưu câu trả lời như `Save_smsAgree` rồi phím kế tiếp rời màn title. Popup xác nhận NpcUi(5, 10) bị bỏ qua.
+  - Menu chính, mục 0 (게임시작): vào thẳng game mới, slot 0, class 0 (`GameStart.newGame(0)`) thay cho các màn story mode (E4).
+  - Gặp phần chưa port (`IllegalStateException "...: later"`): vòng lặp dừng và lỗi hiện lên đầu màn hình (`GameCanvas.drawError`) thay vì treo.
+  - Jar đóng gói tài nguyên gốc (`tools/j2me_stage_res.py` → `work/resjar_full`, không có SND): 2,5 MB — có thể vượt giới hạn jar của nhiều máy thật.
 - Không có vùng bấm / pointer / bàn phím ảo. Âm thanh chưa gắn (lời gọi `Sound.*` giữ chỗ).

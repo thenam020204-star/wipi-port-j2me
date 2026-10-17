@@ -104,6 +104,12 @@ public final class MainMenuFrame implements FrameHandler {
                 break;
             case -5:
             case 0x35:
+                if (sel == 0) {
+                    // TEST BUILD shortcut (behaviour change, docs/phaseE.md section 4): the story-mode screens (slot / force / class / confirm,
+                    // phase E4) are not ported yet, so item 0 starts a new game in slot 0 with class 0 - the same state the trace tests start from
+                    GameStart.newGame(0);
+                    return;
+                }
                 throw new IllegalStateException("main menu item " + sel + ": later");
             default:
                 break;

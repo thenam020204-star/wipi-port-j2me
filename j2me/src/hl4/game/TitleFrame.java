@@ -106,7 +106,9 @@ public final class TitleFrame implements FrameHandler {
             }
         } else if (key == 0x31 || key == 0x32) {
             Glob.smsAgree = key == 0x31 ? 1 : 0;
-            throw new IllegalStateException("consent answer -> NpcUi(5, 10) popup: later");
+            // TEST BUILD shortcut (behaviour change, docs/phaseE.md section 4): the confirmation popup NpcUi(5, 10) is not ported yet; the
+            // answer is stored as Save_smsAgree does and the next key leaves the title like an answered consent does
+            Glob.saveSmsAgree();
         }
     }
 

@@ -95,7 +95,15 @@ public final class Glob {
             smsAgree = -1;
             return;
         }
-        smsAgree = b[0];
-        smsFlag2 = b[1];
+        smsAgree = b[0];                      // two s32 (stored as bytes): +0 answer, +4 flag
+        smsFlag2 = b[4];
+    }
+
+    /** Save_smsAgree @0xceb2c: two s32 {answer, flag}, DES-encrypted, written to ./Hero4Sms (Store keeps the decrypted image, like LoadGameBase returns) */
+    public static void saveSmsAgree() {
+        byte[] b = new byte[8];
+        hl4.sys.Bytes.w32(b, 0, (byte) smsAgree);
+        hl4.sys.Bytes.w32(b, 4, (byte) smsFlag2);
+        hl4.sys.Store.save("./Hero4Sms", b);
     }
 }
