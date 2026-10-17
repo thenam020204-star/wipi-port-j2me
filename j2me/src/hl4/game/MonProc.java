@@ -1269,6 +1269,7 @@ public final class MonProc {
         byte[] m = o.m;
         Char t;
         if (withHero) {
+            Coll.heroMoveRect();                    // 0xa0a74: the hero's cached move rect is refreshed before it is read
             t = Pool.hero;
         } else {
             t = Maps.boss;

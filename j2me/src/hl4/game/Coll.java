@@ -228,7 +228,7 @@ public final class Coll {
         }
     }
 
-    /** CHAR_getHeroMoveRect: refreshes the hero's cached move rectangle */
+    /** CHAR_getHeroMoveRect @0x393bc: refreshes the hero's cached move rectangle */
     public static void heroMoveRect() {
         Obj h = Pool.hero;
         Bytes.w32(h.m, 0x148, Chars.getMoveRectX(h));

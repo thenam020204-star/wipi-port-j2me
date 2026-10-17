@@ -4,11 +4,11 @@ Usage: e_ret.py <binary.mod> <res> <from_tick> <to_tick> <func>[,func..] [tick:k
 import os, sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from unicorn import UC_HOOK_CODE, arm_const
-from ref_game import Game
 import ref_game
 binp, res, t0, t1, fns = sys.argv[1], sys.argv[2], int(sys.argv[3]), int(sys.argv[4]), sys.argv[5].split(',')
 script = ref_game.parse_script(sys.argv[6:])
-g = Game(binp, res)
+import e_snap
+g, first = e_snap.boot(binp, res)        # env SNAPLOAD: tools/e_snap.py (T0.3)
 cur = [-1]
 pend = []
 retaddrs = {}
@@ -36,7 +36,6 @@ def mk(fn):
     g.uc.hook_add(UC_HOOK_CODE, hook, begin=a, end=a)
 for f in fns:
     mk(f)
-g.start()
-for i in range(t1 + 1):
+for i in range(first, t1 + 1):
     cur[0] = i
     ref_game.tick_script(g, script, i)
