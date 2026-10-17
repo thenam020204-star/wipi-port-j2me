@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Stage the original resources that the J2ME build packs into the JAR (local only: work/ is gitignored, originals are never committed).
-Excluded: SND (MMF/OGG - audio is converted in Phase F), TOUCH/CIMG (virtual keypad art), kickbert (unused by the key path - UNKNOWN).
+Excluded: SND (MMF/OGG - audio is converted in Phase F), TOUCH/CIMG/S (touch-variant keypad art), kickbert (unused by the key path - UNKNOWN).
+TOUCH/CIMG/NS is PACKED: the in-game HUD panel images (_newPadTouch, Hud.drawSingle).
 TOUCH/CIF, TOUCH/EXD, TOUCH/IMG are PACKED: they are the dialog/menu skins of the AND2011 UI (docs/phaseE.md section 1).
 Usage: python3 tools/j2me_stage_res.py [res dir] [out dir]"""
 import os
@@ -22,7 +23,7 @@ for d in sorted(os.listdir(res)):
     else:
         os.makedirs(out, exist_ok=True)
         shutil.copy(src, out)
-shutil.rmtree(os.path.join(out, 'TOUCH', 'CIMG'), ignore_errors=True)
+os.remove(os.path.join(out, 'TOUCH', 'CIMG', 'S'))
 for r, _, fs in os.walk(out):
     for f in fs:
         n += 1
