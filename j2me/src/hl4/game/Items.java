@@ -45,6 +45,149 @@ public final class Items {
         return n;
     }
 
+    /**
+     * Remove_item(type, idx, n) @0x93c80: takes n of (type, idx) out of the bag (equipped items are skipped); a stack bigger than n is reduced,
+     * smaller ones are removed whole (Event_QuestCheck(type, idx, -remaining) first).  After a removal the walk resumes at the bag's SECOND node
+     * (head->next), as the original does.  True when everything was taken.
+     */
+    public static boolean removeItem(int type, int idx, int n) {
+        LList bag = G.itemBag;
+        if (bag.size <= 0) {
+            return n < 1;
+        }
+        Obj p = bag.head;
+        while (p != null) {
+            if (isEquipSetSlot(p) || getType(p) != type || getIdx(p) != idx) {
+                p = p.next;
+                continue;
+            }
+            if (getCnt(p) > n) {
+                addCnt(p, (byte) -n);
+                return true;
+            }
+            Quest.check(p.m[0x20], (short) p.m[0x22], -n);
+            bag.remove(p);
+            n -= getCnt(p);
+            p = bag.head == null ? null : bag.head.next;
+        }
+        return n < 1;
+    }
+
+    /**
+     * Item_RepaySet(path, idx, many, apply) @0x96184: the reward record idx of a repay table (DES file; {s16 len, body} records; body = 1 or 3
+     * entries of {u8 type, s8 idx, s32 value}).  Types <= 0xc / 0x17 are items (a negative value takes items away), 0xd money, 0xe exp,
+     * 0xf / 0x10 attribute / skill points, 0x11 summon exp, 0x12 / 0x13 one more guardian / arms slot.  The entries are listed at _event+0x57c
+     * (type) / +0x580 (value or index) for the reward popup; an item that does not fit goes to the overflow list _game+0x5d.. .
+     */
+    public static void repaySet(String path, int idx, int many, int apply) {
+        byte[] d = Res.loadDes(path);
+        if (d == null) {
+            return;
+        }
+        byte[] e = G.event;
+        byte[] g = G.game;
+        int off = getOffset(d, idx & 0xff);
+        Bytes.w32(e, 0x588, -1);
+        e[0x57c] = -1;
+        Bytes.w32(e, 0x580, -1);
+        e[0x57d] = -1;
+        Bytes.w32(e, 0x584, -1);
+        e[0x57e] = -1;
+        boolean any = false;
+        int n = many == 0 ? 1 : 3;
+        for (int i = 0; i < n; i++) {
+            int q = off + i * 6;
+            int typeU = d[q] & 0xff;
+            int type = (byte) typeU;
+            int sub = d[q + 1];
+            int val = Bytes.s32(d, q + 2);
+            if (type > 0) {
+                e[0x57b]++;
+            }
+            boolean item = typeU <= 0xc || type == 0x17;
+            if (item) {
+                if (apply != 0) {
+                    if (type == 0x17) {
+                        throw new IllegalStateException("Item_RepaySet: ArmsBag_setItem(0xe, idx): later");
+                    } else if (val < 0) {
+                        removeItem(type, sub, val < 0 ? -val : val);
+                    }
+                }
+                Bytes.w32(e, 0x580 + 4 * i, sub);
+            }
+            switch (type - 0xd) {
+                case 0:
+                    Bytes.w32(e, 0x580 + 4 * i, val);
+                    if (apply != 0) {
+                        Hero.addCurMoney(Pool.hero, Bytes.s32(e, 0x580 + 4 * i));
+                    }
+                    break;
+                case 1:
+                    Bytes.w32(e, 0x580 + 4 * i, val);
+                    if (apply != 0) {
+                        MonDie.addCurExp(Pool.hero, Bytes.s32(e, 0x580 + 4 * i));
+                    }
+                    break;
+                case 2:
+                    if (apply != 0) {
+                        Bytes.w32(e, 0x580 + 4 * i, val);
+                        Bytes.w16(Pool.hero.m, 0x220, Bytes.u16(Pool.hero.m, 0x220) + val);
+                    }
+                    break;
+                case 3:
+                    if (apply != 0) {
+                        Bytes.w32(e, 0x580 + 4 * i, val);
+                        Bytes.w16(Pool.hero.m, 0x222, Bytes.u16(Pool.hero.m, 0x222) + val);
+                    }
+                    break;
+                case 4:
+                    if (apply != 0) {
+                        throw new IllegalStateException("Item_RepaySet: SUMMON_addExp: later");
+                    }
+                    break;
+                case 5:
+                case 6:
+                    if (apply != 0) {
+                        throw new IllegalStateException("Item_RepaySet: guardian / arms slot count: later");
+                    }
+                    break;
+                default:
+                    break;
+            }
+            e[0x57c + i] = (byte) typeU;
+            if (val < 0) {
+                e[0x57c + i] = -1;
+            }
+            if (item && val >= 0 && apply != 0 && type != 0x17) {
+                if (!setItem(type, sub, (byte) val) && leftSlotCnt() == 0) {
+                    int old = Bytes.s32(e, 0x580 + 4 * i);
+                    int ty = e[0x57c + i];
+                    int k = g[0x5d];
+                    Bytes.w32(e, 0x580 + 4 * i, -1);
+                    e[0x57c + i] = -1;
+                    g[k + 0x64] = (byte) val;
+                    g[0x5d]++;
+                    g[k + 0x5e] = (byte) ty;
+                    g[k + 0x61] = (byte) old;
+                }
+            }
+            if (e[0x57c + i] != -1) {
+                any = true;
+            }
+        }
+        if (apply != 0) {
+            if (any) {
+                if (e[0x206] != 0) {
+                    Event.initSkip();
+                }
+                e[0x58c] = -1;
+                Event.popupReset(1);
+            } else if (g[0x5d] > 0) {
+                throw new IllegalStateException("GMenu_repayErrorPopSet (bag full): later");
+            }
+        }
+    }
+
     public static boolean isCountable(int type) {
         return ((type - 8) & 0xff) < 6;
     }

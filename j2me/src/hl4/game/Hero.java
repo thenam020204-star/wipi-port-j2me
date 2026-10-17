@@ -409,4 +409,10 @@ public final class Hero {
         }
         m[0xd3a] = 0;
     }
+
+    /** HERO_add_curMoney(h, n) @0x76974: +0xa28 += n, capped at 2,000,000,000 */
+    public static void addCurMoney(Char h, int n) {
+        int v = Bytes.s32(h.m, 0xa28) + n;
+        Bytes.w32(h.m, 0xa28, v > 2000000000 ? 2000000000 : v);
+    }
 }

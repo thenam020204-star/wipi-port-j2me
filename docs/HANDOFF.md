@@ -1,6 +1,6 @@
 # HANDOFF: hướng dẫn cho phiên làm việc sau
 
-Cập nhật: 2026-10-16. Nhánh làm việc: `ccr-f53d26cc-ct4qk8` (push bằng `git push -u origin ccr-f53d26cc-ct4qk8`, không tạo PR khi chưa được yêu cầu).
+Cập nhật: 2026-10-17. **Bàn giao giai đoạn mới nhất: `docs/HANDOFF_E6.md`** (trạng thái E6, phần chưa kiểm chứng, bản chạy thử, việc tiếp theo); §4–§5 dưới đây là ghi chép cũ của E5. Nhánh làm việc: `ccr-f53d26cc-ct4qk8` (push bằng `git push -u origin ccr-f53d26cc-ct4qk8`, không tạo PR khi chưa được yêu cầu).
 Đọc trước: `NOTES.md` (quyết định, phạm vi, trạng thái) và `docs/phaseE.md` (kiến trúc + cách kiểm chứng Phase E).
 
 ## 1. Dự án là gì, đang ở đâu
@@ -11,9 +11,9 @@ Không phải launcher, emulator hay transcode máy móc. Emulator ARM (`tools/r
 
 **Tiến độ đo được** (`python3 tools/port_cover.py`):
 
-- Java dẫn chiếu 378 / 2113 hàm trong phạm vi, tức **≈ 18%**.
-- Còn 108 chỗ `later`: nhánh chưa port, chạm tới thì ném `IllegalStateException`.
-- Khoảng 16k dòng Java.
+- Java dẫn chiếu 649 / 2113 hàm trong phạm vi, tức **≈ 30,7%**.
+- Còn 114 chỗ `later` trong mã: nhánh chưa port, chạm tới thì ném `IllegalStateException`.
+- Khoảng 25k dòng Java.
 
 | Mốc | Trạng thái | Bằng chứng |
 |---|---|---|
@@ -21,7 +21,7 @@ Không phải launcher, emulator hay transcode máy móc. Emulator ARM (`tools/r
 | Logo → Load → Title → hộp đồng ý | xong | trace A, hash từng tick khớp |
 | Vào game: scene, map, NPC, cutscene mở đầu (fade, camera, SKIP) | xong | `trace_C`: tick 501–606 khớp hash khung + RNG + back-buffer |
 | Hội thoại cutscene (khung trượt, mặt, tên, chữ chạy) | xong (commit `f2eb960`) | `trace_C`: tick 501–699 khớp |
-| **Phím trong game / event** | **đang làm, chặn kế tiếp** | `trace_D` lệch ở tick 723 vì chưa có phím |
+| Phím trong game / event, điều khiển hero | xong phần trace chạm tới | trace E–K |
 | Quái/chiến đấu/hạt/hồi sinh/game over (E6, một phần: xem `docs/phaseE.md` §3b) | một phần | trace K khớp tới tick 5300, trace L (hero chết, popup game over) tới 5496, trace M (rơi đồ, nhặt đồ, level-up) trọn 9000 |
 | Story-mode UI (E4), menu/túi đồ/shop/save/âm thanh/đóng gói (E8) | chưa | — |
 | Build: JAR preverify, scanner 0 reject | đạt | `python3 tools/j2me_build.py build` |

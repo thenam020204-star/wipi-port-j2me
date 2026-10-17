@@ -115,16 +115,53 @@ public final class Quest {
                 check(type, c, Items.getItemCnt(type, c));
             }
         } else if (st - 5 >= 0 && st - 5 < 2 && q[0x210c] > 0) {
-            if (st == 5) {
-                throw new IllegalStateException("Event_Get_QuestStatusList: reward of a finished quest (Item_RepaySet / Remove_item): later");
-            }
-            for (int k = 0; k < q[0x210c]; k++) {
+            // the record whose step range [id, id + sub] holds the step: a finished quest (5) pays its reward (per-step entry at +0x10d, the
+            // quest items are taken back), then the record leaves the list; the walk goes on with k + 1 (the record shifted into k is skipped)
+            for (int k = 0; (byte) k < q[0x210c]; k = (k + 1) & 0xff) {
                 int b = k * REC;
-                if ((q[b + 1] & 0x80) == 0 && (q[b + 0x118] & 0xff) == step) {
-                    throw new IllegalStateException("Event_Get_QuestStatusList: quest removal (DelObject): later");
+                int sub = q[b + 1];
+                if (sub < 0) {
+                    continue;
                 }
+                int off = step - (q[b + 0x118] & 0xff);
+                if (off < 0 || off > sub) {
+                    continue;
+                }
+                if (e[step + 0x824] == 5) {
+                    Items.repaySet("/ITM/DAT/_ITM_Q_REPAY_" + G.game[1], q[b + off + 0x10d], 1, 1);
+                    int type = q[b + 0x101] & 0xff;
+                    if (type <= 0xc) {
+                        int cnt = type == 0xc ? Items.getItemCnt(0xc, q[b + 0x102] & 0xff) : q[b + off + 0x103];
+                        Items.removeItem((byte) type, q[b + 0x102] & 0xff, cnt);
+                    }
+                }
+                delObject(k, q[0x210c]);
+                q[0x210c]--;
+                q[0x210e] = -1;
+                q[0x210d] = -1;
             }
         }
+    }
+
+    /** DelObject(list, k, count) @0x796d8: records k+1..count-1 move down one place; the freed last record is reset */
+    private static void delObject(int k, int count) {
+        byte[] q = G.questMenu;
+        for (int i = k; i < count - 1; i++) {
+            System.arraycopy(q, (i + 1) * REC, q, i * REC, REC);
+        }
+        int b = (count - 1) * REC;
+        q[b] = -1;
+        q[b + 1] = -1;
+        Bytes.fill(q, b + 3, 0, 0x1b);
+        Bytes.fill(q, b + 0x1e, 0, 0x1b);
+        Bytes.fill(q, b + 0xe6, 0, 0x1b);
+        q[b + 0x101] = -1;
+        q[b + 0x102] = -1;
+        Bytes.fill(q, b + 0x103, 0, 10);
+        Bytes.fill(q, b + 0x10d, 0xff, 10);
+        q[b + 0x119] = 0;
+        q[b + 0x117] = -1;
+        q[b + 0x118] = 0;
     }
 
     /** LoadPartQuestData(first, end) @0x76648: records first..end-1 of the quest list from /NPC/_QUEST_<class/2>_DAT, keyed by their step id (+0x118) */

@@ -359,6 +359,38 @@ public final class Npcs {
         return false;
     }
 
+    /**
+     * Npc_checkColHero(hero) @0xa9900: an NPC whose move rectangle (+0x148..+0x154) the hero now blocks and whose record type (+6) is 1..10 is
+     * moved to the first free neighbouring cell (directions 0..3, 16 px; NPC_evnetMove speed 3).  A failed try leaves +0x148/+0x14c (and the
+     * +0x1b8/+0x1bc copies) at the last tried cell, as in the original.
+     */
+    public static void checkColHero(Char hero) {
+        for (int i = 0; i < G.npcList.count; i++) {
+            Char n = (Char) G.npcList.a[i];
+            byte[] m = n.m;
+            int x0 = Bytes.s32(m, 0x148);
+            int y0 = Bytes.s32(m, 0x14c);
+            if (Coll.isRectMoveableTele(hero, x0, y0, Bytes.s32(m, 0x150), Bytes.s32(m, 0x154), true, true, true)) {
+                continue;
+            }
+            if (((evType(n) & 0xff) - 1 & 0xffffffffL) > 9) {
+                continue;
+            }
+            for (int d = 0; d < 4; d++) {
+                int x = x0 + ((Um.vecX(d) << 24) >> 20);
+                Bytes.w32(m, 0x1b8, x);
+                Bytes.w32(m, 0x148, x);
+                int y = y0 + ((Um.vecY(d) << 24) >> 20);
+                Bytes.w32(m, 0x14c, y);
+                Bytes.w32(m, 0x1bc, y);
+                if (Coll.isRectMoveableTele(hero, x, y, Bytes.s32(m, 0x150), Bytes.s32(m, 0x154), true, true, true)) {
+                    evnetMove(n, (Bytes.s32(m, 0x1b8) << 20) >> 24, (Bytes.s32(m, 0x1bc) << 20) >> 24, 3, m[0x168]);
+                    return;
+                }
+            }
+        }
+    }
+
     // ---- per-tick processing -----------------------------------------------------------------------------------------------------------
 
     private static int evType(Char n) {

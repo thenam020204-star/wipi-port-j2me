@@ -440,6 +440,15 @@ public final class Evt {
                 }
                 return true;
             }
+            case 0x1c: {
+                // the hero is put on a cell: x / y = cell * 16 + 8, facing b[2]; NPCs standing there step aside (Npc_checkColHero)
+                t.get(b, 3);
+                Bytes.w32(hero.m, 8, b[0] * 0x10 + 8);
+                Bytes.w32(hero.m, 0xc, b[1] * 0x10 + 8);
+                hero.m[0x168] = b[2];
+                Npcs.checkColHero((Char) hero);
+                return true;
+            }
             case 0x32: {
                 if (e[0x206] != 0) {
                     Event.initSkip();
