@@ -228,6 +228,8 @@ details summary { cursor: pointer; }
   var filter = { q: '', type: '', folder: '' };
   var prepared = null;       // { id, buffer, kind, pcm?: {left,right,rate}, wav?: Uint8Array }
   var src = null, startedAt = 0, offset = 0, playing = false, raf = 0, preparing = false;
+  var loading = null;        // the item playIndex is preparing to play (pause clears it, so it does not start)
+  var anchor = 0, lastMedia = '', loopTimer = 0;
   var durations = {};
   var webSeq = 0, pendingExport = false;
   var lastVoices = null, learnFile = null;
@@ -315,6 +317,7 @@ details summary { cursor: pointer; }
     if (type === 'state') applyNative(data);
     else if (type === 'scan') status('scan-status', 'Đang quét… đã xem ' + data.seen + ' file, thấy ' + data.found + ' file MMF/MIDI');
     else if (type === 'error') status('scan-status', String(data), true);
+    else if (type === 'media') mediaCmd(data);
   };
   window.onBack = function () {
     if (currentTab !== 'now') { showTab('now'); return true; }
@@ -413,11 +416,15 @@ details summary { cursor: pointer; }
     saveQueue();
     var it = current();
     stopSource(); playing = false; offset = at || 0;
+    loading = it;
     renderNow(); renderQueue();
     prepare(it).then(function (p) {
       if (current() !== it) return;
+      if (loading !== it) { renderNow(); return; }        // paused while rendering
+      loading = null;
       startAt(offset);
     }).catch(function (e) {
+      if (loading === it) loading = null;
       status('np-status', 'Không phát được ' + it.name + ': ' + e.message, true);
       renderNow();
     });
@@ -435,13 +442,14 @@ details summary { cursor: pointer; }
     at = Math.min(Math.max(0, at), prepared.buffer.duration);
     src.start(0, at);
     startedAt = ac.currentTime - at;
-    playing = true;
+    playing = true; loading = null; anchor++;
     src.onended = function () { playing = false; offset = 0; next(true); };
     renderNow();
     cancelAnimationFrame(raf); tick();
   }
 
   function pause() {
+    if (loading) { loading = null; renderNow(); return; }   // stops a song that is still being rendered from starting
     if (!playing || !src) return;
     offset = (ctx.currentTime - startedAt) % src.buffer.duration;
     stopSource(); playing = false;
@@ -475,6 +483,46 @@ details summary { cursor: pointer; }
   function saveQueue() {
     if (!NATIVE) return;
     store('queue', { ids: queue.filter(function (id) { return byId[id] && byId[id].uri; }), qi: qi });
+  }
+
+  function togglePlay() {
+    if (qi < 0) return;
+    audio();
+    if (playing || loading) pause(); else startAt(offset);
+  }
+  function seekSec(t) {
+    if (playing) startAt(t); else { offset = t; tick(); pushMedia(); }
+  }
+
+  // notification / lock screen / headset controls (APK): state out to PlayerService, buttons back in
+  function pushMedia() {
+    if (!NATIVE || !window.Android.mediaState) return;
+    var it = current();
+    var dur = it ? (prepared && prepared.id === it.id ? prepared.buffer.duration : durations[it.id] || 0) : 0;
+    var pos = playing ? ctx.currentTime - startedAt : offset;
+    if (playing && dur > 0) pos = pos % dur;
+    var busy = !!loading && !playing;
+    // the system moves the position on by itself while playing: sent again only when something changes
+    var key = [it ? it.id : '', playing, busy, Math.round(dur * 1000), qi, queue.length, playing ? anchor : Math.round(pos * 1000)].join('|');
+    clearTimeout(loopTimer);
+    if (playing && repeat === 'one' && dur > 0) loopTimer = setTimeout(function () { anchor++; pushMedia(); }, (dur - pos) * 1000 + 50);
+    if (key === lastMedia) return;
+    lastMedia = key;
+    window.Android.mediaState(JSON.stringify(it ? {
+      has: true, title: it.name, sub: it.folder, playing: playing, busy: busy,
+      pos: Math.round(Math.max(0, pos) * 1000), dur: Math.round(dur * 1000), idx: qi, count: queue.length
+    } : { has: false }));
+  }
+  function mediaCmd(m) {
+    if (m.cmd === 'play') { if (!playing && !loading) togglePlay(); }
+    else if (m.cmd === 'pause') { if (playing || loading) pause(); }
+    else if (m.cmd === 'toggle') togglePlay();
+    else if (m.cmd === 'next') next(false);
+    else if (m.cmd === 'prev') prev();
+    else if (m.cmd === 'seek') {
+      var it = current();
+      if (it && prepared && prepared.id === it.id) seekSec(Math.max(0, Math.min(prepared.buffer.duration, m.ms / 1000)));
+    }
   }
 
   function tick() {
@@ -591,7 +639,7 @@ details summary { cursor: pointer; }
 
   function renderNow() {
     var it = current();
-    $('np-label').textContent = preparing ? 'Đang dựng' : (playing ? 'Đang phát' : 'Đang chọn');
+    $('np-label').textContent = preparing || loading ? 'Đang dựng' : (playing ? 'Đang phát' : 'Đang chọn');
     $('np-name').textContent = it ? it.name : 'Chưa có bài nào';
     $('np-where').textContent = it ? it.folder : (library.length ? 'Chọn một bài trong tab Thư viện.' : 'Thêm thư mục trong tab Thư mục, hoặc bấm Nghe thử.');
     $('np-kind').textContent = it ? (prepared && prepared.id === it.id ? prepared.kind : it.type.toUpperCase()) : '';
@@ -607,6 +655,7 @@ details summary { cursor: pointer; }
     $('btn-repeat').setAttribute('aria-label', 'Lặp lại: ' + (repeat === 'off' ? 'tắt' : repeat === 'all' ? 'cả hàng chờ' : 'một bài'));
     $('btn-shuffle').classList.toggle('on', shuffle);
     $('btn-shuffle').setAttribute('aria-label', 'Trộn bài: ' + (shuffle ? 'bật' : 'tắt'));
+    pushMedia();
   }
 
   function renderVoices() {
@@ -696,7 +745,7 @@ details summary { cursor: pointer; }
       if (durations[id]) { total += durations[id]; known++; }
       l.appendChild(itemRow(it, i === qi, function () { playIndex(i, 0); }, SVG.x, 'Bỏ khỏi hàng chờ', function () {
         queue.splice(i, 1);
-        if (i < qi) qi--; else if (i === qi) { stopSource(); playing = false; offset = 0; prepared = null; if (qi >= queue.length) qi = queue.length - 1; }
+        if (i < qi) qi--; else if (i === qi) { stopSource(); playing = false; loading = null; offset = 0; prepared = null; if (qi >= queue.length) qi = queue.length - 1; }
         saveQueue(); renderQueue(); renderNow(); tick();
       }));
     });
@@ -781,11 +830,7 @@ details summary { cursor: pointer; }
   function renderAll() { renderNow(); renderQueue(); renderLib(); renderDirs(); tick(); }
 
   // ---------------------------------------------------------------- controls
-  $('btn-play').addEventListener('click', function () {
-    if (qi < 0) return;
-    audio();
-    if (playing) pause(); else startAt(offset);
-  });
+  $('btn-play').addEventListener('click', togglePlay);
   $('btn-next').addEventListener('click', function () { next(false); });
   $('btn-prev').addEventListener('click', prev);
   $('btn-repeat').addEventListener('click', function () {
@@ -813,7 +858,7 @@ details summary { cursor: pointer; }
       if (prepared && prepared.id === it.id) { var wasPlaying = playing; stopSource(); playing = false; prepared = null; if (wasPlaying) playIndex(qi, 0); else prepare(it).then(renderNow); }
     }).catch(function (e) { status('learn-status', 'Không học được: ' + e.message, true); });
   });
-  $('btn-clearq').addEventListener('click', function () { stopSource(); playing = false; offset = 0; queue = []; qi = -1; prepared = null; saveQueue(); renderAll(); });
+  $('btn-clearq').addEventListener('click', function () { stopSource(); playing = false; loading = null; offset = 0; queue = []; qi = -1; prepared = null; saveQueue(); renderAll(); });
   $('btn-playall').addEventListener('click', function () { var l = filtered(); if (l.length) { playList(l.map(function (x) { return x.id; }), shuffle ? Math.floor(Math.random() * l.length) : 0); showTab('now'); } });
   $('q').addEventListener('input', function () { filter.q = this.value; renderLib(); });
   Array.prototype.forEach.call(document.querySelectorAll('#type-chips [data-type]'), function (c) {
@@ -825,7 +870,7 @@ details summary { cursor: pointer; }
     var it = current(); if (!it || !prepared || prepared.id !== it.id) return;
     var r = $('bar').getBoundingClientRect(), d = prepared.buffer.duration;
     var t = Math.max(0, Math.min(1, (clientX - r.left) / r.width)) * d;
-    if (playing) startAt(t); else { offset = t; tick(); }
+    seekSec(t);
   }
   $('bar').addEventListener('click', function (e) { seekTo(e.clientX); });
   $('bar').addEventListener('keydown', function (e) {
@@ -834,7 +879,7 @@ details summary { cursor: pointer; }
     e.preventDefault();
     var d = prepared.buffer.duration, p = playing ? (ctx.currentTime - startedAt) % d : offset;
     p = Math.max(0, Math.min(d, p + (e.key === 'ArrowRight' ? 5 : -5)));
-    if (playing) startAt(p); else { offset = p; tick(); }
+    seekSec(p);
   });
 
   // a short C-major phrase on a few General MIDI programs, to hear the soundfont without a file

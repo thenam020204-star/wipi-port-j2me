@@ -7,7 +7,7 @@ set -e
 H=$(cd "$(dirname "$0")" && pwd); M=$H/..; R=$(cd "$M/../.." && pwd)
 SF2=${1:?Nokia.sf2}; OUT=${2:-$R/work/apk/MayNgheMMF.apk}
 SDK=$R/work/tools/android-sdk; BT=$SDK/build-tools/34.0.0; AJ=$SDK/platforms/android-34/android.jar
-W=$R/work/apk/build; rm -rf "$W"; mkdir -p "$W/assets" "$W/flat" "$W/cls" "$W/dex"
+W=$R/work/apk/build; rm -rf "$W"; mkdir -p "$W/assets" "$W/flat" "$W/cls" "$W/dex" "$W/gen"
 export JAVA_TOOL_OPTIONS=
 python3 - "$M" "$W/assets" "$SF2" <<'PY'
 import base64, re, sys
@@ -24,8 +24,9 @@ open(out + '/index.html', 'w').write('<!doctype html>\n<html lang="vi">\n<head>\
 open(out + '/sf2data.js', 'w').write('window.NOKIA_SF2_B64="' + base64.b64encode(open(sf2, 'rb').read()).decode() + '";\n')
 PY
 $BT/aapt2 compile --dir "$H/res" -o "$W/flat/"
-$BT/aapt2 link -I $AJ --manifest "$H/AndroidManifest.xml" -A "$W/assets" --min-sdk-version 21 --target-sdk-version 34 -o "$W/base.apk" "$W"/flat/*.flat
-javac -encoding UTF-8 -nowarn --release 8 -classpath $AJ -d "$W/cls" "$H/src/vn/mmfplayer/MainActivity.java"
+$BT/aapt2 link -I $AJ --manifest "$H/AndroidManifest.xml" -A "$W/assets" --min-sdk-version 21 --target-sdk-version 34 \
+    --java "$W/gen" -o "$W/base.apk" "$W"/flat/*.flat
+javac -encoding UTF-8 -nowarn --release 8 -classpath $AJ -d "$W/cls" "$H"/src/vn/mmfplayer/*.java "$W"/gen/vn/mmfplayer/R.java
 $BT/d8 --lib $AJ --min-api 21 --output "$W/dex" "$W"/cls/vn/mmfplayer/*.class
 cp "$W/base.apk" "$W/unsigned.apk"; (cd "$W/dex" && zip -q -j ../unsigned.apk classes.dex)
 $BT/zipalign -f -p 4 "$W/unsigned.apk" "$W/aligned.apk"

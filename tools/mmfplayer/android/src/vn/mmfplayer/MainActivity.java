@@ -30,7 +30,9 @@ import java.util.Locale;
 /**
  * The player page (assets/index.html) in a WebView. Native parts: the file chooser behind &lt;input type="file"&gt; and the
  * "Android" bridge (source folders through the Storage Access Framework, recursive scan for MMF / MIDI files, reading a file,
- * writing an exported WAV into a chosen folder). Folders, the scanned library and the export folder are kept in SharedPreferences.
+ * writing an exported WAV into a chosen folder, the playback state for the notification controls of PlayerService). Folders, the
+ * scanned library and the export folder are kept in SharedPreferences. Back leaves the app in the background (like a music
+ * player) instead of closing it, since closing destroys the WebView that plays the audio.
  *
  * No anonymous or inner classes: javac 21 --release 8 writes a MethodParameters entry without a name for an inner class's
  * implicit outer parameter, which d8 8.2 cannot read. Static nested classes with an explicit owner and lambdas are used instead.
@@ -39,6 +41,10 @@ public class MainActivity extends Activity {
     static final int PICK_FILE = 1;
     static final int PICK_FOLDER = 2;
     static final int PICK_EXPORT = 3;
+    static final int ASK_NOTIFY = 4;
+
+    /** the live activity, for PlayerService's buttons (main thread only) */
+    static MainActivity instance;
 
     WebView web;
     ValueCallback<Uri[]> pending;
@@ -46,10 +52,12 @@ public class MainActivity extends Activity {
     volatile boolean scanning;
     final HashMap<String, OutputStream> exports = new HashMap<String, OutputStream>();
     int exportSeq;
+    boolean resumed, askedNotify;
 
     @Override
     protected void onCreate(Bundle state) {
         super.onCreate(state);
+        instance = this;
         prefs = getSharedPreferences("library", MODE_PRIVATE);
         web = new WebView(this);
         WebSettings s = web.getSettings();
@@ -60,6 +68,9 @@ public class MainActivity extends Activity {
         web.setWebViewClient(new WebViewClient());
         web.setWebChromeClient(new Chrome(this));
         web.addJavascriptInterface(new Bridge(this), "Android");
+        if (android.os.Build.VERSION.SDK_INT >= 26) {
+            web.setRendererPriorityPolicy(WebView.RENDERER_PRIORITY_IMPORTANT, false);   // keeps the audio going in the background
+        }
         setContentView(web);
         if (state == null) {
             web.loadUrl("file:///android_asset/index.html");
@@ -336,13 +347,33 @@ public class MainActivity extends Activity {
     public void onBackPressed() {
         web.evaluateJavascript("window.onBack?window.onBack():false", v -> {
             if (!"true".equals(v)) {
-                finish();
+                moveTaskToBack(true);
             }
         });
     }
 
+    // the WebView is never paused (no web.onPause / pauseTimers): it plays the music in the background
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        resumed = true;
+    }
+
+    @Override
+    protected void onPause() {
+        resumed = false;
+        super.onPause();
+    }
+
     @Override
     protected void onDestroy() {
+        if (instance == this) {
+            instance = null;
+        }
+        if (PlayerService.instance != null) {
+            PlayerService.instance.shutdown();      // the audio dies with the WebView: no notification with dead buttons
+        }
         web.destroy();
         super.onDestroy();
     }
@@ -398,6 +429,12 @@ public class MainActivity extends Activity {
                 // ignore
             }
             return a.stateJson();
+        }
+
+        /** the player's state for the notification / media session, see PlayerService.apply */
+        @JavascriptInterface
+        public void mediaState(String json) {
+            a.runOnUiThread(() -> PlayerService.push(a, json));
         }
 
         @JavascriptInterface

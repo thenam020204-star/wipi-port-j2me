@@ -19,6 +19,14 @@ Trang web chọn file SMAF (.mmf), chuyển sang MIDI và phát bằng soundfont
 Bản 1.1: 4 tab (Đang phát, Hàng chờ, Thư viện, Thư mục). Thư mục nguồn chọn qua Storage Access Framework, được nhớ và quét lại (cả thư mục con) mỗi lần mở; file `.mid/.midi/.kar/.mmf` theo đuôi, file không đuôi theo 4 byte đầu (`MMMD` / `MThd`). Xuất WAV (16-bit stereo 44,1 kHz cho MIDI; WAV gốc cho MMF chỉ có PCM) vào thư mục xuất chọn một lần. Lặp (tắt / cả hàng chờ / một bài), trộn bài, hàng chờ lưu lại giữa các lần mở.
 Đã chạy thử trong Chromium với cầu nối `window.Android` giả lập (quét, phát MMF/MIDI, chuyển bài, lọc, xuất WAV: header và độ dài đúng). Chưa chạy trên máy Android thật.
 
+Bản 1.3: điều khiển ngoài app như app nghe nhạc thường (`PlayerService.java`): thông báo kiểu media trên thanh trạng thái / màn hình khoá / bảng media Android 13+
+(bài trước, phát/dừng, bài sau, đóng; thanh tua), MediaSession cho nút tai nghe / Bluetooth, audio focus (app khác phát thì dừng, cuộc gọi xong thì phát tiếp),
+rút tai nghe thì dừng. Nút Back đưa app xuống nền thay vì đóng (đóng app = huỷ WebView = tắt nhạc). Service chạy foreground (loại mediaPlayback) từ lúc bắt đầu phát
+khi app đang mở, giữ partial wake lock khi đang phát hoặc đang dựng bài sau (bài được dựng bằng JavaScript trước khi phát; tắt màn hình thì CPU có thể ngủ giữa chừng).
+Trang gửi trạng thái qua `Android.mediaState(json)` chỉ khi có thay đổi (bài, phát/dừng, tua); nút bấm quay về trang qua `onNative('media', {cmd, ms})`.
+Đã chạy thử trong Chromium với cầu nối giả lập (phát, dừng, tua khi phát và khi dừng, bài sau/trước, dừng khi đang dựng, xoá hàng chờ): trạng thái gửi đúng, không lỗi.
+Phần native mới chỉ build được (aapt2/javac/d8/apksigner, manifest kiểm bằng `aapt2 dump`), **chưa chạy trên máy Android thật**: chưa xác minh nhạc nền trong WebView khi tắt màn hình, tự chuyển bài khi màn hình tắt, nút tai nghe.
+
 `android/`: vỏ WebView (một Activity, chỉ có phần chọn file là code native) chạy đúng trang trên, soundfont đóng trong APK (`assets/sf2data.js`), không cần mạng (không xin quyền INTERNET; chữ dùng font hệ thống).
 Build: `tools/mmfplayer/android/build_apk.sh <Nokia.sf2>` → `work/apk/MayNgheMMF.apk` (ký bằng khoá tự tạo `work/apk/mmf.keystore`, không commit; minSdk 21 = Android 5.0).
 Trang trong APK đã chạy thử qua `file://` trên Chromium (chọn file, phát MIDI/WAV, nghe thử): không lỗi. Chưa chạy trên máy Android thật.
