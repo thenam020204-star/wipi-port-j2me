@@ -50,7 +50,7 @@ Không có giai đoạn này thì không nên giao việc cho agent: thiếu tes
 | T0.1 | **xong** | `tools/e_calls.py`, `hl4.test.CallRec` + `tools/callrec_inst.py` + `tools/jcr.sh`, `tools/callcmp.py` (`--only`, `CALLDUMP`, `CALLER`, probe + `!poke`). Trace M 4800–5400: 27 hàm, 0 lệch; tìm ra và sửa 3 chỗ thiếu `CHAR_getHeroMoveRect` (MONSTER_checkWithHeroRect, MONSTER_isHeroNear, MONSTER_isRectMoveable). Thử làm sai 1 hàm: tool chỉ đúng lời gọi đó |
 | T0.2 | **xong** | `tools/c2j.py`, `tools/c2j_eval.py`, `docs/T02_c2j.md`: 13/20 nháp đạt 0 lệch không cần sửa (65%), 6 đạt sau khi sửa dòng C2J-CHECK, 1 phải viết tay |
 | T0.3 | **xong** | `tools/e_snap.py`; trace M từ snapshot 4500 giống hệt (4500 dòng); mọi công cụ `e_*` nhận `SNAPLOAD` |
-| T0.4 | đang làm | `tools/e_scan.py` (quét map: hàm module nào chạy ở map nào) → kịch bản module trong `docs/golden_scripts/` |
+| T0.4 | **đang dở** (dừng 2026-10-17) | `tools/e_scan.py`; kịch bản R (menu), S (shop), V (hồi sinh); chi tiết + lệnh chạy tiếp: `docs/HANDOFF_T0.md` §5 |
 | T0.5 | **xong** | `docs/AGENT_BRIEF.md`; agent Sonnet thử module D1 Item/ItemBag/ArmsBag: 37 hàm, 0 lệch, 33 phút, đã ghép (`docs/agent_reports/`) |
 | T0.6 | **xong** | phím 1/2/3 ở menu chính = class 1/2/3; trace gốc O/P/Q (fixture `t:N` = Nebed đã mua) |
 | T0.7 | **xong (báo cáo)** | `docs/T07_ktf_ui.md`, `tools/ktf_code.py`, `tools/ktf_match.py`; còn mở: nhãn phím mềm, menu KTF, bộ ghép tự động mới 228/1873 hàm |

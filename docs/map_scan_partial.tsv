@@ -1,0 +1,69 @@
+0	NPC_create=2 MONSTER_Clone=7	MONSTER_Clone:7 NPC_create:2	
+0	NPC_create=2 MONSTER_Clone=7	MONSTER_Clone:7 NPC_create:2	
+1	NPC_create=9 MONSTER_Clone=14	MONSTER_Clone:14 NPC_create:9	
+2	NPC_create=2	NPC_create:2	
+3	NPC_create=2 MONSTER_Clone=7	MONSTER_Clone:7 NPC_create:2	
+4	NPC_create=3	NPC_create:3	
+5	NPC_create=3	NPC_create:3	
+6	NPC_create=1 MONSTER_Clone=8	MONSTER_Clone:8 NPC_create:1	
+7	NPC_create=1 MONSTER_Clone=7	MONSTER_Clone:7 NPC_create:1	
+8	NPC_create=1 MONSTER_Clone=5	MONSTER_Clone:5 NPC_create:1	
+9	NPC_create=6 Map_Set_Shake=2	NPC_create:6 Map_Set_Shake:2	
+10	NPC_create=1	NPC_create:1	
+10	NPC_create=1	NPC_create:1	
+11	NPC_create=3 MONSTER_Clone=3	MONSTER_Clone:3 NPC_create:3	
+12	NPC_create=5 MONSTER_Clone=10 MONSTER_AI=1236 Map_Set_Shake=3	MONSTER_AI:662 MONSTER_AI_Action:574 MONSTER_Clone:10 NPC_create:5 Map_Set_Shake:3	
+13	NPC_create=1	NPC_create:1	
+14	NPC_create=1 MONSTER_Clone=9	MONSTER_Clone:9 NPC_create:1	
+15	NPC_create=6 MONSTER_Clone=3	NPC_create:6 MONSTER_Clone:3	
+16	NPC_create=4 MONSTER_Clone=5	MONSTER_Clone:5 NPC_create:4	
+17	NPC_create=2 MONSTER_Clone=5	MONSTER_Clone:5 NPC_create:2	
+18	MONSTER_Clone=5	MONSTER_Clone:5	
+19			
+20	MONSTER_Clone=8 MONSTER_AI=302 Map_Set_Shake=6	MONSTER_AI:151 MONSTER_AI_Action:151 MONSTER_Clone:8 Map_Set_Shake:6	
+21	MONSTER_Clone=5	MONSTER_Clone:5	
+22	NPC_create=2	NPC_create:2	
+23	NPC_create=6 MONSTER_Clone=8 MONSTER_AI=88	MONSTER_AI:79 MONSTER_AI_Action:9 MONSTER_Clone:7 NPC_create:6 MONSTER_CloneEtc:1	
+24	NPC_create=2	NPC_create:2	
+25	NPC_create=4 MONSTER_Clone=11 MONSTER_AI=616	MONSTER_AI:616 MONSTER_Clone:11 NPC_create:4	
+33	NPC_create=7	NPC_create:7	
+34	NPC_create=1	NPC_create:1	
+35	NPC_create=2 MONSTER_Clone=18 MONSTER_AI=2190	MONSTER_AI:1095 MONSTER_AI_Action:1095 MONSTER_Clone:18 NPC_create:2	
+36	NPC_create=3 MONSTER_Clone=11 MONSTER_AI=998 Map_Set_Shake=6	MONSTER_AI:499 MONSTER_AI_Action:499 MONSTER_Clone:11 Map_Set_Shake:6 NPC_create:3	
+37	NPC_create=1 MONSTER_Clone=15	MONSTER_Clone:15 NPC_create:1	
+38	NPC_create=3 MONSTER_Clone=3	MONSTER_Clone:3 NPC_create:3	
+39	NPC_create=3	NPC_create:3	
+40	NPC_create=3 MONSTER_Clone=3	MONSTER_Clone:3 NPC_create:3	
+41	NPC_create=1 MONSTER_Clone=3	MONSTER_Clone:3 NPC_create:1	
+42	NPC_create=1	NPC_create:1	
+43	NPC_create=1	NPC_create:1	
+44	NPC_create=6	NPC_create:6	
+45	NPC_create=3 MONSTER_Clone=10	MONSTER_Clone:10 NPC_create:3	
+46	NPC_create=8 MONSTER_Clone=3 MONSTER_AI=147 Map_Set_Shake=2	MONSTER_AI:91 MONSTER_AI_Action:56 NPC_create:8 MONSTER_Clone:3 Map_Set_Shake:2	
+47	NPC_create=1 MONSTER_Clone=3	MONSTER_Clone:3 NPC_create:1	
+48	NPC_create=1 Map_Set_Shake=1	Map_Set_Shake:1 NPC_create:1	
+49	NPC_create=12 MONSTER_Clone=14	MONSTER_Clone:14 NPC_create:12	
+50	NPC_create=3 MONSTER_Clone=18 MONSTER_AI=2992	MONSTER_AI:1496 MONSTER_AI_Action:1496 MONSTER_Clone:18 NPC_create:3	
+51	NPC_create=2 MONSTER_Clone=10 MONSTER_AI=1592 Map_Set_Shake=8	MONSTER_AI:796 MONSTER_AI_Action:796 MONSTER_Clone:10 Map_Set_Shake:8 NPC_create:2	
+51	NPC_create=2 MONSTER_Clone=10 MONSTER_AI=882 Map_Set_Shake=5	MONSTER_AI:441 MONSTER_AI_Action:441 MONSTER_Clone:10 Map_Set_Shake:5 NPC_create:2	
+52	NPC_create=1	NPC_create:1	
+53	NPC_create=4 MONSTER_Clone=10 MONSTER_AI=1342 Map_Set_Shake=3	MONSTER_AI:671 MONSTER_AI_Action:671 MONSTER_Clone:10 NPC_create:4 Map_Set_Shake:3	
+54	NPC_create=3 MONSTER_Clone=17 MONSTER_AI=880	MONSTER_AI:440 MONSTER_AI_Action:440 MONSTER_Clone:17 NPC_create:3	
+65	NPC_create=1	NPC_create:1	
+66	NPC_create=2 MONSTER_Clone=11 MONSTER_AI=1122 Map_Set_Shake=4	MONSTER_AI:561 MONSTER_AI_Action:561 MONSTER_Clone:11 Map_Set_Shake:4 NPC_create:2	
+67	NPC_create=2 MONSTER_Clone=14 MONSTER_AI=1360 Map_Set_Shake=7	MONSTER_AI:680 MONSTER_AI_Action:680 MONSTER_Clone:14 Map_Set_Shake:7 NPC_create:2	
+68	NPC_create=2 MONSTER_Clone=7 MONSTER_AI=1068 Map_Set_Shake=2	MONSTER_AI:534 MONSTER_AI_Action:534 MONSTER_Clone:7 NPC_create:2 Map_Set_Shake:2	
+69	NPC_create=9 MONSTER_Clone=3	NPC_create:9 MONSTER_Clone:3	
+70	NPC_create=3 MONSTER_Clone=12 MONSTER_AI=1092 Map_Set_Shake=4	MONSTER_AI:546 MONSTER_AI_Action:546 MONSTER_Clone:12 Map_Set_Shake:4 NPC_create:3	
+71	NPC_create=2 MONSTER_Clone=9 MONSTER_AI=744	MONSTER_AI:372 MONSTER_AI_Action:372 MONSTER_Clone:9 NPC_create:2	
+72	NPC_create=2 MONSTER_Clone=9 MONSTER_AI=1428 Map_Set_Shake=3	MONSTER_AI:714 MONSTER_AI_Action:714 MONSTER_Clone:9 Map_Set_Shake:3 NPC_create:2	
+73	NPC_create=2 MONSTER_Clone=10 MONSTER_AI=560 Map_Set_Shake=1	MONSTER_AI:280 MONSTER_AI_Action:280 MONSTER_Clone:10 NPC_create:2 Map_Set_Shake:1	
+74	NPC_create=3	NPC_create:3	
+75	NPC_create=3 MONSTER_Clone=11 MONSTER_AI=528	MONSTER_AI:264 MONSTER_AI_Action:264 MONSTER_Clone:11 NPC_create:3	
+76	NPC_create=2 MONSTER_Clone=9 MONSTER_AI=1158 Map_Set_Shake=3	MONSTER_AI:579 MONSTER_AI_Action:579 MONSTER_Clone:9 Map_Set_Shake:3 NPC_create:2	
+77	NPC_create=4 MONSTER_Clone=8 MONSTER_AI=1112 Map_Set_Shake=10	MONSTER_AI:556 MONSTER_AI_Action:556 Map_Set_Shake:10 MONSTER_Clone:8 NPC_create:4	
+78	NPC_create=2 MONSTER_Clone=8 MONSTER_AI=1234 Map_Set_Shake=6	MONSTER_AI:617 MONSTER_AI_Action:617 MONSTER_Clone:8 Map_Set_Shake:6 NPC_create:2	
+79	NPC_create=3 MONSTER_Clone=11 MONSTER_AI=1652 Map_Set_Shake=3	MONSTER_AI:826 MONSTER_AI_Action:826 MONSTER_Clone:11 NPC_create:3 Map_Set_Shake:3	
+80	NPC_create=2 MONSTER_Clone=14 MONSTER_AI=1342 Map_Set_Shake=6	MONSTER_AI:671 MONSTER_AI_Action:671 MONSTER_Clone:14 Map_Set_Shake:6 NPC_create:2	
+81	NPC_create=1 MONSTER_Clone=7 MONSTER_AI=1008 Map_Set_Shake=5	MONSTER_AI:504 MONSTER_AI_Action:504 MONSTER_Clone:7 Map_Set_Shake:5 NPC_create:1	
+82	NPC_create=2 MONSTER_Clone=11 MONSTER_AI=352	MONSTER_AI:176 MONSTER_AI_Action:176 MONSTER_Clone:11 NPC_create:2	
