@@ -253,6 +253,19 @@ public final class Touch {
         return curAnim;
     }
 
+    /** Touch_drawRoundRect(x, y, w, h) @0x37e00: the outline of a rounded rectangle (corner pixels left out, w x h) in the foreground colour, on the screen */
+    public static void drawRoundRect(int x, int y, int w, int h) {
+        Frame f = Gfx.scr;
+        Gfx.drawLine(f, x + 2, y, x + w - 3, y);
+        Gfx.drawLine(f, x + 2, y + h - 1, x + w - 3, y + h - 1);
+        Gfx.drawLine(f, x, y + 2, x, y + h - 3);
+        Gfx.drawLine(f, x + w - 1, y + 2, x + w - 1, y + h - 3);
+        Gfx.drawLine(f, x + 1, y + 1, x + 1, y + 1);
+        Gfx.drawLine(f, x + 1, y + h - 2, x + 1, y + h - 2);
+        Gfx.drawLine(f, x + w - 2, y + 1, x + w - 2, y + 1);
+        Gfx.drawLine(f, x + w - 2, y + h - 2, x + w - 2, y + h - 2);
+    }
+
     /** Touch_draw @0x467c4: the skin sprite of the current state, drawn around the screen centre. */
     public static boolean draw(Frame f) {
         if (curFile == -1) {

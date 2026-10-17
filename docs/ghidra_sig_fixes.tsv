@@ -16,3 +16,4 @@ LinkedList_isEmpty	/1+r	D1 agent: reads r0 (the list) via LinkedList_getSize, re
 MP_getNew	/2	D1 agent: tail-call thunk of MP_search(type, out position); no decompilation
 MAPOBJ_set	/2	D1 agent: OBJ_set(o, pos) reads r1 = the position MP_Initialize passes
 DropItem_set	/2	D1 agent: OBJ_set(o, pos) reads r1 = the position MP_Initialize passes
+PopupBox_outline	/6+r	disassembly: loads 6 argument slots (r0-r3 + 2 stack) and forwards to PopupBox_window(..., 0, 0); returns its value (D1 agent)

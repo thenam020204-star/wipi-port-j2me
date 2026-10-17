@@ -762,7 +762,10 @@ public final class Event {
             return;
         }
         if (Popup.evtBox[0x2c] != 0) {
-            throw new IllegalStateException("PopopBox_key (open box): later");
+            Popup.key(Popup.evtBox, key);                  // PopopBox_key(_evtBox, key); an open box swallows the key
+            if (Popup.evtBox[0x2c] != 0) {
+                return;
+            }
         }
         int st = Bytes.s32(e, 0x200);
         if (key == 0x23) {
@@ -829,8 +832,10 @@ public final class Event {
         if (e[0x206] == 0) {
             e[0x207] = 0;
         }
-        if (Popup.evtBox[0x2c] != 0) {
-            throw new IllegalStateException("EVENT_EndProcess: evtBox focus (Focus_endProcess / IT_AlertConfirm): later");
+        if (Popup.evtBox[0x2c] != 0 && Focus.endProcess(Popup.evtBox, 0x18)) {
+            It.alertConfirm(Popup.evtBox[0x18]);
+            Popup.end(Popup.evtBox);
+            e[0x1ff] = 0;
         }
     }
 }

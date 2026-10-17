@@ -110,6 +110,7 @@ public final class MainGameFrame implements FrameHandler {
 
     /** MainGameFrame_drawGameOver @0x9c1d4 (PopupBox_window(9, ..) only computes a height: nothing is drawn but the caption) */
     private static void drawGameOver() {
+        Popup.window(9, 0, Glob.gameW / 2 - 0x48, (Glob.gameH - 0x94) >> 1, 0x90, 0x94, 0);       // the result is unused
         hl4.gfx.Hf.setColor(0xff, 0xff, 0xff);
         hl4.gfx.Hf.drawText(Gfx.scr, Glob.gameW / 2 - 0x1e, Glob.gameH / 2 + 10 - (G.game[0x5a] << 3), Strs.GAME_OVER, 0);
     }
