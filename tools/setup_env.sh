@@ -33,6 +33,9 @@ ln -sfn "$PWD/work/orig/android/영웅서기4.apk!/res/raw/jarfile.mp3!/res" wor
 B="work/orig/android/영웅서기4.apk!/res/raw/jarfile.mp3!/binary.mod"
 test -f "$B" && sha256sum "$B"
 python3 tools/j2me_build.py build | tail -2
+# golden vectors / traces of the original are committed in golden/ (hashes, RNG counts, struct dumps of game state: no original assets);
+# copy them to work/golden so they need not be regenerated (files already in work/golden are kept)
+mkdir -p work/golden && cp -rn golden/. work/golden/
 # optional: Ghidra pseudo-C for tools/cfunc.py (reading aid only; ~450 MB download, ~10 min)
 if [ "$3" = "--ghidra" ] && [ ! -f work/ghidra/decomp_and2011.c ]; then
     mkdir -p work/ghidra/proj

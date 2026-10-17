@@ -43,7 +43,7 @@ Các module lớn còn thiếu: HERO 29/156, MONSTER 20/148, CHAR 30/113, GMenu 
    - với `--ghidra`: tải Ghidra 11.3.2 rồi sinh `work/ghidra/decomp_and2011.c` cho `tools/cfunc.py` (chỉ để đọc, mất khoảng 10 phút)
 3. Python và JVM cần `LC_ALL=C.UTF-8` (đường dẫn có tiếng Hàn). Binary nằm ở
    `"work/orig/android/영웅서기4.apk!/res/raw/jarfile.mp3!/binary.mod"`. Địa chỉ Ghidra = địa chỉ thật + 0x10000.
-4. Sinh lại golden trace (§4); mỗi trace chạy vài phút, nên chạy nền.
+4. Golden vector và golden trace của bản gốc **đã có trong repo** (`golden/`, chỉ chứa hash, số lần gọi RNG, dump trạng thái game; không chứa tài nguyên gốc). `setup_env.sh` tự chép sang `work/golden`. Chỉ phải sinh trace **mới** (§4); trace mới sinh xong thì chép vào `golden/` và commit.
 
 ## 3. Công cụ hằng dùng
 

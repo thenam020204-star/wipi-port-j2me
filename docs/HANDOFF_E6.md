@@ -45,7 +45,7 @@ Việc đầu tiên của phiên sau là kiểm chứng phần này (§4 bước
 ## 4. Việc tiếp theo (theo thứ tự)
 
 1. Chạy lại PlayRun kịch bản ở §3 để thấy blocker kế tiếp sau tick 4738.
-2. **Trace N** (đường cốt truyện tự nhiên: OK mỗi 10 tick, giữ phím xuống 4100..4300, 12 000 tick). Kịch bản lưu ở `docs/golden_scripts/scN.txt` (bản gốc) và `kN.txt` (Java, từ tick 500). Lúc bàn giao `work/golden/trace_N.txt` **chưa có** (lần sinh nền bị dừng khi worker khởi động lại) — phải sinh lại (chạy nền, vài chục phút):
+2. **Trace N** (đường cốt truyện tự nhiên: OK mỗi 10 tick, giữ phím xuống 4100..4300, 12 000 tick). Kịch bản lưu ở `docs/golden_scripts/scN.txt` (bản gốc) và `kN.txt` (Java, từ tick 500). Trace A–M đã có trong `golden/` (setup_env.sh chép sang `work/golden`). Riêng `trace_N.txt` **chưa có** (lần sinh nền bị dừng khi worker khởi động lại) — phải sinh lại (chạy nền, vài chục phút):
    ```
    B="work/orig/android/영웅서기4.apk!/res/raw/jarfile.mp3!/binary.mod"
    LC_ALL=C.UTF-8 SNAP=500 nohup python3 tools/e_trace.py "$B" work/res work/golden/trace_N.txt 12000 $(cat docs/golden_scripts/scN.txt) &
@@ -64,7 +64,7 @@ Việc đầu tiên của phiên sau là kiểm chứng phần này (§4 bước
 
 `docs/golden_scripts/scX.txt` = kịch bản đầy đủ cho `tools/e_trace.py` / `e_ret.py` / `e_raw.py` (gồm token < 500); `kX.txt` = phần từ tick 500 cho `GameTraceTest`.
 Token: `t:KEY`, `t:pKEY`, `t:rKEY`, `t:wSCENE/X/Y/W` (warp, móc test), `t:H` (fixture test: HP hero := HP max trước tick t — **không phải hành vi gốc**).
-Trace sinh bằng `SNAP=500 python3 tools/e_trace.py "$B" work/res work/golden/trace_X.txt <ticks> $(cat docs/golden_scripts/scX.txt)`.
+Trace A–M đã commit trong `golden/`; trace mới sinh bằng `SNAP=500 python3 tools/e_trace.py "$B" work/res work/golden/trace_X.txt <ticks> $(cat docs/golden_scripts/scX.txt)`.
 Số tick (tick cuối + 1): E 3300, F 8100, G 6000, H 5400, I 6200, J 6000, K 5300, L 7500, M 9000, N 12000.
 
 ## 6. Quirk của bản gốc đã gặp ở giai đoạn này (đã chép đúng, đừng "sửa")
