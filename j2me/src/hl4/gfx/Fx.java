@@ -185,9 +185,47 @@ public final class Fx {
     }
 
     /** DM_DrawScreen565Ex @0x3fdec: like Blit.raster but blending into the destination. */
+    /**
+     * DM_DrawScreen565Ex @0x4fdec, mode 0, 4 bpp, width 0 with an odd source column (CONFIRMED against the original, trace M tick 6289: a monster part
+     * clipped by the left edge).  As in DM_DrawScreen565 (Blit.zeroWidth) the odd-start branch blends the low nibble of column SX and leaves width -1,
+     * whose odd bit makes the trailing branch blend the high nibble of the next byte; unlike the plain version the destination restarts at X on every
+     * row (+0x2d8 += frame width), so the pair lands at (X, Y + k) and (X + 1, Y + k).
+     */
+    private static void zeroWidthEx(Frame f, Gbm img, int X, int Y, int H, int SX, int SY, int alpha, int effect) {
+        short[] pal = img.pal;
+        byte[] d = img.data;
+        int stride = (img.w + 1) >> 1;
+        for (int k = 0; k < H; k++) {
+            int row = img.pixOff + (SY + k) * stride + (SX >> 1);
+            int p2 = (Y + k) * f.w + X;
+            for (int n = 0; n < 2; n++, p2++) {
+                int bi = row + n;
+                if (bi < img.pixOff || bi >= img.pixOff + stride * img.h) {
+                    continue;                         // past the last row = heap memory in the original (nothing visible at trace M tick 6289, row 14)
+                }
+                int bb = d[bi] & 0xff;
+                int idx = n == 0 ? bb & 0xf : bb >> 4;
+                if (idx >= pal.length) {
+                    continue;
+                }
+                int c = pal[idx] & 0xffff;
+                if (c != SKIP && p2 >= 0 && p2 < f.px.length) {
+                    f.px[p2] = (short) blendPixel(c, f.px[p2] & 0xffff, alpha, effect);
+                }
+            }
+        }
+    }
+
     private static void rasterEx(Frame f, Gbm img, int X, int Y, int W, int H, int SX, int SY, int mode, int alpha, int effect) {
-        if (alpha == 0 || W <= 0 || H <= 0) {
+        if (alpha == 0) {
             return;
+        }
+        if (W == 0 && H > 0 && mode == 0 && img.type == 0x0b && (SX & 1) != 0) {
+            zeroWidthEx(f, img, X, Y, H, SX, SY, alpha, effect);
+            return;
+        }
+        if (W <= 0 || H <= 0) {
+            return;                                   // other zero-width cases: UNKNOWN (not traced); draws nothing here
         }
         int flip = Blit.MODE_FLIP[mode];
         int rot = Blit.MODE_ROT[mode];
