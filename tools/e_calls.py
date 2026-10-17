@@ -9,6 +9,9 @@ Usage: e_calls.py <binary.mod> <res> <out.txt> <from_tick> <to_tick> <spec>[,spe
   env CALLDUMP=h,g,e,o   also writes the masked bytes after each call ('D <key> <hex>' lines; o = first pool-object argument), so
                          tools/callcmp.py can name the differing byte ranges (the Java side: -Dcallrec.dump=..., tools/jcr.sh passes CALLDUMP)
   env CALLER=1           appends 'from=<caller function>' (reading aid; not compared by callcmp)
+  env PROBE=<file>       after tick <to_tick>, calls the functions listed in <file> directly (one call per line: 'NAME arg arg ..', args =
+                         integers or pool objects 'o<type>.<idx>'; '#' comments); recorded with tick <to_tick>+1.  Java: GameTraceTest
+                         --probe <to_tick> <file> (tools/jcr.sh).  For functions no trace reaches yet.  Calls run in order on the same state.
   env SNAPLOAD=<snapshot> starts from a snapshot of tools/e_snap.py instead of tick 0 (T0.3; the scenario tokens stay the full scenario)
 
 Line format (one per call, written when the call returns):
@@ -210,6 +213,26 @@ def main():
         e_snap.maybe_save(g, i)
         cur[0] = i
         ref_game.tick_script(g, script, i)
+    probe = os.environ.get('PROBE')
+    if probe:
+        cur[0] = t1 + 1
+        base = {f: (a, st) for f, a, st, n in pools}
+        from and_emu import RET_MAGIC
+        for ln in open(probe):
+            ln = ln.split('#')[0].split()
+            if not ln:
+                continue
+            args = []
+            for x in ln[1:]:
+                if x.startswith('o'):
+                    t, k = x[1:].split('.')
+                    a, st = base[FAMILY[int(t)]]
+                    args.append(a + st * int(k))
+                else:
+                    args.append(int(x, 0) & 0xffffffff)
+            g.call(ln[0], *args)
+            if pend and pend[-1][1] == RET_MAGIC:       # the probed call returned to the sentinel, where no code hook runs
+                onret(uc, RET_MAGIC, 0, None)
     out.close()
 
 

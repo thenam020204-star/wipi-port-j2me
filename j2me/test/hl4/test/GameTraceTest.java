@@ -21,6 +21,8 @@ public class GameTraceTest {
     static boolean cont;
     static String rawTicks;
     static String rawDir;
+    static int probeTick = -1;
+    static String probeFile;
 
     public static void main(String[] a) throws Exception {
         String[] ref = new String[100000];
@@ -64,6 +66,11 @@ public class GameTraceTest {
             if (a[i].equals("--raw")) {
                 rawTicks = "," + a[++i] + ",";
                 rawDir = a[++i];
+                continue;
+            }
+            if (a[i].equals("--probe")) {
+                probeTick = Integer.parseInt(a[++i]);    // after this tick: direct calls listed in the file (tools/e_calls.py PROBE), then exit
+                probeFile = a[++i];
                 continue;
             }
             if (a[i].equals("--cont")) {
@@ -178,6 +185,11 @@ public class GameTraceTest {
             if (so != null && stateTicks.indexOf("," + t + ",") >= 0) {
                 StateDump.write(so, t);
             }
+            if (t == probeTick) {
+                probe(t + 1);
+                System.out.println("GameTraceTest probes done after tick " + t);
+                System.exit(0);
+            }
             boolean same = mine.equals(ref[t]);
             if (hl4.game.MainGameFrame.testNoRender) {
                 // no picture yet: only the RNG call count is compared
@@ -214,6 +226,39 @@ public class GameTraceTest {
     static final int BENCH_FROM = Integer.parseInt(System.getProperty("bench", "2147483647"));
     static long benchSum, benchMax;
     static int benchN;
+
+    /** probe calls: each line 'NAME arg..' is dispatched to the instrumented ProbeDispatch classes (tools/callrec_inst.py), recorded by CallRec */
+    static void probe(int tick) throws Exception {
+        CallRec.tick = tick;
+        BufferedReader r = new BufferedReader(new FileReader(probeFile));
+        String line;
+        String[] pk = {"hl4.game", "hl4.gfx", "hl4.sys", "hl4.data"};
+        while ((line = r.readLine()) != null) {
+            int c = line.indexOf('#');
+            String[] p = (c >= 0 ? line.substring(0, c) : line).trim().split("\\s+");
+            if (p[0].length() == 0) {
+                continue;
+            }
+            String[] args = new String[p.length - 1];
+            System.arraycopy(p, 1, args, 0, args.length);
+            boolean done = false;
+            for (int i = 0; i < pk.length && !done; i++) {
+                try {
+                    Class k = Class.forName(pk[i] + ".ProbeDispatch");
+                    done = ((Boolean) k.getMethod("run", new Class[] {String.class, String[].class}).invoke(null, new Object[] {p[0], args})).booleanValue();
+                } catch (ClassNotFoundException ex) {
+                    // no wrapped method in that package
+                } catch (java.lang.reflect.InvocationTargetException ex) {
+                    System.out.println("probe " + line + ": " + ex.getCause());
+                    done = true;
+                }
+            }
+            if (!done) {
+                throw new RuntimeException("probe: " + p[0] + " is not in the instrumented spec");
+            }
+        }
+        r.close();
+    }
 
     static void writeRaw(String path, short[] px) throws Exception {
         java.io.FileOutputStream o = new java.io.FileOutputStream(path);
