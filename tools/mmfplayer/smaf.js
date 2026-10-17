@@ -1,6 +1,15 @@
 /*
  * SMAF (MMF) -> Standard MIDI File / WAV.
- * Line-by-line port of hl4.core.Smaf (HL4_project_2026-09-27j, hl4j/src/core/hl4/core/Smaf.java), which follows dlunch's smaf-player mapping.
+ * Started as a line-by-line port of hl4.core.Smaf (HL4_project_2026-09-27j, hl4j/src/core/hl4/core/Smaf.java, dlunch's smaf-player
+ * mapping), byte-identical on 125 game files; convert(data, { java: true }) still gives that output. By default the output follows
+ * EA's own conversion, checked against an EA-ported MIDI of the same HandyPhone song (tools/mmfplayer/README.md):
+ *  - real MIDI channels are allocated once per file (the Java code restarted the allocation in every MTR track, so the 4-channel
+ *    tracks of a HandyPhone file collided on channels 0-3);
+ *  - HandyPhone short expression = (n + 2) * 8, max 127;
+ *  - controller and program events up to a channel's first note are folded into one event at time 0, bank select is not written;
+ *  - HandyPhone drum velocity is scaled to the loudest drum note, whose level becomes the drum channel volume;
+ *  - custom FM voices (Mtsu exclusive data) become General MIDI programs by their parameter bytes (built-in table taken from EA
+ *    ports, plus opts.voiceMap); a GM System On message starts the file.
  * Java semantics are kept: signed bytes masked with & 0xFF, integer division truncates toward zero, and any out-of-range read aborts the
  * conversion (Java's ArrayIndexOutOfBounds inside convert()'s catch) instead of reading undefined.
  */
@@ -26,10 +35,24 @@
   var MAX_CH = 64;
   var MELODY_ORDER = [0, 1, 2, 3, 4, 5, 6, 7, 8, 10, 11, 12, 13, 14, 15];
   var SHORT_EXPR = [0x00, 0x00, 0x1f, 0x27, 0x2f, 0x37, 0x3f, 0x47, 0x4f, 0x57, 0x5f, 0x67, 0x6f, 0x77, 0x7f];
+  // EA's table: 72, 80, 88, 96 for 7, 8, 9, 10 (every value its port shows)
+  function shortExprEa(n) { return Math.min(127, (n + 2) * 8); }
+  /** HandyPhone FM voice parameters (hex, after bank and program, without F7) -> GM program, from EA ports of the same songs */
+  var VOICE_GM = {
+    '78013028f144a1113bf200a0': 25, '68011584fe2aa01581f700a0': 38, '4001243ff065a2148ff000a0': 80,
+    '40011441b16e802c727004e4': 48, '40018156f594a01465ed00a0': 12, '50017026f36aa01135f102a0': 9
+  };
+  function hex(d, a, b) { var t = ''; for (var i = a; i < b; i++) t += (d[i] < 16 ? '0' : '') + d[i].toString(16); return t; }
   var SHORT_MOD = [0x00, 0x00, 0x08, 0x10, 0x18, 0x20, 0x28, 0x30, 0x38, 0x40, 0x48, 0x50, 0x60, 0x70, 0x7f];
   var SCALE = [230, 230, 230, 230, 307, 409, 512, 614];
 
-  function Conv() {
+  function Conv(opts) {
+    this.opts = opts || {};
+    this.ea = !this.opts.java;
+    this.voiceDefs = {};          // (bank << 8 | program) -> parameter hex, from Mtsu exclusive messages
+    this.voices = [];             // custom voices in use: { ch, program, fp, gm, known }
+    this.drumMax = this.opts.drumMax || 0;
+    this.drumPeak = 0;
     this.events = [];
     this.seqCounter = 0;
     this.endTime = 0;
@@ -45,6 +68,7 @@
     this.bankLsb = new Int32Array(MAX_CH);
     this.forcedRhythm = new Array(MAX_CH);
     this.realMap = new Int32Array(MAX_CH);
+    for (var r = 0; r < MAX_CH; r++) this.realMap[r] = -1;
     this.handyOffset = 0;
     this.pos = 0;
   }
@@ -57,7 +81,8 @@
   Conv.prototype.resetToneMap = function () {
     for (var i = 0; i < MAX_CH; i++) {
       this.channelTypes[i] = 2; this.programs[i] = 0; this.volumes[i] = 100; this.expressions[i] = 127;
-      this.velocities[i] = 64; this.bankMsb[i] = 0; this.bankLsb[i] = 0; this.forcedRhythm[i] = false; this.realMap[i] = -1;
+      this.velocities[i] = 64; this.bankMsb[i] = 0; this.bankLsb[i] = 0; this.forcedRhythm[i] = false;
+      if (!this.ea) this.realMap[i] = -1;
     }
   };
 
@@ -88,6 +113,18 @@
       var len2 = be32(d, p + 4);
       var body = p + 8;
       if (body + len2 > end) len2 = end - body;
+      if (this.ea && u8(d, p) === 0x4d && u8(d, p + 1) === 0x74 && u8(d, p + 2) === 0x73 && u8(d, p + 3) === 0x75) {   // "Mtsu"
+        // setup data: FF F0 len 43 03 index bank program parameters... F7 (HandyPhone FM voice definitions)
+        for (var q = body; q + 3 <= body + len2 && u8(d, q) === 0xff && u8(d, q + 1) === 0xf0;) {
+          var xl = u8(d, q + 2);
+          if (xl >= 6 && u8(d, q + 3) === 0x43) {
+            var xe = q + 3 + xl;
+            if (u8(d, xe - 1) === 0xf7) xe--;
+            this.voiceDefs[(u8(d, q + 6) << 8) | u8(d, q + 7)] = hex(d, q + 8, xe);
+          }
+          q += 3 + xl;
+        }
+      }
       if (u8(d, p) === 0x4d && u8(d, p + 1) === 0x74 && u8(d, p + 2) === 0x73 && u8(d, p + 3) === 0x71) {   // "Mtsq"
         var seq, so, sl;
         if (this.formatType === 1) {
@@ -143,6 +180,16 @@
     return pr;
   };
 
+  /** a program change to a voice defined in Mtsu: its GM program from opts.voiceMap / VOICE_GM, else the plain number */
+  Conv.prototype.voiceProgram = function (ch, program, fallback) {
+    var fp = this.voiceDefs[program & 0x7f];
+    if (fp === undefined) return fallback;
+    var vm = this.opts.voiceMap || {};
+    var gm = vm[fp] !== undefined ? vm[fp] : VOICE_GM[fp];
+    this.voices.push({ ch: this.realChannel(ch), program: program & 0x7f, fp: fp, gm: gm !== undefined ? gm : fallback, known: gm !== undefined });
+    return gm !== undefined ? gm & 0x7f : fallback;
+  };
+
   Conv.prototype.mapNote = function (ch, note) {
     var ci = this.pseudo(ch);
     if (this.formatType === 0) {
@@ -180,7 +227,11 @@
     var ci = this.pseudo(ch);
     var n = this.mapNote(ch, note);
     var v;
-    if (this.formatType === 0 && this.channelTypes[ci] === 3) {
+    if (this.formatType === 0 && this.channelTypes[ci] === 3 && this.ea) {
+      var ve = this.volumes[ci] * this.expressions[ci];
+      if (ve > this.drumPeak) this.drumPeak = ve;
+      v = clamp(Math.round(ve * 127 / Math.max(1, this.drumMax || ve)), 1, 127);
+    } else if (this.formatType === 0 && this.channelTypes[ci] === 3) {
       v = clamp(idiv(this.volumes[ci] * this.expressions[ci], this.expressions[ci] < 64 ? 102 : 100), 1, 127);
     } else if (vel >= 0) {
       v = Math.min(vel, 127);
@@ -267,7 +318,7 @@
         if (et === 0) {
           P.p++;
         } else if (et >= 1 && et <= 0x0e) {
-          this.expressions[ci] = SHORT_EXPR[et];
+          this.expressions[ci] = this.ea ? shortExprEa(et) : SHORT_EXPR[et];
           if (!this.isRhythm(ch)) this.add3(now, 5, 0xB0 | this.realChannel(ch), 7, Math.min(127, idiv(this.volumes[ci] * this.expressions[ci], 127)));
         } else if (et >= 0x11 && et <= 0x1e) {
           v = Math.min(0x3fff, idiv((et - 0x10) * 16384, 16));
@@ -284,6 +335,7 @@
               } else {
                 if (this.bankMsb[ci] === 0x7d) this.forcedRhythm[ci] = true;
                 var mp = this.isRhythm(ch) ? 0 : this.mapProgram(ch, val);
+                if (this.ea && !this.isRhythm(ch)) mp = this.voiceProgram(ch, val, mp);
                 this.programs[ci] = mp;
                 this.add(now, 6, [(0xC0 | this.realChannel(ch)) & 0xff, mp & 0xff]);
               }
@@ -485,7 +537,9 @@
   Conv.prototype.toMidi = function () {
     var ev = this.events.slice();
     ev.sort(function (x, y) { return x.time - y.time || x.order - y.order || x.seq - y.seq; });
+    if (this.ea) ev = this.foldSetup(ev);
     var trk = [0, 0xFF, 0x51, 3, 0x07, 0xA1, 0x20];
+    if (this.ea) trk.push(0, 0xF0, 5, 0x7E, 0x7F, 0x09, 0x01, 0xF7);     // GM System On
     var last = 0;
     for (var i = 0; i < ev.length; i++) {
       var t = ev[i].time;
@@ -503,24 +557,64 @@
     return f;
   };
 
+  /**
+   * EA layout: per channel, controllers and programs up to the first note become one event each at time 0 (last value wins);
+   * no bank select; a HandyPhone drum channel gets one volume event (the loudest drum level) and one program change.
+   */
+  Conv.prototype.foldSetup = function (ev) {
+    var first = {}, i, e, c, hi;
+    for (i = 0; i < ev.length; i++) {
+      e = ev[i]; hi = e.msg[0] & 0xf0; c = e.msg[0] & 15;
+      if (hi === 0x90 && first[c] === undefined) first[c] = e.time;
+    }
+    var drumVol = this.drumMax > 0 && this.formatType === 0 ? Math.min(127, Math.floor(this.drumMax / 127)) : -1;
+    var setup = {}, order = [], rest = [];
+    for (i = 0; i < ev.length; i++) {
+      e = ev[i]; hi = e.msg[0] & 0xf0; c = e.msg[0] & 15;
+      if (hi === 0xb0 && (e.msg[1] === 0 || e.msg[1] === 32)) continue;
+      if (drumVol >= 0 && c === 9 && hi === 0xb0 && e.msg[1] === 7) continue;
+      var early = first[c] === undefined || e.time <= first[c];
+      if (early && (hi === 0xb0 || hi === 0xc0)) {
+        var key = c + ':' + (hi === 0xc0 ? 'p' : e.msg[1]);
+        if (setup[key] === undefined) order.push(key);
+        setup[key] = e.msg;
+        continue;
+      }
+      rest.push(e);
+    }
+    if (drumVol >= 0 && first[9] !== undefined) { if (setup['9:7'] === undefined) order.push('9:7'); setup['9:7'] = [0xB9, 7, drumVol]; }
+    // by channel, program first (as EA writes it), then the controllers
+    order.sort(function (a, b) {
+      var ca = +a.split(':')[0], cb = +b.split(':')[0];
+      return ca - cb || (a.split(':')[1] === 'p' ? -1 : 0) - (b.split(':')[1] === 'p' ? -1 : 0);
+    });
+    var out = order.map(function (k) { return { time: 0, msg: setup[k] }; });
+    // a controller that repeats the channel's current value is dropped (EA writes only changes)
+    var cur = {};
+    out.forEach(function (x) { if ((x.msg[0] & 0xf0) === 0xb0) cur[(x.msg[0] & 15) + ':' + x.msg[1]] = x.msg[2]; });
+    rest = rest.filter(function (x) {
+      if ((x.msg[0] & 0xf0) !== 0xb0) return true;
+      var k = (x.msg[0] & 15) + ':' + x.msg[1];
+      if (cur[k] === x.msg[2]) return false;
+      cur[k] = x.msg[2];
+      return true;
+    });
+    return out.concat(rest);
+  };
+
   /** convert(Uint8Array) -> { type: 'audio/midi' | 'audio/x-wav' | null, data: Uint8Array | null, durationMs } */
-  function convert(data) {
-    var c = { type: null, data: null, durationMs: 0 };
+  function convert(data, opts) {
+    var c = { type: null, data: null, durationMs: 0, voices: [] };
     try {
       if (!data || data.length < 8 || data[0] !== 0x4d || data[1] !== 0x4d || data[2] !== 0x4d || data[3] !== 0x44) return c;
-      var s = new Conv();
-      var size = be32(data, 4);
-      var end = Math.min(data.length, 8 + size);
-      var o = 8;
-      while (o + 8 <= end) {
-        var id0 = u8(data, o), id1 = u8(data, o + 1), id2 = u8(data, o + 2);
-        var len = be32(data, o + 4);
-        var body = o + 8;
-        if (body + len > data.length) len = data.length - body;
-        if (id0 === 0x4d && id1 === 0x54 && id2 === 0x52) s.scoreTrack(data, body, len);        // "MTR"
-        else if (id0 === 0x41 && id1 === 0x54 && id2 === 0x52) s.pcmTrack(data, body, len);     // "ATR"
-        o = body + len;
+      var s = parse(data, opts);
+      if (s.ea && s.drumPeak > 0) {                     // second pass: drum velocities relative to the loudest drum note
+        var o2 = {};
+        for (var k in (opts || {})) o2[k] = opts[k];
+        o2.drumMax = s.drumPeak;
+        s = parse(data, o2);
       }
+      c.voices = s.voices;
       if (s.events.length > 0) {
         c.type = 'audio/midi';
         c.data = s.toMidi();
@@ -536,6 +630,25 @@
       c.error = String(e && e.message || e);
     }
     return c;
+  }
+
+  function parse(data, opts) {
+    {
+      var s = new Conv(opts);
+      var size = be32(data, 4);
+      var end = Math.min(data.length, 8 + size);
+      var o = 8;
+      while (o + 8 <= end) {
+        var id0 = u8(data, o), id1 = u8(data, o + 1), id2 = u8(data, o + 2);
+        var len = be32(data, o + 4);
+        var body = o + 8;
+        if (body + len > data.length) len = data.length - body;
+        if (id0 === 0x4d && id1 === 0x54 && id2 === 0x52) s.scoreTrack(data, body, len);        // "MTR"
+        else if (id0 === 0x41 && id1 === 0x54 && id2 === 0x52) s.pcmTrack(data, body, len);     // "ATR"
+        o = body + len;
+      }
+      return s;
+    }
   }
 
   var api = { convert: convert };

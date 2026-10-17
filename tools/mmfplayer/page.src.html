@@ -108,6 +108,8 @@ button:focus-visible, .pick:focus-within, input:focus-visible { outline: 2px sol
 .chip { height: 32px; border-radius: 16px; border: 1px solid var(--line); background: var(--panel); color: var(--ink); padding: 0 12px;
   font: 500 13px/1 var(--font-body); cursor: pointer; display: inline-flex; align-items: center; gap: 6px; }
 .chip[aria-pressed="true"] { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); }
+select { height: 42px; border-radius: 8px; border: 1px solid var(--line); background: var(--panel); color: var(--ink);
+  padding: 0 10px; font: 400 14px var(--font-body); max-width: 100%; min-width: 0; flex: 1 1 180px; }
 .empty { color: var(--muted); font-size: 14px; padding: 18px 2px; margin: 0; }
 .kv { display: flex; flex-direction: column; gap: 2px; padding: 10px 0; border-bottom: 1px solid var(--line); }
 .kv .k { font-size: 13px; color: var(--muted); }
@@ -140,6 +142,16 @@ details summary { cursor: pointer; }
         <button class="btn" id="btn-demo">Nghe thử soundfont</button>
       </div>
       <p class="status" id="np-status"></p>
+      <div class="kv" id="voice-box" hidden>
+        <span class="k">Tiếng FM riêng của file → nhạc cụ GM</span>
+        <span class="v" id="voice-list"></span>
+        <div class="actions" style="margin-top:8px">
+          <select id="learn-from" aria-label="Bản MIDI để học nhạc cụ"></select>
+          <label class="pick">Chọn file MIDI<input type="file" id="learn-file"></label>
+          <button class="btn" id="btn-learn">Học nhạc cụ</button>
+        </div>
+        <p class="status" id="learn-status">Có bản MIDI của chính bài này (ví dụ bản EA port)? Chọn nó rồi bấm Học nhạc cụ: app so nốt từng kênh và nhớ nhạc cụ cho các tiếng FM này, dùng cho mọi file có cùng tiếng.</p>
+      </div>
     </section>
 
     <!-- queue -->
@@ -218,6 +230,19 @@ details summary { cursor: pointer; }
   var src = null, startedAt = 0, offset = 0, playing = false, raf = 0, preparing = false;
   var durations = {};
   var webSeq = 0, pendingExport = false;
+  var lastVoices = null, learnFile = null;
+  var GM = ('Acoustic Grand Piano,Bright Piano,Electric Grand,Honky-tonk,E.Piano 1,E.Piano 2,Harpsichord,Clavinet,Celesta,Glockenspiel,' +
+    'Music Box,Vibraphone,Marimba,Xylophone,Tubular Bells,Dulcimer,Drawbar Organ,Percussive Organ,Rock Organ,Church Organ,Reed Organ,' +
+    'Accordion,Harmonica,Tango Accordion,Nylon Guitar,Steel Guitar,Jazz Guitar,Clean Guitar,Muted Guitar,Overdrive Guitar,' +
+    'Distortion Guitar,Guitar Harmonics,Acoustic Bass,Finger Bass,Pick Bass,Fretless Bass,Slap Bass 1,Slap Bass 2,Synth Bass 1,' +
+    'Synth Bass 2,Violin,Viola,Cello,Contrabass,Tremolo Strings,Pizzicato,Harp,Timpani,Strings,Slow Strings,Synth Strings 1,' +
+    'Synth Strings 2,Choir Aahs,Voice Oohs,Synth Voice,Orchestra Hit,Trumpet,Trombone,Tuba,Muted Trumpet,French Horn,Brass,' +
+    'Synth Brass 1,Synth Brass 2,Soprano Sax,Alto Sax,Tenor Sax,Baritone Sax,Oboe,English Horn,Bassoon,Clarinet,Piccolo,Flute,' +
+    'Recorder,Pan Flute,Blown Bottle,Shakuhachi,Whistle,Ocarina,Square Lead,Saw Lead,Calliope,Chiff,Charang,Voice Lead,Fifths,' +
+    'Bass+Lead,New Age Pad,Warm Pad,Polysynth,Choir Pad,Bowed Pad,Metallic Pad,Halo Pad,Sweep Pad,Rain,Soundtrack,Crystal,' +
+    'Atmosphere,Brightness,Goblins,Echoes,Sci-fi,Sitar,Banjo,Shamisen,Koto,Kalimba,Bagpipe,Fiddle,Shanai,Tinkle Bell,Agogo,' +
+    'Steel Drums,Woodblock,Taiko,Melodic Tom,Synth Drum,Reverse Cymbal,Fret Noise,Breath,Seashore,Bird,Telephone,Helicopter,' +
+    'Applause,Gunshot').split(',');
 
   function store(k, v) { try { localStorage.setItem('mmf.' + k, JSON.stringify(v)); } catch (e) {} }
   function load(k, d) { try { var v = localStorage.getItem('mmf.' + k); return v === null ? d : JSON.parse(v); } catch (e) { return d; } }
@@ -348,7 +373,8 @@ details summary { cursor: pointer; }
     return readBytes(it).then(function (bytes) {
       var midi = null, wav = null;
       if (it.type === 'mmf') {
-        var c = Smaf.convert(bytes);
+        var c = Smaf.convert(bytes, { voiceMap: load('voiceMap', {}) });
+        lastVoices = { id: it.id, list: c.voices || [] };
         if (!c.data) throw new Error('MMF không có phần chơi được');
         if (c.type === 'audio/midi') midi = c.data; else wav = c.data;
       } else midi = bytes;
@@ -575,11 +601,77 @@ details summary { cursor: pointer; }
     $('btn-play').disabled = !it;
     $('btn-prev').disabled = $('btn-next').disabled = !queue.length;
     $('btn-export').disabled = !it;
+    renderVoices();
     $('btn-repeat').classList.toggle('on', repeat !== 'off');
     $('repeat-one').hidden = repeat !== 'one';
     $('btn-repeat').setAttribute('aria-label', 'Lặp lại: ' + (repeat === 'off' ? 'tắt' : repeat === 'all' ? 'cả hàng chờ' : 'một bài'));
     $('btn-shuffle').classList.toggle('on', shuffle);
     $('btn-shuffle').setAttribute('aria-label', 'Trộn bài: ' + (shuffle ? 'bật' : 'tắt'));
+  }
+
+  function renderVoices() {
+    var it = current(), box = $('voice-box');
+    var vs = it && lastVoices && lastVoices.id === it.id ? lastVoices.list : [];
+    box.hidden = !vs.length;
+    if (!vs.length) return;
+    var seen = {}, parts = [];
+    vs.forEach(function (v) {
+      var k = v.fp; if (seen[k]) return; seen[k] = 1;
+      parts.push('FM ' + v.program + ' → ' + (v.gm + 1) + ' ' + GM[v.gm] + (v.known ? '' : ' (chưa học)'));
+    });
+    $('voice-list').textContent = parts.join(' · ');
+    var sel = $('learn-from'), keep = sel.value;
+    sel.textContent = '';
+    var o0 = el('option', '', 'Chọn bản MIDI trong thư viện…'); o0.value = ''; sel.appendChild(o0);
+    library.filter(function (x) { return x.type === 'midi' && !x.data; })
+      .sort(function (a, b) { return (b.folder === it.folder) - (a.folder === it.folder); })
+      .forEach(function (x) { var o = el('option', '', x.name + ' · ' + x.folder); o.value = x.id; sel.appendChild(o); });
+    if (learnFile) { var of = el('option', '', learnFile.name + ' (file đã chọn)'); of.value = '__file'; sel.appendChild(of); }
+    sel.value = keep;
+  }
+
+  // channel-by-channel note match between our conversion and a reference MIDI of the same song -> FM voice : GM program
+  function learnVoices(it, refBytes) {
+    return readBytes(it).then(function (bytes) {
+      var map = load('voiceMap', {});
+      var c = Smaf.convert(bytes, { voiceMap: map });
+      if (!c.data || c.type !== 'audio/midi') throw new Error('file MMF này không có phần MIDI');
+      var ours = Sf2Synth.parseMidi(c.data).events, ref = Sf2Synth.parseMidi(refBytes).events;
+      function notes(evs) {
+        var by = {};
+        evs.forEach(function (e) {
+          if ((e.st & 0xf0) === 0x90 && e.d2 > 0) { var ch = e.st & 15; (by[ch] = by[ch] || {})[Math.round(e.time * 1000 / 4) + ':' + e.d1] = 1; }
+        });
+        return by;
+      }
+      var on = notes(ours), rn = notes(ref), prog = {}, firstNote = {};
+      ref.forEach(function (e) { var ch = e.st & 15; if ((e.st & 0xf0) === 0x90 && e.d2 > 0 && firstNote[ch] === undefined) firstNote[ch] = e.time; });
+      // the program in effect at the channel's first note
+      ref.forEach(function (e) {
+        var ch = e.st & 15;
+        if ((e.st & 0xf0) === 0xc0 && (firstNote[ch] === undefined || e.time <= firstNote[ch])) prog[ch] = e.d1;
+      });
+      var learned = 0, matched = 0, total = 0;
+      var done = {};
+      (c.voices || []).forEach(function (v) {
+        if (done[v.ch + ':' + v.fp]) return; done[v.ch + ':' + v.fp] = 1;
+        var mine = on[v.ch] || {}, keys = Object.keys(mine), best = -1, bestN = 0;
+        Object.keys(rn).forEach(function (rc) {
+          if (+rc === 9) return;
+          var n = 0; keys.forEach(function (k) { if (rn[rc][k]) n++; });
+          if (n > bestN) { bestN = n; best = +rc; }
+        });
+        total += keys.length;
+        if (best >= 0 && bestN * 2 >= keys.length && prog[best] !== undefined) {
+          if (map[v.fp] !== prog[best]) learned++;
+          map[v.fp] = prog[best];
+          matched += bestN;
+        }
+      });
+      store('voiceMap', map);
+      var fps = {}; Object.keys(done).forEach(function (k) { fps[k.split(':')[1]] = 1; });
+      return { learned: learned, matched: matched, total: total, voices: Object.keys(fps).length, channels: Object.keys(done).length };
+    });
   }
 
   function itemRow(it, isCur, onMain, miniIcon, miniLabel, onMini) {
@@ -704,6 +796,23 @@ details summary { cursor: pointer; }
   });
   $('btn-shuffle').addEventListener('click', function () { shuffle = !shuffle; store('shuffle', shuffle); renderNow(); });
   $('btn-export').addEventListener('click', doExport);
+  $('learn-file').addEventListener('change', function () {
+    var f = this.files[0]; if (!f) return;
+    learnFile = f; renderVoices(); $('learn-from').value = '__file'; this.value = '';
+  });
+  $('btn-learn').addEventListener('click', function () {
+    var it = current(), v = $('learn-from').value;
+    if (!it || it.type !== 'mmf') return;
+    var src = v === '__file' && learnFile ? learnFile.arrayBuffer().then(function (b) { return new Uint8Array(b); })
+      : v && byId[v] ? readBytes(byId[v]) : null;
+    if (!src) { status('learn-status', 'Chọn một bản MIDI trước.', true); return; }
+    status('learn-status', 'Đang so nốt…');
+    src.then(function (ref) { return learnVoices(it, ref); }).then(function (r) {
+      if (!r.matched) { status('learn-status', 'Không kênh nào khớp nốt: bản MIDI này có lẽ không phải cùng bài.', true); return; }
+      status('learn-status', 'Đã học ' + r.voices + ' tiếng FM trên ' + r.channels + ' kênh (' + r.learned + ' tiếng đổi nhạc cụ), khớp ' + r.matched + '/' + r.total + ' nốt. Bài được dựng lại với nhạc cụ mới.');
+      if (prepared && prepared.id === it.id) { var wasPlaying = playing; stopSource(); playing = false; prepared = null; if (wasPlaying) playIndex(qi, 0); else prepare(it).then(renderNow); }
+    }).catch(function (e) { status('learn-status', 'Không học được: ' + e.message, true); });
+  });
   $('btn-clearq').addEventListener('click', function () { stopSource(); playing = false; offset = 0; queue = []; qi = -1; prepared = null; saveQueue(); renderAll(); });
   $('btn-playall').addEventListener('click', function () { var l = filtered(); if (l.length) { playList(l.map(function (x) { return x.id; }), shuffle ? Math.floor(Math.random() * l.length) : 0); showTab('now'); } });
   $('q').addEventListener('input', function () { filter.q = this.value; renderLib(); });

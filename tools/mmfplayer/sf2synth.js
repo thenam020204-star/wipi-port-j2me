@@ -145,7 +145,8 @@
           if (ty === 0x51) evs.push({ tick: tick, tempo: (b[p] << 16) | (b[p + 1] << 8) | b[p + 2], seq: seq++, tr: t });
           p += l;
         } else if (st === 0xf0 || st === 0xf7) {
-          p += vlq();
+          var sl = vlq();             // not "p += vlq()": that adds the length to p as read before vlq() advanced it
+          p += sl;
         } else {
           run = st;
           var hi = st & 0xf0, d1 = b[p++], d2 = (hi === 0xc0 || hi === 0xd0) ? 0 : b[p++];
