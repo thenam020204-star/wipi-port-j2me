@@ -143,8 +143,10 @@ details summary { cursor: pointer; }
       items.forEach(function (it) { if (it.kind === 'MIDI') it.buffer = null; });
     } catch (e) { setStatus('Không đọc được soundfont: ' + e.message, true); }
   }
-  // Nokia.sf2 ships next to the page as base64 text (artifact pages serve text, not arbitrary binary types)
-  fetch('Nokia.sf2.b64.txt').then(function (r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r.text(); })
+  // Nokia.sf2 ships next to the page as base64 text (artifact pages serve text, not arbitrary binary types);
+  // the Android build defines it as a script global instead (WebView cannot fetch() file:// assets)
+  (window.NOKIA_SF2_B64 ? Promise.resolve(window.NOKIA_SF2_B64)
+    : fetch('Nokia.sf2.b64.txt').then(function (r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r.text(); }))
     .then(function (t) {
       var bin = atob(t.trim()), u = new Uint8Array(bin.length);
       for (var i = 0; i < bin.length; i++) u[i] = bin.charCodeAt(i);
