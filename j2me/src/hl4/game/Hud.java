@@ -54,8 +54,14 @@ public final class Hud {
     private static void drawGameBottomUI() {
         byte[] h = Pool.hero.m;
         drawPanel();
-        if (Bytes.s16(h, 0x220) > 0 || Bytes.s16(h, 0x222) > 0) {
-            throw new IllegalStateException("MainGameFrame_drawGameBottomUI: skill cool-down overlay (DM_DrawImgRotateEx, _uiGame 6/7): later");
+        // unspent attribute (+0x220) / skill (+0x222) points: _uiGame 6 / 7 at the bottom-left corner (DM_DrawImgRotateEx at 100 %, no rotation)
+        if (Bytes.s16(h, 0x220) > 0) {
+            hl4.gfx.Gbm im = hl4.gfx.Img.get(Icons.uiGame, 6);
+            hl4.gfx.Fx.drawImgRotateEx(Gfx.scr, 0, Glob.gameH - 0x10, (short) im.aux, (short) im.h, im, 0, 0, 0, 0, 100, 100, 0, 0xff, 9);
+        }
+        if (Bytes.s16(h, 0x222) > 0) {
+            hl4.gfx.Gbm im = hl4.gfx.Img.get(Icons.uiGame, 7);
+            hl4.gfx.Fx.drawImgRotateEx(Gfx.scr, 0, Glob.gameH - 8, (short) im.aux, (short) im.h, im, 0, 0, 0, 0, 100, 100, 0, 0xff, 9);
         }
         for (int i = 0; i < 3; i++) {
             if (h[0xf4 + i * 8] == 1) {

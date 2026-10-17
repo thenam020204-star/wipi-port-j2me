@@ -168,6 +168,9 @@ public final class Particles {
         sets[setOff + 0xb8] = (byte) c;
     }
 
+    private static final hl4.gfx.Sprite[] XSP = new hl4.gfx.Sprite[3];
+    private static final int[] XVAL = new int[3];
+
     /** HERO_extra_set_particles(info index, x, y) @0x7cc60: the particle effect 'info' of the hero's class at (x, y) */
     static void extraSetParticles(int idx, int x, int y) {
         Char h = Pool.hero;
@@ -178,9 +181,11 @@ public final class Particles {
         if (info[o + 2] != h.m[0x16b]) {
             return;
         }
-        hl4.gfx.Sprite[] sp = new hl4.gfx.Sprite[3];
-        int[] val = new int[3];
+        hl4.gfx.Sprite[] sp = XSP;
+        int[] val = XVAL;
         for (int k = 0; k < 3; k++) {
+            sp[k] = null;
+            val[k] = 0;
             int v = info[o + 3 + k];
             if (v >= 0) {
                 sp[k] = sprites[v];

@@ -421,12 +421,14 @@ public final class HeroBattle {
             later("HERO_addTargetEffectFireAttacked");
         }
         if (m[0xa2d] != 0 && Opt.v[5] == 1) {
+            // a critical with the 'critical' option shows the common critical effect INSTEAD of the skill's hit effect (0x791bc -> 0x7957c -> 0x79224)
             TEffects.addCommonEffect(h, o, 0, 0, 0, 0, 0, -1);
+        } else {
+            if (isBasicTargetEff(h, sk)) {
+                dirv = m[0xd12];
+            }
+            TEffects.charTargetEffect(h, o, 0, 0xa, getEffectIdx(h, sk), dirv, 1, -1, sk, -1, 0, fx, fy, 1);
         }
-        if (isBasicTargetEff(h, sk)) {
-            dirv = m[0xd12];
-        }
-        TEffects.charTargetEffect(h, o, 0, 0xa, getEffectIdx(h, sk), dirv, 1, -1, sk, -1, 0, fx, fy, 1);
         int c = m[0xd12] & 0xff;
         int rem = (byte) c % 4;
         m[0xd12] = (byte) (c + 1);
