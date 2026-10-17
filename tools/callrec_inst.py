@@ -17,8 +17,8 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from e_calls import spec_sigs
 
 ROOT = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..')
-SRC = os.path.join(ROOT, 'j2me', 'src')
-DOC = re.compile(r'/\*\*\s*(?:\*\s*)?([A-Za-z_]\w*)[^\n]*?@0x[0-9a-f]+')
+SRC = os.environ.get('CR_SRC') or os.path.join(ROOT, 'j2me', 'src')   # CR_SRC: an alternative source tree (tools/c2j_eval.py)
+DOC = re.compile(r'/\*\*\s*(?:\*\s*)?([A-Za-z_]+_\w*)')      # javadoc opening with an original function name (with or without @0x)
 SIG = re.compile(r'(\s*)((?:(?:public|private|protected|static|final|synchronized)\s+)*)([\w\[\]]+)\s+(\w+)\s*\(([^)]*)\)\s*(throws\s+[\w.,\s]+)?\{', re.S)
 
 

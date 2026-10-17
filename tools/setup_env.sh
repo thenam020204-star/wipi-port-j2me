@@ -8,7 +8,7 @@ cd "$(dirname "$0")/.." || exit 1
 export LC_ALL=C.UTF-8
 KTF="$1"
 AND="$2"
-pip install -q unicorn==2.1.4 capstone==5.0.9 pyelftools==0.33
+pip install -q unicorn==2.1.4 capstone==5.0.9 pyelftools==0.33 pycparser==2.22
 T=work/tools/j2me
 mkdir -p "$T"
 # the build jars ship inside the committed reference project zip (HL4_project/tools/*.jar); checked against the hashes the port was built with

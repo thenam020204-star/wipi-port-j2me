@@ -69,6 +69,11 @@ def java_index():
     return idx
 
 
+class LCompound(c_ast.Compound):
+    """a block that becomes a labelled Java block (target of forward gotos)"""
+    __slots__ = ('jlabel',)
+
+
 # ---------------------------------------------------------------- Ghidra text
 def ghidra_func(name):
     text = open(GH, encoding='utf-8', errors='replace').read()
@@ -119,6 +124,35 @@ class Gen:
                 if t in OBJTYPES:
                     self.ptr.add(p)
         self.lines = []
+        self.subst = {}
+        self.blocks = set()
+        self.label_blocks(self.fn.body)
+
+    def label_blocks(self, node):
+        """forward goto to a label later in an enclosing block: wrap the statements from the one holding the goto up to the label into a
+        labelled Java block (goto -> 'break LABEL;')"""
+        for n in list(self.walk(node)):
+            if not isinstance(n, c_ast.Compound) or not n.block_items:
+                continue
+            items = n.block_items
+            i = 0
+            while i < len(items):
+                it = items[i]
+                if isinstance(it, c_ast.Label):
+                    lab = it.name
+                    j0 = None
+                    for j in range(i):
+                        if any(isinstance(x, c_ast.Goto) and x.name == lab for x in self.walk(items[j])):
+                            j0 = j
+                            break
+                    if j0 is not None:
+                        blk = LCompound(items[j0:i])
+                        blk.jlabel = lab
+                        self.blocks.add(lab)
+                        items[j0:i] = [blk]
+                        i = j0 + 2                  # past the label (now at j0 + 1)
+                        continue
+                i += 1
 
     def check(self, why):
         self.checks.append(why)
@@ -206,6 +240,8 @@ class Gen:
         if k == 'ID':
             if e.name in GLOBALS:
                 return GLOBALS[e.name]
+            if e.name in self.subst:
+                return self.subst.pop(e.name)
             if e.name.startswith('_') or e.name.startswith('DAT_') or e.name.startswith('PTR_'):
                 self.check('global %s' % e.name)
                 return e.name
@@ -267,6 +303,15 @@ class Gen:
             self.check('array access')
             return '%s[%s]' % (self.expr(e.name), self.expr(e.subscript))
         if k == 'ExprList':
+            # '(v = E, C)' with C reading v: C with the first read of v replaced by '(v = E)' (Java evaluates left to right)
+            ex = e.exprs
+            if len(ex) == 2 and isinstance(ex[0], c_ast.Assignment) and ex[0].op == '=' and isinstance(ex[0].lvalue, c_ast.ID) \
+                    and any(isinstance(x, c_ast.ID) and x.name == ex[0].lvalue.name for x in self.walk(ex[1])):
+                self.subst[ex[0].lvalue.name] = '(%s)' % self.assign(ex[0])
+                r = self.expr(ex[1])
+                if self.subst.pop(ex[0].lvalue.name, None) is not None:
+                    self.check('comma expression')
+                return r
             self.check('comma expression')
             return ', '.join(self.expr(x) for x in e.exprs)
         if k == 'StructRef':
@@ -277,6 +322,14 @@ class Gen:
 
     def cond(self, e):
         """a C condition as a Java boolean"""
+        if isinstance(e, c_ast.ExprList) and len(e.exprs) == 2 and isinstance(e.exprs[0], c_ast.Assignment) and e.exprs[0].op == '=' \
+                and isinstance(e.exprs[0].lvalue, c_ast.ID) and any(isinstance(x, c_ast.ID) and x.name == e.exprs[0].lvalue.name for x in self.walk(e.exprs[1])):
+            v = e.exprs[0].lvalue.name
+            self.subst[v] = '(%s)' % self.assign(e.exprs[0])
+            r = self.cond(e.exprs[1])
+            if self.subst.pop(v, None) is not None:
+                self.check('comma expression')
+            return r
         if isinstance(e, c_ast.BinaryOp) and e.op in ('<', '<=', '>', '>=', '==', '!='):
             s = self.expr(e)
             return s[1:-1] if s.startswith('(') and s.endswith(')') else s
@@ -392,7 +445,7 @@ class Gen:
         """an unported callee whose body is only 'return <expr of its params>;' is translated inline (CHAR_getX & co)"""
         try:
             g = Gen(n, self.idx, inner=True)
-        except Exception:
+        except BaseException:                       # not in the Ghidra output (libc import) / does not parse
             return None
         items = g.fn.body.block_items or []
         items = [x for x in items if not isinstance(x, c_ast.Decl)]
@@ -432,9 +485,14 @@ class Gen:
     def stmt(self, s, ind):
         k = type(s).__name__
         self.unported = set()
-        if k == 'Compound':
+        if k in ('Compound', 'LCompound'):
+            lab = getattr(s, 'jlabel', None)
+            if lab:
+                self.emit('%s: {' % lab, ind)
             for x in s.block_items or []:
-                self.stmt(x, ind)
+                self.stmt(x, ind + (1 if lab else 0))
+            if lab:
+                self.emit('}', ind)
             return
         if k == 'Decl':
             return                                         # locals are declared at the top
@@ -523,11 +581,15 @@ class Gen:
         if k == 'Continue':
             self.emit('continue;', ind)
             return
+        if k == 'Goto' and s.name in self.blocks:
+            self.emit('break %s;' % s.name, ind)
+            return
         if k == 'Goto':
             self.emit('if (true) throw new IllegalStateException("%s: goto %s: later"); %s' % (self.name, s.name, self.check('goto: restructure from the disassembly')), ind)
             return
         if k == 'Label':
-            self.emit('// %s: %s' % (s.name, self.check('label (goto target)')), ind)
+            if s.name not in self.blocks:
+                self.emit('// %s: %s' % (s.name, self.check('label (goto target)')), ind)
             self.stmt(s.stmt, ind)
             return
         if k == 'EmptyStatement':

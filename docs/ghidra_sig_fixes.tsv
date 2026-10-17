@@ -1,0 +1,13 @@
+# Ghidra signatures found wrong against the disassembly (tools/e_calls.py, tools/jcr.sh apply them automatically).
+# NAME<TAB>override (/N = N arguments, +r = has a return value)<TAB>evidence
+MONSTER_addHp	+r	tail call into MONSTER_setDie (0xa3604): r0 is its result
+MONSTER_bodyRemain	/1	reads r0 (the monster)
+ItemBag_release	/1	thunk to LinkedList_release(list)
+ArmsBag_release	/1	thunk to LinkedList_release(list)
+ItemBag_removeItem	/2	no decompilation (tail-call thunk); checked by the D1 agent
+ItemBag_removeCurItem_2	/2	no decompilation; checked by the D1 agent
+ItemBag_setItem	/4+r	D1 agent (disassembly)
+ItemBag_setItemDN	/4+r	D1 agent (disassembly)
+ItemBag_setItemOptAdd	/8+r	D1 agent (disassembly)
+Item_getIcon	/2+r	D1 agent: = Item_getIconName(type, idx, 0, 0)
+Item_createItem	+r	returns the item

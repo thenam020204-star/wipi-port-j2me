@@ -10,7 +10,9 @@ Usage: e_calls.py <binary.mod> <res> <out.txt> <from_tick> <to_tick> <spec>[,spe
                          tools/callcmp.py can name the differing byte ranges (the Java side: -Dcallrec.dump=..., tools/jcr.sh passes CALLDUMP)
   env CALLER=1           appends 'from=<caller function>' (reading aid; not compared by callcmp)
   env PROBE=<file>       after tick <to_tick>, calls the functions listed in <file> directly (one call per line: 'NAME arg arg ..', args =
-                         integers or pool objects 'o<type>.<idx>'; '#' comments); recorded with tick <to_tick>+1.  Java: GameTraceTest
+                         integers or pool objects 'o<type>.<idx>'; '#' comments); recorded with tick <to_tick>+1.  State for a probe:
+                         '!poke <global>[+off] <width 1/2/4> <value>' (globals _game _event _map _gameMenu _slotInfo _npcUi _questMenu
+                         _guardian) or '!poke o<type>.<idx>+off <width> <value>', applied on both sides.  Java: GameTraceTest
                          --probe <to_tick> <file> (tools/jcr.sh).  For functions no trace reaches yet.  Calls run in order on the same state.
   env SNAPLOAD=<snapshot> starts from a snapshot of tools/e_snap.py instead of tick 0 (T0.3; the scenario tokens stay the full scenario)
 
@@ -30,6 +32,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from unicorn import UC_HOOK_CODE, arm_const
 import ref_game
 from e_state import mask_for
+from and_emu import HEAP_BASE, HEAP_SIZE
 
 GH = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'ghidra', 'decomp_and2011.c')
 # pool arrays (real addresses = Ghidra - 0x10000; same table as tools/e_state.py dump()): family, ghidra address, stride, count
@@ -51,13 +54,37 @@ def parse_spec(tok):
     return m.group(1), (int(m.group(2)) if m.group(2) else None), bool(m.group(3)), mp
 
 
+SIGFIX = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'docs', 'ghidra_sig_fixes.tsv')
+
+
+def sig_fixes():
+    """docs/ghidra_sig_fixes.tsv: 'NAME<TAB>/N[+r] or +r<TAB>evidence' = Ghidra signatures checked wrong against the disassembly (shared by all)"""
+    out = {}
+    if os.path.exists(SIGFIX):
+        for ln in open(SIGFIX, encoding='utf-8'):
+            if ln.strip() and not ln.startswith('#'):
+                f = ln.rstrip('\n').split('\t')
+                out[f[0]] = f[1]
+    return out
+
+
 def spec_sigs(toks):
-    """Ghidra signatures with the spec overrides applied: {name: (arg widths, ret width)}, [names in order], {name: map}"""
-    ps = [parse_spec(t) for t in toks]
+    """Ghidra signatures with the spec overrides applied: {name: (arg widths, ret width)}, [names in order], {name: map}
+    Overrides: docs/ghidra_sig_fixes.tsv first, then the spec's own /N, +r.  A function without a Ghidra signature needs /N."""
+    fx = sig_fixes()
+    ps = []
+    for t in toks:
+        n = parse_spec(t)[0]
+        if n in fx and not re.search(r'/\d|\+r', t):
+            t = t.replace(n, n + fx[n], 1)
+        ps.append(parse_spec(t))
     sg = sigs([p[0] for p in ps])
+    for n, na, fr, mp in ps:
+        if n not in sg and na is not None:
+            sg[n] = ([4] * na, 4)                 # thunk / unreadable declaration: the spec says how many arguments
     miss = [p[0] for p in ps if p[0] not in sg]
     if miss:
-        raise SystemExit('no Ghidra signature for: ' + ' '.join(miss))
+        raise SystemExit('no Ghidra signature for: %s (give NAME/N, or add a line to docs/ghidra_sig_fixes.tsv)' % ' '.join(miss))
     for n, na, fr, mp in ps:
         aw, rw = sg[n]
         if na is not None:
@@ -75,7 +102,7 @@ def sigs(names):
         m = re.match(r'// ==== (\S+) @', ln)
         if m and m.group(1) in want:
             decl = ''
-            for k in range(i + 1, i + 12):
+            for k in range(i + 1, i + 40):           # warning comments can precede the declaration
                 if lines[k].strip() == '{':
                     break
                 decl += ' ' + lines[k]
@@ -144,7 +171,7 @@ def main():
                 if (v - a) % st:
                     return 'ptr'
                 return 'o%d.%d' % (rd(v + 0x14, 1)[0], int.from_bytes(rd(v + 0x16, 2), 'little'))
-        if 0xd0000 <= v < 0x150000 or v >= 0x10000000:       # .rodata/.data/.bss (0xd35d0..0x14e1a0) or heap
+        if 0xd0000 <= v < 0x150000 or HEAP_BASE <= v < HEAP_BASE + HEAP_SIZE:   # .rodata/.data/.bss (0xd35d0..0x14e1a0) or heap
             return 'ptr'
         return str(v - (1 << 32) if v & 0x80000000 else v)
 
@@ -222,6 +249,18 @@ def main():
             ln = ln.split('#')[0].split()
             if not ln:
                 continue
+            if ln[0] == '!poke':
+                # '!poke <target> <width 1/2/4> <value>': target = a global (_game+0x10, _event+5 ..) or a pool object (o8.3+0x24)
+                tg, w, v = ln[1], int(ln[2]), int(ln[3], 0)
+                tb, _, off = tg.partition('+')
+                if tb.startswith('o'):
+                    t, kk = tb[1:].split('.')
+                    a0, st = base[FAMILY[int(t)]]
+                    a0 += st * int(kk)
+                else:
+                    a0 = g.objaddr(tb)
+                g.write(a0 + (int(off, 0) if off else 0), (v & ((1 << (8 * w)) - 1)).to_bytes(w, 'little'))
+                continue
             args = []
             for x in ln[1:]:
                 if x.startswith('o'):
@@ -230,9 +269,16 @@ def main():
                     args.append(a + st * int(k))
                 else:
                     args.append(int(x, 0) & 0xffffffff)
-            g.call(ln[0], *args)
+            try:
+                g.call(ln[0], *args)
+            except Exception as ex:                     # emulator error (heap, unmapped access, instruction limit): say so, never silently
+                out.write('# probe error %s: %s\n' % (' '.join(ln), str(ex)[:200]))
+                sys.stderr.write('probe error %s: %s\n' % (' '.join(ln), ex))
+                del pend[:]
+                continue
             if pend and pend[-1][1] == RET_MAGIC:       # the probed call returned to the sentinel, where no code hook runs
                 onret(uc, RET_MAGIC, 0, None)
+            del pend[:]                                 # calls left open (longjmp-like exits) must not shift the depth of later lines
     out.close()
 
 

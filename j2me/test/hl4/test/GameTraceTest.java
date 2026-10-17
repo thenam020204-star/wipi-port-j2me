@@ -244,6 +244,10 @@ public class GameTraceTest {
             if (p[0].length() == 0) {
                 continue;
             }
+            if (p[0].equals("!poke")) {
+                poke(p[1], Integer.parseInt(p[2]), (int) Long.decode(p[3]).longValue());
+                continue;
+            }
             String[] args = new String[p.length - 1];
             System.arraycopy(p, 1, args, 0, args.length);
             boolean done = false;
@@ -263,6 +267,36 @@ public class GameTraceTest {
             }
         }
         r.close();
+    }
+
+    /** '!poke target width value' of a probe file (same targets as tools/e_calls.py): a global struct or a pool object, little endian */
+    static void poke(String tg, int w, int v) {
+        int plus = tg.indexOf('+');
+        String base = plus < 0 ? tg : tg.substring(0, plus);
+        int off = plus < 0 ? 0 : Integer.decode(tg.substring(plus + 1)).intValue();
+        byte[] m;
+        if (base.startsWith("o")) {
+            int d = base.indexOf('.');
+            int t = Integer.parseInt(base.substring(1, d));
+            int i = Integer.parseInt(base.substring(d + 1));
+            m = t == hl4.game.Pool.HERO ? hl4.game.Pool.hero.m : t == hl4.game.Pool.SUMMON ? hl4.game.Pool.summon.m : hl4.game.Pool.pools[t][i].m;
+        } else {
+            String[] n = {"_game", "_event", "_map", "_gameMenu", "_slotInfo", "_npcUi", "_questMenu", "_guardian"};
+            byte[][] a = {hl4.game.G.game, hl4.game.G.event, hl4.game.G.map, hl4.game.G.gameMenu, hl4.game.G.slotInfo, hl4.game.G.npcUi,
+                    hl4.game.G.questMenu, hl4.game.G.guardian};
+            m = null;
+            for (int i = 0; i < n.length; i++) {
+                if (n[i].equals(base)) {
+                    m = a[i];
+                }
+            }
+            if (m == null) {
+                throw new RuntimeException("probe: !poke of an unknown global " + base);
+            }
+        }
+        for (int k = 0; k < w; k++) {
+            m[off + k] = (byte) (v >> (8 * k));
+        }
     }
 
     static void writeRaw(String path, short[] px) throws Exception {

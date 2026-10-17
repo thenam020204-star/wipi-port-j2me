@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
 """First differing call between the ORIGINAL (tools/e_calls.py) and Java (tools/jcr.sh -> hl4.test.CallRec) call records (T0.1).
-Usage: callcmp.py <ref calls> <java calls> [--all N] [--ctx N] [--nostate]
+Usage: callcmp.py <ref calls> <java calls> [--all N] [--ctx N] [--nostate] [--only NAME[,NAME]]
 Arguments and return values are compared at the width of the Ghidra signature (header '# sig'); 'ptr' and '*' match anything.
---nostate compares only names/args/returns (not the g/e/h/m/o hashes).  Exit status 0 = no difference."""
+--nostate compares only names/args/returns (not the g/e/h/m/o hashes).  --only keeps the calls of those functions (both sides), e.g. when
+the Java side inlines another recorded function in some callers.  Exit status 0 = no difference."""
 import sys
 
 
@@ -21,6 +22,9 @@ def load(p):
             _, k, hx = ln.split()
             calls[-1]['dump'][k] = bytes.fromhex(hx)
     return sig, calls
+
+
+ONLY = False
 
 
 def norm(v, w):
@@ -45,7 +49,7 @@ def diff(r, j, sig, nostate):
         return ['name %s vs %s' % (r['name'], j['name'])]
     if r['tick'] != j['tick']:
         out.append('tick %d vs %d' % (r['tick'], j['tick']))
-    if r['depth'] != j['depth']:
+    if r['depth'] != j['depth'] and not ONLY:
         out.append('depth %d vs %d' % (r['depth'], j['depth']))
     aw, rw = sig.get(r['name'], ([], 4))
     if len(r['args']) != len(j['args']):
@@ -73,6 +77,12 @@ def main():
     nostate = '--nostate' in a
     sig, rc = load(a[0])
     _, jc = load(a[1])
+    if '--only' in a:
+        global ONLY
+        ONLY = True                             # nesting depth depends on which other functions are recorded: not compared
+        keep = set(a[a.index('--only') + 1].split(','))
+        rc = [c for c in rc if c['name'] in keep]
+        jc = [c for c in jc if c['name'] in keep]
     if rc and jc:                               # compare over the ticks both runs reached (the Java run stops at its trace end / first frame difference)
         tmax = min(rc[-1]['tick'], jc[-1]['tick'])
         if jc[-1]['ret'] == 'EXC':
