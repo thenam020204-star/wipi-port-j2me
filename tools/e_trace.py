@@ -27,11 +27,15 @@ SEEDS = [('_gameMenu', 0, 36), ('_slotInfo', 0, 48), ('_map', 0x69, 3), ('_map',
 def main():
     binp, res, out, n = sys.argv[1], sys.argv[2], sys.argv[3], int(sys.argv[4])
     script = ref_game.parse_script(sys.argv[5:])
-    g = Game(binp, res).start()
+    import e_snap
+    g, first = e_snap.boot(binp, res)          # env SNAPLOAD / SNAPSAVE: tools/e_snap.py (T0.3)
     lines = ['# ref_game.IMPL: ' + k + ' = ' + v for k, v in ref_game.IMPL.items()]
     lines.append('# clock base %d ms, tick %d ms; scenario %s' % (ref_game.CLOCK_BASE_MS, g.tick_ms, ' '.join(sys.argv[5:])))
     snap = set(int(x) for x in os.environ.get('SNAP', '').split(',') if x)
-    for i in range(n):
+    if first:
+        lines.append('# started from snapshot %s (tick %d)' % (os.environ['SNAPLOAD'], first))
+    for i in range(first, n):
+        e_snap.maybe_save(g, i)
         if i in snap:
             # RNG state before this tick: BSD randtbl (32 words, [0] = type marker), fptr/rptr as indices into the 31-word state
             tb = g.objaddr('_randtbl')

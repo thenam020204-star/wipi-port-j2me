@@ -8,10 +8,11 @@ from ref_game import Game
 binp, resdir, out, t0, t1 = sys.argv[1], sys.argv[2], sys.argv[3], int(sys.argv[4]), int(sys.argv[5])
 import ref_game
 script = ref_game.parse_script(sys.argv[6:])
-g = Game(binp, resdir).start()
+import e_snap
+g, start = e_snap.boot(binp, resdir)      # env SNAPLOAD: tools/e_snap.py (T0.3)
 first = {}
-for i in range(t1):
-    if i == t0:
+for i in range(start, t1):
+    if i == max(t0, start):
         g.enable_cover()
     ref_game.tick_script(g, script, i)
     if i >= t0:

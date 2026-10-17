@@ -36,7 +36,10 @@ public class GameTraceTest {
             } else if (line.startsWith("# snap")) {
                 snap = line;
             } else if (!line.startsWith("#")) {
-                ref[nref++] = line;
+                // indexed by tick number: a trace generated from a snapshot (tools/e_snap.py) starts at the snapshot tick
+                int tk = Integer.parseInt(line.substring(0, line.indexOf(' ')));
+                ref[tk] = line;
+                nref = Math.max(nref, tk + 1);
             }
         }
         int end = Integer.parseInt(a[1]);
@@ -118,6 +121,7 @@ public class GameTraceTest {
         java.io.PrintStream so = stateOut == null ? null : new java.io.PrintStream(new java.io.FileOutputStream(stateOut));
         int bad = 0;
         for (int t = start + 1; t < end && t < nref; t++) {
+            CallRec.tick = t;
             String wp = (String) warps.get(new Integer(t));
             if (wp != null) {
                 java.util.StringTokenizer qt = new java.util.StringTokenizer(wp, "/");

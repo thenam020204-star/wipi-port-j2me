@@ -58,6 +58,9 @@ Các module lớn còn thiếu: HERO 29/156, MONSTER 20/148, CHAR 30/113, GMenu 
 | `python3 tools/e_state.py`, `tools/e_callers.py`, `tools/and_xref.py`, `tools/stw.py` | so trạng thái `_event`/struct, tìm caller, xref, ghi bộ nhớ |
 | `python3 tools/e_cover.py <bin> work/res out.tsv t0 t1 keys…` | hàm nào của bản gốc chạy trong khoảng tick, để biết cần port gì **trước khi** chạm tới |
 | `python3 tools/port_cover.py [--list]` | % hàm đã port theo module |
+| `python3 tools/e_calls.py <bin> work/res out.txt t0 t1 SPEC… keys…` + `tools/jcr.sh SPEC ref.txt java.txt hl4.test.GameTraceTest …` + `python3 tools/callcmp.py ref.txt java.txt` | **T0.1** ghi/so từng lời gọi hàm (đối số, trả về, hash `_game`/`_event`/hero/quái/đối tượng sau lời gọi). `CALLDUMP=h,g,e,o` để callcmp in byte lệch; `CALLER=1` thêm hàm gọi. SPEC `NAME[/N][+r][=j0:j1:..]` (xem đầu `e_calls.py`). Bản release không đổi: chỉ bản sao nguồn trong `work/callrec` được chèn mã |
+| `python3 tools/e_snap.py <bin> work/res work/snap/X t1,t2 keys…` | **T0.3** snapshot bộ chạy tham chiếu trước tick t; mọi công cụ `e_*` nhận `SNAPLOAD=file.snap` (kịch bản vẫn truyền đủ), `SNAPSAVE=t1,t2 SNAPDIR=dir` để lưu khi đang chạy. Snapshot chứa bộ nhớ game gốc: chỉ ở `work/`, không commit |
+| `tools/agent_env.sh <main checkout>` | dựng `work/` cho một git worktree (agent song song): symlink đầu vào, build riêng |
 | `python3 tools/j2me_build.py build|compile|test` | build JAR/JAD đã preverify, scanner, chạy test |
 
 ## 4. Golden trace

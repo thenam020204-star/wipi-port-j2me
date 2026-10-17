@@ -336,6 +336,19 @@ class Game(Harness):
     # --- lifecycle -------------------------------------------------------------------------------------
     def start(self, logo_h=320):
         """init + startClet, with the reference configuration of IMPL (portrait hook, RNG counter, logo-phase game height)."""
+        self.install()
+        self.call('init')
+        self.call('startClet')
+        if logo_h:
+            self.write(self.objaddr('_lcdG') + 0x58, struct.pack('<i', logo_h))
+            self.write(self.objaddr('m_TouchDirectKeySize'), struct.pack('<i', 400 - logo_h))   # 80 (TitleFrame_Initialize sets it only at the title)
+            self.call('Touch_Stand_Initialize')     # centre/size of the touch skin layer and menu positions follow the poked height
+            self.call('UM_SetMenuXY')
+        return self
+
+    def install(self):
+        """the reference hooks of IMPL (portrait, RNG counter, touch-pad / consent stubs) without running any game code
+        (start() = install() + boot; tools/e_snap.py restores a snapshot onto a Game that only ran install())"""
         from unicorn import UC_HOOK_CODE
         a, sz, th = self.elf.fbyname['OptionInit']
         # OptionInit is a leaf: its final `bx lr` is the last 4-byte instruction before the literal pool
@@ -354,13 +367,6 @@ class Game(Harness):
         self.stub_touch_draw(only=('touch_drawVirtualPad',) if not self.no_touch else None)
         if self.consent is not None:
             self.stub_consent()
-        self.call('init')
-        self.call('startClet')
-        if logo_h:
-            self.write(self.objaddr('_lcdG') + 0x58, struct.pack('<i', logo_h))
-            self.write(self.objaddr('m_TouchDirectKeySize'), struct.pack('<i', 400 - logo_h))   # 80 (TitleFrame_Initialize sets it only at the title)
-            self.call('Touch_Stand_Initialize')     # centre/size of the touch skin layer and menu positions follow the poked height
-            self.call('UM_SetMenuXY')
         return self
 
     def stub_consent(self):

@@ -114,9 +114,10 @@ def main():
         binp, res, outp, ticks, total = sys.argv[2], sys.argv[3], sys.argv[4], set(int(x) for x in sys.argv[5].split(',')), int(sys.argv[6])
         import ref_game
         script = ref_game.parse_script(sys.argv[7:])
-        g = Game(binp, res).start()
+        import e_snap
+        g, first = e_snap.boot(binp, res)    # env SNAPLOAD: tools/e_snap.py (T0.3)
         lines = []
-        for i in range(total):
+        for i in range(first, total):
             ref_game.tick_script(g, script, i)
             if i in ticks:
                 for nm, b in dump(g).items():
@@ -154,4 +155,5 @@ def main():
             print('T%d %-10s %d bytes differ: %s' % (k[0], k[1], len(diffs), ' '.join('%#x-%#x(ref %s java %s)' % (r[0], r[1], a[r[0]:r[1] + 1][:6].hex(), b[r[0]:r[1] + 1][:6].hex()) for r in runs[:14])))
 
 
-main()
+if __name__ == '__main__':
+    main()

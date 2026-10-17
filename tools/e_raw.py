@@ -35,8 +35,9 @@ def main():
     import ref_game
     script = ref_game.parse_script(sys.argv[5:])
     os.makedirs(out, exist_ok=True)
-    g = Game(binp, res).start()
-    for i in range(max(ticks) + 1):
+    import e_snap
+    g, first = e_snap.boot(binp, res)        # env SNAPLOAD: tools/e_snap.py (T0.3)
+    for i in range(first, max(ticks) + 1):
         ref_game.tick_script(g, script, i)
         if i in ticks:
             w, h, px = g.frame()
