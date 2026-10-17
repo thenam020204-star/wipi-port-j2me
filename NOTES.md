@@ -11,6 +11,7 @@ Chi tiết layout: `docs/binary_layout.md`. Manifest/hash: `docs/manifest_*.tsv`
 | JAR / heap | JAR không giới hạn (dự kiến ~3 MB), heap ≥ 2 MB | người dùng chọn; BSS KTF 387872 B + tài nguyên |
 | Thiết bị | lớp S60v3 / S40 đời cao, 240×320 | INFERRED |
 | Nguồn sự thật | **AND2011** `영웅서기4.apk!/res/raw/jarfile.mp3!/binary.mod` (sha256 `995b59cc…`) + tài nguyên `res/` của jar đó; KTF/LGT 2010 chỉ đối chiếu | người dùng: "bản nào mới nhất và đầy đủ thì port bản đó" (2026-10-15) |
+| Giao diện (HUD, phím mềm, ô phím tắt, menu) | **Kết hợp**: logic + dữ liệu AND2011, giao diện bàn phím lấy từ bản **KTF** (ảnh người dùng gửi là KTF đã Việt hoá); LGT 2010 dùng để đối chiếu nếu xác minh được là cùng giao diện | người dùng chọn 2026-10-17. Lý do: AND2011 chuyển ô phím tắt và nhãn phím mềm xuống bàn phím ảo cảm ứng (ngoài vùng game, không port), nên trên máy phím người chơi không thấy ô tắt. Đây là **lệch có chủ đích** so với AND2011 |
 
 ## Quyết định nguồn: AND2011 (2026-10-15)
 | Bản | Ngày build binary | Ver/ID | Ghi chú |

@@ -40,6 +40,7 @@ Không có giai đoạn này thì không nên giao việc cho agent: thiếu tes
 | T0.3 | **Snapshot cho bộ chạy tham chiếu:** lưu/khôi phục trạng thái emulator (bộ nhớ, thanh ghi, trạng thái HLE) ở tick N, để `e_trace/e_ret/e_raw` chạy tiếp từ snapshot thay vì từ đầu. | Trace M từ snapshot 4500 cho kết quả giống hệt chạy từ đầu ở 4500..9000; thời gian giảm tương ứng. |
 | T0.4 | **Kịch bản thử theo module**: mỗi module một kịch bản warp + fixture (ví dụ map có boss, NPC shop, summon) trong `docs/golden_scripts/`, sinh trace gốc ở nền. | Mỗi kịch bản chạm được hàm đích (kiểm bằng `tools/e_cover.py`). |
 | T0.5 | **Bản giao việc cho agent** `docs/AGENT_BRIEF.md`: quy tắc J2ME, mẫu code, cách chạy T0.1, cách tự kiểm (build, scanner, test), định dạng nộp, quy tắc leo thang. | Một agent Sonnet thử port 1 module D1 chỉ với brief này mà không cần hỏi thêm. |
+| T0.7 | **Giao diện bàn phím từ KTF** (quyết định 2026-10-17, xem `NOTES.md`): (a) xác minh bản LGT 2010 có cùng HUD với KTF không (chạy LGT 2010 trong bộ chạy tham chiếu hoặc so tài nguyên/chuỗi UI); (b) liệt kê phần giao diện khác AND2011: thanh dưới (ô tắt 1/3/5/7/9/0 + icon, HP/MP), thanh tên/cấp quái phía trên, nhãn phím mềm ("Phím phải SHOP"), menu; (c) kiểm ảnh UI của KTF có trong tài nguyên AND2011 không (so hash `docs/manifest_ktf.tsv` ↔ `docs/manifest_android.tsv`); (d) tìm hàm vẽ tương ứng trong KTF (raw Thumb, không symbol) bằng ghép chuỗi/cấu trúc với AND2011 (`tools/xmatch_strings.py`, `docs/xmatch_strings_ktf_so.tsv`). Không đoán bố cục từ ảnh chụp: tọa độ phải lấy từ code gốc. | Báo cáo (a)–(d) + danh sách hàm; người dùng gửi lại ảnh chụp KTF nếu cần (ảnh không đưa lên git vì chứa tài nguyên gốc). |
 | T0.6 | Lựa chọn class test: lối tắt chọn class 1–3 (thay màn chọn class E4), ghi rõ là tạm. | Vào game được với cả 4 class; trace gốc tương ứng sinh được. |
 
 ## 4. Giai đoạn 1: gameplay, theo thứ tự (số trong ngoặc = hàm đã port / tổng của module, theo `tools/port_cover.py`)
@@ -58,7 +59,7 @@ Không có giai đoạn này thì không nên giao việc cho agent: thiếu tes
 5. **Menu trong game:** `GameMenuFrame` (0/14), `GMenu` (5/78): túi đồ, trang bị, chỉ số, skill; trạng thái game ≠ 0/2 của `MainGameFrame` (20/50), thoát về menu bằng phím mềm 2.
 6. **Shop và NPC:** `NpcUi` (0/20), `NPC` (26/36) gồm `NPC_setMove`; hồi sinh ở game over (`MainGameFrame_revive`, shop bùa `NpcUi(6, 10)`).
 7. **Đi lại giữa vùng:** worldmap (`Event_ToWorldmap`, `EVENT_worlmapTick`, `MainGameFrame_endMapCalling`), lệnh script chuyển map và shop (chỉ phần gameplay của `Event`/`IT`).
-8. **HUD và map:** icon ô dùng nhanh, icon buff, minimap, tile animation (`Map` 52/128), `Map_screenLoseEye`, `SprObject_draw`, `SPR` (12/35).
+8. **HUD và map:** HUD bàn phím theo KTF (sau T0.7; đây là việc **D3** vì nguồn KTF không có symbol và phải ghép hai binary), icon ô dùng nhanh, icon buff, minimap, tile animation (`Map` 52/128), `Map_screenLoseEye`, `SprObject_draw`, `SPR` (12/35).
 
 ### 4c. D3 khó (Opus)
 - **Lưu/tải game trên RMS** (`LoadGameData`, save): chọn cách ánh xạ file save của bản gốc sang RecordStore, chịu được lỗi ghi giữa chừng, kích thước bản ghi trên máy thật. Quyết định định dạng → ghi `NOTES.md`.
@@ -95,5 +96,5 @@ E4 story mode (trace L là trace nghiệm thu), cutscene và hội thoại còn 
 
 1. Dựng môi trường nếu container mới (`docs/HANDOFF.md` §2), sinh lại trace nền (`docs/HANDOFF_E6.md` §4–§5).
 2. Hỏi 2 câu ở §1.
-3. Làm T0.1 → T0.3 → T0.5 → T0.6 (T0.2 nếu được duyệt, T0.4 song song khi trace chạy nền).
+3. Làm T0.1 → T0.3 → T0.5 → T0.6 → T0.7 (T0.2 nếu được duyệt, T0.4 song song khi trace chạy nền).
 4. Thử agent Sonnet với 1 module D1 (gợi ý: `Item` + `ItemBag`), đo, chỉnh brief, rồi mới mở rộng song song.
