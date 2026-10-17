@@ -17,3 +17,8 @@ MP_getNew	/2	D1 agent: tail-call thunk of MP_search(type, out position); no deco
 MAPOBJ_set	/2	D1 agent: OBJ_set(o, pos) reads r1 = the position MP_Initialize passes
 DropItem_set	/2	D1 agent: OBJ_set(o, pos) reads r1 = the position MP_Initialize passes
 PopupBox_outline	/6+r	disassembly: loads 6 argument slots (r0-r3 + 2 stack) and forwards to PopupBox_window(..., 0, 0); returns its value (D1 agent)
+BattleProc_setSkillEff_Magical	/9+r	body is mov r0,#0; bx lr, the caller (BattleProc_getSkillDamage 0xcc640) passes 9 arguments
+BattleProc_setSkillEff_Class	/9+r	same stub, caller BattleProc_setSkillEff 0xcef48 passes 9 arguments
+BattleProc_setSkillEff_Summon	/9+r	same stub, caller 0xcef98 passes 9 arguments
+BattleProc_setSkillEff_Item	/9+r	same stub, caller 0xceee4 passes 9 arguments
+CHAR_addCommonEffect2	/8	reads r0-r3 + 4 stack words ([sp+0x38..0x44] after the 0x28 frame and the 4 pushed registers)

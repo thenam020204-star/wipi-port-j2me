@@ -361,6 +361,7 @@ public final class Chars {
         return r;
     }
 
+    /** CHAR_removeCommonEffect(c, kind, sub) @0x3af04: removes the target effects (type 6) of kind / sub from the target-effect list (+0x13c) */
     public static int removeCommonEffect(Char c, int a, int b) {
         return searchAndRemoveEffect(c.targetEffects, 1, 6, a, b);
     }
@@ -379,12 +380,14 @@ public final class Chars {
         }
     }
 
+    /** CHAR_removeTargetEffBad(c, n) @0xcb5e0 (the 4 effect ids of the byte table C.6.16502) */
     public static void removeTargetEffBad(Char c, int n) {
         for (int i = 0; i < 4; i++) {
             removeCommonEffect(c, n, Tab.EFF_BAD[i]);
         }
     }
 
+    /** CHAR_removeTargetEffMagic(c, n) @0xcb540 (the 6 effect ids of the byte table C.7.16515; for a hero of class 0 / 1 also effect 0x28 of kind 7) */
     public static void removeTargetEffMagic(Char c, int n) {
         int cls = Pool.hero.m[0x16b];
         for (int i = 0; i < 6; i++) {
@@ -409,6 +412,142 @@ public final class Chars {
             }
         }
         return false;
+    }
+
+    /**
+     * CHAR_removeBuffEffect(c, kind, sub) @0x3af54: like CHAR_removeTargetEffect but the effect is first taken out of the global object list too
+     * (it is not in there, so that is a lookup only); true when one was found
+     */
+    static boolean removeBuffEffect(Char c, int kind, int sub) {
+        if ((kind | sub) < 0) {
+            return false;
+        }
+        for (Obj p = c.targetEffects.head; p != null; p = p.next) {
+            if (Obj.structType(p) == 6 && p.m[0x20] == kind && p.m[0x21] == sub) {
+                G.objList.remove(p);
+                c.targetEffects.remove(p);
+                G.targetEffectList.remove(p);
+                return true;
+            }
+        }
+        return false;
+    }
+
+    /**
+     * CHAR_addEtcStatus(c, tgt, slot, type, val, dur) @0xcb474: puts a status (+0x10c + 8 slot: active, +0x10e type, +0x110 value, +0x112 duration) on tgt.
+     * A hero of class 2 wearing the fire / ice weapon enchant refuses the slot-2 type 1 status (returns 0); slot 3 on a hero sets +0xd17 of the hero.
+     */
+    static int addEtcStatus(Obj c, Char tgt, int slot, int type, int val, int dur) {
+        byte[] m = tgt.m;
+        if (slot == 2) {
+            if (Obj.structType(tgt) == 2 && m[0x16b] == 2) {
+                if (isFireEnchantBuff(tgt)) {
+                    if (type == 1) {
+                        return 0;
+                    }
+                } else if (isIceEnchantBuff(tgt)) {
+                    if (type == 1) {
+                        return 0;
+                    }
+                }
+            }
+        } else if (slot == 3) {
+            if (Obj.structType(tgt) == 2) {
+                Pool.hero.m[0xd17] = 1;
+            }
+        }
+        int o = slot * 8;
+        m[0x10e + o] = (byte) type;
+        Bytes.w16(m, 0x112 + o, dur);
+        Bytes.w16(m, 0x110 + o, val);
+        m[0x10c + o] = 1;
+        return 1;
+    }
+
+    /**
+     * CHAR_removeBuff(c, idx, flag) @0xcbc68: drops buff slot idx (+0xf4, 3 x 8 bytes): the slots above are moved down (only the moves of slots 1 and 2
+     * exist: an index of 2 or more moves nothing, an index below 0 or the flag 1 start at slot 0), the count (+0x12c) goes down, the hero / monster stats
+     * are re-derived and a hero still holding buffs shows the effect again.
+     */
+    static void removeBuff(Char c, int idx, int flag) {
+        byte[] m = c.m;
+        int i;
+        boolean run;
+        if (flag == 1 || idx < 0) {
+            i = 0;
+            run = true;
+        } else {
+            i = idx & 0xffff;
+            run = (short) i <= 1;
+        }
+        while (run) {
+            int o = i * 8;
+            int k = m[0xf6 + o] & 0xff;
+            if (Obj.structType(c) == 2 && m[0x16b] == 2 && (k == 7 || k == 8)) {
+                Pool.hero.m[0xd13] = 0;
+            }
+            Bytes.copy(m, 0xfc + o, m, 0xf4 + o, 8);
+            Bytes.fill(m, 0xfc + o, 0, 8);
+            i = (i + 1) & 0xffff;
+            run = (short) i <= 1;
+        }
+        m[0x12c] = (byte) (m[0x12c] - 1);
+        statusAfterBuff(c);
+        if (Obj.structType(c) == 2 && m[0x12c] > 0) {
+            removeBuffEffect(c, 7, 1);
+            TEffects.addCommonEffect2(c, c, 0, 1, getX(c), getY(c), Bytes.s16(m, 0xfa), 1);
+        }
+    }
+
+    /** the tail shared by CHAR_addBuff / CHAR_removeBuff: HERO_set_HeroStatus(0, 0) for the hero, MONSTER_setMonsterStatus for a monster */
+    private static void statusAfterBuff(Char c) {
+        int t = Obj.structType(c);
+        if (t == 2) {
+            Hero.setHeroStatus(0, 0);
+        } else if (t == 3) {
+            Monsters.setMonsterStatus(c);
+        }
+    }
+
+    /**
+     * CHAR_addBuff(c, tgt, dur, id, info) @0xcbf3c: a buff (+0xf4 + 8 n: active, +0xf5 info, +0xf6 id, +0xfa duration) on tgt, replacing a buff of the same id
+     * (and, for a class 2 hero, the fire enchant when the ice one comes and the other way round); a full list (3) drops slot 0 first.
+     */
+    static int addBuff(Obj c, Char tgt, int dur, int id, int info) {
+        byte[] m = tgt.m;
+        if (m[0x12c] == 3) {
+            removeBuff(tgt, 0, 1);
+        }
+        if (m[0x12c] > 0) {
+            int i = 0;
+            int o = 0;
+            do {
+                if ((m[0xf6 + o] & 0xff) == id) {
+                    removeBuff(tgt, (byte) i, 0);
+                }
+                if (Obj.structType(tgt) == 2 && m[0x16b] == 2) {
+                    if (id == 7) {
+                        if (isIceEnchantBuff(tgt) && m[0xf6 + o] == 8) {
+                            removeBuff(tgt, (byte) i, 0);
+                        }
+                    } else if (id == 8) {
+                        if (isFireEnchantBuff(tgt) && m[0xf6 + o] == 7) {
+                            removeBuff(tgt, (byte) i, 0);
+                        }
+                    }
+                }
+                i = (i + 1) & 0xff;
+                o += 8;
+            } while (m[0x12c] > (byte) i);
+        }
+        int o = m[0x12c] * 8;
+        m[0xf4 + o] = 1;
+        m[0xf5 + o] = (byte) info;
+        m[0xf6 + o] = (byte) id;
+        Bytes.w16(m, 0xfa + o, dur);
+        m[0x12c] = (byte) (m[0x12c] + 1);
+        statusAfterBuff(tgt);
+        return 0;
     }
 
     /** Eff_deleteEffectInList(c) @0x4a17c: drops the character's own effect objects */

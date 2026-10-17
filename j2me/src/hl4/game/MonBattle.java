@@ -186,7 +186,7 @@ public final class MonBattle {
             }
             boolean magic = ((kind - 0x29) & 0xff) <= 9 && kind != 0x30;
             if (magic) {
-                later("BattleProc_setSkillEff_Magical");
+                BattleProc.setSkillEffMagical(self, tgt, kind, 0, 0, skill, infoType, hero, mon);   // an empty function; the result is dropped
             } else if (kind == 0x23 || ((kind - 0x33) & 0xff) <= 9 || kind == 0x30) {
                 res = physical(self, tgt, kind, skill, infoType, hero, mon);
             }

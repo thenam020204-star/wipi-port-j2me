@@ -811,7 +811,7 @@ public final class Maps {
             if (Obj.structType(o) == 3) {
                 Chars.deleteEffectInList((Char) o);
                 Chars.deleteEffectInObjList((Char) o);
-                // MONSTER_release_ai = EnemyAIParsing_Finalize: only frees tables that MONSTER_dataLoad_ai allocates (not ported: the pointers stay 0)
+                Monsters.releaseAi((Char) o);               // MONSTER_release_ai = EnemyAIParsing_Finalize
             }
         }
         for (int i = 0; i < 3; i++) {

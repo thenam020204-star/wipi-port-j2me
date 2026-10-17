@@ -159,7 +159,7 @@ public final class HeroBattle {
             }
             boolean magic = ((kind - 0x29) & 0xff) <= 9 && kind != 0x30;
             if (magic) {
-                later("BattleProc_setSkillEff_Magical");
+                BattleProc.setSkillEffMagical(self, tgt, kind, (short) B[i], C[i], skill, infoType, hero, mon);      // an empty function; the result is dropped
             } else if (kind == 0x23 || ((kind - 0x33) & 0xff) <= 9 || kind == 0x30) {
                 res = MonBattle.physical(self, tgt, kind, skill, infoType, hero, mon);
             }
@@ -178,13 +178,13 @@ public final class HeroBattle {
             }
             self.m[0xd0d] = (byte) i;
             if (((kind - 0x3d) & 0xff) <= 9 || kind == 0x59 || ((kind - 0x47) & 0xff) <= 8 || kind == 0x55 || kind == 0x5f || kind == 0x58 || kind == 0x56) {
-                later("BattleProc_setSkillEff_Etc: kind " + kind);
+                res = BattleProc.setSkillEffEtc(self, tgt, kind, (short) B[i], C[i], skill, infoType, hero, mon, 0);
             } else if (((kind - 0x51) & 0xff) <= 3) {
-                later("BattleProc_setSkillEff_Class: kind " + kind);
+                res = BattleProc.setSkillEffClass(self, tgt, kind, (short) B[i], C[i], skill, infoType, hero, mon);
             } else if (((kind - 0x5b) & 0xff) <= 3) {
-                later("BattleProc_setSkillEff_Summon: kind " + kind);
+                res = BattleProc.setSkillEffSummon(self, tgt, kind, (short) B[i], C[i], skill, infoType, hero, mon);
             } else if (((kind - 0x65) & 0xff) <= 0x24) {
-                later("BattleProc_setSkillEff_Item: kind " + kind);
+                res = BattleProc.setSkillEffItem(self, tgt, kind, (short) B[i], C[i], skill, infoType, hero, mon);
             }
         }
         return res & 0xff;

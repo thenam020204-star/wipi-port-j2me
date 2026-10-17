@@ -73,14 +73,66 @@ public final class EnemyAi {
         EnemyAi ai = new EnemyAi();
         ai.d = a;
         m[0x20c] = (byte) a.kind;
-        m[0x220] = (byte) a.trigCnt.length;
-        ai.trigTok = new It.Tok(a.trigScript.length > 0 ? a.trigScript : null, 0, a.trigScript.length);
-        m[0x234] = (byte) a.actCnt.length;
-        ai.actState = new byte[a.actCnt.length * 0xc];
-        ai.actTok = new It.Tok(a.actScript.length > 0 ? a.actScript : null, 0, a.actScript.length);
+        int off = init(o, ai, a, 1, 1);
+        off = init(o, ai, a, off, 0);
         Bytes.w32(m, 0x264, a.strings.length);
         o.ai = ai;
         testInit(m);
+    }
+
+    /**
+     * EnemyAIParsing_Init(o, script, buf, off, section) @0xd18f0: reads one section of the AI file that starts at 'off' (section 1: the trigger scripts
+     * -> count +0x220, tables +0x224 / +0x22c and the position table of the script struct; section 0: the action scripts -> count +0x234, tables +0x238 /
+     * +0x240, the 12-byte action state +0x288 and the positions) and its script bytes (kept as the token 'trigTok' / 'actTok'); returns the offset after
+     * the section.  The file is parsed once into the AiData ('a', see hl4.data.AiData, which also derives the trigger positions: 1, then each
+     * previous position + 2 + size), so only the counts, the tokens and the action state are set here.
+     */
+    static int init(Char o, EnemyAi ai, AiData a, int off, int section) {
+        byte[] m = o.m;
+        int n;
+        int len;
+        int end;
+        if (section != 0) {
+            n = a.trigCnt.length;
+            len = a.trigScript.length;
+            m[0x220] = (byte) n;
+            ai.trigTok = new It.Tok(len > 0 ? a.trigScript : null, 0, len);
+            end = off + 3 + 2 * n;
+        } else {
+            n = a.actCnt.length;
+            len = a.actScript.length;
+            m[0x234] = (byte) n;
+            ai.actState = new byte[n * 0xc];
+            ai.actTok = new It.Tok(len > 0 ? a.actScript : null, 0, len);
+            end = off + 3 + 3 * n;
+        }
+        return len > 0 ? end + len : end;
+    }
+
+    /**
+     * EnemyAIParsing_scriptRelease(script) @0xd1758: frees the three blocks of a script struct (token +0x10, script bytes +0, positions +8); nothing
+     * when the struct is not there.  Here the token goes (the script bytes belong to the shared AiData).
+     */
+    static void scriptRelease(Char o, int act) {
+        EnemyAi ai = o.ai;
+        if (ai == null) {
+            return;
+        }
+        if (act != 0) {
+            ai.actTok = null;
+        } else {
+            ai.trigTok = null;
+        }
+    }
+
+    /**
+     * EnemyAIParsing_Finalize(o) @0xd1794: releases both script structs and every table of the monster (counts / sizes +0x224.., action state +0x288,
+     * the strings and their tables +0x24c / +0x258 / +0x260); the pointer slots go back to 0.  Here that is dropping the EnemyAi object.
+     */
+    static void release(Char o) {
+        scriptRelease(o, 0);
+        scriptRelease(o, 1);
+        o.ai = null;
     }
 
     /** +0x2b0: the string picked by action 10 (IT_GetString_2), null = none */

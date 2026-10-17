@@ -468,7 +468,7 @@ public final class Monsters {
 
     /** MONSTER_release_ai @0x9fa18 = EnemyAIParsing_Finalize: frees the script state (the struct bytes are left as they are) */
     public static void releaseAi(Char o) {
-        o.ai = null;
+        EnemyAi.release(o);
     }
 
     /** SPR_destroy(o+0x20) @0xc1734 */

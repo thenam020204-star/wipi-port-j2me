@@ -117,6 +117,8 @@ Làm **sau** khi gameplay và story đã khớp trace; không làm xen vào lúc
 |---|---|---|---|---|
 | D1 `UM`/`PointerList` (agent Sonnet, đợt 1 song song) | 34 | 15 phút | 0 | 0 lệch |
 | D1 `LinkedList`/`MP`/`OBJ`/`MAPOBJ`/`DropItem` (agent Sonnet, đợt 1) | 42 | 24 phút | 0 | 0 lệch; tìm + sửa 2 lỗi cũ (`Obj.objSet`, `Maps.dropItemInit`) |
+| D1 `Focus`/`PopupBox` (agent Sonnet, đợt 1 tiếp tục từ patch WIP) | 18 + 4 phụ thuộc | 13 phút (+ phần trước khi dừng) | 0 | 0 lệch; hàm vẽ kiểm bằng trạng thái/đối số (không so pixel); 1 `later` (`setBoxWithXyPos` type 1 ngoài bảng) |
+| D1 `BattleProc`/`EnemyAIParsing` (agent Sonnet, đợt 1 tiếp tục từ patch WIP) | 9 + 5 phụ thuộc + 3 javadoc | 35 phút (+ phần trước khi dừng) | 0 | 0 lệch; `setSetItemPassive` chưa nối (chờ `Item_loadSetOptData`); 5 lỗi cũ ngoài module ghi ở báo cáo |
 | D1 `Item`/`ItemBag`/`ArmsBag` (agent Sonnet thử nghiệm T0.5, 2026-10-17) | 37 (30 port mới + 7 thêm javadoc) + 4 hàm phụ thuộc | 33 phút (1 agent) | 0 (1 hàm kiểm một phần: `Item_TestSetItem`, emulator dừng) | mọi hàm kiểm bằng probe, 0 lệch; 15 góp ý cho brief đã áp dụng |
 
 ## 8. Phiên kế tiếp bắt đầu thế nào

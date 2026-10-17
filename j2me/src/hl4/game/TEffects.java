@@ -104,6 +104,11 @@ public final class TEffects {
         charTargetEffect(c, tgt, body, 9, eff, 0, (byte) s2, (short) life, -1, -1, -1, x, y, 1);
     }
 
+    /** CHAR_addCommonEffect2(c, tgt, body, eff, x, y, life, flag) @0x3c5a0: like CHAR_addCommonEffect but with the delay 0, the life (short) and the flag (byte) given */
+    static void addCommonEffect2(Char c, Char tgt, int body, int eff, int x, int y, int life, int flag) {
+        charTargetEffect(c, tgt, body, 9, eff, 0, 0, (short) life, -1, -1, -1, x, y, (byte) flag);
+    }
+
     /** CHAR_addEffect(c, kind, sub, num) @0x3c824: an Effect (pool type 5) in the character's effect list (+0x130) */
     static void addEffect(Char c, int kind, int sub, int num) {
         if (sub == -1) {
