@@ -31,6 +31,8 @@ public final class G {
     /** _itemBag (532 bytes): LinkedList of items at +4, pointer list at +0x10 */
     public static final LList itemBag = new LList();
     public static final PList itemBagPtrs = new PList();
+    /** _itemBag+1 (s8): the inventory tab the bag UI shows (0 = plain bag; otherwise the tab-sorted pointer list is used) */
+    public static int itemBagTab;
     /** _armsBag (16 bytes) */
     public static final LList armsBag = new LList();
     public static int itemBagMax;

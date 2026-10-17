@@ -10,15 +10,16 @@ Bản gốc chạy được trong một emulator kiểm chứng (`tools/ref_game
 2. **Không cấp phát trong vòng lặp game / `paint`**: không `new`, không nối `String` trong đường gọi mỗi tick. Dùng buffer tĩnh như code hiện có.
 3. **Giữ đúng kiểu và độ rộng của bản gốc**: struct gốc là `byte[]` với offset gốc; đọc/ghi bằng `Bytes.s8/u8/s16/u16/s32/w8/w16/w32` đúng độ rộng mà disassembly dùng (`ldrb` = u8, `ldrsb` = s8, `ldrh`/`ldrsh` = 16 bit, `ldr` = 32 bit). Phép cắt bit/dấu phải giống hệt (`(byte)`, `(short)`, `& 0xff`).
 4. **Disassembly thắng pseudo-C.** Pseudo-C Ghidra chỉ để đọc nháp; nó hay sai ở vòng lặp, signed/unsigned, số đối số, đối số trên stack, bảng hằng `C.x.y` chép lên stack.
-5. **Mỗi hàm Java tương ứng một hàm gốc có javadoc mở đầu bằng tên gốc và địa chỉ thật**: `/** TênGốc(a, b) @0x92c48: mô tả ngắn */`. Công cụ đếm tiến độ và công cụ kiểm từng hàm (§4) tìm hàm qua dòng này. Thiếu dòng này = hàm coi như chưa port.
+5. **Mỗi hàm Java tương ứng một hàm gốc có javadoc mở đầu bằng tên gốc và địa chỉ thật, trên cùng dòng đầu**: `/** TênGốc(a, b) @0x82c48: mô tả ngắn */`. Công cụ đếm tiến độ và công cụ kiểm từng hàm (§4) tìm hàm qua dòng này. Thiếu dòng này = hàm coi như chưa port. Địa chỉ thật = như `tools/disf.py` in. Một số file cũ (ví dụ `Items.java`) ghi địa chỉ Ghidra (= thật + 0x10000): công cụ chấp nhận cả hai; **không** sửa hàng loạt địa chỉ của người khác, chỉ dùng địa chỉ thật cho dòng bạn viết.
 6. **Nhánh chưa port**: `throw new IllegalStateException("TênGốc: <nhánh>: later");`. Không viết stub giả rồi báo là xong. Không đoán.
-7. **Không đổi chữ ký (descriptor) của method đã có**, không đổi tên lớp/method đã có, không sửa file ngoài phạm vi được giao trừ chỗ gọi tối thiểu. Không sửa `tools/`, `golden/`, `docs/` trừ báo cáo của bạn.
+7. **Không đổi chữ ký (descriptor) của method đã có**, không đổi tên lớp/method đã có. Ngoài file được giao chỉ sửa tối thiểu (thêm trường vào `G`, thêm `case` vào `Pool.ret`, thay một `later` bằng lời gọi hàm bạn vừa kiểm) và **liệt kê từng chỗ** trong báo cáo. Hàm phụ thuộc chưa ai port mà hàm được giao cần: được port nếu nhỏ (D1), ghi riêng mục "port thêm" để người review khử trùng; nếu lớn thì để `later`. Không sửa `tools/`, `golden/`, `docs/` trừ báo cáo của bạn và `docs/ghidra_sig_fixes.tsv` (§4).
 8. **Trước khi viết một hàm, tìm xem đã có bản port chưa**: `grep -rn "TênGốc" j2me/src` và tìm cả method trùng chức năng không có javadoc (ví dụ `Items.getCnt` là `Item_getCnt` nhưng thiếu `@0x`: khi đó **thêm javadoc** cho method có sẵn, không viết bản thứ hai). Đã có hai bản trùng (`MONSTER_addHp`, `MONSTER_lookHero`, `BattleProc_getSkillDamage`) — đừng tạo thêm.
 
 ## 2. Môi trường
 
 - Luôn `export LC_ALL=C.UTF-8` (đường dẫn có tiếng Hàn). Binary: `B="work/orig/android/영웅서기4.apk!/res/raw/jarfile.mp3!/binary.mod"`.
-- Nếu bạn chạy trong **git worktree** riêng (agent song song): chạy một lần `tools/agent_env.sh <đường dẫn checkout chính>` để có `work/` (đầu vào dùng chung qua symlink, build riêng). Không chạy `tools/setup_env.sh`.
+- Nếu bạn chạy trong **git worktree** riêng (agent song song): kiểm `git log -1` là commit được giao (nếu worktree thiếu `docs/AGENT_BRIEF.md` thì `git reset --hard <commit được giao>` trên nhánh worktree của bạn), rồi chạy một lần `tools/agent_env.sh <đường dẫn checkout chính>` để có `work/` (đầu vào dùng chung qua symlink, build riêng). Không chạy `tools/setup_env.sh`.
+- Sandbox của agent có thể chặn lệnh shell "phức tạp" (heredoc nhiều dòng, `$(...)`, `time`): viết script vào `work/cr/` trong worktree rồi gọi trực tiếp.
 - Địa chỉ Ghidra = địa chỉ thật + 0x10000. Javadoc ghi **địa chỉ thật** (như `tools/disf.py` in ra).
 
 ## 3. Công cụ đọc bản gốc
@@ -60,6 +61,11 @@ python3 tools/callcmp.py work/cr/ref.txt work/cr/java.txt
 - Mỗi dòng kết quả so: tên, đối số, giá trị trả về (theo độ rộng chữ ký Ghidra), hash `_game`/`_event`/hero/quái và hash của từng object đối số **sau** lời gọi.
 - Lệch hash: chạy lại cả hai phía với `CALLDUMP=h,g,e,o` (biến môi trường cho cả `e_calls.py` và `jcr.sh`) để `callcmp` in ra **byte** lệch (offset trong struct). `CALLER=1` thêm cột hàm gọi (phía gốc).
 - Chữ ký Ghidra sai số đối số / trả về void sai: sửa bằng SPEC `TÊN/N` (ghi N đối số), `TÊN+r` (ghi giá trị trả về), `TÊN=j0:j1:-` (đối số gốc i ↔ tham số Java j_i). Kiểm bằng disassembly trước khi sửa.
+- **Dựng trạng thái cho probe**: dòng `!poke <đích> <độ rộng 1/2/4> <giá trị>` trong file probe, áp dụng ở cả hai phía theo thứ tự; đích = global (`_game+0x5d`, `_event+0x206`, `_map`, `_gameMenu`, `_slotInfo`, `_npcUi`, `_questMenu`, `_guardian`) hoặc object pool (`o8.3+0x25`). Trường Java không nằm trong mảng byte (ví dụ `G.itemBagTab` = `_itemBag+1`) không poke được và không có trong hash: kiểm qua giá trị trả về / hash object của các lời gọi sau.
+- **Tham số Java là `byte[]`/`LList`/`PList`** (con trỏ trong bản gốc): dispatcher probe không gọi được. Cách được chấp nhận: lớp adapter TẠM trong `j2me/src` chỉ để chạy kiểm (chuyển đối số), tắt tạm javadoc hàm thật trong lúc đo, rồi **xoá adapter, khôi phục javadoc** trước khi nộp; ghi phương pháp vào báo cáo và giữ bản adapter ở `work/cr/`.
+- **Chữ ký Ghidra sai hoặc không đọc được** (thunk tail-call không có phần giải mã): kiểm bằng disassembly rồi thêm một dòng vào `docs/ghidra_sig_fixes.tsv` (`TÊN<TAB>/N[+r]<TAB>bằng chứng`); `e_calls.py`/`jcr.sh` tự áp dụng. Xem file đó trước: nhiều chữ ký đã được sửa.
+- **Tail-call** (`b` thay vì `bl` ở cuối hàm gốc) chỉ tạo **một** dòng (hàm đích) trong bản ghi gốc, còn Java gọi lồng tạo hai. Hàm gọi nhau kiểu này: đo trong các lượt riêng (mỗi lượt một hàm) hoặc giữ đúng cấu trúc gọi của bản gốc. `callcmp --only TÊN` lọc từng hàm (bỏ qua độ sâu lồng).
+- Lời gọi probe làm emulator lỗi (hết heap, truy cập vùng chưa map) được ghi `# probe error …` vào file ref và in ra stderr: coi như chưa kiểm được phần đó, báo trong mục Leo thang.
 - Snapshot có sẵn: `work/snap/M_500.snap`, `M_4500.snap`, `M_4800.snap` (trace M), `work/snap/N/snap_4500.snap`, `snap_8000.snap` (trace N). Tạo thêm: `python3 tools/e_snap.py "$B" work/res work/snap/X <tick> $(cat docs/golden_scripts/scM.txt)` (kịch bản luôn truyền **đầy đủ** `scX.txt`).
 - Phía Java phải đạt cùng trạng thái ở tick T: trace dùng cho `--probe` phải là trace Java đang khớp tới T (M khớp trọn 501..9000; N khớp tới 4737).
 

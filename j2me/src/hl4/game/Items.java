@@ -31,13 +31,22 @@ public final class Items {
         return p + 2;
     }
 
-    /** Item_getItemCnt(type, idx) @0x9361c: how many of the item the bag holds (-1 when type or idx is -1) */
+    /** Item_getItemCnt(type, idx) @0x8361c: how many of the item the bag holds (-1 when type or idx is -1) = Item_getItemCnt_ETC(type, idx, 0) */
     public static int getItemCnt(int type, int idx) {
+        return getItemCntEtc(type, idx);
+    }
+
+    /** Item_getItemCnt_ETC(type, idx) @0x83570: the loop of getItemCnt (the original's third register argument is never read) */
+    public static int getItemCntEtc(int type, int idx) {
         if (type == -1 || idx == -1) {
             return -1;
         }
+        LList l = G.itemBag;
+        if (l.isEmpty()) {
+            return 0;
+        }
         int n = 0;
-        for (Obj p = G.itemBag.head; p != null; p = p.next) {
+        for (Obj p = l.head; p != null; p = p.next) {
             if (getType(p) == type && getIdx(p) == idx) {
                 n += getCnt(p);
             }
@@ -108,7 +117,7 @@ public final class Items {
             if (item) {
                 if (apply != 0) {
                     if (type == 0x17) {
-                        throw new IllegalStateException("Item_RepaySet: ArmsBag_setItem(0xe, idx): later");
+                        armsSetItem(0xe, sub);
                     } else if (val < 0) {
                         removeItem(type, sub, val < 0 ? -val : val);
                     }
@@ -188,22 +197,27 @@ public final class Items {
         }
     }
 
+    /** Item_isCountable(type) @0x82820: types 8..13 stack */
     public static boolean isCountable(int type) {
         return ((type - 8) & 0xff) < 6;
     }
 
+    /** Item_isEquipSetSlot(item) @0x82920: the item sits in an equipment slot (+0x24 u8 <= 6); false for null */
     public static boolean isEquipSetSlot(Obj it) {
         return it != null && (it.m[0x24] & 0xff) < 7;
     }
 
+    /** Item_getCnt(item) @0x827f4 (s8) */
     public static int getCnt(Obj it) {
         return it.m[0x25];
     }
 
+    /** Item_getIdx(item) @0x827ec (s16) */
     public static int getIdx(Obj it) {
         return Bytes.s16(it.m, 0x22);
     }
 
+    /** Item_getType(item) @0x827e4 (s8) */
     public static int getType(Obj it) {
         return it.m[0x20];
     }
@@ -277,7 +291,7 @@ public final class Items {
         return it;
     }
 
-    /** Item_createItem(a, type, idx, cnt) = Item_createItem_Base(8, ...) */
+    /** Item_createItem(a, type, idx, cnt) @0x85720 = Item_createItem_Base(8, ...) */
     public static Obj createItem(int a, int type, int idx, int cnt) {
         return createItemBase(Pool.ITEM, a, type, idx, cnt);
     }
@@ -326,7 +340,7 @@ public final class Items {
             Bytes.w16(it.m, 0x22, idx);
             it.m[0x20] = (byte) type;
             setData(it, d, off, type, 0);
-            it.m[0x25] = (byte) cnt;
+            setCnt(it, cnt);
         }
     }
 
@@ -776,6 +790,7 @@ public final class Items {
 
     // ---- equipment ---------------------------------------------------------------------------------------------------------------
 
+    /** Item_setEquipSlotNum(item, slot) @0x8293c (ignores null) */
     public static void setEquipSlotNum(Obj it, int slot) {
         if (it != null) {
             it.m[0x24] = (byte) slot;
@@ -858,5 +873,401 @@ public final class Items {
             G.itemSd[t] = null;
         }
         G.itemOption = null;
+    }
+
+    // ---- small accessors, debug helpers -------------------------------------------------------------------------------------------
+
+    /** Item_release @0x82744: empty in the original (bx lr) */
+    public static void release() {
+    }
+
+    /** Item_Initialize @0x82794: empty in the original (bx lr) */
+    public static void initialize() {
+    }
+
+    /** Item_tempInvenInit @0x82748: resets the temporary inventory / reward-overflow state in _game (+0x5d..+0x66) */
+    public static void tempInvenInit() {
+        byte[] g = G.game;
+        g[0x66] = 0;
+        g[0x63] = -1;
+        g[0x5d] = 0;
+        g[0x5e] = -1;
+        g[0x61] = -1;
+        g[0x64] = 0;
+        g[0x5f] = -1;
+        g[0x62] = -1;
+        g[0x65] = 0;
+        g[0x60] = -1;
+    }
+
+    /** Item_setCnt(item, cnt) @0x827a0 */
+    public static void setCnt(Obj it, int cnt) {
+        it.m[0x25] = (byte) cnt;
+    }
+
+    /** Item_releaseEquipSlotNum(item) @0x82948: setEquipSlotNum(item, -1) */
+    public static void releaseEquipSlotNum(Obj it) {
+        setEquipSlotNum(it, -1);
+    }
+
+    /** Item_isRandomBox(item) @0x82850: a type-8 item with index 0x19..0x1c (no null check) */
+    public static boolean isRandomBox(Obj it) {
+        if (it.m[0x20] != 8) {
+            return false;
+        }
+        int idx = Bytes.s16(it.m, 0x22);
+        return idx > 0x18 && idx <= 0x1c;
+    }
+
+    /** Item_setTempEquip(slot, item) @0x8299c: _equip[slot] = item (no range check) */
+    public static void setTempEquip(int slot, Obj it) {
+        G.equip[slot] = it;
+    }
+
+    /**
+     * Item_getEquip(slot) @0x8338c: the first bag item whose +0x24 (s8) is <= 6 and equals 'slot' (the compare is against the full int, so
+     * slot -1 finds the first item that is NOT equipped)
+     */
+    public static Obj getEquip(int slot) {
+        for (Obj p = G.itemBag.head; p != null; p = p.next) {
+            int v = p.m[0x24];
+            if (v <= 6 && v == slot) {
+                return p;
+            }
+        }
+        return null;
+    }
+
+    /** Item_findEqualTypeIdx(list, type, idx) @0x839e0 = Item_findEqualTypeIdxWithCnt(list, type, idx, 100) */
+    public static Obj findEqualTypeIdx(LList l, int type, int idx) {
+        return findEqualTypeIdxWithCnt(l, type, idx, 100);
+    }
+
+    /**
+     * Item_getIcon(type, idx) @0x84d30 = Item_getIconName(type, idx, 0, 0): the first byte of the item's data record (the icon), -1 when the
+     * type has no data file
+     */
+    public static int getIcon(int type, int idx) {
+        byte[] d = getId(type);
+        if (d == null) {
+            return -1;
+        }
+        return d[getOffset(d, (short) idx)];
+    }
+
+    /** Item_TestQuest(step) @0x84f48: debug; a quest step in state 0/1 is forced to 2 and its record loaded (Event_Get_QuestStatusList) */
+    public static void testQuest(int step) {
+        byte[] e = G.event;
+        if ((e[0x824 + step] & 0xff) > 1) {
+            return;
+        }
+        e[0x824 + step] = 2;
+        Quest.getStatusList(step & 0xff);
+    }
+
+    /** Item_TestSetItem @0x85d2c: debug; bag size 8, then 100 inserts alternating (3, 9) with option bonus 0x50 and (3, 0x1a) */
+    public static void testSetItem() {
+        G.itemBagMax = 8;
+        for (int i = 0; i < 100; i++) {
+            if ((i & 1) == 0) {
+                setItemOptAdd(3, 9, 1, 0x50, 0, 0, 0);
+            } else {
+                setItem(3, 0x1a, 1);
+            }
+        }
+    }
+
+    // ---- bag / arms bag accessors ------------------------------------------------------------------------------------------------
+
+    /** ItemBag_getSlot(_) @0x82838: the bag's item list (_itemBag+4) */
+    public static LList bagGetSlot() {
+        return G.itemBag;
+    }
+
+    /** ItemBag_getSize(tab) @0x828bc: the item count (u8) of the bag list; the argument is unused */
+    public static int bagGetSize(int tab) {
+        return bagGetSlot().size & 0xff;
+    }
+
+    /** ItemBag_getTabItem(i) @0x828dc: the i-th entry of the tab-sorted pointer list (null when the list is empty or i >= its count) */
+    public static Obj bagGetTabItem(int i) {
+        PList l = G.itemBagPtrs;
+        if (l.count == 0) {
+            return null;
+        }
+        if (i >= l.count) {
+            return null;
+        }
+        return l.a[i];
+    }
+
+    /** ItemBag_release(list) @0x8356c: LinkedList_release(list) (the callers pass _itemBag+4) */
+    public static void bagRelease(LList l) {
+        l.release();
+    }
+
+    /** ArmsBag_getSlot @0x829d8: the arms bag's list (_armsBag+4) */
+    public static LList armsGetSlot() {
+        return G.armsBag;
+    }
+
+    /** ArmsBag_getSize @0x829f0: the arms bag's item count as s8 */
+    public static int armsGetSize() {
+        return (byte) armsGetSlot().size;
+    }
+
+    /** ArmsBag_addItem(item) @0x83310 */
+    public static void armsAddItem(Obj it) {
+        armsGetSlot().addObject(it);
+    }
+
+    /** ArmsBag_release(list) @0x83568: LinkedList_release(list) (the callers pass _armsBag+4) */
+    public static void armsRelease(LList l) {
+        l.release();
+    }
+
+    /**
+     * Item_getItemFrom(list, idx) @0x83624: the idx-th node of a list (counted from the head), null when the list is empty or idx is outside
+     * 0..size-1
+     */
+    public static Obj getItemFrom(LList l, int idx) {
+        if (l.isEmpty()) {
+            return null;
+        }
+        if (idx < 0 || idx > l.size - 1) {
+            return null;
+        }
+        Obj p = l.head;
+        if (p == null) {
+            return null;
+        }
+        if (idx != 0) {
+            short k = 0;
+            do {
+                p = p.next;
+                k++;
+            } while (idx != k);
+        }
+        return p;
+    }
+
+    /** ArmsBag_getCur(i) @0x836a0: the i-th arms item (null when out of range) */
+    public static Obj armsGetCur(int i) {
+        LList l = armsGetSlot();
+        if (l.isEmpty()) {
+            return null;
+        }
+        if (i > armsGetSize() - 1 || i < 0) {
+            return null;
+        }
+        return getItemFrom(l, (short) i);
+    }
+
+    /** AmrsSearch(type, idx) @0x83704: the arms item with that type and index (null = none) */
+    public static Obj armsSearch(int type, int idx) {
+        int i = 0;
+        for (;;) {
+            int cur = i++;
+            if (G.armsBag.size <= cur) {            // MP_getArmsBag()+0xc, not through ArmsBag_getSlot
+                return null;
+            }
+            Obj o = armsGetCur((byte) cur);
+            if (o.m[0x20] == type && Bytes.s16(o.m, 0x22) == idx) {
+                return o;
+            }
+        }
+    }
+
+    /** ArmsBag_setItem(type, idx) @0x85750: adds a new count-1 item to the arms bag unless one of that type and index is already there (returns 0) */
+    public static int armsSetItem(int type, int idx) {
+        if (armsSearch(type, idx) == null) {
+            armsAddItem(createItem(0, type, idx, 1));
+        }
+        return 0;
+    }
+
+    // ---- bag: tab lists, removal -------------------------------------------------------------------------------------------------
+
+    /** GMenu_InvenTypeCheck(item, mode) @0x61878: does the item belong to inventory category 'mode' (0..9; others false) */
+    public static boolean invenTypeCheck(Obj it, int mode) {
+        byte[] m = it.m;
+        if (mode < 0 || mode > 9) {
+            return false;
+        }
+        int u = m[0x20] & 0xff;
+        switch (mode) {
+            case 0:
+                return u >= 4 && u <= 6;
+            case 1:
+                if (u <= 3 || u == 7) {
+                    return true;
+                }
+                return u == 8 && m[0x21] == 0 && m[0x22] == 0x15 && m[0x23] == 0;
+            case 2:
+                return m[0x20] == 8;
+            case 3:
+                return m[0x20] == 0xa;
+            case 4:
+                return m[0x20] == 9;
+            case 5:
+            case 6:
+            case 7:
+                return m[0x20] == mode + 6;
+            case 8:
+                return false;
+            default:
+                return m[0x20] == 0xe;
+        }
+    }
+
+    /** GMenu_EquiptypeCheck(item, mode) @0x66dfc: does the item fit equipment tab 'mode' (4 = the hero class's weapon type) */
+    public static boolean equipTypeCheck(Obj it, int mode) {
+        int ty = it.m[0x20];
+        if (mode <= 3) {
+            return ty == mode;
+        }
+        if (mode != 4) {
+            return ty == 7;
+        }
+        int cls = Pool.hero.m[0x16b];
+        if (cls == 0 || cls == 2) {
+            if (ty == 4) {
+                return true;
+            }
+        }
+        if (cls == 1 && ty == 5) {
+            return true;
+        }
+        return cls == 3 && ty == 6;
+    }
+
+    /**
+     * ItemBag_addItemTab(list, tab, mode) @0x839e8: appends to 'list' every bag item that passes the filter of 'mode' (0 inventory category
+     * 'tab', 1 equipment tab, 2 inventory category with grade +0x64 <= 2, 3 inventory category with type <= 6) and stores the item's position
+     * in the bag list at +0x172
+     */
+    public static void bagAddItemTab(PList list, int tab, int mode) {
+        Obj n = bagGetSlot().head;
+        if (n == null) {
+            return;
+        }
+        int pos = 0;
+        for (;;) {
+            boolean ok;
+            if (mode == 0) {
+                ok = invenTypeCheck(n, tab);
+            } else if (mode == 1) {
+                ok = equipTypeCheck(n, tab);
+            } else if (mode == 2) {
+                ok = invenTypeCheck(n, tab) && n.m[0x64] <= 2;
+            } else if (mode == 3) {
+                ok = invenTypeCheck(n, tab) && n.m[0x20] <= 6;
+            } else {
+                ok = false;
+            }
+            if (ok) {
+                list.add(n);
+                n.m[0x172] = (byte) pos;
+            }
+            n = n.next;
+            if (n == null) {
+                return;
+            }
+            pos++;
+        }
+    }
+
+    /** GMenu_InventoryTabSort(tab, mode) @0x6e234: rebuilds the bag's tab pointer list */
+    public static void inventoryTabSort(int tab, int mode) {
+        G.itemBagPtrs.release();
+        bagAddItemTab(G.itemBagPtrs, tab, mode);
+    }
+
+    private static final byte[] TMP_IDX = new byte[1];
+
+    /**
+     * ItemBag_removeCurItem(_, cnt, idxRef) @0x83dd8: takes 'cnt' off the item at list index ref[off] (s8) (removed and QuestChecked when its
+     * count reaches 0); the +0x172 tab position of the following items is decremented, and when the last index was removed the index
+     * byte is stepped back (ref[off] is the in/out byte the original receives a pointer to).  False when there is no such item.
+     */
+    public static boolean bagRemoveCurItem(int cnt, byte[] ref, int off) {
+        LList slot = bagGetSlot();
+        Obj cur = bagGetCur(ref[off]);
+        if (cur == null) {
+            return false;
+        }
+        int r6 = slot.size - 1;
+        boolean removed = false;
+        if (addCnt(cur, (byte) -cnt) <= 0) {
+            removed = true;
+            Quest.check(cur.m[0x20], (byte) cur.m[0x22], -cnt);
+            slot.remove(cur);
+        }
+        if (r6 > ref[off]) {
+            int r4 = (ref[off] + 1) & 0xff;
+            if (r6 > (byte) r4) {
+                int r7 = (byte) ((ref[off] & 0xff) + 2) - 1;
+                int r5 = 0;
+                do {
+                    Obj o = bagGetCur((byte) r4);
+                    int v = o.m[0x172] & 0xff;
+                    r4 = (r4 + 1) & 0xff;
+                    r5++;
+                    if ((byte) v > 0) {
+                        o.m[0x172] = (byte) (v - 1);
+                    }
+                } while (r6 > r7 + r5);
+            }
+        }
+        if (removed && r6 == ref[off]) {
+            if (slot.size <= 0) {
+                ref[off] = 0;
+            } else {
+                ref[off] = (byte) (ref[off] - 1);
+            }
+        }
+        return true;
+    }
+
+    /** ItemBag_AllClean(type) @0x83f1c: removes every bag item of that type (whole stacks) */
+    public static void bagAllClean(int type) {
+        byte[] t = TMP_IDX;
+        t[0] = 0;
+        for (;;) {
+            if ((t[0] & 0xff) >= bagGetSlot().size) {
+                return;
+            }
+            Obj o = bagGetCur(t[0]);
+            if (o != null && o.m[0x20] == type) {
+                bagRemoveCurItem(o.m[0x25], t, 0);
+            }
+            t[0]++;
+        }
+    }
+
+    /** ItemBag_removeCurItem_2(cnt, idxRef) @0x83f90: removeCurItem on the tab-list entry ref[off], then rebuilds the tab list of the current tab */
+    public static void bagRemoveCurItem2(int cnt, byte[] ref, int off) {
+        Obj it = bagGetTabItem(ref[off]);
+        bagRemoveCurItem(cnt, it.m, 0x172);
+        inventoryTabSort((byte) (G.itemBagTab - 1), 0);
+    }
+
+    /** ItemBag_removeItem(cnt, idxRef) @0x83fd8: removeCurItem (plain bag) or removeCurItem_2 (tab view) depending on _itemBag+1 */
+    public static void bagRemoveItem(int cnt, byte[] ref, int off) {
+        if (G.itemBagTab == 0) {
+            bagRemoveCurItem(cnt, ref, off);
+        } else {
+            bagRemoveCurItem2(cnt, ref, off);
+        }
+    }
+
+    /** ItemBag_setItemDN(donor, type, idx, cnt) @0x85dbc = checkAndSetItemDN(donor, type, idx, cnt, 1, 0, 0, 0, -1, 0) */
+    public static boolean setItemDn(Obj donor, int type, int idx, int cnt) {
+        return checkAndSetItemDn(donor, type, idx, cnt, 1, 0, 0, 0, -1, 0);
+    }
+
+    /** ItemBag_setItemOptAdd(_, type, idx, cnt, a, b, c, d) @0x85ca4 = checkAndSetItem with writes on and the four s8 option bonuses */
+    public static boolean setItemOptAdd(int type, int idx, int cnt, int a, int b, int c, int d) {
+        return checkAndSetItem(type, idx, cnt, 1, (byte) a, (byte) b, (byte) c, (byte) d);
     }
 }

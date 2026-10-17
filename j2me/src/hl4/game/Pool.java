@@ -222,6 +222,11 @@ public final class Pool {
             case PICKUP:
                 PickUp.initSlot(hl4.sys.Bytes.s16(o.m, Obj.IDX));
                 break;
+            case ITEM:
+            case ARMS_ITEM:                  // ITEM_return @0x84f10 = OBJ_return + Item_init
+                o.objSet(1);
+                Items.init(o);
+                break;
             case HERO:
             case SUMMON:
                 break;                       // MP_return has no case for them: the node is only unlinked
