@@ -361,8 +361,14 @@ details summary { cursor: pointer; }
     return Promise.resolve(b64ToBytes(t));
   }
 
+  // 'playback': the large output buffer, not the ~10 ms 'interactive' default. With the small buffer the audio thread
+  // underruns (crackles) when Android lowers the app's CPU share in the background or while switching apps;
+  // the songs are pre-rendered, so the extra latency costs nothing
   function audio() {
-    if (!ctx) ctx = new (window.AudioContext || window.webkitAudioContext)();
+    if (!ctx) {
+      var AC = window.AudioContext || window.webkitAudioContext;
+      try { ctx = new AC({ latencyHint: 'playback' }); } catch (e) { ctx = new AC(); }
+    }
     if (ctx.state === 'suspended') ctx.resume();
     return ctx;
   }
@@ -388,8 +394,10 @@ details summary { cursor: pointer; }
       return new Promise(function (res, rej) {
         setTimeout(function () {
           try {
-            var r = Sf2Synth.render(sf, midi, RATE);
-            var b = ac.createBuffer(2, Math.max(1, r.left.length), RATE);
+            // rendered at the output rate, so nothing is resampled while it plays (the WAV export keeps that rate)
+            var rate = ac.sampleRate || RATE;
+            var r = Sf2Synth.render(sf, midi, rate);
+            var b = ac.createBuffer(2, Math.max(1, r.left.length), rate);
             b.copyToChannel(r.left, 0); b.copyToChannel(r.right, 1);
             res({ id: it.id, buffer: b, kind: 'MIDI', notes: r.notes, pcm: r });
           } catch (e) { rej(e); }

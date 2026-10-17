@@ -30,3 +30,10 @@ Phần native mới chỉ build được (aapt2/javac/d8/apksigner, manifest ki�
 `android/`: vỏ WebView (một Activity, chỉ có phần chọn file là code native) chạy đúng trang trên, soundfont đóng trong APK (`assets/sf2data.js`), không cần mạng (không xin quyền INTERNET; chữ dùng font hệ thống).
 Build: `tools/mmfplayer/android/build_apk.sh <Nokia.sf2>` → `work/apk/MayNgheMMF.apk` (ký bằng khoá tự tạo `work/apk/mmf.keystore`, không commit; minSdk 21 = Android 5.0).
 Trang trong APK đã chạy thử qua `file://` trên Chromium (chọn file, phát MIDI/WAV, nghe thử): không lỗi. Chưa chạy trên máy Android thật.
+
+Bản 1.4: sửa tiếng lẹt xẹt khi app chạy nền / lúc chuyển app. Nguyên nhân không phải soundfont: bài được dựng sẵn toàn bộ trước khi phát
+(kiểm bài đối chiếu + BGM_01..04 ở 44,1 và 48 kHz: đỉnh 0,9, không mẫu nào vượt 1,0, không bước nhảy > 0,6, không NaN), nên tiếng nhiễu chỉ có thể
+từ khâu phát: AudioContext mặc định ('interactive') dùng bộ đệm ra rất nhỏ, thiếu dữ liệu khi Android giảm CPU cho app nền.
+Sửa: `latencyHint: 'playback'` (bộ đệm lớn) và dựng bài đúng tần số mẫu của đầu ra (`ctx.sampleRate`, thường 48 kHz) để không phải chuyển tần số lúc phát;
+WAV xuất ra theo tần số đó. Chưa xác minh trên máy thật.
+
