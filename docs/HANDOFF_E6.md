@@ -1,6 +1,6 @@
 # Bàn giao giai đoạn E6 (quái, chiến đấu, rơi/nhặt đồ, level-up) + bản chạy thử
 
-Ngày: 2026-10-17. Nhánh: `ccr-f53d26cc-ct4qk8`. Đọc kèm: `docs/HANDOFF.md` (dựng môi trường, công cụ, mô hình code), `docs/phaseE.md` (§3b: bảng module E6 và các quirk của bản gốc; §4: lệch có chủ đích + lối tắt của bản thử nghiệm), `NOTES.md`.
+Ngày: 2026-10-17. Nhánh: `ccr-f53d26cc-ct4qk8`. **Kế hoạch cho các phiên tới: `docs/PLAN_NEXT.md`.** Đọc kèm: `docs/HANDOFF.md` (dựng môi trường, công cụ, mô hình code), `docs/phaseE.md` (§3b: bảng module E6 và các quirk của bản gốc; §4: lệch có chủ đích + lối tắt của bản thử nghiệm), `NOTES.md`.
 
 ## 1. Trạng thái
 
